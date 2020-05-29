@@ -23,9 +23,14 @@ var sessionOpt = {
 // クロスサイト処理
 var crossopt =(req,res,next) =>{
   res.header("Access-Control-Allow-Origin","http://localhost:8080");
+<<<<<<< HEAD
   res.header("Access-Control-Allow-Headers","X-Requested-With, Origin, X-Csrftoken, Content-Type, Accept,x-token");
   res.set('Access-Control-Allow-Credentials', 'true');
   res.header('Access-Control-Allow-Methods: GET, POST');
+=======
+  res.header("Access-Control-Allow-Headers","X-Requested-With");
+  res.set('Access-Control-Allow-Credentials', 'true');
+>>>>>>> 068edf1b4ad420a27f5ed9b8cbced9ccf449b97c
   next();
 }
 
