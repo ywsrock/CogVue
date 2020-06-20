@@ -1,5 +1,6 @@
 const getters = {
     userName: state => state.user.userName,
+    info: state => state.user.dataInfo,
     token: state => state.user.token,
     avatar: state => state.user.avatar,
     introduction: state => state.user.introduction,

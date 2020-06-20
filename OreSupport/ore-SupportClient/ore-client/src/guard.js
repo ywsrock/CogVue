@@ -1,11 +1,13 @@
 import router from "./router";
-import { getToken } from "./utils/auth"
+import { getToken} from "./utils/auth"
 import store from './store';
 
+
+
+const whiteList = ['/login','/register','/userInfo'] // no redirect whitelis
 router.beforeEach(async (to, from, next) => {
   // ユーザToken 取得
-  const userToken = getToken();
-
+  const userToken = await getToken();
   //トークン存在の場合ユーザ登録済みメイン画面に遷移
   if (userToken) {
     if (to.path === "/login") {
@@ -15,7 +17,7 @@ router.beforeEach(async (to, from, next) => {
       // const hasroles = store.getters["user/roles"];
       const hasroles = store.getters.roles;
       // 権限がある場合、処理続きます
-      if (hasroles > 0) {
+      if (hasroles && hasroles.length > 0) {
         console.log("●roles -" + hasroles)
         next()
       } else {
@@ -30,8 +32,13 @@ router.beforeEach(async (to, from, next) => {
       }
     }
   } else {
+    if (whiteList.indexOf(to.path) !== -1) {
+      next()
+    }else {
     //ログイン画面に遷移
     // next(`/login?redirect=${to.path}`);
-    next()
+    next("/userInfo");
+    // next()
+  }
   }
 })

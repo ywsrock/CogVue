@@ -16,11 +16,6 @@ const userRouter = {
         sub:userUpdate
     },
     children:[
-        {
-        path:"userRegister",
-        name:"userRegister",
-        component:() => import("@/views/user/UserRegister.vue")
-    },
     {
         path:"userUpdate",
         name:"userUpdate",

@@ -2,7 +2,8 @@ import Vue from 'vue'
 import VueRouter from 'vue-router'
 
 import userRouter from "./user/userRouter"
-import login from "@/views/login/index.vue";
+// import login from "@/views/login/index.vue";
+import top from "@/views/user/UserInfo.vue"
 import  Layout  from "@/layout/index.vue"
 
 Vue.use(VueRouter)
@@ -14,28 +15,50 @@ Vue.use(VueRouter)
       components:{
         default:Layout,
       },
-      redirect:'/login',
+      redirect:'/top',
       children:[{
-        path: 'login',
-        name: 'login',
-        component: login,
+        path: 'top',
+        name: 'top',
+        component: top,
         meta:{title:'ユーザログイン'}
-      }]
+      }],
 
     },
-    // ユーザログイン
-  //   {
-  //     path:"/",
-  //     name:"login",
-  //     component:login
-  // },
-    userRouter    
+    userRouter,
+    {
+      path: '/login',
+      name: 'login',
+      component: () => import('@/views/login/index.vue'),
+      hidden: true 
+    },
+    {
+      path:"/register",
+      name:"",
+      component: Layout,
+      redirect:"/register",
+      children:[
+        {
+          path:"/register",
+          name:"userRegiste",
+          component:() => import("@/views/user/UserRegister.vue")
+          // component: login
+        }        
+      ]
+    },    
 ]
 
-const router = new VueRouter({
-  mode: 'history',
+const createRouter =() => new VueRouter({
+  // mode: 'history',
   base: process.env.BASE_URL,
+  scrollBehavior: () => ({ y: 0 }),
   routes
 })
+
+const router = createRouter()
+
+export function resetRouter() {
+  const newRouter = createRouter();
+  router.matcher = newRouter.matcher //リセットルータ
+}
 
 export default router

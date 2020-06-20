@@ -13,7 +13,7 @@
         <el-input
           ref="username"
           v-model="loginForm.username"
-          placeholder="Username"
+          placeholder="Email Address"
           name="username"
           type="text"
           tabindex="1"
@@ -46,14 +46,14 @@
         </el-form-item>
       </el-tooltip>
 
-      <el-button :loading="loading" type="primary" style="width:100%;margin-bottom:30px;" @click.native.prevent="handleLogin">Login</el-button>
+      <el-button :loading="loading"  type="primary" style="width:100%;margin-bottom:30px;" @click.native.prevent="handleLogin">Login</el-button>
 
       <div style="position:relative">
       <br>
         <el-button class="thirdparty-button" type="primary" @click="showDialog=true">
           他の登録方式
         </el-button>
-        <el-button  type="primary" class="siginUP-button" @click.native.prevent="singUp">新規登録</el-button>
+              <el-button  type="primary" class="siginUP-button" @click.native.prevent="singUp">新規登録</el-button>
       </div>
     </el-form>
 
@@ -153,7 +153,7 @@ export default {
             .then((res) => {
               console.log(res)
                this.$router.push({path:'/userInfo'})
-              // this.$router.push({ path: this.redirect || '/', query: this.otherQuery });
+              // this.$router.push({ path: this.redirect || '/', query: this.otherQuery })
                this.loading = false
             })
             .catch(() => {
@@ -174,7 +174,7 @@ export default {
       }, {})
     },
     singUp(){
-      alert("少々待ちください。。。。。。");
+      this.$router.push("/register")
     }
     // afterQRScan() {
     //   if (e.key === 'x-admin-oauth-code') {
@@ -200,7 +200,7 @@ export default {
 
 <style lang="scss">
 
-$bg:#f8f40f;
+$bg:#2d3a4b;
 $light_gray:rgb(251, 255, 0);
 $cursor: #fff;
 
@@ -309,12 +309,14 @@ $light_gray:#eee;
     position: absolute;
     right: 0;
     bottom: 6px;
+/*     background-color: #4caf50; */
   }
   .siginUP-button {
     position: absolute;
     right: 0;
     bottom: 6px;
     margin-right: 81%;
+    /* background-color: #4caf50; */
   }
 
   @media only screen and (max-width: 470px) {
