@@ -1,6 +1,6 @@
 const jwtToken = require("jsonwebtoken");
 const config = require('../config/secret.config')
-const ERROR_MESSAGE = require('./const');
+const ERROR_MESSAGE = require('./const').default;
 
 /* 
  * ユーザのトークンチェック 
@@ -27,6 +27,7 @@ verifyUser = (req, res, next) => {
     }
     //　解析結果を
     req.userID = decoded.id;
+    req.userName = decoded.userName;
     next();
   });
 }
