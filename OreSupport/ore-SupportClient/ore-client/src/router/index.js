@@ -11,16 +11,13 @@ Vue.use(VueRouter)
   const routes = [
     {
       path:"/",
-      name:"",
       components:{
-        default:Layout,
+          default: Layout
       },
       redirect:'/top',
       children:[{
         path: 'top',
-        name: 'top',
         component: top,
-        meta:{title:'ユーザログイン'}
       }],
 
     },

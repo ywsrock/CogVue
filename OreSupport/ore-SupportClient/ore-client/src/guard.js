@@ -4,7 +4,7 @@ import store from './store';
 
 
 
-const whiteList = ['/login','/register','/userInfo'] // no redirect whitelis
+const whiteList = ['/login','/register','/userInfo','/top'] // no redirect whitelis
 router.beforeEach(async (to, from, next) => {
   // ユーザToken 取得
   const userToken = await getToken();
@@ -36,7 +36,7 @@ router.beforeEach(async (to, from, next) => {
       next()
     }else {
     //ログイン画面に遷移
-    // next(`/login?redirect=${to.path}`);
+    //next(`/login?redirect=${to.path}`);
     next("/userInfo");
     // next()
   }

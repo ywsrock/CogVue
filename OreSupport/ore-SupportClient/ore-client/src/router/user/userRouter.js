@@ -6,16 +6,22 @@
 
  import userInfo from "@/views/user/UserInfo.vue"
  import userUpdate from "@/views/user/UserUpdate.vue"
+ import  Layout  from "@/layout/index.vue"
 
  
 const userRouter = {
     path:"/userInfo",
     name:"userInfo",
     components:{
-        default:userInfo,
-        sub:userUpdate
+        default:Layout
     },
+    redirect:'/',
     children:[
+    {
+        path:"/",
+        name:"showuserInfo",
+        component:userInfo
+    },
     {
         path:"userUpdate",
         name:"userUpdate",
