@@ -147,10 +147,13 @@
                         <div class="form-group col-sm-6">
                           <label>E-mail</label>
                           <input
-                            type="email"
+                            type="text"
+                            ref="email"
                             class="form-control"
                             v-model="basicInfo.email"
+                            @blur="checkEmail"
                           />
+                          <p style="color:red;font-size:12px;float:top" ref="e-email"></p>
                         </div>
                         <!-- /.form-group -->
 
@@ -346,11 +349,21 @@
 </template>
 
 <script>
+import schema from "async-validator";
 import { STATIC_JS } from "../../utils/const";
 import { Message } from "element-ui";
+import { validEmail } from "@/utils/validate";
 
 export default {
   data() {
+    // メールアドレスチェック
+    const validateEmail = (rule, value, callback, source, options) => {
+      if (!validEmail(value)) {
+        callback(new Error("正ししくメールアドレスを入力してください。"));
+      } else {
+        callback();
+      }
+    };
     return {
       basicInfo: {
         Update_type: "basicInfo",
@@ -383,6 +396,9 @@ export default {
         sns_instagram: "",
         sns_other: "",
       },
+      rules: {
+        email: [{ required: true, validator: validateEmail }],
+      }
     };
   },
   created() {
@@ -487,7 +503,30 @@ export default {
           window.alert("Error: " + error.message);
         });
     },
-  },
+    // メールのチェック処理
+    checkEmail: function(e) {
+      var fields = { email: e.target.value };
+      var ret = this.validate(fields, { email: this.rules.email });
+      if (ret) {
+        const { message, field } = ret[0];
+        this.$refs.email.focus();
+        this.$refs["e-email"].textContent = message;
+      } else {
+        this.$refs["e-email"].textContent = "";
+      }
+    },
+    // 画面項目チェック
+    validate: function(field, rules) {
+      var validator = new schema(rules);
+      var check_result;
+      validator.validate(field, { first: true }, (errors, res) => {
+        if (errors) {
+          check_result = errors;
+        }
+      });
+      return check_result;
+    }
+  }
 };
 </script>
 <style scoped>
