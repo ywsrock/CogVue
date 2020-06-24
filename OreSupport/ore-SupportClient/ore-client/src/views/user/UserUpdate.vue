@@ -161,9 +161,13 @@
                           <label>Phone</label>
                           <input
                             type="text"
+                            ref="phone"
+                            placeholder="09012345678"
                             class="form-control"
                             v-model="basicInfo.phone"
+                            @blur="checkPhone"
                           />
+                          <p style="color:red;font-size:12px;float:top" ref="e-phone"></p>
                         </div>
                         <!-- /.form-group -->
                       </div>
@@ -189,9 +193,12 @@
                           <div class="col-sm-9">
                             <input
                               type="text"
+                              ref="sns_facebook"
                               class="form-control"
-                              v-model="snsInfo.sns_Facebook"
+                              v-model="snsInfo.sns_facebook"
+                              @blur="checkURL('sns_facebook')"
                             />
+                            <p style="color:red;font-size:12px;float:top" ref="e-sns_facebook"></p>
                           </div>
                           <!-- /.col-* -->
                         </div>
@@ -203,9 +210,12 @@
                           <div class="col-sm-9">
                             <input
                               type="text"
+                              ref="sns_twtitter"
                               class="form-control"
                               v-model="snsInfo.sns_twtitter"
+                              @blur="checkURL('sns_twtitter')"
                             />
+                            <p style="color:red;font-size:12px;float:top" ref="e-sns_twtitter"></p>
                           </div>
                           <!-- /.col-* -->
                         </div>
@@ -219,9 +229,12 @@
                           <div class="col-sm-9">
                             <input
                               type="text"
+                              ref="sns_instagram"
                               class="form-control"
                               v-model="snsInfo.sns_instagram"
+                              @blur="checkURL('sns_instagram')"
                             />
+                            <p style="color:red;font-size:12px;float:top" ref="e-sns_instagram"></p>
                           </div>
                           <!-- /.col-* -->
                         </div>
@@ -232,9 +245,12 @@
                           <div class="col-sm-9">
                             <input
                               type="text"
+                              ref="sns_other"
                               class="form-control"
                               v-model="snsInfo.sns_other"
+                              @blur="checkURL('sns_other')"
                             />
+                            <p style="color:red;font-size:12px;float:top" ref="e-sns_other"></p>
                           </div>
                           <!-- /.col-* -->
                         </div>
@@ -291,9 +307,13 @@
                           <label>部屋番号</label>
                           <input
                             type="text"
+                            ref="houseNumber"
                             class="form-control"
                             v-model="addressInfo.houseNumber"
+                            placeholder="101"
+                            @blur="checkHouseNumber"
                           />
+                          <p style="color:red;font-size:12px;float:top" ref="e-houseNumber"></p>
                         </div>
                         <!-- /.form-group -->
 
@@ -301,9 +321,13 @@
                           <label>郵便番号</label>
                           <input
                             type="text"
+                            ref="postalcode"
                             class="form-control"
                             v-model="addressInfo.postalcode"
+                            placeholder="123456"
+                            @blur="checkPostalcode"
                           />
+                          <p style="color:red;font-size:12px;float:top" ref="e-postalcode"></p>
                         </div>
                         <!-- /.form-group -->
                       </div>
@@ -352,14 +376,46 @@
 import schema from "async-validator";
 import { STATIC_JS } from "../../utils/const";
 import { Message } from "element-ui";
-import { validEmail } from "@/utils/validate";
+import { validEmail, validPhone, validURL, validPostalcode, isNumber } from "@/utils/validate";
 
 export default {
   data() {
     // メールアドレスチェック
-    const validateEmail = (rule, value, callback, source, options) => {
+    const validateEmail = (rule, value, callback) => {
       if (!validEmail(value)) {
         callback(new Error("正ししくメールアドレスを入力してください。"));
+      } else {
+        callback();
+      }
+    };
+    // 電話番号チェック
+    const validatePhone = (rule, value, callback) => {
+      if (!validPhone(value)) {
+        callback(new Error("半角数字・ハイフン無しで入力してください。"));
+      } else {
+        callback();
+      }
+    };
+    // URLチェック
+    const validateURL = (rule, value, callback) => {
+      if (!validURL(value)) {
+        callback(new Error("正しくURLを入力してください。"));
+      } else {
+        callback();
+      }
+    };
+    // 郵便番号チェック
+    const validatePostalcode = (rule, value, callback) => {
+      if (!validPostalcode(value)) {
+        callback(new Error("半角数字・ハイフン無しで入力してください。"));
+      } else {
+        callback();
+      }
+    };
+    // 部屋数字チェック
+    const validateHouseNumber = (rule, value, callback) => {
+      if (!isNumber(value)) {
+        callback(new Error("半角数字で入力してください。"));
       } else {
         callback();
       }
@@ -391,13 +447,20 @@ export default {
       },
       snsInfo: {
         Update_type: "snsInfo",
-        sns_Facebook: "",
+        sns_facebook: "",
         sns_twtitter: "",
         sns_instagram: "",
         sns_other: "",
       },
       rules: {
         email: [{ required: true, validator: validateEmail }],
+        phone: [{ validator: validatePhone }],
+        sns_facebook: [{ validator: validateURL }],
+        sns_twtitter: [{ validator: validateURL }],
+        sns_instagram: [{ validator: validateURL }],
+        sns_other: [{ validator: validateURL }],
+        postalcode: [{ validator: validatePostalcode }],
+        houseNumber: [{ validator: validateHouseNumber }],
       }
     };
   },
@@ -452,17 +515,31 @@ export default {
   },
 
   methods: {
-    //基本情報保存
+    //全項目チェックして基本情報保存
     basicInfo_Save: function() {
-      this.proUpdate(this.basicInfo);
+      this.checkEmail();
+      this.checkPhone();
+      if (this.$refs["e-email"].textContent === "" && this.$refs["e-phone"].textContent === "") {
+        this.proUpdate(this.basicInfo);
+      }
     },
-    //SNS情報
+    //全項目チェックしてSNS情報
     snsInfo_Save: function() {
-      this.proUpdate(this.snsInfo);
+      this.checkURL("sns_facebook");
+      this.checkURL("sns_twtitter");
+      this.checkURL("sns_instagram");
+      this.checkURL("sns_other");
+      if (this.$refs["e-sns_facebook"].textContent === "" && this.$refs["e-sns_twtitter"].textContent === ""  && this.$refs["e-sns_instagram"].textContent === ""  && this.$refs["e-sns_other"].textContent === "") {
+        this.proUpdate(this.snsInfo);
+      }
     },
-    //アドレス情報
+    //全項目チェックしてアドレス情報
     addressInfo_Save: function() {
-      this.proUpdate(this.addressInfo);
+      this.checkPostalcode();
+      this.checkHouseNumber();
+      if (this.$refs["e-postalcode"].textContent === "" && this.$refs["e-houseNumber"].textContent === "") {
+        this.proUpdate(this.addressInfo);
+      }
     },
     // 社員アップロード
     onchange: function() {
@@ -504,22 +581,68 @@ export default {
         });
     },
     // メールのチェック処理
-    checkEmail: function(e) {
-      var fields = { email: e.target.value };
+    checkEmail: function() {
+      var fields = { email: this.$refs.email.value };
       var ret = this.validate(fields, { email: this.rules.email });
       if (ret) {
-        const { message, field } = ret[0];
-        this.$refs.email.focus();
+        const { message } = ret[0];
         this.$refs["e-email"].textContent = message;
       } else {
         this.$refs["e-email"].textContent = "";
+      }
+    },
+    // 電話番号のチェック処理 任意項目のためブランク許容
+    checkPhone: function() {
+      var fields = { phone: this.$refs.phone.value };
+      var ret = this.validate(fields, { phone: this.rules.phone });
+      if (fields["phone"] && ret) {
+        const { message} = ret[0];
+        this.$refs["e-phone"].textContent = message;
+      } else {
+        this.$refs["e-phone"].textContent = "";
+      }
+    },
+    // URLのチェック処理 任意項目のためブランク許容
+    checkURL: function(sns) {
+      var fields = {};
+      fields[sns] = this.$refs[sns].value;
+      var rules = {};
+      rules[sns] = this.rules[sns]
+      var ret = this.validate(fields, rules);
+      if (fields[sns] && ret) {
+        const { message} = ret[0];
+        this.$refs[`e-${sns}`].textContent = message;
+      } else {
+        this.$refs[`e-${sns}`].textContent = "";
+      }
+    },
+    // 郵便番号のチェック処理 任意項目のためブランク許容
+    checkPostalcode: function() {
+      var fields = { postalcode: this.$refs.postalcode.value };
+      var ret = this.validate(fields, { postalcode: this.rules.postalcode });
+      if (fields["postalcode"] && ret) {
+        const { message } = ret[0];
+        this.$refs["e-postalcode"].textContent = message;
+      } else {
+        this.$refs["e-postalcode"].textContent = "";
+      }
+    },
+    // 郵便番号のチェック処理 任意項目のためブランク許容
+    checkHouseNumber: function() {
+      var fields = { houseNumber: this.$refs.houseNumber.value };
+      var ret = this.validate(fields, { houseNumber: this.rules.houseNumber });
+      if (fields["houseNumber"] && ret) {
+        const { message } = ret[0];
+        this.$refs["e-houseNumber"].textContent = message;
+      } else {
+        this.$refs["e-houseNumber"].textContent = "";
       }
     },
     // 画面項目チェック
     validate: function(field, rules) {
       var validator = new schema(rules);
       var check_result;
-      validator.validate(field, { first: true }, (errors, res) => {
+      validator.validate(field, { first: true }, (errors) => {
         if (errors) {
           check_result = errors;
         }

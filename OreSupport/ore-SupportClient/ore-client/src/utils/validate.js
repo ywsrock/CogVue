@@ -62,6 +62,33 @@ export function validEmail(email) {
 }
 
 /**
+ * @param phone Number
+ * @returns Boolean
+ */
+export function validPhone(phone) {
+  const reg = /^0\d{9,10}$/
+  return reg.test(phone)
+}
+
+/**
+ * @param postalcode Number
+ * @returns Boolean
+ */
+export function validPostalcode(postalcode) {
+  const reg = /^\d{7}$/
+  return reg.test(postalcode)
+}
+
+/**
+ * @param num Number
+ * @returns Boolean
+ */
+export function isNumber(num) {
+  const reg = /^[0-9]+$/
+  return reg.test(num)
+}
+
+/**
  * @param str String
  * @returns Boolean
  */
