@@ -248,7 +248,7 @@ router.get("/profileInfo", [checkuser.verifyUser], async function(req, res, next
                     //　sns情報
                     snsInfo: {
                         Update_type: PROFILE_INFO.SNS_INFO,
-                        sns_Facebook: user.UserProfile.sns_paceboot,
+                        sns_facebook: user.UserProfile.sns_facebook,
                         sns_twtitter: user.UserProfile.sns_twtitter,
                         sns_instagram: user.UserProfile.sns_instagram,
                         sns_other: user.UserProfile.sns_other,
