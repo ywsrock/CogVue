@@ -1,68 +1,153 @@
 <template>
-  <div class="login-container">
-    <el-form ref="loginForm" :model="loginForm" :rules="loginRules" class="login-form" autocomplete="on" label-position="left">
-
-      <div class="title-container">
-        <h3 class="title">ログイン</h3>
+  <div class="page-wrapper">
+    <!-- ヘッダーは、コンポーネントに切り出して共通化する必要あり -->
+    <header class="header">
+      <div class="header-wrapper">
+        <div class="container">
+          <div class="header-inner">
+            <div class="header-logo">
+              <a href="index.html">
+                <img src="assets/img/logo.png" alt="Logo" />
+                <span>Superlist</span>
+              </a>
+            </div>
+            <!-- /.header-logo -->
+            <div class="header-content">
+              <div class="header-top">
+                <ul class="header-nav-social social-links nav nav-pills">
+                  <li>
+                    <a href="#" @click="showDialog = true">
+                      <span>twitter</span>
+                      <i class="fa fa-twitter" />
+                    </a>
+                  </li>
+                  <li>
+                    <a href="#" @click="showDialog = true">
+                      <span>facebook</span>
+                      <i class="fa fa-facebook" />
+                    </a>
+                  </li>
+                  <li>
+                    <a href="#" @click="showDialog = true">
+                      <span>google</span>
+                      <i class="fa fa-google-plus" />
+                    </a>
+                  </li>
+                </ul>
+                <!-- /.header-nav-social -->
+                <ul class="header-nav-secondary nav nav-pills">
+                  <li>
+                    <a href="login.html">Login</a>
+                  </li>
+                  <li>
+                    <a style="cursor: pointer;" @click.prevent="singUp">Register</a>
+                  </li>
+                </ul>
+              </div>
+              <!-- /.header-top -->
+            </div>
+            <!-- /.header-content -->
+          </div>
+          <!-- /.header-inner -->
+        </div>
+        <!-- /.container -->
       </div>
+      <!-- /.header-wrapper -->
+    </header>
+    <!-- /.header -->
 
-      <el-form-item prop="username">
-        <span class="svg-container">
-         <!-- <svg-icon icon-class="user" /> -->
-        </span>
-        <el-input
-          ref="username"
-          v-model="loginForm.username"
-          placeholder="Email Address"
-          name="username"
-          type="text"
-          tabindex="1"
-          autocomplete="on"
-        />
-      </el-form-item>
+    <div class="main">
+      <div class="main-inner">
+        <div class="container">
+          <div class="content">
+            <div class="row">
+              <div class="col-sm-4 col-sm-offset-4">
+                <div class="page-title">
+                  <h1>Login</h1>
+                </div>
+                <!-- /.page-title -->
 
-      <el-tooltip v-model="capsTooltip" content="Caps lock is On" placement="right" manual>
-        <el-form-item prop="password">
-          <span class="svg-container">
-            <!--<svg-icon icon-class="password" /> -->
-          </span>
-          <el-input
-            :key="passwordType"
-            ref="password"
-            v-model="loginForm.password"
-            :type="passwordType"
-            placeholder="Password"
-            name="password"
-            tabindex="2"
-            autocomplete="on"
-            @keyup.native="checkCapslock"
-            @blur="capsTooltip = false"
-            @keyup.enter.native="handleLogin"
-          />
-          <span class="show-pwd" @click="showPwd">
-            <!--<svg-icon :icon-class="passwordType === 'password' ? 'eye' : 'eye-open'" /> -->
-            パスワード表示
-          </span>
-        </el-form-item>
-      </el-tooltip>
+                <el-form
+                  ref="loginForm"
+                  :model="loginForm"
+                  :rules="loginRules"
+                  class="login-form"
+                  autocomplete="on"
+                  label-position="left"
+                >
+                  <label for="login-form-email">E-mail</label>
+                  <el-form-item prop="username">
+                    <el-input
+                      id="login-form-email"
+                      ref="username"
+                      v-model="loginForm.username"
+                      name="username"
+                      type="email"
+                      tabindex="1"
+                      autocomplete="on"
+                    />
+                  </el-form-item>
+                  <!-- /.form-group -->
 
-      <el-button :loading="loading"  type="primary" style="width:100%;margin-bottom:30px;" @click.native.prevent="handleLogin">Login</el-button>
+                  <label for="login-form-password">Password</label>
+                  <el-tooltip
+                    v-model="capsTooltip"
+                    content="Caps lock is On"
+                    placement="right"
+                    manual
+                  >
+                    <el-form-item prop="password">                    
+                      <el-input
+                        id="login-form-password"
+                        :key="passwordType"
+                        ref="password"
+                        v-model="loginForm.password"
+                        :type="passwordType"
+                        name="password"
+                        tabindex="2"
+                        autocomplete="on"
+                        @keyup.native="checkCapslock"
+                        @blur="capsTooltip = false"
+                        @keyup.enter.native="handleLogin"
+                      />
+                      <span class="show-pwd" @click="showPwd">
+                        <!--<svg-icon :icon-class="passwordType === 'password' ? 'eye' : 'eye-open'" /> -->
+                        パスワード表示
+                      </span>
+                    </el-form-item>
+                  </el-tooltip>
+                  <!-- /.form-group -->
+                  <div style="text-align: right;">
+                    <el-button
+                      :loading="loading"
+                      type="submit"
+                      class="btn btn-primary"
+                      
+                      @click.native.prevent="handleLogin"
+                    >
+                      Login
+                    </el-button>
+                  </div>
+                </el-form>
 
-      <div style="position:relative">
-      <br>
-        <el-button class="thirdparty-button" type="primary" @click="showDialog=true">
-          他の登録方式
-        </el-button>
-              <el-button  type="primary" class="siginUP-button" @click.native.prevent="singUp">新規登録</el-button>
+                <el-dialog title="アカウントを選択して、ログインしてください。" :visible.sync="showDialog">
+                  <br />
+                  <br />
+                  <br />
+                  <social-sign />
+                </el-dialog>
+              </div>
+              <!-- /.col-sm-4 -->
+            </div>
+            <!-- /.row -->
+          </div>
+          <!-- /.content -->
+        </div>
+        <!-- /.container -->
       </div>
-    </el-form>
-
-    <el-dialog title="アカウントを選択して、ログインしてください。" :visible.sync="showDialog">
-      <br>
-      <br>
-      <br>
-      <social-sign />
-    </el-dialog>
+      <!-- /.main-inner -->
+    </div>
+    <!-- /.main -->
   </div>
 </template>
 
