@@ -10,7 +10,7 @@ const name = "OreSupport"
 module.exports = {
     publicPath: '/',
     outputDir: 'dist',
-    assetsDir: 'static',
+    assetsDir: 'assets',
     lintOnSave: process.env.NODE_ENV !== 'production',
     productionSourceMap: false,
     devServer: {

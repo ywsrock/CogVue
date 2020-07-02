@@ -23,14 +23,23 @@ Vue.use(VueRouter)
     },
     userRouter,
     {
-      path: '/login',
-      name: 'login',
-      component: () => import('@/views/login/index.vue'),
-      hidden: true 
+          path:'/login',
+          name:"login",
+          components:{
+            default: Layout
+        },
+        redirect:"/userLogin",
+        children:[
+          {
+            path:"/userLogin",
+            component: () => import('@/views/login/index.vue'),
+          }
+        ]
+          // hidden: true 
     },
     {
       path:"/register",
-      name:"",
+      name:"register",
       component: Layout,
       redirect:"/register",
       children:[
