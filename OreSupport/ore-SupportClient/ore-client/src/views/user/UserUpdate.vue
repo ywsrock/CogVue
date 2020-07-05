@@ -32,7 +32,6 @@
                       <div class="user-photo">
                         <a
                           href="#"
-                          style='cursor: url("chrome-extension://ledmjlnkdlappilhaaihfhanlpdjjalm/rockhand.png"), auto;'
                         >
                           <img
                             v-bind:src="basicInfo.avatar"
@@ -60,7 +59,7 @@
                     <div class="widget">
                       <ul class="menu-advanced">
                         <li class="active">
-                          <a href="#"
+                          <a href="#" @click.prevent="is_readonly = !is_readonly"
                             ><i class="fa fa-user"></i> プロフィール編集</a
                           >
                         </li>
@@ -94,6 +93,7 @@
                           type="primary"
                           class="btn btn-primary btn-xs pull-right"
                           @click="basicInfo_Save"
+                          v-if="!is_readonly"
                           >保存</el-button
                         >
                       </h3>
@@ -105,6 +105,7 @@
                             type="text"
                             class="form-control"
                             v-model="basicInfo.lastName"
+                            :readonly="is_readonly"
                           />
                         </div>
                         <!-- /.form-group -->
@@ -115,20 +116,29 @@
                             type="text"
                             class="form-control"
                             v-model="basicInfo.firstName"
+                            :readonly="is_readonly"
                           />
                         </div>
                         <!-- /.form-group -->
 
                         <div class="form-group col-sm-6">
                           <label>性別</label>
-                          <div class="form-control">
-                            <el-radio v-model="basicInfo.sex" label="1"
-                              >女</el-radio
-                            >
-                            <el-radio v-model="basicInfo.sex" label="2"
-                              >男</el-radio
-                            >
-                          </div>
+                            <div v-if="is_readonly" class="form-control" readonly="true">
+                              <div v-if="basicInfo.sex === '1'">
+                                女
+                              </div>
+                              <div v-else>
+                                男
+                              </div>
+                            </div>                            
+                            <div v-else class="form-control" :readonly="is_readonly">
+                              <el-radio v-model="basicInfo.sex" label="1"
+                                >女</el-radio
+                              >
+                              <el-radio v-model="basicInfo.sex" label="2"
+                                >男</el-radio
+                              >
+                            </div>
                         </div>
                         <!-- /.form-group -->
                         <div class="form-group col-sm-6">
@@ -141,6 +151,7 @@
                             min="1700-01-01"
                             max="2100-12-31"
                             class="form-control"
+                            :readonly="is_readonly"
                           />
                         </div>
                         <!-- /.form-group -->
@@ -152,6 +163,7 @@
                             class="form-control"
                             v-model="basicInfo.email"
                             @blur="checkEmail"
+                            :readonly="is_readonly"
                           />
                           <p style="color:red;font-size:12px;float:top" ref="e-email"></p>
                         </div>
@@ -166,6 +178,7 @@
                             class="form-control"
                             v-model="basicInfo.phone"
                             @blur="checkPhone"
+                            :readonly="is_readonly"
                           />
                           <p style="color:red;font-size:12px;float:top" ref="e-phone"></p>
                         </div>
@@ -182,6 +195,7 @@
                           type="primary"
                           class="btn btn-primary btn-xs pull-right"
                           @click="snsInfo_Save"
+                          v-if="!is_readonly"
                           >保存</el-button
                         >
                       </h3>
@@ -197,6 +211,7 @@
                               class="form-control"
                               v-model="snsInfo.sns_facebook"
                               @blur="checkURL('sns_facebook')"
+                              :readonly="is_readonly"
                             />
                             <p style="color:red;font-size:12px;float:top" ref="e-sns_facebook"></p>
                           </div>
@@ -214,6 +229,7 @@
                               class="form-control"
                               v-model="snsInfo.sns_twtitter"
                               @blur="checkURL('sns_twtitter')"
+                              :readonly="is_readonly"
                             />
                             <p style="color:red;font-size:12px;float:top" ref="e-sns_twtitter"></p>
                           </div>
@@ -233,6 +249,7 @@
                               class="form-control"
                               v-model="snsInfo.sns_instagram"
                               @blur="checkURL('sns_instagram')"
+                              :readonly="is_readonly"
                             />
                             <p style="color:red;font-size:12px;float:top" ref="e-sns_instagram"></p>
                           </div>
@@ -249,6 +266,7 @@
                               class="form-control"
                               v-model="snsInfo.sns_other"
                               @blur="checkURL('sns_other')"
+                              :readonly="is_readonly"
                             />
                             <p style="color:red;font-size:12px;float:top" ref="e-sns_other"></p>
                           </div>
@@ -268,6 +286,7 @@
                           type="primary"
                           class="btn btn-primary btn-xs pull-right"
                           @click="addressInfo_Save"
+                          v-if="!is_readonly"
                           >保存</el-button
                         >
                       </h3>
@@ -279,6 +298,7 @@
                             type="text"
                             class="form-control"
                             v-model="addressInfo.state"
+                            :readonly="is_readonly"
                           />
                         </div>
                         <!-- /.form-group -->
@@ -289,6 +309,7 @@
                             type="text"
                             class="form-control"
                             v-model="addressInfo.city"
+                            :readonly="is_readonly"
                           />
                         </div>
                         <!-- /.form-group -->
@@ -299,6 +320,7 @@
                             type="text"
                             class="form-control"
                             v-model="addressInfo.streat"
+                            :readonly="is_readonly"
                           />
                         </div>
                         <!-- /.form-group -->
@@ -312,6 +334,7 @@
                             v-model="addressInfo.houseNumber"
                             placeholder="101"
                             @blur="checkHouseNumber"
+                            :readonly="is_readonly"
                           />
                           <p style="color:red;font-size:12px;float:top" ref="e-houseNumber"></p>
                         </div>
@@ -326,6 +349,7 @@
                             v-model="addressInfo.postalcode"
                             placeholder="123456"
                             @blur="checkPostalcode"
+                            :readonly="is_readonly"
                           />
                           <p style="color:red;font-size:12px;float:top" ref="e-postalcode"></p>
                         </div>
@@ -342,6 +366,7 @@
                           type="primary"
                           class="btn btn-primary btn-xs pull-right"
                           @click="basicInfo_Save"
+                          v-if="!is_readonly"
                           >保存</el-button
                         >
                       </h3>
@@ -350,6 +375,7 @@
                         class="form-control"
                         rows="7"
                         v-model="basicInfo.aboutMe"
+                        :readonly="is_readonly"
                       ></textarea>
                     </div>
                   </div>
@@ -461,7 +487,8 @@ export default {
         sns_other: [{ validator: validateURL }],
         postalcode: [{ validator: validatePostalcode }],
         houseNumber: [{ validator: validateHouseNumber }],
-      }
+      },
+      is_readonly: true
     };
   },
   created() {
@@ -513,7 +540,6 @@ export default {
       //  that.data =Object.assign(that.data,that.$store.getters.info)
     });
   },
-
   methods: {
     //全項目チェックして基本情報保存
     basicInfo_Save: function() {
