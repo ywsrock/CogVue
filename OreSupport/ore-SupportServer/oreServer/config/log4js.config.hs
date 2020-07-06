@@ -1,21 +1,21 @@
 {
   "appenders": {
-    "ConsoleLogAppender": {
+    "consolelog": {
       "type": "console"
     },
-    "SystemLogAppender": {
+    "SystemLog": {
       "type": "file",
       "filename": "./log/system.log",
       "maxLogSize": 5000000,
       "backups": 3
     },
-    "HttpLogAppender": {
+    "HttpLog": {
       "type": "dateFile",
       "filename": "./log/http.log",
       "pattern": ".yyyy-MM-dd",
       "daysToKeep": 7
     },
-    "AccessLogAppender": {
+    "AccessLog": {
       "type": "dateFile",
       "filename": "./log/access.log",
       "pattern": ".yyyy-MM-dd",
@@ -24,19 +24,19 @@
   },
   "categories": {
     "default": {
-      "appenders": ["ConsoleLogAppender"],
+      "appenders": ["ConsoleLog"],
       "level": "all"
     },
     "system": {
-      "appenders": ["SystemLogAppender"],
+      "appenders": ["SystemLog"],
       "level": "info"
     },
     "http": {
-      "appenders": ["HttpLogAppender"],
+      "appenders": ["HttpLog"],
       "level": "info"
     },
     "access": {
-      "appenders": ["AccessLogAppender"],
+      "appenders": ["AccessLog"],
       "level": "info"
     }
   }
