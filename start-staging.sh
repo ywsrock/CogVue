@@ -2,6 +2,8 @@
 
 # masterブランチからclone
 git clone https://github.com/enbunsui/PBL2020.git
+(cd OreSupport/ore-SupportClient/ore-client && npm install)
+(cd OreSupport/ore-SupportServer/oreServer && npm install)
 
 # WebServer, DBServer のインストール
 sudo apt install mysql-server
