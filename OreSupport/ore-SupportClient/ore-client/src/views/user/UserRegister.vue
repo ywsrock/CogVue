@@ -1,68 +1,95 @@
 <template>
-  <div class="ユーザINFO">
-    <form @submit.prevent="singUp" style="border:1px solid #ccc">
-      <div class="container">
-        <h1>ユーザ登録</h1>
-        <p>アカウント新規作成</p>
-        <hr />
+  <div class="page-wrapper">
+    <div class="main">
+      <div class="main-inner">
+        <div class="container">
+          <div class="content">
+            <div class="row">
+              <div class="col-sm-4 col-sm-offset-4">
+                <div class="page-title">
+                  <h1>Register</h1>
+                </div>
+                <!-- /.page-title -->
 
-        <label for="email"><b>Email</b></label>
-        <input
-          type="text"
-          ref="email"
-          placeholder="Enter Email"
-          v-model="registForm.email"
-          @blur="checkEmail"
-          name="email"
-          required
-        />
-        <p style="color:red;font-size:12px;float:top" ref="e-email"></p>
+                <form @submit.prevent="singUp">
+                  <div class="form-group">
+                    <label for="login-form-email">Email</label>
+                    <input
+                      type="text"
+                      ref="email"
+                      v-model="registForm.email"
+                      @blur="checkEmail"
+                      name="email"
+                      required    
+                      style="background-color:white;border: 2px solid #e9e9e9;"    
+                      class="form-control"                              
+                    />
+                  <p style="color:red;font-size:12px;float:top" ref="e-email"></p>                    
+                  </div>
+                  <!-- /.form-group -->
 
-        <label for="password"><b>Password</b></label>
-        <input
-          type="password"
-          ref="password"
-          placeholder="Enter Password"
-          name="password"
-          v-model="registForm.password"
-          @blur="checkPassword"
-          required
-        />
-        <p style="color:red;font-size:12px" ref="e-password"></p>
+                  <div class="form-group">
+                    <label for="login-form-password">Password</label>
+                    <input
+                      type="password"
+                      ref="password"
+                      name="password"
+                      v-model="registForm.password"
+                      @blur="checkPassword"
+                      required
+                      style="background-color:white;border: 2px solid #e9e9e9;"    
+                      class="form-control"                              
+                    />
+                  <p style="color:red;font-size:12px" ref="e-password"></p>                                    
+                  </div>
+                  <!-- /.form-group -->
 
-        <label for="repeatpassword"><b>Repeat Password</b></label>
-        <input
-          type="password"
-          ref="repeatpassword"
-          placeholder="Repeat Password"
-          name="repeatpassword"
-          v-model="registForm.repeatpassword"
-          @blur="checkrepeatPassword"
-          required
-        />
-        <p style="color:red;font-size:12px" ref="e-password2"></p>
-
-        <label>
-          <input
-            type="checkbox"
-            checked="checked"
-            name="remember"
-            style="margin-bottom:15px"
-          />
-          パスワード記憶
-        </label>
-
-        <p>
-          個人情報保護
-          <a href="#" style="color:dodgerblue">プライバシー</a>.
-        </p>
-
-        <div class="clearfix">
-          <button type="button" class="cancelbtn">キャンセル</button>
-          <button type="submit" class="signupbtn">登録</button>
+                  <div class="form-group">
+                    <label for="login-form-password-retype">Retype password</label>
+                    <input
+                      type="password"
+                      ref="repeatpassword"
+                      name="repeatpassword"
+                      v-model="registForm.repeatpassword"
+                      @blur="checkrepeatPassword"
+                      required
+                      style="background-color:white;border: 2px solid #e9e9e9;"    
+                      class="form-control"                              
+                    />
+                  <p style="color:red;font-size:12px" ref="e-password2"></p>                                    
+                  </div>
+                  <!-- /.form-group -->
+                  
+                  <label>
+                    <input
+                      type="checkbox"
+                      checked="checked"
+                      name="remember"
+                      style="margin-bottom:15px"
+                    />
+                    パスワード記憶
+                  </label>
+                  <p>
+                    個人情報保護
+                    <a href="#" style="color:dodgerblue">プライバシー</a>.
+                  </p>
+                  <div style="text-align: right;">
+                    <button type="submit" class="btn btn-primary">Register</button>
+                  </div>
+                  <!-- <button type="submit" class="btn btn-primary pull-right">Register</button> -->
+                </form>
+              </div>
+              <!-- /.col-sm-4 -->
+            </div>
+            <!-- /.row -->
+          </div>
+          <!-- /.content -->
         </div>
+        <!-- /.container -->
       </div>
-    </form>
+      <!-- /.main-inner -->
+    </div>
+    <!-- /.main -->
   </div>
 </template>
 
@@ -124,7 +151,7 @@ export default {
       var ret = this.validate(fields, { email: this.rules.email });
       if (ret) {
         const { message, field } = ret[0];
-        this.$refs.email.focus();
+        // this.$refs.email.focus();
         this.$refs["e-email"].textContent = message;
       } else {
         this.$refs["e-email"].textContent = "";
@@ -227,21 +254,6 @@ hr {
   margin-bottom: 25px;
 }
 
-/* Set a style for all buttons */
-button {
-  background-color: #4caf50;
-  color: white;
-  padding: 14px 20px;
-  margin: 8px 0;
-  border: none;
-  cursor: pointer;
-  width: 100%;
-  opacity: 0.9;
-}
-
-button:hover {
-  opacity: 1;
-}
 
 /* Extra styles for the cancel button */
 .cancelbtn {
