@@ -2,13 +2,18 @@ var createError = require('http-errors');
 var express = require('express');
 var path = require('path');
 var cookieParser = require('cookie-parser');
-var logger = require('morgan');
+// var logger = require('morgan');
 var session = require("express-session")
-
 var indexRouter = require('./routes/index');
 var usersRouter = require('./routes/users');
+const log4js = require('log4js');
+const logConfig = require("./config/log4js")
+//log4Js設定
+log4js.configure(logConfig)
 
 var app = express();
+// logger の取得
+var log = log4js.getLogger("app")
 
 //セッションオプション
 var sessionOpt = {
@@ -35,7 +40,7 @@ app.set('view engine', 'ejs');
 // crossアクセス許可
 app.use(crossopt)
 //ログ処理
-app.use(logger('dev'));
+// app.use(logger('dev'));
 // json処理許可
 app.use(express.json());
 app.use(express.urlencoded({ extended: false }));
@@ -45,6 +50,8 @@ app.use(cookieParser());
 app.use(express.static(path.join(__dirname, 'public')));
 //セッション設定
 app.use(session(sessionOpt))
+//　ログ出力設定
+app.use(log4js.connectLogger(log4js.getLogger("http"), { level: 'auto' }));
 
 
 app.use('/', indexRouter);
@@ -57,7 +64,7 @@ app.use(function(req, res, next) {
 
 // error handler
 app.use(function(err, req, res, next) {
-  // set locals, only providing error in development
+  log.error("アクセスエラー", err);
   res.locals.message = err.message;
   res.locals.error = req.app.get('env') === 'development' ? err : {};
 

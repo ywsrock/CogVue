@@ -12,29 +12,21 @@ const Image_storage = require("../common/fileup")
 const multer = require('multer');
 const fs = require('fs');
 const appRoot = require('app-root-path');
+const log4js = require("log4js")
+const logConfig = require("../config/log4js")
 
-const upload = multer({ storage: Image_storage.Image_storage });
+//ログ設定
+log4js.configure(
+    logConfig
+  );  
 
-/* GET users listing. */
-router.get(
-    "/",
-    /* [checkuser.verifyUser], */
-    async function(req, res, next) {
-        var username = "yws";
-        var password = "YYY";
-
-        const results = await usermodel.getUserInfo({ username, password });
-        if (result) {
-            console.log(results.toJSON())
-            res.send(results);
-        } else {
-            res.send("ユーザ存在しません");
-        }
-    }
-);
+var log = require('log4js').getLogger("app");
 
 /* ユーザログイン処理 */
 router.post("/login", async function(req, res, next) {
+    //ログ出力
+    log.info("ユーザログ:" + req.body.username);
+
     // ユーザ名とパスワード
     const { username, password } = req.body;
     // ユーザ情報取得
@@ -138,42 +130,6 @@ router.post("/singUp", async function(req, res, next) {
     }
 });
 
-// // ユーザ情報取得処理
-// router.get("/info", [checkuser.verifyUser], async function (req, res, next) {
-//   // トークイン解析したユーザIDを取得
-//   // var token = req.query.token;
-//   var token_userID = req.userID;
-//   // トークン解析したユーザ名を取得
-//   var token_userName = req.userName;
-//   if (!token_userID) {
-//     res.status(200).send({
-//       token: null,
-//       message: STATUS_MESSAGE.LOGIN_ERROR_401,
-//     });
-//     return
-//   }
-//   // DBユーザ情報取得(ユーザ登録ずみなので、存在チェックしなくてもよい)
-//   var user = await usermodel.getUserInfoByField({ key: "UserID", val: req.userID })
-//   // トークンをキーとして、データを検索
-//   var resobj = {
-//     code: STATUS_MESSAGE.CODE_SUCCESS,
-//     data: {
-//       // ユーザ名
-//       name: user.UserName,
-//       // ユーザ情報
-//       dataInfo: user,
-//       // 権限
-//       roles: ["admin", "superUser"],
-//       // ユーザアバター
-//       avatar: "http://localhost:8080",
-//       // 詳細情報
-//       introduction: user.rankCode
-//     }
-//   };
-//   //　結果を返す
-//   res.status(200).send(resobj);
-// });
-
 // ユーザ情報取得処
 router.get("/profileInfo", [checkuser.verifyUser], async function(req, res, next) {
     // トークイン解析したユーザIDを取得
@@ -261,7 +217,7 @@ router.get("/profileInfo", [checkuser.verifyUser], async function(req, res, next
     }
 });
 
-//　ファイルアップ upload.single('imgAvatar')
+//　ファイルアップ upload.single('imgAvatar')画像格納エンジ
 var upload1 = multer({ storage: Image_storage.Image_storage }).single('imgAvatar')
 router.post("/imageUp", [checkuser.verifyUser], async function(req, res, next) {
 
