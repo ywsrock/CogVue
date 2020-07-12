@@ -6,11 +6,11 @@
         <p>アカウント新規作成</p>
         <hr />
 
-        <label for="email"><b>Email</b></label>
+        <label for="email"><b>title</b></label>
         <input
           type="text"
           ref="email"
-          placeholder="Enter Email"
+          placeholder="タイトル"
           v-model="registForm.email"
           @blur="checkEmail"
           name="email"
@@ -18,11 +18,11 @@
         />
         <p style="color:red;font-size:12px;float:top" ref="e-email"></p>
 
-        <label for="password"><b>Password</b></label>
+        <label for="password"><b>content</b></label>
         <input
           type="password"
           ref="password"
-          placeholder="Enter Password"
+          placeholder="内容"
           name="password"
           v-model="registForm.password"
           @blur="checkPassword"

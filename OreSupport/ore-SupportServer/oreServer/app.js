@@ -7,6 +7,7 @@ var session = require("express-session")
 
 var indexRouter = require('./routes/index');
 var usersRouter = require('./routes/users');
+var blogRouter = require('./routes/blog');
 
 var app = express();
 
@@ -16,7 +17,7 @@ var sessionOpt = {
   resave:false,
   saveUninitialized:false,
   cookie:{
-    MaxAge:60*60*60
+    MaxAge:60*60*60 //セッションの期限
   }
 }
 
@@ -49,6 +50,8 @@ app.use(session(sessionOpt))
 
 app.use('/', indexRouter);
 app.use('/user', usersRouter);
+app.use('/blog', blogRouter);
+
 
 // catch 404 and forward to error handler
 app.use(function(req, res, next) {

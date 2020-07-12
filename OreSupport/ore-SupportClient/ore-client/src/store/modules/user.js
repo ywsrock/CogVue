@@ -26,7 +26,9 @@ const state = {
  * ストア情報取得
  */
 const getters = {
-    userName: state => state.userName,
+    // userName: state => state.userName,
+    userName: function(state){ state.userName},
+
     info: state => state.dataInfo,
     token: state => state.token,
     avatar: state => state.avatar,

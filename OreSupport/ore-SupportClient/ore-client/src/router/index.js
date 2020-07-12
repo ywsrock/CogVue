@@ -2,6 +2,10 @@ import Vue from 'vue'
 import VueRouter from 'vue-router'
 
 import userRouter from "./user/userRouter"
+import blogRouter from "./blog/blogRouter"
+import viewRouter from "./blog/viewRouter"
+import blogList from "@/views/blog/blog_list.vue"
+import blogDetail from "@/views/blog/blog_detail.vue"
 // import login from "@/views/login/index.vue";
 import top from "@/views/user/UserInfo.vue"
 import  Layout  from "@/layout/index.vue"
@@ -25,6 +29,20 @@ Vue.use(VueRouter)
 
     },
     userRouter,
+    blogRouter,
+    viewRouter,
+
+{
+    path:"/blogList",
+    name:"blogList",
+    component:blogList
+},
+{
+  path:"/blogDetail",
+  name:"blogDetail",
+  component:blogDetail
+},
+
     {
       path: '/login',
       name: 'login',
