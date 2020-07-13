@@ -53,11 +53,11 @@ const UserProfile = sequelize.define('UserProfile', {
     type: Sequelize.STRING,
     allowNull: true
   },
-  sns_paceboot: {
+  sns_facebook: {
     type: Sequelize.STRING,
     allowNull: true
   },
-  sns_twtitter: {
+  sns_twitter: {
     type: Sequelize.STRING,
     allowNull: true
   },

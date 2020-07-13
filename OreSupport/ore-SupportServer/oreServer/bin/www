@@ -6,6 +6,31 @@
 var app = require('../app');
 var debug = require('debug')('oreserver:server');
 var http = require('http');
+var logConfig = require("../config/log4js");
+
+/**
+ * make a log directory, just in case it isn't there.
+ */
+try {
+  require('fs').mkdirSync('./log');
+} catch (e) {
+  if (e.code != 'EEXIST') {
+    console.error("Could not set up log directory, error was: ", e);
+    process.exit(1);
+  }
+}
+
+/** 
+ *log4js config 
+ */
+var log4js = require('log4js');
+
+/** 
+ *log4js config 
+ */
+log4js.configure(logConfig);
+//ログ取得
+var log = log4js.getLogger("startup")
 
 /**
  * Get port from environment and store in Express.
@@ -81,4 +106,5 @@ function onListening() {
     ? 'pipe ' + addr
     : 'port ' + addr.port;
   debug('Listening on ' + bind);
+  log.info('Listening on ' + bind)
 }

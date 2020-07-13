@@ -4,7 +4,8 @@ const config = {
       "type": "dateFile",
       "filename": "log/access.log",
       "pattern": "-yyyy-MM-dd",
-      "category": "http"
+      "category": "http",
+      "numBackups": 30
     },
     "app": {
       "type": "file",
@@ -23,8 +24,8 @@ const config = {
     }
   },
   "categories": {
-    "default": { "appenders": [ "app", "errors" ], "level": "DEBUG" },
-    "http": { "appenders": [ "access"], "level": "DEBUG" }
+    "default": { "appenders": ["app", "errors"], "level": "info" },
+    "http": { "appenders": ["access"], "level": "info" }
   }
 }
 

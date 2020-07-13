@@ -1,1 +1,150 @@
-[2020-07-11T14:57:46.395] [INFO] app - ユーザログ:1@1.com
+[2020-07-11T21:44:24.166] [INFO] startup - Listening on port 3000
+[2020-07-11T21:44:47.233] [INFO] users - ユーザログ:1@1.com
+[2020-07-11T22:05:56.681] [INFO] startup - Listening on port 3000
+[2020-07-11T22:06:05.239] [INFO] users - ログアウト
+[2020-07-11T22:06:28.535] [INFO] users - 登録:undefined
+[2020-07-11T22:06:38.382] [INFO] users - ユーザログ:2@21.com
+[2020-07-11T22:06:38.476] [INFO] users - プロフィール:176
+[2020-07-11T22:10:18.257] [INFO] startup - Listening on port 3000
+[2020-07-11T22:15:10.562] [INFO] startup - Listening on port 3000
+[2020-07-11T22:15:14.464] [INFO] users - ログアウト
+[2020-07-11T22:15:26.002] [INFO] users - ユーザログ UserName:1@1.com
+[2020-07-11T22:15:26.096] [ERROR] users - ログイン失敗:[object Object]
+[2020-07-11T22:19:23.287] [INFO] startup - Listening on port 3000
+[2020-07-11T22:19:43.905] [INFO] users - ユーザログ UserName:1@1.com
+[2020-07-11T22:19:44.001] [ERROR] users - ログイン失敗:1@1.com
+[2020-07-11T22:31:10.986] [INFO] users - ユーザログ UserName:1@1.com
+[2020-07-11T22:31:11.064] [ERROR] users - ログイン失敗:1@1.com
+[2020-07-13T00:23:40.005] [INFO] users - ユーザログ UserName:1@1.com
+[2020-07-13T00:23:40.094] [INFO] users - ログイン成功:49
+[2020-07-13T00:23:40.111] [INFO] users - プロフィール userID:49
+[2020-07-13T00:23:41.924] [INFO] users - ユーザログ UserName:1@1.com
+[2020-07-13T00:23:42.009] [INFO] users - ログイン成功:49
+[2020-07-13T00:23:42.020] [INFO] users - プロフィール userID:49
+[2020-07-13T00:24:19.786] [INFO] users - ファイルアップ:[object Object]
+[2020-07-13T09:25:09.437] [INFO] startup - Listening on port 3000
+[2020-07-13T09:26:31.265] [INFO] startup - Listening on port 3000
+[2020-07-13T09:46:12.582] [INFO] startup - Listening on port 3000
+[2020-07-13T09:47:05.915] [INFO] users - singUp:[object Object]
+[2020-07-13T09:47:05.992] [INFO] userDao - START saveUserAsEmailAndPassword:[object Object]
+[2020-07-13T09:47:06.018] [INFO] userDao - END saveUserAsEmailAndPassword
+[2020-07-13T09:47:06.018] [INFO] users - singUp: Email:test@123.com
+[2020-07-13T09:47:14.460] [INFO] users - ユーザログ UserName:test@123.com
+[2020-07-13T09:47:14.460] [INFO] userDao - START getUserInfoByUserName: [object Object]
+[2020-07-13T09:47:14.468] [INFO] userDao - END getUserInfoByUserName
+[2020-07-13T09:47:14.537] [INFO] users - login success UserID: 177
+[2020-07-13T09:47:14.549] [INFO] users - profileInfo userID: 177
+[2020-07-13T09:47:14.549] [INFO] userDao - START getUserProfileByUserID : [object Object]
+[2020-07-13T09:47:14.558] [INFO] userDao - END getUserProfileByUserID
+[2020-07-13T09:47:14.559] [INFO] users - profileInfo success
+[2020-07-13T09:58:05.336] [INFO] startup - Listening on port 3000
+[2020-07-13T09:58:10.048] [INFO] users - logout
+[2020-07-13T09:58:23.887] [INFO] users - ユーザログ UserName:1@1.com
+[2020-07-13T09:58:23.888] [INFO] userDao - START getUserInfoByUserName: {"username":"1@1.com"}
+[2020-07-13T09:58:23.895] [INFO] userDao - END getUserInfoByUserName
+[2020-07-13T09:58:23.977] [INFO] users - login success UserID: 49
+[2020-07-13T09:58:23.987] [INFO] users - profileInfo userID: 49
+[2020-07-13T09:58:23.987] [INFO] userDao - START getUserProfileByUserID : {"key":"UserID","val":49}
+[2020-07-13T09:58:23.998] [INFO] userDao - END getUserProfileByUserID
+[2020-07-13T09:58:23.998] [INFO] users - profileInfo success
+[2020-07-13T10:06:21.148] [INFO] startup - Listening on port 3000
+[2020-07-13T10:06:25.884] [INFO] users - logout
+[2020-07-13T10:06:37.708] [INFO] users - singUp:{"email":"aa@aa.com","password":"123456"}
+[2020-07-13T10:06:37.783] [INFO] userDao - START saveUserAsEmailAndPassword:{"username":"aa@aa.com","email":"aa@aa.com","rankCode":1,"password":"$2a$10$v8Ix2qZwURi4izT/Q4/v8.fSZvrZdXxt/v9hDj0oPa3QdcmHeweai"}
+[2020-07-13T10:06:37.796] [INFO] userDao - END saveUserAsEmailAndPassword
+[2020-07-13T10:06:37.796] [INFO] users - singUp: Email:aa@aa.com
+[2020-07-13T10:06:48.340] [INFO] users - ユーザログ UserName:1@1.com
+[2020-07-13T10:06:48.341] [INFO] userDao - START getUserInfoByUserName: {"username":"1@1.com"}
+[2020-07-13T10:06:48.348] [INFO] userDao - END getUserInfoByUserName
+[2020-07-13T10:06:48.415] [INFO] users - login success UserID: 49
+[2020-07-13T10:06:48.427] [INFO] users - profileInfo userID: 49
+[2020-07-13T10:06:48.427] [INFO] userDao - START getUserProfileByUserID : {"key":"UserID","val":49}
+[2020-07-13T10:06:48.437] [INFO] userDao - END getUserProfileByUserID
+[2020-07-13T10:06:48.437] [INFO] users - profileInfo success
+[2020-07-13T10:12:19.679] [INFO] startup - Listening on port 3000
+[2020-07-13T10:13:48.605] [INFO] startup - Listening on port 3000
+[2020-07-13T10:13:53.373] [INFO] users - logout
+[2020-07-13T10:14:00.970] [INFO] users - ユーザログ UserName:1@1.com
+[2020-07-13T10:14:00.970] [INFO] userDao - START getUserInfoByUserName: {"username":"1@1.com"}
+[2020-07-13T10:14:00.977] [INFO] userDao - END getUserInfoByUserName
+[2020-07-13T10:14:01.059] [INFO] users - login success UserID: 49
+[2020-07-13T10:14:01.070] [INFO] users - profileInfo userID: 49
+[2020-07-13T10:14:01.070] [INFO] userDao - START getUserProfileByUserID : {"key":"UserID","val":49}
+[2020-07-13T10:14:01.078] [ERROR] userDao - getUserProfileByUserID error:SequelizeDatabaseError: Unknown column 'UserProfile.sns_facebook' in 'field list'
+    at Query.formatError (/Users/yws/Dev/OreSupport_gitHub/PBL2020/OreSupport/ore-SupportServer/oreServer/node_modules/sequelize/lib/dialects/mysql/query.js:244:16)
+    at Query.handler [as onResult] (/Users/yws/Dev/OreSupport_gitHub/PBL2020/OreSupport/ore-SupportServer/oreServer/node_modules/sequelize/lib/dialects/mysql/query.js:51:23)
+    at Query.execute (/Users/yws/Dev/OreSupport_gitHub/PBL2020/OreSupport/ore-SupportServer/oreServer/node_modules/mysql2/lib/commands/command.js:30:14)
+    at Connection.handlePacket (/Users/yws/Dev/OreSupport_gitHub/PBL2020/OreSupport/ore-SupportServer/oreServer/node_modules/mysql2/lib/connection.js:417:32)
+    at PacketParser.onPacket (/Users/yws/Dev/OreSupport_gitHub/PBL2020/OreSupport/ore-SupportServer/oreServer/node_modules/mysql2/lib/connection.js:75:12)
+    at PacketParser.executeStart (/Users/yws/Dev/OreSupport_gitHub/PBL2020/OreSupport/ore-SupportServer/oreServer/node_modules/mysql2/lib/packet_parser.js:75:16)
+    at Socket.<anonymous> (/Users/yws/Dev/OreSupport_gitHub/PBL2020/OreSupport/ore-SupportServer/oreServer/node_modules/mysql2/lib/connection.js:82:25)
+    at Socket.emit (events.js:311:20)
+    at addChunk (_stream_readable.js:294:12)
+    at readableAddChunk (_stream_readable.js:275:11)
+    at Socket.Readable.push (_stream_readable.js:209:10)
+    at TCP.onStreamRead (internal/stream_base_commons.js:186:23)
+[2020-07-13T10:14:03.523] [INFO] users - ユーザログ UserName:1@1.com
+[2020-07-13T10:14:03.523] [INFO] userDao - START getUserInfoByUserName: {"username":"1@1.com"}
+[2020-07-13T10:14:03.526] [INFO] userDao - END getUserInfoByUserName
+[2020-07-13T10:14:03.599] [INFO] users - login success UserID: 49
+[2020-07-13T10:14:03.609] [INFO] users - profileInfo userID: 49
+[2020-07-13T10:14:03.609] [INFO] userDao - START getUserProfileByUserID : {"key":"UserID","val":49}
+[2020-07-13T10:14:03.614] [ERROR] userDao - getUserProfileByUserID error:SequelizeDatabaseError: Unknown column 'UserProfile.sns_facebook' in 'field list'
+    at Query.formatError (/Users/yws/Dev/OreSupport_gitHub/PBL2020/OreSupport/ore-SupportServer/oreServer/node_modules/sequelize/lib/dialects/mysql/query.js:244:16)
+    at Query.handler [as onResult] (/Users/yws/Dev/OreSupport_gitHub/PBL2020/OreSupport/ore-SupportServer/oreServer/node_modules/sequelize/lib/dialects/mysql/query.js:51:23)
+    at Query.execute (/Users/yws/Dev/OreSupport_gitHub/PBL2020/OreSupport/ore-SupportServer/oreServer/node_modules/mysql2/lib/commands/command.js:30:14)
+    at Connection.handlePacket (/Users/yws/Dev/OreSupport_gitHub/PBL2020/OreSupport/ore-SupportServer/oreServer/node_modules/mysql2/lib/connection.js:417:32)
+    at PacketParser.onPacket (/Users/yws/Dev/OreSupport_gitHub/PBL2020/OreSupport/ore-SupportServer/oreServer/node_modules/mysql2/lib/connection.js:75:12)
+    at PacketParser.executeStart (/Users/yws/Dev/OreSupport_gitHub/PBL2020/OreSupport/ore-SupportServer/oreServer/node_modules/mysql2/lib/packet_parser.js:75:16)
+    at Socket.<anonymous> (/Users/yws/Dev/OreSupport_gitHub/PBL2020/OreSupport/ore-SupportServer/oreServer/node_modules/mysql2/lib/connection.js:82:25)
+    at Socket.emit (events.js:311:20)
+    at addChunk (_stream_readable.js:294:12)
+    at readableAddChunk (_stream_readable.js:275:11)
+    at Socket.Readable.push (_stream_readable.js:209:10)
+    at TCP.onStreamRead (internal/stream_base_commons.js:186:23)
+[2020-07-13T10:14:04.157] [INFO] users - ユーザログ UserName:1@1.com
+[2020-07-13T10:14:04.157] [INFO] userDao - START getUserInfoByUserName: {"username":"1@1.com"}
+[2020-07-13T10:14:04.165] [INFO] userDao - END getUserInfoByUserName
+[2020-07-13T10:14:04.237] [INFO] users - login success UserID: 49
+[2020-07-13T10:14:04.244] [INFO] users - profileInfo userID: 49
+[2020-07-13T10:14:04.244] [INFO] userDao - START getUserProfileByUserID : {"key":"UserID","val":49}
+[2020-07-13T10:14:04.265] [ERROR] userDao - getUserProfileByUserID error:SequelizeDatabaseError: Unknown column 'UserProfile.sns_facebook' in 'field list'
+    at Query.formatError (/Users/yws/Dev/OreSupport_gitHub/PBL2020/OreSupport/ore-SupportServer/oreServer/node_modules/sequelize/lib/dialects/mysql/query.js:244:16)
+    at Query.handler [as onResult] (/Users/yws/Dev/OreSupport_gitHub/PBL2020/OreSupport/ore-SupportServer/oreServer/node_modules/sequelize/lib/dialects/mysql/query.js:51:23)
+    at Query.execute (/Users/yws/Dev/OreSupport_gitHub/PBL2020/OreSupport/ore-SupportServer/oreServer/node_modules/mysql2/lib/commands/command.js:30:14)
+    at Connection.handlePacket (/Users/yws/Dev/OreSupport_gitHub/PBL2020/OreSupport/ore-SupportServer/oreServer/node_modules/mysql2/lib/connection.js:417:32)
+    at PacketParser.onPacket (/Users/yws/Dev/OreSupport_gitHub/PBL2020/OreSupport/ore-SupportServer/oreServer/node_modules/mysql2/lib/connection.js:75:12)
+    at PacketParser.executeStart (/Users/yws/Dev/OreSupport_gitHub/PBL2020/OreSupport/ore-SupportServer/oreServer/node_modules/mysql2/lib/packet_parser.js:75:16)
+    at Socket.<anonymous> (/Users/yws/Dev/OreSupport_gitHub/PBL2020/OreSupport/ore-SupportServer/oreServer/node_modules/mysql2/lib/connection.js:82:25)
+    at Socket.emit (events.js:311:20)
+    at addChunk (_stream_readable.js:294:12)
+    at readableAddChunk (_stream_readable.js:275:11)
+    at Socket.Readable.push (_stream_readable.js:209:10)
+    at TCP.onStreamRead (internal/stream_base_commons.js:186:23)
+[2020-07-13T10:14:04.335] [INFO] users - ユーザログ UserName:1@1.com
+[2020-07-13T10:14:04.335] [INFO] userDao - START getUserInfoByUserName: {"username":"1@1.com"}
+[2020-07-13T10:14:04.338] [INFO] userDao - END getUserInfoByUserName
+[2020-07-13T10:14:04.409] [INFO] users - login success UserID: 49
+[2020-07-13T10:14:24.416] [INFO] users - profileInfo userID: 49
+[2020-07-13T10:14:24.416] [INFO] userDao - START getUserProfileByUserID : {"key":"UserID","val":49}
+[2020-07-13T10:14:24.420] [ERROR] userDao - getUserProfileByUserID error:SequelizeDatabaseError: Unknown column 'UserProfile.sns_facebook' in 'field list'
+    at Query.formatError (/Users/yws/Dev/OreSupport_gitHub/PBL2020/OreSupport/ore-SupportServer/oreServer/node_modules/sequelize/lib/dialects/mysql/query.js:244:16)
+    at Query.handler [as onResult] (/Users/yws/Dev/OreSupport_gitHub/PBL2020/OreSupport/ore-SupportServer/oreServer/node_modules/sequelize/lib/dialects/mysql/query.js:51:23)
+    at Query.execute (/Users/yws/Dev/OreSupport_gitHub/PBL2020/OreSupport/ore-SupportServer/oreServer/node_modules/mysql2/lib/commands/command.js:30:14)
+    at Connection.handlePacket (/Users/yws/Dev/OreSupport_gitHub/PBL2020/OreSupport/ore-SupportServer/oreServer/node_modules/mysql2/lib/connection.js:417:32)
+    at PacketParser.onPacket (/Users/yws/Dev/OreSupport_gitHub/PBL2020/OreSupport/ore-SupportServer/oreServer/node_modules/mysql2/lib/connection.js:75:12)
+    at PacketParser.executeStart (/Users/yws/Dev/OreSupport_gitHub/PBL2020/OreSupport/ore-SupportServer/oreServer/node_modules/mysql2/lib/packet_parser.js:75:16)
+    at Socket.<anonymous> (/Users/yws/Dev/OreSupport_gitHub/PBL2020/OreSupport/ore-SupportServer/oreServer/node_modules/mysql2/lib/connection.js:82:25)
+    at Socket.emit (events.js:311:20)
+    at addChunk (_stream_readable.js:294:12)
+    at readableAddChunk (_stream_readable.js:275:11)
+    at Socket.Readable.push (_stream_readable.js:209:10)
+    at TCP.onStreamRead (internal/stream_base_commons.js:186:23)
+[2020-07-13T10:14:48.807] [INFO] users - ユーザログ UserName:1@1.com
+[2020-07-13T10:14:48.807] [INFO] userDao - START getUserInfoByUserName: {"username":"1@1.com"}
+[2020-07-13T10:14:48.816] [INFO] userDao - END getUserInfoByUserName
+[2020-07-13T10:14:48.888] [INFO] users - login success UserID: 49
+[2020-07-13T10:14:48.895] [INFO] users - profileInfo userID: 49
+[2020-07-13T10:14:48.896] [INFO] userDao - START getUserProfileByUserID : {"key":"UserID","val":49}
+[2020-07-13T10:14:48.921] [INFO] userDao - END getUserProfileByUserID
+[2020-07-13T10:14:48.921] [INFO] users - profileInfo success

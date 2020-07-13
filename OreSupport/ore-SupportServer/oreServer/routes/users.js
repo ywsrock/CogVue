@@ -12,21 +12,13 @@ const Image_storage = require("../common/fileup")
 const multer = require('multer');
 const fs = require('fs');
 const appRoot = require('app-root-path');
-const log4js = require("log4js")
-const logConfig = require("../config/log4js")
 
-//ログ設定
-log4js.configure(
-    logConfig
-  );  
-
-var log = require('log4js').getLogger("app");
+var log = require('log4js').getLogger("users");
 
 /* ユーザログイン処理 */
-router.post("/login", async function(req, res, next) {
+router.post("/login", async function (req, res, next) {
     //ログ出力
-    log.info("ユーザログ:" + req.body.username);
-
+    log.info("ユーザログ UserName:" + req.body.username);
     // ユーザ名とパスワード
     const { username, password } = req.body;
     // ユーザ情報取得
@@ -70,8 +62,10 @@ router.post("/login", async function(req, res, next) {
                 roles: [],
             },
         };
+        log.info(`login success UserID: ${user.UserID}`);
         res.send(resObj);
     } else {
+        log.error(`login error UserName: ${req.body.username}`);
         // 認証失敗の場合
         return res.status(200).send({
             token: null,
@@ -81,7 +75,9 @@ router.post("/login", async function(req, res, next) {
 });
 
 // ユーザ登録
-router.post("/singUp", async function(req, res, next) {
+router.post("/singUp", async function (req, res, next) {
+    //ログ出力
+    log.info("singUp:" + JSON.stringify(req.body));
     // 出力結果
     let resObj = {};
     // ユーザメールアドレスと
@@ -111,33 +107,39 @@ router.post("/singUp", async function(req, res, next) {
                 code: STATUS_MESSAGE.CODE_402,
                 message: results.message,
             };
+            log.error(`singUp error :${resObj}`)
             return res.status(200).send(resObj);
         } else {
             resObj = {
                 // JSON ステータスコード
                 code: STATUS_MESSAGE.CODE_SUCCESS,
                 data: {
-                    message: "登録成功",
+                    message: "singUp success",
                 },
             };
         }
+        log.info(`singUp: Email:${email}`);
         return res.status(200).send(resObj);
     } else {
+        log.error(`singUp error: ${req.body.email}`);
         return res.status(200).send({
             token: null,
-            message: "ユーザ名とパスワードをチェックしてくだい。",
+            message: STATUS_MESSAGE.REG_ERROR_402,
         });
     }
 });
 
 // ユーザ情報取得処
-router.get("/profileInfo", [checkuser.verifyUser], async function(req, res, next) {
+router.get("/profileInfo", [checkuser.verifyUser], async function (req, res, next) {
+    //ログ出力
+    log.info(`profileInfo userID: ${req.userID}`);
     // トークイン解析したユーザIDを取得
     // var token = req.query.token;
     var token_userID = req.userID;
     // トークン解析したユーザ名を取得
     var token_userName = req.userName;
     if (!token_userID) {
+        log.error(`profileInfo token error UserID: ${token_userID}`);
         res.status(200).send({
             token: null,
             message: STATUS_MESSAGE.LOGIN_ERROR_401,
@@ -147,6 +149,7 @@ router.get("/profileInfo", [checkuser.verifyUser], async function(req, res, next
     // DBユーザ情報取得(ユーザ登録ずみなので、存在チェックしなくてもよい)
     var user = await usermodel.getUserProfileByUserID({ key: "UserID", val: req.userID })
     if (typeof user.errors != "undefined") {
+        log.error(`profileInfo data query error key: UserID val: ${req.userID}`);
         // エラー結果
         resObj = {
             code: STATUS_MESSAGE.CODE_402,
@@ -205,13 +208,14 @@ router.get("/profileInfo", [checkuser.verifyUser], async function(req, res, next
                     snsInfo: {
                         Update_type: PROFILE_INFO.SNS_INFO,
                         sns_facebook: user.UserProfile.sns_facebook,
-                        sns_twtitter: user.UserProfile.sns_twtitter,
+                        sns_twtitter: user.UserProfile.sns_twitter,
                         sns_instagram: user.UserProfile.sns_instagram,
                         sns_other: user.UserProfile.sns_other,
                     },
                 },
             }
         };
+        log.info(`profileInfo success`)
         //　結果を返す
         res.status(200).send(resobj);
     }
@@ -219,12 +223,15 @@ router.get("/profileInfo", [checkuser.verifyUser], async function(req, res, next
 
 //　ファイルアップ upload.single('imgAvatar')画像格納エンジ
 var upload1 = multer({ storage: Image_storage.Image_storage }).single('imgAvatar')
-router.post("/imageUp", [checkuser.verifyUser], async function(req, res, next) {
+router.post("/imageUp", [checkuser.verifyUser], async function (req, res, next) {
+    //ログ出力
+    log.info(`fileUpload: + ${req.file.filename}`);
 
     var resObj = {};
     // ユーザIDID
-    await upload1(req, res, function(err) {
+    await upload1(req, res, function (err) {
         if (err) {
+            log.error(`imageUp upload error: ${err}`)
             resObj.code = STATUS_MESSAGE.CODE_403;
             resObj.message = STATUS_MESSAGE.FILEUP_ERROR_403;
         } else {
@@ -239,6 +246,7 @@ router.post("/imageUp", [checkuser.verifyUser], async function(req, res, next) {
             var ret = usermodel.saveUserProfile(updateProfile_obj, {}, { key: "UserID", val: req.userID });
             //  更新エラーの場合
             if (typeof ret.errors != "undefined") {
+                log.error(`imageUp query error key:UserID val:${req.userID}`)
                 // エラー結果
                 resObj = {
                     code: STATUS_MESSAGE.CODE_403,
@@ -254,14 +262,16 @@ router.post("/imageUp", [checkuser.verifyUser], async function(req, res, next) {
                 }
             }
         }
+        log.info(`imageUp success`)
         res.status(200).send(resObj);
     })
 });
 // ユーザプロフィール更新
-router.post("/updatePro", [checkuser.verifyUser], async function(req, res, next) {
+router.post("/updatePro", [checkuser.verifyUser], async function (req, res, next) {
+    //ログ出力
+    log.info("updatePro:" + JSON.stringify(req.body));
     //　更新type
     var objtype = req.body.Update_type;
-
     //　更新OBJ
     var updateProfile_obj = {};
     var updateUser_obj = {};
@@ -271,14 +281,14 @@ router.post("/updatePro", [checkuser.verifyUser], async function(req, res, next)
     switch (objtype) {
         case PROFILE_INFO.BASIC_INFO:
             updateProfile_obj = {
-                    LastName: req.body.lastName,
-                    FirstName: req.body.firstName,
-                    Sex: req.body.sex,
-                    Birthday: req.body.birthday,
-                    Phone1: req.body.phone,
-                    Avatar: req.body.avatar,
-                    Aboutme: req.body.aboutMe,
-                },
+                LastName: req.body.lastName,
+                FirstName: req.body.firstName,
+                Sex: req.body.sex,
+                Birthday: req.body.birthday,
+                Phone1: req.body.phone,
+                Avatar: req.body.avatar,
+                Aboutme: req.body.aboutMe,
+            },
                 // ユーザテーブル
                 updateUser_obj.Email = req.body.email,
                 // ユーザテーブル更新FLG
@@ -304,8 +314,8 @@ router.post("/updatePro", [checkuser.verifyUser], async function(req, res, next)
         case PROFILE_INFO.SNS_INFO:
             //　sns情報
             updateProfile_obj = {
-                sns_paceboot: req.body.sns_Facebook,
-                sns_twtitter: req.body.sns_twtitter,
+                sns_facebook: req.body.sns_Facebook,
+                sns_twitter: req.body.sns_twtitter,
                 sns_instagram: req.body.sns_instagram,
                 sns_other: req.body.sns_other,
             }
@@ -316,6 +326,7 @@ router.post("/updatePro", [checkuser.verifyUser], async function(req, res, next)
     // 更新処理
     var ret = await usermodel.saveUserProfile(updateProfile_obj, updateUser_obj, { key: "UserID", val: req.userID }, flg_u)
     if (typeof ret.errors != "undefined") {
+        log.error(`updatePro query error key:UserID val: ${req.userID}`)
         // エラー結果
         resObj = {
             code: STATUS_MESSAGE.CODE_402,
@@ -324,19 +335,17 @@ router.post("/updatePro", [checkuser.verifyUser], async function(req, res, next)
         return res.status(200).send(resObj);
     } else {
         var resobj = {
-                code: STATUS_MESSAGE.CODE_SUCCESS,
-            }
-            //　結果を返す
+            code: STATUS_MESSAGE.CODE_SUCCESS,
+        }
+        log.info(`updatePro success`);
+        //　結果を返す
         res.status(200).send(resobj)
     }
-
-
-
-
 });
 // ログアウト処理
-router.post("/logout", function(req, res, next) {
-    console.log("ログアウト");
+router.post("/logout", function (req, res, next) {
+    //ログ出力
+    log.info("logout");
     res.send({ code: 20000, content: "OK---" });
 });
 

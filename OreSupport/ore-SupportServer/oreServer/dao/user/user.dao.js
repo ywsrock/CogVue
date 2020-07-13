@@ -4,12 +4,14 @@ const { UserProfile } = require("../../model/userprofile.model")
 const { sequelize } = require('../../common/db.common');
 const Sequelize = require('sequelize');
 const { Op } = require('sequelize');
+var log = require('log4js').getLogger("userDao");
 
 /* 情報取得 
  * 検索条件：ユーザ名とパスワード
  * 検索テーブル: ユーザ情報テーブル
  */
 const getUserInfoByUserName = async(queryInfo) => {
+    log.info(`START getUserInfoByUserName: ${JSON.stringify(queryInfo)}`)
     try {
         // データ検索
         const result = await User.findOne({
@@ -29,10 +31,11 @@ const getUserInfoByUserName = async(queryInfo) => {
                     }]
                 }
             })
-            // 結果を返す
+            log.info(`END getUserInfoByUserName`)
+        // 結果を返す
         return result;
     } catch (error) {
-        console.error("情報取得エラー:" + error.stack);
+        log.error("getUserInfoByUserName error:" + error.stack)
         return error;
     }
 }
@@ -43,6 +46,7 @@ const getUserInfoByUserName = async(queryInfo) => {
  * 検索テーブル: ユーザ情報テーブル
  */
 const getUserInfoByField = async(queryInfo) => {
+    log.info(`START getUserInfoByField : ${JSON.stringify(queryInfo)}`)
     try {
         // 結果を返す
         const result = await User.findOne({
@@ -54,9 +58,10 @@ const getUserInfoByField = async(queryInfo) => {
                 ]
             }
         });
+        log.info(`END getUserInfoByField`)
         return result;
     } catch (error) {
-        console.error("情報取得エラー:" + error.stack);
+        log.error(`getUserInfoByField error: ${error.stack}`)
         throw error;
     }
 }
@@ -66,6 +71,7 @@ const getUserInfoByField = async(queryInfo) => {
  * 検索テーブル: ユーザ情報テーブル
  */
 const saveUserAsEmailAndPassword = async(queryInfo) => {
+    log.info(`START saveUserAsEmailAndPassword:${JSON.stringify(queryInfo)}`)
     try {
         // トランザクション処理開始
         const t = await sequelize.transaction();
@@ -100,17 +106,19 @@ const saveUserAsEmailAndPassword = async(queryInfo) => {
         });
         // トランザクションコンミット
         await t.commit();
+        log.info(`END saveUserAsEmailAndPassword`)
         // 結果を返す
         return result;
     } catch (error) {
         await t.rollback();
-        console.error("情報取得エラー:" + error.stack);
+        log.error(`saveUserAsEmailAndPassword error: ${error.stack}`)
         return error;
     }
 }
 
 // ユーザプロフィール情報取得
 const getUserProfileByUserID = async(queryInfo) => {
+    log.info(`START getUserProfileByUserID : ${JSON.stringify(queryInfo)}`)
     try {
         // ユーザテーブルとプロフィールテーブル関連
         User.hasOne(UserProfile, {
@@ -138,8 +146,10 @@ const getUserProfileByUserID = async(queryInfo) => {
             include: UserProfile, //　プリロードモード
             attributes: { exclude: ['Password'] }
         });
+        log.info(`END getUserProfileByUserID`)
         return user;
     } catch (error) {
+        log.error(`getUserProfileByUserID error:${error.stack}`)
         console.error("情報取得エラー:" + error.stack);
         return error;
     }
@@ -147,6 +157,7 @@ const getUserProfileByUserID = async(queryInfo) => {
 
 // ユーザプロフィール情報設定
 const saveUserProfile = async(updateProfile_obj, updateUser_obj, queryInfo, flg = false) => {
+    log.info(`START saveUserProfile: param1:${JSON.stringify(updateProfile_obj)} , param2:${JSON.stringify(updateUser_obj)}`)
     try {
         // ユーザテーブル更新の場合
         if (flg) {
@@ -162,8 +173,10 @@ const saveUserProfile = async(updateProfile_obj, updateUser_obj, queryInfo, flg 
                 [queryInfo.key]: queryInfo.val,
             }
         })
+        log.info(`END saveUserProfile`)
         return result;
     } catch (error) {
+        log.error(`saveUserProfile error: ${error.stack}`)
         console.error("情報取得エラー:" + error.stack);
         return error;
     }
