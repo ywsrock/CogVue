@@ -53,3 +53,148 @@
     at readableAddChunk (_stream_readable.js:275:11)
     at Socket.Readable.push (_stream_readable.js:209:10)
     at TCP.onStreamRead (internal/stream_base_commons.js:186:23)
+[2020-07-13T13:00:11.415] [ERROR] app - アクセスエラー TypeError: Cannot read property 'indexOf' of undefined
+    at /Users/yws/Dev/OreSupport_gitHub/PBL2020/OreSupport/ore-SupportServer/oreServer/app.js:34:14
+    at Array.forEach (<anonymous>)
+    at crossopt (/Users/yws/Dev/OreSupport_gitHub/PBL2020/OreSupport/ore-SupportServer/oreServer/app.js:33:13)
+    at Layer.handle [as handle_request] (/Users/yws/Dev/OreSupport_gitHub/PBL2020/OreSupport/ore-SupportServer/oreServer/node_modules/express/lib/router/layer.js:95:5)
+    at trim_prefix (/Users/yws/Dev/OreSupport_gitHub/PBL2020/OreSupport/ore-SupportServer/oreServer/node_modules/express/lib/router/index.js:317:13)
+    at /Users/yws/Dev/OreSupport_gitHub/PBL2020/OreSupport/ore-SupportServer/oreServer/node_modules/express/lib/router/index.js:284:7
+    at Function.process_params (/Users/yws/Dev/OreSupport_gitHub/PBL2020/OreSupport/ore-SupportServer/oreServer/node_modules/express/lib/router/index.js:335:12)
+    at next (/Users/yws/Dev/OreSupport_gitHub/PBL2020/OreSupport/ore-SupportServer/oreServer/node_modules/express/lib/router/index.js:275:10)
+    at expressInit (/Users/yws/Dev/OreSupport_gitHub/PBL2020/OreSupport/ore-SupportServer/oreServer/node_modules/express/lib/middleware/init.js:40:5)
+    at Layer.handle [as handle_request] (/Users/yws/Dev/OreSupport_gitHub/PBL2020/OreSupport/ore-SupportServer/oreServer/node_modules/express/lib/router/layer.js:95:5)
+    at trim_prefix (/Users/yws/Dev/OreSupport_gitHub/PBL2020/OreSupport/ore-SupportServer/oreServer/node_modules/express/lib/router/index.js:317:13)
+    at /Users/yws/Dev/OreSupport_gitHub/PBL2020/OreSupport/ore-SupportServer/oreServer/node_modules/express/lib/router/index.js:284:7
+    at Function.process_params (/Users/yws/Dev/OreSupport_gitHub/PBL2020/OreSupport/ore-SupportServer/oreServer/node_modules/express/lib/router/index.js:335:12)
+    at next (/Users/yws/Dev/OreSupport_gitHub/PBL2020/OreSupport/ore-SupportServer/oreServer/node_modules/express/lib/router/index.js:275:10)
+    at query (/Users/yws/Dev/OreSupport_gitHub/PBL2020/OreSupport/ore-SupportServer/oreServer/node_modules/express/lib/middleware/query.js:45:5)
+    at Layer.handle [as handle_request] (/Users/yws/Dev/OreSupport_gitHub/PBL2020/OreSupport/ore-SupportServer/oreServer/node_modules/express/lib/router/layer.js:95:5)
+    at trim_prefix (/Users/yws/Dev/OreSupport_gitHub/PBL2020/OreSupport/ore-SupportServer/oreServer/node_modules/express/lib/router/index.js:317:13)
+    at /Users/yws/Dev/OreSupport_gitHub/PBL2020/OreSupport/ore-SupportServer/oreServer/node_modules/express/lib/router/index.js:284:7
+    at Function.process_params (/Users/yws/Dev/OreSupport_gitHub/PBL2020/OreSupport/ore-SupportServer/oreServer/node_modules/express/lib/router/index.js:335:12)
+    at next (/Users/yws/Dev/OreSupport_gitHub/PBL2020/OreSupport/ore-SupportServer/oreServer/node_modules/express/lib/router/index.js:275:10)
+    at Function.handle (/Users/yws/Dev/OreSupport_gitHub/PBL2020/OreSupport/ore-SupportServer/oreServer/node_modules/express/lib/router/index.js:174:3)
+    at Function.handle (/Users/yws/Dev/OreSupport_gitHub/PBL2020/OreSupport/ore-SupportServer/oreServer/node_modules/express/lib/application.js:174:10)
+[2020-07-13T13:00:21.523] [ERROR] app - アクセスエラー TypeError: Cannot read property 'indexOf' of undefined
+    at /Users/yws/Dev/OreSupport_gitHub/PBL2020/OreSupport/ore-SupportServer/oreServer/app.js:34:14
+    at Array.forEach (<anonymous>)
+    at crossopt (/Users/yws/Dev/OreSupport_gitHub/PBL2020/OreSupport/ore-SupportServer/oreServer/app.js:33:13)
+    at Layer.handle [as handle_request] (/Users/yws/Dev/OreSupport_gitHub/PBL2020/OreSupport/ore-SupportServer/oreServer/node_modules/express/lib/router/layer.js:95:5)
+    at trim_prefix (/Users/yws/Dev/OreSupport_gitHub/PBL2020/OreSupport/ore-SupportServer/oreServer/node_modules/express/lib/router/index.js:317:13)
+    at /Users/yws/Dev/OreSupport_gitHub/PBL2020/OreSupport/ore-SupportServer/oreServer/node_modules/express/lib/router/index.js:284:7
+    at Function.process_params (/Users/yws/Dev/OreSupport_gitHub/PBL2020/OreSupport/ore-SupportServer/oreServer/node_modules/express/lib/router/index.js:335:12)
+    at next (/Users/yws/Dev/OreSupport_gitHub/PBL2020/OreSupport/ore-SupportServer/oreServer/node_modules/express/lib/router/index.js:275:10)
+    at expressInit (/Users/yws/Dev/OreSupport_gitHub/PBL2020/OreSupport/ore-SupportServer/oreServer/node_modules/express/lib/middleware/init.js:40:5)
+    at Layer.handle [as handle_request] (/Users/yws/Dev/OreSupport_gitHub/PBL2020/OreSupport/ore-SupportServer/oreServer/node_modules/express/lib/router/layer.js:95:5)
+    at trim_prefix (/Users/yws/Dev/OreSupport_gitHub/PBL2020/OreSupport/ore-SupportServer/oreServer/node_modules/express/lib/router/index.js:317:13)
+    at /Users/yws/Dev/OreSupport_gitHub/PBL2020/OreSupport/ore-SupportServer/oreServer/node_modules/express/lib/router/index.js:284:7
+    at Function.process_params (/Users/yws/Dev/OreSupport_gitHub/PBL2020/OreSupport/ore-SupportServer/oreServer/node_modules/express/lib/router/index.js:335:12)
+    at next (/Users/yws/Dev/OreSupport_gitHub/PBL2020/OreSupport/ore-SupportServer/oreServer/node_modules/express/lib/router/index.js:275:10)
+    at query (/Users/yws/Dev/OreSupport_gitHub/PBL2020/OreSupport/ore-SupportServer/oreServer/node_modules/express/lib/middleware/query.js:45:5)
+    at Layer.handle [as handle_request] (/Users/yws/Dev/OreSupport_gitHub/PBL2020/OreSupport/ore-SupportServer/oreServer/node_modules/express/lib/router/layer.js:95:5)
+    at trim_prefix (/Users/yws/Dev/OreSupport_gitHub/PBL2020/OreSupport/ore-SupportServer/oreServer/node_modules/express/lib/router/index.js:317:13)
+    at /Users/yws/Dev/OreSupport_gitHub/PBL2020/OreSupport/ore-SupportServer/oreServer/node_modules/express/lib/router/index.js:284:7
+    at Function.process_params (/Users/yws/Dev/OreSupport_gitHub/PBL2020/OreSupport/ore-SupportServer/oreServer/node_modules/express/lib/router/index.js:335:12)
+    at next (/Users/yws/Dev/OreSupport_gitHub/PBL2020/OreSupport/ore-SupportServer/oreServer/node_modules/express/lib/router/index.js:275:10)
+    at Function.handle (/Users/yws/Dev/OreSupport_gitHub/PBL2020/OreSupport/ore-SupportServer/oreServer/node_modules/express/lib/router/index.js:174:3)
+    at Function.handle (/Users/yws/Dev/OreSupport_gitHub/PBL2020/OreSupport/ore-SupportServer/oreServer/node_modules/express/lib/application.js:174:10)
+[2020-07-13T13:01:33.406] [ERROR] app - アクセスエラー ReferenceError: Host is not defined
+    at /Users/yws/Dev/OreSupport_gitHub/PBL2020/OreSupport/ore-SupportServer/oreServer/app.js:34:5
+    at Array.forEach (<anonymous>)
+    at crossopt (/Users/yws/Dev/OreSupport_gitHub/PBL2020/OreSupport/ore-SupportServer/oreServer/app.js:33:13)
+    at Layer.handle [as handle_request] (/Users/yws/Dev/OreSupport_gitHub/PBL2020/OreSupport/ore-SupportServer/oreServer/node_modules/express/lib/router/layer.js:95:5)
+    at trim_prefix (/Users/yws/Dev/OreSupport_gitHub/PBL2020/OreSupport/ore-SupportServer/oreServer/node_modules/express/lib/router/index.js:317:13)
+    at /Users/yws/Dev/OreSupport_gitHub/PBL2020/OreSupport/ore-SupportServer/oreServer/node_modules/express/lib/router/index.js:284:7
+    at Function.process_params (/Users/yws/Dev/OreSupport_gitHub/PBL2020/OreSupport/ore-SupportServer/oreServer/node_modules/express/lib/router/index.js:335:12)
+    at next (/Users/yws/Dev/OreSupport_gitHub/PBL2020/OreSupport/ore-SupportServer/oreServer/node_modules/express/lib/router/index.js:275:10)
+    at expressInit (/Users/yws/Dev/OreSupport_gitHub/PBL2020/OreSupport/ore-SupportServer/oreServer/node_modules/express/lib/middleware/init.js:40:5)
+    at Layer.handle [as handle_request] (/Users/yws/Dev/OreSupport_gitHub/PBL2020/OreSupport/ore-SupportServer/oreServer/node_modules/express/lib/router/layer.js:95:5)
+    at trim_prefix (/Users/yws/Dev/OreSupport_gitHub/PBL2020/OreSupport/ore-SupportServer/oreServer/node_modules/express/lib/router/index.js:317:13)
+    at /Users/yws/Dev/OreSupport_gitHub/PBL2020/OreSupport/ore-SupportServer/oreServer/node_modules/express/lib/router/index.js:284:7
+    at Function.process_params (/Users/yws/Dev/OreSupport_gitHub/PBL2020/OreSupport/ore-SupportServer/oreServer/node_modules/express/lib/router/index.js:335:12)
+    at next (/Users/yws/Dev/OreSupport_gitHub/PBL2020/OreSupport/ore-SupportServer/oreServer/node_modules/express/lib/router/index.js:275:10)
+    at query (/Users/yws/Dev/OreSupport_gitHub/PBL2020/OreSupport/ore-SupportServer/oreServer/node_modules/express/lib/middleware/query.js:45:5)
+    at Layer.handle [as handle_request] (/Users/yws/Dev/OreSupport_gitHub/PBL2020/OreSupport/ore-SupportServer/oreServer/node_modules/express/lib/router/layer.js:95:5)
+    at trim_prefix (/Users/yws/Dev/OreSupport_gitHub/PBL2020/OreSupport/ore-SupportServer/oreServer/node_modules/express/lib/router/index.js:317:13)
+    at /Users/yws/Dev/OreSupport_gitHub/PBL2020/OreSupport/ore-SupportServer/oreServer/node_modules/express/lib/router/index.js:284:7
+    at Function.process_params (/Users/yws/Dev/OreSupport_gitHub/PBL2020/OreSupport/ore-SupportServer/oreServer/node_modules/express/lib/router/index.js:335:12)
+    at next (/Users/yws/Dev/OreSupport_gitHub/PBL2020/OreSupport/ore-SupportServer/oreServer/node_modules/express/lib/router/index.js:275:10)
+    at Function.handle (/Users/yws/Dev/OreSupport_gitHub/PBL2020/OreSupport/ore-SupportServer/oreServer/node_modules/express/lib/router/index.js:174:3)
+    at Function.handle (/Users/yws/Dev/OreSupport_gitHub/PBL2020/OreSupport/ore-SupportServer/oreServer/node_modules/express/lib/application.js:174:10)
+[2020-07-13T13:02:12.972] [ERROR] app - アクセスエラー ReferenceError: Host is not defined
+    at /Users/yws/Dev/OreSupport_gitHub/PBL2020/OreSupport/ore-SupportServer/oreServer/app.js:34:5
+    at Array.forEach (<anonymous>)
+    at crossopt (/Users/yws/Dev/OreSupport_gitHub/PBL2020/OreSupport/ore-SupportServer/oreServer/app.js:33:13)
+    at Layer.handle [as handle_request] (/Users/yws/Dev/OreSupport_gitHub/PBL2020/OreSupport/ore-SupportServer/oreServer/node_modules/express/lib/router/layer.js:95:5)
+    at trim_prefix (/Users/yws/Dev/OreSupport_gitHub/PBL2020/OreSupport/ore-SupportServer/oreServer/node_modules/express/lib/router/index.js:317:13)
+    at /Users/yws/Dev/OreSupport_gitHub/PBL2020/OreSupport/ore-SupportServer/oreServer/node_modules/express/lib/router/index.js:284:7
+    at Function.process_params (/Users/yws/Dev/OreSupport_gitHub/PBL2020/OreSupport/ore-SupportServer/oreServer/node_modules/express/lib/router/index.js:335:12)
+    at next (/Users/yws/Dev/OreSupport_gitHub/PBL2020/OreSupport/ore-SupportServer/oreServer/node_modules/express/lib/router/index.js:275:10)
+    at expressInit (/Users/yws/Dev/OreSupport_gitHub/PBL2020/OreSupport/ore-SupportServer/oreServer/node_modules/express/lib/middleware/init.js:40:5)
+    at Layer.handle [as handle_request] (/Users/yws/Dev/OreSupport_gitHub/PBL2020/OreSupport/ore-SupportServer/oreServer/node_modules/express/lib/router/layer.js:95:5)
+    at trim_prefix (/Users/yws/Dev/OreSupport_gitHub/PBL2020/OreSupport/ore-SupportServer/oreServer/node_modules/express/lib/router/index.js:317:13)
+    at /Users/yws/Dev/OreSupport_gitHub/PBL2020/OreSupport/ore-SupportServer/oreServer/node_modules/express/lib/router/index.js:284:7
+    at Function.process_params (/Users/yws/Dev/OreSupport_gitHub/PBL2020/OreSupport/ore-SupportServer/oreServer/node_modules/express/lib/router/index.js:335:12)
+    at next (/Users/yws/Dev/OreSupport_gitHub/PBL2020/OreSupport/ore-SupportServer/oreServer/node_modules/express/lib/router/index.js:275:10)
+    at query (/Users/yws/Dev/OreSupport_gitHub/PBL2020/OreSupport/ore-SupportServer/oreServer/node_modules/express/lib/middleware/query.js:45:5)
+    at Layer.handle [as handle_request] (/Users/yws/Dev/OreSupport_gitHub/PBL2020/OreSupport/ore-SupportServer/oreServer/node_modules/express/lib/router/layer.js:95:5)
+    at trim_prefix (/Users/yws/Dev/OreSupport_gitHub/PBL2020/OreSupport/ore-SupportServer/oreServer/node_modules/express/lib/router/index.js:317:13)
+    at /Users/yws/Dev/OreSupport_gitHub/PBL2020/OreSupport/ore-SupportServer/oreServer/node_modules/express/lib/router/index.js:284:7
+    at Function.process_params (/Users/yws/Dev/OreSupport_gitHub/PBL2020/OreSupport/ore-SupportServer/oreServer/node_modules/express/lib/router/index.js:335:12)
+    at next (/Users/yws/Dev/OreSupport_gitHub/PBL2020/OreSupport/ore-SupportServer/oreServer/node_modules/express/lib/router/index.js:275:10)
+    at Function.handle (/Users/yws/Dev/OreSupport_gitHub/PBL2020/OreSupport/ore-SupportServer/oreServer/node_modules/express/lib/router/index.js:174:3)
+    at Function.handle (/Users/yws/Dev/OreSupport_gitHub/PBL2020/OreSupport/ore-SupportServer/oreServer/node_modules/express/lib/application.js:174:10)
+[2020-07-13T13:02:14.077] [ERROR] app - アクセスエラー ReferenceError: Host is not defined
+    at /Users/yws/Dev/OreSupport_gitHub/PBL2020/OreSupport/ore-SupportServer/oreServer/app.js:34:5
+    at Array.forEach (<anonymous>)
+    at crossopt (/Users/yws/Dev/OreSupport_gitHub/PBL2020/OreSupport/ore-SupportServer/oreServer/app.js:33:13)
+    at Layer.handle [as handle_request] (/Users/yws/Dev/OreSupport_gitHub/PBL2020/OreSupport/ore-SupportServer/oreServer/node_modules/express/lib/router/layer.js:95:5)
+    at trim_prefix (/Users/yws/Dev/OreSupport_gitHub/PBL2020/OreSupport/ore-SupportServer/oreServer/node_modules/express/lib/router/index.js:317:13)
+    at /Users/yws/Dev/OreSupport_gitHub/PBL2020/OreSupport/ore-SupportServer/oreServer/node_modules/express/lib/router/index.js:284:7
+    at Function.process_params (/Users/yws/Dev/OreSupport_gitHub/PBL2020/OreSupport/ore-SupportServer/oreServer/node_modules/express/lib/router/index.js:335:12)
+    at next (/Users/yws/Dev/OreSupport_gitHub/PBL2020/OreSupport/ore-SupportServer/oreServer/node_modules/express/lib/router/index.js:275:10)
+    at expressInit (/Users/yws/Dev/OreSupport_gitHub/PBL2020/OreSupport/ore-SupportServer/oreServer/node_modules/express/lib/middleware/init.js:40:5)
+    at Layer.handle [as handle_request] (/Users/yws/Dev/OreSupport_gitHub/PBL2020/OreSupport/ore-SupportServer/oreServer/node_modules/express/lib/router/layer.js:95:5)
+    at trim_prefix (/Users/yws/Dev/OreSupport_gitHub/PBL2020/OreSupport/ore-SupportServer/oreServer/node_modules/express/lib/router/index.js:317:13)
+    at /Users/yws/Dev/OreSupport_gitHub/PBL2020/OreSupport/ore-SupportServer/oreServer/node_modules/express/lib/router/index.js:284:7
+    at Function.process_params (/Users/yws/Dev/OreSupport_gitHub/PBL2020/OreSupport/ore-SupportServer/oreServer/node_modules/express/lib/router/index.js:335:12)
+    at next (/Users/yws/Dev/OreSupport_gitHub/PBL2020/OreSupport/ore-SupportServer/oreServer/node_modules/express/lib/router/index.js:275:10)
+    at query (/Users/yws/Dev/OreSupport_gitHub/PBL2020/OreSupport/ore-SupportServer/oreServer/node_modules/express/lib/middleware/query.js:45:5)
+    at Layer.handle [as handle_request] (/Users/yws/Dev/OreSupport_gitHub/PBL2020/OreSupport/ore-SupportServer/oreServer/node_modules/express/lib/router/layer.js:95:5)
+    at trim_prefix (/Users/yws/Dev/OreSupport_gitHub/PBL2020/OreSupport/ore-SupportServer/oreServer/node_modules/express/lib/router/index.js:317:13)
+    at /Users/yws/Dev/OreSupport_gitHub/PBL2020/OreSupport/ore-SupportServer/oreServer/node_modules/express/lib/router/index.js:284:7
+    at Function.process_params (/Users/yws/Dev/OreSupport_gitHub/PBL2020/OreSupport/ore-SupportServer/oreServer/node_modules/express/lib/router/index.js:335:12)
+    at next (/Users/yws/Dev/OreSupport_gitHub/PBL2020/OreSupport/ore-SupportServer/oreServer/node_modules/express/lib/router/index.js:275:10)
+    at Function.handle (/Users/yws/Dev/OreSupport_gitHub/PBL2020/OreSupport/ore-SupportServer/oreServer/node_modules/express/lib/router/index.js:174:3)
+    at Function.handle (/Users/yws/Dev/OreSupport_gitHub/PBL2020/OreSupport/ore-SupportServer/oreServer/node_modules/express/lib/application.js:174:10)
+[2020-07-13T13:04:44.861] [ERROR] app - アクセスエラー ReferenceError: Host is not defined
+    at /Users/yws/Dev/OreSupport_gitHub/PBL2020/OreSupport/ore-SupportServer/oreServer/app.js:34:5
+    at Array.forEach (<anonymous>)
+    at crossopt (/Users/yws/Dev/OreSupport_gitHub/PBL2020/OreSupport/ore-SupportServer/oreServer/app.js:33:13)
+    at Layer.handle [as handle_request] (/Users/yws/Dev/OreSupport_gitHub/PBL2020/OreSupport/ore-SupportServer/oreServer/node_modules/express/lib/router/layer.js:95:5)
+    at trim_prefix (/Users/yws/Dev/OreSupport_gitHub/PBL2020/OreSupport/ore-SupportServer/oreServer/node_modules/express/lib/router/index.js:317:13)
+    at /Users/yws/Dev/OreSupport_gitHub/PBL2020/OreSupport/ore-SupportServer/oreServer/node_modules/express/lib/router/index.js:284:7
+    at Function.process_params (/Users/yws/Dev/OreSupport_gitHub/PBL2020/OreSupport/ore-SupportServer/oreServer/node_modules/express/lib/router/index.js:335:12)
+    at next (/Users/yws/Dev/OreSupport_gitHub/PBL2020/OreSupport/ore-SupportServer/oreServer/node_modules/express/lib/router/index.js:275:10)
+    at expressInit (/Users/yws/Dev/OreSupport_gitHub/PBL2020/OreSupport/ore-SupportServer/oreServer/node_modules/express/lib/middleware/init.js:40:5)
+    at Layer.handle [as handle_request] (/Users/yws/Dev/OreSupport_gitHub/PBL2020/OreSupport/ore-SupportServer/oreServer/node_modules/express/lib/router/layer.js:95:5)
+    at trim_prefix (/Users/yws/Dev/OreSupport_gitHub/PBL2020/OreSupport/ore-SupportServer/oreServer/node_modules/express/lib/router/index.js:317:13)
+    at /Users/yws/Dev/OreSupport_gitHub/PBL2020/OreSupport/ore-SupportServer/oreServer/node_modules/express/lib/router/index.js:284:7
+    at Function.process_params (/Users/yws/Dev/OreSupport_gitHub/PBL2020/OreSupport/ore-SupportServer/oreServer/node_modules/express/lib/router/index.js:335:12)
+    at next (/Users/yws/Dev/OreSupport_gitHub/PBL2020/OreSupport/ore-SupportServer/oreServer/node_modules/express/lib/router/index.js:275:10)
+    at query (/Users/yws/Dev/OreSupport_gitHub/PBL2020/OreSupport/ore-SupportServer/oreServer/node_modules/express/lib/middleware/query.js:45:5)
+    at Layer.handle [as handle_request] (/Users/yws/Dev/OreSupport_gitHub/PBL2020/OreSupport/ore-SupportServer/oreServer/node_modules/express/lib/router/layer.js:95:5)
+    at trim_prefix (/Users/yws/Dev/OreSupport_gitHub/PBL2020/OreSupport/ore-SupportServer/oreServer/node_modules/express/lib/router/index.js:317:13)
+    at /Users/yws/Dev/OreSupport_gitHub/PBL2020/OreSupport/ore-SupportServer/oreServer/node_modules/express/lib/router/index.js:284:7
+    at Function.process_params (/Users/yws/Dev/OreSupport_gitHub/PBL2020/OreSupport/ore-SupportServer/oreServer/node_modules/express/lib/router/index.js:335:12)
+    at next (/Users/yws/Dev/OreSupport_gitHub/PBL2020/OreSupport/ore-SupportServer/oreServer/node_modules/express/lib/router/index.js:275:10)
+    at Function.handle (/Users/yws/Dev/OreSupport_gitHub/PBL2020/OreSupport/ore-SupportServer/oreServer/node_modules/express/lib/router/index.js:174:3)
+    at Function.handle (/Users/yws/Dev/OreSupport_gitHub/PBL2020/OreSupport/ore-SupportServer/oreServer/node_modules/express/lib/application.js:174:10)
+[2020-07-13T17:53:23.651] [ERROR] users - login error UserName: undefined
+[2020-07-13T17:57:05.130] [ERROR] users - login error UserName: undefined
+[2020-07-13T18:00:34.455] [ERROR] users - login error UserName: undefined
+[2020-07-13T18:08:49.949] [ERROR] users - login error UserName: undefined
+[2020-07-13T18:16:18.434] [ERROR] users - login error UserName: undefined
+[2020-07-13T18:18:56.485] [ERROR] users - login error UserName: undefined
+[2020-07-13T18:35:54.955] [ERROR] users - login error UserName: 閻 文帥

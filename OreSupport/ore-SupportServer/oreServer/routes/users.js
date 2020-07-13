@@ -15,10 +15,53 @@ const appRoot = require('app-root-path');
 
 var log = require('log4js').getLogger("users");
 
+function thirdParyty(req, res, next) {
+    log.info(`Third Party by ${req.body.type}`)
+    // トークンを作成
+    var tokenKey = jwtToken.sign({ id: req.body.userId, userName: req.body.username }, config.secret, {
+        // 24時間
+        expiresIn: 60 * 60 * 24,
+    });
+    // ユーザ名をセッションに格納
+    req.session.username = req.body.username;
+    // ユーザIDをセッションに格納
+    req.session.userID = req.body.userId;
+    //　Tokenをセッションに格納
+    req.session.token = tokenKey;
+    // Response データ
+    var resObj = {
+        // JSON ステータスコード
+        code: STATUS_MESSAGE.CODE_SUCCESS,
+        data: {
+            // ユーザ名
+            userName: req.body.username,
+            // ユーザ情報
+            dataInfo: "",
+            // トークン情報
+            token: tokenKey,
+            // ユーザアバター
+            avatar: "",
+            // ユーザ情報
+            introduction: "",
+            // ユーザ権限
+            roles: [],
+        },
+    };
+    return resObj;
+}
+
 /* ユーザログイン処理 */
 router.post("/login", async function (req, res, next) {
     //ログ出力
     log.info("ユーザログ UserName:" + req.body.username);
+    // ログインタイプ設定
+    req.session.loginType = req.body.type;
+    // Third party　登録の場合
+    if (req.body.type !== "normal") {
+        var resObj = await thirdParyty(req, res, next);
+        res.status(200).send(resObj);
+        return;
+    }
     // ユーザ名とパスワード
     const { username, password } = req.body;
     // ユーザ情報取得
@@ -43,6 +86,8 @@ router.post("/login", async function (req, res, next) {
         req.session.userID = user.UserID;
         //　Tokenをセッションに格納
         req.session.token = tokenKey;
+        // ログインタイプ設定
+        req.session.loginType = req.body.type;
         // Response データ
         var resObj = {
             // JSON ステータスコード
@@ -133,6 +178,46 @@ router.post("/singUp", async function (req, res, next) {
 router.get("/profileInfo", [checkuser.verifyUser], async function (req, res, next) {
     //ログ出力
     log.info(`profileInfo userID: ${req.userID}`);
+    // ポートの番号取得
+    var port = req.app.settings.port;
+    // ホスト取得
+    var respath = req.protocol + '://' + req.host + (port == 80 || port == 443 ? '' : ':' + port);
+    // ファイル存在チェック
+    var imgpath = "00_00.jpg";
+
+    if (req.session.loginType != "normal") {
+        var resobj = {
+            code: STATUS_MESSAGE.CODE_SUCCESS,
+            data: {
+                type: req.session.loginType,
+                name: req.userName,
+                // 権限
+                roles: ["admin", "superUser"],
+                avatar: `${respath}/avatar/${imgpath}`,
+                dataInfo: {
+                    //  基本情報
+                    basicInfo: {
+                        Update_type: PROFILE_INFO.BASIC_INFO,
+                        avatar: `${respath}/avatar/${imgpath}`,
+                    },
+                    // アドレス情報
+                    addressInfo: {
+                        Update_type: PROFILE_INFO.ADRESS_INFO,
+                    },
+                    // パスワード情報
+                    passwordInfo: {
+                        Update_type: PROFILE_INFO.PASSORD_INFO,
+                    },
+                    //　sns情報
+                    snsInfo: {
+                        Update_type: PROFILE_INFO.SNS_INFO,
+                    }
+
+                }
+            }
+        }
+        return res.status(200).send(resobj);
+    }
     // トークイン解析したユーザIDを取得
     // var token = req.query.token;
     var token_userID = req.userID;
@@ -170,6 +255,8 @@ router.get("/profileInfo", [checkuser.verifyUser], async function (req, res, nex
         var resobj = {
             code: STATUS_MESSAGE.CODE_SUCCESS,
             data: {
+                // ログインType
+                type: req.session.loginType,
                 // ユーザ名
                 name: user.UserName,
                 // 権限

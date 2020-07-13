@@ -148,3 +148,505 @@
 [2020-07-13T10:14:48.896] [INFO] userDao - START getUserProfileByUserID : {"key":"UserID","val":49}
 [2020-07-13T10:14:48.921] [INFO] userDao - END getUserProfileByUserID
 [2020-07-13T10:14:48.921] [INFO] users - profileInfo success
+[2020-07-13T10:26:27.442] [INFO] startup - Listening on port 3000
+[2020-07-13T10:26:30.588] [INFO] users - profileInfo userID: 49
+[2020-07-13T10:26:30.588] [INFO] userDao - START getUserProfileByUserID : {"key":"UserID","val":49}
+[2020-07-13T10:26:30.613] [INFO] userDao - END getUserProfileByUserID
+[2020-07-13T10:26:30.613] [INFO] users - profileInfo success
+[2020-07-13T10:26:34.016] [INFO] users - logout
+[2020-07-13T12:46:38.112] [INFO] startup - Listening on port 3000
+[2020-07-13T12:52:37.221] [INFO] startup - Listening on port 3000
+[2020-07-13T12:54:46.771] [INFO] startup - Listening on port 3000
+[2020-07-13T12:55:01.773] [INFO] users - ユーザログ UserName:1@1.com
+[2020-07-13T12:55:01.773] [INFO] userDao - START getUserInfoByUserName: {"username":"1@1.com"}
+[2020-07-13T12:55:01.781] [INFO] userDao - END getUserInfoByUserName
+[2020-07-13T12:55:01.863] [INFO] users - login success UserID: 49
+[2020-07-13T12:55:01.874] [INFO] users - profileInfo userID: 49
+[2020-07-13T12:55:01.874] [INFO] userDao - START getUserProfileByUserID : {"key":"UserID","val":49}
+[2020-07-13T12:55:01.885] [INFO] userDao - END getUserProfileByUserID
+[2020-07-13T12:55:01.886] [INFO] users - profileInfo success
+[2020-07-13T12:58:21.551] [INFO] startup - Listening on port 3000
+[2020-07-13T12:58:50.090] [INFO] startup - Listening on port 3000
+[2020-07-13T13:00:03.201] [INFO] startup - Listening on port 3000
+[2020-07-13T13:00:11.415] [ERROR] app - アクセスエラー TypeError: Cannot read property 'indexOf' of undefined
+    at /Users/yws/Dev/OreSupport_gitHub/PBL2020/OreSupport/ore-SupportServer/oreServer/app.js:34:14
+    at Array.forEach (<anonymous>)
+    at crossopt (/Users/yws/Dev/OreSupport_gitHub/PBL2020/OreSupport/ore-SupportServer/oreServer/app.js:33:13)
+    at Layer.handle [as handle_request] (/Users/yws/Dev/OreSupport_gitHub/PBL2020/OreSupport/ore-SupportServer/oreServer/node_modules/express/lib/router/layer.js:95:5)
+    at trim_prefix (/Users/yws/Dev/OreSupport_gitHub/PBL2020/OreSupport/ore-SupportServer/oreServer/node_modules/express/lib/router/index.js:317:13)
+    at /Users/yws/Dev/OreSupport_gitHub/PBL2020/OreSupport/ore-SupportServer/oreServer/node_modules/express/lib/router/index.js:284:7
+    at Function.process_params (/Users/yws/Dev/OreSupport_gitHub/PBL2020/OreSupport/ore-SupportServer/oreServer/node_modules/express/lib/router/index.js:335:12)
+    at next (/Users/yws/Dev/OreSupport_gitHub/PBL2020/OreSupport/ore-SupportServer/oreServer/node_modules/express/lib/router/index.js:275:10)
+    at expressInit (/Users/yws/Dev/OreSupport_gitHub/PBL2020/OreSupport/ore-SupportServer/oreServer/node_modules/express/lib/middleware/init.js:40:5)
+    at Layer.handle [as handle_request] (/Users/yws/Dev/OreSupport_gitHub/PBL2020/OreSupport/ore-SupportServer/oreServer/node_modules/express/lib/router/layer.js:95:5)
+    at trim_prefix (/Users/yws/Dev/OreSupport_gitHub/PBL2020/OreSupport/ore-SupportServer/oreServer/node_modules/express/lib/router/index.js:317:13)
+    at /Users/yws/Dev/OreSupport_gitHub/PBL2020/OreSupport/ore-SupportServer/oreServer/node_modules/express/lib/router/index.js:284:7
+    at Function.process_params (/Users/yws/Dev/OreSupport_gitHub/PBL2020/OreSupport/ore-SupportServer/oreServer/node_modules/express/lib/router/index.js:335:12)
+    at next (/Users/yws/Dev/OreSupport_gitHub/PBL2020/OreSupport/ore-SupportServer/oreServer/node_modules/express/lib/router/index.js:275:10)
+    at query (/Users/yws/Dev/OreSupport_gitHub/PBL2020/OreSupport/ore-SupportServer/oreServer/node_modules/express/lib/middleware/query.js:45:5)
+    at Layer.handle [as handle_request] (/Users/yws/Dev/OreSupport_gitHub/PBL2020/OreSupport/ore-SupportServer/oreServer/node_modules/express/lib/router/layer.js:95:5)
+    at trim_prefix (/Users/yws/Dev/OreSupport_gitHub/PBL2020/OreSupport/ore-SupportServer/oreServer/node_modules/express/lib/router/index.js:317:13)
+    at /Users/yws/Dev/OreSupport_gitHub/PBL2020/OreSupport/ore-SupportServer/oreServer/node_modules/express/lib/router/index.js:284:7
+    at Function.process_params (/Users/yws/Dev/OreSupport_gitHub/PBL2020/OreSupport/ore-SupportServer/oreServer/node_modules/express/lib/router/index.js:335:12)
+    at next (/Users/yws/Dev/OreSupport_gitHub/PBL2020/OreSupport/ore-SupportServer/oreServer/node_modules/express/lib/router/index.js:275:10)
+    at Function.handle (/Users/yws/Dev/OreSupport_gitHub/PBL2020/OreSupport/ore-SupportServer/oreServer/node_modules/express/lib/router/index.js:174:3)
+    at Function.handle (/Users/yws/Dev/OreSupport_gitHub/PBL2020/OreSupport/ore-SupportServer/oreServer/node_modules/express/lib/application.js:174:10)
+[2020-07-13T13:00:21.523] [ERROR] app - アクセスエラー TypeError: Cannot read property 'indexOf' of undefined
+    at /Users/yws/Dev/OreSupport_gitHub/PBL2020/OreSupport/ore-SupportServer/oreServer/app.js:34:14
+    at Array.forEach (<anonymous>)
+    at crossopt (/Users/yws/Dev/OreSupport_gitHub/PBL2020/OreSupport/ore-SupportServer/oreServer/app.js:33:13)
+    at Layer.handle [as handle_request] (/Users/yws/Dev/OreSupport_gitHub/PBL2020/OreSupport/ore-SupportServer/oreServer/node_modules/express/lib/router/layer.js:95:5)
+    at trim_prefix (/Users/yws/Dev/OreSupport_gitHub/PBL2020/OreSupport/ore-SupportServer/oreServer/node_modules/express/lib/router/index.js:317:13)
+    at /Users/yws/Dev/OreSupport_gitHub/PBL2020/OreSupport/ore-SupportServer/oreServer/node_modules/express/lib/router/index.js:284:7
+    at Function.process_params (/Users/yws/Dev/OreSupport_gitHub/PBL2020/OreSupport/ore-SupportServer/oreServer/node_modules/express/lib/router/index.js:335:12)
+    at next (/Users/yws/Dev/OreSupport_gitHub/PBL2020/OreSupport/ore-SupportServer/oreServer/node_modules/express/lib/router/index.js:275:10)
+    at expressInit (/Users/yws/Dev/OreSupport_gitHub/PBL2020/OreSupport/ore-SupportServer/oreServer/node_modules/express/lib/middleware/init.js:40:5)
+    at Layer.handle [as handle_request] (/Users/yws/Dev/OreSupport_gitHub/PBL2020/OreSupport/ore-SupportServer/oreServer/node_modules/express/lib/router/layer.js:95:5)
+    at trim_prefix (/Users/yws/Dev/OreSupport_gitHub/PBL2020/OreSupport/ore-SupportServer/oreServer/node_modules/express/lib/router/index.js:317:13)
+    at /Users/yws/Dev/OreSupport_gitHub/PBL2020/OreSupport/ore-SupportServer/oreServer/node_modules/express/lib/router/index.js:284:7
+    at Function.process_params (/Users/yws/Dev/OreSupport_gitHub/PBL2020/OreSupport/ore-SupportServer/oreServer/node_modules/express/lib/router/index.js:335:12)
+    at next (/Users/yws/Dev/OreSupport_gitHub/PBL2020/OreSupport/ore-SupportServer/oreServer/node_modules/express/lib/router/index.js:275:10)
+    at query (/Users/yws/Dev/OreSupport_gitHub/PBL2020/OreSupport/ore-SupportServer/oreServer/node_modules/express/lib/middleware/query.js:45:5)
+    at Layer.handle [as handle_request] (/Users/yws/Dev/OreSupport_gitHub/PBL2020/OreSupport/ore-SupportServer/oreServer/node_modules/express/lib/router/layer.js:95:5)
+    at trim_prefix (/Users/yws/Dev/OreSupport_gitHub/PBL2020/OreSupport/ore-SupportServer/oreServer/node_modules/express/lib/router/index.js:317:13)
+    at /Users/yws/Dev/OreSupport_gitHub/PBL2020/OreSupport/ore-SupportServer/oreServer/node_modules/express/lib/router/index.js:284:7
+    at Function.process_params (/Users/yws/Dev/OreSupport_gitHub/PBL2020/OreSupport/ore-SupportServer/oreServer/node_modules/express/lib/router/index.js:335:12)
+    at next (/Users/yws/Dev/OreSupport_gitHub/PBL2020/OreSupport/ore-SupportServer/oreServer/node_modules/express/lib/router/index.js:275:10)
+    at Function.handle (/Users/yws/Dev/OreSupport_gitHub/PBL2020/OreSupport/ore-SupportServer/oreServer/node_modules/express/lib/router/index.js:174:3)
+    at Function.handle (/Users/yws/Dev/OreSupport_gitHub/PBL2020/OreSupport/ore-SupportServer/oreServer/node_modules/express/lib/application.js:174:10)
+[2020-07-13T13:01:11.809] [INFO] startup - Listening on port 3000
+[2020-07-13T13:01:33.406] [ERROR] app - アクセスエラー ReferenceError: Host is not defined
+    at /Users/yws/Dev/OreSupport_gitHub/PBL2020/OreSupport/ore-SupportServer/oreServer/app.js:34:5
+    at Array.forEach (<anonymous>)
+    at crossopt (/Users/yws/Dev/OreSupport_gitHub/PBL2020/OreSupport/ore-SupportServer/oreServer/app.js:33:13)
+    at Layer.handle [as handle_request] (/Users/yws/Dev/OreSupport_gitHub/PBL2020/OreSupport/ore-SupportServer/oreServer/node_modules/express/lib/router/layer.js:95:5)
+    at trim_prefix (/Users/yws/Dev/OreSupport_gitHub/PBL2020/OreSupport/ore-SupportServer/oreServer/node_modules/express/lib/router/index.js:317:13)
+    at /Users/yws/Dev/OreSupport_gitHub/PBL2020/OreSupport/ore-SupportServer/oreServer/node_modules/express/lib/router/index.js:284:7
+    at Function.process_params (/Users/yws/Dev/OreSupport_gitHub/PBL2020/OreSupport/ore-SupportServer/oreServer/node_modules/express/lib/router/index.js:335:12)
+    at next (/Users/yws/Dev/OreSupport_gitHub/PBL2020/OreSupport/ore-SupportServer/oreServer/node_modules/express/lib/router/index.js:275:10)
+    at expressInit (/Users/yws/Dev/OreSupport_gitHub/PBL2020/OreSupport/ore-SupportServer/oreServer/node_modules/express/lib/middleware/init.js:40:5)
+    at Layer.handle [as handle_request] (/Users/yws/Dev/OreSupport_gitHub/PBL2020/OreSupport/ore-SupportServer/oreServer/node_modules/express/lib/router/layer.js:95:5)
+    at trim_prefix (/Users/yws/Dev/OreSupport_gitHub/PBL2020/OreSupport/ore-SupportServer/oreServer/node_modules/express/lib/router/index.js:317:13)
+    at /Users/yws/Dev/OreSupport_gitHub/PBL2020/OreSupport/ore-SupportServer/oreServer/node_modules/express/lib/router/index.js:284:7
+    at Function.process_params (/Users/yws/Dev/OreSupport_gitHub/PBL2020/OreSupport/ore-SupportServer/oreServer/node_modules/express/lib/router/index.js:335:12)
+    at next (/Users/yws/Dev/OreSupport_gitHub/PBL2020/OreSupport/ore-SupportServer/oreServer/node_modules/express/lib/router/index.js:275:10)
+    at query (/Users/yws/Dev/OreSupport_gitHub/PBL2020/OreSupport/ore-SupportServer/oreServer/node_modules/express/lib/middleware/query.js:45:5)
+    at Layer.handle [as handle_request] (/Users/yws/Dev/OreSupport_gitHub/PBL2020/OreSupport/ore-SupportServer/oreServer/node_modules/express/lib/router/layer.js:95:5)
+    at trim_prefix (/Users/yws/Dev/OreSupport_gitHub/PBL2020/OreSupport/ore-SupportServer/oreServer/node_modules/express/lib/router/index.js:317:13)
+    at /Users/yws/Dev/OreSupport_gitHub/PBL2020/OreSupport/ore-SupportServer/oreServer/node_modules/express/lib/router/index.js:284:7
+    at Function.process_params (/Users/yws/Dev/OreSupport_gitHub/PBL2020/OreSupport/ore-SupportServer/oreServer/node_modules/express/lib/router/index.js:335:12)
+    at next (/Users/yws/Dev/OreSupport_gitHub/PBL2020/OreSupport/ore-SupportServer/oreServer/node_modules/express/lib/router/index.js:275:10)
+    at Function.handle (/Users/yws/Dev/OreSupport_gitHub/PBL2020/OreSupport/ore-SupportServer/oreServer/node_modules/express/lib/router/index.js:174:3)
+    at Function.handle (/Users/yws/Dev/OreSupport_gitHub/PBL2020/OreSupport/ore-SupportServer/oreServer/node_modules/express/lib/application.js:174:10)
+[2020-07-13T13:02:09.705] [INFO] startup - Listening on port 3000
+[2020-07-13T13:02:12.972] [ERROR] app - アクセスエラー ReferenceError: Host is not defined
+    at /Users/yws/Dev/OreSupport_gitHub/PBL2020/OreSupport/ore-SupportServer/oreServer/app.js:34:5
+    at Array.forEach (<anonymous>)
+    at crossopt (/Users/yws/Dev/OreSupport_gitHub/PBL2020/OreSupport/ore-SupportServer/oreServer/app.js:33:13)
+    at Layer.handle [as handle_request] (/Users/yws/Dev/OreSupport_gitHub/PBL2020/OreSupport/ore-SupportServer/oreServer/node_modules/express/lib/router/layer.js:95:5)
+    at trim_prefix (/Users/yws/Dev/OreSupport_gitHub/PBL2020/OreSupport/ore-SupportServer/oreServer/node_modules/express/lib/router/index.js:317:13)
+    at /Users/yws/Dev/OreSupport_gitHub/PBL2020/OreSupport/ore-SupportServer/oreServer/node_modules/express/lib/router/index.js:284:7
+    at Function.process_params (/Users/yws/Dev/OreSupport_gitHub/PBL2020/OreSupport/ore-SupportServer/oreServer/node_modules/express/lib/router/index.js:335:12)
+    at next (/Users/yws/Dev/OreSupport_gitHub/PBL2020/OreSupport/ore-SupportServer/oreServer/node_modules/express/lib/router/index.js:275:10)
+    at expressInit (/Users/yws/Dev/OreSupport_gitHub/PBL2020/OreSupport/ore-SupportServer/oreServer/node_modules/express/lib/middleware/init.js:40:5)
+    at Layer.handle [as handle_request] (/Users/yws/Dev/OreSupport_gitHub/PBL2020/OreSupport/ore-SupportServer/oreServer/node_modules/express/lib/router/layer.js:95:5)
+    at trim_prefix (/Users/yws/Dev/OreSupport_gitHub/PBL2020/OreSupport/ore-SupportServer/oreServer/node_modules/express/lib/router/index.js:317:13)
+    at /Users/yws/Dev/OreSupport_gitHub/PBL2020/OreSupport/ore-SupportServer/oreServer/node_modules/express/lib/router/index.js:284:7
+    at Function.process_params (/Users/yws/Dev/OreSupport_gitHub/PBL2020/OreSupport/ore-SupportServer/oreServer/node_modules/express/lib/router/index.js:335:12)
+    at next (/Users/yws/Dev/OreSupport_gitHub/PBL2020/OreSupport/ore-SupportServer/oreServer/node_modules/express/lib/router/index.js:275:10)
+    at query (/Users/yws/Dev/OreSupport_gitHub/PBL2020/OreSupport/ore-SupportServer/oreServer/node_modules/express/lib/middleware/query.js:45:5)
+    at Layer.handle [as handle_request] (/Users/yws/Dev/OreSupport_gitHub/PBL2020/OreSupport/ore-SupportServer/oreServer/node_modules/express/lib/router/layer.js:95:5)
+    at trim_prefix (/Users/yws/Dev/OreSupport_gitHub/PBL2020/OreSupport/ore-SupportServer/oreServer/node_modules/express/lib/router/index.js:317:13)
+    at /Users/yws/Dev/OreSupport_gitHub/PBL2020/OreSupport/ore-SupportServer/oreServer/node_modules/express/lib/router/index.js:284:7
+    at Function.process_params (/Users/yws/Dev/OreSupport_gitHub/PBL2020/OreSupport/ore-SupportServer/oreServer/node_modules/express/lib/router/index.js:335:12)
+    at next (/Users/yws/Dev/OreSupport_gitHub/PBL2020/OreSupport/ore-SupportServer/oreServer/node_modules/express/lib/router/index.js:275:10)
+    at Function.handle (/Users/yws/Dev/OreSupport_gitHub/PBL2020/OreSupport/ore-SupportServer/oreServer/node_modules/express/lib/router/index.js:174:3)
+    at Function.handle (/Users/yws/Dev/OreSupport_gitHub/PBL2020/OreSupport/ore-SupportServer/oreServer/node_modules/express/lib/application.js:174:10)
+[2020-07-13T13:02:14.077] [ERROR] app - アクセスエラー ReferenceError: Host is not defined
+    at /Users/yws/Dev/OreSupport_gitHub/PBL2020/OreSupport/ore-SupportServer/oreServer/app.js:34:5
+    at Array.forEach (<anonymous>)
+    at crossopt (/Users/yws/Dev/OreSupport_gitHub/PBL2020/OreSupport/ore-SupportServer/oreServer/app.js:33:13)
+    at Layer.handle [as handle_request] (/Users/yws/Dev/OreSupport_gitHub/PBL2020/OreSupport/ore-SupportServer/oreServer/node_modules/express/lib/router/layer.js:95:5)
+    at trim_prefix (/Users/yws/Dev/OreSupport_gitHub/PBL2020/OreSupport/ore-SupportServer/oreServer/node_modules/express/lib/router/index.js:317:13)
+    at /Users/yws/Dev/OreSupport_gitHub/PBL2020/OreSupport/ore-SupportServer/oreServer/node_modules/express/lib/router/index.js:284:7
+    at Function.process_params (/Users/yws/Dev/OreSupport_gitHub/PBL2020/OreSupport/ore-SupportServer/oreServer/node_modules/express/lib/router/index.js:335:12)
+    at next (/Users/yws/Dev/OreSupport_gitHub/PBL2020/OreSupport/ore-SupportServer/oreServer/node_modules/express/lib/router/index.js:275:10)
+    at expressInit (/Users/yws/Dev/OreSupport_gitHub/PBL2020/OreSupport/ore-SupportServer/oreServer/node_modules/express/lib/middleware/init.js:40:5)
+    at Layer.handle [as handle_request] (/Users/yws/Dev/OreSupport_gitHub/PBL2020/OreSupport/ore-SupportServer/oreServer/node_modules/express/lib/router/layer.js:95:5)
+    at trim_prefix (/Users/yws/Dev/OreSupport_gitHub/PBL2020/OreSupport/ore-SupportServer/oreServer/node_modules/express/lib/router/index.js:317:13)
+    at /Users/yws/Dev/OreSupport_gitHub/PBL2020/OreSupport/ore-SupportServer/oreServer/node_modules/express/lib/router/index.js:284:7
+    at Function.process_params (/Users/yws/Dev/OreSupport_gitHub/PBL2020/OreSupport/ore-SupportServer/oreServer/node_modules/express/lib/router/index.js:335:12)
+    at next (/Users/yws/Dev/OreSupport_gitHub/PBL2020/OreSupport/ore-SupportServer/oreServer/node_modules/express/lib/router/index.js:275:10)
+    at query (/Users/yws/Dev/OreSupport_gitHub/PBL2020/OreSupport/ore-SupportServer/oreServer/node_modules/express/lib/middleware/query.js:45:5)
+    at Layer.handle [as handle_request] (/Users/yws/Dev/OreSupport_gitHub/PBL2020/OreSupport/ore-SupportServer/oreServer/node_modules/express/lib/router/layer.js:95:5)
+    at trim_prefix (/Users/yws/Dev/OreSupport_gitHub/PBL2020/OreSupport/ore-SupportServer/oreServer/node_modules/express/lib/router/index.js:317:13)
+    at /Users/yws/Dev/OreSupport_gitHub/PBL2020/OreSupport/ore-SupportServer/oreServer/node_modules/express/lib/router/index.js:284:7
+    at Function.process_params (/Users/yws/Dev/OreSupport_gitHub/PBL2020/OreSupport/ore-SupportServer/oreServer/node_modules/express/lib/router/index.js:335:12)
+    at next (/Users/yws/Dev/OreSupport_gitHub/PBL2020/OreSupport/ore-SupportServer/oreServer/node_modules/express/lib/router/index.js:275:10)
+    at Function.handle (/Users/yws/Dev/OreSupport_gitHub/PBL2020/OreSupport/ore-SupportServer/oreServer/node_modules/express/lib/router/index.js:174:3)
+    at Function.handle (/Users/yws/Dev/OreSupport_gitHub/PBL2020/OreSupport/ore-SupportServer/oreServer/node_modules/express/lib/application.js:174:10)
+[2020-07-13T13:02:43.834] [INFO] startup - Listening on port 3000
+[2020-07-13T13:04:11.124] [INFO] startup - Listening on port 3000
+[2020-07-13T13:04:30.215] [INFO] startup - Listening on port 3000
+[2020-07-13T13:04:44.861] [ERROR] app - アクセスエラー ReferenceError: Host is not defined
+    at /Users/yws/Dev/OreSupport_gitHub/PBL2020/OreSupport/ore-SupportServer/oreServer/app.js:34:5
+    at Array.forEach (<anonymous>)
+    at crossopt (/Users/yws/Dev/OreSupport_gitHub/PBL2020/OreSupport/ore-SupportServer/oreServer/app.js:33:13)
+    at Layer.handle [as handle_request] (/Users/yws/Dev/OreSupport_gitHub/PBL2020/OreSupport/ore-SupportServer/oreServer/node_modules/express/lib/router/layer.js:95:5)
+    at trim_prefix (/Users/yws/Dev/OreSupport_gitHub/PBL2020/OreSupport/ore-SupportServer/oreServer/node_modules/express/lib/router/index.js:317:13)
+    at /Users/yws/Dev/OreSupport_gitHub/PBL2020/OreSupport/ore-SupportServer/oreServer/node_modules/express/lib/router/index.js:284:7
+    at Function.process_params (/Users/yws/Dev/OreSupport_gitHub/PBL2020/OreSupport/ore-SupportServer/oreServer/node_modules/express/lib/router/index.js:335:12)
+    at next (/Users/yws/Dev/OreSupport_gitHub/PBL2020/OreSupport/ore-SupportServer/oreServer/node_modules/express/lib/router/index.js:275:10)
+    at expressInit (/Users/yws/Dev/OreSupport_gitHub/PBL2020/OreSupport/ore-SupportServer/oreServer/node_modules/express/lib/middleware/init.js:40:5)
+    at Layer.handle [as handle_request] (/Users/yws/Dev/OreSupport_gitHub/PBL2020/OreSupport/ore-SupportServer/oreServer/node_modules/express/lib/router/layer.js:95:5)
+    at trim_prefix (/Users/yws/Dev/OreSupport_gitHub/PBL2020/OreSupport/ore-SupportServer/oreServer/node_modules/express/lib/router/index.js:317:13)
+    at /Users/yws/Dev/OreSupport_gitHub/PBL2020/OreSupport/ore-SupportServer/oreServer/node_modules/express/lib/router/index.js:284:7
+    at Function.process_params (/Users/yws/Dev/OreSupport_gitHub/PBL2020/OreSupport/ore-SupportServer/oreServer/node_modules/express/lib/router/index.js:335:12)
+    at next (/Users/yws/Dev/OreSupport_gitHub/PBL2020/OreSupport/ore-SupportServer/oreServer/node_modules/express/lib/router/index.js:275:10)
+    at query (/Users/yws/Dev/OreSupport_gitHub/PBL2020/OreSupport/ore-SupportServer/oreServer/node_modules/express/lib/middleware/query.js:45:5)
+    at Layer.handle [as handle_request] (/Users/yws/Dev/OreSupport_gitHub/PBL2020/OreSupport/ore-SupportServer/oreServer/node_modules/express/lib/router/layer.js:95:5)
+    at trim_prefix (/Users/yws/Dev/OreSupport_gitHub/PBL2020/OreSupport/ore-SupportServer/oreServer/node_modules/express/lib/router/index.js:317:13)
+    at /Users/yws/Dev/OreSupport_gitHub/PBL2020/OreSupport/ore-SupportServer/oreServer/node_modules/express/lib/router/index.js:284:7
+    at Function.process_params (/Users/yws/Dev/OreSupport_gitHub/PBL2020/OreSupport/ore-SupportServer/oreServer/node_modules/express/lib/router/index.js:335:12)
+    at next (/Users/yws/Dev/OreSupport_gitHub/PBL2020/OreSupport/ore-SupportServer/oreServer/node_modules/express/lib/router/index.js:275:10)
+    at Function.handle (/Users/yws/Dev/OreSupport_gitHub/PBL2020/OreSupport/ore-SupportServer/oreServer/node_modules/express/lib/router/index.js:174:3)
+    at Function.handle (/Users/yws/Dev/OreSupport_gitHub/PBL2020/OreSupport/ore-SupportServer/oreServer/node_modules/express/lib/application.js:174:10)
+[2020-07-13T13:05:12.092] [INFO] startup - Listening on port 3000
+[2020-07-13T13:05:22.230] [INFO] users - ユーザログ UserName:1@1.com
+[2020-07-13T13:05:22.231] [INFO] userDao - START getUserInfoByUserName: {"username":"1@1.com"}
+[2020-07-13T13:05:22.238] [INFO] userDao - END getUserInfoByUserName
+[2020-07-13T13:05:22.321] [INFO] users - login success UserID: 49
+[2020-07-13T13:05:22.334] [INFO] users - profileInfo userID: 49
+[2020-07-13T13:05:22.334] [INFO] userDao - START getUserProfileByUserID : {"key":"UserID","val":49}
+[2020-07-13T13:05:22.344] [INFO] userDao - END getUserProfileByUserID
+[2020-07-13T13:05:22.345] [INFO] users - profileInfo success
+[2020-07-13T13:39:14.632] [INFO] startup - Listening on port 3000
+[2020-07-13T13:39:45.026] [INFO] users - ユーザログ UserName:1@1.com
+[2020-07-13T13:39:45.026] [INFO] userDao - START getUserInfoByUserName: {"username":"1@1.com"}
+[2020-07-13T13:39:45.035] [INFO] userDao - END getUserInfoByUserName
+[2020-07-13T13:39:45.118] [INFO] users - login success UserID: 49
+[2020-07-13T13:39:45.131] [INFO] users - profileInfo userID: 49
+[2020-07-13T13:39:45.132] [INFO] userDao - START getUserProfileByUserID : {"key":"UserID","val":49}
+[2020-07-13T13:39:45.142] [INFO] userDao - END getUserProfileByUserID
+[2020-07-13T13:39:45.143] [INFO] users - profileInfo success
+[2020-07-13T13:39:47.687] [INFO] users - logout
+[2020-07-13T13:54:08.730] [INFO] startup - Listening on port 3000
+[2020-07-13T13:54:50.599] [INFO] users - ユーザログ UserName:1@1.com
+[2020-07-13T13:54:50.599] [INFO] userDao - START getUserInfoByUserName: {"username":"1@1.com"}
+[2020-07-13T13:54:50.608] [INFO] userDao - END getUserInfoByUserName
+[2020-07-13T13:54:50.688] [INFO] users - login success UserID: 49
+[2020-07-13T13:54:50.701] [INFO] users - profileInfo userID: 49
+[2020-07-13T13:54:50.701] [INFO] userDao - START getUserProfileByUserID : {"key":"UserID","val":49}
+[2020-07-13T13:54:50.712] [INFO] userDao - END getUserProfileByUserID
+[2020-07-13T13:54:50.713] [INFO] users - profileInfo success
+[2020-07-13T13:55:36.324] [INFO] users - logout
+[2020-07-13T13:55:58.452] [INFO] startup - Listening on port 3000
+[2020-07-13T14:15:20.543] [INFO] startup - Listening on port 3000
+[2020-07-13T14:15:37.875] [INFO] users - ユーザログ UserName:1@1.com
+[2020-07-13T14:15:37.876] [INFO] userDao - START getUserInfoByUserName: {"username":"1@1.com"}
+[2020-07-13T14:15:37.883] [INFO] userDao - END getUserInfoByUserName
+[2020-07-13T14:15:37.964] [INFO] users - login success UserID: 49
+[2020-07-13T14:15:37.976] [INFO] users - profileInfo userID: 49
+[2020-07-13T14:15:37.976] [INFO] userDao - START getUserProfileByUserID : {"key":"UserID","val":49}
+[2020-07-13T14:15:37.986] [INFO] userDao - END getUserProfileByUserID
+[2020-07-13T14:15:37.987] [INFO] users - profileInfo success
+[2020-07-13T14:15:46.198] [INFO] users - logout
+[2020-07-13T14:25:40.138] [INFO] startup - Listening on port 3000
+[2020-07-13T17:49:23.308] [INFO] startup - Listening on port 3000
+[2020-07-13T17:49:42.703] [INFO] users - ユーザログ UserName:1@1.com
+[2020-07-13T17:49:42.704] [INFO] userDao - START getUserInfoByUserName: {"username":"1@1.com"}
+[2020-07-13T17:49:42.711] [INFO] userDao - END getUserInfoByUserName
+[2020-07-13T17:49:42.794] [INFO] users - login success UserID: 49
+[2020-07-13T17:49:42.805] [INFO] users - profileInfo userID: 49
+[2020-07-13T17:49:42.805] [INFO] userDao - START getUserProfileByUserID : {"key":"UserID","val":49}
+[2020-07-13T17:49:42.815] [INFO] userDao - END getUserProfileByUserID
+[2020-07-13T17:49:42.816] [INFO] users - profileInfo success
+[2020-07-13T17:49:45.233] [INFO] users - logout
+[2020-07-13T17:53:23.647] [INFO] users - ユーザログ UserName:undefined
+[2020-07-13T17:53:23.647] [INFO] userDao - START getUserInfoByUserName: {}
+[2020-07-13T17:53:23.651] [INFO] userDao - END getUserInfoByUserName
+[2020-07-13T17:53:23.651] [ERROR] users - login error UserName: undefined
+[2020-07-13T17:56:39.751] [INFO] users - ユーザログ UserName:1@1.com
+[2020-07-13T17:56:39.751] [INFO] userDao - START getUserInfoByUserName: {"username":"1@1.com"}
+[2020-07-13T17:56:39.755] [INFO] userDao - END getUserInfoByUserName
+[2020-07-13T17:56:39.826] [INFO] users - login success UserID: 49
+[2020-07-13T17:56:39.838] [INFO] users - profileInfo userID: 49
+[2020-07-13T17:56:39.838] [INFO] userDao - START getUserProfileByUserID : {"key":"UserID","val":49}
+[2020-07-13T17:56:39.842] [INFO] userDao - END getUserProfileByUserID
+[2020-07-13T17:56:39.842] [INFO] users - profileInfo success
+[2020-07-13T17:56:42.439] [INFO] users - logout
+[2020-07-13T17:57:05.127] [INFO] users - ユーザログ UserName:undefined
+[2020-07-13T17:57:05.127] [INFO] userDao - START getUserInfoByUserName: {}
+[2020-07-13T17:57:05.130] [INFO] userDao - END getUserInfoByUserName
+[2020-07-13T17:57:05.130] [ERROR] users - login error UserName: undefined
+[2020-07-13T18:00:17.639] [INFO] users - ユーザログ UserName:1@1.com
+[2020-07-13T18:00:17.639] [INFO] userDao - START getUserInfoByUserName: {"username":"1@1.com"}
+[2020-07-13T18:00:17.643] [INFO] userDao - END getUserInfoByUserName
+[2020-07-13T18:00:17.712] [INFO] users - login success UserID: 49
+[2020-07-13T18:00:17.724] [INFO] users - profileInfo userID: 49
+[2020-07-13T18:00:17.724] [INFO] userDao - START getUserProfileByUserID : {"key":"UserID","val":49}
+[2020-07-13T18:00:17.728] [INFO] userDao - END getUserProfileByUserID
+[2020-07-13T18:00:17.729] [INFO] users - profileInfo success
+[2020-07-13T18:00:24.906] [INFO] users - logout
+[2020-07-13T18:00:34.453] [INFO] users - ユーザログ UserName:undefined
+[2020-07-13T18:00:34.453] [INFO] userDao - START getUserInfoByUserName: {}
+[2020-07-13T18:00:34.455] [INFO] userDao - END getUserInfoByUserName
+[2020-07-13T18:00:34.455] [ERROR] users - login error UserName: undefined
+[2020-07-13T18:01:24.375] [INFO] users - ユーザログ UserName:1@1.com
+[2020-07-13T18:01:24.375] [INFO] userDao - START getUserInfoByUserName: {"username":"1@1.com"}
+[2020-07-13T18:01:24.378] [INFO] userDao - END getUserInfoByUserName
+[2020-07-13T18:01:24.449] [INFO] users - login success UserID: 49
+[2020-07-13T18:01:24.465] [INFO] users - profileInfo userID: 49
+[2020-07-13T18:01:24.465] [INFO] userDao - START getUserProfileByUserID : {"key":"UserID","val":49}
+[2020-07-13T18:01:24.471] [INFO] userDao - END getUserProfileByUserID
+[2020-07-13T18:01:24.472] [INFO] users - profileInfo success
+[2020-07-13T18:01:56.586] [INFO] users - logout
+[2020-07-13T18:02:42.337] [INFO] users - ユーザログ UserName:1@1.com
+[2020-07-13T18:02:42.337] [INFO] userDao - START getUserInfoByUserName: {"username":"1@1.com"}
+[2020-07-13T18:02:42.340] [INFO] userDao - END getUserInfoByUserName
+[2020-07-13T18:02:42.409] [INFO] users - login success UserID: 49
+[2020-07-13T18:02:43.871] [INFO] users - profileInfo userID: 49
+[2020-07-13T18:02:43.871] [INFO] userDao - START getUserProfileByUserID : {"key":"UserID","val":49}
+[2020-07-13T18:02:43.876] [INFO] userDao - END getUserProfileByUserID
+[2020-07-13T18:02:43.876] [INFO] users - profileInfo success
+[2020-07-13T18:02:57.719] [INFO] users - logout
+[2020-07-13T18:03:58.767] [INFO] users - ユーザログ UserName:1@1.com
+[2020-07-13T18:03:58.767] [INFO] userDao - START getUserInfoByUserName: {"username":"1@1.com"}
+[2020-07-13T18:03:58.771] [INFO] userDao - END getUserInfoByUserName
+[2020-07-13T18:03:58.842] [INFO] users - login success UserID: 49
+[2020-07-13T18:04:00.283] [INFO] users - profileInfo userID: 49
+[2020-07-13T18:04:00.283] [INFO] userDao - START getUserProfileByUserID : {"key":"UserID","val":49}
+[2020-07-13T18:04:00.288] [INFO] userDao - END getUserProfileByUserID
+[2020-07-13T18:04:00.288] [INFO] users - profileInfo success
+[2020-07-13T18:04:08.782] [INFO] users - logout
+[2020-07-13T18:07:00.122] [INFO] users - ユーザログ UserName:1@1.com
+[2020-07-13T18:07:00.122] [INFO] userDao - START getUserInfoByUserName: {"username":"1@1.com"}
+[2020-07-13T18:07:00.125] [INFO] userDao - END getUserInfoByUserName
+[2020-07-13T18:07:00.194] [INFO] users - login success UserID: 49
+[2020-07-13T18:07:01.638] [INFO] users - profileInfo userID: 49
+[2020-07-13T18:07:01.638] [INFO] userDao - START getUserProfileByUserID : {"key":"UserID","val":49}
+[2020-07-13T18:07:01.642] [INFO] userDao - END getUserProfileByUserID
+[2020-07-13T18:07:01.642] [INFO] users - profileInfo success
+[2020-07-13T18:07:18.781] [INFO] users - logout
+[2020-07-13T18:08:25.847] [INFO] users - ユーザログ UserName:1@1.com
+[2020-07-13T18:08:25.847] [INFO] userDao - START getUserInfoByUserName: {"username":"1@1.com"}
+[2020-07-13T18:08:25.850] [INFO] userDao - END getUserInfoByUserName
+[2020-07-13T18:08:25.924] [INFO] users - login success UserID: 49
+[2020-07-13T18:08:27.112] [INFO] users - profileInfo userID: 49
+[2020-07-13T18:08:27.112] [INFO] userDao - START getUserProfileByUserID : {"key":"UserID","val":49}
+[2020-07-13T18:08:27.116] [INFO] userDao - END getUserProfileByUserID
+[2020-07-13T18:08:27.117] [INFO] users - profileInfo success
+[2020-07-13T18:08:38.806] [INFO] users - logout
+[2020-07-13T18:08:49.945] [INFO] users - ユーザログ UserName:undefined
+[2020-07-13T18:08:49.945] [INFO] userDao - START getUserInfoByUserName: {}
+[2020-07-13T18:08:49.949] [INFO] userDao - END getUserInfoByUserName
+[2020-07-13T18:08:49.949] [ERROR] users - login error UserName: undefined
+[2020-07-13T18:09:08.762] [INFO] users - ユーザログ UserName:1@1.com
+[2020-07-13T18:09:08.762] [INFO] userDao - START getUserInfoByUserName: {"username":"1@1.com"}
+[2020-07-13T18:09:08.764] [INFO] userDao - END getUserInfoByUserName
+[2020-07-13T18:09:08.834] [INFO] users - login success UserID: 49
+[2020-07-13T18:09:08.843] [INFO] users - profileInfo userID: 49
+[2020-07-13T18:09:08.843] [INFO] userDao - START getUserProfileByUserID : {"key":"UserID","val":49}
+[2020-07-13T18:09:08.847] [INFO] userDao - END getUserProfileByUserID
+[2020-07-13T18:09:08.847] [INFO] users - profileInfo success
+[2020-07-13T18:09:14.318] [INFO] users - logout
+[2020-07-13T18:13:18.907] [INFO] users - ユーザログ UserName:1@1.com
+[2020-07-13T18:13:18.907] [INFO] userDao - START getUserInfoByUserName: {"username":"1@1.com"}
+[2020-07-13T18:13:18.911] [INFO] userDao - END getUserInfoByUserName
+[2020-07-13T18:13:18.981] [INFO] users - login success UserID: 49
+[2020-07-13T18:13:18.990] [INFO] users - profileInfo userID: 49
+[2020-07-13T18:13:18.990] [INFO] userDao - START getUserProfileByUserID : {"key":"UserID","val":49}
+[2020-07-13T18:13:18.995] [INFO] userDao - END getUserProfileByUserID
+[2020-07-13T18:13:18.995] [INFO] users - profileInfo success
+[2020-07-13T18:13:22.822] [INFO] users - logout
+[2020-07-13T18:13:44.062] [INFO] users - ユーザログ UserName:1@1.com
+[2020-07-13T18:13:44.062] [INFO] userDao - START getUserInfoByUserName: {"username":"1@1.com"}
+[2020-07-13T18:13:44.065] [INFO] userDao - END getUserInfoByUserName
+[2020-07-13T18:13:44.134] [INFO] users - login success UserID: 49
+[2020-07-13T18:13:44.147] [INFO] users - profileInfo userID: 49
+[2020-07-13T18:13:44.147] [INFO] userDao - START getUserProfileByUserID : {"key":"UserID","val":49}
+[2020-07-13T18:13:44.151] [INFO] userDao - END getUserProfileByUserID
+[2020-07-13T18:13:44.152] [INFO] users - profileInfo success
+[2020-07-13T18:14:05.940] [INFO] users - profileInfo userID: 49
+[2020-07-13T18:14:05.940] [INFO] userDao - START getUserProfileByUserID : {"key":"UserID","val":49}
+[2020-07-13T18:14:05.947] [INFO] userDao - END getUserProfileByUserID
+[2020-07-13T18:14:05.947] [INFO] users - profileInfo success
+[2020-07-13T18:15:23.503] [INFO] users - logout
+[2020-07-13T18:16:18.430] [INFO] users - ユーザログ UserName:undefined
+[2020-07-13T18:16:18.430] [INFO] userDao - START getUserInfoByUserName: {}
+[2020-07-13T18:16:18.434] [INFO] userDao - END getUserInfoByUserName
+[2020-07-13T18:16:18.434] [ERROR] users - login error UserName: undefined
+[2020-07-13T18:18:23.850] [INFO] users - ユーザログ UserName:1@1.com
+[2020-07-13T18:18:23.850] [INFO] userDao - START getUserInfoByUserName: {"username":"1@1.com"}
+[2020-07-13T18:18:23.853] [INFO] userDao - END getUserInfoByUserName
+[2020-07-13T18:18:23.922] [INFO] users - login success UserID: 49
+[2020-07-13T18:18:23.931] [INFO] users - profileInfo userID: 49
+[2020-07-13T18:18:23.931] [INFO] userDao - START getUserProfileByUserID : {"key":"UserID","val":49}
+[2020-07-13T18:18:23.936] [INFO] userDao - END getUserProfileByUserID
+[2020-07-13T18:18:23.937] [INFO] users - profileInfo success
+[2020-07-13T18:18:28.328] [INFO] users - logout
+[2020-07-13T18:18:43.679] [INFO] users - ユーザログ UserName:1@1.com
+[2020-07-13T18:18:43.679] [INFO] userDao - START getUserInfoByUserName: {"username":"1@1.com"}
+[2020-07-13T18:18:43.682] [INFO] userDao - END getUserInfoByUserName
+[2020-07-13T18:18:43.748] [INFO] users - login success UserID: 49
+[2020-07-13T18:18:43.760] [INFO] users - profileInfo userID: 49
+[2020-07-13T18:18:43.760] [INFO] userDao - START getUserProfileByUserID : {"key":"UserID","val":49}
+[2020-07-13T18:18:43.765] [INFO] userDao - END getUserProfileByUserID
+[2020-07-13T18:18:43.765] [INFO] users - profileInfo success
+[2020-07-13T18:18:47.206] [INFO] users - logout
+[2020-07-13T18:18:56.483] [INFO] users - ユーザログ UserName:undefined
+[2020-07-13T18:18:56.483] [INFO] userDao - START getUserInfoByUserName: {}
+[2020-07-13T18:18:56.485] [INFO] userDao - END getUserInfoByUserName
+[2020-07-13T18:18:56.485] [ERROR] users - login error UserName: undefined
+[2020-07-13T18:19:21.197] [INFO] users - ユーザログ UserName:1@1.com
+[2020-07-13T18:19:21.197] [INFO] userDao - START getUserInfoByUserName: {"username":"1@1.com"}
+[2020-07-13T18:19:21.201] [INFO] userDao - END getUserInfoByUserName
+[2020-07-13T18:19:21.269] [INFO] users - login success UserID: 49
+[2020-07-13T18:19:21.280] [INFO] users - profileInfo userID: 49
+[2020-07-13T18:19:21.280] [INFO] userDao - START getUserProfileByUserID : {"key":"UserID","val":49}
+[2020-07-13T18:19:21.285] [INFO] userDao - END getUserProfileByUserID
+[2020-07-13T18:19:21.286] [INFO] users - profileInfo success
+[2020-07-13T18:35:42.163] [INFO] startup - Listening on port 3000
+[2020-07-13T18:35:49.116] [INFO] users - logout
+[2020-07-13T18:35:54.948] [INFO] users - ユーザログ UserName:閻 文帥
+[2020-07-13T18:35:54.948] [INFO] userDao - START getUserInfoByUserName: {"username":"閻 文帥"}
+[2020-07-13T18:35:54.955] [INFO] userDao - END getUserInfoByUserName
+[2020-07-13T18:35:54.955] [ERROR] users - login error UserName: 閻 文帥
+[2020-07-13T19:22:07.906] [INFO] startup - Listening on port 3000
+[2020-07-13T19:22:20.602] [INFO] users - profileInfo userID: 2588234901506497
+[2020-07-13T19:22:20.602] [INFO] userDao - START getUserProfileByUserID : {"key":"UserID","val":"2588234901506497"}
+[2020-07-13T19:22:20.614] [INFO] userDao - END getUserProfileByUserID
+[2020-07-13T19:23:06.907] [INFO] users - ユーザログ UserName:1@1.com
+[2020-07-13T19:23:06.907] [INFO] userDao - START getUserInfoByUserName: {"username":"1@1.com"}
+[2020-07-13T19:23:06.913] [INFO] userDao - END getUserInfoByUserName
+[2020-07-13T19:23:06.994] [INFO] users - login success UserID: 49
+[2020-07-13T19:23:07.006] [INFO] users - profileInfo userID: 49
+[2020-07-13T19:23:07.006] [INFO] userDao - START getUserProfileByUserID : {"key":"UserID","val":49}
+[2020-07-13T19:23:07.014] [INFO] userDao - END getUserProfileByUserID
+[2020-07-13T19:23:07.015] [INFO] users - profileInfo success
+[2020-07-13T19:23:32.229] [INFO] users - logout
+[2020-07-13T19:23:39.106] [INFO] users - ユーザログ UserName:閻 文帥
+[2020-07-13T19:23:39.106] [INFO] users - Third Party by Facebook
+[2020-07-13T19:23:39.112] [INFO] users - profileInfo userID: 2588234901506497
+[2020-07-13T19:23:39.113] [INFO] userDao - START getUserProfileByUserID : {"key":"UserID","val":"2588234901506497"}
+[2020-07-13T19:23:39.117] [INFO] userDao - END getUserProfileByUserID
+[2020-07-13T19:24:11.584] [INFO] users - profileInfo userID: 2588234901506497
+[2020-07-13T19:24:11.584] [INFO] userDao - START getUserProfileByUserID : {"key":"UserID","val":"2588234901506497"}
+[2020-07-13T19:24:11.589] [INFO] userDao - END getUserProfileByUserID
+[2020-07-13T19:24:57.762] [INFO] users - ユーザログ UserName:閻 文帥
+[2020-07-13T19:24:57.762] [INFO] users - Third Party by Facebook
+[2020-07-13T19:25:36.517] [INFO] users - profileInfo userID: 2588234901506497
+[2020-07-13T19:25:36.517] [INFO] userDao - START getUserProfileByUserID : {"key":"UserID","val":"2588234901506497"}
+[2020-07-13T19:25:36.522] [INFO] userDao - END getUserProfileByUserID
+[2020-07-13T19:25:59.675] [INFO] users - ユーザログ UserName:閻 文帥
+[2020-07-13T19:25:59.675] [INFO] users - Third Party by Facebook
+[2020-07-13T19:25:59.684] [INFO] users - profileInfo userID: 2588234901506497
+[2020-07-13T19:25:59.684] [INFO] userDao - START getUserProfileByUserID : {"key":"UserID","val":"2588234901506497"}
+[2020-07-13T19:25:59.689] [INFO] userDao - END getUserProfileByUserID
+[2020-07-13T19:26:46.801] [INFO] users - ユーザログ UserName:閻 文帥
+[2020-07-13T19:26:46.801] [INFO] users - Third Party by Facebook
+[2020-07-13T19:28:55.453] [INFO] users - profileInfo userID: 2588234901506497
+[2020-07-13T19:28:55.453] [INFO] userDao - START getUserProfileByUserID : {"key":"UserID","val":"2588234901506497"}
+[2020-07-13T19:28:55.459] [INFO] userDao - END getUserProfileByUserID
+[2020-07-13T19:30:56.660] [INFO] users - ユーザログ UserName:閻 文帥
+[2020-07-13T19:30:56.660] [INFO] users - Third Party by Facebook
+[2020-07-13T19:31:33.786] [INFO] users - profileInfo userID: 2588234901506497
+[2020-07-13T19:31:33.786] [INFO] userDao - START getUserProfileByUserID : {"key":"UserID","val":"2588234901506497"}
+[2020-07-13T19:31:33.791] [INFO] userDao - END getUserProfileByUserID
+[2020-07-13T19:31:48.072] [INFO] users - profileInfo userID: 2588234901506497
+[2020-07-13T19:31:48.072] [INFO] userDao - START getUserProfileByUserID : {"key":"UserID","val":"2588234901506497"}
+[2020-07-13T19:31:48.075] [INFO] userDao - END getUserProfileByUserID
+[2020-07-13T19:33:30.058] [INFO] users - profileInfo userID: 2588234901506497
+[2020-07-13T19:33:30.059] [INFO] userDao - START getUserProfileByUserID : {"key":"UserID","val":"2588234901506497"}
+[2020-07-13T19:33:30.063] [INFO] userDao - END getUserProfileByUserID
+[2020-07-13T19:33:40.398] [INFO] users - profileInfo userID: 2588234901506497
+[2020-07-13T19:33:40.398] [INFO] userDao - START getUserProfileByUserID : {"key":"UserID","val":"2588234901506497"}
+[2020-07-13T19:33:40.402] [INFO] userDao - END getUserProfileByUserID
+[2020-07-13T19:34:00.794] [INFO] users - profileInfo userID: 2588234901506497
+[2020-07-13T19:34:00.794] [INFO] userDao - START getUserProfileByUserID : {"key":"UserID","val":"2588234901506497"}
+[2020-07-13T19:34:00.798] [INFO] userDao - END getUserProfileByUserID
+[2020-07-13T19:34:12.635] [INFO] users - profileInfo userID: 2588234901506497
+[2020-07-13T19:34:12.635] [INFO] userDao - START getUserProfileByUserID : {"key":"UserID","val":"2588234901506497"}
+[2020-07-13T19:34:12.638] [INFO] userDao - END getUserProfileByUserID
+[2020-07-13T19:34:17.189] [INFO] users - profileInfo userID: 2588234901506497
+[2020-07-13T19:34:17.189] [INFO] userDao - START getUserProfileByUserID : {"key":"UserID","val":"2588234901506497"}
+[2020-07-13T19:34:17.195] [INFO] userDao - END getUserProfileByUserID
+[2020-07-13T19:34:44.013] [INFO] users - profileInfo userID: 2588234901506497
+[2020-07-13T19:34:44.013] [INFO] userDao - START getUserProfileByUserID : {"key":"UserID","val":"2588234901506497"}
+[2020-07-13T19:34:44.018] [INFO] userDao - END getUserProfileByUserID
+[2020-07-13T19:34:51.242] [INFO] users - profileInfo userID: 2588234901506497
+[2020-07-13T19:34:51.242] [INFO] userDao - START getUserProfileByUserID : {"key":"UserID","val":"2588234901506497"}
+[2020-07-13T19:34:51.246] [INFO] userDao - END getUserProfileByUserID
+[2020-07-13T19:35:36.334] [INFO] users - ユーザログ UserName:閻 文帥
+[2020-07-13T19:35:36.335] [INFO] users - Third Party by Facebook
+[2020-07-13T19:35:36.346] [INFO] users - profileInfo userID: 2588234901506497
+[2020-07-13T19:35:36.346] [INFO] userDao - START getUserProfileByUserID : {"key":"UserID","val":"2588234901506497"}
+[2020-07-13T19:35:36.352] [INFO] userDao - END getUserProfileByUserID
+[2020-07-13T19:35:46.652] [INFO] users - profileInfo userID: 2588234901506497
+[2020-07-13T19:35:46.652] [INFO] userDao - START getUserProfileByUserID : {"key":"UserID","val":"2588234901506497"}
+[2020-07-13T19:35:46.657] [INFO] userDao - END getUserProfileByUserID
+[2020-07-13T19:54:50.965] [INFO] startup - Listening on port 3000
+[2020-07-13T19:54:56.112] [INFO] users - ユーザログ UserName:閻 文帥
+[2020-07-13T19:54:56.112] [INFO] users - Third Party by Facebook
+[2020-07-13T19:54:56.124] [INFO] users - profileInfo userID: 2588234901506497
+[2020-07-13T19:54:56.124] [INFO] userDao - START getUserProfileByUserID : {"key":"UserID","val":"2588234901506497"}
+[2020-07-13T19:54:56.135] [INFO] userDao - END getUserProfileByUserID
+[2020-07-13T21:54:24.137] [INFO] startup - Listening on port 3000
+[2020-07-13T21:55:05.598] [INFO] users - ユーザログ UserName:閻 文帥
+[2020-07-13T21:55:05.598] [INFO] users - Third Party by Facebook
+[2020-07-13T21:55:05.771] [INFO] users - profileInfo userID: 2588234901506497
+[2020-07-13T21:55:55.816] [INFO] users - updatePro:{"Update_type":"basicInfo","lastName":"yy","firstName":"sss","sex":"2","birthday":"","email":"yws@11.com","phone":"","avatar":"http://localhost:3000/avatar/00_00.jpg","aboutMe":""}
+[2020-07-13T21:55:55.816] [INFO] userDao - START saveUserProfile: param1:{"LastName":"yy","FirstName":"sss","Sex":"2","Birthday":"","Phone1":"","Avatar":"http://localhost:3000/avatar/00_00.jpg","Aboutme":""} , param2:{"Email":"yws@11.com"}
+[2020-07-13T21:55:55.828] [INFO] userDao - END saveUserProfile
+[2020-07-13T21:55:55.828] [INFO] users - updatePro success
+[2020-07-13T21:56:07.246] [INFO] users - profileInfo userID: 2588234901506497
+[2020-07-13T21:56:08.542] [INFO] users - profileInfo userID: 2588234901506497
+[2020-07-13T21:56:12.568] [INFO] users - profileInfo userID: 2588234901506497
+[2020-07-13T21:58:58.801] [INFO] users - profileInfo userID: 2588234901506497
+[2020-07-13T21:59:01.318] [INFO] users - logout
+[2020-07-13T21:59:46.589] [INFO] users - singUp:{"email":"11@11.com","password":"123456"}
+[2020-07-13T21:59:46.666] [INFO] userDao - START saveUserAsEmailAndPassword:{"username":"11@11.com","email":"11@11.com","rankCode":1,"password":"$2a$10$z1DGq3l0mbcF56uwfr695.deeCnfiuZYhpPulNIFSnt7qmIsRsoSO"}
+[2020-07-13T21:59:46.678] [INFO] userDao - END saveUserAsEmailAndPassword
+[2020-07-13T21:59:46.678] [INFO] users - singUp: Email:11@11.com
+[2020-07-13T22:04:41.230] [INFO] users - ユーザログ UserName:閻 文帥
+[2020-07-13T22:04:41.230] [INFO] users - Third Party by Facebook
+[2020-07-13T22:04:41.403] [INFO] users - profileInfo userID: 2588234901506497
+[2020-07-13T22:04:50.636] [INFO] users - profileInfo userID: 2588234901506497
+[2020-07-13T22:06:10.909] [INFO] users - ユーザログ UserName:閻 文帥
+[2020-07-13T22:06:10.909] [INFO] users - Third Party by Facebook
+[2020-07-13T22:06:11.036] [INFO] users - profileInfo userID: 2588234901506497
+[2020-07-13T22:06:13.018] [INFO] users - logout
+[2020-07-13T22:21:58.535] [INFO] users - ユーザログ UserName:閻 文帥
+[2020-07-13T22:21:58.535] [INFO] users - Third Party by Facebook
+[2020-07-13T22:21:58.700] [INFO] users - profileInfo userID: 2588234901506497
+[2020-07-13T22:22:00.840] [INFO] users - logout
+[2020-07-13T22:22:05.411] [INFO] users - ユーザログ UserName:閻 文帥
+[2020-07-13T22:22:05.411] [INFO] users - Third Party by Facebook
+[2020-07-13T22:22:05.534] [INFO] users - profileInfo userID: 2588234901506497
+[2020-07-13T22:22:08.541] [INFO] users - logout
+[2020-07-13T22:22:16.515] [INFO] users - ユーザログ UserName:閻 文帥
+[2020-07-13T22:22:16.515] [INFO] users - Third Party by Facebook
+[2020-07-13T22:22:16.685] [INFO] users - profileInfo userID: 2588234901506497
+[2020-07-13T22:22:18.678] [INFO] users - logout
+[2020-07-13T22:22:30.847] [INFO] users - ユーザログ UserName:閻 文帥
+[2020-07-13T22:22:30.847] [INFO] users - Third Party by Facebook
+[2020-07-13T22:22:30.992] [INFO] users - profileInfo userID: 2588234901506497
+[2020-07-13T22:23:24.779] [INFO] users - profileInfo userID: 2588234901506497
+[2020-07-13T22:23:39.240] [INFO] users - profileInfo userID: 2588234901506497
+[2020-07-13T22:23:50.891] [INFO] users - profileInfo userID: 2588234901506497
+[2020-07-13T22:23:52.465] [INFO] users - profileInfo userID: 2588234901506497
+[2020-07-13T22:23:59.820] [INFO] users - profileInfo userID: 2588234901506497
+[2020-07-13T22:24:03.677] [INFO] users - profileInfo userID: 2588234901506497
+[2020-07-13T22:24:04.401] [INFO] users - profileInfo userID: 2588234901506497
+[2020-07-13T22:24:05.297] [INFO] users - logout
+[2020-07-13T22:29:43.854] [INFO] users - ユーザログ UserName:閻 文帥
+[2020-07-13T22:29:43.854] [INFO] users - Third Party by Facebook
+[2020-07-13T22:29:44.018] [INFO] users - profileInfo userID: 2588234901506497
+[2020-07-13T22:29:46.478] [INFO] users - logout
+[2020-07-13T22:29:52.521] [INFO] users - ユーザログ UserName:閻 文帥
+[2020-07-13T22:29:52.521] [INFO] users - Third Party by Facebook
+[2020-07-13T22:29:52.684] [INFO] users - profileInfo userID: 2588234901506497
+[2020-07-13T22:30:10.348] [INFO] users - ユーザログ UserName:閻 文帥
+[2020-07-13T22:30:10.348] [INFO] users - Third Party by Facebook
+[2020-07-13T22:30:10.492] [INFO] users - profileInfo userID: 2588234901506497
+[2020-07-13T22:30:18.732] [INFO] users - logout

@@ -48,4 +48,5 @@ export const USER_INFO_STATIC_JS =[
     // "/assets/libraries/owl.carousel/owl.carousel.js",
     // "/assets/libraries/bootstrap-fileinput/fileinput.min.js",
     // "/assets/js/superlist.js"
+    "/assets/js/facebook.js"
 ]

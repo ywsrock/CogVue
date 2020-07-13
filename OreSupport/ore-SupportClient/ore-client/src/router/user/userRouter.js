@@ -5,7 +5,7 @@
 
 
  import userInfo from "@/views/user/UserInfo.vue"
- import userUpdate from "@/views/user/UserUpdate.vue"
+//  import userUpdate from "@/views/user/UserUpdate.vue"
  import  Layout  from "@/layout/index.vue"
 
  

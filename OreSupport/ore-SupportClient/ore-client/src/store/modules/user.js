@@ -71,10 +71,10 @@ const mutations = {
 const actions = {
     // ユーザログイン処理
     login(context, loginInfo) {
-        const { username, password } = loginInfo;
+        const { username, password, userId, type } = loginInfo;
         var that = this;
         return new Promise((resolve, reject) => {
-            login({ username: username, password: password })
+            login({ username: username, password: password, userId: userId, type: type })
                 .then(res => {
                     const data = res.data;
                     //グローバル情報設定へ代入
@@ -116,7 +116,7 @@ const actions = {
                 if (!data) {
                     reject("認証失敗しました。再ログインしてください。");
                 }
-                const { roles, name, dataInfo } = data
+                const { roles, name, dataInfo, type } = data
                 // 権限チェック
                 if (!roles || roles.length <= 0) {
                     reject('権限がありません。')
@@ -139,9 +139,9 @@ const actions = {
                 that._vm.$session.set('jwt', context.state.token);
                 // ユーザID保存
                 that._vm.$session.set("UserID", dataInfo.UserID)
-                    // ユーザ名
+                // ユーザ名
                 that._vm.$session.set("UserName", name)
-                    // ユーザ名(表示)
+                // ユーザ名(表示)
                 that._vm.$session.set("DisplayUserName", dataInfo.basicInfo.lastName +
                     dataInfo.basicInfo.firstName)
                 resolve(data)
@@ -161,13 +161,22 @@ const actions = {
             getProfileInfo(context.state.token).then(res => {
                 const data = res.data;
                 //　プロフィール情報取得
-                const { dataInfo } = data
-                //　ユーザアバター
-                context.commit("set_avatar", dataInfo.basicInfo.avatar);
-                //　ユーザ紹介
-                context.commit("set_introduction", dataInfo.basicInfo.aboutMe);
-                //　詳細情報
-                context.commit("set_info", dataInfo);
+                const { dataInfo, type } = data
+                if (type === "normal") {
+                    //　ユーザアバター
+                    context.commit("set_avatar", dataInfo.basicInfo.avatar);
+                    //　ユーザ紹介
+                    context.commit("set_introduction", dataInfo.basicInfo.aboutMe);
+                    //　詳細情報
+                    context.commit("set_info", dataInfo);
+                } else {
+                    //　ユーザアバター
+                    context.commit("set_avatar", "");
+                    //　ユーザ紹介
+                    context.commit("set_introduction", "");
+                    //　詳細情報
+                    context.commit("set_info", "");
+                }
                 resolve(data)
             }).catch(error => {
                 reject(error);
@@ -208,8 +217,8 @@ const actions = {
             logout(state.token).then(() => {
                 commit('set_token', '')
                 commit('set_roles', [])
-                    // ユーザ権限
-                    // ユーザ名
+                // ユーザ権限
+                // ユーザ名
                 commit("set_userName", "");
                 //　ユーザアバター
                 commit("set_avatar", "");
@@ -219,7 +228,7 @@ const actions = {
                 commit("set_info", "");
                 // ユーザID保存
                 that._vm.$session.set("UserID", "")
-                    // ユーザ名
+                // ユーザ名
                 that._vm.$session.set("UserName", "")
 
                 // セッション廃棄

@@ -1,61 +1,5 @@
 <template>
   <div class="page-wrapper">
-    <!-- ヘッダーは、コンポーネントに切り出して共通化する必要あり -->
-    <!--<header class="header">
-      <div class="header-wrapper">
-        <div class="container">
-          <div class="header-inner">
-            <div class="header-logo">
-              <a href="index.html">
-                <img src="/assets/img/logo.png" alt="Logo" />
-                <span>Superlist</span>
-              </a>
-            </div>-->
-            <!-- /.header-logo -->
-            <!--<div class="header-content">
-              <div class="header-top">
-                <ul class="header-nav-social social-links nav nav-pills">
-                  <li>
-                    <a href="#" @click="showDialog = true">
-                      <span>twitter</span>
-                      <i class="fa fa-twitter" />
-                    </a>
-                  </li>
-                  <li>
-                    <a href="#" @click="showDialog = true">
-                      <span>facebook</span>
-                      <i class="fa fa-facebook" />
-                    </a>
-                  </li>
-                  <li>
-                    <a href="#" @click="showDialog = true">
-                      <span>google</span>
-                      <i class="fa fa-google-plus" />
-                    </a>
-                  </li>
-                </ul>-->
-                <!-- /.header-nav-social -->
-               <!-- <ul class="header-nav-secondary nav nav-pills">
-                  <li>
-                    <a href="login.html">Login</a>
-                  </li>
-                  <li>
-                    <a style="cursor: pointer;" @click.prevent="singUp">Register</a>
-                  </li>
-                </ul>
-              </div>-->
-              <!-- /.header-logo -->
-            <!--</div>-->
-            <!-- /.header-content -->
-          <!--</div>-->
-          <!-- /.header-inner -->
-        <!--</div>-->
-        <!-- /.container -->
-      <!--</div>-->
-      <!-- /.header-wrapper -->
-    <!--</header>-->
-    <!-- /.header -->
-
     <div class="main">
       <div class="main-inner">
         <div class="container">
@@ -175,7 +119,8 @@ export default {
     return {
       loginForm: {
         username: '',
-        password: ''
+        password: '',
+        type:"normal"
       },
       loginRules: {
         username: [{ required: true, trigger: 'blur', validator: validateUsername }],

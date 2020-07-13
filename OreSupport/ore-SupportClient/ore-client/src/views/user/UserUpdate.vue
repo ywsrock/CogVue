@@ -30,13 +30,8 @@
                   <div class="sidebar">
                     <div class="widget">
                       <div class="user-photo">
-                        <a
-                          href="#"
-                        >
-                          <img
-                            v-bind:src="basicInfo.avatar"
-                            alt="User Photo"
-                          />
+                        <a href="#">
+                          <img v-bind:src="basicInfo.avatar" alt="User Photo" />
                           <span class="user-photo-action">
                             <label for="file_photo">
                               写真アップロード
@@ -59,7 +54,9 @@
                     <div class="widget">
                       <ul class="menu-advanced">
                         <li class="active">
-                          <a href="#" @click.prevent="is_readonly = !is_readonly"
+                          <a
+                            href="#"
+                            @click.prevent="is_readonly = !is_readonly"
                             ><i class="fa fa-user"></i> プロフィール編集</a
                           >
                         </li>
@@ -123,22 +120,30 @@
 
                         <div class="form-group col-sm-6">
                           <label>性別</label>
-                            <div v-if="is_readonly" class="form-control" readonly="true">
-                              <div v-if="basicInfo.sex === '1'">
-                                女
-                              </div>
-                              <div v-else>
-                                男
-                              </div>
-                            </div>                            
-                            <div v-else class="form-control" :readonly="is_readonly">
-                              <el-radio v-model="basicInfo.sex" label="1"
-                                >女</el-radio
-                              >
-                              <el-radio v-model="basicInfo.sex" label="2"
-                                >男</el-radio
-                              >
+                          <div
+                            v-if="is_readonly"
+                            class="form-control"
+                            readonly="true"
+                          >
+                            <div v-if="basicInfo.sex === '1'">
+                              女
                             </div>
+                            <div v-else>
+                              男
+                            </div>
+                          </div>
+                          <div
+                            v-else
+                            class="form-control"
+                            :readonly="is_readonly"
+                          >
+                            <el-radio v-model="basicInfo.sex" label="1"
+                              >女</el-radio
+                            >
+                            <el-radio v-model="basicInfo.sex" label="2"
+                              >男</el-radio
+                            >
+                          </div>
                         </div>
                         <!-- /.form-group -->
                         <div class="form-group col-sm-6">
@@ -165,7 +170,10 @@
                             @blur="checkEmail"
                             :readonly="is_readonly"
                           />
-                          <p style="color:red;font-size:12px;float:top" ref="e-email"></p>
+                          <p
+                            style="color:red;font-size:12px;float:top"
+                            ref="e-email"
+                          ></p>
                         </div>
                         <!-- /.form-group -->
 
@@ -180,7 +188,10 @@
                             @blur="checkPhone"
                             :readonly="is_readonly"
                           />
-                          <p style="color:red;font-size:12px;float:top" ref="e-phone"></p>
+                          <p
+                            style="color:red;font-size:12px;float:top"
+                            ref="e-phone"
+                          ></p>
                         </div>
                         <!-- /.form-group -->
                       </div>
@@ -213,7 +224,10 @@
                               @blur="checkURL('sns_facebook')"
                               :readonly="is_readonly"
                             />
-                            <p style="color:red;font-size:12px;float:top" ref="e-sns_facebook"></p>
+                            <p
+                              style="color:red;font-size:12px;float:top"
+                              ref="e-sns_facebook"
+                            ></p>
                           </div>
                           <!-- /.col-* -->
                         </div>
@@ -231,7 +245,10 @@
                               @blur="checkURL('sns_twtitter')"
                               :readonly="is_readonly"
                             />
-                            <p style="color:red;font-size:12px;float:top" ref="e-sns_twtitter"></p>
+                            <p
+                              style="color:red;font-size:12px;float:top"
+                              ref="e-sns_twtitter"
+                            ></p>
                           </div>
                           <!-- /.col-* -->
                         </div>
@@ -251,7 +268,10 @@
                               @blur="checkURL('sns_instagram')"
                               :readonly="is_readonly"
                             />
-                            <p style="color:red;font-size:12px;float:top" ref="e-sns_instagram"></p>
+                            <p
+                              style="color:red;font-size:12px;float:top"
+                              ref="e-sns_instagram"
+                            ></p>
                           </div>
                           <!-- /.col-* -->
                         </div>
@@ -268,7 +288,10 @@
                               @blur="checkURL('sns_other')"
                               :readonly="is_readonly"
                             />
-                            <p style="color:red;font-size:12px;float:top" ref="e-sns_other"></p>
+                            <p
+                              style="color:red;font-size:12px;float:top"
+                              ref="e-sns_other"
+                            ></p>
                           </div>
                           <!-- /.col-* -->
                         </div>
@@ -336,7 +359,10 @@
                             @blur="checkHouseNumber"
                             :readonly="is_readonly"
                           />
-                          <p style="color:red;font-size:12px;float:top" ref="e-houseNumber"></p>
+                          <p
+                            style="color:red;font-size:12px;float:top"
+                            ref="e-houseNumber"
+                          ></p>
                         </div>
                         <!-- /.form-group -->
 
@@ -351,7 +377,10 @@
                             @blur="checkPostalcode"
                             :readonly="is_readonly"
                           />
-                          <p style="color:red;font-size:12px;float:top" ref="e-postalcode"></p>
+                          <p
+                            style="color:red;font-size:12px;float:top"
+                            ref="e-postalcode"
+                          ></p>
                         </div>
                         <!-- /.form-group -->
                       </div>
@@ -402,7 +431,13 @@
 import schema from "async-validator";
 import { STATIC_JS } from "../../utils/const";
 import { Message } from "element-ui";
-import { validEmail, validPhone, validURL, validPostalcode, isNumber } from "@/utils/validate";
+import {
+  validEmail,
+  validPhone,
+  validURL,
+  validPostalcode,
+  isNumber,
+} from "@/utils/validate";
 
 export default {
   data() {
@@ -488,7 +523,7 @@ export default {
         postalcode: [{ validator: validatePostalcode }],
         houseNumber: [{ validator: validateHouseNumber }],
       },
-      is_readonly: true
+      is_readonly: true,
     };
   },
   created() {
@@ -545,7 +580,10 @@ export default {
     basicInfo_Save: function() {
       this.checkEmail();
       this.checkPhone();
-      if (this.$refs["e-email"].textContent === "" && this.$refs["e-phone"].textContent === "") {
+      if (
+        this.$refs["e-email"].textContent === "" &&
+        this.$refs["e-phone"].textContent === ""
+      ) {
         this.proUpdate(this.basicInfo);
       }
     },
@@ -555,7 +593,12 @@ export default {
       this.checkURL("sns_twtitter");
       this.checkURL("sns_instagram");
       this.checkURL("sns_other");
-      if (this.$refs["e-sns_facebook"].textContent === "" && this.$refs["e-sns_twtitter"].textContent === ""  && this.$refs["e-sns_instagram"].textContent === ""  && this.$refs["e-sns_other"].textContent === "") {
+      if (
+        this.$refs["e-sns_facebook"].textContent === "" &&
+        this.$refs["e-sns_twtitter"].textContent === "" &&
+        this.$refs["e-sns_instagram"].textContent === "" &&
+        this.$refs["e-sns_other"].textContent === ""
+      ) {
         this.proUpdate(this.snsInfo);
       }
     },
@@ -563,7 +606,10 @@ export default {
     addressInfo_Save: function() {
       this.checkPostalcode();
       this.checkHouseNumber();
-      if (this.$refs["e-postalcode"].textContent === "" && this.$refs["e-houseNumber"].textContent === "") {
+      if (
+        this.$refs["e-postalcode"].textContent === "" &&
+        this.$refs["e-houseNumber"].textContent === ""
+      ) {
         this.proUpdate(this.addressInfo);
       }
     },
@@ -574,7 +620,7 @@ export default {
       let fl = this.$refs.upfile.files[0];
       //ファイルの形式
       const isJPG = fl.type === "image/jpeg";
-      //ファイルサイズ 
+      //ファイルサイズ
       const isLt2M = fl.size / 1024 / 1024 < 2;
       if (!isJPG) {
         Message({
@@ -595,12 +641,13 @@ export default {
       //Content-Type:form/multipart で送信されます
       let data = new FormData();
       data.append("imgAvatar", fl, fl.name);
-      this.$store.dispatch("user/imageUp", data)
-      .then(function(data) {
+      this.$store
+        .dispatch("user/imageUp", data)
+        .then(function(data) {
           return data.imgUrl;
         })
         .then(function(text) {
-          that.basicInfo.avatar=text;
+          that.basicInfo.avatar = text;
         })
         .catch(function(error) {
           window.alert("Error: " + error.message);
@@ -622,7 +669,7 @@ export default {
       var fields = { phone: this.$refs.phone.value };
       var ret = this.validate(fields, { phone: this.rules.phone });
       if (fields["phone"] && ret) {
-        const { message} = ret[0];
+        const { message } = ret[0];
         this.$refs["e-phone"].textContent = message;
       } else {
         this.$refs["e-phone"].textContent = "";
@@ -633,10 +680,10 @@ export default {
       var fields = {};
       fields[sns] = this.$refs[sns].value;
       var rules = {};
-      rules[sns] = this.rules[sns]
+      rules[sns] = this.rules[sns];
       var ret = this.validate(fields, rules);
       if (fields[sns] && ret) {
-        const { message} = ret[0];
+        const { message } = ret[0];
         this.$refs[`e-${sns}`].textContent = message;
       } else {
         this.$refs[`e-${sns}`].textContent = "";
@@ -674,8 +721,8 @@ export default {
         }
       });
       return check_result;
-    }
-  }
+    },
+  },
 };
 </script>
 <style scoped>
