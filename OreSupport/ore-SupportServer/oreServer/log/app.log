@@ -650,3 +650,7 @@
 [2020-07-13T22:30:10.348] [INFO] users - Third Party by Facebook
 [2020-07-13T22:30:10.492] [INFO] users - profileInfo userID: 2588234901506497
 [2020-07-13T22:30:18.732] [INFO] users - logout
+[2020-07-13T22:55:36.119] [INFO] users - ユーザログ UserName:閻 文帥
+[2020-07-13T22:55:36.119] [INFO] users - Third Party by Facebook
+[2020-07-13T22:55:36.288] [INFO] users - profileInfo userID: 2588234901506497
+[2020-07-13T22:55:38.053] [INFO] users - logout
