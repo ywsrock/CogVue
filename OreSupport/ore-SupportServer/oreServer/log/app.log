@@ -654,3 +654,36 @@
 [2020-07-13T22:55:36.119] [INFO] users - Third Party by Facebook
 [2020-07-13T22:55:36.288] [INFO] users - profileInfo userID: 2588234901506497
 [2020-07-13T22:55:38.053] [INFO] users - logout
+[2020-07-13T23:10:48.292] [INFO] users - ユーザログ UserName:閻 文帥
+[2020-07-13T23:10:48.292] [INFO] users - Third Party by Facebook
+[2020-07-13T23:10:48.485] [INFO] users - profileInfo userID: 2588234901506497
+[2020-07-13T23:10:56.439] [INFO] users - logout
+[2020-07-13T23:11:34.532] [INFO] users - ユーザログ UserName:閻 文帥
+[2020-07-13T23:11:34.532] [INFO] users - Third Party by Facebook
+[2020-07-13T23:11:34.711] [INFO] users - profileInfo userID: 2588234901506497
+[2020-07-15T20:16:58.779] [INFO] startup - Listening on port 3000
+[2020-07-15T20:17:37.965] [INFO] users - ユーザログ UserName:1@1.com
+[2020-07-15T20:17:37.966] [INFO] userDao - START getUserInfoByUserName: {"username":"1@1.com"}
+[2020-07-15T20:17:37.979] [INFO] userDao - END getUserInfoByUserName
+[2020-07-15T20:17:38.060] [INFO] users - login success UserID: 49
+[2020-07-15T20:17:38.073] [INFO] users - profileInfo userID: 49
+[2020-07-15T20:17:38.074] [INFO] userDao - START getUserProfileByUserID : {"key":"UserID","val":49}
+[2020-07-15T20:17:38.084] [INFO] userDao - END getUserProfileByUserID
+[2020-07-15T20:17:38.085] [INFO] users - profileInfo success
+[2020-07-15T20:17:52.979] [INFO] users - logout
+[2020-07-15T21:10:48.081] [INFO] users - ユーザログ UserName:1@1.com
+[2020-07-15T21:10:48.081] [INFO] userDao - START getUserInfoByUserName: {"username":"1@1.com"}
+[2020-07-15T21:10:48.086] [INFO] userDao - END getUserInfoByUserName
+[2020-07-15T21:10:48.159] [INFO] users - login success UserID: 49
+[2020-07-15T21:10:48.169] [INFO] users - profileInfo userID: 49
+[2020-07-15T21:10:48.169] [INFO] userDao - START getUserProfileByUserID : {"key":"UserID","val":49}
+[2020-07-15T21:10:48.174] [INFO] userDao - END getUserProfileByUserID
+[2020-07-15T21:10:48.174] [INFO] users - profileInfo success
+[2020-07-15T21:11:34.426] [INFO] users - logout
+[2020-07-15T21:12:15.826] [INFO] users - ユーザログ UserName:閻 文帥
+[2020-07-15T21:12:15.826] [INFO] users - Third Party by Facebook
+[2020-07-15T21:12:16.086] [INFO] users - profileInfo userID: 2588234901506497
+[2020-07-15T21:12:22.330] [INFO] users - logout
+[2020-07-15T21:12:49.323] [INFO] users - ユーザログ UserName:閻 文帥
+[2020-07-15T21:12:49.323] [INFO] users - Third Party by Facebook
+[2020-07-15T21:12:49.506] [INFO] users - profileInfo userID: 2588234901506497

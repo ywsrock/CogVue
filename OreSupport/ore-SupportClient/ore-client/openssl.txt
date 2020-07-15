@@ -1,0 +1,2 @@
+openssl req -new -newkey rsa:2048 -nodes -keyout key.pem -out csr.pem && openssl x509 -req -in csr.pem -signkey key.pem -out cert.pem
+
