@@ -35,7 +35,8 @@ export default {
         "printable"
       ).innerHTML;
       window.print();
-      location.reload(location.href);
+      location.href = "/#/task/userHistory";
+      location.reload();
     }
   }
 };
