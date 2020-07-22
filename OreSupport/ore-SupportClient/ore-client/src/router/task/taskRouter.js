@@ -3,7 +3,7 @@
  */
 
 import Layout from "@/layout/index.vue";
-import Record from "@/views/task/Record.vue";
+import Summary from "@/views/task/index.vue";
 
 const taskRouter = {
   path: "/task",
@@ -11,12 +11,12 @@ const taskRouter = {
   components: {
     default: Layout,
   },
-  redirect: "/",
+  redirect: "/task",
   children: [
     {
-      path: "userHistory",
-      name: "userHistory",
-      component: Record,
+      path: "userSummary",
+      name: "userSummary",
+      component: Summary,
     },
   ],
 };

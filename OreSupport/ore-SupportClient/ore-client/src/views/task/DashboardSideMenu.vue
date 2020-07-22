@@ -1,24 +1,24 @@
 <template>
-  <div>
+  <div class="dashboard-container">
     <div class="sidebar-admin">
       <ul>
         <li :class="{ active: activeTab === 'user-tab' }">
-          <a href="#" @click="activeTab='user-tab'; activeSecondTab=1;">
+          <a href="#" @click="activeTabClick('user-tab',1)">
             <i class="fa fa-user"></i>
           </a>
         </li>
         <li :class="{ active: activeTab === 'statistics-tab' }">
-          <a href="#" @click="activeTab='statistics-tab'; activeSecondTab=1;">
+          <a href="#" @click="activeTabClick('statistics-tab',1,$event)">
             <i class="fa fa-users"></i>
           </a>
         </li>
         <li :class="{ active: activeTab === 'help-tab' }">
-          <a href="#" @click="activeTab='help-tab'; activeSecondTab=1;">
+          <a href="#" @click="activeTabClick('help-tab',1,$event)">
             <i class="fa fa-info-circle"></i>
           </a>
         </li>
         <li :class="{ active: activeTab === 'settings-tab' }">
-          <a href="#" @click="activeTab='settings-tab'; activeSecondTab=1;">
+          <a href="#" @click="activeTabClick('settings-tab',1,$event)">
             <i class="fa fa-cog"></i>
           </a>
         </li>
@@ -29,7 +29,7 @@
     <div class="sidebar-secondary-admin">
       <ul v-if="activeTab === 'user-tab' ">
         <li :class="{ active: activeSecondTab === 1 }">
-          <a href="#" @click="activeSecondTab=1">
+          <a href="#" @click="activeSecondTabClick('1')">
             <span class="icon">
               <i class="fa fa-tachometer"></i>
             </span>
@@ -39,7 +39,7 @@
         </li>
 
         <li :class="{ active: activeSecondTab === 2 }">
-          <a href="#" @click="activeSecondTab=2">
+          <a href="#" @click="activeSecondTabClick('2')">
             <span class="icon">
               <i class="fa fa-tachometer"></i>
             </span>
@@ -49,7 +49,7 @@
         </li>
 
         <li :class="{ active: activeSecondTab === 3 }">
-          <a href="#" @click="activeSecondTab=3">
+          <a href="#" @click="activeSecondTabClick('3')">
             <span class="icon">
               <i class="fa fa-tachometer"></i>
             </span>
@@ -59,7 +59,7 @@
         </li>
 
         <li :class="{ active: activeSecondTab === 4 }">
-          <a href="#" @click="activeSecondTab=4">
+          <a href="#" @click="activeSecondTabClick('4')">
             <span class="icon">
               <i class="fa fa-tachometer"></i>
             </span>
@@ -69,7 +69,7 @@
         </li>
 
         <li :class="{ active: activeSecondTab === 5 }">
-          <a href="#" @click="activeSecondTab=5">
+          <a href="#" @click="activeSecondTabClick('5')">
             <span class="icon">
               <i class="fa fa-tachometer"></i>
             </span>
@@ -79,7 +79,7 @@
         </li>
 
         <li :class="{ active: activeSecondTab === 6 }">
-          <a href="#" @click="activeSecondTab=6">
+          <a href="#" @click="activeSecondTabClick('6')">
             <span class="icon">
               <i class="fa fa-tachometer"></i>
             </span>
@@ -95,7 +95,7 @@
         </li>
 
         <li :class="{ active: activeSecondTab === 1 }">
-          <a href="#" @click="activeSecondTab=1">
+          <a href="#" @click="activeSecondTabClick('1')">
             <span class="icon">
               <i class="fa fa-tachometer"></i>
             </span>
@@ -108,7 +108,7 @@
           <a
             href="#"
             :class="{ 'search-tab-menu': activeSecondTab === 2 }"
-            @click="activeSecondTab=2"
+            @click="activeSecondTabClick('2')"
           >
             <span class="icon">
               <i class="fa fa-tachometer"></i>
@@ -160,7 +160,7 @@
         </li>
 
         <li :class="{ active: activeSecondTab === 1 }">
-          <a href="#" @click="activeSecondTab=1">
+          <a href="#" @click="activeSecondTabClick(1)">
             <span class="icon">
               <i class="fa fa-tachometer"></i>
             </span>
@@ -170,7 +170,7 @@
         </li>
 
         <li :class="{ active: activeSecondTab === 2 }">
-          <a href="#" @click="activeSecondTab=2">
+          <a href="#" @click="activeSecondTabClick('2')">
             <span class="icon">
               <i class="fa fa-tachometer"></i>
             </span>
@@ -223,7 +223,27 @@ export default {
       activeTab: "user-tab",
       activeSecondTab: 1
     };
-  }
+  },
+  methods: {
+    //アクティブ
+    // eslint-disable-next-line 
+    activeTabClick:function(activeTab,activeSecondTab,e){
+      this.$nextTick(function(){
+        //タブ
+        this.activeTab = activeTab;
+        //サブタブ
+        this.activeSecondTab = activeSecondTab;
+        this.$router.push("asdfasd");
+      });
+    },
+    //アクティブサブタブ
+    activeSecondTabClick:function(activeSecondTab){
+      alert(activeSecondTab);
+
+
+
+    }
+  },
 };
 </script>
 

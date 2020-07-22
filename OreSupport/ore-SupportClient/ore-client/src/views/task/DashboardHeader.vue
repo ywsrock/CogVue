@@ -29,6 +29,7 @@
 <script>
 export default {
   methods: {
+  
     // ページのコンテントとなる部分を抽出して印刷
     print: function() {
       window.document.body.innerHTML = document.getElementById(

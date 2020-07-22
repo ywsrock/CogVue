@@ -1,30 +1,30 @@
 <template>
   <div>
-  <section class="app-main">
-    <transition name="fade-transform" mode="out-in">
-      <router-view :key="routeKey"/>
-    </transition>
-  </section>
+    <section class="app-main">
+      <transition name="fade-transform" mode="out-in">
+        <router-view :key="routeKey" />
+      </transition>
+    </section>
   </div>
 </template>
 
 <script>
 export default {
-  name: 'MainForm',
+  name: "MainForm",
   data() {
     return {
-      routeKey:this.$route.path
-    }
+      routeKey: this.$route.path,
+    };
   },
   computed: {
     key() {
-      return this.$route.path
-    }
+      return this.$route.path;
+    },
   },
   watch: {
-    '$route'(to,from){
-        this.routeKey = to.key;
-    }
+    $route(to, from) {
+      this.routeKey = to.key;
+    },
   },
-}
+};
 </script>

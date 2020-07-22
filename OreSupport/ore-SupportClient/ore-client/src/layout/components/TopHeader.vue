@@ -341,9 +341,8 @@ export default {
   },
   methods: {
     fblogin() {
-      //メイン画面に遷移
-      this.$router.push("/");
       const that = this;
+
       // eslint-disable-next-line
       FB.login(
         function(response) {
@@ -356,6 +355,8 @@ export default {
         },
         { scope: "public_profile,email" }
       );
+      //メイン画面に遷移
+      this.$router.push("/");
     },
 
     getProfileInfo() {
