@@ -73,9 +73,56 @@ const getBlogDetail = async(queryInfo) => {
     }
 }
 
+const blogDelete = async(queryInfo) => {
+    try {
+        // 結果を返す
+        const result = await Blog.destroy({
+            where: {
+                [Op.and]: [{
+                        [queryInfo.key]: queryInfo.val
+                    },
+                ]
+            }
+        });
+        return result;
+    } catch (error) {
+        console.error("情報取得エラー:" + error.stack);
+        throw error;
+    }
+}
+
+const blogUpdate = async(queryInfo) => {
+    try {
+        const result = await Blog.update({
+
+            // タイトル
+            Title: queryInfo.Title,
+            // Content
+            Content: queryInfo.Content,
+            
+        },{where: {
+            
+            [Op.and]: [{
+                [queryInfo.key]: queryInfo.val
+            }
+        ]
+        }
+            
+        });
+        // 結果を返す
+        return result;
+    } catch (error) {
+        console.error("情報取得エラー:" + error.stack);
+        return error;
+    }
+}
+
+
 module.exports = {
     createBlog: createBlog,
     getBlogList:getBlogList,
-    getBlogDetail:getBlogDetail
+    getBlogDetail:getBlogDetail,
+    blogDelete:blogDelete,
+    blogUpdate:blogUpdate
 }
 

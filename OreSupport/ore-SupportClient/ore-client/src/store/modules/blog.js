@@ -1,6 +1,6 @@
 /* eslint-disable */
 import { getToken, setToken, removeToken } from "@/utils/auth"
-import { createBlog,getBlogList,viewBlog,getBlogDetail} from "@/utils/api/blog"
+import { createBlog,getBlogList,viewBlog,getBlogDetail,blogDelete, blogUpdate} from "@/utils/api/blog"
 import { resetRouter } from '@/router'
 
 
@@ -102,6 +102,41 @@ const actions = {
                         context.commit("set_content",data.content)
 
 
+                        resolve(data);
+                    }).catch(error => {
+                        reject(error);
+                    })
+            })
+        },
+
+        blogDelete(context, blogId) {
+            return new Promise((resolve, reject) => {               
+                blogDelete(blogId)
+                    .then(res => {
+                        const data = res.data;
+                        const content = data.content;
+
+                        context.commit("set_id",data.id)
+                        //ブログ名
+                        context.commit("set_title",data.title)
+                        //ブログ内容
+                        context.commit("set_content",data.content)
+
+
+                        resolve(data);
+                    }).catch(error => {
+                        reject(error);
+                    })
+            })
+        }, 
+
+        blogUpdate(context, blogInfo) {
+            return new Promise((resolve, reject) => {
+                // var tile = blogInfo.title;
+                // var content = blogInfo.content;
+                blogUpdate(blogInfo)
+                    .then(res => {
+                        const data = res.data;
                         resolve(data);
                     }).catch(error => {
                         reject(error);

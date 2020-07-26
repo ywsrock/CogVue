@@ -36,11 +36,27 @@ export function getBlogDetail(blogID) {
     })
 }
 
+export function blogDelete(blogID) {
+    return request({
+        url: '/blog/blogDelete',
+        method: 'get',
+        params: { blogID }
+    })
+}
+
 export function viewBlog(token) {
     return request({
         url: '/blog/view',
         method: 'get',
         params: { token }
         
+    })
+}
+
+export function blogUpdate(data) {
+    return request({
+        url: '/blog/blogUpdate',
+        method: 'post',
+        data
     })
 }

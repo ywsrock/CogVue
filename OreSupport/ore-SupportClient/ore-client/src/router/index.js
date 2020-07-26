@@ -6,6 +6,8 @@ import blogRouter from "./blog/blogRouter"
 import viewRouter from "./blog/viewRouter"
 import blogList from "@/views/blog/blog_list.vue"
 import blogDetail from "@/views/blog/blog_detail.vue"
+import blogDelete from "@/views/blog/blog_list.vue"
+import blogEdit from "@/views/blog/blog_edit.vue"
 // import login from "@/views/login/index.vue";
 import top from "@/views/user/UserInfo.vue"
 import  Layout  from "@/layout/index.vue"
@@ -41,6 +43,22 @@ Vue.use(VueRouter)
   path:"/blogDetail",
   name:"blogDetail",
   component:blogDetail
+},
+{
+  path:"/blogDelete",
+  name:"blogDelete",
+  component:blogDelete
+},
+{
+  path:"/blogEdit",
+  name:"blogEdit",
+  component:blogEdit,
+  children:[
+    {
+        path:"/blogEdit",
+        name:"blogUpdate",
+        component:() => import("@/views/blog/blog_edit.vue")
+    }]
 },
 
     {
