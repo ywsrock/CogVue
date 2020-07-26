@@ -6,10 +6,19 @@
 
 
   <el-table :data="tableData"  style="width: 100%" >
+
+    <el-table-column
+      type="index"
+      width="50">
+    </el-table-column>
+    
+    <div v-if="false">
     <el-table-column 
     label="id" 
-    prop="id">
+    prop="id"
+    id = "id">
     </el-table-column>
+    </div>
 
     <el-table-column 
     label="title" 
@@ -37,6 +46,7 @@
 </div>
 </template>
 <script>
+import { Message } from "element-ui";
 export default {
   data() {
     return {
@@ -76,12 +86,12 @@ methods: {
       console.log(`val = ${JSON.stringify(row)}`)
       // this.$router.push("/blogDetail");
       // this.$store.dispatch("blog/getBlogDetail",row.id)
-      this.$store.dispatch("blog/getBlogDetail",row.id)
-      .then(res =>{   //成功の場合
+      // this.$store.dispatch("blog/getBlogDetail",row.id)
+      // .then(res =>{   //成功の場合
         this.$router.push("/blogDetail?id=" + row.id);
-      }).catch(error =>{
-        console.log("err=====");
-      })
+      // }).catch(error =>{
+      //   console.log("err=====");
+      // })
     },
 
   blogEdit(index, row) {
@@ -108,8 +118,6 @@ blogDelete(index, row) {
       console.log(`val = ${JSON.stringify(row)}`)
       this.$store.dispatch("blog/blogDelete",row.id)
       .then(res =>{   //成功の場合
-        this.$router.push("/blogList");
-
         var that = this;
         this.$store
       .dispatch("blog/getBlogList")
@@ -129,3 +137,4 @@ blogDelete(index, row) {
     },
 }};
 </script>
+

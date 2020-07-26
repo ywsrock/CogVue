@@ -27,6 +27,7 @@
   </div>
 </template>
 <script>
+import { Message } from "element-ui";
 export default {
   data() {
     return {

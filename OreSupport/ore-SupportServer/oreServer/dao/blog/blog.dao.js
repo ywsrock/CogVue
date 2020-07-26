@@ -40,6 +40,7 @@ const getBlogList = async(queryInfo) => {
     try {
         // 結果を返す
         const result = await Blog.findAll({
+            order:[['id', 'DESC']],
             where: {
                 [Op.and]: [{
                         [queryInfo.key]: queryInfo.val
@@ -101,14 +102,24 @@ const blogUpdate = async(queryInfo) => {
             Content: queryInfo.Content,
             
         },{where: {
-            
-            [Op.and]: [{
-                [queryInfo.key]: queryInfo.val
-            }
-        ]
+            id: queryInfo.id
         }
+
+
+        }
+        
+        // ,
+        
+        // {where: {
             
-        });
+        //     [Op.and]: [{
+        //         [queryInfo.key]: queryInfo.val
+        //     }
+        // ]
+        // }
+            
+        // }
+        );
         // 結果を返す
         return result;
     } catch (error) {

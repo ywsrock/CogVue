@@ -210,7 +210,7 @@ router.post("/blogUpdate", [checkuser.verifyUser], async function (req, res, nex
                 // JSON ステータスコード
                 code: STATUS_MESSAGE.CODE_SUCCESS,
                 data: {
-                    message: "ブログ作成成功",
+                    message: "ブログ更新成功",
                 },
             };
         }
