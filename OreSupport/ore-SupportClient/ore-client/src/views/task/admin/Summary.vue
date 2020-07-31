@@ -90,7 +90,7 @@ const lineChartData = {
 };
 
 export default {
-  name: "DashboardAdmin",
+  name: "Summary",
   components: {
     LineChart,
     RaddarChart,

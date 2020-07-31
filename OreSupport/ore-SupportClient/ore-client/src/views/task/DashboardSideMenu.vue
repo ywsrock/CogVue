@@ -3,22 +3,22 @@
     <div class="sidebar-admin">
       <ul>
         <li :class="{ active: activeTab === 'user-tab' }">
-          <a href="#" @click="activeTabClick('user-tab',1)">
+          <a href="#" @click="activeTabClick('user-tab', 1)">
             <i class="fa fa-user"></i>
           </a>
         </li>
         <li :class="{ active: activeTab === 'statistics-tab' }">
-          <a href="#" @click="activeTabClick('statistics-tab',1,$event)">
+          <a href="#" @click="activeTabClick('statistics-tab', 1, $event)">
             <i class="fa fa-users"></i>
           </a>
         </li>
         <li :class="{ active: activeTab === 'help-tab' }">
-          <a href="#" @click="activeTabClick('help-tab',1,$event)">
+          <a href="#" @click="activeTabClick('help-tab', 1, $event)">
             <i class="fa fa-info-circle"></i>
           </a>
         </li>
         <li :class="{ active: activeTab === 'settings-tab' }">
-          <a href="#" @click="activeTabClick('settings-tab',1,$event)">
+          <a href="#" @click="activeTabClick('settings-tab', 1, $event)">
             <i class="fa fa-cog"></i>
           </a>
         </li>
@@ -27,9 +27,9 @@
     <!-- /.sidebar-admin-->
 
     <div class="sidebar-secondary-admin">
-      <ul v-if="activeTab === 'user-tab' ">
+      <ul v-if="activeTab === 'user-tab'">
         <li :class="{ active: activeSecondTab === 1 }">
-          <a href="#" @click="activeSecondTabClick('1')">
+          <a href="#" @click="activeSecondTabClick(1)">
             <span class="icon">
               <i class="fa fa-tachometer"></i>
             </span>
@@ -39,7 +39,7 @@
         </li>
 
         <li :class="{ active: activeSecondTab === 2 }">
-          <a href="#" @click="activeSecondTabClick('2')">
+          <a href="#" @click="activeSecondTabClick(2)">
             <span class="icon">
               <i class="fa fa-tachometer"></i>
             </span>
@@ -49,7 +49,7 @@
         </li>
 
         <li :class="{ active: activeSecondTab === 3 }">
-          <a href="#" @click="activeSecondTabClick('3')">
+          <a href="#" @click="activeSecondTabClick(3)">
             <span class="icon">
               <i class="fa fa-tachometer"></i>
             </span>
@@ -59,7 +59,7 @@
         </li>
 
         <li :class="{ active: activeSecondTab === 4 }">
-          <a href="#" @click="activeSecondTabClick('4')">
+          <a href="#" @click="activeSecondTabClick(4)">
             <span class="icon">
               <i class="fa fa-tachometer"></i>
             </span>
@@ -69,7 +69,7 @@
         </li>
 
         <li :class="{ active: activeSecondTab === 5 }">
-          <a href="#" @click="activeSecondTabClick('5')">
+          <a href="#" @click="activeSecondTabClick(5)">
             <span class="icon">
               <i class="fa fa-tachometer"></i>
             </span>
@@ -79,7 +79,7 @@
         </li>
 
         <li :class="{ active: activeSecondTab === 6 }">
-          <a href="#" @click="activeSecondTabClick('6')">
+          <a href="#" @click="activeSecondTabClick(6)">
             <span class="icon">
               <i class="fa fa-tachometer"></i>
             </span>
@@ -89,13 +89,13 @@
         </li>
       </ul>
 
-      <ul v-if="activeTab === 'statistics-tab' ">
+      <ul v-if="activeTab === 'statistics-tab'">
         <li class="reset_style">
           <a href="#"></a>
         </li>
 
         <li :class="{ active: activeSecondTab === 1 }">
-          <a href="#" @click="activeSecondTabClick('1')">
+          <a href="#" @click="activeSecondTabClick(1)">
             <span class="icon">
               <i class="fa fa-tachometer"></i>
             </span>
@@ -108,7 +108,7 @@
           <a
             href="#"
             :class="{ 'search-tab-menu': activeSecondTab === 2 }"
-            @click="activeSecondTabClick('2')"
+            @click="activeSecondTabClick(2)"
           >
             <span class="icon">
               <i class="fa fa-tachometer"></i>
@@ -145,13 +145,15 @@
                 <option>秋田県</option>
                 <option>岩手県</option>
               </select>
-              <button type="submit" class="btn btn-primary search-button">表示</button>
+              <button type="submit" class="btn btn-primary search-button">
+                表示
+              </button>
             </span>
           </a>
         </li>
       </ul>
 
-      <ul v-if="activeTab === 'help-tab' ">
+      <ul v-if="activeTab === 'help-tab'">
         <li class="reset_style">
           <a href="#"></a>
         </li>
@@ -180,7 +182,7 @@
         </li>
       </ul>
 
-      <ul v-if="activeTab === 'settings-tab' ">
+      <ul v-if="activeTab === 'settings-tab'">
         <li class="reset_style">
           <a href="#"></a>
         </li>
@@ -192,7 +194,7 @@
         </li>
 
         <li :class="{ active: activeSecondTab === 1 }">
-          <a href="#" @click="activeSecondTab=1">
+          <a href="#" @click="activeSecondTab = 1">
             <span class="icon">
               <i class="fa fa-tachometer"></i>
             </span>
@@ -202,7 +204,7 @@
         </li>
 
         <li :class="{ active: activeSecondTab === 2 }">
-          <a href="#" @click="activeSecondTab=2">
+          <a href="#" @click="activeSecondTab = 2">
             <span class="icon">
               <i class="fa fa-tachometer"></i>
             </span>
@@ -221,28 +223,63 @@ export default {
   data() {
     return {
       activeTab: "user-tab",
-      activeSecondTab: 1
+      activeSecondTab: 1,
+      components: {
+        "user-tab-1": "Summary",
+        "user-tab-2": "MemoryAbility",
+        "user-tab-3": "SpatialAbility",
+        "user-tab-4": "OrientationAbility",
+        "user-tab-5": "PlanAblity",
+        "user-tab-6": "AttentionAbility",
+      },
     };
   },
   methods: {
     //アクティブ
-    // eslint-disable-next-line 
-    activeTabClick:function(activeTab,activeSecondTab,e){
-      this.$nextTick(function(){
+    // eslint-disable-next-line
+    activeTabClick: function(activeTab, activeSecondTab, e) {
+      this.$nextTick(function() {
         //タブ
         this.activeTab = activeTab;
         //サブタブ
         this.activeSecondTab = activeSecondTab;
-        this.$router.push("asdfasd");
+        // this.$router.push("asdfasd");
       });
     },
     //アクティブサブタブ
-    activeSecondTabClick:function(activeSecondTab){
+    activeSecondTabClick: function(activeSecondTab) {
+      //サブタブ
+      this.activeSecondTab = activeSecondTab;
+      // コンポーネント切替
+      // if (this.activeTab === "user-tab") {
+      //   this.$parent.key = this.components[`user-tab-${activeSecondTab}`];
+      //   this.$parent.currentAbility = this.components[
+      //     `user-tab-${activeSecondTab}`
+      //   ];
+      // }
+      switch (this.activeTab) {
+        case "user-tab":
+           this.$parent.key = this.components[`user-tab-${activeSecondTab}`];
+           this.$parent.currentAbility = this.components[`user-tab-${activeSecondTab}`];
+           break;
+        case "statistics-tab":
+           
+          break;
+        case "help-tab":
+          
+          break;
+        case "settings-tab":
+          
+          break;
+        default:
+           this.activeTab = "user-tab";
+           this.activeSecondTab = 1;
+           this.$parent.key = this.components[`user-tab-${activeSecondTab}`];
+           this.$parent.currentAbility = this.components[`user-tab-${activeSecondTab}`];
+      }
+
       alert(activeSecondTab);
-
-
-
-    }
+    },
   },
 };
 </script>
