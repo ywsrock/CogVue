@@ -12,11 +12,9 @@ export default {
   },
   activated() {
     if (!this.$_resizeHandler) {
-      // avoid duplication init
       this.initListener()
     }
 
-    // when keep-alive chart activated, auto resize
     this.resize()
   },
   beforeDestroy() {
@@ -26,8 +24,6 @@ export default {
     this.destroyListener()
   },
   methods: {
-    // use $_ for mixins properties
-    // https://vuejs.org/v2/style-guide/index.html#Private-property-names-essential
     $_sidebarResizeHandler(e) {
       if (e.propertyName === 'width') {
         this.$_resizeHandler()

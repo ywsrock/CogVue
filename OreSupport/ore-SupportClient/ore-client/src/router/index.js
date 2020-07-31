@@ -10,6 +10,7 @@ import Layout from "@/layout/index.vue";
 Vue.use(VueRouter);
 
 const routes = [
+
   {
     path: "/",
     components: {

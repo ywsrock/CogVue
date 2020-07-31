@@ -2,15 +2,15 @@
   <div class="container-fluid h-100">
     <div class="page-wrapper">
       <div class="main">
-        <DashboardHeader className="sidebar-container"/>
+        <DashboardHeader className="sidebar-container" />
         <div class="row h-100">
           <div class="col-sm-3" id="sidebar">
             <div class="navestylemenublock sticky-top">
-              <DashboardSideMenu ref="child"/>
+              <DashboardSideMenu ref="child" />
             </div>
           </div>
           <main class="col-sm-9 py-2" id="printable">
-            <component :is="currentAbility" :key="key"/>
+            <component :is="currentAbility" :key="key" />
           </main>
         </div>
       </div>
@@ -33,8 +33,8 @@ export default {
   name: "Dashboard",
   components: {
     Summary, // サマリー
-    MemoryAbility,// 記憶力
-    SpatialAbility,// 空間
+    MemoryAbility, // 記憶力
+    SpatialAbility, // 空間
     OrientationAbility,
     PlanAblity,
     AttentionAbility,
@@ -44,7 +44,7 @@ export default {
   data() {
     return {
       currentAbility: "Summary",
-      key:"Summary",
+      key: "Summary",
       activeTab: "user-tab",
       activeSecondTab: 1,
       routeKey: this.$route.path,

@@ -12,7 +12,7 @@
       </template>
     </el-table-column>
 
-    <el-table-column width="180px" align="center" label="Date">
+    <el-table-column width="180px" align="center" label="測定時間">
       <template slot-scope="scope">
         <span>{{
           scope.row.timestamp | parseTime("{y}-{m}-{d} {h}:{i}")
@@ -20,39 +20,27 @@
       </template>
     </el-table-column>
 
-    <el-table-column min-width="300px" label="Title">
+    <el-table-column min-width="300px" label="測定内容">
       <template slot-scope="{ row }">
         <span>{{ row.title }}</span>
       </template>
     </el-table-column>
 
-    <el-table-column width="110px" align="center" label="Author">
+    <el-table-column width="110px" align="center" label="評価結果">
       <template slot-scope="scope">
-        <span>{{ scope.row.author }}</span>
+        <span>{{ scope.row.result }}</span>
       </template>
     </el-table-column>
 
-    <el-table-column width="120px" label="Importance">
+    <el-table-column width="120px" label="状態">
       <template slot-scope="scope">
-        <svg-icon
-          v-for="n in +scope.row.importance"
-          :key="n"
-          icon-class="star"
-        />
+        <span>{{ scope.row.importance }}</span>
       </template>
     </el-table-column>
 
-    <el-table-column align="center" label="Readings" width="95">
+    <el-table-column align="center" label="改善" width="95">
       <template slot-scope="scope">
         <span>{{ scope.row.pageviews }}</span>
-      </template>
-    </el-table-column>
-
-    <el-table-column class-name="status-col" label="Status" width="110">
-      <template slot-scope="{ row }">
-        <el-tag :type="row.status | statusFilter">
-          {{ row.status }}
-        </el-tag>
       </template>
     </el-table-column>
   </el-table>
@@ -75,7 +63,7 @@ export default {
   props: {
     type: {
       type: String,
-      default: "CN",
+      default: "1",
     },
   },
   data() {
@@ -101,21 +89,30 @@ export default {
       this.list = [
         {
           id: 1,
-          timestamp: '2020/01/01 11:11:12',
-          author: "asd",
+          timestamp: "2020/03/01 11:11:12",
+          result: "良好",
           reviewer: "2222",
-          title: "asdfasd",
-          content_short: "mock data",
-          content: "asdfasdfsad",
-          forecast: "111",
+          title: "記憶力パズルテスト",
           importance: "22",
-          "type|1": ["CN", "US", "JP", "EU"],
-          "status|1": ["published", "draft"],
-          display_time: "asdfd",
-          comment_disabled: true,
-          pageviews: "asdfasd",
-          image_uri:"asdfasd",
-          platforms: ["a-platform"],
+          pageviews: "リラックス",
+        },
+        {
+          id: 2,
+          timestamp: "2020/03/01 11:11:12",
+          result: "弱い",
+          reviewer: "2222",
+          title: "記憶力パズルテスト",
+          importance: "22",
+          pageviews: "リラックス",
+        },
+        {
+          id: 3,
+          timestamp: "2020/03/01 11:11:12",
+          result: "強い",
+          reviewer: "2222",
+          title: "記憶力パズルテスト",
+          importance: "22",
+          pageviews: "リラックス",
         },
       ];
       this.loading = false;

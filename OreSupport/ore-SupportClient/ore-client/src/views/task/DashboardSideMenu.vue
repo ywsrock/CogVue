@@ -29,7 +29,7 @@
     <div class="sidebar-secondary-admin">
       <ul v-if="activeTab === 'user-tab'">
         <li :class="{ active: activeSecondTab === 1 }">
-          <a href="#" @click="activeSecondTabClick(1)">
+          <a href="#" @click.prevent="activeSecondTabClick(1)">
             <span class="icon">
               <i class="fa fa-tachometer"></i>
             </span>
@@ -39,7 +39,7 @@
         </li>
 
         <li :class="{ active: activeSecondTab === 2 }">
-          <a href="#" @click="activeSecondTabClick(2)">
+          <a href="#" @click.prevent="activeSecondTabClick(2)">
             <span class="icon">
               <i class="fa fa-tachometer"></i>
             </span>
@@ -49,7 +49,7 @@
         </li>
 
         <li :class="{ active: activeSecondTab === 3 }">
-          <a href="#" @click="activeSecondTabClick(3)">
+          <a href="#" @click.prevent="activeSecondTabClick(3)">
             <span class="icon">
               <i class="fa fa-tachometer"></i>
             </span>
@@ -59,7 +59,7 @@
         </li>
 
         <li :class="{ active: activeSecondTab === 4 }">
-          <a href="#" @click="activeSecondTabClick(4)">
+          <a href="#" @click.prevent="activeSecondTabClick(4)">
             <span class="icon">
               <i class="fa fa-tachometer"></i>
             </span>
@@ -69,7 +69,7 @@
         </li>
 
         <li :class="{ active: activeSecondTab === 5 }">
-          <a href="#" @click="activeSecondTabClick(5)">
+          <a href="#" @click.prevent="activeSecondTabClick(5)">
             <span class="icon">
               <i class="fa fa-tachometer"></i>
             </span>
@@ -79,7 +79,7 @@
         </li>
 
         <li :class="{ active: activeSecondTab === 6 }">
-          <a href="#" @click="activeSecondTabClick(6)">
+          <a href="#" @click.prevent="activeSecondTabClick(6)">
             <span class="icon">
               <i class="fa fa-tachometer"></i>
             </span>
@@ -95,7 +95,7 @@
         </li>
 
         <li :class="{ active: activeSecondTab === 1 }">
-          <a href="#" @click="activeSecondTabClick(1)">
+          <a href="#" @click.prevent="activeSecondTabClick(1)">
             <span class="icon">
               <i class="fa fa-tachometer"></i>
             </span>
@@ -108,7 +108,7 @@
           <a
             href="#"
             :class="{ 'search-tab-menu': activeSecondTab === 2 }"
-            @click="activeSecondTabClick(2)"
+            @click.prevent="activeSecondTabClick(2)"
           >
             <span class="icon">
               <i class="fa fa-tachometer"></i>
@@ -250,35 +250,29 @@ export default {
     activeSecondTabClick: function(activeSecondTab) {
       //サブタブ
       this.activeSecondTab = activeSecondTab;
-      // コンポーネント切替
-      // if (this.activeTab === "user-tab") {
-      //   this.$parent.key = this.components[`user-tab-${activeSecondTab}`];
-      //   this.$parent.currentAbility = this.components[
-      //     `user-tab-${activeSecondTab}`
-      //   ];
-      // }
       switch (this.activeTab) {
         case "user-tab":
-           this.$parent.key = this.components[`user-tab-${activeSecondTab}`];
-           this.$parent.currentAbility = this.components[`user-tab-${activeSecondTab}`];
-           break;
+          this.$parent.key = this.components[`user-tab-${activeSecondTab}`];
+          this.$parent.currentAbility = this.components[
+            `user-tab-${activeSecondTab}`
+          ];
+          break;
         case "statistics-tab":
-           
           break;
         case "help-tab":
-          
           break;
         case "settings-tab":
-          
           break;
         default:
-           this.activeTab = "user-tab";
-           this.activeSecondTab = 1;
-           this.$parent.key = this.components[`user-tab-${activeSecondTab}`];
-           this.$parent.currentAbility = this.components[`user-tab-${activeSecondTab}`];
+          this.activeTab = "user-tab";
+          this.activeSecondTab = 1;
+          this.$parent.key = this.components[`user-tab-${activeSecondTab}`];
+          this.$parent.currentAbility = this.components[
+            `user-tab-${activeSecondTab}`
+          ];
       }
 
-      alert(activeSecondTab);
+      // alert(activeSecondTab);
     },
   },
 };

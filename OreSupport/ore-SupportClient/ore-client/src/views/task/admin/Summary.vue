@@ -1,6 +1,5 @@
 <template>
   <div class="dashboard-editor-container">
-   
     <el-row style="background:#fff;padding:16px 16px 0;margin-bottom:32px;">
       <line-chart :chart-data="lineChartData" />
     </el-row>
@@ -22,7 +21,7 @@
         </div>
       </el-col>
     </el-row>
-     <el-row :gutter="32">
+    <el-row :gutter="32">
       <el-col
         :xs="{ span: 24 }"
         :sm="{ span: 24 }"
@@ -31,7 +30,7 @@
         :xl="{ span: 12 }"
         style="padding-right:8px;margin-bottom:30px;"
       >
-          <transaction-table />
+        <transaction-table />
       </el-col>
       <el-col
         :xs="{ span: 24 }"
@@ -41,7 +40,7 @@
         :xl="{ span: 6 }"
         style="margin-bottom:30px;"
       >
-          <Comment />
+        <Comment />
       </el-col>
       <el-col
         :xs="{ span: 24 }"
@@ -98,7 +97,10 @@ export default {
     BarChart,
     TransactionTable,
     BoxCard,
-    Comment
+    Comment,
+  },
+  created() {
+    this.$router.push(`${this.$route.path}`);
   },
   data() {
     return {
