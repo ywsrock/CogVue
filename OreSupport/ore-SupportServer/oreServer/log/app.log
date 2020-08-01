@@ -2044,6 +2044,7 @@
 [2020-07-23T03:03:53.411] [INFO] users - Third Party by Facebook
 [2020-07-23T03:03:53.621] [INFO] users - profileInfo userID: 2588234901506497
 [2020-07-23T03:08:16.035] [INFO] users - profileInfo userID: 2588234901506497
+<<<<<<< Updated upstream
 [2020-07-26T19:37:44.439] [INFO] startup - Listening on port 3000
 [2020-07-26T19:43:53.925] [INFO] users - ユーザログ UserName:1@1.com
 [2020-07-26T19:43:53.926] [INFO] userDao - START getUserInfoByUserName: {"username":"1@1.com"}
@@ -2053,3 +2054,26 @@
 [2020-07-26T19:43:54.076] [INFO] userDao - START getUserProfileByUserID : {"key":"UserID","val":49}
 [2020-07-26T19:43:54.091] [INFO] userDao - END getUserProfileByUserID
 [2020-07-26T19:43:54.092] [INFO] users - profileInfo success
+=======
+[2020-07-31T22:32:20.813] [INFO] startup - Listening on port 3000
+[2020-07-31T22:56:23.943] [INFO] users - ユーザログ UserName:1@1.com
+[2020-07-31T22:56:23.943] [INFO] userDao - START getUserInfoByUserName: {"username":"1@1.com"}
+[2020-07-31T22:56:23.969] [INFO] userDao - END getUserInfoByUserName
+[2020-07-31T22:56:24.095] [INFO] users - login success UserID: 49
+[2020-07-31T22:56:24.118] [INFO] users - profileInfo userID: 49
+[2020-07-31T22:56:24.119] [INFO] userDao - START getUserProfileByUserID : {"key":"UserID","val":49}
+[2020-07-31T22:56:24.133] [INFO] userDao - END getUserProfileByUserID
+[2020-07-31T22:56:24.134] [INFO] users - profileInfo success
+[2020-07-31T22:57:53.592] [INFO] users - profileInfo userID: 49
+[2020-07-31T22:57:53.592] [INFO] userDao - START getUserProfileByUserID : {"key":"UserID","val":49}
+[2020-07-31T22:57:53.615] [INFO] userDao - END getUserProfileByUserID
+[2020-07-31T22:57:53.616] [INFO] users - profileInfo success
+[2020-07-31T23:32:48.191] [INFO] users - profileInfo userID: 49
+[2020-07-31T23:32:48.191] [INFO] userDao - START getUserProfileByUserID : {"key":"UserID","val":49}
+[2020-07-31T23:32:48.219] [INFO] userDao - END getUserProfileByUserID
+[2020-07-31T23:32:48.219] [INFO] users - profileInfo success
+[2020-07-31T23:33:03.692] [INFO] users - profileInfo userID: 49
+[2020-07-31T23:33:03.692] [INFO] userDao - START getUserProfileByUserID : {"key":"UserID","val":49}
+[2020-07-31T23:33:03.705] [INFO] userDao - END getUserProfileByUserID
+[2020-07-31T23:33:03.705] [INFO] users - profileInfo success
+>>>>>>> Stashed changes

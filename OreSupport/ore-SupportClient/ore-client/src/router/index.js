@@ -6,10 +6,35 @@ import taskRouter from "./task/taskRouter";
 // import login from "@/views/login/index.vue";
 import top from "@/views/user/UserInfo.vue";
 import Layout from "@/layout/index.vue";
+import blog_top from "@/views/blog/blog_top.vue"
 
 Vue.use(VueRouter);
 
 const routes = [
+
+
+  {
+    path: "/",
+    components: {
+      default: Layout,
+    },
+    redirect: "/blog_top",
+    children: [
+      {
+        path: "blog_top",
+        component: blog_top ,
+      },
+    ],
+  },
+
+
+  {
+     path: "/",
+    components: {
+      default: Layout,
+    },
+
+  },
   {
     path: "/",
     components: {
