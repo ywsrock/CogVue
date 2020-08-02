@@ -2106,3 +2106,24 @@
 [2020-08-02T20:09:33.667] [INFO] userDao - START getUserProfileByUserID : {"key":"UserID","val":49}
 [2020-08-02T20:09:33.688] [INFO] userDao - END getUserProfileByUserID
 [2020-08-02T20:09:33.688] [INFO] users - profileInfo success
+[2020-08-02T21:16:08.215] [INFO] startup - Listening on port 3000
+[2020-08-02T21:16:21.259] [INFO] users - profileInfo userID: 49
+[2020-08-02T21:20:12.823] [INFO] users - profileInfo userID: 49
+[2020-08-02T21:22:52.261] [INFO] users - profileInfo userID: 49
+[2020-08-02T21:26:00.241] [INFO] users - profileInfo userID: 49
+[2020-08-02T21:26:28.191] [INFO] users - profileInfo userID: 49
+[2020-08-02T21:27:21.890] [INFO] users - profileInfo userID: 49
+[2020-08-02T21:27:53.454] [INFO] users - profileInfo userID: 49
+[2020-08-02T21:41:36.296] [INFO] users - profileInfo userID: 49
+[2020-08-02T21:43:42.616] [INFO] users - profileInfo userID: 49
+[2020-08-02T21:49:18.242] [INFO] users - profileInfo userID: 49
+[2020-08-02T21:53:09.744] [INFO] users - profileInfo userID: 49
+[2020-08-02T21:55:56.744] [INFO] users - profileInfo userID: 49
+[2020-08-02T21:59:50.919] [INFO] startup - Listening on port 3000
+[2020-08-02T22:00:04.153] [INFO] users - profileInfo userID: 49
+[2020-08-02T22:00:58.423] [INFO] users - profileInfo userID: 49
+[2020-08-02T22:04:21.899] [INFO] users - profileInfo userID: 49
+[2020-08-02T22:06:39.975] [INFO] users - profileInfo userID: 49
+[2020-08-02T22:07:23.066] [INFO] startup - Listening on port 3000
+[2020-08-02T22:07:33.851] [INFO] users - profileInfo userID: 49
+[2020-08-02T22:08:55.931] [INFO] users - profileInfo userID: 49
