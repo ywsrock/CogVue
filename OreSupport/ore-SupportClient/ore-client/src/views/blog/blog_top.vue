@@ -498,7 +498,7 @@ export default {
 </style>
 
 <style>
- @import "http://fonts.googleapis.com/css?family=Nunito:300,400,700" ;
+@import "https://fonts.googleapis.com/css?family=Nunito:300,400,700" ;
  @import "../../assets/libraries/font-awesome/css/font-awesome.min.css" ;
  @import "../../assets/libraries/owl.carousel/assets/owl.carousel.css" ;
  @import "../../assets/libraries/colorbox/example1/colorbox.css" ;
