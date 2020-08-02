@@ -2077,3 +2077,32 @@
 [2020-07-31T23:33:03.705] [INFO] userDao - END getUserProfileByUserID
 [2020-07-31T23:33:03.705] [INFO] users - profileInfo success
 >>>>>>> Stashed changes
+[2020-08-02T20:07:58.169] [INFO] startup - Listening on port 3000
+[2020-08-02T20:08:51.853] [INFO] users - ユーザログ UserName:1@1.com
+[2020-08-02T20:08:51.853] [INFO] userDao - START getUserInfoByUserName: {"username":"1@1.com"}
+[2020-08-02T20:08:51.896] [INFO] userDao - END getUserInfoByUserName
+[2020-08-02T20:08:52.009] [INFO] users - login success UserID: 49
+[2020-08-02T20:08:52.025] [INFO] users - profileInfo userID: 49
+[2020-08-02T20:08:52.026] [INFO] userDao - START getUserProfileByUserID : {"key":"UserID","val":49}
+[2020-08-02T20:08:52.052] [ERROR] userDao - getUserProfileByUserID error:SequelizeDatabaseError: Unknown column 'UserProfile.sns_facebook' in 'field list'
+    at Query.formatError (/Users/teroron/Desktop/PBL/PBL2020/OreSupport/ore-SupportServer/oreServer/node_modules/sequelize/lib/dialects/mysql/query.js:244:16)
+    at Query.handler [as onResult] (/Users/teroron/Desktop/PBL/PBL2020/OreSupport/ore-SupportServer/oreServer/node_modules/sequelize/lib/dialects/mysql/query.js:51:23)
+    at Query.execute (/Users/teroron/Desktop/PBL/PBL2020/OreSupport/ore-SupportServer/oreServer/node_modules/mysql2/lib/commands/command.js:30:14)
+    at Connection.handlePacket (/Users/teroron/Desktop/PBL/PBL2020/OreSupport/ore-SupportServer/oreServer/node_modules/mysql2/lib/connection.js:417:32)
+    at PacketParser.onPacket (/Users/teroron/Desktop/PBL/PBL2020/OreSupport/ore-SupportServer/oreServer/node_modules/mysql2/lib/connection.js:75:12)
+    at PacketParser.executeStart (/Users/teroron/Desktop/PBL/PBL2020/OreSupport/ore-SupportServer/oreServer/node_modules/mysql2/lib/packet_parser.js:75:16)
+    at Socket.<anonymous> (/Users/teroron/Desktop/PBL/PBL2020/OreSupport/ore-SupportServer/oreServer/node_modules/mysql2/lib/connection.js:82:25)
+    at Socket.emit (events.js:311:20)
+    at addChunk (_stream_readable.js:294:12)
+    at readableAddChunk (_stream_readable.js:275:11)
+    at Socket.Readable.push (_stream_readable.js:209:10)
+    at TCP.onStreamRead (internal/stream_base_commons.js:186:23)
+[2020-08-02T20:09:28.463] [INFO] startup - Listening on port 3000
+[2020-08-02T20:09:33.548] [INFO] users - ユーザログ UserName:1@1.com
+[2020-08-02T20:09:33.548] [INFO] userDao - START getUserInfoByUserName: {"username":"1@1.com"}
+[2020-08-02T20:09:33.557] [INFO] userDao - END getUserInfoByUserName
+[2020-08-02T20:09:33.652] [INFO] users - login success UserID: 49
+[2020-08-02T20:09:33.667] [INFO] users - profileInfo userID: 49
+[2020-08-02T20:09:33.667] [INFO] userDao - START getUserProfileByUserID : {"key":"UserID","val":49}
+[2020-08-02T20:09:33.688] [INFO] userDao - END getUserProfileByUserID
+[2020-08-02T20:09:33.688] [INFO] users - profileInfo success
