@@ -26,17 +26,17 @@
           >
             <div>
               <h4 style="margin-top:20px;text-align: center">
-                <strong>注意力は情報の選択的処理機能</strong>
+                <strong>{{ content.title }}</strong>
               </h4>
               <p
                 style="margin:12px;font-size: 14px;font-family: 'Nunito'; word-wrap: break-word;text-indent: 1em;"
               >
-                注意はその定義が非常に難儀であるが、多くの情報の中から情報を選択する心的機能であり、脳の限られた処理資源を有効に活用するために、不要な情報には処理資源を割り当てず、必要な情報だけを優先的に処理するといった資源の最適化を行う情報の選択的処理機能であると考えられています。
+                {{ content.content }}
               </p>
               <p
                 style="margin:12px;font-size: 14px;font-family: 'Nunito'; word-wrap: break-word;text-indent: 1em;"
               >
-                膨大な量の感覚情報が大脳に届きますが、脳の情報処理量には限界があるので、そのうちの一部分の感覚情報だけを取捨選択して、いわば焦点を当てて情報処理しています。この特定の対象に意識を向ける働き「大切なことに意識を集中する働き」が注意機能の役割です。
+                {{ content.other }}
               </p>
             </div>
           </el-carousel-item>
@@ -63,13 +63,28 @@ export default {
       return statusMap[status];
     },
   },
+  mounted() {
+    this.$nextTick(() => {
+      this.$http.get("/api/personal/CogEvo/comment").then(
+        (res) => {
+          this.content = res.data.commentChartData.content;
+          this.value = res.data.commentChartData.value;
+          this.initChart();
+        },
+        (error) => {
+          console.log(error);
+        }
+      );
+    });
+  },
   data() {
     return {
       statisticsData: {
         article_count: 1024,
         pageviews_count: 1024,
       },
-      value: 3.7,
+      value: 0,
+      content: {},
     };
   },
   computed: {

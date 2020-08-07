@@ -65,29 +65,6 @@ import TransactionTable from "./components/TransactionTable";
 import BoxCard from "./components/BoxCard";
 import Comment from "./components/Comment";
 
-const lineChartData = {
-  newVisitis: {
-    week: [100, 120, 161, 134, 105, 160, 165],
-    month: [120, 82, 91, 154, 162, 140, 145],
-    year: [10, 812, 51, 514, 62, 40, 45],
-  },
-  messages: {
-    week: [200, 192, 120, 144, 160, 130, 140],
-    month: [180, 160, 151, 106, 145, 150, 130],
-    year: [10, 812, 51, 514, 62, 40, 45],
-  },
-  purchases: {
-    week: [80, 100, 121, 104, 105, 90, 100],
-    month: [120, 90, 100, 138, 142, 130, 130],
-    year: [10, 812, 51, 514, 62, 40, 45],
-  },
-  shoppings: {
-    week: [130, 140, 141, 142, 145, 150, 160],
-    month: [120, 82, 91, 154, 162, 140, 130],
-    year: [10, 812, 51, 514, 62, 40, 45],
-  },
-};
-
 export default {
   name: "Summary",
   components: {
@@ -100,18 +77,32 @@ export default {
     Comment,
   },
   created() {
-    this.$router.push(`${this.$route.path}`);
+    // this.$router.push(`${this.$route.path}`);
+  },
+
+  mounted() {
+    this.$http.get("/api/personal/CogEvo/summary").then(
+      (res) => {
+        this.lineChartData = res.data.lineChartData.newVisitis;
+      },
+      (error) => {
+        console.log(error);
+      }
+    );
+  },
+  watch: {
+    $route: function(to, from) {
+      if (to.path !== from.path) {
+        this.$router.push(`${this.$route.path}`);
+      }
+    },
   },
   data() {
     return {
-      lineChartData: lineChartData.newVisitis,
+      lineChartData: {},
     };
   },
-  methods: {
-    handleSetLineChartData(type) {
-      this.lineChartData = lineChartData[type];
-    },
-  },
+  methods: {},
 };
 </script>
 

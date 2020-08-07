@@ -24,13 +24,13 @@
 </template>
 
 <script>
-import tab from "./tab/index";
+// import tab from "./tab/index";
 import KeyboardChart from "./components/Keyboard";
 export default {
   name: "OrientationAbility",
   components: {
     KeyboardChart,
-    tab,
+    // tab,
   },
   created() {
     this.$router.push(`${this.$route.path}`);
