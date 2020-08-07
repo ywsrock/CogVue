@@ -2185,3 +2185,20 @@
 [2020-08-02T23:18:39.386] [INFO] userDao - START getUserProfileByUserID : {"key":"UserID","val":49}
 [2020-08-02T23:18:39.447] [INFO] userDao - END getUserProfileByUserID
 [2020-08-02T23:18:39.447] [INFO] users - profileInfo success
+[2020-08-07T23:04:47.106] [INFO] startup - Listening on port 3000
+[2020-08-07T23:05:37.432] [INFO] users - ユーザログ UserName:1@1.com
+[2020-08-07T23:05:37.433] [INFO] userDao - START getUserInfoByUserName: {"username":"1@1.com"}
+[2020-08-07T23:05:37.455] [INFO] userDao - END getUserInfoByUserName
+[2020-08-07T23:05:37.579] [INFO] users - login success UserID: 49
+[2020-08-07T23:05:37.596] [INFO] users - profileInfo userID: 49
+[2020-08-07T23:05:37.597] [INFO] userDao - START getUserProfileByUserID : {"key":"UserID","val":49}
+[2020-08-07T23:05:37.623] [INFO] userDao - END getUserProfileByUserID
+[2020-08-07T23:05:37.624] [INFO] users - profileInfo success
+[2020-08-07T23:05:48.511] [INFO] users - profileInfo userID: 49
+[2020-08-07T23:05:48.511] [INFO] userDao - START getUserProfileByUserID : {"key":"UserID","val":49}
+[2020-08-07T23:05:48.517] [INFO] userDao - END getUserProfileByUserID
+[2020-08-07T23:05:48.517] [INFO] users - profileInfo success
+[2020-08-07T23:05:53.952] [INFO] users - profileInfo userID: 49
+[2020-08-07T23:05:53.953] [INFO] userDao - START getUserProfileByUserID : {"key":"UserID","val":49}
+[2020-08-07T23:05:53.958] [INFO] userDao - END getUserProfileByUserID
+[2020-08-07T23:05:53.959] [INFO] users - profileInfo success
