@@ -14,4 +14,4 @@
         "program": "${workspaceRoot}/OreSupport/ore-SupportServer/oreServer/bin/www"
       }
     ]
-  } 
+  }

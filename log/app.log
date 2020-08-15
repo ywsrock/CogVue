@@ -58,18 +58,18 @@
 [2020-10-03T17:14:13.129] [INFO] startup - Listening on port 3000
 [2020-10-03T17:14:20.655] [INFO] users - profileInfo userID: 49
 [2020-10-04T20:15:24.018] [INFO] startup - Listening on port 3000
-[2020-10-04T20:15:31.641] [INFO] users - profileInfo userID: 49 
+[2020-10-04T20:15:31.641] [INFO] users - profileInfo userID: 49
 [2020-10-04T20:15:31.642] [INFO] userDao - START getUserProfileByUserID : {"key":"UserID","val":49}
 [2020-10-04T20:15:32.474] [INFO] userDao - END getUserProfileByUserID
 [2020-10-04T20:15:32.475] [INFO] users - profileInfo success
 [2020-10-04T20:15:43.265] [INFO] userDao - START getUserProfileByUserID : {}
 [2020-10-04T20:19:33.826] [INFO] startup - Listening on port 3000
-[2020-10-04T20:19:44.503] [INFO] users - profileInfo userID: 49 
+[2020-10-04T20:19:44.503] [INFO] users - profileInfo userID: 49
 [2020-10-04T20:19:44.504] [INFO] userDao - START getUserProfileByUserID : {"key":"UserID","val":49}
 [2020-10-04T20:19:44.529] [INFO] userDao - END getUserProfileByUserID
 [2020-10-04T20:19:44.530] [INFO] users - profileInfo success
 [2020-10-04T20:24:05.924] [INFO] startup - Listening on port 3000
-[2020-10-04T20:24:09.054] [INFO] users - profileInfo userID: 49 
+[2020-10-04T20:24:09.054] [INFO] users - profileInfo userID: 49
 [2020-10-04T20:24:09.055] [INFO] userDao - START getUserProfileByUserID : {"key":"UserID","val":49}
 [2020-10-04T20:24:09.076] [INFO] userDao - END getUserProfileByUserID
 [2020-10-04T20:24:09.076] [INFO] users - profileInfo success
@@ -98,65 +98,65 @@
     at _drainQueueStep (/Users/teroron/Desktop/PBL/PBL2020/OreSupport/ore-SupportServer/oreServer/node_modules/bluebird/js/release/async.js:93:12)
     at _drainQueue (/Users/teroron/Desktop/PBL/PBL2020/OreSupport/ore-SupportServer/oreServer/node_modules/bluebird/js/release/async.js:86:9)
 [2020-10-04T20:28:47.860] [INFO] startup - Listening on port 3000
-[2020-10-04T20:28:50.748] [INFO] users - profileInfo userID: 49 
+[2020-10-04T20:28:50.748] [INFO] users - profileInfo userID: 49
 [2020-10-04T20:28:50.749] [INFO] userDao - START getUserProfileByUserID : {"key":"UserID","val":49}
 [2020-10-04T20:28:50.770] [INFO] userDao - END getUserProfileByUserID
 [2020-10-04T20:28:50.771] [INFO] users - profileInfo success
 [2020-10-04T20:29:09.702] [INFO] userDao - START getUserProfileByUserID : {"key":"userId","val":"49"}
 [2020-10-04T20:29:09.715] [INFO] userDao - END getUserProfileByUserID
-[2020-10-04T20:31:41.088] [INFO] users - profileInfo userID: 49 
+[2020-10-04T20:31:41.088] [INFO] users - profileInfo userID: 49
 [2020-10-04T20:31:41.088] [INFO] userDao - START getUserProfileByUserID : {"key":"UserID","val":49}
 [2020-10-04T20:31:41.129] [INFO] userDao - END getUserProfileByUserID
 [2020-10-04T20:31:41.129] [INFO] users - profileInfo success
 [2020-10-04T20:31:43.783] [INFO] userDao - START getUserProfileByUserID : {"key":"userId","val":"49"}
 [2020-10-04T20:31:43.792] [INFO] userDao - END getUserProfileByUserID
 [2020-10-25T17:31:27.087] [INFO] startup - Listening on port 3000
-[2020-10-25T17:32:02.591] [INFO] users - profileInfo userID: 49 
+[2020-10-25T17:32:02.591] [INFO] users - profileInfo userID: 49
 [2020-10-25T17:32:02.592] [INFO] userDao - START getUserProfileByUserID : {"key":"UserID","val":49}
 [2020-10-25T17:32:08.560] [INFO] userDao - END getUserProfileByUserID
 [2020-10-25T17:32:08.561] [INFO] users - profileInfo success
 [2020-10-25T17:34:17.996] [INFO] startup - Listening on port 3000
-[2020-10-25T17:34:25.684] [INFO] users - profileInfo userID: 49 
+[2020-10-25T17:34:25.684] [INFO] users - profileInfo userID: 49
 [2020-10-25T17:34:25.685] [INFO] userDao - START getUserProfileByUserID : {"key":"UserID","val":49}
 [2020-10-25T17:34:25.708] [INFO] userDao - END getUserProfileByUserID
 [2020-10-25T17:34:25.709] [INFO] users - profileInfo success
 [2020-10-25T17:36:43.589] [INFO] startup - Listening on port 3000
-[2020-10-25T17:36:58.092] [INFO] users - profileInfo userID: 49 
+[2020-10-25T17:36:58.092] [INFO] users - profileInfo userID: 49
 [2020-10-25T17:36:58.093] [INFO] userDao - START getUserProfileByUserID : {"key":"UserID","val":49}
 [2020-10-25T17:36:58.122] [INFO] userDao - END getUserProfileByUserID
 [2020-10-25T17:36:58.123] [INFO] users - profileInfo success
 [2020-10-25T17:37:55.617] [INFO] userDao - START getUserProfileByUserID : {"key":"userId","val":"49"}
 [2020-10-25T17:37:55.631] [INFO] userDao - END getUserProfileByUserID
 [2020-10-25T17:39:43.344] [INFO] startup - Listening on port 3000
-[2020-10-25T17:39:51.050] [INFO] users - profileInfo userID: 49 
+[2020-10-25T17:39:51.050] [INFO] users - profileInfo userID: 49
 [2020-10-25T17:39:51.051] [INFO] userDao - START getUserProfileByUserID : {"key":"UserID","val":49}
 [2020-10-25T17:39:51.077] [INFO] userDao - END getUserProfileByUserID
 [2020-10-25T17:39:51.078] [INFO] users - profileInfo success
 [2020-10-25T17:40:18.929] [INFO] userDao - START getUserProfileByUserID : {"key":"userId","val":"49"}
 [2020-10-25T17:40:18.937] [INFO] userDao - END getUserProfileByUserID
 [2020-10-25T17:45:28.967] [INFO] startup - Listening on port 3000
-[2020-10-25T17:45:39.705] [INFO] users - profileInfo userID: 49 
+[2020-10-25T17:45:39.705] [INFO] users - profileInfo userID: 49
 [2020-10-25T17:45:39.707] [INFO] userDao - START getUserProfileByUserID : {"key":"UserID","val":49}
 [2020-10-25T17:45:39.743] [INFO] userDao - END getUserProfileByUserID
 [2020-10-25T17:45:39.744] [INFO] users - profileInfo success
 [2020-10-25T17:45:51.460] [INFO] userDao - START getUserProfileByUserID : {"key":"userId","val":"49"}
 [2020-10-25T17:45:51.471] [INFO] userDao - END getUserProfileByUserID
 [2020-10-25T17:47:12.455] [INFO] startup - Listening on port 3000
-[2020-10-25T17:47:32.349] [INFO] users - profileInfo userID: 49 
+[2020-10-25T17:47:32.349] [INFO] users - profileInfo userID: 49
 [2020-10-25T17:47:32.351] [INFO] userDao - START getUserProfileByUserID : {"key":"UserID","val":49}
 [2020-10-25T17:47:32.387] [INFO] userDao - END getUserProfileByUserID
 [2020-10-25T17:47:32.388] [INFO] users - profileInfo success
 [2020-10-25T17:47:40.056] [INFO] userDao - START getUserProfileByUserID : {"key":"userId","val":"49"}
 [2020-10-25T17:47:40.064] [INFO] userDao - END getUserProfileByUserID
 [2020-10-25T17:55:03.730] [INFO] startup - Listening on port 3000
-[2020-10-25T17:55:17.482] [INFO] users - profileInfo userID: 49 
+[2020-10-25T17:55:17.482] [INFO] users - profileInfo userID: 49
 [2020-10-25T17:55:17.483] [INFO] userDao - START getUserProfileByUserID : {"key":"UserID","val":49}
 [2020-10-25T17:55:17.522] [INFO] userDao - END getUserProfileByUserID
 [2020-10-25T17:55:17.523] [INFO] users - profileInfo success
 [2020-10-25T17:57:38.641] [INFO] userDao - START getUserProfileByUserID : {"key":"userId","val":"49"}
 [2020-10-25T17:57:44.844] [INFO] userDao - END getUserProfileByUserID
 [2020-10-25T18:01:41.283] [INFO] startup - Listening on port 3000
-[2020-10-25T18:01:47.990] [INFO] users - profileInfo userID: 49 
+[2020-10-25T18:01:47.990] [INFO] users - profileInfo userID: 49
 [2020-10-25T18:01:47.991] [INFO] userDao - START getUserProfileByUserID : {"key":"UserID","val":49}
 [2020-10-25T18:01:48.010] [INFO] userDao - END getUserProfileByUserID
 [2020-10-25T18:01:48.010] [INFO] users - profileInfo success
