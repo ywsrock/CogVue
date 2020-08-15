@@ -2044,6 +2044,150 @@
 [2020-07-23T03:03:53.411] [INFO] users - Third Party by Facebook
 [2020-07-23T03:03:53.621] [INFO] users - profileInfo userID: 2588234901506497
 [2020-07-23T03:08:16.035] [INFO] users - profileInfo userID: 2588234901506497
+<<<<<<< HEAD
 [2020-08-15T15:19:04.197] [INFO] startup - Listening on port 3000
 [2020-08-15T15:25:35.147] [INFO] startup - Listening on port 3000
 [2020-08-15T15:26:29.860] [INFO] users - profileInfo userID: 165
+=======
+<<<<<<< Updated upstream
+[2020-07-26T19:37:44.439] [INFO] startup - Listening on port 3000
+[2020-07-26T19:43:53.925] [INFO] users - ユーザログ UserName:1@1.com
+[2020-07-26T19:43:53.926] [INFO] userDao - START getUserInfoByUserName: {"username":"1@1.com"}
+[2020-07-26T19:43:53.942] [INFO] userDao - END getUserInfoByUserName
+[2020-07-26T19:43:54.056] [INFO] users - login success UserID: 49
+[2020-07-26T19:43:54.075] [INFO] users - profileInfo userID: 49
+[2020-07-26T19:43:54.076] [INFO] userDao - START getUserProfileByUserID : {"key":"UserID","val":49}
+[2020-07-26T19:43:54.091] [INFO] userDao - END getUserProfileByUserID
+[2020-07-26T19:43:54.092] [INFO] users - profileInfo success
+=======
+[2020-07-31T22:32:20.813] [INFO] startup - Listening on port 3000
+[2020-07-31T22:56:23.943] [INFO] users - ユーザログ UserName:1@1.com
+[2020-07-31T22:56:23.943] [INFO] userDao - START getUserInfoByUserName: {"username":"1@1.com"}
+[2020-07-31T22:56:23.969] [INFO] userDao - END getUserInfoByUserName
+[2020-07-31T22:56:24.095] [INFO] users - login success UserID: 49
+[2020-07-31T22:56:24.118] [INFO] users - profileInfo userID: 49
+[2020-07-31T22:56:24.119] [INFO] userDao - START getUserProfileByUserID : {"key":"UserID","val":49}
+[2020-07-31T22:56:24.133] [INFO] userDao - END getUserProfileByUserID
+[2020-07-31T22:56:24.134] [INFO] users - profileInfo success
+[2020-07-31T22:57:53.592] [INFO] users - profileInfo userID: 49
+[2020-07-31T22:57:53.592] [INFO] userDao - START getUserProfileByUserID : {"key":"UserID","val":49}
+[2020-07-31T22:57:53.615] [INFO] userDao - END getUserProfileByUserID
+[2020-07-31T22:57:53.616] [INFO] users - profileInfo success
+[2020-07-31T23:32:48.191] [INFO] users - profileInfo userID: 49
+[2020-07-31T23:32:48.191] [INFO] userDao - START getUserProfileByUserID : {"key":"UserID","val":49}
+[2020-07-31T23:32:48.219] [INFO] userDao - END getUserProfileByUserID
+[2020-07-31T23:32:48.219] [INFO] users - profileInfo success
+[2020-07-31T23:33:03.692] [INFO] users - profileInfo userID: 49
+[2020-07-31T23:33:03.692] [INFO] userDao - START getUserProfileByUserID : {"key":"UserID","val":49}
+[2020-07-31T23:33:03.705] [INFO] userDao - END getUserProfileByUserID
+[2020-07-31T23:33:03.705] [INFO] users - profileInfo success
+>>>>>>> Stashed changes
+[2020-08-02T20:07:58.169] [INFO] startup - Listening on port 3000
+[2020-08-02T20:08:51.853] [INFO] users - ユーザログ UserName:1@1.com
+[2020-08-02T20:08:51.853] [INFO] userDao - START getUserInfoByUserName: {"username":"1@1.com"}
+[2020-08-02T20:08:51.896] [INFO] userDao - END getUserInfoByUserName
+[2020-08-02T20:08:52.009] [INFO] users - login success UserID: 49
+[2020-08-02T20:08:52.025] [INFO] users - profileInfo userID: 49
+[2020-08-02T20:08:52.026] [INFO] userDao - START getUserProfileByUserID : {"key":"UserID","val":49}
+[2020-08-02T20:08:52.052] [ERROR] userDao - getUserProfileByUserID error:SequelizeDatabaseError: Unknown column 'UserProfile.sns_facebook' in 'field list'
+    at Query.formatError (/Users/teroron/Desktop/PBL/PBL2020/OreSupport/ore-SupportServer/oreServer/node_modules/sequelize/lib/dialects/mysql/query.js:244:16)
+    at Query.handler [as onResult] (/Users/teroron/Desktop/PBL/PBL2020/OreSupport/ore-SupportServer/oreServer/node_modules/sequelize/lib/dialects/mysql/query.js:51:23)
+    at Query.execute (/Users/teroron/Desktop/PBL/PBL2020/OreSupport/ore-SupportServer/oreServer/node_modules/mysql2/lib/commands/command.js:30:14)
+    at Connection.handlePacket (/Users/teroron/Desktop/PBL/PBL2020/OreSupport/ore-SupportServer/oreServer/node_modules/mysql2/lib/connection.js:417:32)
+    at PacketParser.onPacket (/Users/teroron/Desktop/PBL/PBL2020/OreSupport/ore-SupportServer/oreServer/node_modules/mysql2/lib/connection.js:75:12)
+    at PacketParser.executeStart (/Users/teroron/Desktop/PBL/PBL2020/OreSupport/ore-SupportServer/oreServer/node_modules/mysql2/lib/packet_parser.js:75:16)
+    at Socket.<anonymous> (/Users/teroron/Desktop/PBL/PBL2020/OreSupport/ore-SupportServer/oreServer/node_modules/mysql2/lib/connection.js:82:25)
+    at Socket.emit (events.js:311:20)
+    at addChunk (_stream_readable.js:294:12)
+    at readableAddChunk (_stream_readable.js:275:11)
+    at Socket.Readable.push (_stream_readable.js:209:10)
+    at TCP.onStreamRead (internal/stream_base_commons.js:186:23)
+[2020-08-02T20:09:28.463] [INFO] startup - Listening on port 3000
+[2020-08-02T20:09:33.548] [INFO] users - ユーザログ UserName:1@1.com
+[2020-08-02T20:09:33.548] [INFO] userDao - START getUserInfoByUserName: {"username":"1@1.com"}
+[2020-08-02T20:09:33.557] [INFO] userDao - END getUserInfoByUserName
+[2020-08-02T20:09:33.652] [INFO] users - login success UserID: 49
+[2020-08-02T20:09:33.667] [INFO] users - profileInfo userID: 49
+[2020-08-02T20:09:33.667] [INFO] userDao - START getUserProfileByUserID : {"key":"UserID","val":49}
+[2020-08-02T20:09:33.688] [INFO] userDao - END getUserProfileByUserID
+[2020-08-02T20:09:33.688] [INFO] users - profileInfo success
+[2020-08-02T21:16:08.215] [INFO] startup - Listening on port 3000
+[2020-08-02T21:16:21.259] [INFO] users - profileInfo userID: 49
+[2020-08-02T21:20:12.823] [INFO] users - profileInfo userID: 49
+[2020-08-02T21:22:52.261] [INFO] users - profileInfo userID: 49
+[2020-08-02T21:26:00.241] [INFO] users - profileInfo userID: 49
+[2020-08-02T21:26:28.191] [INFO] users - profileInfo userID: 49
+[2020-08-02T21:27:21.890] [INFO] users - profileInfo userID: 49
+[2020-08-02T21:27:53.454] [INFO] users - profileInfo userID: 49
+[2020-08-02T21:41:36.296] [INFO] users - profileInfo userID: 49
+[2020-08-02T21:43:42.616] [INFO] users - profileInfo userID: 49
+[2020-08-02T21:49:18.242] [INFO] users - profileInfo userID: 49
+[2020-08-02T21:53:09.744] [INFO] users - profileInfo userID: 49
+[2020-08-02T21:55:56.744] [INFO] users - profileInfo userID: 49
+[2020-08-02T21:59:50.919] [INFO] startup - Listening on port 3000
+[2020-08-02T22:00:04.153] [INFO] users - profileInfo userID: 49
+[2020-08-02T22:00:58.423] [INFO] users - profileInfo userID: 49
+[2020-08-02T22:04:21.899] [INFO] users - profileInfo userID: 49
+[2020-08-02T22:06:39.975] [INFO] users - profileInfo userID: 49
+[2020-08-02T22:07:23.066] [INFO] startup - Listening on port 3000
+[2020-08-02T22:07:33.851] [INFO] users - profileInfo userID: 49
+[2020-08-02T22:08:55.931] [INFO] users - profileInfo userID: 49
+[2020-08-02T22:22:03.799] [INFO] users - profileInfo userID: 49
+[2020-08-02T22:48:39.691] [INFO] users - profileInfo userID: 49
+[2020-08-02T22:50:07.364] [INFO] users - ユーザログ UserName:1@1.com
+[2020-08-02T22:50:07.364] [INFO] userDao - START getUserInfoByUserName: {"username":"1@1.com"}
+[2020-08-02T22:50:07.389] [INFO] userDao - END getUserInfoByUserName
+[2020-08-02T22:50:07.506] [INFO] users - login success UserID: 49
+[2020-08-02T22:50:24.647] [INFO] users - profileInfo userID: 49
+[2020-08-02T22:50:24.648] [INFO] userDao - START getUserProfileByUserID : {"key":"UserID","val":49}
+[2020-08-02T22:50:24.695] [INFO] userDao - END getUserProfileByUserID
+[2020-08-02T22:50:24.697] [INFO] users - profileInfo success
+[2020-08-02T22:50:49.578] [INFO] users - profileInfo userID: 49
+[2020-08-02T22:50:49.579] [INFO] userDao - START getUserProfileByUserID : {"key":"UserID","val":49}
+[2020-08-02T22:50:49.622] [INFO] userDao - END getUserProfileByUserID
+[2020-08-02T22:50:49.623] [INFO] users - profileInfo success
+[2020-08-02T22:58:48.445] [INFO] users - profileInfo userID: 49
+[2020-08-02T22:58:48.446] [INFO] userDao - START getUserProfileByUserID : {"key":"UserID","val":49}
+[2020-08-02T22:58:48.504] [INFO] userDao - END getUserProfileByUserID
+[2020-08-02T22:58:48.504] [INFO] users - profileInfo success
+[2020-08-02T22:59:13.184] [INFO] users - profileInfo userID: 49
+[2020-08-02T22:59:13.184] [INFO] userDao - START getUserProfileByUserID : {"key":"UserID","val":49}
+[2020-08-02T22:59:13.218] [INFO] userDao - END getUserProfileByUserID
+[2020-08-02T22:59:13.219] [INFO] users - profileInfo success
+[2020-08-02T22:59:37.782] [INFO] users - profileInfo userID: 49
+[2020-08-02T22:59:37.782] [INFO] userDao - START getUserProfileByUserID : {"key":"UserID","val":49}
+[2020-08-02T22:59:37.800] [INFO] userDao - END getUserProfileByUserID
+[2020-08-02T22:59:37.801] [INFO] users - profileInfo success
+[2020-08-02T23:04:24.579] [INFO] users - profileInfo userID: 49
+[2020-08-02T23:04:24.579] [INFO] userDao - START getUserProfileByUserID : {"key":"UserID","val":49}
+[2020-08-02T23:04:24.639] [INFO] userDao - END getUserProfileByUserID
+[2020-08-02T23:04:24.639] [INFO] users - profileInfo success
+[2020-08-02T23:05:02.586] [INFO] users - profileInfo userID: 49
+[2020-08-02T23:05:02.586] [INFO] userDao - START getUserProfileByUserID : {"key":"UserID","val":49}
+[2020-08-02T23:05:02.644] [INFO] userDao - END getUserProfileByUserID
+[2020-08-02T23:05:02.644] [INFO] users - profileInfo success
+[2020-08-02T23:05:39.948] [INFO] users - profileInfo userID: 49
+[2020-08-02T23:05:39.948] [INFO] userDao - START getUserProfileByUserID : {"key":"UserID","val":49}
+[2020-08-02T23:05:39.981] [INFO] userDao - END getUserProfileByUserID
+[2020-08-02T23:05:39.982] [INFO] users - profileInfo success
+[2020-08-02T23:07:07.981] [INFO] users - profileInfo userID: 49
+[2020-08-02T23:07:07.981] [INFO] userDao - START getUserProfileByUserID : {"key":"UserID","val":49}
+[2020-08-02T23:07:08.018] [INFO] userDao - END getUserProfileByUserID
+[2020-08-02T23:07:08.018] [INFO] users - profileInfo success
+[2020-08-02T23:13:48.996] [INFO] users - profileInfo userID: 49
+[2020-08-02T23:13:48.996] [INFO] userDao - START getUserProfileByUserID : {"key":"UserID","val":49}
+[2020-08-02T23:13:49.093] [INFO] userDao - END getUserProfileByUserID
+[2020-08-02T23:13:49.093] [INFO] users - profileInfo success
+[2020-08-02T23:16:28.845] [INFO] users - profileInfo userID: 49
+[2020-08-02T23:16:28.845] [INFO] userDao - START getUserProfileByUserID : {"key":"UserID","val":49}
+[2020-08-02T23:16:28.863] [INFO] userDao - END getUserProfileByUserID
+[2020-08-02T23:16:28.863] [INFO] users - profileInfo success
+[2020-08-02T23:18:09.628] [INFO] users - profileInfo userID: 49
+[2020-08-02T23:18:09.628] [INFO] userDao - START getUserProfileByUserID : {"key":"UserID","val":49}
+[2020-08-02T23:18:09.663] [INFO] userDao - END getUserProfileByUserID
+[2020-08-02T23:18:09.663] [INFO] users - profileInfo success
+[2020-08-02T23:18:39.386] [INFO] users - profileInfo userID: 49
+[2020-08-02T23:18:39.386] [INFO] userDao - START getUserProfileByUserID : {"key":"UserID","val":49}
+[2020-08-02T23:18:39.447] [INFO] userDao - END getUserProfileByUserID
+[2020-08-02T23:18:39.447] [INFO] users - profileInfo success
+>>>>>>> 8627a0ab935bcb06b2a0a9ab318233ab2e7ca7aa
