@@ -2300,3 +2300,4 @@
 [2020-08-08T06:43:13.232] [INFO] users - profileInfo userID: 49
 [2020-08-08T06:43:18.337] [INFO] users - profileInfo userID: 49
 [2020-08-08T06:44:02.328] [INFO] users - profileInfo userID: 49
+[2020-08-15T15:24:20.422] [INFO] startup - Listening on port 3000
