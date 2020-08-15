@@ -2044,3 +2044,6 @@
 [2020-07-23T03:03:53.411] [INFO] users - Third Party by Facebook
 [2020-07-23T03:03:53.621] [INFO] users - profileInfo userID: 2588234901506497
 [2020-07-23T03:08:16.035] [INFO] users - profileInfo userID: 2588234901506497
+[2020-08-15T15:19:04.197] [INFO] startup - Listening on port 3000
+[2020-08-15T15:25:35.147] [INFO] startup - Listening on port 3000
+[2020-08-15T15:26:29.860] [INFO] users - profileInfo userID: 165
