@@ -2,15 +2,15 @@
   <div class="container-fluid h-100">
     <div class="page-wrapper">
       <div class="main">
-        <DashboardHeader className="sidebar-container"/>
+        <DashboardHeader className="sidebar-container" />
         <div class="row h-100">
           <div class="col-sm-3" id="sidebar">
             <div class="navestylemenublock sticky-top">
-              <DashboardSideMenu />
+              <DashboardSideMenu ref="child" />
             </div>
           </div>
           <main class="col-sm-9 py-2" id="printable">
-            <component :is="currentRole" />
+            <component :is="currentAbility" :key="key" />
           </main>
         </div>
       </div>
@@ -20,20 +20,31 @@
 
 <script>
 // import { mapGetters } from "vuex";
-import adminDashboard from "./admin";
+import Summary from "./admin/Summary";
+import MemoryAbility from "./admin/MemoryAbility";
+import SpatialAbility from "./admin/SpatialAbility";
+import OrientationAbility from "./admin/OrientationAbility";
+import PlanAblity from "./admin/PlanAblity";
+import AttentionAbility from "./admin/AttentionAbility";
 import DashboardHeader from "./DashboardHeader";
 import DashboardSideMenu from "./DashboardSideMenu";
 
 export default {
   name: "Dashboard",
   components: {
-    adminDashboard,
+    Summary, // サマリー
+    MemoryAbility, // 記憶力
+    SpatialAbility, // 空間
+    OrientationAbility,
+    PlanAblity,
+    AttentionAbility,
     DashboardHeader,
     DashboardSideMenu,
   },
   data() {
     return {
-      currentRole: "adminDashboard",
+      currentAbility: "Summary",
+      key: "Summary",
       activeTab: "user-tab",
       activeSecondTab: 1,
       routeKey: this.$route.path,
@@ -46,7 +57,7 @@ export default {
   },
   // created() {
   //   if (!this.roles.includes('admin')) {
-  //     this.currentRole = 'editorDashboard'
+  //     this.currentAbility = 'editorDashboard'
   //   }
   // }
 };

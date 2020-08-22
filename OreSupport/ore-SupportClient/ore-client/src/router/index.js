@@ -5,7 +5,6 @@ import taskRouter from "./task/taskRouter";
 // import login from "@/views/login/index.vue";
 import top from "@/views/user/UserInfo.vue";
 import Layout from "@/layout/index.vue";
-import blogRouter from "./blog/blogRouter"
 import blog_top from "@/views/blog/blog_top.vue"
 import createBlog from "@/views/blog/blogCreate.vue"
 import blogList from "@/views/blog/blog_list.vue"
@@ -14,6 +13,7 @@ import blogDelete from "@/views/blog/blog_list.vue"
 import blogEdit from "@/views/blog/blog_edit.vue"
 Vue.use(VueRouter);
 const routes = [
+
   {
     path: "/",
     components: {
@@ -55,12 +55,6 @@ const routes = [
         component:createBlog
       },
     ],
-  },
-  blogRouter,
-  {
-  path:"/blogDelete",
-  name:"blogDelete",
-  component:blogDelete
   },
   {
   path:"/blogEdit",
