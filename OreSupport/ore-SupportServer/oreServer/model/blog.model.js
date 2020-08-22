@@ -1,5 +1,6 @@
 const Sequelize = require("sequelize");
 const {sequelize} = require('../common/db.common');
+const User = require("./user.model")
 
 // ユーザモデル バリデーションも入れられる
 const Blog = sequelize.define('Blog', {
@@ -13,7 +14,11 @@ id:{
 UserID: {
     type: Sequelize.STRING,
     allowNull: true,
-    comment: "ユーザID"
+    comment: "ユーザID",
+    references: {
+        model: User,
+        key: "UserID"
+      }
 },
 Title:{
     type: Sequelize.STRING,

@@ -2202,3 +2202,1439 @@
 [2020-08-07T23:05:53.953] [INFO] userDao - START getUserProfileByUserID : {"key":"UserID","val":49}
 [2020-08-07T23:05:53.958] [INFO] userDao - END getUserProfileByUserID
 [2020-08-07T23:05:53.959] [INFO] users - profileInfo success
+[2020-08-07T23:29:14.921] [INFO] startup - Listening on port 3000
+[2020-08-07T23:29:39.979] [INFO] users - profileInfo userID: 49
+[2020-08-07T23:29:45.765] [INFO] users - profileInfo userID: 49
+[2020-08-07T23:49:00.641] [INFO] users - profileInfo userID: 49
+[2020-08-07T23:53:59.129] [INFO] users - profileInfo userID: 49
+[2020-08-07T23:54:43.389] [INFO] users - profileInfo userID: 49
+[2020-08-08T00:05:43.962] [INFO] users - profileInfo userID: 49
+[2020-08-08T14:49:15.487] [ERROR] app - アクセスエラー TypeError: Cannot read property 'CODE_5008' of undefined
+    at /Users/teroron/Desktop/PBL/PBL2020/OreSupport/ore-SupportServer/oreServer/common/check.token.js:24:29
+    at Object.module.exports [as verify] (/Users/teroron/Desktop/PBL/PBL2020/OreSupport/ore-SupportServer/oreServer/node_modules/jsonwebtoken/verify.js:63:12)
+    at verifyUser (/Users/teroron/Desktop/PBL/PBL2020/OreSupport/ore-SupportServer/oreServer/common/check.token.js:20:12)
+    at Layer.handle [as handle_request] (/Users/teroron/Desktop/PBL/PBL2020/OreSupport/ore-SupportServer/oreServer/node_modules/express/lib/router/layer.js:95:5)
+    at next (/Users/teroron/Desktop/PBL/PBL2020/OreSupport/ore-SupportServer/oreServer/node_modules/express/lib/router/route.js:137:13)
+    at Route.dispatch (/Users/teroron/Desktop/PBL/PBL2020/OreSupport/ore-SupportServer/oreServer/node_modules/express/lib/router/route.js:112:3)
+    at Layer.handle [as handle_request] (/Users/teroron/Desktop/PBL/PBL2020/OreSupport/ore-SupportServer/oreServer/node_modules/express/lib/router/layer.js:95:5)
+    at /Users/teroron/Desktop/PBL/PBL2020/OreSupport/ore-SupportServer/oreServer/node_modules/express/lib/router/index.js:281:22
+    at Function.process_params (/Users/teroron/Desktop/PBL/PBL2020/OreSupport/ore-SupportServer/oreServer/node_modules/express/lib/router/index.js:335:12)
+    at next (/Users/teroron/Desktop/PBL/PBL2020/OreSupport/ore-SupportServer/oreServer/node_modules/express/lib/router/index.js:275:10)
+    at Function.handle (/Users/teroron/Desktop/PBL/PBL2020/OreSupport/ore-SupportServer/oreServer/node_modules/express/lib/router/index.js:174:3)
+    at router (/Users/teroron/Desktop/PBL/PBL2020/OreSupport/ore-SupportServer/oreServer/node_modules/express/lib/router/index.js:47:12)
+    at Layer.handle [as handle_request] (/Users/teroron/Desktop/PBL/PBL2020/OreSupport/ore-SupportServer/oreServer/node_modules/express/lib/router/layer.js:95:5)
+    at trim_prefix (/Users/teroron/Desktop/PBL/PBL2020/OreSupport/ore-SupportServer/oreServer/node_modules/express/lib/router/index.js:317:13)
+    at /Users/teroron/Desktop/PBL/PBL2020/OreSupport/ore-SupportServer/oreServer/node_modules/express/lib/router/index.js:284:7
+    at Function.process_params (/Users/teroron/Desktop/PBL/PBL2020/OreSupport/ore-SupportServer/oreServer/node_modules/express/lib/router/index.js:335:12)
+    at next (/Users/teroron/Desktop/PBL/PBL2020/OreSupport/ore-SupportServer/oreServer/node_modules/express/lib/router/index.js:275:10)
+    at /Users/teroron/Desktop/PBL/PBL2020/OreSupport/ore-SupportServer/oreServer/node_modules/express/lib/router/index.js:635:15
+    at next (/Users/teroron/Desktop/PBL/PBL2020/OreSupport/ore-SupportServer/oreServer/node_modules/express/lib/router/index.js:260:14)
+    at Function.handle (/Users/teroron/Desktop/PBL/PBL2020/OreSupport/ore-SupportServer/oreServer/node_modules/express/lib/router/index.js:174:3)
+    at router (/Users/teroron/Desktop/PBL/PBL2020/OreSupport/ore-SupportServer/oreServer/node_modules/express/lib/router/index.js:47:12)
+    at Layer.handle [as handle_request] (/Users/teroron/Desktop/PBL/PBL2020/OreSupport/ore-SupportServer/oreServer/node_modules/express/lib/router/layer.js:95:5)
+[2020-08-08T14:49:16.127] [ERROR] app - アクセスエラー TypeError: Cannot read property 'CODE_5008' of undefined
+    at /Users/teroron/Desktop/PBL/PBL2020/OreSupport/ore-SupportServer/oreServer/common/check.token.js:24:29
+    at Object.module.exports [as verify] (/Users/teroron/Desktop/PBL/PBL2020/OreSupport/ore-SupportServer/oreServer/node_modules/jsonwebtoken/verify.js:63:12)
+    at verifyUser (/Users/teroron/Desktop/PBL/PBL2020/OreSupport/ore-SupportServer/oreServer/common/check.token.js:20:12)
+    at Layer.handle [as handle_request] (/Users/teroron/Desktop/PBL/PBL2020/OreSupport/ore-SupportServer/oreServer/node_modules/express/lib/router/layer.js:95:5)
+    at next (/Users/teroron/Desktop/PBL/PBL2020/OreSupport/ore-SupportServer/oreServer/node_modules/express/lib/router/route.js:137:13)
+    at Route.dispatch (/Users/teroron/Desktop/PBL/PBL2020/OreSupport/ore-SupportServer/oreServer/node_modules/express/lib/router/route.js:112:3)
+    at Layer.handle [as handle_request] (/Users/teroron/Desktop/PBL/PBL2020/OreSupport/ore-SupportServer/oreServer/node_modules/express/lib/router/layer.js:95:5)
+    at /Users/teroron/Desktop/PBL/PBL2020/OreSupport/ore-SupportServer/oreServer/node_modules/express/lib/router/index.js:281:22
+    at Function.process_params (/Users/teroron/Desktop/PBL/PBL2020/OreSupport/ore-SupportServer/oreServer/node_modules/express/lib/router/index.js:335:12)
+    at next (/Users/teroron/Desktop/PBL/PBL2020/OreSupport/ore-SupportServer/oreServer/node_modules/express/lib/router/index.js:275:10)
+    at Function.handle (/Users/teroron/Desktop/PBL/PBL2020/OreSupport/ore-SupportServer/oreServer/node_modules/express/lib/router/index.js:174:3)
+    at router (/Users/teroron/Desktop/PBL/PBL2020/OreSupport/ore-SupportServer/oreServer/node_modules/express/lib/router/index.js:47:12)
+    at Layer.handle [as handle_request] (/Users/teroron/Desktop/PBL/PBL2020/OreSupport/ore-SupportServer/oreServer/node_modules/express/lib/router/layer.js:95:5)
+    at trim_prefix (/Users/teroron/Desktop/PBL/PBL2020/OreSupport/ore-SupportServer/oreServer/node_modules/express/lib/router/index.js:317:13)
+    at /Users/teroron/Desktop/PBL/PBL2020/OreSupport/ore-SupportServer/oreServer/node_modules/express/lib/router/index.js:284:7
+    at Function.process_params (/Users/teroron/Desktop/PBL/PBL2020/OreSupport/ore-SupportServer/oreServer/node_modules/express/lib/router/index.js:335:12)
+    at next (/Users/teroron/Desktop/PBL/PBL2020/OreSupport/ore-SupportServer/oreServer/node_modules/express/lib/router/index.js:275:10)
+    at /Users/teroron/Desktop/PBL/PBL2020/OreSupport/ore-SupportServer/oreServer/node_modules/express/lib/router/index.js:635:15
+    at next (/Users/teroron/Desktop/PBL/PBL2020/OreSupport/ore-SupportServer/oreServer/node_modules/express/lib/router/index.js:260:14)
+    at Function.handle (/Users/teroron/Desktop/PBL/PBL2020/OreSupport/ore-SupportServer/oreServer/node_modules/express/lib/router/index.js:174:3)
+    at router (/Users/teroron/Desktop/PBL/PBL2020/OreSupport/ore-SupportServer/oreServer/node_modules/express/lib/router/index.js:47:12)
+    at Layer.handle [as handle_request] (/Users/teroron/Desktop/PBL/PBL2020/OreSupport/ore-SupportServer/oreServer/node_modules/express/lib/router/layer.js:95:5)
+[2020-08-08T14:49:16.765] [ERROR] app - アクセスエラー TypeError: Cannot read property 'CODE_5008' of undefined
+    at /Users/teroron/Desktop/PBL/PBL2020/OreSupport/ore-SupportServer/oreServer/common/check.token.js:24:29
+    at Object.module.exports [as verify] (/Users/teroron/Desktop/PBL/PBL2020/OreSupport/ore-SupportServer/oreServer/node_modules/jsonwebtoken/verify.js:63:12)
+    at verifyUser (/Users/teroron/Desktop/PBL/PBL2020/OreSupport/ore-SupportServer/oreServer/common/check.token.js:20:12)
+    at Layer.handle [as handle_request] (/Users/teroron/Desktop/PBL/PBL2020/OreSupport/ore-SupportServer/oreServer/node_modules/express/lib/router/layer.js:95:5)
+    at next (/Users/teroron/Desktop/PBL/PBL2020/OreSupport/ore-SupportServer/oreServer/node_modules/express/lib/router/route.js:137:13)
+    at Route.dispatch (/Users/teroron/Desktop/PBL/PBL2020/OreSupport/ore-SupportServer/oreServer/node_modules/express/lib/router/route.js:112:3)
+    at Layer.handle [as handle_request] (/Users/teroron/Desktop/PBL/PBL2020/OreSupport/ore-SupportServer/oreServer/node_modules/express/lib/router/layer.js:95:5)
+    at /Users/teroron/Desktop/PBL/PBL2020/OreSupport/ore-SupportServer/oreServer/node_modules/express/lib/router/index.js:281:22
+    at Function.process_params (/Users/teroron/Desktop/PBL/PBL2020/OreSupport/ore-SupportServer/oreServer/node_modules/express/lib/router/index.js:335:12)
+    at next (/Users/teroron/Desktop/PBL/PBL2020/OreSupport/ore-SupportServer/oreServer/node_modules/express/lib/router/index.js:275:10)
+    at Function.handle (/Users/teroron/Desktop/PBL/PBL2020/OreSupport/ore-SupportServer/oreServer/node_modules/express/lib/router/index.js:174:3)
+    at router (/Users/teroron/Desktop/PBL/PBL2020/OreSupport/ore-SupportServer/oreServer/node_modules/express/lib/router/index.js:47:12)
+    at Layer.handle [as handle_request] (/Users/teroron/Desktop/PBL/PBL2020/OreSupport/ore-SupportServer/oreServer/node_modules/express/lib/router/layer.js:95:5)
+    at trim_prefix (/Users/teroron/Desktop/PBL/PBL2020/OreSupport/ore-SupportServer/oreServer/node_modules/express/lib/router/index.js:317:13)
+    at /Users/teroron/Desktop/PBL/PBL2020/OreSupport/ore-SupportServer/oreServer/node_modules/express/lib/router/index.js:284:7
+    at Function.process_params (/Users/teroron/Desktop/PBL/PBL2020/OreSupport/ore-SupportServer/oreServer/node_modules/express/lib/router/index.js:335:12)
+    at next (/Users/teroron/Desktop/PBL/PBL2020/OreSupport/ore-SupportServer/oreServer/node_modules/express/lib/router/index.js:275:10)
+    at /Users/teroron/Desktop/PBL/PBL2020/OreSupport/ore-SupportServer/oreServer/node_modules/express/lib/router/index.js:635:15
+    at next (/Users/teroron/Desktop/PBL/PBL2020/OreSupport/ore-SupportServer/oreServer/node_modules/express/lib/router/index.js:260:14)
+    at Function.handle (/Users/teroron/Desktop/PBL/PBL2020/OreSupport/ore-SupportServer/oreServer/node_modules/express/lib/router/index.js:174:3)
+    at router (/Users/teroron/Desktop/PBL/PBL2020/OreSupport/ore-SupportServer/oreServer/node_modules/express/lib/router/index.js:47:12)
+    at Layer.handle [as handle_request] (/Users/teroron/Desktop/PBL/PBL2020/OreSupport/ore-SupportServer/oreServer/node_modules/express/lib/router/layer.js:95:5)
+[2020-08-08T14:49:17.149] [ERROR] app - アクセスエラー TypeError: Cannot read property 'CODE_5008' of undefined
+    at /Users/teroron/Desktop/PBL/PBL2020/OreSupport/ore-SupportServer/oreServer/common/check.token.js:24:29
+    at Object.module.exports [as verify] (/Users/teroron/Desktop/PBL/PBL2020/OreSupport/ore-SupportServer/oreServer/node_modules/jsonwebtoken/verify.js:63:12)
+    at verifyUser (/Users/teroron/Desktop/PBL/PBL2020/OreSupport/ore-SupportServer/oreServer/common/check.token.js:20:12)
+    at Layer.handle [as handle_request] (/Users/teroron/Desktop/PBL/PBL2020/OreSupport/ore-SupportServer/oreServer/node_modules/express/lib/router/layer.js:95:5)
+    at next (/Users/teroron/Desktop/PBL/PBL2020/OreSupport/ore-SupportServer/oreServer/node_modules/express/lib/router/route.js:137:13)
+    at Route.dispatch (/Users/teroron/Desktop/PBL/PBL2020/OreSupport/ore-SupportServer/oreServer/node_modules/express/lib/router/route.js:112:3)
+    at Layer.handle [as handle_request] (/Users/teroron/Desktop/PBL/PBL2020/OreSupport/ore-SupportServer/oreServer/node_modules/express/lib/router/layer.js:95:5)
+    at /Users/teroron/Desktop/PBL/PBL2020/OreSupport/ore-SupportServer/oreServer/node_modules/express/lib/router/index.js:281:22
+    at Function.process_params (/Users/teroron/Desktop/PBL/PBL2020/OreSupport/ore-SupportServer/oreServer/node_modules/express/lib/router/index.js:335:12)
+    at next (/Users/teroron/Desktop/PBL/PBL2020/OreSupport/ore-SupportServer/oreServer/node_modules/express/lib/router/index.js:275:10)
+    at Function.handle (/Users/teroron/Desktop/PBL/PBL2020/OreSupport/ore-SupportServer/oreServer/node_modules/express/lib/router/index.js:174:3)
+    at router (/Users/teroron/Desktop/PBL/PBL2020/OreSupport/ore-SupportServer/oreServer/node_modules/express/lib/router/index.js:47:12)
+    at Layer.handle [as handle_request] (/Users/teroron/Desktop/PBL/PBL2020/OreSupport/ore-SupportServer/oreServer/node_modules/express/lib/router/layer.js:95:5)
+    at trim_prefix (/Users/teroron/Desktop/PBL/PBL2020/OreSupport/ore-SupportServer/oreServer/node_modules/express/lib/router/index.js:317:13)
+    at /Users/teroron/Desktop/PBL/PBL2020/OreSupport/ore-SupportServer/oreServer/node_modules/express/lib/router/index.js:284:7
+    at Function.process_params (/Users/teroron/Desktop/PBL/PBL2020/OreSupport/ore-SupportServer/oreServer/node_modules/express/lib/router/index.js:335:12)
+    at next (/Users/teroron/Desktop/PBL/PBL2020/OreSupport/ore-SupportServer/oreServer/node_modules/express/lib/router/index.js:275:10)
+    at /Users/teroron/Desktop/PBL/PBL2020/OreSupport/ore-SupportServer/oreServer/node_modules/express/lib/router/index.js:635:15
+    at next (/Users/teroron/Desktop/PBL/PBL2020/OreSupport/ore-SupportServer/oreServer/node_modules/express/lib/router/index.js:260:14)
+    at Function.handle (/Users/teroron/Desktop/PBL/PBL2020/OreSupport/ore-SupportServer/oreServer/node_modules/express/lib/router/index.js:174:3)
+    at router (/Users/teroron/Desktop/PBL/PBL2020/OreSupport/ore-SupportServer/oreServer/node_modules/express/lib/router/index.js:47:12)
+    at Layer.handle [as handle_request] (/Users/teroron/Desktop/PBL/PBL2020/OreSupport/ore-SupportServer/oreServer/node_modules/express/lib/router/layer.js:95:5)
+[2020-08-08T14:49:17.503] [ERROR] app - アクセスエラー TypeError: Cannot read property 'CODE_5008' of undefined
+    at /Users/teroron/Desktop/PBL/PBL2020/OreSupport/ore-SupportServer/oreServer/common/check.token.js:24:29
+    at Object.module.exports [as verify] (/Users/teroron/Desktop/PBL/PBL2020/OreSupport/ore-SupportServer/oreServer/node_modules/jsonwebtoken/verify.js:63:12)
+    at verifyUser (/Users/teroron/Desktop/PBL/PBL2020/OreSupport/ore-SupportServer/oreServer/common/check.token.js:20:12)
+    at Layer.handle [as handle_request] (/Users/teroron/Desktop/PBL/PBL2020/OreSupport/ore-SupportServer/oreServer/node_modules/express/lib/router/layer.js:95:5)
+    at next (/Users/teroron/Desktop/PBL/PBL2020/OreSupport/ore-SupportServer/oreServer/node_modules/express/lib/router/route.js:137:13)
+    at Route.dispatch (/Users/teroron/Desktop/PBL/PBL2020/OreSupport/ore-SupportServer/oreServer/node_modules/express/lib/router/route.js:112:3)
+    at Layer.handle [as handle_request] (/Users/teroron/Desktop/PBL/PBL2020/OreSupport/ore-SupportServer/oreServer/node_modules/express/lib/router/layer.js:95:5)
+    at /Users/teroron/Desktop/PBL/PBL2020/OreSupport/ore-SupportServer/oreServer/node_modules/express/lib/router/index.js:281:22
+    at Function.process_params (/Users/teroron/Desktop/PBL/PBL2020/OreSupport/ore-SupportServer/oreServer/node_modules/express/lib/router/index.js:335:12)
+    at next (/Users/teroron/Desktop/PBL/PBL2020/OreSupport/ore-SupportServer/oreServer/node_modules/express/lib/router/index.js:275:10)
+    at Function.handle (/Users/teroron/Desktop/PBL/PBL2020/OreSupport/ore-SupportServer/oreServer/node_modules/express/lib/router/index.js:174:3)
+    at router (/Users/teroron/Desktop/PBL/PBL2020/OreSupport/ore-SupportServer/oreServer/node_modules/express/lib/router/index.js:47:12)
+    at Layer.handle [as handle_request] (/Users/teroron/Desktop/PBL/PBL2020/OreSupport/ore-SupportServer/oreServer/node_modules/express/lib/router/layer.js:95:5)
+    at trim_prefix (/Users/teroron/Desktop/PBL/PBL2020/OreSupport/ore-SupportServer/oreServer/node_modules/express/lib/router/index.js:317:13)
+    at /Users/teroron/Desktop/PBL/PBL2020/OreSupport/ore-SupportServer/oreServer/node_modules/express/lib/router/index.js:284:7
+    at Function.process_params (/Users/teroron/Desktop/PBL/PBL2020/OreSupport/ore-SupportServer/oreServer/node_modules/express/lib/router/index.js:335:12)
+    at next (/Users/teroron/Desktop/PBL/PBL2020/OreSupport/ore-SupportServer/oreServer/node_modules/express/lib/router/index.js:275:10)
+    at /Users/teroron/Desktop/PBL/PBL2020/OreSupport/ore-SupportServer/oreServer/node_modules/express/lib/router/index.js:635:15
+    at next (/Users/teroron/Desktop/PBL/PBL2020/OreSupport/ore-SupportServer/oreServer/node_modules/express/lib/router/index.js:260:14)
+    at Function.handle (/Users/teroron/Desktop/PBL/PBL2020/OreSupport/ore-SupportServer/oreServer/node_modules/express/lib/router/index.js:174:3)
+    at router (/Users/teroron/Desktop/PBL/PBL2020/OreSupport/ore-SupportServer/oreServer/node_modules/express/lib/router/index.js:47:12)
+    at Layer.handle [as handle_request] (/Users/teroron/Desktop/PBL/PBL2020/OreSupport/ore-SupportServer/oreServer/node_modules/express/lib/router/layer.js:95:5)
+[2020-08-08T14:49:17.862] [ERROR] app - アクセスエラー TypeError: Cannot read property 'CODE_5008' of undefined
+    at /Users/teroron/Desktop/PBL/PBL2020/OreSupport/ore-SupportServer/oreServer/common/check.token.js:24:29
+    at Object.module.exports [as verify] (/Users/teroron/Desktop/PBL/PBL2020/OreSupport/ore-SupportServer/oreServer/node_modules/jsonwebtoken/verify.js:63:12)
+    at verifyUser (/Users/teroron/Desktop/PBL/PBL2020/OreSupport/ore-SupportServer/oreServer/common/check.token.js:20:12)
+    at Layer.handle [as handle_request] (/Users/teroron/Desktop/PBL/PBL2020/OreSupport/ore-SupportServer/oreServer/node_modules/express/lib/router/layer.js:95:5)
+    at next (/Users/teroron/Desktop/PBL/PBL2020/OreSupport/ore-SupportServer/oreServer/node_modules/express/lib/router/route.js:137:13)
+    at Route.dispatch (/Users/teroron/Desktop/PBL/PBL2020/OreSupport/ore-SupportServer/oreServer/node_modules/express/lib/router/route.js:112:3)
+    at Layer.handle [as handle_request] (/Users/teroron/Desktop/PBL/PBL2020/OreSupport/ore-SupportServer/oreServer/node_modules/express/lib/router/layer.js:95:5)
+    at /Users/teroron/Desktop/PBL/PBL2020/OreSupport/ore-SupportServer/oreServer/node_modules/express/lib/router/index.js:281:22
+    at Function.process_params (/Users/teroron/Desktop/PBL/PBL2020/OreSupport/ore-SupportServer/oreServer/node_modules/express/lib/router/index.js:335:12)
+    at next (/Users/teroron/Desktop/PBL/PBL2020/OreSupport/ore-SupportServer/oreServer/node_modules/express/lib/router/index.js:275:10)
+    at Function.handle (/Users/teroron/Desktop/PBL/PBL2020/OreSupport/ore-SupportServer/oreServer/node_modules/express/lib/router/index.js:174:3)
+    at router (/Users/teroron/Desktop/PBL/PBL2020/OreSupport/ore-SupportServer/oreServer/node_modules/express/lib/router/index.js:47:12)
+    at Layer.handle [as handle_request] (/Users/teroron/Desktop/PBL/PBL2020/OreSupport/ore-SupportServer/oreServer/node_modules/express/lib/router/layer.js:95:5)
+    at trim_prefix (/Users/teroron/Desktop/PBL/PBL2020/OreSupport/ore-SupportServer/oreServer/node_modules/express/lib/router/index.js:317:13)
+    at /Users/teroron/Desktop/PBL/PBL2020/OreSupport/ore-SupportServer/oreServer/node_modules/express/lib/router/index.js:284:7
+    at Function.process_params (/Users/teroron/Desktop/PBL/PBL2020/OreSupport/ore-SupportServer/oreServer/node_modules/express/lib/router/index.js:335:12)
+    at next (/Users/teroron/Desktop/PBL/PBL2020/OreSupport/ore-SupportServer/oreServer/node_modules/express/lib/router/index.js:275:10)
+    at /Users/teroron/Desktop/PBL/PBL2020/OreSupport/ore-SupportServer/oreServer/node_modules/express/lib/router/index.js:635:15
+    at next (/Users/teroron/Desktop/PBL/PBL2020/OreSupport/ore-SupportServer/oreServer/node_modules/express/lib/router/index.js:260:14)
+    at Function.handle (/Users/teroron/Desktop/PBL/PBL2020/OreSupport/ore-SupportServer/oreServer/node_modules/express/lib/router/index.js:174:3)
+    at router (/Users/teroron/Desktop/PBL/PBL2020/OreSupport/ore-SupportServer/oreServer/node_modules/express/lib/router/index.js:47:12)
+    at Layer.handle [as handle_request] (/Users/teroron/Desktop/PBL/PBL2020/OreSupport/ore-SupportServer/oreServer/node_modules/express/lib/router/layer.js:95:5)
+[2020-08-08T14:49:18.202] [ERROR] app - アクセスエラー TypeError: Cannot read property 'CODE_5008' of undefined
+    at /Users/teroron/Desktop/PBL/PBL2020/OreSupport/ore-SupportServer/oreServer/common/check.token.js:24:29
+    at Object.module.exports [as verify] (/Users/teroron/Desktop/PBL/PBL2020/OreSupport/ore-SupportServer/oreServer/node_modules/jsonwebtoken/verify.js:63:12)
+    at verifyUser (/Users/teroron/Desktop/PBL/PBL2020/OreSupport/ore-SupportServer/oreServer/common/check.token.js:20:12)
+    at Layer.handle [as handle_request] (/Users/teroron/Desktop/PBL/PBL2020/OreSupport/ore-SupportServer/oreServer/node_modules/express/lib/router/layer.js:95:5)
+    at next (/Users/teroron/Desktop/PBL/PBL2020/OreSupport/ore-SupportServer/oreServer/node_modules/express/lib/router/route.js:137:13)
+    at Route.dispatch (/Users/teroron/Desktop/PBL/PBL2020/OreSupport/ore-SupportServer/oreServer/node_modules/express/lib/router/route.js:112:3)
+    at Layer.handle [as handle_request] (/Users/teroron/Desktop/PBL/PBL2020/OreSupport/ore-SupportServer/oreServer/node_modules/express/lib/router/layer.js:95:5)
+    at /Users/teroron/Desktop/PBL/PBL2020/OreSupport/ore-SupportServer/oreServer/node_modules/express/lib/router/index.js:281:22
+    at Function.process_params (/Users/teroron/Desktop/PBL/PBL2020/OreSupport/ore-SupportServer/oreServer/node_modules/express/lib/router/index.js:335:12)
+    at next (/Users/teroron/Desktop/PBL/PBL2020/OreSupport/ore-SupportServer/oreServer/node_modules/express/lib/router/index.js:275:10)
+    at Function.handle (/Users/teroron/Desktop/PBL/PBL2020/OreSupport/ore-SupportServer/oreServer/node_modules/express/lib/router/index.js:174:3)
+    at router (/Users/teroron/Desktop/PBL/PBL2020/OreSupport/ore-SupportServer/oreServer/node_modules/express/lib/router/index.js:47:12)
+    at Layer.handle [as handle_request] (/Users/teroron/Desktop/PBL/PBL2020/OreSupport/ore-SupportServer/oreServer/node_modules/express/lib/router/layer.js:95:5)
+    at trim_prefix (/Users/teroron/Desktop/PBL/PBL2020/OreSupport/ore-SupportServer/oreServer/node_modules/express/lib/router/index.js:317:13)
+    at /Users/teroron/Desktop/PBL/PBL2020/OreSupport/ore-SupportServer/oreServer/node_modules/express/lib/router/index.js:284:7
+    at Function.process_params (/Users/teroron/Desktop/PBL/PBL2020/OreSupport/ore-SupportServer/oreServer/node_modules/express/lib/router/index.js:335:12)
+    at next (/Users/teroron/Desktop/PBL/PBL2020/OreSupport/ore-SupportServer/oreServer/node_modules/express/lib/router/index.js:275:10)
+    at /Users/teroron/Desktop/PBL/PBL2020/OreSupport/ore-SupportServer/oreServer/node_modules/express/lib/router/index.js:635:15
+    at next (/Users/teroron/Desktop/PBL/PBL2020/OreSupport/ore-SupportServer/oreServer/node_modules/express/lib/router/index.js:260:14)
+    at Function.handle (/Users/teroron/Desktop/PBL/PBL2020/OreSupport/ore-SupportServer/oreServer/node_modules/express/lib/router/index.js:174:3)
+    at router (/Users/teroron/Desktop/PBL/PBL2020/OreSupport/ore-SupportServer/oreServer/node_modules/express/lib/router/index.js:47:12)
+    at Layer.handle [as handle_request] (/Users/teroron/Desktop/PBL/PBL2020/OreSupport/ore-SupportServer/oreServer/node_modules/express/lib/router/layer.js:95:5)
+[2020-08-08T14:49:18.543] [ERROR] app - アクセスエラー TypeError: Cannot read property 'CODE_5008' of undefined
+    at /Users/teroron/Desktop/PBL/PBL2020/OreSupport/ore-SupportServer/oreServer/common/check.token.js:24:29
+    at Object.module.exports [as verify] (/Users/teroron/Desktop/PBL/PBL2020/OreSupport/ore-SupportServer/oreServer/node_modules/jsonwebtoken/verify.js:63:12)
+    at verifyUser (/Users/teroron/Desktop/PBL/PBL2020/OreSupport/ore-SupportServer/oreServer/common/check.token.js:20:12)
+    at Layer.handle [as handle_request] (/Users/teroron/Desktop/PBL/PBL2020/OreSupport/ore-SupportServer/oreServer/node_modules/express/lib/router/layer.js:95:5)
+    at next (/Users/teroron/Desktop/PBL/PBL2020/OreSupport/ore-SupportServer/oreServer/node_modules/express/lib/router/route.js:137:13)
+    at Route.dispatch (/Users/teroron/Desktop/PBL/PBL2020/OreSupport/ore-SupportServer/oreServer/node_modules/express/lib/router/route.js:112:3)
+    at Layer.handle [as handle_request] (/Users/teroron/Desktop/PBL/PBL2020/OreSupport/ore-SupportServer/oreServer/node_modules/express/lib/router/layer.js:95:5)
+    at /Users/teroron/Desktop/PBL/PBL2020/OreSupport/ore-SupportServer/oreServer/node_modules/express/lib/router/index.js:281:22
+    at Function.process_params (/Users/teroron/Desktop/PBL/PBL2020/OreSupport/ore-SupportServer/oreServer/node_modules/express/lib/router/index.js:335:12)
+    at next (/Users/teroron/Desktop/PBL/PBL2020/OreSupport/ore-SupportServer/oreServer/node_modules/express/lib/router/index.js:275:10)
+    at Function.handle (/Users/teroron/Desktop/PBL/PBL2020/OreSupport/ore-SupportServer/oreServer/node_modules/express/lib/router/index.js:174:3)
+    at router (/Users/teroron/Desktop/PBL/PBL2020/OreSupport/ore-SupportServer/oreServer/node_modules/express/lib/router/index.js:47:12)
+    at Layer.handle [as handle_request] (/Users/teroron/Desktop/PBL/PBL2020/OreSupport/ore-SupportServer/oreServer/node_modules/express/lib/router/layer.js:95:5)
+    at trim_prefix (/Users/teroron/Desktop/PBL/PBL2020/OreSupport/ore-SupportServer/oreServer/node_modules/express/lib/router/index.js:317:13)
+    at /Users/teroron/Desktop/PBL/PBL2020/OreSupport/ore-SupportServer/oreServer/node_modules/express/lib/router/index.js:284:7
+    at Function.process_params (/Users/teroron/Desktop/PBL/PBL2020/OreSupport/ore-SupportServer/oreServer/node_modules/express/lib/router/index.js:335:12)
+    at next (/Users/teroron/Desktop/PBL/PBL2020/OreSupport/ore-SupportServer/oreServer/node_modules/express/lib/router/index.js:275:10)
+    at /Users/teroron/Desktop/PBL/PBL2020/OreSupport/ore-SupportServer/oreServer/node_modules/express/lib/router/index.js:635:15
+    at next (/Users/teroron/Desktop/PBL/PBL2020/OreSupport/ore-SupportServer/oreServer/node_modules/express/lib/router/index.js:260:14)
+    at Function.handle (/Users/teroron/Desktop/PBL/PBL2020/OreSupport/ore-SupportServer/oreServer/node_modules/express/lib/router/index.js:174:3)
+    at router (/Users/teroron/Desktop/PBL/PBL2020/OreSupport/ore-SupportServer/oreServer/node_modules/express/lib/router/index.js:47:12)
+    at Layer.handle [as handle_request] (/Users/teroron/Desktop/PBL/PBL2020/OreSupport/ore-SupportServer/oreServer/node_modules/express/lib/router/layer.js:95:5)
+[2020-08-08T14:49:18.897] [ERROR] app - アクセスエラー TypeError: Cannot read property 'CODE_5008' of undefined
+    at /Users/teroron/Desktop/PBL/PBL2020/OreSupport/ore-SupportServer/oreServer/common/check.token.js:24:29
+    at Object.module.exports [as verify] (/Users/teroron/Desktop/PBL/PBL2020/OreSupport/ore-SupportServer/oreServer/node_modules/jsonwebtoken/verify.js:63:12)
+    at verifyUser (/Users/teroron/Desktop/PBL/PBL2020/OreSupport/ore-SupportServer/oreServer/common/check.token.js:20:12)
+    at Layer.handle [as handle_request] (/Users/teroron/Desktop/PBL/PBL2020/OreSupport/ore-SupportServer/oreServer/node_modules/express/lib/router/layer.js:95:5)
+    at next (/Users/teroron/Desktop/PBL/PBL2020/OreSupport/ore-SupportServer/oreServer/node_modules/express/lib/router/route.js:137:13)
+    at Route.dispatch (/Users/teroron/Desktop/PBL/PBL2020/OreSupport/ore-SupportServer/oreServer/node_modules/express/lib/router/route.js:112:3)
+    at Layer.handle [as handle_request] (/Users/teroron/Desktop/PBL/PBL2020/OreSupport/ore-SupportServer/oreServer/node_modules/express/lib/router/layer.js:95:5)
+    at /Users/teroron/Desktop/PBL/PBL2020/OreSupport/ore-SupportServer/oreServer/node_modules/express/lib/router/index.js:281:22
+    at Function.process_params (/Users/teroron/Desktop/PBL/PBL2020/OreSupport/ore-SupportServer/oreServer/node_modules/express/lib/router/index.js:335:12)
+    at next (/Users/teroron/Desktop/PBL/PBL2020/OreSupport/ore-SupportServer/oreServer/node_modules/express/lib/router/index.js:275:10)
+    at Function.handle (/Users/teroron/Desktop/PBL/PBL2020/OreSupport/ore-SupportServer/oreServer/node_modules/express/lib/router/index.js:174:3)
+    at router (/Users/teroron/Desktop/PBL/PBL2020/OreSupport/ore-SupportServer/oreServer/node_modules/express/lib/router/index.js:47:12)
+    at Layer.handle [as handle_request] (/Users/teroron/Desktop/PBL/PBL2020/OreSupport/ore-SupportServer/oreServer/node_modules/express/lib/router/layer.js:95:5)
+    at trim_prefix (/Users/teroron/Desktop/PBL/PBL2020/OreSupport/ore-SupportServer/oreServer/node_modules/express/lib/router/index.js:317:13)
+    at /Users/teroron/Desktop/PBL/PBL2020/OreSupport/ore-SupportServer/oreServer/node_modules/express/lib/router/index.js:284:7
+    at Function.process_params (/Users/teroron/Desktop/PBL/PBL2020/OreSupport/ore-SupportServer/oreServer/node_modules/express/lib/router/index.js:335:12)
+    at next (/Users/teroron/Desktop/PBL/PBL2020/OreSupport/ore-SupportServer/oreServer/node_modules/express/lib/router/index.js:275:10)
+    at /Users/teroron/Desktop/PBL/PBL2020/OreSupport/ore-SupportServer/oreServer/node_modules/express/lib/router/index.js:635:15
+    at next (/Users/teroron/Desktop/PBL/PBL2020/OreSupport/ore-SupportServer/oreServer/node_modules/express/lib/router/index.js:260:14)
+    at Function.handle (/Users/teroron/Desktop/PBL/PBL2020/OreSupport/ore-SupportServer/oreServer/node_modules/express/lib/router/index.js:174:3)
+    at router (/Users/teroron/Desktop/PBL/PBL2020/OreSupport/ore-SupportServer/oreServer/node_modules/express/lib/router/index.js:47:12)
+    at Layer.handle [as handle_request] (/Users/teroron/Desktop/PBL/PBL2020/OreSupport/ore-SupportServer/oreServer/node_modules/express/lib/router/layer.js:95:5)
+[2020-08-08T14:49:19.280] [ERROR] app - アクセスエラー TypeError: Cannot read property 'CODE_5008' of undefined
+    at /Users/teroron/Desktop/PBL/PBL2020/OreSupport/ore-SupportServer/oreServer/common/check.token.js:24:29
+    at Object.module.exports [as verify] (/Users/teroron/Desktop/PBL/PBL2020/OreSupport/ore-SupportServer/oreServer/node_modules/jsonwebtoken/verify.js:63:12)
+    at verifyUser (/Users/teroron/Desktop/PBL/PBL2020/OreSupport/ore-SupportServer/oreServer/common/check.token.js:20:12)
+    at Layer.handle [as handle_request] (/Users/teroron/Desktop/PBL/PBL2020/OreSupport/ore-SupportServer/oreServer/node_modules/express/lib/router/layer.js:95:5)
+    at next (/Users/teroron/Desktop/PBL/PBL2020/OreSupport/ore-SupportServer/oreServer/node_modules/express/lib/router/route.js:137:13)
+    at Route.dispatch (/Users/teroron/Desktop/PBL/PBL2020/OreSupport/ore-SupportServer/oreServer/node_modules/express/lib/router/route.js:112:3)
+    at Layer.handle [as handle_request] (/Users/teroron/Desktop/PBL/PBL2020/OreSupport/ore-SupportServer/oreServer/node_modules/express/lib/router/layer.js:95:5)
+    at /Users/teroron/Desktop/PBL/PBL2020/OreSupport/ore-SupportServer/oreServer/node_modules/express/lib/router/index.js:281:22
+    at Function.process_params (/Users/teroron/Desktop/PBL/PBL2020/OreSupport/ore-SupportServer/oreServer/node_modules/express/lib/router/index.js:335:12)
+    at next (/Users/teroron/Desktop/PBL/PBL2020/OreSupport/ore-SupportServer/oreServer/node_modules/express/lib/router/index.js:275:10)
+    at Function.handle (/Users/teroron/Desktop/PBL/PBL2020/OreSupport/ore-SupportServer/oreServer/node_modules/express/lib/router/index.js:174:3)
+    at router (/Users/teroron/Desktop/PBL/PBL2020/OreSupport/ore-SupportServer/oreServer/node_modules/express/lib/router/index.js:47:12)
+    at Layer.handle [as handle_request] (/Users/teroron/Desktop/PBL/PBL2020/OreSupport/ore-SupportServer/oreServer/node_modules/express/lib/router/layer.js:95:5)
+    at trim_prefix (/Users/teroron/Desktop/PBL/PBL2020/OreSupport/ore-SupportServer/oreServer/node_modules/express/lib/router/index.js:317:13)
+    at /Users/teroron/Desktop/PBL/PBL2020/OreSupport/ore-SupportServer/oreServer/node_modules/express/lib/router/index.js:284:7
+    at Function.process_params (/Users/teroron/Desktop/PBL/PBL2020/OreSupport/ore-SupportServer/oreServer/node_modules/express/lib/router/index.js:335:12)
+    at next (/Users/teroron/Desktop/PBL/PBL2020/OreSupport/ore-SupportServer/oreServer/node_modules/express/lib/router/index.js:275:10)
+    at /Users/teroron/Desktop/PBL/PBL2020/OreSupport/ore-SupportServer/oreServer/node_modules/express/lib/router/index.js:635:15
+    at next (/Users/teroron/Desktop/PBL/PBL2020/OreSupport/ore-SupportServer/oreServer/node_modules/express/lib/router/index.js:260:14)
+    at Function.handle (/Users/teroron/Desktop/PBL/PBL2020/OreSupport/ore-SupportServer/oreServer/node_modules/express/lib/router/index.js:174:3)
+    at router (/Users/teroron/Desktop/PBL/PBL2020/OreSupport/ore-SupportServer/oreServer/node_modules/express/lib/router/index.js:47:12)
+    at Layer.handle [as handle_request] (/Users/teroron/Desktop/PBL/PBL2020/OreSupport/ore-SupportServer/oreServer/node_modules/express/lib/router/layer.js:95:5)
+[2020-08-08T14:49:20.023] [ERROR] app - アクセスエラー TypeError: Cannot read property 'CODE_5008' of undefined
+    at /Users/teroron/Desktop/PBL/PBL2020/OreSupport/ore-SupportServer/oreServer/common/check.token.js:24:29
+    at Object.module.exports [as verify] (/Users/teroron/Desktop/PBL/PBL2020/OreSupport/ore-SupportServer/oreServer/node_modules/jsonwebtoken/verify.js:63:12)
+    at verifyUser (/Users/teroron/Desktop/PBL/PBL2020/OreSupport/ore-SupportServer/oreServer/common/check.token.js:20:12)
+    at Layer.handle [as handle_request] (/Users/teroron/Desktop/PBL/PBL2020/OreSupport/ore-SupportServer/oreServer/node_modules/express/lib/router/layer.js:95:5)
+    at next (/Users/teroron/Desktop/PBL/PBL2020/OreSupport/ore-SupportServer/oreServer/node_modules/express/lib/router/route.js:137:13)
+    at Route.dispatch (/Users/teroron/Desktop/PBL/PBL2020/OreSupport/ore-SupportServer/oreServer/node_modules/express/lib/router/route.js:112:3)
+    at Layer.handle [as handle_request] (/Users/teroron/Desktop/PBL/PBL2020/OreSupport/ore-SupportServer/oreServer/node_modules/express/lib/router/layer.js:95:5)
+    at /Users/teroron/Desktop/PBL/PBL2020/OreSupport/ore-SupportServer/oreServer/node_modules/express/lib/router/index.js:281:22
+    at Function.process_params (/Users/teroron/Desktop/PBL/PBL2020/OreSupport/ore-SupportServer/oreServer/node_modules/express/lib/router/index.js:335:12)
+    at next (/Users/teroron/Desktop/PBL/PBL2020/OreSupport/ore-SupportServer/oreServer/node_modules/express/lib/router/index.js:275:10)
+    at Function.handle (/Users/teroron/Desktop/PBL/PBL2020/OreSupport/ore-SupportServer/oreServer/node_modules/express/lib/router/index.js:174:3)
+    at router (/Users/teroron/Desktop/PBL/PBL2020/OreSupport/ore-SupportServer/oreServer/node_modules/express/lib/router/index.js:47:12)
+    at Layer.handle [as handle_request] (/Users/teroron/Desktop/PBL/PBL2020/OreSupport/ore-SupportServer/oreServer/node_modules/express/lib/router/layer.js:95:5)
+    at trim_prefix (/Users/teroron/Desktop/PBL/PBL2020/OreSupport/ore-SupportServer/oreServer/node_modules/express/lib/router/index.js:317:13)
+    at /Users/teroron/Desktop/PBL/PBL2020/OreSupport/ore-SupportServer/oreServer/node_modules/express/lib/router/index.js:284:7
+    at Function.process_params (/Users/teroron/Desktop/PBL/PBL2020/OreSupport/ore-SupportServer/oreServer/node_modules/express/lib/router/index.js:335:12)
+    at next (/Users/teroron/Desktop/PBL/PBL2020/OreSupport/ore-SupportServer/oreServer/node_modules/express/lib/router/index.js:275:10)
+    at /Users/teroron/Desktop/PBL/PBL2020/OreSupport/ore-SupportServer/oreServer/node_modules/express/lib/router/index.js:635:15
+    at next (/Users/teroron/Desktop/PBL/PBL2020/OreSupport/ore-SupportServer/oreServer/node_modules/express/lib/router/index.js:260:14)
+    at Function.handle (/Users/teroron/Desktop/PBL/PBL2020/OreSupport/ore-SupportServer/oreServer/node_modules/express/lib/router/index.js:174:3)
+    at router (/Users/teroron/Desktop/PBL/PBL2020/OreSupport/ore-SupportServer/oreServer/node_modules/express/lib/router/index.js:47:12)
+    at Layer.handle [as handle_request] (/Users/teroron/Desktop/PBL/PBL2020/OreSupport/ore-SupportServer/oreServer/node_modules/express/lib/router/layer.js:95:5)
+[2020-08-08T14:49:20.389] [ERROR] app - アクセスエラー TypeError: Cannot read property 'CODE_5008' of undefined
+    at /Users/teroron/Desktop/PBL/PBL2020/OreSupport/ore-SupportServer/oreServer/common/check.token.js:24:29
+    at Object.module.exports [as verify] (/Users/teroron/Desktop/PBL/PBL2020/OreSupport/ore-SupportServer/oreServer/node_modules/jsonwebtoken/verify.js:63:12)
+    at verifyUser (/Users/teroron/Desktop/PBL/PBL2020/OreSupport/ore-SupportServer/oreServer/common/check.token.js:20:12)
+    at Layer.handle [as handle_request] (/Users/teroron/Desktop/PBL/PBL2020/OreSupport/ore-SupportServer/oreServer/node_modules/express/lib/router/layer.js:95:5)
+    at next (/Users/teroron/Desktop/PBL/PBL2020/OreSupport/ore-SupportServer/oreServer/node_modules/express/lib/router/route.js:137:13)
+    at Route.dispatch (/Users/teroron/Desktop/PBL/PBL2020/OreSupport/ore-SupportServer/oreServer/node_modules/express/lib/router/route.js:112:3)
+    at Layer.handle [as handle_request] (/Users/teroron/Desktop/PBL/PBL2020/OreSupport/ore-SupportServer/oreServer/node_modules/express/lib/router/layer.js:95:5)
+    at /Users/teroron/Desktop/PBL/PBL2020/OreSupport/ore-SupportServer/oreServer/node_modules/express/lib/router/index.js:281:22
+    at Function.process_params (/Users/teroron/Desktop/PBL/PBL2020/OreSupport/ore-SupportServer/oreServer/node_modules/express/lib/router/index.js:335:12)
+    at next (/Users/teroron/Desktop/PBL/PBL2020/OreSupport/ore-SupportServer/oreServer/node_modules/express/lib/router/index.js:275:10)
+    at Function.handle (/Users/teroron/Desktop/PBL/PBL2020/OreSupport/ore-SupportServer/oreServer/node_modules/express/lib/router/index.js:174:3)
+    at router (/Users/teroron/Desktop/PBL/PBL2020/OreSupport/ore-SupportServer/oreServer/node_modules/express/lib/router/index.js:47:12)
+    at Layer.handle [as handle_request] (/Users/teroron/Desktop/PBL/PBL2020/OreSupport/ore-SupportServer/oreServer/node_modules/express/lib/router/layer.js:95:5)
+    at trim_prefix (/Users/teroron/Desktop/PBL/PBL2020/OreSupport/ore-SupportServer/oreServer/node_modules/express/lib/router/index.js:317:13)
+    at /Users/teroron/Desktop/PBL/PBL2020/OreSupport/ore-SupportServer/oreServer/node_modules/express/lib/router/index.js:284:7
+    at Function.process_params (/Users/teroron/Desktop/PBL/PBL2020/OreSupport/ore-SupportServer/oreServer/node_modules/express/lib/router/index.js:335:12)
+    at next (/Users/teroron/Desktop/PBL/PBL2020/OreSupport/ore-SupportServer/oreServer/node_modules/express/lib/router/index.js:275:10)
+    at /Users/teroron/Desktop/PBL/PBL2020/OreSupport/ore-SupportServer/oreServer/node_modules/express/lib/router/index.js:635:15
+    at next (/Users/teroron/Desktop/PBL/PBL2020/OreSupport/ore-SupportServer/oreServer/node_modules/express/lib/router/index.js:260:14)
+    at Function.handle (/Users/teroron/Desktop/PBL/PBL2020/OreSupport/ore-SupportServer/oreServer/node_modules/express/lib/router/index.js:174:3)
+    at router (/Users/teroron/Desktop/PBL/PBL2020/OreSupport/ore-SupportServer/oreServer/node_modules/express/lib/router/index.js:47:12)
+    at Layer.handle [as handle_request] (/Users/teroron/Desktop/PBL/PBL2020/OreSupport/ore-SupportServer/oreServer/node_modules/express/lib/router/layer.js:95:5)
+[2020-08-08T14:49:20.752] [ERROR] app - アクセスエラー TypeError: Cannot read property 'CODE_5008' of undefined
+    at /Users/teroron/Desktop/PBL/PBL2020/OreSupport/ore-SupportServer/oreServer/common/check.token.js:24:29
+    at Object.module.exports [as verify] (/Users/teroron/Desktop/PBL/PBL2020/OreSupport/ore-SupportServer/oreServer/node_modules/jsonwebtoken/verify.js:63:12)
+    at verifyUser (/Users/teroron/Desktop/PBL/PBL2020/OreSupport/ore-SupportServer/oreServer/common/check.token.js:20:12)
+    at Layer.handle [as handle_request] (/Users/teroron/Desktop/PBL/PBL2020/OreSupport/ore-SupportServer/oreServer/node_modules/express/lib/router/layer.js:95:5)
+    at next (/Users/teroron/Desktop/PBL/PBL2020/OreSupport/ore-SupportServer/oreServer/node_modules/express/lib/router/route.js:137:13)
+    at Route.dispatch (/Users/teroron/Desktop/PBL/PBL2020/OreSupport/ore-SupportServer/oreServer/node_modules/express/lib/router/route.js:112:3)
+    at Layer.handle [as handle_request] (/Users/teroron/Desktop/PBL/PBL2020/OreSupport/ore-SupportServer/oreServer/node_modules/express/lib/router/layer.js:95:5)
+    at /Users/teroron/Desktop/PBL/PBL2020/OreSupport/ore-SupportServer/oreServer/node_modules/express/lib/router/index.js:281:22
+    at Function.process_params (/Users/teroron/Desktop/PBL/PBL2020/OreSupport/ore-SupportServer/oreServer/node_modules/express/lib/router/index.js:335:12)
+    at next (/Users/teroron/Desktop/PBL/PBL2020/OreSupport/ore-SupportServer/oreServer/node_modules/express/lib/router/index.js:275:10)
+    at Function.handle (/Users/teroron/Desktop/PBL/PBL2020/OreSupport/ore-SupportServer/oreServer/node_modules/express/lib/router/index.js:174:3)
+    at router (/Users/teroron/Desktop/PBL/PBL2020/OreSupport/ore-SupportServer/oreServer/node_modules/express/lib/router/index.js:47:12)
+    at Layer.handle [as handle_request] (/Users/teroron/Desktop/PBL/PBL2020/OreSupport/ore-SupportServer/oreServer/node_modules/express/lib/router/layer.js:95:5)
+    at trim_prefix (/Users/teroron/Desktop/PBL/PBL2020/OreSupport/ore-SupportServer/oreServer/node_modules/express/lib/router/index.js:317:13)
+    at /Users/teroron/Desktop/PBL/PBL2020/OreSupport/ore-SupportServer/oreServer/node_modules/express/lib/router/index.js:284:7
+    at Function.process_params (/Users/teroron/Desktop/PBL/PBL2020/OreSupport/ore-SupportServer/oreServer/node_modules/express/lib/router/index.js:335:12)
+    at next (/Users/teroron/Desktop/PBL/PBL2020/OreSupport/ore-SupportServer/oreServer/node_modules/express/lib/router/index.js:275:10)
+    at /Users/teroron/Desktop/PBL/PBL2020/OreSupport/ore-SupportServer/oreServer/node_modules/express/lib/router/index.js:635:15
+    at next (/Users/teroron/Desktop/PBL/PBL2020/OreSupport/ore-SupportServer/oreServer/node_modules/express/lib/router/index.js:260:14)
+    at Function.handle (/Users/teroron/Desktop/PBL/PBL2020/OreSupport/ore-SupportServer/oreServer/node_modules/express/lib/router/index.js:174:3)
+    at router (/Users/teroron/Desktop/PBL/PBL2020/OreSupport/ore-SupportServer/oreServer/node_modules/express/lib/router/index.js:47:12)
+    at Layer.handle [as handle_request] (/Users/teroron/Desktop/PBL/PBL2020/OreSupport/ore-SupportServer/oreServer/node_modules/express/lib/router/layer.js:95:5)
+[2020-08-08T14:49:21.156] [ERROR] app - アクセスエラー TypeError: Cannot read property 'CODE_5008' of undefined
+    at /Users/teroron/Desktop/PBL/PBL2020/OreSupport/ore-SupportServer/oreServer/common/check.token.js:24:29
+    at Object.module.exports [as verify] (/Users/teroron/Desktop/PBL/PBL2020/OreSupport/ore-SupportServer/oreServer/node_modules/jsonwebtoken/verify.js:63:12)
+    at verifyUser (/Users/teroron/Desktop/PBL/PBL2020/OreSupport/ore-SupportServer/oreServer/common/check.token.js:20:12)
+    at Layer.handle [as handle_request] (/Users/teroron/Desktop/PBL/PBL2020/OreSupport/ore-SupportServer/oreServer/node_modules/express/lib/router/layer.js:95:5)
+    at next (/Users/teroron/Desktop/PBL/PBL2020/OreSupport/ore-SupportServer/oreServer/node_modules/express/lib/router/route.js:137:13)
+    at Route.dispatch (/Users/teroron/Desktop/PBL/PBL2020/OreSupport/ore-SupportServer/oreServer/node_modules/express/lib/router/route.js:112:3)
+    at Layer.handle [as handle_request] (/Users/teroron/Desktop/PBL/PBL2020/OreSupport/ore-SupportServer/oreServer/node_modules/express/lib/router/layer.js:95:5)
+    at /Users/teroron/Desktop/PBL/PBL2020/OreSupport/ore-SupportServer/oreServer/node_modules/express/lib/router/index.js:281:22
+    at Function.process_params (/Users/teroron/Desktop/PBL/PBL2020/OreSupport/ore-SupportServer/oreServer/node_modules/express/lib/router/index.js:335:12)
+    at next (/Users/teroron/Desktop/PBL/PBL2020/OreSupport/ore-SupportServer/oreServer/node_modules/express/lib/router/index.js:275:10)
+    at Function.handle (/Users/teroron/Desktop/PBL/PBL2020/OreSupport/ore-SupportServer/oreServer/node_modules/express/lib/router/index.js:174:3)
+    at router (/Users/teroron/Desktop/PBL/PBL2020/OreSupport/ore-SupportServer/oreServer/node_modules/express/lib/router/index.js:47:12)
+    at Layer.handle [as handle_request] (/Users/teroron/Desktop/PBL/PBL2020/OreSupport/ore-SupportServer/oreServer/node_modules/express/lib/router/layer.js:95:5)
+    at trim_prefix (/Users/teroron/Desktop/PBL/PBL2020/OreSupport/ore-SupportServer/oreServer/node_modules/express/lib/router/index.js:317:13)
+    at /Users/teroron/Desktop/PBL/PBL2020/OreSupport/ore-SupportServer/oreServer/node_modules/express/lib/router/index.js:284:7
+    at Function.process_params (/Users/teroron/Desktop/PBL/PBL2020/OreSupport/ore-SupportServer/oreServer/node_modules/express/lib/router/index.js:335:12)
+    at next (/Users/teroron/Desktop/PBL/PBL2020/OreSupport/ore-SupportServer/oreServer/node_modules/express/lib/router/index.js:275:10)
+    at /Users/teroron/Desktop/PBL/PBL2020/OreSupport/ore-SupportServer/oreServer/node_modules/express/lib/router/index.js:635:15
+    at next (/Users/teroron/Desktop/PBL/PBL2020/OreSupport/ore-SupportServer/oreServer/node_modules/express/lib/router/index.js:260:14)
+    at Function.handle (/Users/teroron/Desktop/PBL/PBL2020/OreSupport/ore-SupportServer/oreServer/node_modules/express/lib/router/index.js:174:3)
+    at router (/Users/teroron/Desktop/PBL/PBL2020/OreSupport/ore-SupportServer/oreServer/node_modules/express/lib/router/index.js:47:12)
+    at Layer.handle [as handle_request] (/Users/teroron/Desktop/PBL/PBL2020/OreSupport/ore-SupportServer/oreServer/node_modules/express/lib/router/layer.js:95:5)
+[2020-08-08T14:49:21.599] [ERROR] app - アクセスエラー TypeError: Cannot read property 'CODE_5008' of undefined
+    at /Users/teroron/Desktop/PBL/PBL2020/OreSupport/ore-SupportServer/oreServer/common/check.token.js:24:29
+    at Object.module.exports [as verify] (/Users/teroron/Desktop/PBL/PBL2020/OreSupport/ore-SupportServer/oreServer/node_modules/jsonwebtoken/verify.js:63:12)
+    at verifyUser (/Users/teroron/Desktop/PBL/PBL2020/OreSupport/ore-SupportServer/oreServer/common/check.token.js:20:12)
+    at Layer.handle [as handle_request] (/Users/teroron/Desktop/PBL/PBL2020/OreSupport/ore-SupportServer/oreServer/node_modules/express/lib/router/layer.js:95:5)
+    at next (/Users/teroron/Desktop/PBL/PBL2020/OreSupport/ore-SupportServer/oreServer/node_modules/express/lib/router/route.js:137:13)
+    at Route.dispatch (/Users/teroron/Desktop/PBL/PBL2020/OreSupport/ore-SupportServer/oreServer/node_modules/express/lib/router/route.js:112:3)
+    at Layer.handle [as handle_request] (/Users/teroron/Desktop/PBL/PBL2020/OreSupport/ore-SupportServer/oreServer/node_modules/express/lib/router/layer.js:95:5)
+    at /Users/teroron/Desktop/PBL/PBL2020/OreSupport/ore-SupportServer/oreServer/node_modules/express/lib/router/index.js:281:22
+    at Function.process_params (/Users/teroron/Desktop/PBL/PBL2020/OreSupport/ore-SupportServer/oreServer/node_modules/express/lib/router/index.js:335:12)
+    at next (/Users/teroron/Desktop/PBL/PBL2020/OreSupport/ore-SupportServer/oreServer/node_modules/express/lib/router/index.js:275:10)
+    at Function.handle (/Users/teroron/Desktop/PBL/PBL2020/OreSupport/ore-SupportServer/oreServer/node_modules/express/lib/router/index.js:174:3)
+    at router (/Users/teroron/Desktop/PBL/PBL2020/OreSupport/ore-SupportServer/oreServer/node_modules/express/lib/router/index.js:47:12)
+    at Layer.handle [as handle_request] (/Users/teroron/Desktop/PBL/PBL2020/OreSupport/ore-SupportServer/oreServer/node_modules/express/lib/router/layer.js:95:5)
+    at trim_prefix (/Users/teroron/Desktop/PBL/PBL2020/OreSupport/ore-SupportServer/oreServer/node_modules/express/lib/router/index.js:317:13)
+    at /Users/teroron/Desktop/PBL/PBL2020/OreSupport/ore-SupportServer/oreServer/node_modules/express/lib/router/index.js:284:7
+    at Function.process_params (/Users/teroron/Desktop/PBL/PBL2020/OreSupport/ore-SupportServer/oreServer/node_modules/express/lib/router/index.js:335:12)
+    at next (/Users/teroron/Desktop/PBL/PBL2020/OreSupport/ore-SupportServer/oreServer/node_modules/express/lib/router/index.js:275:10)
+    at /Users/teroron/Desktop/PBL/PBL2020/OreSupport/ore-SupportServer/oreServer/node_modules/express/lib/router/index.js:635:15
+    at next (/Users/teroron/Desktop/PBL/PBL2020/OreSupport/ore-SupportServer/oreServer/node_modules/express/lib/router/index.js:260:14)
+    at Function.handle (/Users/teroron/Desktop/PBL/PBL2020/OreSupport/ore-SupportServer/oreServer/node_modules/express/lib/router/index.js:174:3)
+    at router (/Users/teroron/Desktop/PBL/PBL2020/OreSupport/ore-SupportServer/oreServer/node_modules/express/lib/router/index.js:47:12)
+    at Layer.handle [as handle_request] (/Users/teroron/Desktop/PBL/PBL2020/OreSupport/ore-SupportServer/oreServer/node_modules/express/lib/router/layer.js:95:5)
+[2020-08-08T14:49:21.984] [ERROR] app - アクセスエラー TypeError: Cannot read property 'CODE_5008' of undefined
+    at /Users/teroron/Desktop/PBL/PBL2020/OreSupport/ore-SupportServer/oreServer/common/check.token.js:24:29
+    at Object.module.exports [as verify] (/Users/teroron/Desktop/PBL/PBL2020/OreSupport/ore-SupportServer/oreServer/node_modules/jsonwebtoken/verify.js:63:12)
+    at verifyUser (/Users/teroron/Desktop/PBL/PBL2020/OreSupport/ore-SupportServer/oreServer/common/check.token.js:20:12)
+    at Layer.handle [as handle_request] (/Users/teroron/Desktop/PBL/PBL2020/OreSupport/ore-SupportServer/oreServer/node_modules/express/lib/router/layer.js:95:5)
+    at next (/Users/teroron/Desktop/PBL/PBL2020/OreSupport/ore-SupportServer/oreServer/node_modules/express/lib/router/route.js:137:13)
+    at Route.dispatch (/Users/teroron/Desktop/PBL/PBL2020/OreSupport/ore-SupportServer/oreServer/node_modules/express/lib/router/route.js:112:3)
+    at Layer.handle [as handle_request] (/Users/teroron/Desktop/PBL/PBL2020/OreSupport/ore-SupportServer/oreServer/node_modules/express/lib/router/layer.js:95:5)
+    at /Users/teroron/Desktop/PBL/PBL2020/OreSupport/ore-SupportServer/oreServer/node_modules/express/lib/router/index.js:281:22
+    at Function.process_params (/Users/teroron/Desktop/PBL/PBL2020/OreSupport/ore-SupportServer/oreServer/node_modules/express/lib/router/index.js:335:12)
+    at next (/Users/teroron/Desktop/PBL/PBL2020/OreSupport/ore-SupportServer/oreServer/node_modules/express/lib/router/index.js:275:10)
+    at Function.handle (/Users/teroron/Desktop/PBL/PBL2020/OreSupport/ore-SupportServer/oreServer/node_modules/express/lib/router/index.js:174:3)
+    at router (/Users/teroron/Desktop/PBL/PBL2020/OreSupport/ore-SupportServer/oreServer/node_modules/express/lib/router/index.js:47:12)
+    at Layer.handle [as handle_request] (/Users/teroron/Desktop/PBL/PBL2020/OreSupport/ore-SupportServer/oreServer/node_modules/express/lib/router/layer.js:95:5)
+    at trim_prefix (/Users/teroron/Desktop/PBL/PBL2020/OreSupport/ore-SupportServer/oreServer/node_modules/express/lib/router/index.js:317:13)
+    at /Users/teroron/Desktop/PBL/PBL2020/OreSupport/ore-SupportServer/oreServer/node_modules/express/lib/router/index.js:284:7
+    at Function.process_params (/Users/teroron/Desktop/PBL/PBL2020/OreSupport/ore-SupportServer/oreServer/node_modules/express/lib/router/index.js:335:12)
+    at next (/Users/teroron/Desktop/PBL/PBL2020/OreSupport/ore-SupportServer/oreServer/node_modules/express/lib/router/index.js:275:10)
+    at /Users/teroron/Desktop/PBL/PBL2020/OreSupport/ore-SupportServer/oreServer/node_modules/express/lib/router/index.js:635:15
+    at next (/Users/teroron/Desktop/PBL/PBL2020/OreSupport/ore-SupportServer/oreServer/node_modules/express/lib/router/index.js:260:14)
+    at Function.handle (/Users/teroron/Desktop/PBL/PBL2020/OreSupport/ore-SupportServer/oreServer/node_modules/express/lib/router/index.js:174:3)
+    at router (/Users/teroron/Desktop/PBL/PBL2020/OreSupport/ore-SupportServer/oreServer/node_modules/express/lib/router/index.js:47:12)
+    at Layer.handle [as handle_request] (/Users/teroron/Desktop/PBL/PBL2020/OreSupport/ore-SupportServer/oreServer/node_modules/express/lib/router/layer.js:95:5)
+[2020-08-08T14:49:22.377] [ERROR] app - アクセスエラー TypeError: Cannot read property 'CODE_5008' of undefined
+    at /Users/teroron/Desktop/PBL/PBL2020/OreSupport/ore-SupportServer/oreServer/common/check.token.js:24:29
+    at Object.module.exports [as verify] (/Users/teroron/Desktop/PBL/PBL2020/OreSupport/ore-SupportServer/oreServer/node_modules/jsonwebtoken/verify.js:63:12)
+    at verifyUser (/Users/teroron/Desktop/PBL/PBL2020/OreSupport/ore-SupportServer/oreServer/common/check.token.js:20:12)
+    at Layer.handle [as handle_request] (/Users/teroron/Desktop/PBL/PBL2020/OreSupport/ore-SupportServer/oreServer/node_modules/express/lib/router/layer.js:95:5)
+    at next (/Users/teroron/Desktop/PBL/PBL2020/OreSupport/ore-SupportServer/oreServer/node_modules/express/lib/router/route.js:137:13)
+    at Route.dispatch (/Users/teroron/Desktop/PBL/PBL2020/OreSupport/ore-SupportServer/oreServer/node_modules/express/lib/router/route.js:112:3)
+    at Layer.handle [as handle_request] (/Users/teroron/Desktop/PBL/PBL2020/OreSupport/ore-SupportServer/oreServer/node_modules/express/lib/router/layer.js:95:5)
+    at /Users/teroron/Desktop/PBL/PBL2020/OreSupport/ore-SupportServer/oreServer/node_modules/express/lib/router/index.js:281:22
+    at Function.process_params (/Users/teroron/Desktop/PBL/PBL2020/OreSupport/ore-SupportServer/oreServer/node_modules/express/lib/router/index.js:335:12)
+    at next (/Users/teroron/Desktop/PBL/PBL2020/OreSupport/ore-SupportServer/oreServer/node_modules/express/lib/router/index.js:275:10)
+    at Function.handle (/Users/teroron/Desktop/PBL/PBL2020/OreSupport/ore-SupportServer/oreServer/node_modules/express/lib/router/index.js:174:3)
+    at router (/Users/teroron/Desktop/PBL/PBL2020/OreSupport/ore-SupportServer/oreServer/node_modules/express/lib/router/index.js:47:12)
+    at Layer.handle [as handle_request] (/Users/teroron/Desktop/PBL/PBL2020/OreSupport/ore-SupportServer/oreServer/node_modules/express/lib/router/layer.js:95:5)
+    at trim_prefix (/Users/teroron/Desktop/PBL/PBL2020/OreSupport/ore-SupportServer/oreServer/node_modules/express/lib/router/index.js:317:13)
+    at /Users/teroron/Desktop/PBL/PBL2020/OreSupport/ore-SupportServer/oreServer/node_modules/express/lib/router/index.js:284:7
+    at Function.process_params (/Users/teroron/Desktop/PBL/PBL2020/OreSupport/ore-SupportServer/oreServer/node_modules/express/lib/router/index.js:335:12)
+    at next (/Users/teroron/Desktop/PBL/PBL2020/OreSupport/ore-SupportServer/oreServer/node_modules/express/lib/router/index.js:275:10)
+    at /Users/teroron/Desktop/PBL/PBL2020/OreSupport/ore-SupportServer/oreServer/node_modules/express/lib/router/index.js:635:15
+    at next (/Users/teroron/Desktop/PBL/PBL2020/OreSupport/ore-SupportServer/oreServer/node_modules/express/lib/router/index.js:260:14)
+    at Function.handle (/Users/teroron/Desktop/PBL/PBL2020/OreSupport/ore-SupportServer/oreServer/node_modules/express/lib/router/index.js:174:3)
+    at router (/Users/teroron/Desktop/PBL/PBL2020/OreSupport/ore-SupportServer/oreServer/node_modules/express/lib/router/index.js:47:12)
+    at Layer.handle [as handle_request] (/Users/teroron/Desktop/PBL/PBL2020/OreSupport/ore-SupportServer/oreServer/node_modules/express/lib/router/layer.js:95:5)
+[2020-08-08T14:49:22.771] [ERROR] app - アクセスエラー TypeError: Cannot read property 'CODE_5008' of undefined
+    at /Users/teroron/Desktop/PBL/PBL2020/OreSupport/ore-SupportServer/oreServer/common/check.token.js:24:29
+    at Object.module.exports [as verify] (/Users/teroron/Desktop/PBL/PBL2020/OreSupport/ore-SupportServer/oreServer/node_modules/jsonwebtoken/verify.js:63:12)
+    at verifyUser (/Users/teroron/Desktop/PBL/PBL2020/OreSupport/ore-SupportServer/oreServer/common/check.token.js:20:12)
+    at Layer.handle [as handle_request] (/Users/teroron/Desktop/PBL/PBL2020/OreSupport/ore-SupportServer/oreServer/node_modules/express/lib/router/layer.js:95:5)
+    at next (/Users/teroron/Desktop/PBL/PBL2020/OreSupport/ore-SupportServer/oreServer/node_modules/express/lib/router/route.js:137:13)
+    at Route.dispatch (/Users/teroron/Desktop/PBL/PBL2020/OreSupport/ore-SupportServer/oreServer/node_modules/express/lib/router/route.js:112:3)
+    at Layer.handle [as handle_request] (/Users/teroron/Desktop/PBL/PBL2020/OreSupport/ore-SupportServer/oreServer/node_modules/express/lib/router/layer.js:95:5)
+    at /Users/teroron/Desktop/PBL/PBL2020/OreSupport/ore-SupportServer/oreServer/node_modules/express/lib/router/index.js:281:22
+    at Function.process_params (/Users/teroron/Desktop/PBL/PBL2020/OreSupport/ore-SupportServer/oreServer/node_modules/express/lib/router/index.js:335:12)
+    at next (/Users/teroron/Desktop/PBL/PBL2020/OreSupport/ore-SupportServer/oreServer/node_modules/express/lib/router/index.js:275:10)
+    at Function.handle (/Users/teroron/Desktop/PBL/PBL2020/OreSupport/ore-SupportServer/oreServer/node_modules/express/lib/router/index.js:174:3)
+    at router (/Users/teroron/Desktop/PBL/PBL2020/OreSupport/ore-SupportServer/oreServer/node_modules/express/lib/router/index.js:47:12)
+    at Layer.handle [as handle_request] (/Users/teroron/Desktop/PBL/PBL2020/OreSupport/ore-SupportServer/oreServer/node_modules/express/lib/router/layer.js:95:5)
+    at trim_prefix (/Users/teroron/Desktop/PBL/PBL2020/OreSupport/ore-SupportServer/oreServer/node_modules/express/lib/router/index.js:317:13)
+    at /Users/teroron/Desktop/PBL/PBL2020/OreSupport/ore-SupportServer/oreServer/node_modules/express/lib/router/index.js:284:7
+    at Function.process_params (/Users/teroron/Desktop/PBL/PBL2020/OreSupport/ore-SupportServer/oreServer/node_modules/express/lib/router/index.js:335:12)
+    at next (/Users/teroron/Desktop/PBL/PBL2020/OreSupport/ore-SupportServer/oreServer/node_modules/express/lib/router/index.js:275:10)
+    at /Users/teroron/Desktop/PBL/PBL2020/OreSupport/ore-SupportServer/oreServer/node_modules/express/lib/router/index.js:635:15
+    at next (/Users/teroron/Desktop/PBL/PBL2020/OreSupport/ore-SupportServer/oreServer/node_modules/express/lib/router/index.js:260:14)
+    at Function.handle (/Users/teroron/Desktop/PBL/PBL2020/OreSupport/ore-SupportServer/oreServer/node_modules/express/lib/router/index.js:174:3)
+    at router (/Users/teroron/Desktop/PBL/PBL2020/OreSupport/ore-SupportServer/oreServer/node_modules/express/lib/router/index.js:47:12)
+    at Layer.handle [as handle_request] (/Users/teroron/Desktop/PBL/PBL2020/OreSupport/ore-SupportServer/oreServer/node_modules/express/lib/router/layer.js:95:5)
+[2020-08-08T14:49:23.182] [ERROR] app - アクセスエラー TypeError: Cannot read property 'CODE_5008' of undefined
+    at /Users/teroron/Desktop/PBL/PBL2020/OreSupport/ore-SupportServer/oreServer/common/check.token.js:24:29
+    at Object.module.exports [as verify] (/Users/teroron/Desktop/PBL/PBL2020/OreSupport/ore-SupportServer/oreServer/node_modules/jsonwebtoken/verify.js:63:12)
+    at verifyUser (/Users/teroron/Desktop/PBL/PBL2020/OreSupport/ore-SupportServer/oreServer/common/check.token.js:20:12)
+    at Layer.handle [as handle_request] (/Users/teroron/Desktop/PBL/PBL2020/OreSupport/ore-SupportServer/oreServer/node_modules/express/lib/router/layer.js:95:5)
+    at next (/Users/teroron/Desktop/PBL/PBL2020/OreSupport/ore-SupportServer/oreServer/node_modules/express/lib/router/route.js:137:13)
+    at Route.dispatch (/Users/teroron/Desktop/PBL/PBL2020/OreSupport/ore-SupportServer/oreServer/node_modules/express/lib/router/route.js:112:3)
+    at Layer.handle [as handle_request] (/Users/teroron/Desktop/PBL/PBL2020/OreSupport/ore-SupportServer/oreServer/node_modules/express/lib/router/layer.js:95:5)
+    at /Users/teroron/Desktop/PBL/PBL2020/OreSupport/ore-SupportServer/oreServer/node_modules/express/lib/router/index.js:281:22
+    at Function.process_params (/Users/teroron/Desktop/PBL/PBL2020/OreSupport/ore-SupportServer/oreServer/node_modules/express/lib/router/index.js:335:12)
+    at next (/Users/teroron/Desktop/PBL/PBL2020/OreSupport/ore-SupportServer/oreServer/node_modules/express/lib/router/index.js:275:10)
+    at Function.handle (/Users/teroron/Desktop/PBL/PBL2020/OreSupport/ore-SupportServer/oreServer/node_modules/express/lib/router/index.js:174:3)
+    at router (/Users/teroron/Desktop/PBL/PBL2020/OreSupport/ore-SupportServer/oreServer/node_modules/express/lib/router/index.js:47:12)
+    at Layer.handle [as handle_request] (/Users/teroron/Desktop/PBL/PBL2020/OreSupport/ore-SupportServer/oreServer/node_modules/express/lib/router/layer.js:95:5)
+    at trim_prefix (/Users/teroron/Desktop/PBL/PBL2020/OreSupport/ore-SupportServer/oreServer/node_modules/express/lib/router/index.js:317:13)
+    at /Users/teroron/Desktop/PBL/PBL2020/OreSupport/ore-SupportServer/oreServer/node_modules/express/lib/router/index.js:284:7
+    at Function.process_params (/Users/teroron/Desktop/PBL/PBL2020/OreSupport/ore-SupportServer/oreServer/node_modules/express/lib/router/index.js:335:12)
+    at next (/Users/teroron/Desktop/PBL/PBL2020/OreSupport/ore-SupportServer/oreServer/node_modules/express/lib/router/index.js:275:10)
+    at /Users/teroron/Desktop/PBL/PBL2020/OreSupport/ore-SupportServer/oreServer/node_modules/express/lib/router/index.js:635:15
+    at next (/Users/teroron/Desktop/PBL/PBL2020/OreSupport/ore-SupportServer/oreServer/node_modules/express/lib/router/index.js:260:14)
+    at Function.handle (/Users/teroron/Desktop/PBL/PBL2020/OreSupport/ore-SupportServer/oreServer/node_modules/express/lib/router/index.js:174:3)
+    at router (/Users/teroron/Desktop/PBL/PBL2020/OreSupport/ore-SupportServer/oreServer/node_modules/express/lib/router/index.js:47:12)
+    at Layer.handle [as handle_request] (/Users/teroron/Desktop/PBL/PBL2020/OreSupport/ore-SupportServer/oreServer/node_modules/express/lib/router/layer.js:95:5)
+[2020-08-08T14:49:32.305] [INFO] users - ユーザログ UserName:1@1.com
+[2020-08-08T14:49:32.306] [INFO] userDao - START getUserInfoByUserName: {"username":"1@1.com"}
+[2020-08-08T14:49:32.407] [INFO] userDao - END getUserInfoByUserName
+[2020-08-08T14:49:32.507] [INFO] users - login success UserID: 49
+[2020-08-08T14:49:32.520] [INFO] users - profileInfo userID: 49
+[2020-08-08T14:49:32.521] [INFO] userDao - START getUserProfileByUserID : {"key":"UserID","val":49}
+[2020-08-08T14:49:32.550] [ERROR] userDao - getUserProfileByUserID error:SequelizeDatabaseError: Unknown column 'UserProfile.sns_facebook' in 'field list'
+    at Query.formatError (/Users/teroron/Desktop/PBL/PBL2020/OreSupport/ore-SupportServer/oreServer/node_modules/sequelize/lib/dialects/mysql/query.js:244:16)
+    at Query.handler [as onResult] (/Users/teroron/Desktop/PBL/PBL2020/OreSupport/ore-SupportServer/oreServer/node_modules/sequelize/lib/dialects/mysql/query.js:51:23)
+    at Query.execute (/Users/teroron/Desktop/PBL/PBL2020/OreSupport/ore-SupportServer/oreServer/node_modules/mysql2/lib/commands/command.js:30:14)
+    at Connection.handlePacket (/Users/teroron/Desktop/PBL/PBL2020/OreSupport/ore-SupportServer/oreServer/node_modules/mysql2/lib/connection.js:417:32)
+    at PacketParser.onPacket (/Users/teroron/Desktop/PBL/PBL2020/OreSupport/ore-SupportServer/oreServer/node_modules/mysql2/lib/connection.js:75:12)
+    at PacketParser.executeStart (/Users/teroron/Desktop/PBL/PBL2020/OreSupport/ore-SupportServer/oreServer/node_modules/mysql2/lib/packet_parser.js:75:16)
+    at Socket.<anonymous> (/Users/teroron/Desktop/PBL/PBL2020/OreSupport/ore-SupportServer/oreServer/node_modules/mysql2/lib/connection.js:82:25)
+    at Socket.emit (events.js:311:20)
+    at addChunk (_stream_readable.js:294:12)
+    at readableAddChunk (_stream_readable.js:275:11)
+    at Socket.Readable.push (_stream_readable.js:209:10)
+    at TCP.onStreamRead (internal/stream_base_commons.js:186:23)
+[2020-08-08T14:49:39.126] [INFO] users - ユーザログ UserName:1@1.com
+[2020-08-08T14:49:39.126] [INFO] userDao - START getUserInfoByUserName: {"username":"1@1.com"}
+[2020-08-08T14:49:39.130] [INFO] userDao - END getUserInfoByUserName
+[2020-08-08T14:49:39.216] [INFO] users - login success UserID: 49
+[2020-08-08T14:49:39.230] [INFO] users - profileInfo userID: 49
+[2020-08-08T14:49:39.230] [INFO] userDao - START getUserProfileByUserID : {"key":"UserID","val":49}
+[2020-08-08T14:49:39.235] [ERROR] userDao - getUserProfileByUserID error:SequelizeDatabaseError: Unknown column 'UserProfile.sns_facebook' in 'field list'
+    at Query.formatError (/Users/teroron/Desktop/PBL/PBL2020/OreSupport/ore-SupportServer/oreServer/node_modules/sequelize/lib/dialects/mysql/query.js:244:16)
+    at Query.handler [as onResult] (/Users/teroron/Desktop/PBL/PBL2020/OreSupport/ore-SupportServer/oreServer/node_modules/sequelize/lib/dialects/mysql/query.js:51:23)
+    at Query.execute (/Users/teroron/Desktop/PBL/PBL2020/OreSupport/ore-SupportServer/oreServer/node_modules/mysql2/lib/commands/command.js:30:14)
+    at Connection.handlePacket (/Users/teroron/Desktop/PBL/PBL2020/OreSupport/ore-SupportServer/oreServer/node_modules/mysql2/lib/connection.js:417:32)
+    at PacketParser.onPacket (/Users/teroron/Desktop/PBL/PBL2020/OreSupport/ore-SupportServer/oreServer/node_modules/mysql2/lib/connection.js:75:12)
+    at PacketParser.executeStart (/Users/teroron/Desktop/PBL/PBL2020/OreSupport/ore-SupportServer/oreServer/node_modules/mysql2/lib/packet_parser.js:75:16)
+    at Socket.<anonymous> (/Users/teroron/Desktop/PBL/PBL2020/OreSupport/ore-SupportServer/oreServer/node_modules/mysql2/lib/connection.js:82:25)
+    at Socket.emit (events.js:311:20)
+    at addChunk (_stream_readable.js:294:12)
+    at readableAddChunk (_stream_readable.js:275:11)
+    at Socket.Readable.push (_stream_readable.js:209:10)
+    at TCP.onStreamRead (internal/stream_base_commons.js:186:23)
+[2020-08-08T14:50:50.284] [INFO] startup - Listening on port 3000
+[2020-08-08T14:50:53.841] [INFO] users - profileInfo userID: 49
+[2020-08-08T14:52:01.961] [INFO] users - profileInfo userID: 49
+[2020-08-08T14:57:36.613] [INFO] users - profileInfo userID: 49
+[2020-08-08T15:12:09.254] [INFO] users - profileInfo userID: 49
+[2020-08-08T15:14:17.130] [INFO] users - profileInfo userID: 49
+[2020-08-08T15:25:46.308] [INFO] users - profileInfo userID: 49
+[2020-08-08T15:28:07.543] [INFO] users - profileInfo userID: 49
+[2020-08-08T22:04:12.468] [INFO] users - profileInfo userID: 49
+[2020-08-08T22:27:55.104] [INFO] users - profileInfo userID: 49
+[2020-08-08T23:10:08.549] [INFO] users - profileInfo userID: 49
+[2020-08-08T23:10:11.397] [INFO] users - profileInfo userID: 49
+[2020-08-08T23:12:19.714] [INFO] users - profileInfo userID: 49
+[2020-08-09T00:01:52.814] [INFO] users - profileInfo userID: 49
+[2020-08-09T00:12:54.946] [INFO] users - profileInfo userID: 49
+[2020-08-09T00:21:39.441] [INFO] users - profileInfo userID: 49
+[2020-08-09T00:23:37.806] [INFO] users - profileInfo userID: 49
+[2020-08-09T00:25:00.528] [INFO] users - profileInfo userID: 49
+[2020-08-09T00:36:13.439] [INFO] users - profileInfo userID: 49
+[2020-08-10T17:41:42.278] [ERROR] app - アクセスエラー TypeError: Cannot read property 'CODE_5008' of undefined
+    at /Users/teroron/Desktop/PBL/PBL2020/OreSupport/ore-SupportServer/oreServer/common/check.token.js:24:29
+    at /Users/teroron/Desktop/PBL/PBL2020/OreSupport/ore-SupportServer/oreServer/node_modules/jsonwebtoken/verify.js:152:16
+    at getSecret (/Users/teroron/Desktop/PBL/PBL2020/OreSupport/ore-SupportServer/oreServer/node_modules/jsonwebtoken/verify.js:90:14)
+    at Object.module.exports [as verify] (/Users/teroron/Desktop/PBL/PBL2020/OreSupport/ore-SupportServer/oreServer/node_modules/jsonwebtoken/verify.js:94:10)
+    at verifyUser (/Users/teroron/Desktop/PBL/PBL2020/OreSupport/ore-SupportServer/oreServer/common/check.token.js:20:12)
+    at Layer.handle [as handle_request] (/Users/teroron/Desktop/PBL/PBL2020/OreSupport/ore-SupportServer/oreServer/node_modules/express/lib/router/layer.js:95:5)
+    at next (/Users/teroron/Desktop/PBL/PBL2020/OreSupport/ore-SupportServer/oreServer/node_modules/express/lib/router/route.js:137:13)
+    at Route.dispatch (/Users/teroron/Desktop/PBL/PBL2020/OreSupport/ore-SupportServer/oreServer/node_modules/express/lib/router/route.js:112:3)
+    at Layer.handle [as handle_request] (/Users/teroron/Desktop/PBL/PBL2020/OreSupport/ore-SupportServer/oreServer/node_modules/express/lib/router/layer.js:95:5)
+    at /Users/teroron/Desktop/PBL/PBL2020/OreSupport/ore-SupportServer/oreServer/node_modules/express/lib/router/index.js:281:22
+    at Function.process_params (/Users/teroron/Desktop/PBL/PBL2020/OreSupport/ore-SupportServer/oreServer/node_modules/express/lib/router/index.js:335:12)
+    at next (/Users/teroron/Desktop/PBL/PBL2020/OreSupport/ore-SupportServer/oreServer/node_modules/express/lib/router/index.js:275:10)
+    at Function.handle (/Users/teroron/Desktop/PBL/PBL2020/OreSupport/ore-SupportServer/oreServer/node_modules/express/lib/router/index.js:174:3)
+    at router (/Users/teroron/Desktop/PBL/PBL2020/OreSupport/ore-SupportServer/oreServer/node_modules/express/lib/router/index.js:47:12)
+    at Layer.handle [as handle_request] (/Users/teroron/Desktop/PBL/PBL2020/OreSupport/ore-SupportServer/oreServer/node_modules/express/lib/router/layer.js:95:5)
+    at trim_prefix (/Users/teroron/Desktop/PBL/PBL2020/OreSupport/ore-SupportServer/oreServer/node_modules/express/lib/router/index.js:317:13)
+    at /Users/teroron/Desktop/PBL/PBL2020/OreSupport/ore-SupportServer/oreServer/node_modules/express/lib/router/index.js:284:7
+    at Function.process_params (/Users/teroron/Desktop/PBL/PBL2020/OreSupport/ore-SupportServer/oreServer/node_modules/express/lib/router/index.js:335:12)
+    at next (/Users/teroron/Desktop/PBL/PBL2020/OreSupport/ore-SupportServer/oreServer/node_modules/express/lib/router/index.js:275:10)
+    at /Users/teroron/Desktop/PBL/PBL2020/OreSupport/ore-SupportServer/oreServer/node_modules/express/lib/router/index.js:635:15
+    at next (/Users/teroron/Desktop/PBL/PBL2020/OreSupport/ore-SupportServer/oreServer/node_modules/express/lib/router/index.js:260:14)
+    at Function.handle (/Users/teroron/Desktop/PBL/PBL2020/OreSupport/ore-SupportServer/oreServer/node_modules/express/lib/router/index.js:174:3)
+[2020-08-10T17:41:50.124] [ERROR] app - アクセスエラー TypeError: Cannot read property 'CODE_5008' of undefined
+    at /Users/teroron/Desktop/PBL/PBL2020/OreSupport/ore-SupportServer/oreServer/common/check.token.js:24:29
+    at /Users/teroron/Desktop/PBL/PBL2020/OreSupport/ore-SupportServer/oreServer/node_modules/jsonwebtoken/verify.js:152:16
+    at getSecret (/Users/teroron/Desktop/PBL/PBL2020/OreSupport/ore-SupportServer/oreServer/node_modules/jsonwebtoken/verify.js:90:14)
+    at Object.module.exports [as verify] (/Users/teroron/Desktop/PBL/PBL2020/OreSupport/ore-SupportServer/oreServer/node_modules/jsonwebtoken/verify.js:94:10)
+    at verifyUser (/Users/teroron/Desktop/PBL/PBL2020/OreSupport/ore-SupportServer/oreServer/common/check.token.js:20:12)
+    at Layer.handle [as handle_request] (/Users/teroron/Desktop/PBL/PBL2020/OreSupport/ore-SupportServer/oreServer/node_modules/express/lib/router/layer.js:95:5)
+    at next (/Users/teroron/Desktop/PBL/PBL2020/OreSupport/ore-SupportServer/oreServer/node_modules/express/lib/router/route.js:137:13)
+    at Route.dispatch (/Users/teroron/Desktop/PBL/PBL2020/OreSupport/ore-SupportServer/oreServer/node_modules/express/lib/router/route.js:112:3)
+    at Layer.handle [as handle_request] (/Users/teroron/Desktop/PBL/PBL2020/OreSupport/ore-SupportServer/oreServer/node_modules/express/lib/router/layer.js:95:5)
+    at /Users/teroron/Desktop/PBL/PBL2020/OreSupport/ore-SupportServer/oreServer/node_modules/express/lib/router/index.js:281:22
+    at Function.process_params (/Users/teroron/Desktop/PBL/PBL2020/OreSupport/ore-SupportServer/oreServer/node_modules/express/lib/router/index.js:335:12)
+    at next (/Users/teroron/Desktop/PBL/PBL2020/OreSupport/ore-SupportServer/oreServer/node_modules/express/lib/router/index.js:275:10)
+    at Function.handle (/Users/teroron/Desktop/PBL/PBL2020/OreSupport/ore-SupportServer/oreServer/node_modules/express/lib/router/index.js:174:3)
+    at router (/Users/teroron/Desktop/PBL/PBL2020/OreSupport/ore-SupportServer/oreServer/node_modules/express/lib/router/index.js:47:12)
+    at Layer.handle [as handle_request] (/Users/teroron/Desktop/PBL/PBL2020/OreSupport/ore-SupportServer/oreServer/node_modules/express/lib/router/layer.js:95:5)
+    at trim_prefix (/Users/teroron/Desktop/PBL/PBL2020/OreSupport/ore-SupportServer/oreServer/node_modules/express/lib/router/index.js:317:13)
+    at /Users/teroron/Desktop/PBL/PBL2020/OreSupport/ore-SupportServer/oreServer/node_modules/express/lib/router/index.js:284:7
+    at Function.process_params (/Users/teroron/Desktop/PBL/PBL2020/OreSupport/ore-SupportServer/oreServer/node_modules/express/lib/router/index.js:335:12)
+    at next (/Users/teroron/Desktop/PBL/PBL2020/OreSupport/ore-SupportServer/oreServer/node_modules/express/lib/router/index.js:275:10)
+    at /Users/teroron/Desktop/PBL/PBL2020/OreSupport/ore-SupportServer/oreServer/node_modules/express/lib/router/index.js:635:15
+    at next (/Users/teroron/Desktop/PBL/PBL2020/OreSupport/ore-SupportServer/oreServer/node_modules/express/lib/router/index.js:260:14)
+    at Function.handle (/Users/teroron/Desktop/PBL/PBL2020/OreSupport/ore-SupportServer/oreServer/node_modules/express/lib/router/index.js:174:3)
+[2020-08-10T17:42:43.422] [INFO] users - ユーザログ UserName:1@1.com
+[2020-08-10T17:42:43.423] [INFO] userDao - START getUserInfoByUserName: {"username":"1@1.com"}
+[2020-08-10T17:42:43.512] [INFO] userDao - END getUserInfoByUserName
+[2020-08-10T17:42:43.613] [INFO] users - login success UserID: 49
+[2020-08-10T17:42:43.626] [INFO] users - profileInfo userID: 49
+[2020-08-10T17:42:43.627] [INFO] userDao - START getUserProfileByUserID : {"key":"UserID","val":49}
+[2020-08-10T17:42:43.659] [INFO] userDao - END getUserProfileByUserID
+[2020-08-10T17:42:43.661] [INFO] users - profileInfo success
+[2020-08-10T17:46:21.030] [INFO] users - profileInfo userID: 49
+[2020-08-10T17:46:21.030] [INFO] userDao - START getUserProfileByUserID : {"key":"UserID","val":49}
+[2020-08-10T17:46:21.044] [INFO] userDao - END getUserProfileByUserID
+[2020-08-10T17:46:21.045] [INFO] users - profileInfo success
+[2020-08-10T17:46:38.378] [INFO] users - profileInfo userID: 49
+[2020-08-10T17:46:38.378] [INFO] userDao - START getUserProfileByUserID : {"key":"UserID","val":49}
+[2020-08-10T17:46:38.383] [INFO] userDao - END getUserProfileByUserID
+[2020-08-10T17:46:38.383] [INFO] users - profileInfo success
+[2020-08-10T17:49:52.376] [INFO] users - profileInfo userID: 49
+[2020-08-10T17:49:52.376] [INFO] userDao - START getUserProfileByUserID : {"key":"UserID","val":49}
+[2020-08-10T17:49:52.393] [INFO] userDao - END getUserProfileByUserID
+[2020-08-10T17:49:52.393] [INFO] users - profileInfo success
+[2020-08-10T17:49:56.281] [INFO] users - profileInfo userID: 49
+[2020-08-10T17:49:56.281] [INFO] userDao - START getUserProfileByUserID : {"key":"UserID","val":49}
+[2020-08-10T17:49:56.288] [INFO] userDao - END getUserProfileByUserID
+[2020-08-10T17:49:56.288] [INFO] users - profileInfo success
+[2020-08-10T17:52:26.872] [INFO] users - profileInfo userID: 49
+[2020-08-10T17:52:26.872] [INFO] userDao - START getUserProfileByUserID : {"key":"UserID","val":49}
+[2020-08-10T17:52:26.888] [INFO] userDao - END getUserProfileByUserID
+[2020-08-10T17:52:26.888] [INFO] users - profileInfo success
+[2020-08-10T17:57:22.621] [INFO] users - profileInfo userID: 49
+[2020-08-10T17:57:22.621] [INFO] userDao - START getUserProfileByUserID : {"key":"UserID","val":49}
+[2020-08-10T17:57:22.728] [INFO] userDao - END getUserProfileByUserID
+[2020-08-10T17:57:22.729] [INFO] users - profileInfo success
+[2020-08-10T18:24:01.717] [INFO] users - profileInfo userID: 49
+[2020-08-10T18:24:01.717] [INFO] userDao - START getUserProfileByUserID : {"key":"UserID","val":49}
+[2020-08-10T18:24:01.731] [INFO] userDao - END getUserProfileByUserID
+[2020-08-10T18:24:01.731] [INFO] users - profileInfo success
+[2020-08-10T18:24:23.612] [INFO] users - profileInfo userID: 49
+[2020-08-10T18:24:23.613] [INFO] userDao - START getUserProfileByUserID : {"key":"UserID","val":49}
+[2020-08-10T18:24:23.626] [INFO] userDao - END getUserProfileByUserID
+[2020-08-10T18:24:23.626] [INFO] users - profileInfo success
+[2020-08-10T18:26:37.711] [INFO] users - profileInfo userID: 49
+[2020-08-10T18:26:37.712] [INFO] userDao - START getUserProfileByUserID : {"key":"UserID","val":49}
+[2020-08-10T18:26:37.724] [INFO] userDao - END getUserProfileByUserID
+[2020-08-10T18:26:37.724] [INFO] users - profileInfo success
+[2020-08-10T18:31:23.002] [INFO] users - profileInfo userID: 49
+[2020-08-10T18:31:23.002] [INFO] userDao - START getUserProfileByUserID : {"key":"UserID","val":49}
+[2020-08-10T18:31:23.017] [INFO] userDao - END getUserProfileByUserID
+[2020-08-10T18:31:23.018] [INFO] users - profileInfo success
+[2020-08-10T19:02:50.926] [INFO] startup - Listening on port 3000
+[2020-08-10T19:05:03.016] [INFO] users - profileInfo userID: 49
+[2020-08-10T19:07:56.638] [INFO] users - profileInfo userID: 49
+[2020-08-10T19:13:48.384] [INFO] users - profileInfo userID: 49
+[2020-08-10T19:17:19.161] [INFO] users - profileInfo userID: 49
+[2020-08-10T19:17:56.805] [INFO] users - profileInfo userID: 49
+[2020-08-10T19:29:37.601] [INFO] startup - Listening on port 3000
+[2020-08-10T19:30:55.701] [INFO] users - profileInfo userID: 49
+[2020-08-10T19:31:00.685] [INFO] users - profileInfo userID: 49
+[2020-08-10T19:31:02.462] [INFO] users - profileInfo userID: 49
+[2020-08-10T19:31:03.715] [INFO] users - profileInfo userID: 49
+[2020-08-10T19:33:11.495] [INFO] users - profileInfo userID: 49
+[2020-08-10T19:34:06.372] [INFO] users - profileInfo userID: 49
+[2020-08-10T19:34:21.900] [INFO] users - profileInfo userID: 49
+[2020-08-10T19:34:23.914] [INFO] users - profileInfo userID: 49
+[2020-08-10T19:34:27.009] [INFO] users - profileInfo userID: 49
+[2020-08-10T19:34:32.396] [INFO] users - profileInfo userID: 49
+[2020-08-10T19:34:46.321] [INFO] users - profileInfo userID: 49
+[2020-08-10T19:34:49.519] [INFO] users - profileInfo userID: 49
+[2020-08-10T19:34:50.679] [INFO] users - profileInfo userID: 49
+[2020-08-10T19:35:56.593] [INFO] users - profileInfo userID: 49
+[2020-08-10T19:40:46.536] [INFO] users - profileInfo userID: 49
+[2020-08-10T19:40:51.459] [INFO] users - profileInfo userID: 49
+[2020-08-10T19:53:18.531] [INFO] startup - Listening on port 3000
+[2020-08-10T19:55:13.517] [INFO] users - profileInfo userID: 49
+[2020-08-10T21:54:19.461] [INFO] users - profileInfo userID: 49
+[2020-08-10T21:57:37.994] [INFO] users - profileInfo userID: 49
+[2020-08-15T19:06:36.454] [INFO] startup - Listening on port 3000
+[2020-08-15T19:07:24.587] [INFO] users - ユーザログ UserName:1@1.com
+[2020-08-15T19:07:24.588] [INFO] userDao - START getUserInfoByUserName: {"username":"1@1.com"}
+[2020-08-15T19:07:24.619] [INFO] userDao - END getUserInfoByUserName
+[2020-08-15T19:07:24.734] [INFO] users - login success UserID: 49
+[2020-08-15T19:07:24.750] [INFO] users - profileInfo userID: 49
+[2020-08-15T19:07:24.751] [INFO] userDao - START getUserProfileByUserID : {"key":"UserID","val":49}
+[2020-08-15T19:07:24.768] [INFO] userDao - END getUserProfileByUserID
+[2020-08-15T19:07:24.769] [INFO] users - profileInfo success
+[2020-08-15T23:54:12.847] [INFO] startup - Listening on port 3000
+[2020-08-15T23:54:20.648] [INFO] users - profileInfo userID: 49
+[2020-08-16T00:43:05.826] [INFO] startup - Listening on port 3000
+[2020-08-16T00:44:23.634] [INFO] users - profileInfo userID: 49
+[2020-08-16T00:44:30.608] [INFO] users - profileInfo userID: 49
+[2020-08-16T00:45:06.760] [INFO] users - profileInfo userID: 49
+[2020-08-16T00:46:01.541] [INFO] users - profileInfo userID: 49
+[2020-08-16T00:46:16.999] [INFO] users - profileInfo userID: 49
+[2020-08-16T00:53:06.757] [INFO] users - profileInfo userID: 49
+[2020-08-17T21:09:36.738] [INFO] startup - Listening on port 3000
+[2020-08-17T21:10:31.184] [INFO] users - ユーザログ UserName:1@1.com
+[2020-08-17T21:10:31.184] [INFO] userDao - START getUserInfoByUserName: {"username":"1@1.com"}
+[2020-08-17T21:10:31.234] [INFO] userDao - END getUserInfoByUserName
+[2020-08-17T21:10:31.327] [INFO] users - login success UserID: 49
+[2020-08-17T21:10:31.347] [INFO] users - profileInfo userID: 49
+[2020-08-17T21:10:31.348] [INFO] userDao - START getUserProfileByUserID : {"key":"UserID","val":49}
+[2020-08-17T21:10:31.376] [INFO] userDao - END getUserProfileByUserID
+[2020-08-17T21:10:31.377] [INFO] users - profileInfo success
+[2020-08-17T21:11:40.827] [INFO] users - profileInfo userID: 49
+[2020-08-17T21:11:40.827] [INFO] userDao - START getUserProfileByUserID : {"key":"UserID","val":49}
+[2020-08-17T21:11:40.843] [INFO] userDao - END getUserProfileByUserID
+[2020-08-17T21:11:40.843] [INFO] users - profileInfo success
+[2020-08-17T21:12:01.606] [INFO] users - profileInfo userID: 49
+[2020-08-17T21:12:01.607] [INFO] userDao - START getUserProfileByUserID : {"key":"UserID","val":49}
+[2020-08-17T21:12:01.615] [INFO] userDao - END getUserProfileByUserID
+[2020-08-17T21:12:01.616] [INFO] users - profileInfo success
+[2020-08-17T21:12:13.588] [INFO] users - profileInfo userID: 49
+[2020-08-17T21:12:13.588] [INFO] userDao - START getUserProfileByUserID : {"key":"UserID","val":49}
+[2020-08-17T21:12:13.595] [INFO] userDao - END getUserProfileByUserID
+[2020-08-17T21:12:13.595] [INFO] users - profileInfo success
+[2020-08-17T21:12:23.324] [INFO] users - profileInfo userID: 49
+[2020-08-17T21:12:23.325] [INFO] userDao - START getUserProfileByUserID : {"key":"UserID","val":49}
+[2020-08-17T21:12:23.332] [INFO] userDao - END getUserProfileByUserID
+[2020-08-17T21:12:23.332] [INFO] users - profileInfo success
+[2020-08-17T21:12:34.687] [INFO] users - profileInfo userID: 49
+[2020-08-17T21:12:34.688] [INFO] userDao - START getUserProfileByUserID : {"key":"UserID","val":49}
+[2020-08-17T21:12:34.692] [INFO] userDao - END getUserProfileByUserID
+[2020-08-17T21:12:34.692] [INFO] users - profileInfo success
+[2020-08-17T21:14:13.604] [INFO] users - profileInfo userID: 49
+[2020-08-17T21:14:13.604] [INFO] userDao - START getUserProfileByUserID : {"key":"UserID","val":49}
+[2020-08-17T21:14:13.614] [INFO] userDao - END getUserProfileByUserID
+[2020-08-17T21:14:13.615] [INFO] users - profileInfo success
+[2020-08-17T21:14:33.235] [INFO] users - profileInfo userID: 49
+[2020-08-17T21:14:33.235] [INFO] userDao - START getUserProfileByUserID : {"key":"UserID","val":49}
+[2020-08-17T21:14:33.241] [INFO] userDao - END getUserProfileByUserID
+[2020-08-17T21:14:33.241] [INFO] users - profileInfo success
+[2020-08-17T21:15:00.550] [INFO] users - profileInfo userID: 49
+[2020-08-17T21:15:00.550] [INFO] userDao - START getUserProfileByUserID : {"key":"UserID","val":49}
+[2020-08-17T21:15:00.555] [INFO] userDao - END getUserProfileByUserID
+[2020-08-17T21:15:00.555] [INFO] users - profileInfo success
+[2020-08-17T21:15:01.953] [INFO] users - profileInfo userID: 49
+[2020-08-17T21:15:01.953] [INFO] userDao - START getUserProfileByUserID : {"key":"UserID","val":49}
+[2020-08-17T21:15:01.959] [INFO] userDao - END getUserProfileByUserID
+[2020-08-17T21:15:01.959] [INFO] users - profileInfo success
+[2020-08-17T21:15:30.435] [INFO] users - profileInfo userID: 49
+[2020-08-17T21:15:30.435] [INFO] userDao - START getUserProfileByUserID : {"key":"UserID","val":49}
+[2020-08-17T21:15:30.451] [INFO] userDao - END getUserProfileByUserID
+[2020-08-17T21:15:30.451] [INFO] users - profileInfo success
+[2020-08-17T21:16:18.196] [INFO] users - profileInfo userID: 49
+[2020-08-17T21:16:18.197] [INFO] userDao - START getUserProfileByUserID : {"key":"UserID","val":49}
+[2020-08-17T21:16:18.206] [INFO] userDao - END getUserProfileByUserID
+[2020-08-17T21:16:18.206] [INFO] users - profileInfo success
+[2020-08-17T21:17:33.454] [ERROR] app - アクセスエラー TypeError: Cannot read property 'CODE_5008' of undefined
+    at /Users/teroron/Desktop/PBL/PBL2020/OreSupport/ore-SupportServer/oreServer/common/check.token.js:24:29
+    at Object.module.exports [as verify] (/Users/teroron/Desktop/PBL/PBL2020/OreSupport/ore-SupportServer/oreServer/node_modules/jsonwebtoken/verify.js:63:12)
+    at verifyUser (/Users/teroron/Desktop/PBL/PBL2020/OreSupport/ore-SupportServer/oreServer/common/check.token.js:20:12)
+    at Layer.handle [as handle_request] (/Users/teroron/Desktop/PBL/PBL2020/OreSupport/ore-SupportServer/oreServer/node_modules/express/lib/router/layer.js:95:5)
+    at next (/Users/teroron/Desktop/PBL/PBL2020/OreSupport/ore-SupportServer/oreServer/node_modules/express/lib/router/route.js:137:13)
+    at Route.dispatch (/Users/teroron/Desktop/PBL/PBL2020/OreSupport/ore-SupportServer/oreServer/node_modules/express/lib/router/route.js:112:3)
+    at Layer.handle [as handle_request] (/Users/teroron/Desktop/PBL/PBL2020/OreSupport/ore-SupportServer/oreServer/node_modules/express/lib/router/layer.js:95:5)
+    at /Users/teroron/Desktop/PBL/PBL2020/OreSupport/ore-SupportServer/oreServer/node_modules/express/lib/router/index.js:281:22
+    at Function.process_params (/Users/teroron/Desktop/PBL/PBL2020/OreSupport/ore-SupportServer/oreServer/node_modules/express/lib/router/index.js:335:12)
+    at next (/Users/teroron/Desktop/PBL/PBL2020/OreSupport/ore-SupportServer/oreServer/node_modules/express/lib/router/index.js:275:10)
+    at Function.handle (/Users/teroron/Desktop/PBL/PBL2020/OreSupport/ore-SupportServer/oreServer/node_modules/express/lib/router/index.js:174:3)
+    at router (/Users/teroron/Desktop/PBL/PBL2020/OreSupport/ore-SupportServer/oreServer/node_modules/express/lib/router/index.js:47:12)
+    at Layer.handle [as handle_request] (/Users/teroron/Desktop/PBL/PBL2020/OreSupport/ore-SupportServer/oreServer/node_modules/express/lib/router/layer.js:95:5)
+    at trim_prefix (/Users/teroron/Desktop/PBL/PBL2020/OreSupport/ore-SupportServer/oreServer/node_modules/express/lib/router/index.js:317:13)
+    at /Users/teroron/Desktop/PBL/PBL2020/OreSupport/ore-SupportServer/oreServer/node_modules/express/lib/router/index.js:284:7
+    at Function.process_params (/Users/teroron/Desktop/PBL/PBL2020/OreSupport/ore-SupportServer/oreServer/node_modules/express/lib/router/index.js:335:12)
+    at next (/Users/teroron/Desktop/PBL/PBL2020/OreSupport/ore-SupportServer/oreServer/node_modules/express/lib/router/index.js:275:10)
+    at /Users/teroron/Desktop/PBL/PBL2020/OreSupport/ore-SupportServer/oreServer/node_modules/express/lib/router/index.js:635:15
+    at next (/Users/teroron/Desktop/PBL/PBL2020/OreSupport/ore-SupportServer/oreServer/node_modules/express/lib/router/index.js:260:14)
+    at Function.handle (/Users/teroron/Desktop/PBL/PBL2020/OreSupport/ore-SupportServer/oreServer/node_modules/express/lib/router/index.js:174:3)
+    at router (/Users/teroron/Desktop/PBL/PBL2020/OreSupport/ore-SupportServer/oreServer/node_modules/express/lib/router/index.js:47:12)
+    at Layer.handle [as handle_request] (/Users/teroron/Desktop/PBL/PBL2020/OreSupport/ore-SupportServer/oreServer/node_modules/express/lib/router/layer.js:95:5)
+[2020-08-17T21:17:34.789] [ERROR] app - アクセスエラー TypeError: Cannot read property 'CODE_5008' of undefined
+    at /Users/teroron/Desktop/PBL/PBL2020/OreSupport/ore-SupportServer/oreServer/common/check.token.js:24:29
+    at Object.module.exports [as verify] (/Users/teroron/Desktop/PBL/PBL2020/OreSupport/ore-SupportServer/oreServer/node_modules/jsonwebtoken/verify.js:63:12)
+    at verifyUser (/Users/teroron/Desktop/PBL/PBL2020/OreSupport/ore-SupportServer/oreServer/common/check.token.js:20:12)
+    at Layer.handle [as handle_request] (/Users/teroron/Desktop/PBL/PBL2020/OreSupport/ore-SupportServer/oreServer/node_modules/express/lib/router/layer.js:95:5)
+    at next (/Users/teroron/Desktop/PBL/PBL2020/OreSupport/ore-SupportServer/oreServer/node_modules/express/lib/router/route.js:137:13)
+    at Route.dispatch (/Users/teroron/Desktop/PBL/PBL2020/OreSupport/ore-SupportServer/oreServer/node_modules/express/lib/router/route.js:112:3)
+    at Layer.handle [as handle_request] (/Users/teroron/Desktop/PBL/PBL2020/OreSupport/ore-SupportServer/oreServer/node_modules/express/lib/router/layer.js:95:5)
+    at /Users/teroron/Desktop/PBL/PBL2020/OreSupport/ore-SupportServer/oreServer/node_modules/express/lib/router/index.js:281:22
+    at Function.process_params (/Users/teroron/Desktop/PBL/PBL2020/OreSupport/ore-SupportServer/oreServer/node_modules/express/lib/router/index.js:335:12)
+    at next (/Users/teroron/Desktop/PBL/PBL2020/OreSupport/ore-SupportServer/oreServer/node_modules/express/lib/router/index.js:275:10)
+    at Function.handle (/Users/teroron/Desktop/PBL/PBL2020/OreSupport/ore-SupportServer/oreServer/node_modules/express/lib/router/index.js:174:3)
+    at router (/Users/teroron/Desktop/PBL/PBL2020/OreSupport/ore-SupportServer/oreServer/node_modules/express/lib/router/index.js:47:12)
+    at Layer.handle [as handle_request] (/Users/teroron/Desktop/PBL/PBL2020/OreSupport/ore-SupportServer/oreServer/node_modules/express/lib/router/layer.js:95:5)
+    at trim_prefix (/Users/teroron/Desktop/PBL/PBL2020/OreSupport/ore-SupportServer/oreServer/node_modules/express/lib/router/index.js:317:13)
+    at /Users/teroron/Desktop/PBL/PBL2020/OreSupport/ore-SupportServer/oreServer/node_modules/express/lib/router/index.js:284:7
+    at Function.process_params (/Users/teroron/Desktop/PBL/PBL2020/OreSupport/ore-SupportServer/oreServer/node_modules/express/lib/router/index.js:335:12)
+    at next (/Users/teroron/Desktop/PBL/PBL2020/OreSupport/ore-SupportServer/oreServer/node_modules/express/lib/router/index.js:275:10)
+    at /Users/teroron/Desktop/PBL/PBL2020/OreSupport/ore-SupportServer/oreServer/node_modules/express/lib/router/index.js:635:15
+    at next (/Users/teroron/Desktop/PBL/PBL2020/OreSupport/ore-SupportServer/oreServer/node_modules/express/lib/router/index.js:260:14)
+    at Function.handle (/Users/teroron/Desktop/PBL/PBL2020/OreSupport/ore-SupportServer/oreServer/node_modules/express/lib/router/index.js:174:3)
+    at router (/Users/teroron/Desktop/PBL/PBL2020/OreSupport/ore-SupportServer/oreServer/node_modules/express/lib/router/index.js:47:12)
+    at Layer.handle [as handle_request] (/Users/teroron/Desktop/PBL/PBL2020/OreSupport/ore-SupportServer/oreServer/node_modules/express/lib/router/layer.js:95:5)
+[2020-08-17T21:17:42.938] [ERROR] app - アクセスエラー TypeError: Cannot read property 'CODE_5008' of undefined
+    at /Users/teroron/Desktop/PBL/PBL2020/OreSupport/ore-SupportServer/oreServer/common/check.token.js:24:29
+    at Object.module.exports [as verify] (/Users/teroron/Desktop/PBL/PBL2020/OreSupport/ore-SupportServer/oreServer/node_modules/jsonwebtoken/verify.js:63:12)
+    at verifyUser (/Users/teroron/Desktop/PBL/PBL2020/OreSupport/ore-SupportServer/oreServer/common/check.token.js:20:12)
+    at Layer.handle [as handle_request] (/Users/teroron/Desktop/PBL/PBL2020/OreSupport/ore-SupportServer/oreServer/node_modules/express/lib/router/layer.js:95:5)
+    at next (/Users/teroron/Desktop/PBL/PBL2020/OreSupport/ore-SupportServer/oreServer/node_modules/express/lib/router/route.js:137:13)
+    at Route.dispatch (/Users/teroron/Desktop/PBL/PBL2020/OreSupport/ore-SupportServer/oreServer/node_modules/express/lib/router/route.js:112:3)
+    at Layer.handle [as handle_request] (/Users/teroron/Desktop/PBL/PBL2020/OreSupport/ore-SupportServer/oreServer/node_modules/express/lib/router/layer.js:95:5)
+    at /Users/teroron/Desktop/PBL/PBL2020/OreSupport/ore-SupportServer/oreServer/node_modules/express/lib/router/index.js:281:22
+    at Function.process_params (/Users/teroron/Desktop/PBL/PBL2020/OreSupport/ore-SupportServer/oreServer/node_modules/express/lib/router/index.js:335:12)
+    at next (/Users/teroron/Desktop/PBL/PBL2020/OreSupport/ore-SupportServer/oreServer/node_modules/express/lib/router/index.js:275:10)
+    at Function.handle (/Users/teroron/Desktop/PBL/PBL2020/OreSupport/ore-SupportServer/oreServer/node_modules/express/lib/router/index.js:174:3)
+    at router (/Users/teroron/Desktop/PBL/PBL2020/OreSupport/ore-SupportServer/oreServer/node_modules/express/lib/router/index.js:47:12)
+    at Layer.handle [as handle_request] (/Users/teroron/Desktop/PBL/PBL2020/OreSupport/ore-SupportServer/oreServer/node_modules/express/lib/router/layer.js:95:5)
+    at trim_prefix (/Users/teroron/Desktop/PBL/PBL2020/OreSupport/ore-SupportServer/oreServer/node_modules/express/lib/router/index.js:317:13)
+    at /Users/teroron/Desktop/PBL/PBL2020/OreSupport/ore-SupportServer/oreServer/node_modules/express/lib/router/index.js:284:7
+    at Function.process_params (/Users/teroron/Desktop/PBL/PBL2020/OreSupport/ore-SupportServer/oreServer/node_modules/express/lib/router/index.js:335:12)
+    at next (/Users/teroron/Desktop/PBL/PBL2020/OreSupport/ore-SupportServer/oreServer/node_modules/express/lib/router/index.js:275:10)
+    at /Users/teroron/Desktop/PBL/PBL2020/OreSupport/ore-SupportServer/oreServer/node_modules/express/lib/router/index.js:635:15
+    at next (/Users/teroron/Desktop/PBL/PBL2020/OreSupport/ore-SupportServer/oreServer/node_modules/express/lib/router/index.js:260:14)
+    at Function.handle (/Users/teroron/Desktop/PBL/PBL2020/OreSupport/ore-SupportServer/oreServer/node_modules/express/lib/router/index.js:174:3)
+    at router (/Users/teroron/Desktop/PBL/PBL2020/OreSupport/ore-SupportServer/oreServer/node_modules/express/lib/router/index.js:47:12)
+    at Layer.handle [as handle_request] (/Users/teroron/Desktop/PBL/PBL2020/OreSupport/ore-SupportServer/oreServer/node_modules/express/lib/router/layer.js:95:5)
+[2020-08-17T21:17:59.720] [INFO] users - ユーザログ UserName:1@1.com
+[2020-08-17T21:17:59.720] [INFO] userDao - START getUserInfoByUserName: {"username":"1@1.com"}
+[2020-08-17T21:17:59.728] [INFO] userDao - END getUserInfoByUserName
+[2020-08-17T21:17:59.811] [INFO] users - login success UserID: 49
+[2020-08-17T21:17:59.827] [INFO] users - profileInfo userID: 49
+[2020-08-17T21:17:59.827] [INFO] userDao - START getUserProfileByUserID : {"key":"UserID","val":49}
+[2020-08-17T21:17:59.832] [INFO] userDao - END getUserProfileByUserID
+[2020-08-17T21:17:59.832] [INFO] users - profileInfo success
+[2020-08-17T21:20:18.001] [INFO] users - profileInfo userID: 49
+[2020-08-17T21:20:18.001] [INFO] userDao - START getUserProfileByUserID : {"key":"UserID","val":49}
+[2020-08-17T21:20:18.013] [INFO] userDao - END getUserProfileByUserID
+[2020-08-17T21:20:18.014] [INFO] users - profileInfo success
+[2020-08-17T21:20:23.207] [INFO] users - profileInfo userID: 49
+[2020-08-17T21:20:23.208] [INFO] userDao - START getUserProfileByUserID : {"key":"UserID","val":49}
+[2020-08-17T21:20:23.214] [INFO] userDao - END getUserProfileByUserID
+[2020-08-17T21:20:23.215] [INFO] users - profileInfo success
+[2020-08-17T21:20:58.988] [INFO] users - profileInfo userID: 49
+[2020-08-17T21:20:58.988] [INFO] userDao - START getUserProfileByUserID : {"key":"UserID","val":49}
+[2020-08-17T21:20:59.000] [INFO] userDao - END getUserProfileByUserID
+[2020-08-17T21:20:59.000] [INFO] users - profileInfo success
+[2020-08-17T21:21:36.813] [INFO] users - ユーザログ UserName:1@1.com
+[2020-08-17T21:21:36.813] [INFO] userDao - START getUserInfoByUserName: {"username":"1@1.com"}
+[2020-08-17T21:21:36.819] [INFO] userDao - END getUserInfoByUserName
+[2020-08-17T21:21:36.897] [INFO] users - login success UserID: 49
+[2020-08-17T21:21:36.909] [INFO] users - profileInfo userID: 49
+[2020-08-17T21:21:36.909] [INFO] userDao - START getUserProfileByUserID : {"key":"UserID","val":49}
+[2020-08-17T21:21:36.914] [INFO] userDao - END getUserProfileByUserID
+[2020-08-17T21:21:36.914] [INFO] users - profileInfo success
+[2020-08-17T21:25:59.004] [INFO] startup - Listening on port 3000
+[2020-08-17T21:26:55.096] [INFO] users - ユーザログ UserName:1@1.com
+[2020-08-17T21:26:55.096] [INFO] userDao - START getUserInfoByUserName: {"username":"1@1.com"}
+[2020-08-17T21:26:55.110] [INFO] userDao - END getUserInfoByUserName
+[2020-08-17T21:26:55.206] [INFO] users - login success UserID: 49
+[2020-08-17T21:26:55.225] [INFO] users - profileInfo userID: 49
+[2020-08-17T21:26:55.226] [INFO] userDao - START getUserProfileByUserID : {"key":"UserID","val":49}
+[2020-08-17T21:26:55.238] [INFO] userDao - END getUserProfileByUserID
+[2020-08-17T21:26:55.239] [INFO] users - profileInfo success
+[2020-08-17T21:28:12.955] [INFO] users - profileInfo userID: 49
+[2020-08-17T21:28:12.955] [INFO] userDao - START getUserProfileByUserID : {"key":"UserID","val":49}
+[2020-08-17T21:28:12.964] [INFO] userDao - END getUserProfileByUserID
+[2020-08-17T21:28:12.964] [INFO] users - profileInfo success
+[2020-08-17T21:28:15.811] [INFO] users - profileInfo userID: 49
+[2020-08-17T21:28:15.811] [INFO] userDao - START getUserProfileByUserID : {"key":"UserID","val":49}
+[2020-08-17T21:28:15.818] [INFO] userDao - END getUserProfileByUserID
+[2020-08-17T21:28:15.818] [INFO] users - profileInfo success
+[2020-08-17T21:28:23.127] [INFO] users - profileInfo userID: 49
+[2020-08-17T21:28:23.127] [INFO] userDao - START getUserProfileByUserID : {"key":"UserID","val":49}
+[2020-08-17T21:28:23.135] [INFO] userDao - END getUserProfileByUserID
+[2020-08-17T21:28:23.135] [INFO] users - profileInfo success
+[2020-08-17T21:31:12.466] [INFO] users - profileInfo userID: 49
+[2020-08-17T21:31:12.467] [INFO] userDao - START getUserProfileByUserID : {"key":"UserID","val":49}
+[2020-08-17T21:31:12.483] [INFO] userDao - END getUserProfileByUserID
+[2020-08-17T21:31:12.483] [INFO] users - profileInfo success
+[2020-08-17T21:31:31.114] [INFO] users - profileInfo userID: 49
+[2020-08-17T21:31:31.114] [INFO] userDao - START getUserProfileByUserID : {"key":"UserID","val":49}
+[2020-08-17T21:31:31.120] [INFO] userDao - END getUserProfileByUserID
+[2020-08-17T21:31:31.120] [INFO] users - profileInfo success
+[2020-08-17T21:34:02.942] [INFO] users - profileInfo userID: 49
+[2020-08-17T21:34:02.942] [INFO] userDao - START getUserProfileByUserID : {"key":"UserID","val":49}
+[2020-08-17T21:34:02.953] [INFO] userDao - END getUserProfileByUserID
+[2020-08-17T21:34:02.953] [INFO] users - profileInfo success
+[2020-08-17T21:34:09.489] [INFO] users - profileInfo userID: 49
+[2020-08-17T21:34:09.490] [INFO] userDao - START getUserProfileByUserID : {"key":"UserID","val":49}
+[2020-08-17T21:34:09.494] [INFO] userDao - END getUserProfileByUserID
+[2020-08-17T21:34:09.494] [INFO] users - profileInfo success
+[2020-08-17T21:35:29.237] [INFO] users - profileInfo userID: 49
+[2020-08-17T21:35:29.237] [INFO] userDao - START getUserProfileByUserID : {"key":"UserID","val":49}
+[2020-08-17T21:35:29.248] [INFO] userDao - END getUserProfileByUserID
+[2020-08-17T21:35:29.248] [INFO] users - profileInfo success
+[2020-08-17T21:35:30.696] [INFO] users - profileInfo userID: 49
+[2020-08-17T21:35:30.696] [INFO] userDao - START getUserProfileByUserID : {"key":"UserID","val":49}
+[2020-08-17T21:35:30.703] [INFO] userDao - END getUserProfileByUserID
+[2020-08-17T21:35:30.703] [INFO] users - profileInfo success
+[2020-08-17T21:35:42.483] [INFO] users - profileInfo userID: 49
+[2020-08-17T21:35:42.483] [INFO] userDao - START getUserProfileByUserID : {"key":"UserID","val":49}
+[2020-08-17T21:35:42.489] [INFO] userDao - END getUserProfileByUserID
+[2020-08-17T21:35:42.489] [INFO] users - profileInfo success
+[2020-08-17T21:35:43.735] [INFO] users - profileInfo userID: 49
+[2020-08-17T21:35:43.735] [INFO] userDao - START getUserProfileByUserID : {"key":"UserID","val":49}
+[2020-08-17T21:35:43.744] [INFO] userDao - END getUserProfileByUserID
+[2020-08-17T21:35:43.746] [INFO] users - profileInfo success
+[2020-08-17T21:38:14.995] [INFO] users - profileInfo userID: 49
+[2020-08-17T21:38:14.996] [INFO] userDao - START getUserProfileByUserID : {"key":"UserID","val":49}
+[2020-08-17T21:38:15.007] [INFO] userDao - END getUserProfileByUserID
+[2020-08-17T21:38:15.007] [INFO] users - profileInfo success
+[2020-08-17T21:39:59.535] [INFO] users - profileInfo userID: 49
+[2020-08-17T21:39:59.535] [INFO] userDao - START getUserProfileByUserID : {"key":"UserID","val":49}
+[2020-08-17T21:39:59.546] [INFO] userDao - END getUserProfileByUserID
+[2020-08-17T21:39:59.547] [INFO] users - profileInfo success
+[2020-08-17T21:41:12.674] [INFO] users - profileInfo userID: 49
+[2020-08-17T21:41:12.674] [INFO] userDao - START getUserProfileByUserID : {"key":"UserID","val":49}
+[2020-08-17T21:41:12.685] [INFO] userDao - END getUserProfileByUserID
+[2020-08-17T21:41:12.685] [INFO] users - profileInfo success
+[2020-08-17T21:41:25.018] [INFO] users - profileInfo userID: 49
+[2020-08-17T21:41:25.018] [INFO] userDao - START getUserProfileByUserID : {"key":"UserID","val":49}
+[2020-08-17T21:41:25.024] [INFO] userDao - END getUserProfileByUserID
+[2020-08-17T21:41:25.024] [INFO] users - profileInfo success
+[2020-08-17T21:41:50.333] [INFO] users - profileInfo userID: 49
+[2020-08-17T21:41:50.333] [INFO] userDao - START getUserProfileByUserID : {"key":"UserID","val":49}
+[2020-08-17T21:41:50.342] [INFO] userDao - END getUserProfileByUserID
+[2020-08-17T21:41:50.342] [INFO] users - profileInfo success
+[2020-08-17T21:42:51.734] [INFO] users - profileInfo userID: 49
+[2020-08-17T21:42:51.734] [INFO] userDao - START getUserProfileByUserID : {"key":"UserID","val":49}
+[2020-08-17T21:42:51.740] [INFO] userDao - END getUserProfileByUserID
+[2020-08-17T21:42:51.741] [INFO] users - profileInfo success
+[2020-08-17T21:43:32.716] [INFO] users - profileInfo userID: 49
+[2020-08-17T21:43:32.716] [INFO] userDao - START getUserProfileByUserID : {"key":"UserID","val":49}
+[2020-08-17T21:43:32.728] [INFO] userDao - END getUserProfileByUserID
+[2020-08-17T21:43:32.728] [INFO] users - profileInfo success
+[2020-08-17T21:44:13.003] [INFO] users - profileInfo userID: 49
+[2020-08-17T21:44:13.004] [INFO] userDao - START getUserProfileByUserID : {"key":"UserID","val":49}
+[2020-08-17T21:44:13.010] [INFO] userDao - END getUserProfileByUserID
+[2020-08-17T21:44:13.010] [INFO] users - profileInfo success
+[2020-08-17T21:44:17.017] [INFO] users - profileInfo userID: 49
+[2020-08-17T21:44:17.017] [INFO] userDao - START getUserProfileByUserID : {"key":"UserID","val":49}
+[2020-08-17T21:44:17.022] [INFO] userDao - END getUserProfileByUserID
+[2020-08-17T21:44:17.022] [INFO] users - profileInfo success
+[2020-08-17T21:53:34.441] [INFO] users - profileInfo userID: 49
+[2020-08-17T21:53:34.441] [INFO] userDao - START getUserProfileByUserID : {"key":"UserID","val":49}
+[2020-08-17T21:53:34.472] [INFO] userDao - END getUserProfileByUserID
+[2020-08-17T21:53:34.473] [INFO] users - profileInfo success
+[2020-08-17T21:53:51.626] [INFO] users - profileInfo userID: 49
+[2020-08-17T21:53:51.626] [INFO] userDao - START getUserProfileByUserID : {"key":"UserID","val":49}
+[2020-08-17T21:53:51.632] [INFO] userDao - END getUserProfileByUserID
+[2020-08-17T21:53:51.632] [INFO] users - profileInfo success
+[2020-08-17T21:53:57.095] [INFO] users - profileInfo userID: 49
+[2020-08-17T21:53:57.095] [INFO] userDao - START getUserProfileByUserID : {"key":"UserID","val":49}
+[2020-08-17T21:53:57.106] [INFO] userDao - END getUserProfileByUserID
+[2020-08-17T21:53:57.106] [INFO] users - profileInfo success
+[2020-08-17T21:54:03.807] [INFO] users - profileInfo userID: 49
+[2020-08-17T21:54:03.807] [INFO] userDao - START getUserProfileByUserID : {"key":"UserID","val":49}
+[2020-08-17T21:54:03.822] [INFO] userDao - END getUserProfileByUserID
+[2020-08-17T21:54:03.822] [INFO] users - profileInfo success
+[2020-08-17T21:55:20.675] [INFO] users - profileInfo userID: 49
+[2020-08-17T21:55:20.676] [INFO] userDao - START getUserProfileByUserID : {"key":"UserID","val":49}
+[2020-08-17T21:55:20.689] [INFO] userDao - END getUserProfileByUserID
+[2020-08-17T21:55:20.689] [INFO] users - profileInfo success
+[2020-08-17T21:55:27.606] [INFO] users - profileInfo userID: 49
+[2020-08-17T21:55:27.606] [INFO] userDao - START getUserProfileByUserID : {"key":"UserID","val":49}
+[2020-08-17T21:55:27.615] [INFO] userDao - END getUserProfileByUserID
+[2020-08-17T21:55:27.615] [INFO] users - profileInfo success
+[2020-08-17T21:56:24.647] [INFO] users - profileInfo userID: 49
+[2020-08-17T21:56:24.647] [INFO] userDao - START getUserProfileByUserID : {"key":"UserID","val":49}
+[2020-08-17T21:56:24.661] [INFO] userDao - END getUserProfileByUserID
+[2020-08-17T21:56:24.661] [INFO] users - profileInfo success
+[2020-08-17T21:56:25.834] [INFO] users - profileInfo userID: 49
+[2020-08-17T21:56:25.834] [INFO] userDao - START getUserProfileByUserID : {"key":"UserID","val":49}
+[2020-08-17T21:56:25.840] [INFO] userDao - END getUserProfileByUserID
+[2020-08-17T21:56:25.840] [INFO] users - profileInfo success
+[2020-08-17T21:56:38.072] [INFO] users - profileInfo userID: 49
+[2020-08-17T21:56:38.072] [INFO] userDao - START getUserProfileByUserID : {"key":"UserID","val":49}
+[2020-08-17T21:56:38.081] [INFO] userDao - END getUserProfileByUserID
+[2020-08-17T21:56:38.081] [INFO] users - profileInfo success
+[2020-08-17T21:59:29.616] [INFO] users - profileInfo userID: 49
+[2020-08-17T21:59:29.616] [INFO] userDao - START getUserProfileByUserID : {"key":"UserID","val":49}
+[2020-08-17T21:59:29.633] [INFO] userDao - END getUserProfileByUserID
+[2020-08-17T21:59:29.633] [INFO] users - profileInfo success
+[2020-08-17T21:59:46.631] [INFO] users - profileInfo userID: 49
+[2020-08-17T21:59:46.631] [INFO] userDao - START getUserProfileByUserID : {"key":"UserID","val":49}
+[2020-08-17T21:59:46.640] [INFO] userDao - END getUserProfileByUserID
+[2020-08-17T21:59:46.640] [INFO] users - profileInfo success
+[2020-08-17T22:01:21.151] [INFO] users - profileInfo userID: 49
+[2020-08-17T22:01:21.151] [INFO] userDao - START getUserProfileByUserID : {"key":"UserID","val":49}
+[2020-08-17T22:01:21.164] [INFO] userDao - END getUserProfileByUserID
+[2020-08-17T22:01:21.165] [INFO] users - profileInfo success
+[2020-08-17T22:01:22.740] [INFO] users - profileInfo userID: 49
+[2020-08-17T22:01:22.740] [INFO] userDao - START getUserProfileByUserID : {"key":"UserID","val":49}
+[2020-08-17T22:01:22.745] [INFO] userDao - END getUserProfileByUserID
+[2020-08-17T22:01:22.746] [INFO] users - profileInfo success
+[2020-08-17T22:01:27.059] [INFO] users - profileInfo userID: 49
+[2020-08-17T22:01:27.059] [INFO] userDao - START getUserProfileByUserID : {"key":"UserID","val":49}
+[2020-08-17T22:01:27.067] [INFO] userDao - END getUserProfileByUserID
+[2020-08-17T22:01:27.067] [INFO] users - profileInfo success
+[2020-08-17T22:01:28.422] [INFO] users - profileInfo userID: 49
+[2020-08-17T22:01:28.422] [INFO] userDao - START getUserProfileByUserID : {"key":"UserID","val":49}
+[2020-08-17T22:01:28.426] [INFO] userDao - END getUserProfileByUserID
+[2020-08-17T22:01:28.427] [INFO] users - profileInfo success
+[2020-08-17T22:03:54.761] [INFO] users - profileInfo userID: 49
+[2020-08-17T22:03:54.761] [INFO] userDao - START getUserProfileByUserID : {"key":"UserID","val":49}
+[2020-08-17T22:03:54.773] [INFO] userDao - END getUserProfileByUserID
+[2020-08-17T22:03:54.773] [INFO] users - profileInfo success
+[2020-08-17T22:03:56.212] [INFO] users - profileInfo userID: 49
+[2020-08-17T22:03:56.213] [INFO] userDao - START getUserProfileByUserID : {"key":"UserID","val":49}
+[2020-08-17T22:03:56.218] [INFO] userDao - END getUserProfileByUserID
+[2020-08-17T22:03:56.218] [INFO] users - profileInfo success
+[2020-08-17T22:05:04.863] [INFO] users - profileInfo userID: 49
+[2020-08-17T22:05:04.863] [INFO] userDao - START getUserProfileByUserID : {"key":"UserID","val":49}
+[2020-08-17T22:05:04.876] [INFO] userDao - END getUserProfileByUserID
+[2020-08-17T22:05:04.876] [INFO] users - profileInfo success
+[2020-08-17T22:05:06.331] [INFO] users - profileInfo userID: 49
+[2020-08-17T22:05:06.331] [INFO] userDao - START getUserProfileByUserID : {"key":"UserID","val":49}
+[2020-08-17T22:05:06.339] [INFO] userDao - END getUserProfileByUserID
+[2020-08-17T22:05:06.339] [INFO] users - profileInfo success
+[2020-08-17T22:05:09.853] [INFO] users - profileInfo userID: 49
+[2020-08-17T22:05:09.853] [INFO] userDao - START getUserProfileByUserID : {"key":"UserID","val":49}
+[2020-08-17T22:05:09.857] [INFO] userDao - END getUserProfileByUserID
+[2020-08-17T22:05:09.858] [INFO] users - profileInfo success
+[2020-08-17T22:05:32.553] [INFO] users - profileInfo userID: 49
+[2020-08-17T22:05:32.553] [INFO] userDao - START getUserProfileByUserID : {"key":"UserID","val":49}
+[2020-08-17T22:05:32.562] [INFO] userDao - END getUserProfileByUserID
+[2020-08-17T22:05:32.563] [INFO] users - profileInfo success
+[2020-08-17T22:05:35.551] [INFO] users - profileInfo userID: 49
+[2020-08-17T22:05:35.552] [INFO] userDao - START getUserProfileByUserID : {"key":"UserID","val":49}
+[2020-08-17T22:05:35.563] [INFO] userDao - END getUserProfileByUserID
+[2020-08-17T22:05:35.563] [INFO] users - profileInfo success
+[2020-08-17T22:05:50.461] [INFO] users - profileInfo userID: 49
+[2020-08-17T22:05:50.461] [INFO] userDao - START getUserProfileByUserID : {"key":"UserID","val":49}
+[2020-08-17T22:05:50.466] [INFO] userDao - END getUserProfileByUserID
+[2020-08-17T22:05:50.466] [INFO] users - profileInfo success
+[2020-08-17T22:06:02.657] [INFO] users - profileInfo userID: 49
+[2020-08-17T22:06:02.657] [INFO] userDao - START getUserProfileByUserID : {"key":"UserID","val":49}
+[2020-08-17T22:06:02.662] [INFO] userDao - END getUserProfileByUserID
+[2020-08-17T22:06:02.662] [INFO] users - profileInfo success
+[2020-08-17T22:06:16.377] [INFO] users - profileInfo userID: 49
+[2020-08-17T22:06:16.377] [INFO] userDao - START getUserProfileByUserID : {"key":"UserID","val":49}
+[2020-08-17T22:06:16.389] [INFO] userDao - END getUserProfileByUserID
+[2020-08-17T22:06:16.389] [INFO] users - profileInfo success
+[2020-08-17T22:07:05.662] [INFO] users - profileInfo userID: 49
+[2020-08-17T22:07:05.663] [INFO] userDao - START getUserProfileByUserID : {"key":"UserID","val":49}
+[2020-08-17T22:07:05.690] [INFO] userDao - END getUserProfileByUserID
+[2020-08-17T22:07:05.690] [INFO] users - profileInfo success
+[2020-08-17T22:08:13.872] [INFO] users - profileInfo userID: 49
+[2020-08-17T22:08:13.872] [INFO] userDao - START getUserProfileByUserID : {"key":"UserID","val":49}
+[2020-08-17T22:08:13.883] [INFO] userDao - END getUserProfileByUserID
+[2020-08-17T22:08:13.883] [INFO] users - profileInfo success
+[2020-08-17T22:08:28.397] [INFO] users - profileInfo userID: 49
+[2020-08-17T22:08:28.397] [INFO] userDao - START getUserProfileByUserID : {"key":"UserID","val":49}
+[2020-08-17T22:08:28.407] [INFO] userDao - END getUserProfileByUserID
+[2020-08-17T22:08:28.407] [INFO] users - profileInfo success
+[2020-08-17T22:08:29.941] [INFO] users - profileInfo userID: 49
+[2020-08-17T22:08:29.942] [INFO] userDao - START getUserProfileByUserID : {"key":"UserID","val":49}
+[2020-08-17T22:08:29.955] [INFO] userDao - END getUserProfileByUserID
+[2020-08-17T22:08:29.955] [INFO] users - profileInfo success
+[2020-08-17T22:08:32.939] [INFO] users - profileInfo userID: 49
+[2020-08-17T22:08:32.939] [INFO] userDao - START getUserProfileByUserID : {"key":"UserID","val":49}
+[2020-08-17T22:08:32.945] [INFO] userDao - END getUserProfileByUserID
+[2020-08-17T22:08:32.945] [INFO] users - profileInfo success
+[2020-08-17T22:08:39.761] [INFO] users - profileInfo userID: 49
+[2020-08-17T22:08:39.761] [INFO] userDao - START getUserProfileByUserID : {"key":"UserID","val":49}
+[2020-08-17T22:08:39.765] [INFO] userDao - END getUserProfileByUserID
+[2020-08-17T22:08:39.766] [INFO] users - profileInfo success
+[2020-08-17T22:09:52.165] [INFO] users - profileInfo userID: 49
+[2020-08-17T22:09:52.166] [INFO] userDao - START getUserProfileByUserID : {"key":"UserID","val":49}
+[2020-08-17T22:09:52.171] [INFO] userDao - END getUserProfileByUserID
+[2020-08-17T22:09:52.172] [INFO] users - profileInfo success
+[2020-08-17T22:11:15.744] [INFO] users - profileInfo userID: 49
+[2020-08-17T22:11:15.744] [INFO] userDao - START getUserProfileByUserID : {"key":"UserID","val":49}
+[2020-08-17T22:11:15.756] [INFO] userDao - END getUserProfileByUserID
+[2020-08-17T22:11:15.756] [INFO] users - profileInfo success
+[2020-08-17T22:11:39.098] [INFO] users - profileInfo userID: 49
+[2020-08-17T22:11:39.098] [INFO] userDao - START getUserProfileByUserID : {"key":"UserID","val":49}
+[2020-08-17T22:11:39.102] [INFO] userDao - END getUserProfileByUserID
+[2020-08-17T22:11:39.102] [INFO] users - profileInfo success
+[2020-08-17T22:20:44.665] [INFO] users - profileInfo userID: 49
+[2020-08-17T22:20:44.665] [INFO] userDao - START getUserProfileByUserID : {"key":"UserID","val":49}
+[2020-08-17T22:20:44.678] [INFO] userDao - END getUserProfileByUserID
+[2020-08-17T22:20:44.678] [INFO] users - profileInfo success
+[2020-08-17T22:21:44.931] [INFO] users - profileInfo userID: 49
+[2020-08-17T22:21:44.931] [INFO] userDao - START getUserProfileByUserID : {"key":"UserID","val":49}
+[2020-08-17T22:21:44.950] [INFO] userDao - END getUserProfileByUserID
+[2020-08-17T22:21:44.950] [INFO] users - profileInfo success
+[2020-08-17T22:26:43.681] [INFO] users - profileInfo userID: 49
+[2020-08-17T22:26:43.681] [INFO] userDao - START getUserProfileByUserID : {"key":"UserID","val":49}
+[2020-08-17T22:26:43.694] [INFO] userDao - END getUserProfileByUserID
+[2020-08-17T22:26:43.694] [INFO] users - profileInfo success
+[2020-08-17T22:27:23.045] [INFO] users - profileInfo userID: 49
+[2020-08-17T22:27:23.045] [INFO] userDao - START getUserProfileByUserID : {"key":"UserID","val":49}
+[2020-08-17T22:27:23.059] [INFO] userDao - END getUserProfileByUserID
+[2020-08-17T22:27:23.059] [INFO] users - profileInfo success
+[2020-08-17T22:29:41.617] [INFO] users - profileInfo userID: 49
+[2020-08-17T22:29:41.617] [INFO] userDao - START getUserProfileByUserID : {"key":"UserID","val":49}
+[2020-08-17T22:29:41.631] [INFO] userDao - END getUserProfileByUserID
+[2020-08-17T22:29:41.631] [INFO] users - profileInfo success
+[2020-08-17T22:33:42.749] [INFO] users - profileInfo userID: 49
+[2020-08-17T22:33:42.750] [INFO] userDao - START getUserProfileByUserID : {"key":"UserID","val":49}
+[2020-08-17T22:33:42.783] [INFO] userDao - END getUserProfileByUserID
+[2020-08-17T22:33:42.783] [INFO] users - profileInfo success
+[2020-08-17T22:33:45.644] [INFO] users - profileInfo userID: 49
+[2020-08-17T22:33:45.644] [INFO] userDao - START getUserProfileByUserID : {"key":"UserID","val":49}
+[2020-08-17T22:33:45.649] [INFO] userDao - END getUserProfileByUserID
+[2020-08-17T22:33:45.649] [INFO] users - profileInfo success
+[2020-08-17T22:33:46.979] [INFO] users - profileInfo userID: 49
+[2020-08-17T22:33:46.981] [INFO] userDao - START getUserProfileByUserID : {"key":"UserID","val":49}
+[2020-08-17T22:33:46.988] [INFO] userDao - END getUserProfileByUserID
+[2020-08-17T22:33:46.988] [INFO] users - profileInfo success
+[2020-08-17T22:34:03.826] [INFO] users - profileInfo userID: 49
+[2020-08-17T22:34:03.826] [INFO] userDao - START getUserProfileByUserID : {"key":"UserID","val":49}
+[2020-08-17T22:34:03.845] [INFO] userDao - END getUserProfileByUserID
+[2020-08-17T22:34:03.845] [INFO] users - profileInfo success
+[2020-08-17T22:34:15.132] [INFO] users - profileInfo userID: 49
+[2020-08-17T22:34:15.132] [INFO] userDao - START getUserProfileByUserID : {"key":"UserID","val":49}
+[2020-08-17T22:34:15.136] [INFO] userDao - END getUserProfileByUserID
+[2020-08-17T22:34:15.137] [INFO] users - profileInfo success
+[2020-08-17T22:35:02.523] [INFO] users - profileInfo userID: 49
+[2020-08-17T22:35:02.524] [INFO] userDao - START getUserProfileByUserID : {"key":"UserID","val":49}
+[2020-08-17T22:35:02.529] [INFO] userDao - END getUserProfileByUserID
+[2020-08-17T22:35:02.529] [INFO] users - profileInfo success
+[2020-08-17T22:35:23.680] [INFO] users - profileInfo userID: 49
+[2020-08-17T22:35:23.680] [INFO] userDao - START getUserProfileByUserID : {"key":"UserID","val":49}
+[2020-08-17T22:35:23.698] [INFO] userDao - END getUserProfileByUserID
+[2020-08-17T22:35:23.698] [INFO] users - profileInfo success
+[2020-08-17T22:35:51.336] [INFO] users - ユーザログ UserName:1@1.com
+[2020-08-17T22:35:51.336] [INFO] userDao - START getUserInfoByUserName: {"username":"1@1.com"}
+[2020-08-17T22:35:51.342] [INFO] userDao - END getUserInfoByUserName
+[2020-08-17T22:35:51.424] [INFO] users - login success UserID: 49
+[2020-08-17T22:35:51.446] [INFO] users - profileInfo userID: 49
+[2020-08-17T22:35:51.447] [INFO] userDao - START getUserProfileByUserID : {"key":"UserID","val":49}
+[2020-08-17T22:35:51.454] [INFO] userDao - END getUserProfileByUserID
+[2020-08-17T22:35:51.454] [INFO] users - profileInfo success
+[2020-08-17T22:36:16.607] [INFO] users - profileInfo userID: 49
+[2020-08-17T22:36:16.607] [INFO] userDao - START getUserProfileByUserID : {"key":"UserID","val":49}
+[2020-08-17T22:36:16.611] [INFO] userDao - END getUserProfileByUserID
+[2020-08-17T22:36:16.611] [INFO] users - profileInfo success
+[2020-08-17T22:36:44.657] [INFO] users - profileInfo userID: 49
+[2020-08-17T22:36:44.657] [INFO] userDao - START getUserProfileByUserID : {"key":"UserID","val":49}
+[2020-08-17T22:36:44.664] [INFO] userDao - END getUserProfileByUserID
+[2020-08-17T22:36:44.664] [INFO] users - profileInfo success
+[2020-08-17T22:37:11.111] [INFO] users - profileInfo userID: 49
+[2020-08-17T22:37:11.111] [INFO] userDao - START getUserProfileByUserID : {"key":"UserID","val":49}
+[2020-08-17T22:37:11.122] [INFO] userDao - END getUserProfileByUserID
+[2020-08-17T22:37:11.122] [INFO] users - profileInfo success
+[2020-08-17T22:37:49.064] [INFO] users - ユーザログ UserName:1@1.com
+[2020-08-17T22:37:49.064] [INFO] userDao - START getUserInfoByUserName: {"username":"1@1.com"}
+[2020-08-17T22:37:49.077] [INFO] userDao - END getUserInfoByUserName
+[2020-08-17T22:37:49.156] [INFO] users - login success UserID: 49
+[2020-08-17T22:37:49.175] [INFO] users - profileInfo userID: 49
+[2020-08-17T22:37:49.176] [INFO] userDao - START getUserProfileByUserID : {"key":"UserID","val":49}
+[2020-08-17T22:37:49.184] [INFO] userDao - END getUserProfileByUserID
+[2020-08-17T22:37:49.185] [INFO] users - profileInfo success
+[2020-08-17T22:38:09.816] [INFO] users - profileInfo userID: 49
+[2020-08-17T22:38:09.816] [INFO] userDao - START getUserProfileByUserID : {"key":"UserID","val":49}
+[2020-08-17T22:38:09.820] [INFO] userDao - END getUserProfileByUserID
+[2020-08-17T22:38:09.820] [INFO] users - profileInfo success
+[2020-08-17T22:38:43.624] [INFO] users - profileInfo userID: 49
+[2020-08-17T22:38:43.624] [INFO] userDao - START getUserProfileByUserID : {"key":"UserID","val":49}
+[2020-08-17T22:38:43.630] [INFO] userDao - END getUserProfileByUserID
+[2020-08-17T22:38:43.631] [INFO] users - profileInfo success
+[2020-08-17T22:39:20.917] [INFO] users - profileInfo userID: 49
+[2020-08-17T22:39:20.917] [INFO] userDao - START getUserProfileByUserID : {"key":"UserID","val":49}
+[2020-08-17T22:39:20.927] [INFO] userDao - END getUserProfileByUserID
+[2020-08-17T22:39:20.927] [INFO] users - profileInfo success
+[2020-08-17T22:41:57.059] [INFO] users - profileInfo userID: 49
+[2020-08-17T22:41:57.059] [INFO] userDao - START getUserProfileByUserID : {"key":"UserID","val":49}
+[2020-08-17T22:41:57.069] [INFO] userDao - END getUserProfileByUserID
+[2020-08-17T22:41:57.069] [INFO] users - profileInfo success
+[2020-08-17T22:42:19.053] [INFO] users - profileInfo userID: 49
+[2020-08-17T22:42:19.053] [INFO] userDao - START getUserProfileByUserID : {"key":"UserID","val":49}
+[2020-08-17T22:42:19.060] [INFO] userDao - END getUserProfileByUserID
+[2020-08-17T22:42:19.060] [INFO] users - profileInfo success
+[2020-08-17T22:42:36.802] [INFO] users - profileInfo userID: 49
+[2020-08-17T22:42:36.802] [INFO] userDao - START getUserProfileByUserID : {"key":"UserID","val":49}
+[2020-08-17T22:42:36.805] [INFO] userDao - END getUserProfileByUserID
+[2020-08-17T22:42:36.806] [INFO] users - profileInfo success
+[2020-08-17T22:43:13.774] [INFO] users - profileInfo userID: 49
+[2020-08-17T22:43:13.774] [INFO] userDao - START getUserProfileByUserID : {"key":"UserID","val":49}
+[2020-08-17T22:43:13.781] [INFO] userDao - END getUserProfileByUserID
+[2020-08-17T22:43:13.781] [INFO] users - profileInfo success
+[2020-08-17T22:43:42.723] [INFO] users - profileInfo userID: 49
+[2020-08-17T22:43:42.724] [INFO] userDao - START getUserProfileByUserID : {"key":"UserID","val":49}
+[2020-08-17T22:43:42.732] [INFO] userDao - END getUserProfileByUserID
+[2020-08-17T22:43:42.732] [INFO] users - profileInfo success
+[2020-08-17T22:43:45.662] [INFO] users - profileInfo userID: 49
+[2020-08-17T22:43:45.662] [INFO] userDao - START getUserProfileByUserID : {"key":"UserID","val":49}
+[2020-08-17T22:43:45.667] [INFO] userDao - END getUserProfileByUserID
+[2020-08-17T22:43:45.667] [INFO] users - profileInfo success
+[2020-08-17T22:44:45.521] [INFO] users - profileInfo userID: 49
+[2020-08-17T22:44:45.521] [INFO] userDao - START getUserProfileByUserID : {"key":"UserID","val":49}
+[2020-08-17T22:44:45.528] [INFO] userDao - END getUserProfileByUserID
+[2020-08-17T22:44:45.528] [INFO] users - profileInfo success
+[2020-08-17T22:44:56.026] [INFO] users - profileInfo userID: 49
+[2020-08-17T22:44:56.027] [INFO] userDao - START getUserProfileByUserID : {"key":"UserID","val":49}
+[2020-08-17T22:44:56.030] [INFO] userDao - END getUserProfileByUserID
+[2020-08-17T22:44:56.031] [INFO] users - profileInfo success
+[2020-08-17T22:45:07.010] [INFO] users - profileInfo userID: 49
+[2020-08-17T22:45:07.010] [INFO] userDao - START getUserProfileByUserID : {"key":"UserID","val":49}
+[2020-08-17T22:45:07.014] [INFO] userDao - END getUserProfileByUserID
+[2020-08-17T22:45:07.014] [INFO] users - profileInfo success
+[2020-08-17T22:45:08.358] [INFO] users - profileInfo userID: 49
+[2020-08-17T22:45:08.359] [INFO] userDao - START getUserProfileByUserID : {"key":"UserID","val":49}
+[2020-08-17T22:45:08.364] [INFO] userDao - END getUserProfileByUserID
+[2020-08-17T22:45:08.364] [INFO] users - profileInfo success
+[2020-08-17T22:46:40.962] [INFO] users - profileInfo userID: 49
+[2020-08-17T22:46:40.963] [INFO] userDao - START getUserProfileByUserID : {"key":"UserID","val":49}
+[2020-08-17T22:46:40.972] [INFO] userDao - END getUserProfileByUserID
+[2020-08-17T22:46:40.973] [INFO] users - profileInfo success
+[2020-08-17T22:47:54.042] [INFO] users - profileInfo userID: 49
+[2020-08-17T22:47:54.043] [INFO] userDao - START getUserProfileByUserID : {"key":"UserID","val":49}
+[2020-08-17T22:47:54.082] [INFO] userDao - END getUserProfileByUserID
+[2020-08-17T22:47:54.082] [INFO] users - profileInfo success
+[2020-08-17T22:51:23.119] [INFO] users - profileInfo userID: 49
+[2020-08-17T22:51:23.120] [INFO] userDao - START getUserProfileByUserID : {"key":"UserID","val":49}
+[2020-08-17T22:51:23.135] [INFO] userDao - END getUserProfileByUserID
+[2020-08-17T22:51:23.135] [INFO] users - profileInfo success
+[2020-08-17T22:51:24.724] [INFO] users - profileInfo userID: 49
+[2020-08-17T22:51:24.724] [INFO] userDao - START getUserProfileByUserID : {"key":"UserID","val":49}
+[2020-08-17T22:51:24.732] [INFO] userDao - END getUserProfileByUserID
+[2020-08-17T22:51:24.733] [INFO] users - profileInfo success
+[2020-08-17T22:51:37.166] [INFO] users - profileInfo userID: 49
+[2020-08-17T22:51:37.166] [INFO] userDao - START getUserProfileByUserID : {"key":"UserID","val":49}
+[2020-08-17T22:51:37.171] [INFO] userDao - END getUserProfileByUserID
+[2020-08-17T22:51:37.172] [INFO] users - profileInfo success
+[2020-08-17T22:57:52.509] [INFO] startup - Listening on port 3000
+[2020-08-17T22:59:37.521] [INFO] startup - Listening on port 3000
+[2020-08-17T23:07:29.865] [INFO] startup - Listening on port 3000
+[2020-08-17T23:07:35.219] [INFO] users - profileInfo userID: 49
+[2020-08-17T23:20:28.068] [INFO] users - profileInfo userID: 49
+[2020-08-17T23:20:44.486] [INFO] users - profileInfo userID: 49
+[2020-08-18T23:08:27.545] [ERROR] app - アクセスエラー TypeError: Cannot read property 'CODE_5008' of undefined
+    at /Users/teroron/Desktop/PBL/PBL2020/OreSupport/ore-SupportServer/oreServer/common/check.token.js:24:29
+    at /Users/teroron/Desktop/PBL/PBL2020/OreSupport/ore-SupportServer/oreServer/node_modules/jsonwebtoken/verify.js:152:16
+    at getSecret (/Users/teroron/Desktop/PBL/PBL2020/OreSupport/ore-SupportServer/oreServer/node_modules/jsonwebtoken/verify.js:90:14)
+    at Object.module.exports [as verify] (/Users/teroron/Desktop/PBL/PBL2020/OreSupport/ore-SupportServer/oreServer/node_modules/jsonwebtoken/verify.js:94:10)
+    at verifyUser (/Users/teroron/Desktop/PBL/PBL2020/OreSupport/ore-SupportServer/oreServer/common/check.token.js:20:12)
+    at Layer.handle [as handle_request] (/Users/teroron/Desktop/PBL/PBL2020/OreSupport/ore-SupportServer/oreServer/node_modules/express/lib/router/layer.js:95:5)
+    at next (/Users/teroron/Desktop/PBL/PBL2020/OreSupport/ore-SupportServer/oreServer/node_modules/express/lib/router/route.js:137:13)
+    at Route.dispatch (/Users/teroron/Desktop/PBL/PBL2020/OreSupport/ore-SupportServer/oreServer/node_modules/express/lib/router/route.js:112:3)
+    at Layer.handle [as handle_request] (/Users/teroron/Desktop/PBL/PBL2020/OreSupport/ore-SupportServer/oreServer/node_modules/express/lib/router/layer.js:95:5)
+    at /Users/teroron/Desktop/PBL/PBL2020/OreSupport/ore-SupportServer/oreServer/node_modules/express/lib/router/index.js:281:22
+    at Function.process_params (/Users/teroron/Desktop/PBL/PBL2020/OreSupport/ore-SupportServer/oreServer/node_modules/express/lib/router/index.js:335:12)
+    at next (/Users/teroron/Desktop/PBL/PBL2020/OreSupport/ore-SupportServer/oreServer/node_modules/express/lib/router/index.js:275:10)
+    at Function.handle (/Users/teroron/Desktop/PBL/PBL2020/OreSupport/ore-SupportServer/oreServer/node_modules/express/lib/router/index.js:174:3)
+    at router (/Users/teroron/Desktop/PBL/PBL2020/OreSupport/ore-SupportServer/oreServer/node_modules/express/lib/router/index.js:47:12)
+    at Layer.handle [as handle_request] (/Users/teroron/Desktop/PBL/PBL2020/OreSupport/ore-SupportServer/oreServer/node_modules/express/lib/router/layer.js:95:5)
+    at trim_prefix (/Users/teroron/Desktop/PBL/PBL2020/OreSupport/ore-SupportServer/oreServer/node_modules/express/lib/router/index.js:317:13)
+    at /Users/teroron/Desktop/PBL/PBL2020/OreSupport/ore-SupportServer/oreServer/node_modules/express/lib/router/index.js:284:7
+    at Function.process_params (/Users/teroron/Desktop/PBL/PBL2020/OreSupport/ore-SupportServer/oreServer/node_modules/express/lib/router/index.js:335:12)
+    at next (/Users/teroron/Desktop/PBL/PBL2020/OreSupport/ore-SupportServer/oreServer/node_modules/express/lib/router/index.js:275:10)
+    at /Users/teroron/Desktop/PBL/PBL2020/OreSupport/ore-SupportServer/oreServer/node_modules/express/lib/router/index.js:635:15
+    at next (/Users/teroron/Desktop/PBL/PBL2020/OreSupport/ore-SupportServer/oreServer/node_modules/express/lib/router/index.js:260:14)
+    at Function.handle (/Users/teroron/Desktop/PBL/PBL2020/OreSupport/ore-SupportServer/oreServer/node_modules/express/lib/router/index.js:174:3)
+[2020-08-18T23:09:00.273] [INFO] users - ユーザログ UserName:1@1.com
+[2020-08-18T23:09:00.274] [INFO] userDao - START getUserInfoByUserName: {"username":"1@1.com"}
+[2020-08-18T23:09:00.388] [INFO] userDao - END getUserInfoByUserName
+[2020-08-18T23:09:00.491] [INFO] users - login success UserID: 49
+[2020-08-18T23:09:00.506] [INFO] users - profileInfo userID: 49
+[2020-08-18T23:09:00.507] [INFO] userDao - START getUserProfileByUserID : {"key":"UserID","val":49}
+[2020-08-18T23:09:00.559] [INFO] userDao - END getUserProfileByUserID
+[2020-08-18T23:09:00.560] [INFO] users - profileInfo success
+[2020-08-18T23:10:00.432] [INFO] users - profileInfo userID: 49
+[2020-08-18T23:10:00.433] [INFO] userDao - START getUserProfileByUserID : {"key":"UserID","val":49}
+[2020-08-18T23:10:00.470] [INFO] userDao - END getUserProfileByUserID
+[2020-08-18T23:10:00.471] [INFO] users - profileInfo success
+[2020-08-18T23:13:57.689] [INFO] users - profileInfo userID: 49
+[2020-08-18T23:13:57.689] [INFO] userDao - START getUserProfileByUserID : {"key":"UserID","val":49}
+[2020-08-18T23:13:57.736] [INFO] userDao - END getUserProfileByUserID
+[2020-08-18T23:13:57.736] [INFO] users - profileInfo success
+[2020-08-18T23:14:18.834] [INFO] users - profileInfo userID: 49
+[2020-08-18T23:14:18.834] [INFO] userDao - START getUserProfileByUserID : {"key":"UserID","val":49}
+[2020-08-18T23:14:18.850] [INFO] userDao - END getUserProfileByUserID
+[2020-08-18T23:14:18.851] [INFO] users - profileInfo success
+[2020-08-18T23:14:32.281] [INFO] users - profileInfo userID: 49
+[2020-08-18T23:14:32.281] [INFO] userDao - START getUserProfileByUserID : {"key":"UserID","val":49}
+[2020-08-18T23:14:32.289] [INFO] userDao - END getUserProfileByUserID
+[2020-08-18T23:14:32.289] [INFO] users - profileInfo success
+[2020-08-18T23:16:04.253] [INFO] users - profileInfo userID: 49
+[2020-08-18T23:16:04.253] [INFO] userDao - START getUserProfileByUserID : {"key":"UserID","val":49}
+[2020-08-18T23:16:04.277] [INFO] userDao - END getUserProfileByUserID
+[2020-08-18T23:16:04.277] [INFO] users - profileInfo success
+[2020-08-18T23:16:16.662] [INFO] users - profileInfo userID: 49
+[2020-08-18T23:16:16.663] [INFO] userDao - START getUserProfileByUserID : {"key":"UserID","val":49}
+[2020-08-18T23:16:16.674] [INFO] userDao - END getUserProfileByUserID
+[2020-08-18T23:16:16.674] [INFO] users - profileInfo success
+[2020-08-18T23:17:56.673] [INFO] users - profileInfo userID: 49
+[2020-08-18T23:17:56.673] [INFO] userDao - START getUserProfileByUserID : {"key":"UserID","val":49}
+[2020-08-18T23:17:56.691] [INFO] userDao - END getUserProfileByUserID
+[2020-08-18T23:17:56.691] [INFO] users - profileInfo success
+[2020-08-18T23:18:03.346] [INFO] users - profileInfo userID: 49
+[2020-08-18T23:18:03.346] [INFO] userDao - START getUserProfileByUserID : {"key":"UserID","val":49}
+[2020-08-18T23:18:03.355] [INFO] userDao - END getUserProfileByUserID
+[2020-08-18T23:18:03.356] [INFO] users - profileInfo success
+[2020-08-19T00:04:00.551] [INFO] startup - Listening on port 3000
+[2020-08-19T00:04:10.230] [INFO] users - profileInfo userID: 49
+[2020-08-19T00:05:23.132] [INFO] users - profileInfo userID: 49
+[2020-08-19T00:05:30.949] [INFO] users - profileInfo userID: 49
+[2020-08-19T00:11:27.640] [INFO] startup - Listening on port 3000
+[2020-08-19T00:21:04.540] [INFO] startup - Listening on port 3000
+[2020-08-19T00:24:13.054] [INFO] startup - Listening on port 3000
+[2020-08-19T00:25:24.730] [INFO] startup - Listening on port 3000
+[2020-08-19T00:26:15.682] [INFO] startup - Listening on port 3000
+[2020-08-19T00:26:31.599] [INFO] users - profileInfo userID: 49
+[2020-08-19T00:28:30.080] [INFO] users - profileInfo userID: 49
+[2020-08-19T00:30:10.830] [INFO] users - profileInfo userID: 49
+[2020-08-19T00:30:41.069] [INFO] users - profileInfo userID: 49
+[2020-08-19T00:32:10.466] [INFO] users - profileInfo userID: 49
+[2020-08-20T21:31:58.128] [ERROR] app - アクセスエラー TypeError: Cannot read property 'CODE_5008' of undefined
+    at /Users/teroron/Desktop/PBL/PBL2020/OreSupport/ore-SupportServer/oreServer/common/check.token.js:24:29
+    at Object.module.exports [as verify] (/Users/teroron/Desktop/PBL/PBL2020/OreSupport/ore-SupportServer/oreServer/node_modules/jsonwebtoken/verify.js:63:12)
+    at verifyUser (/Users/teroron/Desktop/PBL/PBL2020/OreSupport/ore-SupportServer/oreServer/common/check.token.js:20:12)
+    at Layer.handle [as handle_request] (/Users/teroron/Desktop/PBL/PBL2020/OreSupport/ore-SupportServer/oreServer/node_modules/express/lib/router/layer.js:95:5)
+    at next (/Users/teroron/Desktop/PBL/PBL2020/OreSupport/ore-SupportServer/oreServer/node_modules/express/lib/router/route.js:137:13)
+    at Route.dispatch (/Users/teroron/Desktop/PBL/PBL2020/OreSupport/ore-SupportServer/oreServer/node_modules/express/lib/router/route.js:112:3)
+    at Layer.handle [as handle_request] (/Users/teroron/Desktop/PBL/PBL2020/OreSupport/ore-SupportServer/oreServer/node_modules/express/lib/router/layer.js:95:5)
+    at /Users/teroron/Desktop/PBL/PBL2020/OreSupport/ore-SupportServer/oreServer/node_modules/express/lib/router/index.js:281:22
+    at Function.process_params (/Users/teroron/Desktop/PBL/PBL2020/OreSupport/ore-SupportServer/oreServer/node_modules/express/lib/router/index.js:335:12)
+    at next (/Users/teroron/Desktop/PBL/PBL2020/OreSupport/ore-SupportServer/oreServer/node_modules/express/lib/router/index.js:275:10)
+    at Function.handle (/Users/teroron/Desktop/PBL/PBL2020/OreSupport/ore-SupportServer/oreServer/node_modules/express/lib/router/index.js:174:3)
+    at router (/Users/teroron/Desktop/PBL/PBL2020/OreSupport/ore-SupportServer/oreServer/node_modules/express/lib/router/index.js:47:12)
+    at Layer.handle [as handle_request] (/Users/teroron/Desktop/PBL/PBL2020/OreSupport/ore-SupportServer/oreServer/node_modules/express/lib/router/layer.js:95:5)
+    at trim_prefix (/Users/teroron/Desktop/PBL/PBL2020/OreSupport/ore-SupportServer/oreServer/node_modules/express/lib/router/index.js:317:13)
+    at /Users/teroron/Desktop/PBL/PBL2020/OreSupport/ore-SupportServer/oreServer/node_modules/express/lib/router/index.js:284:7
+    at Function.process_params (/Users/teroron/Desktop/PBL/PBL2020/OreSupport/ore-SupportServer/oreServer/node_modules/express/lib/router/index.js:335:12)
+    at next (/Users/teroron/Desktop/PBL/PBL2020/OreSupport/ore-SupportServer/oreServer/node_modules/express/lib/router/index.js:275:10)
+    at /Users/teroron/Desktop/PBL/PBL2020/OreSupport/ore-SupportServer/oreServer/node_modules/express/lib/router/index.js:635:15
+    at next (/Users/teroron/Desktop/PBL/PBL2020/OreSupport/ore-SupportServer/oreServer/node_modules/express/lib/router/index.js:260:14)
+    at Function.handle (/Users/teroron/Desktop/PBL/PBL2020/OreSupport/ore-SupportServer/oreServer/node_modules/express/lib/router/index.js:174:3)
+    at router (/Users/teroron/Desktop/PBL/PBL2020/OreSupport/ore-SupportServer/oreServer/node_modules/express/lib/router/index.js:47:12)
+    at Layer.handle [as handle_request] (/Users/teroron/Desktop/PBL/PBL2020/OreSupport/ore-SupportServer/oreServer/node_modules/express/lib/router/layer.js:95:5)
+[2020-08-20T21:32:09.374] [INFO] users - ユーザログ UserName:1@1.com
+[2020-08-20T21:32:09.374] [INFO] userDao - START getUserInfoByUserName: {"username":"1@1.com"}
+[2020-08-20T21:32:09.461] [INFO] userDao - END getUserInfoByUserName
+[2020-08-20T21:32:09.580] [INFO] users - login success UserID: 49
+[2020-08-20T21:32:09.599] [INFO] users - profileInfo userID: 49
+[2020-08-20T21:32:09.600] [INFO] userDao - START getUserProfileByUserID : {"key":"UserID","val":49}
+[2020-08-20T21:32:09.618] [INFO] userDao - END getUserProfileByUserID
+[2020-08-20T21:32:09.619] [INFO] users - profileInfo success
+[2020-08-20T21:33:12.052] [INFO] users - profileInfo userID: 49
+[2020-08-20T21:33:12.053] [INFO] userDao - START getUserProfileByUserID : {"key":"UserID","val":49}
+[2020-08-20T21:33:12.062] [INFO] userDao - END getUserProfileByUserID
+[2020-08-20T21:33:12.063] [INFO] users - profileInfo success
+[2020-08-20T21:33:52.921] [INFO] users - profileInfo userID: 49
+[2020-08-20T21:33:52.921] [INFO] userDao - START getUserProfileByUserID : {"key":"UserID","val":49}
+[2020-08-20T21:33:52.935] [INFO] userDao - END getUserProfileByUserID
+[2020-08-20T21:33:52.935] [INFO] users - profileInfo success
+[2020-08-20T21:35:02.929] [INFO] users - profileInfo userID: 49
+[2020-08-20T21:35:02.929] [INFO] userDao - START getUserProfileByUserID : {"key":"UserID","val":49}
+[2020-08-20T21:35:02.939] [INFO] userDao - END getUserProfileByUserID
+[2020-08-20T21:35:02.939] [INFO] users - profileInfo success
+[2020-08-20T21:35:16.753] [INFO] users - profileInfo userID: 49
+[2020-08-20T21:35:16.753] [INFO] userDao - START getUserProfileByUserID : {"key":"UserID","val":49}
+[2020-08-20T21:35:16.759] [INFO] userDao - END getUserProfileByUserID
+[2020-08-20T21:35:16.759] [INFO] users - profileInfo success
+[2020-08-20T21:37:27.211] [INFO] users - profileInfo userID: 49
+[2020-08-20T21:37:27.211] [INFO] userDao - START getUserProfileByUserID : {"key":"UserID","val":49}
+[2020-08-20T21:37:27.223] [INFO] userDao - END getUserProfileByUserID
+[2020-08-20T21:37:27.223] [INFO] users - profileInfo success
+[2020-08-20T21:37:41.166] [INFO] users - profileInfo userID: 49
+[2020-08-20T21:37:41.166] [INFO] userDao - START getUserProfileByUserID : {"key":"UserID","val":49}
+[2020-08-20T21:37:41.172] [INFO] userDao - END getUserProfileByUserID
+[2020-08-20T21:37:41.172] [INFO] users - profileInfo success
+[2020-08-20T21:40:39.680] [INFO] users - profileInfo userID: 49
+[2020-08-20T21:40:39.680] [INFO] userDao - START getUserProfileByUserID : {"key":"UserID","val":49}
+[2020-08-20T21:40:39.702] [INFO] userDao - END getUserProfileByUserID
+[2020-08-20T21:40:39.702] [INFO] users - profileInfo success
+[2020-08-20T21:43:47.802] [INFO] users - profileInfo userID: 49
+[2020-08-20T21:43:47.802] [INFO] userDao - START getUserProfileByUserID : {"key":"UserID","val":49}
+[2020-08-20T21:43:47.823] [INFO] userDao - END getUserProfileByUserID
+[2020-08-20T21:43:47.824] [INFO] users - profileInfo success
+[2020-08-20T21:44:43.652] [INFO] users - profileInfo userID: 49
+[2020-08-20T21:44:43.652] [INFO] userDao - START getUserProfileByUserID : {"key":"UserID","val":49}
+[2020-08-20T21:44:43.671] [INFO] userDao - END getUserProfileByUserID
+[2020-08-20T21:44:43.672] [INFO] users - profileInfo success
+[2020-08-20T21:47:55.583] [INFO] users - profileInfo userID: 49
+[2020-08-20T21:47:55.583] [INFO] userDao - START getUserProfileByUserID : {"key":"UserID","val":49}
+[2020-08-20T21:47:55.601] [INFO] userDao - END getUserProfileByUserID
+[2020-08-20T21:47:55.602] [INFO] users - profileInfo success
+[2020-08-20T21:49:06.347] [INFO] users - profileInfo userID: 49
+[2020-08-20T21:49:06.347] [INFO] userDao - START getUserProfileByUserID : {"key":"UserID","val":49}
+[2020-08-20T21:49:06.352] [INFO] userDao - END getUserProfileByUserID
+[2020-08-20T21:49:06.352] [INFO] users - profileInfo success
+[2020-08-20T21:52:45.720] [INFO] users - profileInfo userID: 49
+[2020-08-20T21:52:45.721] [INFO] userDao - START getUserProfileByUserID : {"key":"UserID","val":49}
+[2020-08-20T21:52:45.750] [INFO] userDao - END getUserProfileByUserID
+[2020-08-20T21:52:45.751] [INFO] users - profileInfo success
+[2020-08-20T21:54:28.995] [INFO] startup - Listening on port 3000
+[2020-08-20T21:54:32.645] [INFO] users - profileInfo userID: 49
+[2020-08-20T21:59:06.416] [INFO] users - profileInfo userID: 49
+[2020-08-20T22:04:04.495] [INFO] users - profileInfo userID: 49
+[2020-08-20T22:04:54.071] [INFO] users - profileInfo userID: 49
+[2020-08-20T22:11:13.685] [INFO] users - profileInfo userID: 49
+[2020-08-20T22:32:45.865] [INFO] users - profileInfo userID: 49
+[2020-08-20T22:48:11.053] [INFO] users - profileInfo userID: 49
+[2020-08-20T23:43:19.971] [INFO] users - profileInfo userID: 49
+[2020-08-20T23:43:49.850] [INFO] users - profileInfo userID: 49
+[2020-08-20T23:44:05.194] [INFO] users - profileInfo userID: 49
+[2020-08-20T23:44:06.026] [INFO] users - profileInfo userID: 49
+[2020-08-20T23:44:06.815] [INFO] users - profileInfo userID: 49
+[2020-08-20T23:45:13.019] [INFO] users - profileInfo userID: 49
+[2020-08-20T23:45:15.383] [INFO] users - profileInfo userID: 49
+[2020-08-21T19:13:37.359] [INFO] users - ユーザログ UserName:1@1.com
+[2020-08-21T19:13:37.359] [INFO] userDao - START getUserInfoByUserName: {"username":"1@1.com"}
+[2020-08-21T19:13:37.503] [INFO] userDao - END getUserInfoByUserName
+[2020-08-21T19:13:37.606] [INFO] users - login success UserID: 49
+[2020-08-21T19:13:37.623] [INFO] users - profileInfo userID: 49
+[2020-08-21T19:13:37.623] [INFO] userDao - START getUserProfileByUserID : {"key":"UserID","val":49}
+[2020-08-21T19:13:37.695] [INFO] userDao - END getUserProfileByUserID
+[2020-08-21T19:13:37.696] [INFO] users - profileInfo success
+[2020-08-21T19:15:11.194] [INFO] users - profileInfo userID: 49
+[2020-08-21T19:15:11.195] [INFO] userDao - START getUserProfileByUserID : {"key":"UserID","val":49}
+[2020-08-21T19:15:11.209] [INFO] userDao - END getUserProfileByUserID
+[2020-08-21T19:15:11.209] [INFO] users - profileInfo success
+[2020-08-21T19:17:25.159] [INFO] users - profileInfo userID: 49
+[2020-08-21T19:17:25.159] [INFO] userDao - START getUserProfileByUserID : {"key":"UserID","val":49}
+[2020-08-21T19:17:25.173] [INFO] userDao - END getUserProfileByUserID
+[2020-08-21T19:17:25.173] [INFO] users - profileInfo success
+[2020-08-21T19:17:30.057] [INFO] users - profileInfo userID: 49
+[2020-08-21T19:17:30.057] [INFO] userDao - START getUserProfileByUserID : {"key":"UserID","val":49}
+[2020-08-21T19:17:30.062] [INFO] userDao - END getUserProfileByUserID
+[2020-08-21T19:17:30.063] [INFO] users - profileInfo success
+[2020-08-21T19:17:35.070] [INFO] users - profileInfo userID: 49
+[2020-08-21T19:17:35.070] [INFO] userDao - START getUserProfileByUserID : {"key":"UserID","val":49}
+[2020-08-21T19:17:35.075] [INFO] userDao - END getUserProfileByUserID
+[2020-08-21T19:17:35.075] [INFO] users - profileInfo success
+[2020-08-21T19:18:17.390] [INFO] users - profileInfo userID: 49
+[2020-08-21T19:18:17.390] [INFO] userDao - START getUserProfileByUserID : {"key":"UserID","val":49}
+[2020-08-21T19:18:17.398] [INFO] userDao - END getUserProfileByUserID
+[2020-08-21T19:18:17.399] [INFO] users - profileInfo success
+[2020-08-21T19:18:18.286] [INFO] users - profileInfo userID: 49
+[2020-08-21T19:18:18.287] [INFO] userDao - START getUserProfileByUserID : {"key":"UserID","val":49}
+[2020-08-21T19:18:18.291] [INFO] userDao - END getUserProfileByUserID
+[2020-08-21T19:18:18.291] [INFO] users - profileInfo success
+[2020-08-21T19:18:38.570] [INFO] users - profileInfo userID: 49
+[2020-08-21T19:18:38.570] [INFO] userDao - START getUserProfileByUserID : {"key":"UserID","val":49}
+[2020-08-21T19:18:38.575] [INFO] userDao - END getUserProfileByUserID
+[2020-08-21T19:18:38.576] [INFO] users - profileInfo success
+[2020-08-21T19:19:29.483] [INFO] users - profileInfo userID: 49
+[2020-08-21T19:19:29.483] [INFO] userDao - START getUserProfileByUserID : {"key":"UserID","val":49}
+[2020-08-21T19:19:29.494] [INFO] userDao - END getUserProfileByUserID
+[2020-08-21T19:19:29.494] [INFO] users - profileInfo success
+[2020-08-21T19:19:38.282] [INFO] users - profileInfo userID: 49
+[2020-08-21T19:19:38.283] [INFO] userDao - START getUserProfileByUserID : {"key":"UserID","val":49}
+[2020-08-21T19:19:38.291] [INFO] userDao - END getUserProfileByUserID
+[2020-08-21T19:19:38.291] [INFO] users - profileInfo success
+[2020-08-21T19:21:25.124] [INFO] users - profileInfo userID: 49
+[2020-08-21T19:21:25.124] [INFO] userDao - START getUserProfileByUserID : {"key":"UserID","val":49}
+[2020-08-21T19:21:25.243] [INFO] userDao - END getUserProfileByUserID
+[2020-08-21T19:21:25.244] [INFO] users - profileInfo success
+[2020-08-21T19:21:51.537] [INFO] users - profileInfo userID: 49
+[2020-08-21T19:21:51.537] [INFO] userDao - START getUserProfileByUserID : {"key":"UserID","val":49}
+[2020-08-21T19:21:51.553] [INFO] userDao - END getUserProfileByUserID
+[2020-08-21T19:21:51.553] [INFO] users - profileInfo success
+[2020-08-21T19:23:31.542] [INFO] users - profileInfo userID: 49
+[2020-08-21T19:23:31.543] [INFO] userDao - START getUserProfileByUserID : {"key":"UserID","val":49}
+[2020-08-21T19:23:31.559] [INFO] userDao - END getUserProfileByUserID
+[2020-08-21T19:23:31.560] [INFO] users - profileInfo success
+[2020-08-21T19:23:53.719] [INFO] users - profileInfo userID: 49
+[2020-08-21T19:23:53.719] [INFO] userDao - START getUserProfileByUserID : {"key":"UserID","val":49}
+[2020-08-21T19:23:53.722] [INFO] userDao - END getUserProfileByUserID
+[2020-08-21T19:23:53.723] [INFO] users - profileInfo success
+[2020-08-21T19:23:54.584] [INFO] users - profileInfo userID: 49
+[2020-08-21T19:23:54.584] [INFO] userDao - START getUserProfileByUserID : {"key":"UserID","val":49}
+[2020-08-21T19:23:54.589] [INFO] userDao - END getUserProfileByUserID
+[2020-08-21T19:23:54.589] [INFO] users - profileInfo success
+[2020-08-21T19:24:04.318] [INFO] users - profileInfo userID: 49
+[2020-08-21T19:24:04.318] [INFO] userDao - START getUserProfileByUserID : {"key":"UserID","val":49}
+[2020-08-21T19:24:04.336] [INFO] userDao - END getUserProfileByUserID
+[2020-08-21T19:24:04.336] [INFO] users - profileInfo success
+[2020-08-21T19:24:14.006] [INFO] users - profileInfo userID: 49
+[2020-08-21T19:24:14.007] [INFO] userDao - START getUserProfileByUserID : {"key":"UserID","val":49}
+[2020-08-21T19:24:14.011] [INFO] userDao - END getUserProfileByUserID
+[2020-08-21T19:24:14.011] [INFO] users - profileInfo success
+[2020-08-21T19:24:23.953] [INFO] users - profileInfo userID: 49
+[2020-08-21T19:24:23.953] [INFO] userDao - START getUserProfileByUserID : {"key":"UserID","val":49}
+[2020-08-21T19:24:23.959] [INFO] userDao - END getUserProfileByUserID
+[2020-08-21T19:24:23.959] [INFO] users - profileInfo success
+[2020-08-21T19:25:18.514] [INFO] users - profileInfo userID: 49
+[2020-08-21T19:25:18.514] [INFO] userDao - START getUserProfileByUserID : {"key":"UserID","val":49}
+[2020-08-21T19:25:18.551] [INFO] userDao - END getUserProfileByUserID
+[2020-08-21T19:25:18.552] [INFO] users - profileInfo success
+[2020-08-21T19:27:27.202] [INFO] users - profileInfo userID: 49
+[2020-08-21T19:27:27.203] [INFO] userDao - START getUserProfileByUserID : {"key":"UserID","val":49}
+[2020-08-21T19:27:27.245] [INFO] userDao - END getUserProfileByUserID
+[2020-08-21T19:27:27.245] [INFO] users - profileInfo success
+[2020-08-21T19:28:43.175] [INFO] users - profileInfo userID: 49
+[2020-08-21T19:28:43.175] [INFO] userDao - START getUserProfileByUserID : {"key":"UserID","val":49}
+[2020-08-21T19:28:43.182] [INFO] userDao - END getUserProfileByUserID
+[2020-08-21T19:28:43.182] [INFO] users - profileInfo success
+[2020-08-21T19:28:57.165] [INFO] users - profileInfo userID: 49
+[2020-08-21T19:28:57.165] [INFO] userDao - START getUserProfileByUserID : {"key":"UserID","val":49}
+[2020-08-21T19:28:57.172] [INFO] userDao - END getUserProfileByUserID
+[2020-08-21T19:28:57.173] [INFO] users - profileInfo success
+[2020-08-21T19:28:58.619] [INFO] users - profileInfo userID: 49
+[2020-08-21T19:28:58.619] [INFO] userDao - START getUserProfileByUserID : {"key":"UserID","val":49}
+[2020-08-21T19:28:58.624] [INFO] userDao - END getUserProfileByUserID
+[2020-08-21T19:28:58.625] [INFO] users - profileInfo success

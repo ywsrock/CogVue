@@ -76,7 +76,7 @@
 
                                 <div class="col-sm-4">
                                     <button type="submit" class="btn btn-primary"
-                                        onclick="location.href='blog_list.html';return false;">検　索</button>
+                                        href="" @click.prevent.stop="getBlogList">検　索</button>
                                 </div><!-- /.col-* -->
                             </div><!-- /.row -->
                         </form>
@@ -102,18 +102,18 @@
                             </form>
                         </h2><!-- /.page-title -->
 
-                        <div class="cards-simple-wrapper">
+                        <div class="cards-simple-wrapper" >
                             <div class="row">
 
-                                <div class="col-sm-6 col-md-4 col-lg-3">
+                                <div class="col-sm-6 col-md-4 col-lg-3" v-for="item in tableData" :key="item.id">
                                     <div class="card-simple"
                                         data-background-image="../../../assets/img/tmp/product-1.jpg">
                                         <div class="card-simple-background">
                                             <div class="card-simple-content">
                                                 <a href="blog_detail.html">
                                                     <h2>
-                                                        ついにコグエボに<br>デビューしました！<br>
-                                                        <small style="color: white;">40代 女性 にゃっきーさん</small>
+                                                        {{ item.title}}<br>
+                                                        <small style="color: white;">{{ item.userName}}さん</small>
                                                     </h2>
                                                 </a>
                                                 <div class="card-simple-rating">
@@ -139,325 +139,7 @@
                                     </div><!-- /.card-simple -->
                                 </div><!-- /.col-* -->
 
-                                <div class="col-sm-6 col-md-4 col-lg-3">
-                                    <div class="card-simple" data-background-image="../../assets/img/tmp/product-2.jpg">
-                                        <div class="card-simple-background">
-                                            <div class="card-simple-content">
-                                                <h2>
-                                                    継続は力なり！<br>
-                                                    <small style="color: white;">60代 男性 がんばろうさん</small>
-                                                </h2>
-                                                <div class="card-simple-rating">
-                                                    <i class="fa fa-star"></i>
-                                                    <i class="fa fa-star"></i>
-                                                    <i class="fa fa-star"></i>
-                                                    <i class="fa fa-star-o"></i>
-                                                    <i class="fa fa-star-o"></i>
-                                                </div><!-- /.card-rating -->
 
-                                                <div class="card-simple-actions">
-                                                    <a href="#" class="fa fa-star-o"></a>
-                                                    <a href="listing-detail.html" class="fa fa-search"></a>
-                                                    <a href="#" class="fa fa-heart-o"></a>
-                                                </div><!-- /.card-simple-actions -->
-                                            </div><!-- /.card-simple-content -->
-
-                                            <div class="card-simple-label">記憶力</div>
-
-                                        </div><!-- /.card-simple-background -->
-                                    </div><!-- /.card-simple -->
-                                </div><!-- /.col-* -->
-
-                                <div class="col-sm-6 col-md-4 col-lg-3">
-                                    <div class="card-simple" data-background-image="../../assets/img/tmp/product-3.jpg">
-                                        <div class="card-simple-background">
-                                            <div class="card-simple-content">
-                                                <h2>
-                                                    母の認知機能について<br>
-                                                    <small style="color: white;">50代 男性 ichiroさん</small>
-                                                </h2>
-                                                <div class="card-simple-rating">
-                                                    <i class="fa fa-star-o"></i>
-                                                    <i class="fa fa-star-o"></i>
-                                                    <i class="fa fa-star-o"></i>
-                                                    <i class="fa fa-star-o"></i>
-                                                    <i class="fa fa-star-o"></i>
-                                                </div><!-- /.card-rating -->
-
-                                                <div class="card-simple-actions">
-                                                    <a href="#" class="fa fa-star-o"></a>
-                                                    <a href="listing-detail.html" class="fa fa-search"></a>
-                                                    <a href="#" class="fa fa-heart-o"></a>
-                                                </div><!-- /.card-simple-actions -->
-                                            </div><!-- /.card-simple-content -->
-
-                                            <div class="card-simple-label">全般</div>
-
-                                            <div class="card-simple-price">新規会員</div>
-
-                                        </div><!-- /.card-simple-background -->
-                                    </div><!-- /.card-simple -->
-                                </div><!-- /.col-* -->
-
-                                <div class="col-sm-6 col-md-4 col-lg-3">
-                                    <div class="card-simple" data-background-image="../../assets/img/tmp/product-4.jpg">
-                                        <div class="card-simple-background">
-                                            <div class="card-simple-content">
-                                                <h2>
-                                                    運動はいいね～！<br>
-                                                    <small style="color: white;">70代 女性 涼子さん</small>
-                                                </h2>
-                                                <div class="card-simple-rating">
-                                                    <i class="fa fa-star"></i>
-                                                    <i class="fa fa-star"></i>
-                                                    <i class="fa fa-star"></i>
-                                                    <i class="fa fa-star"></i>
-                                                    <i class="fa fa-star"></i>
-                                                </div><!-- /.card-rating -->
-
-                                                <div class="card-simple-actions">
-                                                    <a href="#" class="fa fa-star-o"></a>
-                                                    <a href="listing-detail.html" class="fa fa-search"></a>
-                                                    <a href="#" class="fa fa-heart-o"></a>
-                                                </div><!-- /.card-simple-actions -->
-                                            </div><!-- /.card-simple-content -->
-
-                                            <div class="card-simple-label">見当識</div>
-
-                                        </div><!-- /.card-simple-background -->
-                                    </div><!-- /.card-simple -->
-                                </div><!-- /.col-* -->
-
-                                <div class="col-sm-6 col-md-4 col-lg-3">
-                                    <div class="card-simple" data-background-image="../../assets/img/tmp/product-5.jpg">
-                                        <div class="card-simple-background">
-                                            <div class="card-simple-content">
-                                                <h2>
-                                                    たまには家族と<br>温泉旅行にいこう！<br>
-                                                    <small style="color: white;">40代 男性 信也さん</small>
-                                                </h2>
-                                                <div class="card-simple-rating">
-                                                    <i class="fa fa-star"></i>
-                                                    <i class="fa fa-star"></i>
-                                                    <i class="fa fa-star"></i>
-                                                    <i class="fa fa-star"></i>
-                                                    <i class="fa fa-star"></i>
-                                                </div><!-- /.card-rating -->
-
-                                                <div class="card-simple-actions">
-                                                    <a href="#" class="fa fa-star-o"></a>
-                                                    <a href="listing-detail.html" class="fa fa-search"></a>
-                                                    <a href="#" class="fa fa-heart-o"></a>
-                                                </div><!-- /.card-simple-actions -->
-                                            </div><!-- /.card-simple-content -->
-
-                                            <div class="card-simple-label">計画力</div>
-
-                                        </div><!-- /.card-simple-background -->
-                                    </div><!-- /.card-simple -->
-                                </div><!-- /.col-* -->
-
-                                <div class="col-sm-6 col-md-4 col-lg-3">
-                                    <div class="card-simple" data-background-image="../../assets/img/tmp/product-6.jpg">
-                                        <div class="card-simple-background">
-                                            <div class="card-simple-content">
-                                                <h2>
-                                                    息子と一緒に<br>若年性認知症を考える<br>
-                                                    <small style="color: white;">50代 女性 akiさん</small>
-                                                </h2>
-                                                <div class="card-simple-rating">
-                                                    <i class="fa fa-star"></i>
-                                                    <i class="fa fa-star"></i>
-                                                    <i class="fa fa-star"></i>
-                                                    <i class="fa fa-star"></i>
-                                                    <i class="fa fa-star"></i>
-                                                </div><!-- /.card-rating -->
-
-                                                <div class="card-simple-actions">
-                                                    <a href="#" class="fa fa-star-o"></a>
-                                                    <a href="listing-detail.html" class="fa fa-search"></a>
-                                                    <a href="#" class="fa fa-heart-o"></a>
-                                                </div><!-- /.card-simple-actions -->
-                                            </div><!-- /.card-simple-content -->
-
-                                            <div class="card-simple-label">全般</div>
-
-                                            <div class="card-simple-price">新規会員</div>
-
-                                        </div><!-- /.card-simple-background -->
-                                    </div><!-- /.card-simple -->
-                                </div><!-- /.col-* -->
-
-                                <div class="col-sm-6 col-md-4 col-lg-3">
-                                    <div class="card-simple" data-background-image="../../assets/img/tmp/product-7.jpg">
-                                        <div class="card-simple-background">
-                                            <div class="card-simple-content">
-                                                <h2>
-                                                    この歳で全国ランキング<br>100位に！？<br>
-                                                    <small style="color: white;">70代以上 男性 tatsuoさん</small>
-                                                </h2>
-                                                <div class="card-simple-rating">
-                                                    <i class="fa fa-star"></i>
-                                                    <i class="fa fa-star"></i>
-                                                    <i class="fa fa-star"></i>
-                                                    <i class="fa fa-star"></i>
-                                                    <i class="fa fa-star"></i>
-                                                </div><!-- /.card-rating -->
-
-                                                <div class="card-simple-actions">
-                                                    <a href="#" class="fa fa-star-o"></a>
-                                                    <a href="listing-detail.html" class="fa fa-search"></a>
-                                                    <a href="#" class="fa fa-heart-o"></a>
-                                                </div><!-- /.card-simple-actions -->
-                                            </div><!-- /.card-simple-content -->
-
-                                            <div class="card-simple-label">注意力</div>
-
-                                        </div><!-- /.card-simple-background -->
-                                    </div><!-- /.card-simple -->
-                                </div><!-- /.col-* -->
-
-                                <div class="col-sm-6 col-md-4 col-lg-3">
-                                    <div class="card-simple" data-background-image="../../assets/img/tmp/product-8.jpg">
-                                        <div class="card-simple-background">
-                                            <div class="card-simple-content">
-                                                <h2>
-                                                    認知機能セミナーに<br>参加してみませんか？<br>
-                                                    <small style="color: white;">60代 男性 釣り大好きさん</small>
-                                                </h2>
-                                                <div class="card-simple-rating">
-                                                    <i class="fa fa-star"></i>
-                                                    <i class="fa fa-star"></i>
-                                                    <i class="fa fa-star"></i>
-                                                    <i class="fa fa-star"></i>
-                                                    <i class="fa fa-star"></i>
-                                                </div><!-- /.card-rating -->
-
-                                                <div class="card-simple-actions">
-                                                    <a href="#" class="fa fa-star-o"></a>
-                                                    <a href="listing-detail.html" class="fa fa-search"></a>
-                                                    <a href="#" class="fa fa-heart-o"></a>
-                                                </div><!-- /.card-simple-actions -->
-                                            </div><!-- /.card-simple-content -->
-
-                                            <div class="card-simple-label">全般</div>
-
-                                            <div class="card-simple-price">ヘビーユーザー</div>
-
-                                        </div><!-- /.card-simple-background -->
-                                    </div><!-- /.card-simple -->
-                                </div><!-- /.col-* -->
-
-                                <div class="col-sm-6 col-md-4 col-lg-3">
-                                    <div class="card-simple" data-background-image="../../assets/img/tmp/product-9.jpg">
-                                        <div class="card-simple-background">
-                                            <div class="card-simple-content">
-                                                <h2><a href="listing-detail.html">Wine Tasting</a></h2>
-                                                <div class="card-simple-rating">
-                                                    <i class="fa fa-star"></i>
-                                                    <i class="fa fa-star"></i>
-                                                    <i class="fa fa-star"></i>
-                                                    <i class="fa fa-star"></i>
-                                                    <i class="fa fa-star"></i>
-                                                </div><!-- /.card-rating -->
-
-                                                <div class="card-simple-actions">
-                                                    <a href="#" class="fa fa-star-o"></a>
-                                                    <a href="listing-detail.html" class="fa fa-search"></a>
-                                                    <a href="#" class="fa fa-heart-o"></a>
-                                                </div><!-- /.card-simple-actions -->
-                                            </div><!-- /.card-simple-content -->
-
-                                            <div class="card-simple-label">Event</div>
-
-                                            <div class="card-simple-price">$13 / ticket</div>
-
-                                        </div><!-- /.card-simple-background -->
-                                    </div><!-- /.card-simple -->
-                                </div><!-- /.col-* -->
-
-                                <div class="col-sm-6 col-md-4 col-lg-3">
-                                    <div class="card-simple"
-                                        data-background-image="../../assets/img/tmp/product-10.jpg">
-                                        <div class="card-simple-background">
-                                            <div class="card-simple-content">
-                                                <h2><a href="listing-detail.html">Affordable Office</a></h2>
-                                                <div class="card-simple-rating">
-                                                    <i class="fa fa-star"></i>
-                                                    <i class="fa fa-star"></i>
-                                                    <i class="fa fa-star"></i>
-                                                    <i class="fa fa-star"></i>
-                                                    <i class="fa fa-star"></i>
-                                                </div><!-- /.card-rating -->
-
-                                                <div class="card-simple-actions">
-                                                    <a href="#" class="fa fa-star-o"></a>
-                                                    <a href="listing-detail.html" class="fa fa-search"></a>
-                                                    <a href="#" class="fa fa-heart-o"></a>
-                                                </div><!-- /.card-simple-actions -->
-                                            </div><!-- /.card-simple-content -->
-
-                                            <div class="card-simple-label">Coworking</div>
-
-                                        </div><!-- /.card-simple-background -->
-                                    </div><!-- /.card-simple -->
-                                </div><!-- /.col-* -->
-
-                                <div class="col-sm-6 col-md-4 col-lg-3">
-                                    <div class="card-simple"
-                                        data-background-image="../../assets/img/tmp/product-11.jpg">
-                                        <div class="card-simple-background">
-                                            <div class="card-simple-content">
-                                                <h2><a href="listing-detail.html">Quick Breakfast</a></h2>
-                                                <div class="card-simple-rating">
-                                                    <i class="fa fa-star"></i>
-                                                    <i class="fa fa-star"></i>
-                                                    <i class="fa fa-star"></i>
-                                                    <i class="fa fa-star"></i>
-                                                    <i class="fa fa-star"></i>
-                                                </div><!-- /.card-rating -->
-
-                                                <div class="card-simple-actions">
-                                                    <a href="#" class="fa fa-star-o"></a>
-                                                    <a href="listing-detail.html" class="fa fa-search"></a>
-                                                    <a href="#" class="fa fa-heart-o"></a>
-                                                </div><!-- /.card-simple-actions -->
-                                            </div><!-- /.card-simple-content -->
-
-                                            <div class="card-simple-label">Food</div>
-
-                                            <div class="card-simple-price">$8 / person</div>
-
-                                        </div><!-- /.card-simple-background -->
-                                    </div><!-- /.card-simple -->
-                                </div><!-- /.col-* -->
-
-                                <div class="col-sm-6 col-md-4 col-lg-3">
-                                    <div class="card-simple"
-                                        data-background-image="../../assets/img/tmp/product-12.jpg">
-                                        <div class="card-simple-background">
-                                            <div class="card-simple-content">
-                                                <h2><a href="listing-detail.html">Monumental City</a></h2>
-                                                <div class="card-simple-rating">
-                                                    <i class="fa fa-star"></i>
-                                                    <i class="fa fa-star"></i>
-                                                    <i class="fa fa-star"></i>
-                                                    <i class="fa fa-star"></i>
-                                                    <i class="fa fa-star"></i>
-                                                </div><!-- /.card-rating -->
-
-                                                <div class="card-simple-actions">
-                                                    <a href="#" class="fa fa-star-o"></a>
-                                                    <a href="listing-detail.html" class="fa fa-search"></a>
-                                                    <a href="#" class="fa fa-heart-o"></a>
-                                                </div><!-- /.card-simple-actions -->
-                                            </div><!-- /.card-simple-content -->
-
-                                            <div class="card-simple-label">Landmark</div>
-
-                                        </div><!-- /.card-simple-background -->
-                                    </div><!-- /.card-simple -->
-                                </div><!-- /.col-* -->
 
                             </div><!-- /.row -->
                         </div><!-- /.cards-simple-wrapper -->
@@ -491,7 +173,50 @@
 
 <script>
 export default {
-    
+
+      data() {
+    return {
+      tableData: [],
+      search: ""
+    };
+  },
+
+    mounted() {
+    var that = this;
+    //
+    this.$store
+      .dispatch("blog/getBlogList",this.$route.query.userid)
+      .then(res => {
+        this.$nextTick().then(function() {
+          const blogInfo = that.$store.getters.get_content;
+          that.tableData = blogInfo;
+        });
+      })
+      .catch(err => {
+        console.log("err-------");
+      });
+  },
+
+    methods:{
+            getBlogList() {
+      //apiから　サーバーに命令をだす。(store action)
+      this.$store.dispatch("blog/getBlogList")
+      //成功の場合
+      .then(res =>{
+        let userid = res.userID;
+        this.$router.push("/blogList?userid=" + userid);
+      })
+      //失敗の場合
+      .catch();
+        console.log("err=====");
+    },
+
+    }
+
+
+
+
+
 }
 </script>
 <style scoped>

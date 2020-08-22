@@ -192,8 +192,8 @@
                   </li>
 
                   <li>
-                    <a href="#">Blog <i class="fa fa-chevron-down"></i></a>
-
+                    <!-- <a href="" @click.prevent.stop="getBlogList">Blog <i class="fa fa-chevron-down"></i></a>-->
+                    <a href="https://localhost:8080/#/blog_top">Blog <i class="fa fa-chevron-down"></i></a>
                     <ul class="sub-menu">
                       <li>
                         <a href="blog-standard-right-sidebar.html"
@@ -358,6 +358,22 @@ export default {
       //メイン画面に遷移
       this.$router.push("/");
     },
+
+    getBlogList() {
+      //apiから　サーバーに命令をだす。(store action)
+      this.$store.dispatch("blog/getBlogList")
+      //成功の場合
+      .then(res =>{
+        let userid = res.userID;
+        this.$router.push("/blogList?userid=" + userid);
+      })
+      //失敗の場合
+      .catch();
+        console.log("err=====");
+    },
+
+
+
 
     getProfileInfo() {
       this.$router.push("/userInfo/userUpdate");

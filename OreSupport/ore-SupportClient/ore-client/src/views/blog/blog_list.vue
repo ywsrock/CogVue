@@ -11,7 +11,7 @@
               <div class="col-sm-8 col-lg-9">
                 <div class="content">
                   <div class="page-title">
-                    <h1>1,234 件がヒットしました。</h1>
+                    <h1>{{tableData.length }}件がヒットしました</h1>
                   </div>
                   <!-- /.page-title -->
 
@@ -36,7 +36,7 @@
                       <div class="post-meta clearfix">
                         <div class="post-meta-author">
                           By
-                          <a href="blog-detail.html">にゃっきーさん 40代 女性</a>
+                          <a href="blog-detail.html">{{ item.userName}}</a>
                         </div>
                         <!-- /.post-meta-author -->
                         <div class="post-meta-date">2020/07/07</div>
@@ -50,6 +50,8 @@
                           <i class="fa fa-comments"></i>
                           <a href="blog-detail.html">3 コメント</a>
                         </div>
+                         <!-- <br> <el-button size="mini" @click="blogEdit(scope.$index, scope.row)">Edit</el-button>
+                          <el-button size="mini" type="danger" @click="blogDelete(scope.$index, scope.row)">Delete</el-button>-->
                         <!-- /.post-meta-comments -->
                         <div class="post-meta-more">
                           <a @click.prevent="getBlogDetail(item.id) ">
@@ -97,7 +99,7 @@
                       <button
                         class="btn btn-primary btn-block"
                         type="submit"
-                        onclick="location.href='blog_edit.html';return false;"
+                        onclick="location.href='#/createBlog';return false;"
                       >新規投稿</button>
                     </div>
                     <h2 class="widgettitle">おススメブログ</h2>
@@ -387,7 +389,7 @@ export default {
     var that = this;
     //
     this.$store
-      .dispatch("blog/getBlogList")
+      .dispatch("blog/getBlogList",this.$route.query.userid)
       .then(res => {
         this.$nextTick().then(function() {
           const blogInfo = that.$store.getters.get_content;
@@ -467,11 +469,9 @@ filters: {
   content_slice: function (value) {
     if (!value) return ''
     value = value.toString()
-    return value.slice(0, 50) + "...."
+    return value.slice(0, 100) + "...."
   }
 }
-
-
 };
 
 

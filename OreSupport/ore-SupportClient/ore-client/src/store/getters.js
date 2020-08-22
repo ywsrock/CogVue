@@ -8,6 +8,7 @@ const getters = {
     get_id: state => state.blog.id,
     get_title: state => state.blog.title,
     get_content: state => state.blog.content,
+    get_userName: state => state.user.userName
 }
 
 

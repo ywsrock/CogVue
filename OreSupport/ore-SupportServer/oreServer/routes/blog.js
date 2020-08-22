@@ -13,7 +13,8 @@ router.get("/bloglist", [checkuser.verifyUser], async function (req, res, next) 
     let userID = req.userID;
 
     //ブログリスと取得
-    var blogList = await blogmodel.getBlogList({ key: "UserID", val: userID })
+    //var blogList = await blogmodel.getBlogList({ key: "UserID", val: userID })
+    var blogList = await blogmodel.getBlogList()
 
     if (typeof blogList.errors != "undefined") {
         // エラー結果
@@ -33,7 +34,8 @@ router.get("/bloglist", [checkuser.verifyUser], async function (req, res, next) 
             contentArray.push({
                 id: blog.id,
                 title: blog.Title,
-                content: blog.Content
+                content: blog.Content,
+                userName: blog.User.UserName
             })
         })
 
@@ -43,13 +45,15 @@ router.get("/bloglist", [checkuser.verifyUser], async function (req, res, next) 
 
             data: {
                 title: "test",
-                content: contentArray
+                content: contentArray,
+                userID:userID
             },
         }
     }
 
     return res.status(200).send(resObj);
 })
+
 
 router.post("/create", [checkuser.verifyUser], async function (req, res, next) {
     // 出力結果
