@@ -3,25 +3,34 @@ import { getNumber } from "./mockUtils"
 // summary画面表示用データ
 export const summary = {
     lineChartData: {
-        newVisitis: {
-            week: getNumber(7, 10, 1000),
-            month: getNumber(7, 10, 1000),
-            year: getNumber(7, 10, 1000),
+        yearData: {
+            OrientationAbility: getNumber(7, 10, 150),
+            AttentionAbility: getNumber(7, 10, 150),
+            MemoryAbility: getNumber(7, 10, 150),
+            PlanAblity: getNumber(7, 10, 150),
+            SpatialAbility: getNumber(7, 10, 150)
+
         },
-        messages: {
-            week: getNumber(7, 10, 1000),
-            month: getNumber(7, 10, 1000),
-            year: getNumber(7, 10, 1000),
+        monthData: {
+            OrientationAbility: getNumber(7, 10, 1000),
+            AttentionAbility: getNumber(7, 10, 1000),
+            MemoryAbility: getNumber(7, 10, 1000),
+            PlanAblity: getNumber(7, 10, 1000),
+            SpatialAbility: getNumber(7, 10, 1000)
         },
-        purchases: {
-            week: getNumber(7, 10, 1000),
-            month: getNumber(7, 10, 1000),
-            year: getNumber(7, 10, 1000),
+        weekData: {
+            OrientationAbility: getNumber(7, 10, 1000),
+            AttentionAbility: getNumber(7, 10, 1000),
+            MemoryAbility: getNumber(7, 10, 1000),
+            PlanAblity: getNumber(7, 10, 1000),
+            SpatialAbility: getNumber(7, 10, 1000)
         },
         shoppings: {
-            week: getNumber(7, 10, 1000),
-            month: getNumber(7, 10, 1000),
-            year: getNumber(7, 10, 1000),
+            OrientationAbility: getNumber(7, 10, 1000),
+            AttentionAbility: getNumber(7, 10, 1000),
+            MemoryAbility: getNumber(7, 10, 1000),
+            PlanAblity: getNumber(7, 10, 1000),
+            SpatialAbility: getNumber(7, 10, 1000)
         },
     }
 }

@@ -2308,3 +2308,1639 @@
 [2020-08-08T15:13:26.145] [INFO] users - profileInfo userID: 49
 [2020-08-08T15:13:27.347] [INFO] users - profileInfo userID: 49
 >>>>>>> MockCogResult
+[2020-08-15T18:52:43.858] [INFO] startup - Listening on port 3000
+[2020-08-15T18:52:51.169] [INFO] users - ユーザログ UserName:閻 文帥
+[2020-08-15T18:52:51.170] [INFO] users - Third Party by Facebook
+[2020-08-15T18:52:51.608] [INFO] users - profileInfo userID: 2588234901506497
+[2020-08-15T18:53:45.325] [INFO] users - profileInfo userID: 2588234901506497
+[2020-08-15T18:53:46.820] [INFO] users - profileInfo userID: 2588234901506497
+[2020-08-15T18:54:14.224] [INFO] users - profileInfo userID: 2588234901506497
+[2020-08-15T18:55:05.578] [INFO] users - profileInfo userID: 2588234901506497
+[2020-08-15T18:56:32.710] [INFO] users - profileInfo userID: 2588234901506497
+[2020-08-15T18:57:15.406] [INFO] users - profileInfo userID: 2588234901506497
+[2020-08-15T18:57:40.601] [INFO] users - profileInfo userID: 2588234901506497
+[2020-08-15T18:58:46.264] [INFO] users - profileInfo userID: 2588234901506497
+[2020-08-15T18:59:21.588] [INFO] users - profileInfo userID: 2588234901506497
+[2020-08-15T19:44:27.869] [INFO] users - profileInfo userID: 2588234901506497
+[2020-08-15T19:46:53.656] [INFO] users - profileInfo userID: 2588234901506497
+[2020-08-15T19:48:25.333] [INFO] users - profileInfo userID: 2588234901506497
+[2020-08-15T19:48:58.566] [INFO] users - profileInfo userID: 2588234901506497
+[2020-08-15T19:51:33.492] [INFO] users - profileInfo userID: 2588234901506497
+[2020-08-15T19:51:34.368] [INFO] users - profileInfo userID: 2588234901506497
+[2020-08-15T19:51:44.677] [INFO] users - profileInfo userID: 2588234901506497
+[2020-08-15T19:51:57.672] [INFO] users - profileInfo userID: 2588234901506497
+[2020-08-15T19:57:32.973] [INFO] users - profileInfo userID: 2588234901506497
+[2020-08-15T19:58:49.661] [INFO] users - profileInfo userID: 2588234901506497
+[2020-08-15T19:59:12.674] [INFO] users - profileInfo userID: 2588234901506497
+[2020-08-15T19:59:16.959] [INFO] users - profileInfo userID: 2588234901506497
+[2020-08-15T20:01:54.610] [INFO] users - profileInfo userID: 2588234901506497
+[2020-08-15T20:01:55.897] [INFO] users - profileInfo userID: 2588234901506497
+[2020-08-15T20:01:56.778] [INFO] users - profileInfo userID: 2588234901506497
+[2020-08-15T20:01:57.141] [INFO] users - profileInfo userID: 2588234901506497
+[2020-08-15T20:01:57.492] [INFO] users - profileInfo userID: 2588234901506497
+[2020-08-15T20:02:04.610] [INFO] users - profileInfo userID: 2588234901506497
+[2020-08-15T20:02:16.932] [INFO] users - profileInfo userID: 2588234901506497
+[2020-08-15T20:02:18.725] [INFO] users - profileInfo userID: 2588234901506497
+[2020-08-15T20:02:26.596] [INFO] users - profileInfo userID: 2588234901506497
+[2020-08-15T20:02:29.849] [INFO] users - profileInfo userID: 2588234901506497
+[2020-08-15T20:02:30.818] [INFO] users - profileInfo userID: 2588234901506497
+[2020-08-15T20:02:31.307] [INFO] users - profileInfo userID: 2588234901506497
+[2020-08-15T20:03:02.287] [INFO] users - profileInfo userID: 2588234901506497
+[2020-08-15T20:03:04.716] [INFO] users - profileInfo userID: 2588234901506497
+[2020-08-15T20:03:18.722] [INFO] users - profileInfo userID: 2588234901506497
+[2020-08-15T20:04:12.045] [INFO] users - profileInfo userID: 2588234901506497
+[2020-08-15T20:04:30.390] [INFO] users - profileInfo userID: 2588234901506497
+[2020-08-15T20:04:56.438] [INFO] users - profileInfo userID: 2588234901506497
+[2020-08-15T20:05:18.105] [INFO] users - profileInfo userID: 2588234901506497
+[2020-08-15T20:05:19.794] [INFO] users - profileInfo userID: 2588234901506497
+[2020-08-15T20:05:28.484] [INFO] users - profileInfo userID: 2588234901506497
+[2020-08-15T20:05:30.811] [INFO] users - profileInfo userID: 2588234901506497
+[2020-08-15T20:05:45.405] [INFO] users - profileInfo userID: 2588234901506497
+[2020-08-15T20:06:32.782] [INFO] users - profileInfo userID: 2588234901506497
+[2020-08-15T20:07:13.981] [INFO] users - profileInfo userID: 2588234901506497
+[2020-08-15T20:07:17.630] [INFO] users - profileInfo userID: 2588234901506497
+[2020-08-15T20:07:37.601] [INFO] users - profileInfo userID: 2588234901506497
+[2020-08-15T20:08:00.226] [INFO] users - profileInfo userID: 2588234901506497
+[2020-08-15T20:08:13.476] [INFO] users - profileInfo userID: 2588234901506497
+[2020-08-15T20:08:36.395] [INFO] users - profileInfo userID: 2588234901506497
+[2020-08-15T20:08:50.082] [INFO] users - profileInfo userID: 2588234901506497
+[2020-08-15T20:09:42.634] [INFO] users - profileInfo userID: 2588234901506497
+[2020-08-15T20:10:14.512] [INFO] users - profileInfo userID: 2588234901506497
+[2020-08-15T20:10:15.510] [INFO] users - profileInfo userID: 2588234901506497
+[2020-08-15T20:11:21.429] [INFO] users - profileInfo userID: 2588234901506497
+[2020-08-15T20:12:19.080] [INFO] users - profileInfo userID: 2588234901506497
+[2020-08-15T20:15:54.339] [INFO] users - profileInfo userID: 2588234901506497
+[2020-08-15T20:15:54.838] [INFO] users - profileInfo userID: 2588234901506497
+[2020-08-15T20:18:37.705] [INFO] users - profileInfo userID: 2588234901506497
+[2020-08-15T20:21:14.174] [INFO] users - profileInfo userID: 2588234901506497
+[2020-08-15T20:22:04.366] [INFO] users - profileInfo userID: 2588234901506497
+[2020-08-15T20:22:34.786] [INFO] users - profileInfo userID: 2588234901506497
+[2020-08-15T20:23:46.118] [INFO] users - profileInfo userID: 2588234901506497
+[2020-08-15T20:23:59.146] [INFO] users - profileInfo userID: 2588234901506497
+[2020-08-15T20:27:09.155] [INFO] users - profileInfo userID: 2588234901506497
+[2020-08-15T20:28:39.996] [INFO] users - profileInfo userID: 2588234901506497
+[2020-08-15T20:28:41.157] [INFO] users - profileInfo userID: 2588234901506497
+[2020-08-15T20:32:29.659] [INFO] users - profileInfo userID: 2588234901506497
+[2020-08-15T20:32:51.690] [INFO] users - profileInfo userID: 2588234901506497
+[2020-08-15T20:35:50.626] [INFO] users - profileInfo userID: 2588234901506497
+[2020-08-15T20:36:27.130] [INFO] users - profileInfo userID: 2588234901506497
+[2020-08-15T20:36:53.282] [INFO] users - profileInfo userID: 2588234901506497
+[2020-08-15T20:36:55.675] [INFO] users - profileInfo userID: 2588234901506497
+[2020-08-15T20:37:19.441] [INFO] users - profileInfo userID: 2588234901506497
+[2020-08-15T20:38:06.545] [INFO] users - profileInfo userID: 2588234901506497
+[2020-08-15T20:38:36.300] [INFO] users - profileInfo userID: 2588234901506497
+[2020-08-15T20:38:37.383] [INFO] users - profileInfo userID: 2588234901506497
+[2020-08-15T20:38:45.022] [INFO] users - profileInfo userID: 2588234901506497
+[2020-08-15T20:39:00.571] [INFO] users - profileInfo userID: 2588234901506497
+[2020-08-15T20:42:09.438] [INFO] users - profileInfo userID: 2588234901506497
+[2020-08-15T20:44:37.423] [INFO] users - profileInfo userID: 2588234901506497
+[2020-08-15T20:45:44.641] [INFO] users - profileInfo userID: 2588234901506497
+[2020-08-15T20:46:09.703] [INFO] users - profileInfo userID: 2588234901506497
+[2020-08-15T20:46:29.820] [INFO] users - profileInfo userID: 2588234901506497
+[2020-08-15T20:46:31.737] [INFO] users - profileInfo userID: 2588234901506497
+[2020-08-15T20:46:35.237] [INFO] users - profileInfo userID: 2588234901506497
+[2020-08-15T20:46:54.229] [INFO] users - profileInfo userID: 2588234901506497
+[2020-08-15T20:47:27.683] [INFO] users - profileInfo userID: 2588234901506497
+[2020-08-15T20:47:28.409] [INFO] users - profileInfo userID: 2588234901506497
+[2020-08-15T20:51:07.973] [INFO] users - profileInfo userID: 2588234901506497
+[2020-08-15T20:51:17.614] [INFO] users - profileInfo userID: 2588234901506497
+[2020-08-15T20:51:57.214] [INFO] users - profileInfo userID: 2588234901506497
+[2020-08-15T21:04:25.732] [INFO] users - profileInfo userID: 2588234901506497
+[2020-08-15T21:31:51.027] [INFO] startup - Listening on port 3000
+[2020-08-15T21:31:55.622] [INFO] users - profileInfo userID: 2588234901506497
+[2020-08-15T21:32:57.716] [INFO] users - profileInfo userID: 2588234901506497
+[2020-08-15T21:33:39.726] [INFO] users - profileInfo userID: 2588234901506497
+[2020-08-15T21:34:07.368] [INFO] users - profileInfo userID: 2588234901506497
+[2020-08-15T21:36:42.650] [INFO] users - profileInfo userID: 2588234901506497
+[2020-08-15T21:36:45.336] [INFO] users - profileInfo userID: 2588234901506497
+[2020-08-15T21:37:17.592] [INFO] users - profileInfo userID: 2588234901506497
+[2020-08-15T21:37:51.940] [INFO] users - profileInfo userID: 2588234901506497
+[2020-08-15T21:38:05.053] [INFO] users - profileInfo userID: 2588234901506497
+[2020-08-15T21:38:31.909] [INFO] users - profileInfo userID: 2588234901506497
+[2020-08-15T21:38:52.878] [INFO] users - profileInfo userID: 2588234901506497
+[2020-08-15T21:41:17.258] [INFO] users - profileInfo userID: 2588234901506497
+[2020-08-15T21:41:50.886] [INFO] users - profileInfo userID: 2588234901506497
+[2020-08-15T21:42:05.441] [INFO] users - profileInfo userID: 2588234901506497
+[2020-08-15T21:42:06.905] [INFO] users - profileInfo userID: 2588234901506497
+[2020-08-15T21:42:28.504] [INFO] users - profileInfo userID: 2588234901506497
+[2020-08-15T21:45:33.872] [INFO] startup - Listening on port 3000
+[2020-08-15T21:45:36.379] [INFO] users - profileInfo userID: 2588234901506497
+[2020-08-15T21:45:39.477] [INFO] users - profileInfo userID: 2588234901506497
+[2020-08-15T21:45:40.320] [INFO] users - profileInfo userID: 2588234901506497
+[2020-08-15T21:46:31.264] [INFO] users - profileInfo userID: 2588234901506497
+[2020-08-15T21:46:34.591] [INFO] users - profileInfo userID: 2588234901506497
+[2020-08-15T21:46:35.625] [INFO] users - profileInfo userID: 2588234901506497
+[2020-08-15T21:46:49.532] [INFO] users - profileInfo userID: 2588234901506497
+[2020-08-15T21:46:50.811] [INFO] users - profileInfo userID: 2588234901506497
+[2020-08-15T21:47:36.176] [INFO] users - profileInfo userID: 2588234901506497
+[2020-08-15T21:47:37.063] [INFO] users - profileInfo userID: 2588234901506497
+[2020-08-15T21:48:05.609] [INFO] users - profileInfo userID: 2588234901506497
+[2020-08-15T21:48:07.358] [INFO] users - profileInfo userID: 2588234901506497
+[2020-08-15T21:48:15.864] [INFO] users - profileInfo userID: 2588234901506497
+[2020-08-15T21:48:17.666] [INFO] users - profileInfo userID: 2588234901506497
+[2020-08-15T21:48:35.698] [INFO] users - profileInfo userID: 2588234901506497
+[2020-08-15T21:49:13.377] [INFO] users - profileInfo userID: 2588234901506497
+[2020-08-15T21:49:14.360] [INFO] users - profileInfo userID: 2588234901506497
+[2020-08-15T21:54:20.936] [INFO] users - profileInfo userID: 2588234901506497
+[2020-08-15T21:55:00.937] [INFO] users - profileInfo userID: 2588234901506497
+[2020-08-15T21:58:46.941] [INFO] users - profileInfo userID: 2588234901506497
+[2020-08-15T22:00:24.409] [INFO] users - profileInfo userID: 2588234901506497
+[2020-08-15T22:00:25.804] [INFO] users - profileInfo userID: 2588234901506497
+[2020-08-15T22:00:28.136] [INFO] users - profileInfo userID: 2588234901506497
+[2020-08-15T22:01:40.293] [INFO] users - profileInfo userID: 2588234901506497
+[2020-08-15T22:02:01.107] [INFO] users - profileInfo userID: 2588234901506497
+[2020-08-15T22:05:27.366] [INFO] users - profileInfo userID: 2588234901506497
+[2020-08-15T22:07:22.536] [INFO] users - profileInfo userID: 2588234901506497
+[2020-08-15T22:07:54.243] [INFO] users - profileInfo userID: 2588234901506497
+[2020-08-15T22:08:55.422] [INFO] users - profileInfo userID: 2588234901506497
+[2020-08-15T22:12:44.301] [INFO] users - profileInfo userID: 2588234901506497
+[2020-08-15T22:16:28.325] [INFO] users - profileInfo userID: 2588234901506497
+[2020-08-15T22:16:29.311] [INFO] users - profileInfo userID: 2588234901506497
+[2020-08-15T22:16:30.120] [INFO] users - profileInfo userID: 2588234901506497
+[2020-08-15T22:16:30.400] [INFO] users - profileInfo userID: 2588234901506497
+[2020-08-15T22:17:00.656] [INFO] users - profileInfo userID: 2588234901506497
+[2020-08-15T22:17:01.429] [INFO] users - profileInfo userID: 2588234901506497
+[2020-08-15T22:18:35.168] [INFO] users - profileInfo userID: 2588234901506497
+[2020-08-15T22:19:31.906] [INFO] users - profileInfo userID: 2588234901506497
+[2020-08-15T22:19:34.244] [INFO] users - profileInfo userID: 2588234901506497
+[2020-08-15T22:21:12.339] [INFO] users - profileInfo userID: 2588234901506497
+[2020-08-15T22:21:24.280] [INFO] users - profileInfo userID: 2588234901506497
+[2020-08-15T22:22:39.933] [INFO] users - profileInfo userID: 2588234901506497
+[2020-08-15T22:22:43.368] [INFO] users - profileInfo userID: 2588234901506497
+[2020-08-15T22:22:54.693] [INFO] users - profileInfo userID: 2588234901506497
+[2020-08-15T22:22:55.424] [INFO] users - profileInfo userID: 2588234901506497
+[2020-08-15T22:23:30.464] [INFO] users - profileInfo userID: 2588234901506497
+[2020-08-15T22:24:29.549] [INFO] users - profileInfo userID: 2588234901506497
+[2020-08-15T22:24:31.328] [INFO] users - profileInfo userID: 2588234901506497
+[2020-08-15T22:24:37.380] [INFO] users - profileInfo userID: 2588234901506497
+[2020-08-15T23:06:39.510] [INFO] users - profileInfo userID: 2588234901506497
+[2020-08-15T23:10:23.202] [INFO] users - profileInfo userID: 2588234901506497
+[2020-08-15T23:10:24.106] [INFO] users - profileInfo userID: 2588234901506497
+[2020-08-15T23:11:03.778] [INFO] users - profileInfo userID: 2588234901506497
+[2020-08-15T23:11:06.374] [INFO] users - profileInfo userID: 2588234901506497
+[2020-08-15T23:11:21.663] [INFO] users - profileInfo userID: 2588234901506497
+[2020-08-15T23:11:34.286] [INFO] users - profileInfo userID: 2588234901506497
+[2020-08-15T23:11:59.756] [INFO] users - profileInfo userID: 2588234901506497
+[2020-08-15T23:12:02.622] [INFO] users - profileInfo userID: 2588234901506497
+[2020-08-15T23:12:30.465] [INFO] users - profileInfo userID: 2588234901506497
+[2020-08-15T23:12:31.448] [INFO] users - profileInfo userID: 2588234901506497
+[2020-08-15T23:13:08.044] [INFO] users - profileInfo userID: 2588234901506497
+[2020-08-15T23:13:08.846] [INFO] users - profileInfo userID: 2588234901506497
+[2020-08-15T23:13:09.088] [INFO] users - profileInfo userID: 2588234901506497
+[2020-08-15T23:13:36.465] [INFO] users - profileInfo userID: 2588234901506497
+[2020-08-15T23:14:14.136] [INFO] users - profileInfo userID: 2588234901506497
+[2020-08-15T23:14:28.559] [INFO] users - profileInfo userID: 2588234901506497
+[2020-08-15T23:14:49.556] [INFO] users - profileInfo userID: 2588234901506497
+[2020-08-15T23:14:51.140] [INFO] users - profileInfo userID: 2588234901506497
+[2020-08-15T23:14:51.988] [INFO] users - profileInfo userID: 2588234901506497
+[2020-08-15T23:14:53.032] [INFO] users - profileInfo userID: 2588234901506497
+[2020-08-15T23:15:09.644] [INFO] users - profileInfo userID: 2588234901506497
+[2020-08-15T23:15:11.256] [INFO] users - profileInfo userID: 2588234901506497
+[2020-08-15T23:15:12.069] [INFO] users - profileInfo userID: 2588234901506497
+[2020-08-15T23:15:13.819] [INFO] users - profileInfo userID: 2588234901506497
+[2020-08-15T23:15:14.212] [INFO] users - profileInfo userID: 2588234901506497
+[2020-08-15T23:15:29.679] [INFO] users - profileInfo userID: 2588234901506497
+[2020-08-15T23:15:30.733] [INFO] users - profileInfo userID: 2588234901506497
+[2020-08-15T23:15:31.510] [INFO] users - profileInfo userID: 2588234901506497
+[2020-08-15T23:15:32.195] [INFO] users - profileInfo userID: 2588234901506497
+[2020-08-15T23:15:32.831] [INFO] users - profileInfo userID: 2588234901506497
+[2020-08-15T23:15:52.594] [INFO] users - profileInfo userID: 2588234901506497
+[2020-08-15T23:16:06.218] [INFO] users - profileInfo userID: 2588234901506497
+[2020-08-15T23:16:21.817] [INFO] users - profileInfo userID: 2588234901506497
+[2020-08-15T23:16:23.174] [INFO] users - profileInfo userID: 2588234901506497
+[2020-08-15T23:16:42.810] [INFO] users - profileInfo userID: 2588234901506497
+[2020-08-15T23:16:43.839] [INFO] users - profileInfo userID: 2588234901506497
+[2020-08-15T23:17:06.638] [INFO] users - profileInfo userID: 2588234901506497
+[2020-08-15T23:17:07.722] [INFO] users - profileInfo userID: 2588234901506497
+[2020-08-15T23:17:22.318] [INFO] users - profileInfo userID: 2588234901506497
+[2020-08-15T23:17:23.814] [INFO] users - profileInfo userID: 2588234901506497
+[2020-08-15T23:17:28.152] [INFO] users - profileInfo userID: 2588234901506497
+[2020-08-15T23:17:28.923] [INFO] users - profileInfo userID: 2588234901506497
+[2020-08-15T23:17:29.253] [INFO] users - profileInfo userID: 2588234901506497
+[2020-08-15T23:17:29.812] [INFO] users - profileInfo userID: 2588234901506497
+[2020-08-15T23:17:36.914] [INFO] users - profileInfo userID: 2588234901506497
+[2020-08-15T23:17:37.707] [INFO] users - profileInfo userID: 2588234901506497
+[2020-08-15T23:17:38.075] [INFO] users - profileInfo userID: 2588234901506497
+[2020-08-15T23:17:47.806] [INFO] users - profileInfo userID: 2588234901506497
+[2020-08-15T23:17:55.924] [INFO] users - profileInfo userID: 2588234901506497
+[2020-08-15T23:20:56.975] [INFO] users - profileInfo userID: 2588234901506497
+[2020-08-15T23:25:09.557] [INFO] users - profileInfo userID: 2588234901506497
+[2020-08-15T23:25:39.844] [INFO] users - profileInfo userID: 2588234901506497
+[2020-08-15T23:26:07.664] [INFO] users - profileInfo userID: 2588234901506497
+[2020-08-15T23:30:09.015] [INFO] users - profileInfo userID: 2588234901506497
+[2020-08-16T22:39:40.550] [ERROR] app - アクセスエラー TypeError: Cannot read property 'CODE_5008' of undefined
+    at /Users/yws/Dev/OreSupport_gitHub/PBL2020/OreSupport/ore-SupportServer/oreServer/common/check.token.js:24:29
+    at /Users/yws/Dev/OreSupport_gitHub/PBL2020/OreSupport/ore-SupportServer/oreServer/node_modules/jsonwebtoken/verify.js:152:16
+    at getSecret (/Users/yws/Dev/OreSupport_gitHub/PBL2020/OreSupport/ore-SupportServer/oreServer/node_modules/jsonwebtoken/verify.js:90:14)
+    at Object.module.exports [as verify] (/Users/yws/Dev/OreSupport_gitHub/PBL2020/OreSupport/ore-SupportServer/oreServer/node_modules/jsonwebtoken/verify.js:94:10)
+    at verifyUser (/Users/yws/Dev/OreSupport_gitHub/PBL2020/OreSupport/ore-SupportServer/oreServer/common/check.token.js:20:12)
+    at Layer.handle [as handle_request] (/Users/yws/Dev/OreSupport_gitHub/PBL2020/OreSupport/ore-SupportServer/oreServer/node_modules/express/lib/router/layer.js:95:5)
+    at next (/Users/yws/Dev/OreSupport_gitHub/PBL2020/OreSupport/ore-SupportServer/oreServer/node_modules/express/lib/router/route.js:137:13)
+    at Route.dispatch (/Users/yws/Dev/OreSupport_gitHub/PBL2020/OreSupport/ore-SupportServer/oreServer/node_modules/express/lib/router/route.js:112:3)
+    at Layer.handle [as handle_request] (/Users/yws/Dev/OreSupport_gitHub/PBL2020/OreSupport/ore-SupportServer/oreServer/node_modules/express/lib/router/layer.js:95:5)
+    at /Users/yws/Dev/OreSupport_gitHub/PBL2020/OreSupport/ore-SupportServer/oreServer/node_modules/express/lib/router/index.js:281:22
+    at Function.process_params (/Users/yws/Dev/OreSupport_gitHub/PBL2020/OreSupport/ore-SupportServer/oreServer/node_modules/express/lib/router/index.js:335:12)
+    at next (/Users/yws/Dev/OreSupport_gitHub/PBL2020/OreSupport/ore-SupportServer/oreServer/node_modules/express/lib/router/index.js:275:10)
+    at Function.handle (/Users/yws/Dev/OreSupport_gitHub/PBL2020/OreSupport/ore-SupportServer/oreServer/node_modules/express/lib/router/index.js:174:3)
+    at router (/Users/yws/Dev/OreSupport_gitHub/PBL2020/OreSupport/ore-SupportServer/oreServer/node_modules/express/lib/router/index.js:47:12)
+    at Layer.handle [as handle_request] (/Users/yws/Dev/OreSupport_gitHub/PBL2020/OreSupport/ore-SupportServer/oreServer/node_modules/express/lib/router/layer.js:95:5)
+    at trim_prefix (/Users/yws/Dev/OreSupport_gitHub/PBL2020/OreSupport/ore-SupportServer/oreServer/node_modules/express/lib/router/index.js:317:13)
+    at /Users/yws/Dev/OreSupport_gitHub/PBL2020/OreSupport/ore-SupportServer/oreServer/node_modules/express/lib/router/index.js:284:7
+    at Function.process_params (/Users/yws/Dev/OreSupport_gitHub/PBL2020/OreSupport/ore-SupportServer/oreServer/node_modules/express/lib/router/index.js:335:12)
+    at next (/Users/yws/Dev/OreSupport_gitHub/PBL2020/OreSupport/ore-SupportServer/oreServer/node_modules/express/lib/router/index.js:275:10)
+    at /Users/yws/Dev/OreSupport_gitHub/PBL2020/OreSupport/ore-SupportServer/oreServer/node_modules/express/lib/router/index.js:635:15
+    at next (/Users/yws/Dev/OreSupport_gitHub/PBL2020/OreSupport/ore-SupportServer/oreServer/node_modules/express/lib/router/index.js:260:14)
+    at Function.handle (/Users/yws/Dev/OreSupport_gitHub/PBL2020/OreSupport/ore-SupportServer/oreServer/node_modules/express/lib/router/index.js:174:3)
+[2020-08-16T22:39:49.860] [INFO] startup - Listening on port 3000
+[2020-08-16T22:40:15.463] [ERROR] app - アクセスエラー TypeError: Cannot read property 'CODE_5008' of undefined
+    at /Users/yws/Dev/OreSupport_gitHub/PBL2020/OreSupport/ore-SupportServer/oreServer/common/check.token.js:24:29
+    at /Users/yws/Dev/OreSupport_gitHub/PBL2020/OreSupport/ore-SupportServer/oreServer/node_modules/jsonwebtoken/verify.js:152:16
+    at getSecret (/Users/yws/Dev/OreSupport_gitHub/PBL2020/OreSupport/ore-SupportServer/oreServer/node_modules/jsonwebtoken/verify.js:90:14)
+    at Object.module.exports [as verify] (/Users/yws/Dev/OreSupport_gitHub/PBL2020/OreSupport/ore-SupportServer/oreServer/node_modules/jsonwebtoken/verify.js:94:10)
+    at verifyUser (/Users/yws/Dev/OreSupport_gitHub/PBL2020/OreSupport/ore-SupportServer/oreServer/common/check.token.js:20:12)
+    at Layer.handle [as handle_request] (/Users/yws/Dev/OreSupport_gitHub/PBL2020/OreSupport/ore-SupportServer/oreServer/node_modules/express/lib/router/layer.js:95:5)
+    at next (/Users/yws/Dev/OreSupport_gitHub/PBL2020/OreSupport/ore-SupportServer/oreServer/node_modules/express/lib/router/route.js:137:13)
+    at Route.dispatch (/Users/yws/Dev/OreSupport_gitHub/PBL2020/OreSupport/ore-SupportServer/oreServer/node_modules/express/lib/router/route.js:112:3)
+    at Layer.handle [as handle_request] (/Users/yws/Dev/OreSupport_gitHub/PBL2020/OreSupport/ore-SupportServer/oreServer/node_modules/express/lib/router/layer.js:95:5)
+    at /Users/yws/Dev/OreSupport_gitHub/PBL2020/OreSupport/ore-SupportServer/oreServer/node_modules/express/lib/router/index.js:281:22
+    at Function.process_params (/Users/yws/Dev/OreSupport_gitHub/PBL2020/OreSupport/ore-SupportServer/oreServer/node_modules/express/lib/router/index.js:335:12)
+    at next (/Users/yws/Dev/OreSupport_gitHub/PBL2020/OreSupport/ore-SupportServer/oreServer/node_modules/express/lib/router/index.js:275:10)
+    at Function.handle (/Users/yws/Dev/OreSupport_gitHub/PBL2020/OreSupport/ore-SupportServer/oreServer/node_modules/express/lib/router/index.js:174:3)
+    at router (/Users/yws/Dev/OreSupport_gitHub/PBL2020/OreSupport/ore-SupportServer/oreServer/node_modules/express/lib/router/index.js:47:12)
+    at Layer.handle [as handle_request] (/Users/yws/Dev/OreSupport_gitHub/PBL2020/OreSupport/ore-SupportServer/oreServer/node_modules/express/lib/router/layer.js:95:5)
+    at trim_prefix (/Users/yws/Dev/OreSupport_gitHub/PBL2020/OreSupport/ore-SupportServer/oreServer/node_modules/express/lib/router/index.js:317:13)
+    at /Users/yws/Dev/OreSupport_gitHub/PBL2020/OreSupport/ore-SupportServer/oreServer/node_modules/express/lib/router/index.js:284:7
+    at Function.process_params (/Users/yws/Dev/OreSupport_gitHub/PBL2020/OreSupport/ore-SupportServer/oreServer/node_modules/express/lib/router/index.js:335:12)
+    at next (/Users/yws/Dev/OreSupport_gitHub/PBL2020/OreSupport/ore-SupportServer/oreServer/node_modules/express/lib/router/index.js:275:10)
+    at /Users/yws/Dev/OreSupport_gitHub/PBL2020/OreSupport/ore-SupportServer/oreServer/node_modules/express/lib/router/index.js:635:15
+    at next (/Users/yws/Dev/OreSupport_gitHub/PBL2020/OreSupport/ore-SupportServer/oreServer/node_modules/express/lib/router/index.js:260:14)
+    at Function.handle (/Users/yws/Dev/OreSupport_gitHub/PBL2020/OreSupport/ore-SupportServer/oreServer/node_modules/express/lib/router/index.js:174:3)
+[2020-08-16T22:40:22.810] [ERROR] app - アクセスエラー TypeError: Cannot read property 'CODE_5008' of undefined
+    at /Users/yws/Dev/OreSupport_gitHub/PBL2020/OreSupport/ore-SupportServer/oreServer/common/check.token.js:24:29
+    at /Users/yws/Dev/OreSupport_gitHub/PBL2020/OreSupport/ore-SupportServer/oreServer/node_modules/jsonwebtoken/verify.js:152:16
+    at getSecret (/Users/yws/Dev/OreSupport_gitHub/PBL2020/OreSupport/ore-SupportServer/oreServer/node_modules/jsonwebtoken/verify.js:90:14)
+    at Object.module.exports [as verify] (/Users/yws/Dev/OreSupport_gitHub/PBL2020/OreSupport/ore-SupportServer/oreServer/node_modules/jsonwebtoken/verify.js:94:10)
+    at verifyUser (/Users/yws/Dev/OreSupport_gitHub/PBL2020/OreSupport/ore-SupportServer/oreServer/common/check.token.js:20:12)
+    at Layer.handle [as handle_request] (/Users/yws/Dev/OreSupport_gitHub/PBL2020/OreSupport/ore-SupportServer/oreServer/node_modules/express/lib/router/layer.js:95:5)
+    at next (/Users/yws/Dev/OreSupport_gitHub/PBL2020/OreSupport/ore-SupportServer/oreServer/node_modules/express/lib/router/route.js:137:13)
+    at Route.dispatch (/Users/yws/Dev/OreSupport_gitHub/PBL2020/OreSupport/ore-SupportServer/oreServer/node_modules/express/lib/router/route.js:112:3)
+    at Layer.handle [as handle_request] (/Users/yws/Dev/OreSupport_gitHub/PBL2020/OreSupport/ore-SupportServer/oreServer/node_modules/express/lib/router/layer.js:95:5)
+    at /Users/yws/Dev/OreSupport_gitHub/PBL2020/OreSupport/ore-SupportServer/oreServer/node_modules/express/lib/router/index.js:281:22
+    at Function.process_params (/Users/yws/Dev/OreSupport_gitHub/PBL2020/OreSupport/ore-SupportServer/oreServer/node_modules/express/lib/router/index.js:335:12)
+    at next (/Users/yws/Dev/OreSupport_gitHub/PBL2020/OreSupport/ore-SupportServer/oreServer/node_modules/express/lib/router/index.js:275:10)
+    at Function.handle (/Users/yws/Dev/OreSupport_gitHub/PBL2020/OreSupport/ore-SupportServer/oreServer/node_modules/express/lib/router/index.js:174:3)
+    at router (/Users/yws/Dev/OreSupport_gitHub/PBL2020/OreSupport/ore-SupportServer/oreServer/node_modules/express/lib/router/index.js:47:12)
+    at Layer.handle [as handle_request] (/Users/yws/Dev/OreSupport_gitHub/PBL2020/OreSupport/ore-SupportServer/oreServer/node_modules/express/lib/router/layer.js:95:5)
+    at trim_prefix (/Users/yws/Dev/OreSupport_gitHub/PBL2020/OreSupport/ore-SupportServer/oreServer/node_modules/express/lib/router/index.js:317:13)
+    at /Users/yws/Dev/OreSupport_gitHub/PBL2020/OreSupport/ore-SupportServer/oreServer/node_modules/express/lib/router/index.js:284:7
+    at Function.process_params (/Users/yws/Dev/OreSupport_gitHub/PBL2020/OreSupport/ore-SupportServer/oreServer/node_modules/express/lib/router/index.js:335:12)
+    at next (/Users/yws/Dev/OreSupport_gitHub/PBL2020/OreSupport/ore-SupportServer/oreServer/node_modules/express/lib/router/index.js:275:10)
+    at /Users/yws/Dev/OreSupport_gitHub/PBL2020/OreSupport/ore-SupportServer/oreServer/node_modules/express/lib/router/index.js:635:15
+    at next (/Users/yws/Dev/OreSupport_gitHub/PBL2020/OreSupport/ore-SupportServer/oreServer/node_modules/express/lib/router/index.js:260:14)
+    at Function.handle (/Users/yws/Dev/OreSupport_gitHub/PBL2020/OreSupport/ore-SupportServer/oreServer/node_modules/express/lib/router/index.js:174:3)
+[2020-08-16T22:40:33.725] [ERROR] app - アクセスエラー TypeError: Cannot read property 'CODE_5008' of undefined
+    at /Users/yws/Dev/OreSupport_gitHub/PBL2020/OreSupport/ore-SupportServer/oreServer/common/check.token.js:24:29
+    at /Users/yws/Dev/OreSupport_gitHub/PBL2020/OreSupport/ore-SupportServer/oreServer/node_modules/jsonwebtoken/verify.js:152:16
+    at getSecret (/Users/yws/Dev/OreSupport_gitHub/PBL2020/OreSupport/ore-SupportServer/oreServer/node_modules/jsonwebtoken/verify.js:90:14)
+    at Object.module.exports [as verify] (/Users/yws/Dev/OreSupport_gitHub/PBL2020/OreSupport/ore-SupportServer/oreServer/node_modules/jsonwebtoken/verify.js:94:10)
+    at verifyUser (/Users/yws/Dev/OreSupport_gitHub/PBL2020/OreSupport/ore-SupportServer/oreServer/common/check.token.js:20:12)
+    at Layer.handle [as handle_request] (/Users/yws/Dev/OreSupport_gitHub/PBL2020/OreSupport/ore-SupportServer/oreServer/node_modules/express/lib/router/layer.js:95:5)
+    at next (/Users/yws/Dev/OreSupport_gitHub/PBL2020/OreSupport/ore-SupportServer/oreServer/node_modules/express/lib/router/route.js:137:13)
+    at Route.dispatch (/Users/yws/Dev/OreSupport_gitHub/PBL2020/OreSupport/ore-SupportServer/oreServer/node_modules/express/lib/router/route.js:112:3)
+    at Layer.handle [as handle_request] (/Users/yws/Dev/OreSupport_gitHub/PBL2020/OreSupport/ore-SupportServer/oreServer/node_modules/express/lib/router/layer.js:95:5)
+    at /Users/yws/Dev/OreSupport_gitHub/PBL2020/OreSupport/ore-SupportServer/oreServer/node_modules/express/lib/router/index.js:281:22
+    at Function.process_params (/Users/yws/Dev/OreSupport_gitHub/PBL2020/OreSupport/ore-SupportServer/oreServer/node_modules/express/lib/router/index.js:335:12)
+    at next (/Users/yws/Dev/OreSupport_gitHub/PBL2020/OreSupport/ore-SupportServer/oreServer/node_modules/express/lib/router/index.js:275:10)
+    at Function.handle (/Users/yws/Dev/OreSupport_gitHub/PBL2020/OreSupport/ore-SupportServer/oreServer/node_modules/express/lib/router/index.js:174:3)
+    at router (/Users/yws/Dev/OreSupport_gitHub/PBL2020/OreSupport/ore-SupportServer/oreServer/node_modules/express/lib/router/index.js:47:12)
+    at Layer.handle [as handle_request] (/Users/yws/Dev/OreSupport_gitHub/PBL2020/OreSupport/ore-SupportServer/oreServer/node_modules/express/lib/router/layer.js:95:5)
+    at trim_prefix (/Users/yws/Dev/OreSupport_gitHub/PBL2020/OreSupport/ore-SupportServer/oreServer/node_modules/express/lib/router/index.js:317:13)
+    at /Users/yws/Dev/OreSupport_gitHub/PBL2020/OreSupport/ore-SupportServer/oreServer/node_modules/express/lib/router/index.js:284:7
+    at Function.process_params (/Users/yws/Dev/OreSupport_gitHub/PBL2020/OreSupport/ore-SupportServer/oreServer/node_modules/express/lib/router/index.js:335:12)
+    at next (/Users/yws/Dev/OreSupport_gitHub/PBL2020/OreSupport/ore-SupportServer/oreServer/node_modules/express/lib/router/index.js:275:10)
+    at /Users/yws/Dev/OreSupport_gitHub/PBL2020/OreSupport/ore-SupportServer/oreServer/node_modules/express/lib/router/index.js:635:15
+    at next (/Users/yws/Dev/OreSupport_gitHub/PBL2020/OreSupport/ore-SupportServer/oreServer/node_modules/express/lib/router/index.js:260:14)
+    at Function.handle (/Users/yws/Dev/OreSupport_gitHub/PBL2020/OreSupport/ore-SupportServer/oreServer/node_modules/express/lib/router/index.js:174:3)
+[2020-08-16T22:40:33.832] [ERROR] app - アクセスエラー TypeError: Cannot read property 'CODE_5008' of undefined
+    at /Users/yws/Dev/OreSupport_gitHub/PBL2020/OreSupport/ore-SupportServer/oreServer/common/check.token.js:24:29
+    at /Users/yws/Dev/OreSupport_gitHub/PBL2020/OreSupport/ore-SupportServer/oreServer/node_modules/jsonwebtoken/verify.js:152:16
+    at getSecret (/Users/yws/Dev/OreSupport_gitHub/PBL2020/OreSupport/ore-SupportServer/oreServer/node_modules/jsonwebtoken/verify.js:90:14)
+    at Object.module.exports [as verify] (/Users/yws/Dev/OreSupport_gitHub/PBL2020/OreSupport/ore-SupportServer/oreServer/node_modules/jsonwebtoken/verify.js:94:10)
+    at verifyUser (/Users/yws/Dev/OreSupport_gitHub/PBL2020/OreSupport/ore-SupportServer/oreServer/common/check.token.js:20:12)
+    at Layer.handle [as handle_request] (/Users/yws/Dev/OreSupport_gitHub/PBL2020/OreSupport/ore-SupportServer/oreServer/node_modules/express/lib/router/layer.js:95:5)
+    at next (/Users/yws/Dev/OreSupport_gitHub/PBL2020/OreSupport/ore-SupportServer/oreServer/node_modules/express/lib/router/route.js:137:13)
+    at Route.dispatch (/Users/yws/Dev/OreSupport_gitHub/PBL2020/OreSupport/ore-SupportServer/oreServer/node_modules/express/lib/router/route.js:112:3)
+    at Layer.handle [as handle_request] (/Users/yws/Dev/OreSupport_gitHub/PBL2020/OreSupport/ore-SupportServer/oreServer/node_modules/express/lib/router/layer.js:95:5)
+    at /Users/yws/Dev/OreSupport_gitHub/PBL2020/OreSupport/ore-SupportServer/oreServer/node_modules/express/lib/router/index.js:281:22
+    at Function.process_params (/Users/yws/Dev/OreSupport_gitHub/PBL2020/OreSupport/ore-SupportServer/oreServer/node_modules/express/lib/router/index.js:335:12)
+    at next (/Users/yws/Dev/OreSupport_gitHub/PBL2020/OreSupport/ore-SupportServer/oreServer/node_modules/express/lib/router/index.js:275:10)
+    at Function.handle (/Users/yws/Dev/OreSupport_gitHub/PBL2020/OreSupport/ore-SupportServer/oreServer/node_modules/express/lib/router/index.js:174:3)
+    at router (/Users/yws/Dev/OreSupport_gitHub/PBL2020/OreSupport/ore-SupportServer/oreServer/node_modules/express/lib/router/index.js:47:12)
+    at Layer.handle [as handle_request] (/Users/yws/Dev/OreSupport_gitHub/PBL2020/OreSupport/ore-SupportServer/oreServer/node_modules/express/lib/router/layer.js:95:5)
+    at trim_prefix (/Users/yws/Dev/OreSupport_gitHub/PBL2020/OreSupport/ore-SupportServer/oreServer/node_modules/express/lib/router/index.js:317:13)
+    at /Users/yws/Dev/OreSupport_gitHub/PBL2020/OreSupport/ore-SupportServer/oreServer/node_modules/express/lib/router/index.js:284:7
+    at Function.process_params (/Users/yws/Dev/OreSupport_gitHub/PBL2020/OreSupport/ore-SupportServer/oreServer/node_modules/express/lib/router/index.js:335:12)
+    at next (/Users/yws/Dev/OreSupport_gitHub/PBL2020/OreSupport/ore-SupportServer/oreServer/node_modules/express/lib/router/index.js:275:10)
+    at /Users/yws/Dev/OreSupport_gitHub/PBL2020/OreSupport/ore-SupportServer/oreServer/node_modules/express/lib/router/index.js:635:15
+    at next (/Users/yws/Dev/OreSupport_gitHub/PBL2020/OreSupport/ore-SupportServer/oreServer/node_modules/express/lib/router/index.js:260:14)
+    at Function.handle (/Users/yws/Dev/OreSupport_gitHub/PBL2020/OreSupport/ore-SupportServer/oreServer/node_modules/express/lib/router/index.js:174:3)
+[2020-08-16T22:40:49.835] [INFO] users - ユーザログ UserName:閻 文帥
+[2020-08-16T22:40:49.836] [INFO] users - Third Party by Facebook
+[2020-08-16T22:40:50.053] [INFO] users - profileInfo userID: 2588234901506497
+[2020-08-16T22:43:36.638] [INFO] users - profileInfo userID: 2588234901506497
+[2020-08-16T22:48:06.695] [INFO] users - profileInfo userID: 2588234901506497
+[2020-08-16T22:48:07.964] [INFO] users - profileInfo userID: 2588234901506497
+[2020-08-16T22:49:16.318] [INFO] users - profileInfo userID: 2588234901506497
+[2020-08-16T22:50:58.054] [INFO] users - profileInfo userID: 2588234901506497
+[2020-08-16T22:51:00.395] [INFO] users - profileInfo userID: 2588234901506497
+[2020-08-16T22:53:36.812] [INFO] users - profileInfo userID: 2588234901506497
+[2020-08-16T22:55:24.098] [INFO] users - profileInfo userID: 2588234901506497
+[2020-08-16T22:55:55.539] [INFO] users - profileInfo userID: 2588234901506497
+[2020-08-16T22:57:54.573] [INFO] users - profileInfo userID: 2588234901506497
+[2020-08-16T22:57:56.186] [INFO] users - profileInfo userID: 2588234901506497
+[2020-08-16T23:00:42.744] [INFO] users - profileInfo userID: 2588234901506497
+[2020-08-16T23:00:46.336] [INFO] users - profileInfo userID: 2588234901506497
+[2020-08-16T23:00:53.582] [INFO] users - profileInfo userID: 2588234901506497
+[2020-08-16T23:00:54.831] [INFO] users - profileInfo userID: 2588234901506497
+[2020-08-16T23:02:54.282] [INFO] users - profileInfo userID: 2588234901506497
+[2020-08-16T23:03:05.231] [INFO] users - profileInfo userID: 2588234901506497
+[2020-08-16T23:03:06.391] [INFO] users - profileInfo userID: 2588234901506497
+[2020-08-16T23:03:18.238] [INFO] users - profileInfo userID: 2588234901506497
+[2020-08-16T23:03:18.567] [INFO] users - profileInfo userID: 2588234901506497
+[2020-08-16T23:03:20.041] [INFO] users - profileInfo userID: 2588234901506497
+[2020-08-16T23:03:22.143] [INFO] users - profileInfo userID: 2588234901506497
+[2020-08-16T23:03:28.782] [INFO] users - profileInfo userID: 2588234901506497
+[2020-08-16T23:03:36.508] [INFO] users - profileInfo userID: 2588234901506497
+[2020-08-16T23:04:10.133] [INFO] users - profileInfo userID: 2588234901506497
+[2020-08-16T23:04:11.080] [INFO] users - profileInfo userID: 2588234901506497
+[2020-08-16T23:04:23.887] [INFO] users - profileInfo userID: 2588234901506497
+[2020-08-16T23:04:24.960] [INFO] users - profileInfo userID: 2588234901506497
+[2020-08-16T23:04:25.779] [INFO] users - profileInfo userID: 2588234901506497
+[2020-08-16T23:04:26.117] [INFO] users - profileInfo userID: 2588234901506497
+[2020-08-16T23:05:24.078] [INFO] users - profileInfo userID: 2588234901506497
+[2020-08-16T23:05:25.483] [INFO] users - profileInfo userID: 2588234901506497
+[2020-08-16T23:05:36.464] [INFO] users - profileInfo userID: 2588234901506497
+[2020-08-16T23:07:04.090] [INFO] users - profileInfo userID: 2588234901506497
+[2020-08-16T23:07:05.070] [INFO] users - profileInfo userID: 2588234901506497
+[2020-08-16T23:07:05.459] [INFO] users - profileInfo userID: 2588234901506497
+[2020-08-16T23:07:05.770] [INFO] users - profileInfo userID: 2588234901506497
+[2020-08-16T23:11:46.340] [INFO] users - profileInfo userID: 2588234901506497
+[2020-08-16T23:11:47.137] [INFO] users - profileInfo userID: 2588234901506497
+[2020-08-16T23:11:47.440] [INFO] users - profileInfo userID: 2588234901506497
+[2020-08-16T23:11:51.102] [INFO] users - profileInfo userID: 2588234901506497
+[2020-08-16T23:11:51.431] [INFO] users - profileInfo userID: 2588234901506497
+[2020-08-16T23:12:03.881] [INFO] users - profileInfo userID: 2588234901506497
+[2020-08-16T23:12:04.661] [INFO] users - profileInfo userID: 2588234901506497
+[2020-08-16T23:17:44.039] [INFO] users - profileInfo userID: 2588234901506497
+[2020-08-16T23:27:44.002] [INFO] users - profileInfo userID: 2588234901506497
+[2020-08-16T23:28:57.731] [INFO] users - profileInfo userID: 2588234901506497
+[2020-08-16T23:29:16.399] [INFO] users - profileInfo userID: 2588234901506497
+[2020-08-16T23:29:38.736] [INFO] users - profileInfo userID: 2588234901506497
+[2020-08-16T23:30:07.971] [INFO] users - profileInfo userID: 2588234901506497
+[2020-08-16T23:30:32.481] [INFO] users - profileInfo userID: 2588234901506497
+[2020-08-16T23:31:17.396] [INFO] users - profileInfo userID: 2588234901506497
+[2020-08-16T23:32:00.969] [INFO] users - profileInfo userID: 2588234901506497
+[2020-08-16T23:32:18.005] [INFO] users - profileInfo userID: 2588234901506497
+[2020-08-16T23:33:33.574] [INFO] users - profileInfo userID: 2588234901506497
+[2020-08-16T23:34:20.528] [INFO] users - profileInfo userID: 2588234901506497
+[2020-08-16T23:34:30.870] [INFO] users - profileInfo userID: 2588234901506497
+[2020-08-16T23:37:38.277] [INFO] users - profileInfo userID: 2588234901506497
+[2020-08-16T23:39:53.912] [INFO] users - profileInfo userID: 2588234901506497
+[2020-08-16T23:40:14.692] [INFO] users - profileInfo userID: 2588234901506497
+[2020-08-16T23:40:27.184] [INFO] users - profileInfo userID: 2588234901506497
+[2020-08-17T00:39:07.836] [INFO] users - profileInfo userID: 2588234901506497
+[2020-08-17T00:39:09.393] [INFO] users - profileInfo userID: 2588234901506497
+[2020-08-17T00:42:23.314] [INFO] users - profileInfo userID: 2588234901506497
+[2020-08-17T00:42:25.777] [INFO] users - profileInfo userID: 2588234901506497
+[2020-08-17T00:42:30.422] [INFO] users - profileInfo userID: 2588234901506497
+[2020-08-17T00:42:46.957] [INFO] users - profileInfo userID: 2588234901506497
+[2020-08-17T00:42:47.938] [INFO] users - profileInfo userID: 2588234901506497
+[2020-08-17T00:42:48.281] [INFO] users - profileInfo userID: 2588234901506497
+[2020-08-17T00:43:07.754] [INFO] users - profileInfo userID: 2588234901506497
+[2020-08-17T00:43:08.759] [INFO] users - profileInfo userID: 2588234901506497
+[2020-08-17T02:18:31.056] [INFO] users - profileInfo userID: 2588234901506497
+[2020-08-17T02:20:11.078] [INFO] users - profileInfo userID: 2588234901506497
+[2020-08-17T02:26:40.582] [INFO] users - profileInfo userID: 2588234901506497
+[2020-08-17T02:28:37.160] [INFO] users - profileInfo userID: 2588234901506497
+[2020-08-17T02:32:53.124] [INFO] users - profileInfo userID: 2588234901506497
+[2020-08-17T02:36:56.090] [INFO] users - profileInfo userID: 2588234901506497
+[2020-08-17T02:39:22.335] [INFO] users - profileInfo userID: 2588234901506497
+[2020-08-17T02:39:24.206] [INFO] users - profileInfo userID: 2588234901506497
+[2020-08-17T02:40:42.220] [INFO] users - profileInfo userID: 2588234901506497
+[2020-08-17T02:41:22.253] [INFO] users - profileInfo userID: 2588234901506497
+[2020-08-17T02:42:24.066] [INFO] users - profileInfo userID: 2588234901506497
+[2020-08-17T02:47:35.586] [INFO] users - profileInfo userID: 2588234901506497
+[2020-08-17T02:50:24.800] [INFO] users - profileInfo userID: 2588234901506497
+[2020-08-17T02:53:14.363] [INFO] users - profileInfo userID: 2588234901506497
+[2020-08-17T02:54:49.316] [INFO] users - profileInfo userID: 2588234901506497
+[2020-08-17T02:54:50.235] [INFO] users - profileInfo userID: 2588234901506497
+[2020-08-17T02:58:05.306] [INFO] users - profileInfo userID: 2588234901506497
+[2020-08-17T03:00:50.488] [INFO] users - profileInfo userID: 2588234901506497
+[2020-08-17T03:02:13.296] [INFO] users - profileInfo userID: 2588234901506497
+[2020-08-17T03:02:43.329] [INFO] users - profileInfo userID: 2588234901506497
+[2020-08-17T03:03:41.362] [INFO] users - profileInfo userID: 2588234901506497
+[2020-08-17T03:03:53.402] [INFO] users - profileInfo userID: 2588234901506497
+[2020-08-17T03:04:09.724] [INFO] users - profileInfo userID: 2588234901506497
+[2020-08-17T03:04:45.089] [INFO] users - profileInfo userID: 2588234901506497
+[2020-08-17T03:05:33.786] [INFO] users - profileInfo userID: 2588234901506497
+[2020-08-17T03:06:43.310] [INFO] users - profileInfo userID: 2588234901506497
+[2020-08-17T03:07:21.219] [INFO] users - profileInfo userID: 2588234901506497
+[2020-08-17T03:07:41.101] [INFO] users - profileInfo userID: 2588234901506497
+[2020-08-17T03:07:43.490] [INFO] users - profileInfo userID: 2588234901506497
+[2020-08-17T03:08:00.252] [INFO] users - profileInfo userID: 2588234901506497
+[2020-08-17T03:08:04.406] [INFO] users - profileInfo userID: 2588234901506497
+[2020-08-17T03:08:43.945] [INFO] users - profileInfo userID: 2588234901506497
+[2020-08-17T03:08:44.927] [INFO] users - profileInfo userID: 2588234901506497
+[2020-08-17T03:10:51.709] [INFO] users - profileInfo userID: 2588234901506497
+[2020-08-17T03:12:11.379] [INFO] users - profileInfo userID: 2588234901506497
+[2020-08-17T03:12:53.425] [INFO] users - profileInfo userID: 2588234901506497
+[2020-08-17T03:12:55.225] [INFO] users - profileInfo userID: 2588234901506497
+[2020-08-17T03:14:36.130] [INFO] users - profileInfo userID: 2588234901506497
+[2020-08-17T03:14:50.689] [INFO] users - profileInfo userID: 2588234901506497
+[2020-08-17T03:15:50.848] [INFO] users - profileInfo userID: 2588234901506497
+[2020-08-17T03:16:54.942] [INFO] users - profileInfo userID: 2588234901506497
+[2020-08-17T03:17:18.303] [INFO] users - profileInfo userID: 2588234901506497
+[2020-08-17T03:17:19.792] [INFO] users - profileInfo userID: 2588234901506497
+[2020-08-17T03:17:35.566] [INFO] users - profileInfo userID: 2588234901506497
+[2020-08-17T03:17:37.878] [INFO] users - profileInfo userID: 2588234901506497
+[2020-08-17T03:18:12.510] [INFO] users - profileInfo userID: 2588234901506497
+[2020-08-17T03:18:36.438] [INFO] users - profileInfo userID: 2588234901506497
+[2020-08-17T03:20:02.417] [INFO] users - profileInfo userID: 2588234901506497
+[2020-08-17T03:20:46.546] [INFO] users - profileInfo userID: 2588234901506497
+[2020-08-17T03:21:06.204] [INFO] users - profileInfo userID: 2588234901506497
+[2020-08-17T03:22:17.310] [INFO] users - profileInfo userID: 2588234901506497
+[2020-08-17T03:22:51.430] [INFO] users - profileInfo userID: 2588234901506497
+[2020-08-17T03:23:10.821] [INFO] users - profileInfo userID: 2588234901506497
+[2020-08-17T03:24:55.185] [INFO] users - profileInfo userID: 2588234901506497
+[2020-08-17T03:25:07.204] [INFO] users - profileInfo userID: 2588234901506497
+[2020-08-17T03:25:08.909] [INFO] users - profileInfo userID: 2588234901506497
+[2020-08-17T03:25:22.086] [INFO] users - profileInfo userID: 2588234901506497
+[2020-08-17T03:25:41.834] [INFO] users - profileInfo userID: 2588234901506497
+[2020-08-17T03:26:10.234] [INFO] users - profileInfo userID: 2588234901506497
+[2020-08-17T03:26:55.270] [INFO] users - profileInfo userID: 2588234901506497
+[2020-08-17T03:27:26.880] [INFO] users - profileInfo userID: 2588234901506497
+[2020-08-17T03:27:28.222] [INFO] users - profileInfo userID: 2588234901506497
+[2020-08-17T03:27:42.953] [INFO] users - profileInfo userID: 2588234901506497
+[2020-08-17T03:32:54.198] [INFO] users - profileInfo userID: 2588234901506497
+[2020-08-17T03:32:55.376] [INFO] users - profileInfo userID: 2588234901506497
+[2020-08-17T03:32:56.261] [INFO] users - profileInfo userID: 2588234901506497
+[2020-08-17T03:32:56.799] [INFO] users - profileInfo userID: 2588234901506497
+[2020-08-17T03:33:06.036] [INFO] users - profileInfo userID: 2588234901506497
+[2020-08-17T03:33:34.550] [INFO] users - profileInfo userID: 2588234901506497
+[2020-08-17T03:34:20.145] [INFO] users - profileInfo userID: 2588234901506497
+[2020-08-17T03:34:21.372] [INFO] users - profileInfo userID: 2588234901506497
+[2020-08-17T03:34:47.484] [INFO] users - profileInfo userID: 2588234901506497
+[2020-08-17T03:35:54.295] [INFO] users - profileInfo userID: 2588234901506497
+[2020-08-17T03:35:57.067] [INFO] users - profileInfo userID: 2588234901506497
+[2020-08-17T03:36:46.883] [INFO] users - profileInfo userID: 2588234901506497
+[2020-08-17T03:36:48.109] [INFO] users - profileInfo userID: 2588234901506497
+[2020-08-17T03:36:50.190] [INFO] users - profileInfo userID: 2588234901506497
+[2020-08-17T03:37:14.206] [INFO] users - profileInfo userID: 2588234901506497
+[2020-08-17T03:37:43.177] [INFO] users - profileInfo userID: 2588234901506497
+[2020-08-17T03:40:48.733] [INFO] users - profileInfo userID: 2588234901506497
+[2020-08-17T03:42:24.452] [INFO] users - profileInfo userID: 2588234901506497
+[2020-08-17T03:45:42.465] [INFO] users - profileInfo userID: 2588234901506497
+[2020-08-17T03:46:00.912] [INFO] users - profileInfo userID: 2588234901506497
+[2020-08-17T03:46:02.243] [INFO] users - profileInfo userID: 2588234901506497
+[2020-08-17T03:46:09.392] [INFO] users - profileInfo userID: 2588234901506497
+[2020-08-17T03:46:13.470] [INFO] users - profileInfo userID: 2588234901506497
+[2020-08-17T03:46:14.228] [INFO] users - profileInfo userID: 2588234901506497
+[2020-08-17T03:46:14.541] [INFO] users - profileInfo userID: 2588234901506497
+[2020-08-17T03:47:17.377] [INFO] users - profileInfo userID: 2588234901506497
+[2020-08-17T03:48:02.622] [INFO] users - profileInfo userID: 2588234901506497
+[2020-08-17T03:50:59.532] [INFO] users - profileInfo userID: 2588234901506497
+[2020-08-17T03:51:27.081] [INFO] users - profileInfo userID: 2588234901506497
+[2020-08-17T03:51:57.048] [INFO] users - profileInfo userID: 2588234901506497
+[2020-08-17T03:51:57.936] [INFO] users - profileInfo userID: 2588234901506497
+[2020-08-17T03:51:58.633] [INFO] users - profileInfo userID: 2588234901506497
+[2020-08-17T03:51:59.225] [INFO] users - profileInfo userID: 2588234901506497
+[2020-08-17T03:51:59.761] [INFO] users - profileInfo userID: 2588234901506497
+[2020-08-17T03:52:00.184] [INFO] users - profileInfo userID: 2588234901506497
+[2020-08-17T03:52:00.598] [INFO] users - profileInfo userID: 2588234901506497
+[2020-08-17T03:52:01.120] [INFO] users - profileInfo userID: 2588234901506497
+[2020-08-17T03:52:01.639] [INFO] users - profileInfo userID: 2588234901506497
+[2020-08-17T03:56:40.395] [INFO] users - profileInfo userID: 2588234901506497
+[2020-08-17T03:57:03.519] [INFO] users - profileInfo userID: 2588234901506497
+[2020-08-17T03:57:05.300] [INFO] users - profileInfo userID: 2588234901506497
+[2020-08-17T03:57:16.563] [INFO] users - profileInfo userID: 2588234901506497
+[2020-08-17T03:58:02.971] [INFO] users - profileInfo userID: 2588234901506497
+[2020-08-17T03:58:04.347] [INFO] users - profileInfo userID: 2588234901506497
+[2020-08-17T03:58:11.922] [INFO] users - profileInfo userID: 2588234901506497
+[2020-08-17T03:58:13.727] [INFO] users - profileInfo userID: 2588234901506497
+[2020-08-17T03:58:26.316] [INFO] users - profileInfo userID: 2588234901506497
+[2020-08-17T03:58:28.095] [INFO] users - profileInfo userID: 2588234901506497
+[2020-08-17T03:58:35.689] [INFO] users - profileInfo userID: 2588234901506497
+[2020-08-17T03:58:36.626] [INFO] users - profileInfo userID: 2588234901506497
+[2020-08-17T03:58:37.176] [INFO] users - profileInfo userID: 2588234901506497
+[2020-08-17T03:59:23.222] [INFO] users - profileInfo userID: 2588234901506497
+[2020-08-17T03:59:43.951] [INFO] users - profileInfo userID: 2588234901506497
+[2020-08-17T03:59:45.076] [INFO] users - profileInfo userID: 2588234901506497
+[2020-08-17T04:00:37.556] [INFO] users - profileInfo userID: 2588234901506497
+[2020-08-17T04:02:33.817] [INFO] users - profileInfo userID: 2588234901506497
+[2020-08-17T04:04:14.113] [INFO] users - profileInfo userID: 2588234901506497
+[2020-08-17T04:04:57.030] [INFO] users - profileInfo userID: 2588234901506497
+[2020-08-17T04:05:05.852] [INFO] users - profileInfo userID: 2588234901506497
+[2020-08-17T04:05:06.566] [INFO] users - profileInfo userID: 2588234901506497
+[2020-08-17T04:05:43.577] [INFO] users - profileInfo userID: 2588234901506497
+[2020-08-17T04:05:58.416] [INFO] users - profileInfo userID: 2588234901506497
+[2020-08-17T04:06:21.628] [INFO] users - profileInfo userID: 2588234901506497
+[2020-08-17T04:06:28.991] [INFO] users - profileInfo userID: 2588234901506497
+[2020-08-17T04:06:37.519] [INFO] users - profileInfo userID: 2588234901506497
+[2020-08-17T04:06:43.871] [INFO] users - profileInfo userID: 2588234901506497
+[2020-08-17T04:07:01.702] [INFO] users - profileInfo userID: 2588234901506497
+[2020-08-17T04:07:58.761] [INFO] users - profileInfo userID: 2588234901506497
+[2020-08-17T04:08:07.910] [INFO] users - profileInfo userID: 2588234901506497
+[2020-08-17T04:08:41.544] [INFO] users - profileInfo userID: 2588234901506497
+[2020-08-17T04:09:34.817] [INFO] users - profileInfo userID: 2588234901506497
+[2020-08-17T04:09:50.172] [INFO] users - profileInfo userID: 2588234901506497
+[2020-08-17T04:10:01.169] [INFO] users - profileInfo userID: 2588234901506497
+[2020-08-17T04:10:22.483] [INFO] users - profileInfo userID: 2588234901506497
+[2020-08-17T04:10:57.101] [INFO] users - profileInfo userID: 2588234901506497
+[2020-08-17T04:11:33.148] [INFO] users - profileInfo userID: 2588234901506497
+[2020-08-17T04:11:40.368] [INFO] users - profileInfo userID: 2588234901506497
+[2020-08-17T04:11:45.744] [INFO] users - profileInfo userID: 2588234901506497
+[2020-08-17T04:12:31.560] [INFO] users - profileInfo userID: 2588234901506497
+[2020-08-17T04:12:39.099] [INFO] users - profileInfo userID: 2588234901506497
+[2020-08-17T04:12:46.518] [INFO] users - profileInfo userID: 2588234901506497
+[2020-08-17T04:13:26.714] [INFO] users - profileInfo userID: 2588234901506497
+[2020-08-17T04:13:48.324] [INFO] users - profileInfo userID: 2588234901506497
+[2020-08-17T04:15:01.696] [INFO] users - profileInfo userID: 2588234901506497
+[2020-08-17T04:18:44.788] [INFO] users - profileInfo userID: 2588234901506497
+[2020-08-17T04:18:56.220] [INFO] users - profileInfo userID: 2588234901506497
+[2020-08-17T04:19:44.412] [INFO] users - profileInfo userID: 2588234901506497
+[2020-08-17T04:19:45.769] [INFO] users - profileInfo userID: 2588234901506497
+[2020-08-17T04:20:33.033] [INFO] users - profileInfo userID: 2588234901506497
+[2020-08-17T04:20:42.401] [INFO] users - profileInfo userID: 2588234901506497
+[2020-08-17T04:21:20.985] [INFO] users - profileInfo userID: 2588234901506497
+[2020-08-17T04:22:21.400] [INFO] users - profileInfo userID: 2588234901506497
+[2020-08-17T04:22:41.036] [INFO] users - profileInfo userID: 2588234901506497
+[2020-08-17T04:23:38.143] [INFO] users - profileInfo userID: 2588234901506497
+[2020-08-17T04:24:03.327] [INFO] users - profileInfo userID: 2588234901506497
+[2020-08-17T04:24:10.495] [INFO] users - profileInfo userID: 2588234901506497
+[2020-08-17T04:24:11.505] [INFO] users - profileInfo userID: 2588234901506497
+[2020-08-17T04:24:12.356] [INFO] users - profileInfo userID: 2588234901506497
+[2020-08-17T04:24:13.152] [INFO] users - profileInfo userID: 2588234901506497
+[2020-08-17T04:24:13.968] [INFO] users - profileInfo userID: 2588234901506497
+[2020-08-17T04:24:14.872] [INFO] users - profileInfo userID: 2588234901506497
+[2020-08-17T04:24:15.891] [INFO] users - profileInfo userID: 2588234901506497
+[2020-08-17T04:24:40.231] [INFO] users - profileInfo userID: 2588234901506497
+[2020-08-17T04:25:01.001] [INFO] users - profileInfo userID: 2588234901506497
+[2020-08-17T04:25:47.251] [INFO] users - profileInfo userID: 2588234901506497
+[2020-08-17T04:26:04.937] [INFO] users - profileInfo userID: 2588234901506497
+[2020-08-17T04:26:05.431] [INFO] users - profileInfo userID: 2588234901506497
+[2020-08-17T04:26:31.502] [INFO] users - profileInfo userID: 2588234901506497
+[2020-08-17T04:27:59.988] [INFO] users - profileInfo userID: 2588234901506497
+[2020-08-17T04:28:01.943] [INFO] users - profileInfo userID: 2588234901506497
+[2020-08-17T04:28:03.450] [INFO] users - profileInfo userID: 2588234901506497
+[2020-08-17T04:28:24.622] [INFO] users - profileInfo userID: 2588234901506497
+[2020-08-17T04:29:18.762] [INFO] users - profileInfo userID: 2588234901506497
+[2020-08-17T04:29:20.231] [INFO] users - profileInfo userID: 2588234901506497
+[2020-08-17T04:29:57.427] [INFO] users - profileInfo userID: 2588234901506497
+[2020-08-17T04:29:58.689] [INFO] users - profileInfo userID: 2588234901506497
+[2020-08-17T04:30:48.561] [INFO] users - profileInfo userID: 2588234901506497
+[2020-08-17T04:31:21.429] [INFO] users - profileInfo userID: 2588234901506497
+[2020-08-17T04:31:46.148] [INFO] users - profileInfo userID: 2588234901506497
+[2020-08-17T04:31:47.367] [INFO] users - profileInfo userID: 2588234901506497
+[2020-08-17T04:32:52.356] [INFO] users - profileInfo userID: 2588234901506497
+[2020-08-17T04:32:53.552] [INFO] users - profileInfo userID: 2588234901506497
+[2020-08-17T04:32:54.527] [INFO] users - profileInfo userID: 2588234901506497
+[2020-08-17T04:32:54.979] [INFO] users - profileInfo userID: 2588234901506497
+[2020-08-17T04:33:03.385] [INFO] users - profileInfo userID: 2588234901506497
+[2020-08-17T04:33:03.872] [INFO] users - profileInfo userID: 2588234901506497
+[2020-08-17T04:33:04.308] [INFO] users - profileInfo userID: 2588234901506497
+[2020-08-17T04:33:04.753] [INFO] users - profileInfo userID: 2588234901506497
+[2020-08-17T04:33:27.785] [INFO] users - profileInfo userID: 2588234901506497
+[2020-08-17T04:33:29.994] [INFO] users - profileInfo userID: 2588234901506497
+[2020-08-17T04:33:30.321] [INFO] users - profileInfo userID: 2588234901506497
+[2020-08-17T04:33:48.352] [INFO] users - profileInfo userID: 2588234901506497
+[2020-08-17T04:34:16.982] [INFO] users - profileInfo userID: 2588234901506497
+[2020-08-17T04:34:20.903] [INFO] users - profileInfo userID: 2588234901506497
+[2020-08-17T04:34:22.674] [INFO] users - profileInfo userID: 2588234901506497
+[2020-08-17T04:34:24.192] [INFO] users - profileInfo userID: 2588234901506497
+[2020-08-17T22:49:57.629] [ERROR] app - アクセスエラー TypeError: Cannot read property 'CODE_5008' of undefined
+    at /Users/yws/Dev/OreSupport_gitHub/PBL2020/OreSupport/ore-SupportServer/oreServer/common/check.token.js:24:29
+    at /Users/yws/Dev/OreSupport_gitHub/PBL2020/OreSupport/ore-SupportServer/oreServer/node_modules/jsonwebtoken/verify.js:152:16
+    at getSecret (/Users/yws/Dev/OreSupport_gitHub/PBL2020/OreSupport/ore-SupportServer/oreServer/node_modules/jsonwebtoken/verify.js:90:14)
+    at Object.module.exports [as verify] (/Users/yws/Dev/OreSupport_gitHub/PBL2020/OreSupport/ore-SupportServer/oreServer/node_modules/jsonwebtoken/verify.js:94:10)
+    at verifyUser (/Users/yws/Dev/OreSupport_gitHub/PBL2020/OreSupport/ore-SupportServer/oreServer/common/check.token.js:20:12)
+    at Layer.handle [as handle_request] (/Users/yws/Dev/OreSupport_gitHub/PBL2020/OreSupport/ore-SupportServer/oreServer/node_modules/express/lib/router/layer.js:95:5)
+    at next (/Users/yws/Dev/OreSupport_gitHub/PBL2020/OreSupport/ore-SupportServer/oreServer/node_modules/express/lib/router/route.js:137:13)
+    at Route.dispatch (/Users/yws/Dev/OreSupport_gitHub/PBL2020/OreSupport/ore-SupportServer/oreServer/node_modules/express/lib/router/route.js:112:3)
+    at Layer.handle [as handle_request] (/Users/yws/Dev/OreSupport_gitHub/PBL2020/OreSupport/ore-SupportServer/oreServer/node_modules/express/lib/router/layer.js:95:5)
+    at /Users/yws/Dev/OreSupport_gitHub/PBL2020/OreSupport/ore-SupportServer/oreServer/node_modules/express/lib/router/index.js:281:22
+    at Function.process_params (/Users/yws/Dev/OreSupport_gitHub/PBL2020/OreSupport/ore-SupportServer/oreServer/node_modules/express/lib/router/index.js:335:12)
+    at next (/Users/yws/Dev/OreSupport_gitHub/PBL2020/OreSupport/ore-SupportServer/oreServer/node_modules/express/lib/router/index.js:275:10)
+    at Function.handle (/Users/yws/Dev/OreSupport_gitHub/PBL2020/OreSupport/ore-SupportServer/oreServer/node_modules/express/lib/router/index.js:174:3)
+    at router (/Users/yws/Dev/OreSupport_gitHub/PBL2020/OreSupport/ore-SupportServer/oreServer/node_modules/express/lib/router/index.js:47:12)
+    at Layer.handle [as handle_request] (/Users/yws/Dev/OreSupport_gitHub/PBL2020/OreSupport/ore-SupportServer/oreServer/node_modules/express/lib/router/layer.js:95:5)
+    at trim_prefix (/Users/yws/Dev/OreSupport_gitHub/PBL2020/OreSupport/ore-SupportServer/oreServer/node_modules/express/lib/router/index.js:317:13)
+    at /Users/yws/Dev/OreSupport_gitHub/PBL2020/OreSupport/ore-SupportServer/oreServer/node_modules/express/lib/router/index.js:284:7
+    at Function.process_params (/Users/yws/Dev/OreSupport_gitHub/PBL2020/OreSupport/ore-SupportServer/oreServer/node_modules/express/lib/router/index.js:335:12)
+    at next (/Users/yws/Dev/OreSupport_gitHub/PBL2020/OreSupport/ore-SupportServer/oreServer/node_modules/express/lib/router/index.js:275:10)
+    at /Users/yws/Dev/OreSupport_gitHub/PBL2020/OreSupport/ore-SupportServer/oreServer/node_modules/express/lib/router/index.js:635:15
+    at next (/Users/yws/Dev/OreSupport_gitHub/PBL2020/OreSupport/ore-SupportServer/oreServer/node_modules/express/lib/router/index.js:260:14)
+    at Function.handle (/Users/yws/Dev/OreSupport_gitHub/PBL2020/OreSupport/ore-SupportServer/oreServer/node_modules/express/lib/router/index.js:174:3)
+[2020-08-17T22:49:58.917] [ERROR] app - アクセスエラー TypeError: Cannot read property 'CODE_5008' of undefined
+    at /Users/yws/Dev/OreSupport_gitHub/PBL2020/OreSupport/ore-SupportServer/oreServer/common/check.token.js:24:29
+    at /Users/yws/Dev/OreSupport_gitHub/PBL2020/OreSupport/ore-SupportServer/oreServer/node_modules/jsonwebtoken/verify.js:152:16
+    at getSecret (/Users/yws/Dev/OreSupport_gitHub/PBL2020/OreSupport/ore-SupportServer/oreServer/node_modules/jsonwebtoken/verify.js:90:14)
+    at Object.module.exports [as verify] (/Users/yws/Dev/OreSupport_gitHub/PBL2020/OreSupport/ore-SupportServer/oreServer/node_modules/jsonwebtoken/verify.js:94:10)
+    at verifyUser (/Users/yws/Dev/OreSupport_gitHub/PBL2020/OreSupport/ore-SupportServer/oreServer/common/check.token.js:20:12)
+    at Layer.handle [as handle_request] (/Users/yws/Dev/OreSupport_gitHub/PBL2020/OreSupport/ore-SupportServer/oreServer/node_modules/express/lib/router/layer.js:95:5)
+    at next (/Users/yws/Dev/OreSupport_gitHub/PBL2020/OreSupport/ore-SupportServer/oreServer/node_modules/express/lib/router/route.js:137:13)
+    at Route.dispatch (/Users/yws/Dev/OreSupport_gitHub/PBL2020/OreSupport/ore-SupportServer/oreServer/node_modules/express/lib/router/route.js:112:3)
+    at Layer.handle [as handle_request] (/Users/yws/Dev/OreSupport_gitHub/PBL2020/OreSupport/ore-SupportServer/oreServer/node_modules/express/lib/router/layer.js:95:5)
+    at /Users/yws/Dev/OreSupport_gitHub/PBL2020/OreSupport/ore-SupportServer/oreServer/node_modules/express/lib/router/index.js:281:22
+    at Function.process_params (/Users/yws/Dev/OreSupport_gitHub/PBL2020/OreSupport/ore-SupportServer/oreServer/node_modules/express/lib/router/index.js:335:12)
+    at next (/Users/yws/Dev/OreSupport_gitHub/PBL2020/OreSupport/ore-SupportServer/oreServer/node_modules/express/lib/router/index.js:275:10)
+    at Function.handle (/Users/yws/Dev/OreSupport_gitHub/PBL2020/OreSupport/ore-SupportServer/oreServer/node_modules/express/lib/router/index.js:174:3)
+    at router (/Users/yws/Dev/OreSupport_gitHub/PBL2020/OreSupport/ore-SupportServer/oreServer/node_modules/express/lib/router/index.js:47:12)
+    at Layer.handle [as handle_request] (/Users/yws/Dev/OreSupport_gitHub/PBL2020/OreSupport/ore-SupportServer/oreServer/node_modules/express/lib/router/layer.js:95:5)
+    at trim_prefix (/Users/yws/Dev/OreSupport_gitHub/PBL2020/OreSupport/ore-SupportServer/oreServer/node_modules/express/lib/router/index.js:317:13)
+    at /Users/yws/Dev/OreSupport_gitHub/PBL2020/OreSupport/ore-SupportServer/oreServer/node_modules/express/lib/router/index.js:284:7
+    at Function.process_params (/Users/yws/Dev/OreSupport_gitHub/PBL2020/OreSupport/ore-SupportServer/oreServer/node_modules/express/lib/router/index.js:335:12)
+    at next (/Users/yws/Dev/OreSupport_gitHub/PBL2020/OreSupport/ore-SupportServer/oreServer/node_modules/express/lib/router/index.js:275:10)
+    at /Users/yws/Dev/OreSupport_gitHub/PBL2020/OreSupport/ore-SupportServer/oreServer/node_modules/express/lib/router/index.js:635:15
+    at next (/Users/yws/Dev/OreSupport_gitHub/PBL2020/OreSupport/ore-SupportServer/oreServer/node_modules/express/lib/router/index.js:260:14)
+    at Function.handle (/Users/yws/Dev/OreSupport_gitHub/PBL2020/OreSupport/ore-SupportServer/oreServer/node_modules/express/lib/router/index.js:174:3)
+[2020-08-17T22:50:26.174] [INFO] users - ユーザログ UserName:閻 文帥
+[2020-08-17T22:50:26.174] [INFO] users - Third Party by Facebook
+[2020-08-17T22:50:26.399] [INFO] users - profileInfo userID: 2588234901506497
+[2020-08-17T22:56:51.934] [INFO] users - profileInfo userID: 2588234901506497
+[2020-08-17T22:59:49.402] [INFO] users - profileInfo userID: 2588234901506497
+[2020-08-17T23:00:05.879] [INFO] users - profileInfo userID: 2588234901506497
+[2020-08-17T23:00:15.876] [INFO] users - profileInfo userID: 2588234901506497
+[2020-08-17T23:01:32.057] [INFO] users - profileInfo userID: 2588234901506497
+[2020-08-17T23:01:41.003] [INFO] users - profileInfo userID: 2588234901506497
+[2020-08-17T23:27:17.154] [INFO] users - profileInfo userID: 2588234901506497
+[2020-08-17T23:27:54.058] [INFO] users - profileInfo userID: 2588234901506497
+[2020-08-17T23:28:01.218] [INFO] users - profileInfo userID: 2588234901506497
+[2020-08-17T23:29:43.141] [INFO] users - profileInfo userID: 2588234901506497
+[2020-08-17T23:29:44.549] [INFO] users - profileInfo userID: 2588234901506497
+[2020-08-17T23:29:45.486] [INFO] users - profileInfo userID: 2588234901506497
+[2020-08-17T23:29:46.596] [INFO] users - profileInfo userID: 2588234901506497
+[2020-08-17T23:29:48.448] [INFO] users - profileInfo userID: 2588234901506497
+[2020-08-17T23:30:54.476] [INFO] users - profileInfo userID: 2588234901506497
+[2020-08-17T23:31:04.871] [INFO] users - profileInfo userID: 2588234901506497
+[2020-08-18T00:05:17.821] [INFO] users - profileInfo userID: 2588234901506497
+[2020-08-18T00:05:18.904] [INFO] users - profileInfo userID: 2588234901506497
+[2020-08-18T00:05:20.484] [INFO] users - profileInfo userID: 2588234901506497
+[2020-08-18T00:05:26.544] [INFO] users - profileInfo userID: 2588234901506497
+[2020-08-18T00:06:28.925] [INFO] users - profileInfo userID: 2588234901506497
+[2020-08-18T00:10:49.692] [INFO] users - profileInfo userID: 2588234901506497
+[2020-08-18T00:10:51.322] [INFO] users - profileInfo userID: 2588234901506497
+[2020-08-18T00:12:23.720] [INFO] users - profileInfo userID: 2588234901506497
+[2020-08-18T00:12:25.121] [INFO] users - profileInfo userID: 2588234901506497
+[2020-08-18T00:12:26.519] [INFO] users - profileInfo userID: 2588234901506497
+[2020-08-18T00:12:58.703] [INFO] users - profileInfo userID: 2588234901506497
+[2020-08-18T00:13:00.063] [INFO] users - profileInfo userID: 2588234901506497
+[2020-08-18T00:14:50.608] [INFO] users - profileInfo userID: 2588234901506497
+[2020-08-18T00:21:25.624] [INFO] users - profileInfo userID: 2588234901506497
+[2020-08-18T00:23:18.012] [INFO] users - profileInfo userID: 2588234901506497
+[2020-08-18T00:23:30.625] [INFO] users - profileInfo userID: 2588234901506497
+[2020-08-18T00:25:16.622] [INFO] users - profileInfo userID: 2588234901506497
+[2020-08-18T00:26:40.127] [INFO] users - profileInfo userID: 2588234901506497
+[2020-08-18T00:29:04.415] [INFO] users - profileInfo userID: 2588234901506497
+[2020-08-18T00:29:23.443] [INFO] users - profileInfo userID: 2588234901506497
+[2020-08-18T00:29:43.560] [INFO] users - profileInfo userID: 2588234901506497
+[2020-08-18T00:29:56.238] [INFO] users - profileInfo userID: 2588234901506497
+[2020-08-18T00:30:24.439] [INFO] users - profileInfo userID: 2588234901506497
+[2020-08-18T00:36:43.586] [INFO] users - profileInfo userID: 2588234901506497
+[2020-08-18T00:37:04.599] [INFO] users - profileInfo userID: 2588234901506497
+[2020-08-18T00:38:29.151] [INFO] users - profileInfo userID: 2588234901506497
+[2020-08-18T00:38:45.605] [INFO] users - profileInfo userID: 2588234901506497
+[2020-08-18T00:39:42.723] [INFO] users - profileInfo userID: 2588234901506497
+[2020-08-18T00:40:19.073] [INFO] users - profileInfo userID: 2588234901506497
+[2020-08-18T00:40:48.223] [INFO] users - profileInfo userID: 2588234901506497
+[2020-08-18T00:41:04.025] [INFO] users - profileInfo userID: 2588234901506497
+[2020-08-18T00:41:32.073] [INFO] users - profileInfo userID: 2588234901506497
+[2020-08-18T00:57:02.735] [INFO] users - profileInfo userID: 2588234901506497
+[2020-08-18T00:57:46.966] [INFO] users - profileInfo userID: 2588234901506497
+[2020-08-18T01:01:13.450] [INFO] users - profileInfo userID: 2588234901506497
+[2020-08-18T01:01:23.578] [INFO] users - profileInfo userID: 2588234901506497
+[2020-08-18T01:01:41.845] [INFO] users - profileInfo userID: 2588234901506497
+[2020-08-18T01:10:51.878] [INFO] users - profileInfo userID: 2588234901506497
+[2020-08-18T01:10:54.210] [INFO] users - profileInfo userID: 2588234901506497
+[2020-08-18T01:11:00.967] [INFO] users - profileInfo userID: 2588234901506497
+[2020-08-18T01:11:12.640] [INFO] users - profileInfo userID: 2588234901506497
+[2020-08-18T01:12:44.504] [INFO] users - profileInfo userID: 2588234901506497
+[2020-08-18T01:12:47.757] [INFO] users - profileInfo userID: 2588234901506497
+[2020-08-18T01:22:08.544] [INFO] users - profileInfo userID: 2588234901506497
+[2020-08-18T01:22:13.011] [INFO] users - profileInfo userID: 2588234901506497
+[2020-08-18T01:22:14.036] [INFO] users - profileInfo userID: 2588234901506497
+[2020-08-18T01:26:19.295] [INFO] users - profileInfo userID: 2588234901506497
+[2020-08-18T01:26:39.584] [INFO] users - profileInfo userID: 2588234901506497
+[2020-08-18T01:27:25.330] [INFO] users - profileInfo userID: 2588234901506497
+[2020-08-18T01:27:40.439] [INFO] users - profileInfo userID: 2588234901506497
+[2020-08-18T01:28:23.883] [INFO] users - profileInfo userID: 2588234901506497
+[2020-08-18T01:28:52.183] [INFO] users - profileInfo userID: 2588234901506497
+[2020-08-18T01:28:55.259] [INFO] users - profileInfo userID: 2588234901506497
+[2020-08-18T01:28:57.844] [INFO] users - profileInfo userID: 2588234901506497
+[2020-08-18T01:29:02.385] [INFO] users - profileInfo userID: 2588234901506497
+[2020-08-18T01:30:42.342] [INFO] users - profileInfo userID: 2588234901506497
+[2020-08-18T01:30:50.669] [INFO] users - profileInfo userID: 2588234901506497
+[2020-08-18T01:30:51.811] [INFO] users - profileInfo userID: 2588234901506497
+[2020-08-18T01:30:52.937] [INFO] users - profileInfo userID: 2588234901506497
+[2020-08-18T01:32:45.852] [INFO] users - profileInfo userID: 2588234901506497
+[2020-08-18T01:33:36.062] [INFO] users - profileInfo userID: 2588234901506497
+[2020-08-18T01:33:58.227] [INFO] users - profileInfo userID: 2588234901506497
+[2020-08-18T01:34:01.394] [INFO] users - profileInfo userID: 2588234901506497
+[2020-08-18T01:34:03.477] [INFO] users - profileInfo userID: 2588234901506497
+[2020-08-18T01:34:49.593] [INFO] users - profileInfo userID: 2588234901506497
+[2020-08-18T01:34:52.474] [INFO] users - profileInfo userID: 2588234901506497
+[2020-08-18T01:36:09.166] [INFO] users - profileInfo userID: 2588234901506497
+[2020-08-18T01:36:14.404] [INFO] users - profileInfo userID: 2588234901506497
+[2020-08-18T01:37:23.843] [INFO] users - profileInfo userID: 2588234901506497
+[2020-08-18T01:37:37.919] [INFO] users - profileInfo userID: 2588234901506497
+[2020-08-18T01:41:54.243] [INFO] users - profileInfo userID: 2588234901506497
+[2020-08-18T01:41:59.522] [INFO] users - profileInfo userID: 2588234901506497
+[2020-08-18T01:43:33.925] [INFO] users - profileInfo userID: 2588234901506497
+[2020-08-18T01:43:35.641] [INFO] users - profileInfo userID: 2588234901506497
+[2020-08-18T01:44:13.931] [INFO] users - profileInfo userID: 2588234901506497
+[2020-08-18T01:44:38.201] [INFO] users - profileInfo userID: 2588234901506497
+[2020-08-18T01:50:24.411] [INFO] users - profileInfo userID: 2588234901506497
+[2020-08-18T01:51:09.679] [INFO] users - profileInfo userID: 2588234901506497
+[2020-08-18T01:53:11.894] [INFO] users - profileInfo userID: 2588234901506497
+[2020-08-18T01:57:32.638] [INFO] users - profileInfo userID: 2588234901506497
+[2020-08-18T01:58:01.470] [INFO] users - profileInfo userID: 2588234901506497
+[2020-08-18T02:02:49.738] [INFO] users - profileInfo userID: 2588234901506497
+[2020-08-18T02:03:05.766] [INFO] users - profileInfo userID: 2588234901506497
+[2020-08-18T02:04:02.514] [INFO] users - profileInfo userID: 2588234901506497
+[2020-08-18T02:05:26.675] [INFO] users - profileInfo userID: 2588234901506497
+[2020-08-18T02:06:15.962] [INFO] users - profileInfo userID: 2588234901506497
+[2020-08-18T02:06:27.617] [INFO] users - profileInfo userID: 2588234901506497
+[2020-08-18T02:06:48.477] [INFO] users - profileInfo userID: 2588234901506497
+[2020-08-18T02:06:59.943] [INFO] users - profileInfo userID: 2588234901506497
+[2020-08-18T02:07:09.861] [INFO] users - profileInfo userID: 2588234901506497
+[2020-08-18T02:08:43.677] [INFO] users - profileInfo userID: 2588234901506497
+[2020-08-18T02:10:16.901] [INFO] users - profileInfo userID: 2588234901506497
+[2020-08-18T02:14:03.212] [INFO] users - profileInfo userID: 2588234901506497
+[2020-08-18T02:14:42.208] [INFO] users - profileInfo userID: 2588234901506497
+[2020-08-18T02:15:23.403] [INFO] users - profileInfo userID: 2588234901506497
+[2020-08-18T02:15:30.763] [INFO] users - profileInfo userID: 2588234901506497
+[2020-08-18T02:16:00.302] [INFO] users - profileInfo userID: 2588234901506497
+[2020-08-18T02:17:12.128] [INFO] users - profileInfo userID: 2588234901506497
+[2020-08-18T02:18:16.556] [INFO] users - profileInfo userID: 2588234901506497
+[2020-08-18T02:18:17.828] [INFO] users - profileInfo userID: 2588234901506497
+[2020-08-18T02:18:27.610] [INFO] users - profileInfo userID: 2588234901506497
+[2020-08-18T02:18:55.222] [INFO] users - profileInfo userID: 2588234901506497
+[2020-08-18T02:19:13.301] [INFO] users - profileInfo userID: 2588234901506497
+[2020-08-18T02:23:19.805] [INFO] users - profileInfo userID: 2588234901506497
+[2020-08-18T02:23:30.914] [INFO] users - profileInfo userID: 2588234901506497
+[2020-08-18T02:25:09.948] [INFO] users - profileInfo userID: 2588234901506497
+[2020-08-18T02:25:19.055] [INFO] users - profileInfo userID: 2588234901506497
+[2020-08-18T02:26:18.168] [INFO] users - profileInfo userID: 2588234901506497
+[2020-08-18T02:26:48.959] [INFO] users - profileInfo userID: 2588234901506497
+[2020-08-18T02:29:03.808] [INFO] users - profileInfo userID: 2588234901506497
+[2020-08-18T02:29:05.392] [INFO] users - profileInfo userID: 2588234901506497
+[2020-08-18T02:29:18.456] [INFO] users - profileInfo userID: 2588234901506497
+[2020-08-18T02:29:52.290] [INFO] users - profileInfo userID: 2588234901506497
+[2020-08-18T02:29:55.427] [INFO] users - profileInfo userID: 2588234901506497
+[2020-08-18T02:30:09.407] [INFO] users - profileInfo userID: 2588234901506497
+[2020-08-18T02:30:21.425] [INFO] users - profileInfo userID: 2588234901506497
+[2020-08-18T02:31:17.228] [INFO] users - profileInfo userID: 2588234901506497
+[2020-08-18T02:31:56.461] [INFO] users - profileInfo userID: 2588234901506497
+[2020-08-18T02:32:51.987] [INFO] users - profileInfo userID: 2588234901506497
+[2020-08-18T02:33:16.931] [INFO] users - profileInfo userID: 2588234901506497
+[2020-08-18T02:33:18.540] [INFO] users - profileInfo userID: 2588234901506497
+[2020-08-18T02:33:20.177] [INFO] users - profileInfo userID: 2588234901506497
+[2020-08-18T02:33:22.426] [INFO] users - profileInfo userID: 2588234901506497
+[2020-08-18T02:34:08.005] [INFO] users - profileInfo userID: 2588234901506497
+[2020-08-18T02:34:42.048] [INFO] users - profileInfo userID: 2588234901506497
+[2020-08-18T02:34:45.943] [INFO] users - profileInfo userID: 2588234901506497
+[2020-08-18T02:36:32.666] [INFO] users - profileInfo userID: 2588234901506497
+[2020-08-18T02:38:26.205] [INFO] users - profileInfo userID: 2588234901506497
+[2020-08-18T02:39:11.089] [INFO] users - profileInfo userID: 2588234901506497
+[2020-08-18T02:39:28.222] [INFO] users - profileInfo userID: 2588234901506497
+[2020-08-18T02:39:41.060] [INFO] users - profileInfo userID: 2588234901506497
+[2020-08-18T02:39:54.128] [INFO] users - profileInfo userID: 2588234901506497
+[2020-08-18T02:40:29.816] [INFO] users - profileInfo userID: 2588234901506497
+[2020-08-18T02:43:51.983] [INFO] users - profileInfo userID: 2588234901506497
+[2020-08-18T02:44:30.378] [INFO] users - profileInfo userID: 2588234901506497
+[2020-08-18T02:44:53.272] [INFO] users - profileInfo userID: 2588234901506497
+[2020-08-18T02:45:14.770] [INFO] users - profileInfo userID: 2588234901506497
+[2020-08-18T02:48:38.911] [INFO] users - profileInfo userID: 2588234901506497
+[2020-08-18T02:57:31.680] [INFO] users - profileInfo userID: 2588234901506497
+[2020-08-18T03:00:35.552] [INFO] users - profileInfo userID: 2588234901506497
+[2020-08-18T03:00:49.214] [INFO] users - profileInfo userID: 2588234901506497
+[2020-08-18T03:01:01.371] [INFO] users - profileInfo userID: 2588234901506497
+[2020-08-18T03:01:11.202] [INFO] users - profileInfo userID: 2588234901506497
+[2020-08-18T03:01:18.880] [INFO] users - profileInfo userID: 2588234901506497
+[2020-08-18T03:01:42.173] [INFO] users - profileInfo userID: 2588234901506497
+[2020-08-18T03:07:12.151] [INFO] users - profileInfo userID: 2588234901506497
+[2020-08-18T03:07:36.598] [INFO] users - profileInfo userID: 2588234901506497
+[2020-08-18T03:07:57.047] [INFO] users - profileInfo userID: 2588234901506497
+[2020-08-18T03:08:54.852] [INFO] users - profileInfo userID: 2588234901506497
+[2020-08-18T03:12:32.332] [INFO] users - profileInfo userID: 2588234901506497
+[2020-08-18T03:13:33.233] [INFO] users - profileInfo userID: 2588234901506497
+[2020-08-18T03:13:40.757] [INFO] users - profileInfo userID: 2588234901506497
+[2020-08-18T03:14:11.441] [INFO] users - profileInfo userID: 2588234901506497
+[2020-08-18T03:14:19.220] [INFO] users - profileInfo userID: 2588234901506497
+[2020-08-18T03:14:27.231] [INFO] users - profileInfo userID: 2588234901506497
+[2020-08-18T03:15:13.409] [INFO] users - profileInfo userID: 2588234901506497
+[2020-08-18T03:15:23.347] [INFO] users - profileInfo userID: 2588234901506497
+[2020-08-18T03:15:31.037] [INFO] users - profileInfo userID: 2588234901506497
+[2020-08-18T03:15:39.075] [INFO] users - profileInfo userID: 2588234901506497
+[2020-08-18T03:16:13.675] [INFO] users - profileInfo userID: 2588234901506497
+[2020-08-18T03:16:15.344] [INFO] users - profileInfo userID: 2588234901506497
+[2020-08-18T03:16:38.604] [INFO] users - profileInfo userID: 2588234901506497
+[2020-08-18T03:16:40.079] [INFO] users - profileInfo userID: 2588234901506497
+[2020-08-18T03:16:52.223] [INFO] users - profileInfo userID: 2588234901506497
+[2020-08-18T03:16:53.161] [INFO] users - profileInfo userID: 2588234901506497
+[2020-08-18T03:18:27.037] [INFO] users - profileInfo userID: 2588234901506497
+[2020-08-18T03:18:51.055] [INFO] users - profileInfo userID: 2588234901506497
+[2020-08-18T03:20:11.967] [INFO] users - profileInfo userID: 2588234901506497
+[2020-08-18T03:20:12.450] [INFO] users - profileInfo userID: 2588234901506497
+[2020-08-18T03:20:44.288] [INFO] users - profileInfo userID: 2588234901506497
+[2020-08-18T03:21:08.292] [INFO] users - profileInfo userID: 2588234901506497
+[2020-08-18T03:21:27.604] [INFO] users - profileInfo userID: 2588234901506497
+[2020-08-18T03:21:46.577] [INFO] users - profileInfo userID: 2588234901506497
+[2020-08-18T03:22:03.459] [INFO] users - profileInfo userID: 2588234901506497
+[2020-08-18T03:22:29.628] [INFO] users - profileInfo userID: 2588234901506497
+[2020-08-18T03:22:44.946] [INFO] users - profileInfo userID: 2588234901506497
+[2020-08-18T03:24:15.186] [INFO] users - profileInfo userID: 2588234901506497
+[2020-08-18T03:24:59.118] [INFO] users - profileInfo userID: 2588234901506497
+[2020-08-18T03:26:02.723] [INFO] users - profileInfo userID: 2588234901506497
+[2020-08-18T03:26:36.203] [INFO] users - profileInfo userID: 2588234901506497
+[2020-08-18T03:27:05.403] [INFO] users - profileInfo userID: 2588234901506497
+[2020-08-18T03:27:43.380] [INFO] users - profileInfo userID: 2588234901506497
+[2020-08-18T03:27:55.460] [INFO] users - profileInfo userID: 2588234901506497
+[2020-08-18T03:28:06.879] [INFO] users - profileInfo userID: 2588234901506497
+[2020-08-18T03:28:29.195] [INFO] users - profileInfo userID: 2588234901506497
+[2020-08-18T03:28:37.646] [INFO] users - profileInfo userID: 2588234901506497
+[2020-08-18T03:28:51.608] [INFO] users - profileInfo userID: 2588234901506497
+[2020-08-18T03:29:08.191] [INFO] users - profileInfo userID: 2588234901506497
+[2020-08-18T03:29:29.542] [INFO] users - profileInfo userID: 2588234901506497
+[2020-08-18T03:29:55.805] [INFO] users - profileInfo userID: 2588234901506497
+[2020-08-18T03:30:08.296] [INFO] users - profileInfo userID: 2588234901506497
+[2020-08-18T03:41:16.583] [INFO] users - profileInfo userID: 2588234901506497
+[2020-08-18T03:43:33.469] [INFO] users - profileInfo userID: 2588234901506497
+[2020-08-18T03:44:17.133] [INFO] users - profileInfo userID: 2588234901506497
+[2020-08-18T03:46:15.950] [INFO] users - profileInfo userID: 2588234901506497
+[2020-08-18T03:53:31.948] [INFO] users - profileInfo userID: 2588234901506497
+[2020-08-18T03:53:45.774] [INFO] users - profileInfo userID: 2588234901506497
+[2020-08-18T03:55:31.598] [INFO] users - profileInfo userID: 2588234901506497
+[2020-08-18T03:55:34.450] [INFO] users - profileInfo userID: 2588234901506497
+[2020-08-18T03:57:43.011] [INFO] users - profileInfo userID: 2588234901506497
+[2020-08-18T03:57:48.258] [INFO] users - profileInfo userID: 2588234901506497
+[2020-08-18T03:59:29.273] [INFO] users - profileInfo userID: 2588234901506497
+[2020-08-18T04:01:04.975] [INFO] users - profileInfo userID: 2588234901506497
+[2020-08-18T04:01:30.587] [INFO] users - profileInfo userID: 2588234901506497
+[2020-08-18T04:02:23.821] [INFO] users - profileInfo userID: 2588234901506497
+[2020-08-18T04:03:17.959] [INFO] users - profileInfo userID: 2588234901506497
+[2020-08-18T04:03:49.775] [INFO] users - profileInfo userID: 2588234901506497
+[2020-08-18T04:04:12.107] [INFO] users - profileInfo userID: 2588234901506497
+[2020-08-18T04:05:12.119] [INFO] users - profileInfo userID: 2588234901506497
+[2020-08-18T04:05:42.403] [INFO] users - profileInfo userID: 2588234901506497
+[2020-08-18T04:06:39.739] [INFO] users - profileInfo userID: 2588234901506497
+[2020-08-18T04:07:53.103] [INFO] users - profileInfo userID: 2588234901506497
+[2020-08-18T04:19:29.642] [INFO] users - profileInfo userID: 2588234901506497
+[2020-08-18T04:20:38.577] [INFO] users - profileInfo userID: 2588234901506497
+[2020-08-18T04:20:40.460] [INFO] users - profileInfo userID: 2588234901506497
+[2020-08-18T04:21:58.325] [INFO] users - profileInfo userID: 2588234901506497
+[2020-08-18T04:24:23.953] [INFO] users - profileInfo userID: 2588234901506497
+[2020-08-18T04:26:00.943] [INFO] users - profileInfo userID: 2588234901506497
+[2020-08-18T04:26:10.060] [INFO] users - profileInfo userID: 2588234901506497
+[2020-08-18T04:27:40.804] [INFO] users - profileInfo userID: 2588234901506497
+[2020-08-18T04:27:56.445] [INFO] users - profileInfo userID: 2588234901506497
+[2020-08-18T04:29:24.298] [INFO] users - profileInfo userID: 2588234901506497
+[2020-08-18T04:30:10.485] [INFO] users - profileInfo userID: 2588234901506497
+[2020-08-18T04:30:33.581] [INFO] users - profileInfo userID: 2588234901506497
+[2020-08-18T04:30:55.888] [INFO] users - profileInfo userID: 2588234901506497
+[2020-08-18T04:31:07.286] [INFO] users - profileInfo userID: 2588234901506497
+[2020-08-18T04:31:22.115] [INFO] users - profileInfo userID: 2588234901506497
+[2020-08-18T04:31:33.991] [INFO] users - profileInfo userID: 2588234901506497
+[2020-08-18T04:32:07.038] [INFO] users - profileInfo userID: 2588234901506497
+[2020-08-18T04:32:20.645] [INFO] users - profileInfo userID: 2588234901506497
+[2020-08-18T04:32:36.702] [INFO] users - profileInfo userID: 2588234901506497
+[2020-08-18T04:33:03.735] [INFO] users - profileInfo userID: 2588234901506497
+[2020-08-18T04:33:17.473] [INFO] users - profileInfo userID: 2588234901506497
+[2020-08-18T04:33:46.229] [INFO] users - profileInfo userID: 2588234901506497
+[2020-08-18T04:34:21.631] [INFO] users - profileInfo userID: 2588234901506497
+[2020-08-18T04:35:18.881] [INFO] users - profileInfo userID: 2588234901506497
+[2020-08-18T04:35:20.253] [INFO] users - profileInfo userID: 2588234901506497
+[2020-08-18T04:35:49.433] [INFO] users - profileInfo userID: 2588234901506497
+[2020-08-18T04:36:04.283] [INFO] users - profileInfo userID: 2588234901506497
+[2020-08-18T04:36:20.398] [INFO] users - profileInfo userID: 2588234901506497
+[2020-08-18T04:36:59.111] [INFO] users - profileInfo userID: 2588234901506497
+[2020-08-18T04:37:27.492] [INFO] users - profileInfo userID: 2588234901506497
+[2020-08-18T04:38:42.082] [INFO] users - profileInfo userID: 2588234901506497
+[2020-08-18T04:39:51.515] [INFO] users - profileInfo userID: 2588234901506497
+[2020-08-18T04:39:52.815] [INFO] users - profileInfo userID: 2588234901506497
+[2020-08-18T04:40:23.597] [INFO] users - profileInfo userID: 2588234901506497
+[2020-08-18T04:40:54.917] [INFO] users - profileInfo userID: 2588234901506497
+[2020-08-18T04:46:36.454] [INFO] users - profileInfo userID: 2588234901506497
+[2020-08-18T04:49:07.319] [INFO] users - profileInfo userID: 2588234901506497
+[2020-08-18T04:49:15.899] [INFO] users - profileInfo userID: 2588234901506497
+[2020-08-18T04:50:01.941] [INFO] users - profileInfo userID: 2588234901506497
+[2020-08-18T04:51:03.912] [INFO] users - profileInfo userID: 2588234901506497
+[2020-08-18T04:53:05.398] [INFO] users - profileInfo userID: 2588234901506497
+[2020-08-18T04:54:27.596] [INFO] users - profileInfo userID: 2588234901506497
+[2020-08-18T04:56:17.679] [INFO] users - profileInfo userID: 2588234901506497
+[2020-08-18T04:58:47.102] [INFO] users - profileInfo userID: 2588234901506497
+[2020-08-18T04:59:35.872] [INFO] users - profileInfo userID: 2588234901506497
+[2020-08-18T05:00:17.247] [INFO] users - profileInfo userID: 2588234901506497
+[2020-08-18T05:00:30.273] [INFO] users - profileInfo userID: 2588234901506497
+[2020-08-18T05:02:13.616] [INFO] users - profileInfo userID: 2588234901506497
+[2020-08-18T05:04:17.958] [INFO] users - profileInfo userID: 2588234901506497
+[2020-08-18T05:05:49.775] [INFO] users - profileInfo userID: 2588234901506497
+[2020-08-18T05:08:15.374] [INFO] users - profileInfo userID: 2588234901506497
+[2020-08-18T05:08:45.572] [INFO] users - profileInfo userID: 2588234901506497
+[2020-08-18T05:10:20.391] [INFO] users - profileInfo userID: 2588234901506497
+[2020-08-18T05:11:13.556] [INFO] users - profileInfo userID: 2588234901506497
+[2020-08-18T05:11:25.032] [INFO] users - profileInfo userID: 2588234901506497
+[2020-08-18T05:11:59.158] [INFO] users - profileInfo userID: 2588234901506497
+[2020-08-18T05:12:36.430] [INFO] users - profileInfo userID: 2588234901506497
+[2020-08-18T05:18:31.415] [INFO] users - profileInfo userID: 2588234901506497
+[2020-08-18T05:18:48.753] [INFO] users - profileInfo userID: 2588234901506497
+[2020-08-18T05:18:58.377] [INFO] users - profileInfo userID: 2588234901506497
+[2020-08-18T05:19:10.051] [INFO] users - profileInfo userID: 2588234901506497
+[2020-08-18T05:20:14.209] [INFO] users - profileInfo userID: 2588234901506497
+[2020-08-18T05:22:07.554] [INFO] users - profileInfo userID: 2588234901506497
+[2020-08-18T05:22:26.603] [INFO] users - profileInfo userID: 2588234901506497
+[2020-08-18T05:26:55.676] [INFO] users - profileInfo userID: 2588234901506497
+[2020-08-18T20:24:49.857] [INFO] users - profileInfo userID: 2588234901506497
+[2020-08-18T20:27:41.516] [INFO] users - profileInfo userID: 2588234901506497
+[2020-08-18T20:28:29.896] [INFO] users - profileInfo userID: 2588234901506497
+[2020-08-18T20:32:03.910] [INFO] users - profileInfo userID: 2588234901506497
+[2020-08-18T20:32:25.911] [INFO] users - profileInfo userID: 2588234901506497
+[2020-08-18T20:33:06.471] [INFO] users - profileInfo userID: 2588234901506497
+[2020-08-18T20:35:10.250] [INFO] users - profileInfo userID: 2588234901506497
+[2020-08-18T20:39:17.732] [INFO] users - profileInfo userID: 2588234901506497
+[2020-08-18T20:39:40.857] [INFO] users - profileInfo userID: 2588234901506497
+[2020-08-18T20:40:16.850] [INFO] users - profileInfo userID: 2588234901506497
+[2020-08-18T20:41:17.752] [INFO] users - profileInfo userID: 2588234901506497
+[2020-08-18T20:41:36.854] [INFO] users - profileInfo userID: 2588234901506497
+[2020-08-18T20:42:12.045] [INFO] users - profileInfo userID: 2588234901506497
+[2020-08-18T20:42:18.231] [INFO] users - profileInfo userID: 2588234901506497
+[2020-08-18T20:45:30.814] [INFO] users - profileInfo userID: 2588234901506497
+[2020-08-18T20:46:16.633] [INFO] users - profileInfo userID: 2588234901506497
+[2020-08-18T20:47:57.121] [INFO] users - profileInfo userID: 2588234901506497
+[2020-08-18T20:48:24.253] [INFO] users - profileInfo userID: 2588234901506497
+[2020-08-18T20:50:04.169] [INFO] users - profileInfo userID: 2588234901506497
+[2020-08-18T20:51:55.827] [INFO] users - profileInfo userID: 2588234901506497
+[2020-08-18T20:53:10.958] [INFO] users - profileInfo userID: 2588234901506497
+[2020-08-18T20:54:10.864] [INFO] users - profileInfo userID: 2588234901506497
+[2020-08-18T20:57:23.870] [INFO] users - profileInfo userID: 2588234901506497
+[2020-08-18T21:08:48.240] [INFO] users - profileInfo userID: 2588234901506497
+[2020-08-18T21:27:00.772] [INFO] users - profileInfo userID: 2588234901506497
+[2020-08-18T21:30:10.523] [INFO] users - profileInfo userID: 2588234901506497
+[2020-08-18T21:34:25.620] [INFO] users - profileInfo userID: 2588234901506497
+[2020-08-18T21:35:42.615] [INFO] users - profileInfo userID: 2588234901506497
+[2020-08-18T21:36:41.954] [INFO] users - profileInfo userID: 2588234901506497
+[2020-08-18T21:39:04.197] [INFO] users - profileInfo userID: 2588234901506497
+[2020-08-18T21:41:56.055] [INFO] users - profileInfo userID: 2588234901506497
+[2020-08-18T21:42:31.064] [INFO] users - profileInfo userID: 2588234901506497
+[2020-08-18T21:43:14.222] [INFO] users - profileInfo userID: 2588234901506497
+[2020-08-18T21:43:35.074] [INFO] users - profileInfo userID: 2588234901506497
+[2020-08-18T21:44:15.822] [INFO] users - profileInfo userID: 2588234901506497
+[2020-08-18T21:45:37.379] [INFO] users - profileInfo userID: 2588234901506497
+[2020-08-18T21:46:07.477] [INFO] users - profileInfo userID: 2588234901506497
+[2020-08-18T21:48:24.546] [INFO] users - profileInfo userID: 2588234901506497
+[2020-08-18T21:49:15.083] [INFO] users - profileInfo userID: 2588234901506497
+[2020-08-18T21:49:31.109] [INFO] users - profileInfo userID: 2588234901506497
+[2020-08-18T21:50:08.151] [INFO] users - profileInfo userID: 2588234901506497
+[2020-08-18T21:51:11.751] [INFO] users - profileInfo userID: 2588234901506497
+[2020-08-18T21:52:02.069] [INFO] users - profileInfo userID: 2588234901506497
+[2020-08-18T21:52:36.024] [INFO] users - profileInfo userID: 2588234901506497
+[2020-08-18T21:53:13.835] [INFO] users - profileInfo userID: 2588234901506497
+[2020-08-18T21:53:29.935] [INFO] users - profileInfo userID: 2588234901506497
+[2020-08-18T21:53:50.899] [INFO] users - profileInfo userID: 2588234901506497
+[2020-08-18T21:54:09.183] [INFO] users - profileInfo userID: 2588234901506497
+[2020-08-18T21:54:36.188] [INFO] users - profileInfo userID: 2588234901506497
+[2020-08-18T21:55:21.504] [INFO] users - profileInfo userID: 2588234901506497
+[2020-08-18T21:55:39.696] [INFO] users - profileInfo userID: 2588234901506497
+[2020-08-18T21:56:28.570] [INFO] users - profileInfo userID: 2588234901506497
+[2020-08-18T21:58:09.115] [INFO] users - profileInfo userID: 2588234901506497
+[2020-08-18T21:58:43.663] [INFO] users - profileInfo userID: 2588234901506497
+[2020-08-18T22:01:02.524] [INFO] users - profileInfo userID: 2588234901506497
+[2020-08-18T23:34:57.126] [ERROR] app - アクセスエラー TypeError: Cannot read property 'CODE_5008' of undefined
+    at /Users/yws/Dev/OreSupport_gitHub/PBL2020/OreSupport/ore-SupportServer/oreServer/common/check.token.js:24:29
+    at /Users/yws/Dev/OreSupport_gitHub/PBL2020/OreSupport/ore-SupportServer/oreServer/node_modules/jsonwebtoken/verify.js:152:16
+    at getSecret (/Users/yws/Dev/OreSupport_gitHub/PBL2020/OreSupport/ore-SupportServer/oreServer/node_modules/jsonwebtoken/verify.js:90:14)
+    at Object.module.exports [as verify] (/Users/yws/Dev/OreSupport_gitHub/PBL2020/OreSupport/ore-SupportServer/oreServer/node_modules/jsonwebtoken/verify.js:94:10)
+    at verifyUser (/Users/yws/Dev/OreSupport_gitHub/PBL2020/OreSupport/ore-SupportServer/oreServer/common/check.token.js:20:12)
+    at Layer.handle [as handle_request] (/Users/yws/Dev/OreSupport_gitHub/PBL2020/OreSupport/ore-SupportServer/oreServer/node_modules/express/lib/router/layer.js:95:5)
+    at next (/Users/yws/Dev/OreSupport_gitHub/PBL2020/OreSupport/ore-SupportServer/oreServer/node_modules/express/lib/router/route.js:137:13)
+    at Route.dispatch (/Users/yws/Dev/OreSupport_gitHub/PBL2020/OreSupport/ore-SupportServer/oreServer/node_modules/express/lib/router/route.js:112:3)
+    at Layer.handle [as handle_request] (/Users/yws/Dev/OreSupport_gitHub/PBL2020/OreSupport/ore-SupportServer/oreServer/node_modules/express/lib/router/layer.js:95:5)
+    at /Users/yws/Dev/OreSupport_gitHub/PBL2020/OreSupport/ore-SupportServer/oreServer/node_modules/express/lib/router/index.js:281:22
+    at Function.process_params (/Users/yws/Dev/OreSupport_gitHub/PBL2020/OreSupport/ore-SupportServer/oreServer/node_modules/express/lib/router/index.js:335:12)
+    at next (/Users/yws/Dev/OreSupport_gitHub/PBL2020/OreSupport/ore-SupportServer/oreServer/node_modules/express/lib/router/index.js:275:10)
+    at Function.handle (/Users/yws/Dev/OreSupport_gitHub/PBL2020/OreSupport/ore-SupportServer/oreServer/node_modules/express/lib/router/index.js:174:3)
+    at router (/Users/yws/Dev/OreSupport_gitHub/PBL2020/OreSupport/ore-SupportServer/oreServer/node_modules/express/lib/router/index.js:47:12)
+    at Layer.handle [as handle_request] (/Users/yws/Dev/OreSupport_gitHub/PBL2020/OreSupport/ore-SupportServer/oreServer/node_modules/express/lib/router/layer.js:95:5)
+    at trim_prefix (/Users/yws/Dev/OreSupport_gitHub/PBL2020/OreSupport/ore-SupportServer/oreServer/node_modules/express/lib/router/index.js:317:13)
+    at /Users/yws/Dev/OreSupport_gitHub/PBL2020/OreSupport/ore-SupportServer/oreServer/node_modules/express/lib/router/index.js:284:7
+    at Function.process_params (/Users/yws/Dev/OreSupport_gitHub/PBL2020/OreSupport/ore-SupportServer/oreServer/node_modules/express/lib/router/index.js:335:12)
+    at next (/Users/yws/Dev/OreSupport_gitHub/PBL2020/OreSupport/ore-SupportServer/oreServer/node_modules/express/lib/router/index.js:275:10)
+    at /Users/yws/Dev/OreSupport_gitHub/PBL2020/OreSupport/ore-SupportServer/oreServer/node_modules/express/lib/router/index.js:635:15
+    at next (/Users/yws/Dev/OreSupport_gitHub/PBL2020/OreSupport/ore-SupportServer/oreServer/node_modules/express/lib/router/index.js:260:14)
+    at Function.handle (/Users/yws/Dev/OreSupport_gitHub/PBL2020/OreSupport/ore-SupportServer/oreServer/node_modules/express/lib/router/index.js:174:3)
+[2020-08-18T23:35:09.045] [ERROR] app - アクセスエラー TypeError: Cannot read property 'CODE_5008' of undefined
+    at /Users/yws/Dev/OreSupport_gitHub/PBL2020/OreSupport/ore-SupportServer/oreServer/common/check.token.js:24:29
+    at /Users/yws/Dev/OreSupport_gitHub/PBL2020/OreSupport/ore-SupportServer/oreServer/node_modules/jsonwebtoken/verify.js:152:16
+    at getSecret (/Users/yws/Dev/OreSupport_gitHub/PBL2020/OreSupport/ore-SupportServer/oreServer/node_modules/jsonwebtoken/verify.js:90:14)
+    at Object.module.exports [as verify] (/Users/yws/Dev/OreSupport_gitHub/PBL2020/OreSupport/ore-SupportServer/oreServer/node_modules/jsonwebtoken/verify.js:94:10)
+    at verifyUser (/Users/yws/Dev/OreSupport_gitHub/PBL2020/OreSupport/ore-SupportServer/oreServer/common/check.token.js:20:12)
+    at Layer.handle [as handle_request] (/Users/yws/Dev/OreSupport_gitHub/PBL2020/OreSupport/ore-SupportServer/oreServer/node_modules/express/lib/router/layer.js:95:5)
+    at next (/Users/yws/Dev/OreSupport_gitHub/PBL2020/OreSupport/ore-SupportServer/oreServer/node_modules/express/lib/router/route.js:137:13)
+    at Route.dispatch (/Users/yws/Dev/OreSupport_gitHub/PBL2020/OreSupport/ore-SupportServer/oreServer/node_modules/express/lib/router/route.js:112:3)
+    at Layer.handle [as handle_request] (/Users/yws/Dev/OreSupport_gitHub/PBL2020/OreSupport/ore-SupportServer/oreServer/node_modules/express/lib/router/layer.js:95:5)
+    at /Users/yws/Dev/OreSupport_gitHub/PBL2020/OreSupport/ore-SupportServer/oreServer/node_modules/express/lib/router/index.js:281:22
+    at Function.process_params (/Users/yws/Dev/OreSupport_gitHub/PBL2020/OreSupport/ore-SupportServer/oreServer/node_modules/express/lib/router/index.js:335:12)
+    at next (/Users/yws/Dev/OreSupport_gitHub/PBL2020/OreSupport/ore-SupportServer/oreServer/node_modules/express/lib/router/index.js:275:10)
+    at Function.handle (/Users/yws/Dev/OreSupport_gitHub/PBL2020/OreSupport/ore-SupportServer/oreServer/node_modules/express/lib/router/index.js:174:3)
+    at router (/Users/yws/Dev/OreSupport_gitHub/PBL2020/OreSupport/ore-SupportServer/oreServer/node_modules/express/lib/router/index.js:47:12)
+    at Layer.handle [as handle_request] (/Users/yws/Dev/OreSupport_gitHub/PBL2020/OreSupport/ore-SupportServer/oreServer/node_modules/express/lib/router/layer.js:95:5)
+    at trim_prefix (/Users/yws/Dev/OreSupport_gitHub/PBL2020/OreSupport/ore-SupportServer/oreServer/node_modules/express/lib/router/index.js:317:13)
+    at /Users/yws/Dev/OreSupport_gitHub/PBL2020/OreSupport/ore-SupportServer/oreServer/node_modules/express/lib/router/index.js:284:7
+    at Function.process_params (/Users/yws/Dev/OreSupport_gitHub/PBL2020/OreSupport/ore-SupportServer/oreServer/node_modules/express/lib/router/index.js:335:12)
+    at next (/Users/yws/Dev/OreSupport_gitHub/PBL2020/OreSupport/ore-SupportServer/oreServer/node_modules/express/lib/router/index.js:275:10)
+    at /Users/yws/Dev/OreSupport_gitHub/PBL2020/OreSupport/ore-SupportServer/oreServer/node_modules/express/lib/router/index.js:635:15
+    at next (/Users/yws/Dev/OreSupport_gitHub/PBL2020/OreSupport/ore-SupportServer/oreServer/node_modules/express/lib/router/index.js:260:14)
+    at Function.handle (/Users/yws/Dev/OreSupport_gitHub/PBL2020/OreSupport/ore-SupportServer/oreServer/node_modules/express/lib/router/index.js:174:3)
+[2020-08-18T23:35:31.267] [ERROR] app - アクセスエラー TypeError: Cannot read property 'CODE_5008' of undefined
+    at /Users/yws/Dev/OreSupport_gitHub/PBL2020/OreSupport/ore-SupportServer/oreServer/common/check.token.js:24:29
+    at /Users/yws/Dev/OreSupport_gitHub/PBL2020/OreSupport/ore-SupportServer/oreServer/node_modules/jsonwebtoken/verify.js:152:16
+    at getSecret (/Users/yws/Dev/OreSupport_gitHub/PBL2020/OreSupport/ore-SupportServer/oreServer/node_modules/jsonwebtoken/verify.js:90:14)
+    at Object.module.exports [as verify] (/Users/yws/Dev/OreSupport_gitHub/PBL2020/OreSupport/ore-SupportServer/oreServer/node_modules/jsonwebtoken/verify.js:94:10)
+    at verifyUser (/Users/yws/Dev/OreSupport_gitHub/PBL2020/OreSupport/ore-SupportServer/oreServer/common/check.token.js:20:12)
+    at Layer.handle [as handle_request] (/Users/yws/Dev/OreSupport_gitHub/PBL2020/OreSupport/ore-SupportServer/oreServer/node_modules/express/lib/router/layer.js:95:5)
+    at next (/Users/yws/Dev/OreSupport_gitHub/PBL2020/OreSupport/ore-SupportServer/oreServer/node_modules/express/lib/router/route.js:137:13)
+    at Route.dispatch (/Users/yws/Dev/OreSupport_gitHub/PBL2020/OreSupport/ore-SupportServer/oreServer/node_modules/express/lib/router/route.js:112:3)
+    at Layer.handle [as handle_request] (/Users/yws/Dev/OreSupport_gitHub/PBL2020/OreSupport/ore-SupportServer/oreServer/node_modules/express/lib/router/layer.js:95:5)
+    at /Users/yws/Dev/OreSupport_gitHub/PBL2020/OreSupport/ore-SupportServer/oreServer/node_modules/express/lib/router/index.js:281:22
+    at Function.process_params (/Users/yws/Dev/OreSupport_gitHub/PBL2020/OreSupport/ore-SupportServer/oreServer/node_modules/express/lib/router/index.js:335:12)
+    at next (/Users/yws/Dev/OreSupport_gitHub/PBL2020/OreSupport/ore-SupportServer/oreServer/node_modules/express/lib/router/index.js:275:10)
+    at Function.handle (/Users/yws/Dev/OreSupport_gitHub/PBL2020/OreSupport/ore-SupportServer/oreServer/node_modules/express/lib/router/index.js:174:3)
+    at router (/Users/yws/Dev/OreSupport_gitHub/PBL2020/OreSupport/ore-SupportServer/oreServer/node_modules/express/lib/router/index.js:47:12)
+    at Layer.handle [as handle_request] (/Users/yws/Dev/OreSupport_gitHub/PBL2020/OreSupport/ore-SupportServer/oreServer/node_modules/express/lib/router/layer.js:95:5)
+    at trim_prefix (/Users/yws/Dev/OreSupport_gitHub/PBL2020/OreSupport/ore-SupportServer/oreServer/node_modules/express/lib/router/index.js:317:13)
+    at /Users/yws/Dev/OreSupport_gitHub/PBL2020/OreSupport/ore-SupportServer/oreServer/node_modules/express/lib/router/index.js:284:7
+    at Function.process_params (/Users/yws/Dev/OreSupport_gitHub/PBL2020/OreSupport/ore-SupportServer/oreServer/node_modules/express/lib/router/index.js:335:12)
+    at next (/Users/yws/Dev/OreSupport_gitHub/PBL2020/OreSupport/ore-SupportServer/oreServer/node_modules/express/lib/router/index.js:275:10)
+    at /Users/yws/Dev/OreSupport_gitHub/PBL2020/OreSupport/ore-SupportServer/oreServer/node_modules/express/lib/router/index.js:635:15
+    at next (/Users/yws/Dev/OreSupport_gitHub/PBL2020/OreSupport/ore-SupportServer/oreServer/node_modules/express/lib/router/index.js:260:14)
+    at Function.handle (/Users/yws/Dev/OreSupport_gitHub/PBL2020/OreSupport/ore-SupportServer/oreServer/node_modules/express/lib/router/index.js:174:3)
+[2020-08-18T23:35:54.182] [INFO] users - ユーザログ UserName:閻 文帥
+[2020-08-18T23:35:54.182] [INFO] users - Third Party by Facebook
+[2020-08-18T23:35:54.403] [INFO] users - profileInfo userID: 2588234901506497
+[2020-08-18T23:37:27.117] [INFO] users - profileInfo userID: 2588234901506497
+[2020-08-18T23:38:10.871] [INFO] users - profileInfo userID: 2588234901506497
+[2020-08-18T23:38:30.472] [INFO] users - profileInfo userID: 2588234901506497
+[2020-08-18T23:38:46.535] [INFO] users - profileInfo userID: 2588234901506497
+[2020-08-18T23:38:57.925] [INFO] users - profileInfo userID: 2588234901506497
+[2020-08-18T23:41:40.120] [INFO] users - profileInfo userID: 2588234901506497
+[2020-08-18T23:42:29.079] [INFO] users - profileInfo userID: 2588234901506497
+[2020-08-18T23:43:31.015] [INFO] users - profileInfo userID: 2588234901506497
+[2020-08-18T23:44:18.199] [INFO] users - profileInfo userID: 2588234901506497
+[2020-08-18T23:44:43.805] [INFO] users - profileInfo userID: 2588234901506497
+[2020-08-18T23:45:23.326] [INFO] users - profileInfo userID: 2588234901506497
+[2020-08-18T23:45:44.491] [INFO] users - profileInfo userID: 2588234901506497
+[2020-08-18T23:46:11.133] [INFO] users - profileInfo userID: 2588234901506497
+[2020-08-18T23:46:59.758] [INFO] users - profileInfo userID: 2588234901506497
+[2020-08-18T23:48:34.454] [INFO] users - profileInfo userID: 2588234901506497
+[2020-08-18T23:51:06.786] [INFO] users - profileInfo userID: 2588234901506497
+[2020-08-18T23:52:21.269] [INFO] users - profileInfo userID: 2588234901506497
+[2020-08-18T23:52:30.224] [INFO] users - profileInfo userID: 2588234901506497
+[2020-08-18T23:53:17.531] [INFO] users - profileInfo userID: 2588234901506497
+[2020-08-18T23:53:36.180] [INFO] users - profileInfo userID: 2588234901506497
+[2020-08-18T23:54:01.718] [INFO] users - profileInfo userID: 2588234901506497
+[2020-08-18T23:54:17.520] [INFO] users - profileInfo userID: 2588234901506497
+[2020-08-18T23:54:28.142] [INFO] users - profileInfo userID: 2588234901506497
+[2020-08-18T23:57:05.863] [INFO] users - profileInfo userID: 2588234901506497
+[2020-08-18T23:57:57.883] [INFO] users - profileInfo userID: 2588234901506497
+[2020-08-18T23:58:48.059] [INFO] users - profileInfo userID: 2588234901506497
+[2020-08-18T23:59:25.406] [INFO] users - profileInfo userID: 2588234901506497
+[2020-08-19T00:00:33.041] [INFO] users - profileInfo userID: 2588234901506497
+[2020-08-19T00:04:21.938] [INFO] users - profileInfo userID: 2588234901506497
+[2020-08-19T00:09:09.879] [INFO] users - profileInfo userID: 2588234901506497
+[2020-08-19T00:09:39.359] [INFO] users - profileInfo userID: 2588234901506497
+[2020-08-19T00:09:58.041] [INFO] users - profileInfo userID: 2588234901506497
+[2020-08-19T00:11:27.916] [INFO] users - profileInfo userID: 2588234901506497
+[2020-08-19T00:11:41.698] [INFO] users - profileInfo userID: 2588234901506497
+[2020-08-19T00:12:05.597] [INFO] users - profileInfo userID: 2588234901506497
+[2020-08-19T00:13:04.252] [INFO] users - profileInfo userID: 2588234901506497
+[2020-08-19T00:13:21.924] [INFO] users - profileInfo userID: 2588234901506497
+[2020-08-19T00:14:12.479] [INFO] users - profileInfo userID: 2588234901506497
+[2020-08-19T00:14:41.385] [INFO] users - profileInfo userID: 2588234901506497
+[2020-08-19T00:25:24.343] [INFO] users - profileInfo userID: 2588234901506497
+[2020-08-19T00:25:58.604] [INFO] users - profileInfo userID: 2588234901506497
+[2020-08-19T00:31:02.868] [INFO] users - profileInfo userID: 2588234901506497
+[2020-08-19T00:34:25.409] [INFO] users - profileInfo userID: 2588234901506497
+[2020-08-19T00:35:04.166] [INFO] users - profileInfo userID: 2588234901506497
+[2020-08-19T00:35:29.031] [INFO] users - profileInfo userID: 2588234901506497
+[2020-08-19T00:36:17.423] [INFO] users - profileInfo userID: 2588234901506497
+[2020-08-19T00:36:40.697] [INFO] users - profileInfo userID: 2588234901506497
+[2020-08-19T00:37:32.932] [INFO] users - profileInfo userID: 2588234901506497
+[2020-08-19T00:38:01.945] [INFO] users - profileInfo userID: 2588234901506497
+[2020-08-19T00:38:32.791] [INFO] users - profileInfo userID: 2588234901506497
+[2020-08-19T00:38:56.653] [INFO] users - profileInfo userID: 2588234901506497
+[2020-08-19T00:39:10.967] [INFO] users - profileInfo userID: 2588234901506497
+[2020-08-19T00:39:23.767] [INFO] users - profileInfo userID: 2588234901506497
+[2020-08-19T00:39:38.983] [INFO] users - profileInfo userID: 2588234901506497
+[2020-08-19T00:50:23.680] [INFO] users - profileInfo userID: 2588234901506497
+[2020-08-19T00:51:47.383] [INFO] users - profileInfo userID: 2588234901506497
+[2020-08-19T00:52:20.080] [INFO] users - profileInfo userID: 2588234901506497
+[2020-08-19T00:52:31.153] [INFO] users - profileInfo userID: 2588234901506497
+[2020-08-19T00:52:54.308] [INFO] users - profileInfo userID: 2588234901506497
+[2020-08-19T00:53:03.551] [INFO] users - profileInfo userID: 2588234901506497
+[2020-08-19T00:53:24.468] [INFO] users - profileInfo userID: 2588234901506497
+[2020-08-19T00:53:37.336] [INFO] users - profileInfo userID: 2588234901506497
+[2020-08-19T00:53:58.244] [INFO] users - profileInfo userID: 2588234901506497
+[2020-08-19T00:54:17.353] [INFO] users - profileInfo userID: 2588234901506497
+[2020-08-19T00:54:26.818] [INFO] users - profileInfo userID: 2588234901506497
+[2020-08-19T00:54:37.646] [INFO] users - profileInfo userID: 2588234901506497
+[2020-08-19T00:54:48.861] [INFO] users - profileInfo userID: 2588234901506497
+[2020-08-19T00:55:13.565] [INFO] users - profileInfo userID: 2588234901506497
+[2020-08-19T00:55:27.369] [INFO] users - profileInfo userID: 2588234901506497
+[2020-08-19T00:55:43.172] [INFO] users - profileInfo userID: 2588234901506497
+[2020-08-19T00:56:10.417] [INFO] users - profileInfo userID: 2588234901506497
+[2020-08-19T00:56:24.481] [INFO] users - profileInfo userID: 2588234901506497
+[2020-08-19T00:57:54.707] [INFO] users - profileInfo userID: 2588234901506497
+[2020-08-19T00:58:11.088] [INFO] users - profileInfo userID: 2588234901506497
+[2020-08-19T00:58:43.226] [INFO] users - profileInfo userID: 2588234901506497
+[2020-08-19T00:58:57.784] [INFO] users - profileInfo userID: 2588234901506497
+[2020-08-19T00:59:11.762] [INFO] users - profileInfo userID: 2588234901506497
+[2020-08-19T01:00:21.649] [INFO] users - profileInfo userID: 2588234901506497
+[2020-08-19T01:00:46.215] [INFO] users - profileInfo userID: 2588234901506497
+[2020-08-19T01:01:24.641] [INFO] users - profileInfo userID: 2588234901506497
+[2020-08-19T01:01:52.913] [INFO] users - profileInfo userID: 2588234901506497
+[2020-08-19T01:02:06.764] [INFO] users - profileInfo userID: 2588234901506497
+[2020-08-19T01:02:23.454] [INFO] users - profileInfo userID: 2588234901506497
+[2020-08-19T01:03:18.306] [INFO] users - profileInfo userID: 2588234901506497
+[2020-08-19T01:03:36.430] [INFO] users - profileInfo userID: 2588234901506497
+[2020-08-19T01:03:44.017] [INFO] users - profileInfo userID: 2588234901506497
+[2020-08-19T01:04:15.951] [INFO] users - profileInfo userID: 2588234901506497
+[2020-08-19T01:05:41.789] [INFO] users - profileInfo userID: 2588234901506497
+[2020-08-19T01:05:57.452] [INFO] users - profileInfo userID: 2588234901506497
+[2020-08-19T01:06:23.515] [INFO] users - profileInfo userID: 2588234901506497
+[2020-08-19T01:07:31.296] [INFO] users - profileInfo userID: 2588234901506497
+[2020-08-19T01:07:51.355] [INFO] users - profileInfo userID: 2588234901506497
+[2020-08-19T01:08:28.074] [INFO] users - profileInfo userID: 2588234901506497
+[2020-08-19T01:08:36.063] [INFO] users - profileInfo userID: 2588234901506497
+[2020-08-19T01:08:51.364] [INFO] users - profileInfo userID: 2588234901506497
+[2020-08-19T01:09:06.194] [INFO] users - profileInfo userID: 2588234901506497
+[2020-08-19T01:09:22.818] [INFO] users - profileInfo userID: 2588234901506497
+[2020-08-19T01:09:54.889] [INFO] users - profileInfo userID: 2588234901506497
+[2020-08-19T01:10:19.189] [INFO] users - profileInfo userID: 2588234901506497
+[2020-08-19T01:10:51.020] [INFO] users - profileInfo userID: 2588234901506497
+[2020-08-19T01:17:38.476] [INFO] users - profileInfo userID: 2588234901506497
+[2020-08-19T01:17:51.607] [INFO] users - profileInfo userID: 2588234901506497
+[2020-08-19T01:17:58.146] [INFO] users - profileInfo userID: 2588234901506497
+[2020-08-19T01:23:36.343] [INFO] users - profileInfo userID: 2588234901506497
+[2020-08-19T01:23:37.148] [INFO] users - profileInfo userID: 2588234901506497
+[2020-08-19T01:24:01.696] [INFO] users - profileInfo userID: 2588234901506497
+[2020-08-19T01:24:21.217] [INFO] users - profileInfo userID: 2588234901506497
+[2020-08-19T01:24:37.132] [INFO] users - profileInfo userID: 2588234901506497
+[2020-08-19T01:24:52.639] [INFO] users - profileInfo userID: 2588234901506497
+[2020-08-19T01:25:06.000] [INFO] users - profileInfo userID: 2588234901506497
+[2020-08-19T01:25:18.815] [INFO] users - profileInfo userID: 2588234901506497
+[2020-08-19T01:25:33.907] [INFO] users - profileInfo userID: 2588234901506497
+[2020-08-19T01:25:56.053] [INFO] users - profileInfo userID: 2588234901506497
+[2020-08-19T01:26:10.409] [INFO] users - profileInfo userID: 2588234901506497
+[2020-08-19T01:26:22.602] [INFO] users - profileInfo userID: 2588234901506497
+[2020-08-19T01:26:53.749] [INFO] users - profileInfo userID: 2588234901506497
+[2020-08-19T01:27:05.222] [INFO] users - profileInfo userID: 2588234901506497
+[2020-08-19T01:27:31.141] [INFO] users - profileInfo userID: 2588234901506497
+[2020-08-19T01:27:36.182] [INFO] users - profileInfo userID: 2588234901506497
+[2020-08-19T01:27:51.022] [INFO] users - profileInfo userID: 2588234901506497
+[2020-08-19T01:27:59.928] [INFO] users - profileInfo userID: 2588234901506497
+[2020-08-19T01:28:21.715] [INFO] users - profileInfo userID: 2588234901506497
+[2020-08-19T01:28:55.405] [INFO] users - profileInfo userID: 2588234901506497
+[2020-08-19T01:29:06.535] [INFO] users - profileInfo userID: 2588234901506497
+[2020-08-19T01:29:35.918] [INFO] users - profileInfo userID: 2588234901506497
+[2020-08-19T01:29:54.690] [INFO] users - profileInfo userID: 2588234901506497
+[2020-08-19T01:30:07.183] [INFO] users - profileInfo userID: 2588234901506497
+[2020-08-19T01:30:17.022] [INFO] users - profileInfo userID: 2588234901506497
+[2020-08-19T01:30:56.400] [INFO] users - profileInfo userID: 2588234901506497
+[2020-08-19T01:31:06.487] [INFO] users - profileInfo userID: 2588234901506497
+[2020-08-19T01:31:22.488] [INFO] users - profileInfo userID: 2588234901506497
+[2020-08-19T01:31:44.887] [INFO] users - profileInfo userID: 2588234901506497
+[2020-08-19T01:31:59.217] [INFO] users - profileInfo userID: 2588234901506497
+[2020-08-19T01:32:20.845] [INFO] users - profileInfo userID: 2588234901506497
+[2020-08-19T01:32:33.175] [INFO] users - profileInfo userID: 2588234901506497
+[2020-08-19T01:32:46.943] [INFO] users - profileInfo userID: 2588234901506497
+[2020-08-19T01:33:06.709] [INFO] users - profileInfo userID: 2588234901506497
+[2020-08-19T01:33:21.323] [INFO] users - profileInfo userID: 2588234901506497
+[2020-08-19T01:33:42.235] [INFO] users - profileInfo userID: 2588234901506497
+[2020-08-19T01:33:50.575] [INFO] users - profileInfo userID: 2588234901506497
+[2020-08-19T01:35:11.255] [INFO] users - profileInfo userID: 2588234901506497
+[2020-08-19T01:35:26.873] [INFO] users - profileInfo userID: 2588234901506497
+[2020-08-19T01:35:40.796] [INFO] users - profileInfo userID: 2588234901506497
+[2020-08-19T01:35:53.118] [INFO] users - profileInfo userID: 2588234901506497
+[2020-08-19T01:59:51.974] [INFO] users - profileInfo userID: 2588234901506497
+[2020-08-19T02:08:40.938] [INFO] users - profileInfo userID: 2588234901506497
+[2020-08-19T02:09:01.588] [INFO] users - profileInfo userID: 2588234901506497
+[2020-08-19T02:13:10.425] [INFO] users - profileInfo userID: 2588234901506497
+[2020-08-19T02:13:14.471] [INFO] users - profileInfo userID: 2588234901506497
+[2020-08-19T02:15:57.569] [INFO] users - profileInfo userID: 2588234901506497
+[2020-08-19T02:16:57.809] [INFO] users - profileInfo userID: 2588234901506497
+[2020-08-19T02:19:29.488] [INFO] users - profileInfo userID: 2588234901506497
+[2020-08-19T02:21:24.134] [INFO] users - profileInfo userID: 2588234901506497
+[2020-08-19T02:21:46.818] [INFO] users - profileInfo userID: 2588234901506497
+[2020-08-19T02:22:12.334] [INFO] users - profileInfo userID: 2588234901506497
+[2020-08-19T02:25:23.687] [INFO] users - profileInfo userID: 2588234901506497
+[2020-08-19T02:26:43.562] [INFO] users - profileInfo userID: 2588234901506497
+[2020-08-19T02:28:39.455] [INFO] users - profileInfo userID: 2588234901506497
+[2020-08-19T02:30:55.825] [INFO] users - profileInfo userID: 2588234901506497
+[2020-08-19T02:32:18.990] [INFO] users - profileInfo userID: 2588234901506497
+[2020-08-19T02:35:11.271] [INFO] users - profileInfo userID: 2588234901506497
+[2020-08-19T02:36:55.710] [INFO] users - profileInfo userID: 2588234901506497
+[2020-08-19T02:38:29.010] [INFO] users - profileInfo userID: 2588234901506497
+[2020-08-19T02:41:28.822] [INFO] users - profileInfo userID: 2588234901506497
+[2020-08-19T02:42:33.061] [INFO] users - profileInfo userID: 2588234901506497
+[2020-08-19T02:43:25.382] [INFO] users - profileInfo userID: 2588234901506497
+[2020-08-19T02:43:58.913] [INFO] users - profileInfo userID: 2588234901506497
+[2020-08-19T02:44:28.392] [INFO] users - profileInfo userID: 2588234901506497
+[2020-08-19T02:44:50.031] [INFO] users - profileInfo userID: 2588234901506497
+[2020-08-19T02:45:01.554] [INFO] users - profileInfo userID: 2588234901506497
+[2020-08-19T02:46:17.011] [INFO] users - profileInfo userID: 2588234901506497
+[2020-08-19T02:46:37.735] [INFO] users - profileInfo userID: 2588234901506497
+[2020-08-19T02:50:54.234] [INFO] users - profileInfo userID: 2588234901506497
+[2020-08-19T02:51:40.674] [INFO] users - profileInfo userID: 2588234901506497
+[2020-08-19T02:52:03.936] [INFO] users - profileInfo userID: 2588234901506497
+[2020-08-19T02:53:26.664] [INFO] users - profileInfo userID: 2588234901506497
+[2020-08-19T02:54:52.683] [INFO] users - profileInfo userID: 2588234901506497
+[2020-08-19T02:55:00.124] [INFO] users - profileInfo userID: 2588234901506497
+[2020-08-19T02:55:54.780] [INFO] users - profileInfo userID: 2588234901506497
+[2020-08-19T02:56:10.669] [INFO] users - profileInfo userID: 2588234901506497
+[2020-08-19T02:56:27.095] [INFO] users - profileInfo userID: 2588234901506497
+[2020-08-19T02:57:09.136] [INFO] users - profileInfo userID: 2588234901506497
+[2020-08-19T02:57:57.021] [INFO] users - profileInfo userID: 2588234901506497
+[2020-08-19T02:58:17.889] [INFO] users - profileInfo userID: 2588234901506497
+[2020-08-19T02:58:43.288] [INFO] users - profileInfo userID: 2588234901506497
+[2020-08-19T02:59:12.904] [INFO] users - profileInfo userID: 2588234901506497
+[2020-08-19T02:59:23.770] [INFO] users - profileInfo userID: 2588234901506497
+[2020-08-19T03:00:01.012] [INFO] users - profileInfo userID: 2588234901506497
+[2020-08-19T03:00:16.468] [INFO] users - profileInfo userID: 2588234901506497
+[2020-08-19T03:00:30.463] [INFO] users - profileInfo userID: 2588234901506497
+[2020-08-19T03:02:13.591] [INFO] users - profileInfo userID: 2588234901506497
+[2020-08-19T03:02:30.681] [INFO] users - profileInfo userID: 2588234901506497
+[2020-08-19T03:03:08.544] [INFO] users - profileInfo userID: 2588234901506497
+[2020-08-19T03:03:53.572] [INFO] users - profileInfo userID: 2588234901506497
+[2020-08-19T03:05:18.828] [INFO] users - profileInfo userID: 2588234901506497
+[2020-08-19T03:05:46.252] [INFO] users - profileInfo userID: 2588234901506497
+[2020-08-19T03:06:18.820] [INFO] users - profileInfo userID: 2588234901506497
+[2020-08-19T03:06:37.244] [INFO] users - profileInfo userID: 2588234901506497
+[2020-08-19T03:07:01.943] [INFO] users - profileInfo userID: 2588234901506497
+[2020-08-19T03:07:20.275] [INFO] users - profileInfo userID: 2588234901506497
+[2020-08-19T03:08:21.930] [INFO] users - profileInfo userID: 2588234901506497
+[2020-08-19T03:10:17.387] [INFO] users - profileInfo userID: 2588234901506497
+[2020-08-19T03:11:02.317] [INFO] users - profileInfo userID: 2588234901506497
+[2020-08-19T03:11:33.943] [INFO] users - profileInfo userID: 2588234901506497
+[2020-08-19T03:13:07.752] [INFO] users - profileInfo userID: 2588234901506497
+[2020-08-19T03:13:24.582] [INFO] users - profileInfo userID: 2588234901506497
+[2020-08-19T03:13:37.739] [INFO] users - profileInfo userID: 2588234901506497
+[2020-08-19T03:14:54.422] [INFO] users - profileInfo userID: 2588234901506497
+[2020-08-19T03:16:39.004] [INFO] users - profileInfo userID: 2588234901506497
+[2020-08-19T03:18:40.982] [INFO] users - profileInfo userID: 2588234901506497
+[2020-08-19T03:19:01.465] [INFO] users - profileInfo userID: 2588234901506497
+[2020-08-19T03:20:53.295] [INFO] users - profileInfo userID: 2588234901506497
+[2020-08-19T22:28:21.344] [INFO] users - profileInfo userID: 2588234901506497
+[2020-08-20T16:04:40.623] [ERROR] app - アクセスエラー TypeError: Cannot read property 'CODE_5008' of undefined
+    at /Users/yws/Dev/OreSupport_gitHub/PBL2020/OreSupport/ore-SupportServer/oreServer/common/check.token.js:24:29
+    at /Users/yws/Dev/OreSupport_gitHub/PBL2020/OreSupport/ore-SupportServer/oreServer/node_modules/jsonwebtoken/verify.js:152:16
+    at getSecret (/Users/yws/Dev/OreSupport_gitHub/PBL2020/OreSupport/ore-SupportServer/oreServer/node_modules/jsonwebtoken/verify.js:90:14)
+    at Object.module.exports [as verify] (/Users/yws/Dev/OreSupport_gitHub/PBL2020/OreSupport/ore-SupportServer/oreServer/node_modules/jsonwebtoken/verify.js:94:10)
+    at verifyUser (/Users/yws/Dev/OreSupport_gitHub/PBL2020/OreSupport/ore-SupportServer/oreServer/common/check.token.js:20:12)
+    at Layer.handle [as handle_request] (/Users/yws/Dev/OreSupport_gitHub/PBL2020/OreSupport/ore-SupportServer/oreServer/node_modules/express/lib/router/layer.js:95:5)
+    at next (/Users/yws/Dev/OreSupport_gitHub/PBL2020/OreSupport/ore-SupportServer/oreServer/node_modules/express/lib/router/route.js:137:13)
+    at Route.dispatch (/Users/yws/Dev/OreSupport_gitHub/PBL2020/OreSupport/ore-SupportServer/oreServer/node_modules/express/lib/router/route.js:112:3)
+    at Layer.handle [as handle_request] (/Users/yws/Dev/OreSupport_gitHub/PBL2020/OreSupport/ore-SupportServer/oreServer/node_modules/express/lib/router/layer.js:95:5)
+    at /Users/yws/Dev/OreSupport_gitHub/PBL2020/OreSupport/ore-SupportServer/oreServer/node_modules/express/lib/router/index.js:281:22
+    at Function.process_params (/Users/yws/Dev/OreSupport_gitHub/PBL2020/OreSupport/ore-SupportServer/oreServer/node_modules/express/lib/router/index.js:335:12)
+    at next (/Users/yws/Dev/OreSupport_gitHub/PBL2020/OreSupport/ore-SupportServer/oreServer/node_modules/express/lib/router/index.js:275:10)
+    at Function.handle (/Users/yws/Dev/OreSupport_gitHub/PBL2020/OreSupport/ore-SupportServer/oreServer/node_modules/express/lib/router/index.js:174:3)
+    at router (/Users/yws/Dev/OreSupport_gitHub/PBL2020/OreSupport/ore-SupportServer/oreServer/node_modules/express/lib/router/index.js:47:12)
+    at Layer.handle [as handle_request] (/Users/yws/Dev/OreSupport_gitHub/PBL2020/OreSupport/ore-SupportServer/oreServer/node_modules/express/lib/router/layer.js:95:5)
+    at trim_prefix (/Users/yws/Dev/OreSupport_gitHub/PBL2020/OreSupport/ore-SupportServer/oreServer/node_modules/express/lib/router/index.js:317:13)
+    at /Users/yws/Dev/OreSupport_gitHub/PBL2020/OreSupport/ore-SupportServer/oreServer/node_modules/express/lib/router/index.js:284:7
+    at Function.process_params (/Users/yws/Dev/OreSupport_gitHub/PBL2020/OreSupport/ore-SupportServer/oreServer/node_modules/express/lib/router/index.js:335:12)
+    at next (/Users/yws/Dev/OreSupport_gitHub/PBL2020/OreSupport/ore-SupportServer/oreServer/node_modules/express/lib/router/index.js:275:10)
+    at /Users/yws/Dev/OreSupport_gitHub/PBL2020/OreSupport/ore-SupportServer/oreServer/node_modules/express/lib/router/index.js:635:15
+    at next (/Users/yws/Dev/OreSupport_gitHub/PBL2020/OreSupport/ore-SupportServer/oreServer/node_modules/express/lib/router/index.js:260:14)
+    at Function.handle (/Users/yws/Dev/OreSupport_gitHub/PBL2020/OreSupport/ore-SupportServer/oreServer/node_modules/express/lib/router/index.js:174:3)
+[2020-08-20T16:04:42.071] [ERROR] app - アクセスエラー TypeError: Cannot read property 'CODE_5008' of undefined
+    at /Users/yws/Dev/OreSupport_gitHub/PBL2020/OreSupport/ore-SupportServer/oreServer/common/check.token.js:24:29
+    at /Users/yws/Dev/OreSupport_gitHub/PBL2020/OreSupport/ore-SupportServer/oreServer/node_modules/jsonwebtoken/verify.js:152:16
+    at getSecret (/Users/yws/Dev/OreSupport_gitHub/PBL2020/OreSupport/ore-SupportServer/oreServer/node_modules/jsonwebtoken/verify.js:90:14)
+    at Object.module.exports [as verify] (/Users/yws/Dev/OreSupport_gitHub/PBL2020/OreSupport/ore-SupportServer/oreServer/node_modules/jsonwebtoken/verify.js:94:10)
+    at verifyUser (/Users/yws/Dev/OreSupport_gitHub/PBL2020/OreSupport/ore-SupportServer/oreServer/common/check.token.js:20:12)
+    at Layer.handle [as handle_request] (/Users/yws/Dev/OreSupport_gitHub/PBL2020/OreSupport/ore-SupportServer/oreServer/node_modules/express/lib/router/layer.js:95:5)
+    at next (/Users/yws/Dev/OreSupport_gitHub/PBL2020/OreSupport/ore-SupportServer/oreServer/node_modules/express/lib/router/route.js:137:13)
+    at Route.dispatch (/Users/yws/Dev/OreSupport_gitHub/PBL2020/OreSupport/ore-SupportServer/oreServer/node_modules/express/lib/router/route.js:112:3)
+    at Layer.handle [as handle_request] (/Users/yws/Dev/OreSupport_gitHub/PBL2020/OreSupport/ore-SupportServer/oreServer/node_modules/express/lib/router/layer.js:95:5)
+    at /Users/yws/Dev/OreSupport_gitHub/PBL2020/OreSupport/ore-SupportServer/oreServer/node_modules/express/lib/router/index.js:281:22
+    at Function.process_params (/Users/yws/Dev/OreSupport_gitHub/PBL2020/OreSupport/ore-SupportServer/oreServer/node_modules/express/lib/router/index.js:335:12)
+    at next (/Users/yws/Dev/OreSupport_gitHub/PBL2020/OreSupport/ore-SupportServer/oreServer/node_modules/express/lib/router/index.js:275:10)
+    at Function.handle (/Users/yws/Dev/OreSupport_gitHub/PBL2020/OreSupport/ore-SupportServer/oreServer/node_modules/express/lib/router/index.js:174:3)
+    at router (/Users/yws/Dev/OreSupport_gitHub/PBL2020/OreSupport/ore-SupportServer/oreServer/node_modules/express/lib/router/index.js:47:12)
+    at Layer.handle [as handle_request] (/Users/yws/Dev/OreSupport_gitHub/PBL2020/OreSupport/ore-SupportServer/oreServer/node_modules/express/lib/router/layer.js:95:5)
+    at trim_prefix (/Users/yws/Dev/OreSupport_gitHub/PBL2020/OreSupport/ore-SupportServer/oreServer/node_modules/express/lib/router/index.js:317:13)
+    at /Users/yws/Dev/OreSupport_gitHub/PBL2020/OreSupport/ore-SupportServer/oreServer/node_modules/express/lib/router/index.js:284:7
+    at Function.process_params (/Users/yws/Dev/OreSupport_gitHub/PBL2020/OreSupport/ore-SupportServer/oreServer/node_modules/express/lib/router/index.js:335:12)
+    at next (/Users/yws/Dev/OreSupport_gitHub/PBL2020/OreSupport/ore-SupportServer/oreServer/node_modules/express/lib/router/index.js:275:10)
+    at /Users/yws/Dev/OreSupport_gitHub/PBL2020/OreSupport/ore-SupportServer/oreServer/node_modules/express/lib/router/index.js:635:15
+    at next (/Users/yws/Dev/OreSupport_gitHub/PBL2020/OreSupport/ore-SupportServer/oreServer/node_modules/express/lib/router/index.js:260:14)
+    at Function.handle (/Users/yws/Dev/OreSupport_gitHub/PBL2020/OreSupport/ore-SupportServer/oreServer/node_modules/express/lib/router/index.js:174:3)
+[2020-08-20T16:05:10.007] [INFO] users - ユーザログ UserName:閻 文帥
+[2020-08-20T16:05:10.007] [INFO] users - Third Party by Facebook
+[2020-08-20T16:05:10.235] [INFO] users - profileInfo userID: 2588234901506497
+[2020-08-20T16:30:07.292] [INFO] users - profileInfo userID: 2588234901506497
+[2020-08-20T16:30:47.820] [INFO] users - profileInfo userID: 2588234901506497
+[2020-08-20T17:35:21.638] [INFO] users - profileInfo userID: 2588234901506497
+[2020-08-20T17:48:48.931] [INFO] users - logout
+[2020-08-20T17:48:54.108] [INFO] users - ユーザログ UserName:閻 文帥
+[2020-08-20T17:48:54.108] [INFO] users - Third Party by Facebook
+[2020-08-20T17:48:54.558] [INFO] users - profileInfo userID: 2588234901506497
+[2020-08-20T18:08:10.261] [INFO] users - profileInfo userID: 2588234901506497
+[2020-08-20T18:08:53.631] [INFO] users - profileInfo userID: 2588234901506497
+[2020-08-20T18:09:04.498] [INFO] users - profileInfo userID: 2588234901506497
+[2020-08-20T18:09:35.790] [INFO] users - profileInfo userID: 2588234901506497
+[2020-08-20T18:10:01.790] [INFO] users - profileInfo userID: 2588234901506497
+[2020-08-20T18:10:02.255] [INFO] users - profileInfo userID: 2588234901506497
+[2020-08-20T18:10:16.658] [INFO] users - profileInfo userID: 2588234901506497
+[2020-08-20T18:10:39.142] [INFO] users - profileInfo userID: 2588234901506497
+[2020-08-20T18:13:00.126] [INFO] users - profileInfo userID: 2588234901506497
+[2020-08-20T18:13:27.396] [INFO] users - profileInfo userID: 2588234901506497
+[2020-08-20T18:17:10.835] [INFO] users - profileInfo userID: 2588234901506497
+[2020-08-20T18:18:02.168] [INFO] users - profileInfo userID: 2588234901506497
+[2020-08-20T18:18:25.216] [INFO] users - profileInfo userID: 2588234901506497
+[2020-08-20T18:19:11.800] [INFO] users - profileInfo userID: 2588234901506497
+[2020-08-20T18:19:42.762] [INFO] users - profileInfo userID: 2588234901506497
+[2020-08-20T18:21:44.180] [INFO] users - profileInfo userID: 2588234901506497
+[2020-08-20T18:21:57.718] [INFO] users - profileInfo userID: 2588234901506497
+[2020-08-20T18:23:29.697] [INFO] users - profileInfo userID: 2588234901506497
+[2020-08-20T18:23:53.038] [INFO] users - profileInfo userID: 2588234901506497
+[2020-08-20T18:24:13.718] [INFO] users - profileInfo userID: 2588234901506497
+[2020-08-20T18:25:16.880] [INFO] users - profileInfo userID: 2588234901506497
+[2020-08-20T18:25:54.960] [INFO] users - profileInfo userID: 2588234901506497
+[2020-08-20T18:26:51.493] [INFO] users - profileInfo userID: 2588234901506497
+[2020-08-20T18:27:01.346] [INFO] users - profileInfo userID: 2588234901506497
+[2020-08-20T18:34:47.236] [INFO] users - profileInfo userID: 2588234901506497
+[2020-08-20T18:34:58.275] [INFO] users - profileInfo userID: 2588234901506497
+[2020-08-20T18:35:19.176] [INFO] users - profileInfo userID: 2588234901506497
+[2020-08-20T18:37:07.347] [INFO] users - profileInfo userID: 2588234901506497
+[2020-08-20T18:37:34.330] [INFO] users - profileInfo userID: 2588234901506497
+[2020-08-20T18:37:43.495] [INFO] users - profileInfo userID: 2588234901506497
+[2020-08-20T18:38:06.240] [INFO] users - profileInfo userID: 2588234901506497
+[2020-08-20T18:38:22.546] [INFO] users - profileInfo userID: 2588234901506497
+[2020-08-20T18:39:42.287] [INFO] users - profileInfo userID: 2588234901506497
+[2020-08-20T18:41:14.277] [INFO] users - profileInfo userID: 2588234901506497
+[2020-08-20T18:41:22.593] [INFO] users - profileInfo userID: 2588234901506497
+[2020-08-20T18:41:31.725] [INFO] users - profileInfo userID: 2588234901506497
+[2020-08-20T18:48:55.013] [INFO] users - profileInfo userID: 2588234901506497
+[2020-08-20T18:49:04.198] [INFO] users - profileInfo userID: 2588234901506497
+[2020-08-20T18:52:24.699] [INFO] users - profileInfo userID: 2588234901506497
+[2020-08-20T18:55:08.710] [INFO] users - profileInfo userID: 2588234901506497
+[2020-08-20T18:57:27.372] [INFO] users - profileInfo userID: 2588234901506497
+[2020-08-20T18:57:46.765] [INFO] users - profileInfo userID: 2588234901506497
+[2020-08-20T18:59:58.571] [INFO] users - profileInfo userID: 2588234901506497
+[2020-08-20T19:01:02.644] [INFO] users - profileInfo userID: 2588234901506497
+[2020-08-20T19:02:25.418] [INFO] users - profileInfo userID: 2588234901506497
+[2020-08-20T19:03:11.112] [INFO] users - profileInfo userID: 2588234901506497
+[2020-08-20T19:06:46.316] [INFO] users - profileInfo userID: 2588234901506497
+[2020-08-20T19:07:04.328] [INFO] users - profileInfo userID: 2588234901506497
+[2020-08-20T19:07:21.078] [INFO] users - profileInfo userID: 2588234901506497
+[2020-08-20T19:07:34.879] [INFO] users - profileInfo userID: 2588234901506497
+[2020-08-20T19:08:16.828] [INFO] users - profileInfo userID: 2588234901506497
+[2020-08-20T19:12:30.514] [INFO] users - profileInfo userID: 2588234901506497
+[2020-08-20T19:12:48.683] [INFO] users - profileInfo userID: 2588234901506497
+[2020-08-20T19:14:00.167] [INFO] users - profileInfo userID: 2588234901506497
+[2020-08-20T19:14:29.440] [INFO] users - profileInfo userID: 2588234901506497
+[2020-08-20T19:14:36.946] [INFO] users - profileInfo userID: 2588234901506497
+[2020-08-20T19:16:06.683] [INFO] users - profileInfo userID: 2588234901506497
+[2020-08-20T19:16:22.919] [INFO] users - profileInfo userID: 2588234901506497
+[2020-08-20T19:16:51.454] [INFO] users - profileInfo userID: 2588234901506497
+[2020-08-20T19:17:20.617] [INFO] users - profileInfo userID: 2588234901506497
+[2020-08-20T19:18:00.419] [INFO] users - profileInfo userID: 2588234901506497
+[2020-08-20T19:20:20.643] [INFO] users - profileInfo userID: 2588234901506497
+[2020-08-20T19:20:21.722] [INFO] users - profileInfo userID: 2588234901506497
+[2020-08-20T19:21:08.758] [INFO] users - profileInfo userID: 2588234901506497
+[2020-08-20T19:23:50.471] [INFO] users - profileInfo userID: 2588234901506497
+[2020-08-20T19:24:04.495] [INFO] users - profileInfo userID: 2588234901506497
+[2020-08-20T19:24:21.934] [INFO] users - profileInfo userID: 2588234901506497
+[2020-08-20T19:24:48.511] [INFO] users - profileInfo userID: 2588234901506497
+[2020-08-20T19:26:09.075] [INFO] users - profileInfo userID: 2588234901506497
+[2020-08-20T19:26:47.401] [INFO] users - profileInfo userID: 2588234901506497
+[2020-08-20T19:27:46.604] [INFO] users - profileInfo userID: 2588234901506497
+[2020-08-20T19:27:53.275] [INFO] users - profileInfo userID: 2588234901506497
+[2020-08-20T21:32:33.762] [INFO] users - profileInfo userID: 2588234901506497
+[2020-08-20T21:39:02.424] [INFO] users - profileInfo userID: 2588234901506497
+[2020-08-20T21:39:46.971] [INFO] users - profileInfo userID: 2588234901506497
+[2020-08-20T21:41:17.110] [INFO] users - profileInfo userID: 2588234901506497
+[2020-08-20T21:48:31.888] [INFO] users - profileInfo userID: 2588234901506497
+[2020-08-20T21:49:34.629] [INFO] users - profileInfo userID: 2588234901506497
+[2020-08-20T21:51:12.056] [INFO] users - profileInfo userID: 2588234901506497
+[2020-08-20T21:52:08.148] [INFO] users - profileInfo userID: 2588234901506497
+[2020-08-20T22:03:01.751] [INFO] users - profileInfo userID: 2588234901506497
+[2020-08-20T22:03:09.539] [INFO] users - profileInfo userID: 2588234901506497
+[2020-08-20T22:10:10.369] [INFO] users - profileInfo userID: 2588234901506497
+[2020-08-20T22:10:51.952] [INFO] users - profileInfo userID: 2588234901506497
+[2020-08-20T22:11:23.784] [INFO] users - profileInfo userID: 2588234901506497
+[2020-08-20T22:12:10.007] [INFO] users - profileInfo userID: 2588234901506497
+[2020-08-20T22:14:55.927] [INFO] users - profileInfo userID: 2588234901506497
+[2020-08-20T22:16:52.716] [INFO] users - profileInfo userID: 2588234901506497
+[2020-08-20T22:16:53.824] [INFO] users - profileInfo userID: 2588234901506497
+[2020-08-20T22:19:04.163] [INFO] users - profileInfo userID: 2588234901506497
+[2020-08-20T22:20:35.585] [INFO] users - profileInfo userID: 2588234901506497
+[2020-08-20T22:20:37.426] [INFO] users - profileInfo userID: 2588234901506497
+[2020-08-20T22:21:29.041] [INFO] users - profileInfo userID: 2588234901506497
+[2020-08-20T22:24:06.779] [INFO] users - profileInfo userID: 2588234901506497
+[2020-08-20T22:25:28.392] [INFO] users - profileInfo userID: 2588234901506497
+[2020-08-20T22:25:47.816] [INFO] users - profileInfo userID: 2588234901506497
+[2020-08-20T22:26:55.272] [INFO] users - profileInfo userID: 2588234901506497
+[2020-08-20T22:38:28.278] [INFO] users - profileInfo userID: 2588234901506497
+[2020-08-20T22:40:14.622] [INFO] users - profileInfo userID: 2588234901506497
+[2020-08-20T22:42:23.364] [INFO] users - profileInfo userID: 2588234901506497
+[2020-08-20T22:45:46.059] [INFO] users - profileInfo userID: 2588234901506497
+[2020-08-20T22:48:10.728] [INFO] users - profileInfo userID: 2588234901506497
+[2020-08-20T22:55:19.472] [INFO] users - profileInfo userID: 2588234901506497
+[2020-08-20T22:55:55.748] [INFO] users - profileInfo userID: 2588234901506497
+[2020-08-20T22:57:44.614] [INFO] users - profileInfo userID: 2588234901506497
+[2020-08-20T22:58:19.073] [INFO] users - profileInfo userID: 2588234901506497
+[2020-08-20T22:59:01.718] [INFO] users - profileInfo userID: 2588234901506497
+[2020-08-20T23:00:12.297] [INFO] users - profileInfo userID: 2588234901506497
+[2020-08-20T23:00:31.850] [INFO] users - profileInfo userID: 2588234901506497
+[2020-08-20T23:01:09.481] [INFO] users - profileInfo userID: 2588234901506497
+[2020-08-20T23:01:44.680] [INFO] users - profileInfo userID: 2588234901506497
+[2020-08-20T23:02:22.271] [INFO] users - profileInfo userID: 2588234901506497
+[2020-08-20T23:03:17.479] [INFO] users - profileInfo userID: 2588234901506497
+[2020-08-20T23:04:13.151] [INFO] users - profileInfo userID: 2588234901506497
+[2020-08-20T23:04:26.576] [INFO] users - profileInfo userID: 2588234901506497
+[2020-08-20T23:05:08.577] [INFO] users - profileInfo userID: 2588234901506497
+[2020-08-20T23:05:37.186] [INFO] users - profileInfo userID: 2588234901506497
+[2020-08-20T23:05:57.327] [INFO] users - profileInfo userID: 2588234901506497
+[2020-08-20T23:06:18.538] [INFO] users - profileInfo userID: 2588234901506497
+[2020-08-20T23:06:40.380] [INFO] users - profileInfo userID: 2588234901506497
+[2020-08-20T23:19:09.669] [INFO] users - profileInfo userID: 2588234901506497
+[2020-08-20T23:22:02.550] [INFO] users - profileInfo userID: 2588234901506497
+[2020-08-20T23:26:28.955] [INFO] users - profileInfo userID: 2588234901506497
+[2020-08-20T23:27:59.552] [INFO] users - profileInfo userID: 2588234901506497
+[2020-08-21T00:11:15.801] [INFO] users - profileInfo userID: 2588234901506497
+[2020-08-21T00:12:32.171] [INFO] users - profileInfo userID: 2588234901506497
+[2020-08-21T00:12:50.527] [INFO] users - profileInfo userID: 2588234901506497
+[2020-08-21T00:14:36.793] [INFO] users - profileInfo userID: 2588234901506497
+[2020-08-21T00:14:50.429] [INFO] users - profileInfo userID: 2588234901506497
+[2020-08-21T00:16:31.440] [INFO] users - profileInfo userID: 2588234901506497
+[2020-08-21T00:16:35.872] [INFO] users - profileInfo userID: 2588234901506497
+[2020-08-21T00:16:50.064] [INFO] users - profileInfo userID: 2588234901506497
+[2020-08-21T00:23:30.161] [INFO] users - profileInfo userID: 2588234901506497
+[2020-08-21T00:25:20.335] [INFO] users - profileInfo userID: 2588234901506497
+[2020-08-21T00:25:30.049] [INFO] users - profileInfo userID: 2588234901506497
+[2020-08-21T00:29:54.298] [INFO] users - profileInfo userID: 2588234901506497
+[2020-08-21T00:35:53.411] [INFO] users - profileInfo userID: 2588234901506497
+[2020-08-21T00:36:32.845] [INFO] users - profileInfo userID: 2588234901506497
+[2020-08-21T00:37:05.856] [INFO] users - profileInfo userID: 2588234901506497
+[2020-08-21T00:38:52.818] [INFO] users - profileInfo userID: 2588234901506497
+[2020-08-21T00:41:29.499] [INFO] users - profileInfo userID: 2588234901506497
+[2020-08-21T00:42:29.340] [INFO] users - profileInfo userID: 2588234901506497
+[2020-08-21T00:51:44.751] [INFO] users - profileInfo userID: 2588234901506497
+[2020-08-21T00:51:57.624] [INFO] users - profileInfo userID: 2588234901506497
+[2020-08-21T00:52:58.936] [INFO] users - profileInfo userID: 2588234901506497
+[2020-08-21T00:55:23.457] [INFO] users - profileInfo userID: 2588234901506497
+[2020-08-21T01:00:18.703] [INFO] users - profileInfo userID: 2588234901506497
+[2020-08-21T01:01:19.137] [INFO] users - profileInfo userID: 2588234901506497
+[2020-08-21T01:03:55.096] [INFO] users - profileInfo userID: 2588234901506497
+[2020-08-21T01:06:40.235] [INFO] users - profileInfo userID: 2588234901506497
+[2020-08-21T01:08:19.676] [INFO] users - profileInfo userID: 2588234901506497
+[2020-08-21T01:31:15.968] [INFO] users - profileInfo userID: 2588234901506497
+[2020-08-21T01:31:18.749] [INFO] users - profileInfo userID: 2588234901506497
+[2020-08-21T01:33:37.612] [INFO] users - profileInfo userID: 2588234901506497
+[2020-08-21T01:38:45.830] [INFO] users - profileInfo userID: 2588234901506497
+[2020-08-21T01:41:49.184] [INFO] users - profileInfo userID: 2588234901506497
+[2020-08-21T01:43:53.364] [INFO] users - profileInfo userID: 2588234901506497
+[2020-08-21T01:46:55.247] [INFO] users - logout
+[2020-08-21T01:47:01.735] [INFO] users - ユーザログ UserName:閻 文帥
+[2020-08-21T01:47:01.735] [INFO] users - Third Party by Facebook
+[2020-08-21T01:47:02.008] [INFO] users - profileInfo userID: 2588234901506497
+[2020-08-21T01:48:51.559] [INFO] users - profileInfo userID: 2588234901506497
+[2020-08-21T01:51:57.729] [INFO] users - profileInfo userID: 2588234901506497
+[2020-08-21T01:54:56.678] [INFO] users - profileInfo userID: 2588234901506497
+[2020-08-21T02:48:20.541] [INFO] users - profileInfo userID: 2588234901506497
+[2020-08-21T02:48:28.007] [INFO] users - profileInfo userID: 2588234901506497
+[2020-08-21T02:49:06.569] [INFO] users - profileInfo userID: 2588234901506497
+[2020-08-21T02:49:07.814] [INFO] users - profileInfo userID: 2588234901506497
+[2020-08-21T02:49:12.780] [INFO] users - profileInfo userID: 2588234901506497
+[2020-08-21T02:49:35.025] [INFO] users - profileInfo userID: 2588234901506497
+[2020-08-21T02:50:37.865] [INFO] users - profileInfo userID: 2588234901506497
+[2020-08-21T02:50:41.148] [INFO] users - profileInfo userID: 2588234901506497
+[2020-08-21T02:52:08.843] [INFO] users - profileInfo userID: 2588234901506497
+[2020-08-21T02:52:39.250] [INFO] users - profileInfo userID: 2588234901506497
+[2020-08-21T02:53:12.134] [INFO] users - profileInfo userID: 2588234901506497
+[2020-08-21T02:53:32.387] [INFO] users - profileInfo userID: 2588234901506497
+[2020-08-21T02:55:13.567] [INFO] users - profileInfo userID: 2588234901506497
+[2020-08-21T02:55:29.206] [INFO] users - profileInfo userID: 2588234901506497
+[2020-08-21T02:55:30.051] [INFO] users - profileInfo userID: 2588234901506497
+[2020-08-21T02:56:10.086] [INFO] users - profileInfo userID: 2588234901506497
+[2020-08-21T02:56:10.910] [INFO] users - profileInfo userID: 2588234901506497
+[2020-08-21T02:56:14.127] [INFO] users - profileInfo userID: 2588234901506497
+[2020-08-21T02:56:33.539] [INFO] users - profileInfo userID: 2588234901506497
+[2020-08-21T02:57:28.814] [INFO] users - profileInfo userID: 2588234901506497
+[2020-08-21T02:59:03.268] [INFO] users - profileInfo userID: 2588234901506497
+[2020-08-21T02:59:10.603] [INFO] users - profileInfo userID: 2588234901506497
+[2020-08-21T03:01:06.345] [INFO] users - profileInfo userID: 2588234901506497
+[2020-08-21T03:01:09.319] [INFO] users - profileInfo userID: 2588234901506497
+[2020-08-21T03:03:12.826] [INFO] users - profileInfo userID: 2588234901506497
+[2020-08-21T03:08:03.202] [INFO] users - profileInfo userID: 2588234901506497
+[2020-08-21T03:08:04.777] [INFO] users - profileInfo userID: 2588234901506497
+[2020-08-21T03:08:05.788] [INFO] users - profileInfo userID: 2588234901506497
+[2020-08-21T03:10:05.918] [INFO] users - profileInfo userID: 2588234901506497
+[2020-08-21T03:10:07.289] [INFO] users - profileInfo userID: 2588234901506497
+[2020-08-21T03:10:08.279] [INFO] users - profileInfo userID: 2588234901506497
+[2020-08-21T03:13:27.324] [INFO] users - profileInfo userID: 2588234901506497
+[2020-08-21T03:13:38.444] [INFO] users - profileInfo userID: 2588234901506497
+[2020-08-21T03:15:48.143] [INFO] users - profileInfo userID: 2588234901506497
+[2020-08-21T03:15:49.256] [INFO] users - profileInfo userID: 2588234901506497
+[2020-08-21T03:17:58.161] [INFO] users - profileInfo userID: 2588234901506497
+[2020-08-21T03:18:00.036] [INFO] users - profileInfo userID: 2588234901506497
+[2020-08-21T03:19:21.484] [INFO] users - profileInfo userID: 2588234901506497
+[2020-08-21T03:19:21.936] [INFO] users - profileInfo userID: 2588234901506497
+[2020-08-21T03:19:56.418] [INFO] users - profileInfo userID: 2588234901506497
+[2020-08-21T03:21:21.181] [INFO] users - profileInfo userID: 2588234901506497
+[2020-08-21T03:21:38.861] [INFO] users - profileInfo userID: 2588234901506497
+[2020-08-21T03:27:15.587] [INFO] users - profileInfo userID: 2588234901506497
+[2020-08-21T03:28:46.390] [INFO] users - profileInfo userID: 2588234901506497
+[2020-08-21T03:28:49.833] [INFO] users - profileInfo userID: 2588234901506497
+[2020-08-21T03:28:58.769] [INFO] users - profileInfo userID: 2588234901506497
+[2020-08-21T03:28:59.873] [INFO] users - profileInfo userID: 2588234901506497
+[2020-08-21T03:29:20.793] [INFO] users - profileInfo userID: 2588234901506497
+[2020-08-21T03:29:21.566] [INFO] users - profileInfo userID: 2588234901506497
+[2020-08-21T03:34:32.905] [INFO] users - profileInfo userID: 2588234901506497
+[2020-08-21T03:34:44.188] [INFO] users - profileInfo userID: 2588234901506497
+[2020-08-21T03:36:26.179] [INFO] users - profileInfo userID: 2588234901506497
+[2020-08-21T03:39:15.304] [INFO] users - profileInfo userID: 2588234901506497
+[2020-08-21T03:39:16.228] [INFO] users - profileInfo userID: 2588234901506497
+[2020-08-21T03:40:13.759] [INFO] users - profileInfo userID: 2588234901506497
+[2020-08-21T03:40:16.907] [INFO] users - profileInfo userID: 2588234901506497
+[2020-08-21T03:40:50.922] [INFO] users - profileInfo userID: 2588234901506497
+[2020-08-21T03:41:55.453] [INFO] users - profileInfo userID: 2588234901506497
+[2020-08-21T03:44:14.120] [INFO] users - profileInfo userID: 2588234901506497
+[2020-08-21T03:44:50.867] [INFO] users - profileInfo userID: 2588234901506497
+[2020-08-21T03:45:45.768] [INFO] users - profileInfo userID: 2588234901506497
+[2020-08-21T03:49:56.237] [INFO] users - profileInfo userID: 2588234901506497
+[2020-08-21T03:53:06.154] [INFO] users - profileInfo userID: 2588234901506497
+[2020-08-21T03:55:11.139] [INFO] users - profileInfo userID: 2588234901506497
+[2020-08-21T03:59:33.181] [INFO] users - profileInfo userID: 2588234901506497
+[2020-08-21T03:59:49.003] [INFO] users - profileInfo userID: 2588234901506497
+[2020-08-21T04:01:14.114] [INFO] users - profileInfo userID: 2588234901506497
+[2020-08-21T04:02:43.378] [INFO] users - profileInfo userID: 2588234901506497
+[2020-08-21T04:02:45.575] [INFO] users - profileInfo userID: 2588234901506497
+[2020-08-21T04:04:55.293] [INFO] users - profileInfo userID: 2588234901506497
+[2020-08-21T04:04:56.207] [INFO] users - profileInfo userID: 2588234901506497
+[2020-08-21T04:07:18.990] [INFO] users - profileInfo userID: 2588234901506497
+[2020-08-21T04:07:25.804] [INFO] users - profileInfo userID: 2588234901506497
+[2020-08-21T04:07:40.774] [INFO] users - profileInfo userID: 2588234901506497
+[2020-08-21T04:08:06.463] [INFO] users - profileInfo userID: 2588234901506497
+[2020-08-21T04:10:54.395] [INFO] users - profileInfo userID: 2588234901506497
+[2020-08-21T04:12:01.098] [INFO] users - profileInfo userID: 2588234901506497
+[2020-08-21T04:12:13.094] [INFO] users - profileInfo userID: 2588234901506497
+[2020-08-21T04:13:16.265] [INFO] users - profileInfo userID: 2588234901506497
+[2020-08-21T04:14:06.929] [INFO] users - profileInfo userID: 2588234901506497
+[2020-08-21T04:19:25.355] [INFO] users - profileInfo userID: 2588234901506497
+[2020-08-21T04:19:39.304] [INFO] users - profileInfo userID: 2588234901506497
+[2020-08-21T04:20:39.907] [INFO] users - profileInfo userID: 2588234901506497
+[2020-08-21T04:20:51.071] [INFO] users - profileInfo userID: 2588234901506497
+[2020-08-21T04:22:11.954] [INFO] users - profileInfo userID: 2588234901506497
+[2020-08-21T04:23:13.720] [INFO] users - profileInfo userID: 2588234901506497
+[2020-08-21T04:23:18.732] [INFO] users - profileInfo userID: 2588234901506497
+[2020-08-21T04:23:19.748] [INFO] users - profileInfo userID: 2588234901506497
+[2020-08-21T04:31:58.853] [INFO] users - profileInfo userID: 2588234901506497
+[2020-08-21T04:33:03.552] [INFO] users - profileInfo userID: 2588234901506497
+[2020-08-21T04:35:46.189] [INFO] users - profileInfo userID: 2588234901506497
+[2020-08-21T04:35:47.150] [INFO] users - profileInfo userID: 2588234901506497
+[2020-08-21T04:38:02.024] [INFO] users - profileInfo userID: 2588234901506497
+[2020-08-21T04:38:09.671] [INFO] users - profileInfo userID: 2588234901506497
+[2020-08-21T04:40:40.736] [INFO] users - profileInfo userID: 2588234901506497
+[2020-08-21T04:45:57.473] [INFO] users - profileInfo userID: 2588234901506497
+[2020-08-21T04:52:48.038] [INFO] users - profileInfo userID: 2588234901506497
+[2020-08-21T04:54:05.172] [INFO] users - profileInfo userID: 2588234901506497
+[2020-08-21T04:54:06.533] [INFO] users - profileInfo userID: 2588234901506497
+[2020-08-21T04:56:27.161] [INFO] users - profileInfo userID: 2588234901506497
+[2020-08-21T05:07:28.608] [INFO] users - profileInfo userID: 2588234901506497
+[2020-08-21T05:07:37.654] [INFO] users - profileInfo userID: 2588234901506497
+[2020-08-21T05:07:57.197] [INFO] users - profileInfo userID: 2588234901506497
+[2020-08-21T05:12:53.688] [INFO] users - profileInfo userID: 2588234901506497
+[2020-08-21T05:16:50.900] [INFO] users - profileInfo userID: 2588234901506497
+[2020-08-21T05:19:14.035] [INFO] users - profileInfo userID: 2588234901506497
+[2020-08-21T05:19:15.597] [INFO] users - profileInfo userID: 2588234901506497
+[2020-08-21T05:20:01.333] [INFO] users - profileInfo userID: 2588234901506497
+[2020-08-21T05:20:28.751] [INFO] users - profileInfo userID: 2588234901506497
+[2020-08-21T05:20:37.392] [INFO] users - profileInfo userID: 2588234901506497
+[2020-08-21T05:20:58.682] [INFO] users - profileInfo userID: 2588234901506497
+[2020-08-21T05:21:00.242] [INFO] users - profileInfo userID: 2588234901506497
+[2020-08-21T05:21:25.429] [INFO] users - profileInfo userID: 2588234901506497
+[2020-08-21T05:21:44.729] [INFO] users - profileInfo userID: 2588234901506497
+[2020-08-21T05:21:46.546] [INFO] users - profileInfo userID: 2588234901506497
+[2020-08-21T05:22:13.326] [INFO] users - profileInfo userID: 2588234901506497
+[2020-08-21T05:24:30.684] [INFO] users - profileInfo userID: 2588234901506497
+[2020-08-21T05:24:32.413] [INFO] users - profileInfo userID: 2588234901506497
+[2020-08-21T05:24:33.778] [INFO] users - profileInfo userID: 2588234901506497
+[2020-08-21T05:26:11.004] [INFO] users - profileInfo userID: 2588234901506497
+[2020-08-21T05:28:37.876] [INFO] users - profileInfo userID: 2588234901506497
+[2020-08-21T05:37:38.775] [INFO] users - profileInfo userID: 2588234901506497
+[2020-08-21T20:31:12.352] [INFO] users - ユーザログ UserName:閻 文帥
+[2020-08-21T20:31:12.352] [INFO] users - Third Party by Facebook
+[2020-08-21T20:31:12.639] [INFO] users - profileInfo userID: 2588234901506497

@@ -6,6 +6,12 @@ import { boxCard } from "./js/boxCard_json"
 import { comment } from "./js/comment_json"
 import { pieChart } from "./js/pieChart_json"
 import { transactionTable } from "./js/transactionTable_json"
+import { memory } from "./js/Memory_json"
+import { Spatial } from "./js/Spatial_json"
+import { Orientation } from "./js/Orientation_json"
+import { Attention } from "./js/Attention_json"
+import { Plan } from "./js/Plan_json"
+
 
 
 
@@ -33,3 +39,11 @@ Mock.mock('/api/personal/CogEvo/pieChart', 'get', pieChart);
 
 // transactionTable
 Mock.mock('/api/personal/CogEvo/transactionTable', 'get', transactionTable);
+
+// 記憶力
+Mock.mock('/api/personal/CogEvo/memoryAbility', 'get', memory);
+Mock.mock('/api/personal/CogEvo/SpatialAbility', 'get', Spatial);
+
+Mock.mock('/api/personal/CogEvo/OrientationAbility', 'get', Orientation);
+Mock.mock('/api/personal/CogEvo/AttentionAbility', 'get', Attention);
+Mock.mock('/api/personal/CogEvo/PlanAbility', 'get', Plan);

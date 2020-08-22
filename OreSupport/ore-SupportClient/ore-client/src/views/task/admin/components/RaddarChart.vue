@@ -57,11 +57,12 @@ export default {
 
       this.chart.setOption({
         tooltip: {
-          trigger: "axis",
+          // trigger: "axis",
           axisPointer: {
             type: "shadow", // 'line' | 'shadow'
           },
         },
+        //  tooltip: {},
         radar: {
           radius: "66%",
           center: ["50%", "42%"],
@@ -84,16 +85,41 @@ export default {
             { name: "注意力", max: 20000 },
             { name: "その他", max: 20000 },
           ],
+          name: {
+            // // formatter: "{value}",
+            // formatter: function(name) {
+            //   // return name + "\n" + "現在" + "\n" + "3カ月前";
+            //   return [name, "{a|現在:}", "{b|3カ月前:}"].join("\n");
+            // },
+            // rich: {
+            //   a: {
+            //     color: "red",
+            //     lineHeight: 14,
+            //   },
+            //   b: {
+            //     color: "red",
+            //     lineHeight: 14,
+            //   },
+            // },
+            // textStyle: {
+            //   // color: "#72ACD1",
+            // },
+          },
+          axisLabel: {
+            show: false,
+            rotate: 1,
+            color: "rgba(15, 16, 15, 1)",
+          },
         },
         legend: {
           left: "center",
           bottom: "10",
-          data: ["現在", "3ヶ月前" /* '6ヶ月前' */],
+          data: ["現在", "3ヶ月前"],
         },
         series: [
           {
             type: "radar",
-            symbolSize: 0,
+            symbolSize: 5,
             areaStyle: {
               normal: {
                 shadowBlur: 13,
