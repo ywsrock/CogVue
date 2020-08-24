@@ -1,26 +1,25 @@
 <template>
-    <div name="Layout">
-        <TopHeader :key="key"/>
-        <MainForm/>
-    </div>
+  <div name="Layout">
+    <TopHeader :key="key" />
+    <MainForm />
+  </div>
 </template>
 
-
 <script>
-import MainForm from './components/MainForm'
-import TopHeader from './components/TopHeader'
+import MainForm from "./components/MainForm";
+import TopHeader from "./components/TopHeader";
 
 export default {
-    name:"Layout",
-    components:{
-        MainForm,
-        TopHeader
-    },
+  name: "Layout",
+  components: {
+    MainForm,
+    TopHeader,
+  },
 
-   computed: {
+  computed: {
     key() {
-      return this.$route.path
-    }
-  }
-}
+      return this.$route.path;
+    },
+  },
+};
 </script>

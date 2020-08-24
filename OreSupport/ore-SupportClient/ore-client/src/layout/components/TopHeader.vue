@@ -1,274 +1,204 @@
 <template>
-  <div class="page-wrapper">
-    <header class="header" :key="key">
-      <div class="header-wrapper">
-        <div class="container">
-          <div class="header-inner">
-            <div class="header-logo">
-              <a href="index.html">
-                <img src="../../assets/img/logo.png" alt="Logo" />
-                <span>Superlist</span>
-              </a>
-            </div>
-            <!-- /.header-logo -->
-            <div class="header-content">
-              <div class="header-top">
-                <div class="header-search" v-if="isLogin">
-                  <input
-                    type="text"
-                    class="form-control"
-                    placeholder="Search for..."
-                  />
-                </div>
-                <!-- /.header-search -->
-                <ul
-                  class="header-nav-social social-links nav nav-pills"
-                  v-if="!isLogin"
-                >
-                  <li>
-                    <a href="#"><i class="fa fa-twitter"></i></a>
-                  </li>
-                  <li>
-                    <a href="#" @click.prevent="fblogin()"
-                      ><i class="fa fa-facebook"></i
-                    ></a>
-                  </li>
-                  <li>
-                    <a href="#"><i class="fa fa-google-plus"></i></a>
-                  </li>
-                  <li></li>
-                </ul>
-                <!-- /.header-nav-social -->
-
-                <ul class="header-nav-secondary nav nav-pills">
-                  <li v-if="!isLogin">
-                    <router-link v-bind:to="{ name: 'login' }" key="key"
-                      >Login</router-link
-                    >
-                  </li>
-                  <li v-if="!isLogin">
-                    <router-link v-bind:to="{ name: 'register' }" key="key"
-                      >Register</router-link
-                    >
-                  </li>
-                  <li v-if="isLogin">
-                    <a
-                      class="text-success text-center"
-                      style="font-size:12px"
-                      href=""
-                      @click.prevent.stop="getProfileInfo"
-                    >
-                      {{ username }} 様、お疲れ様です。</a
-                    >
-                  </li>
-                  <li v-if="isLogin">
-                    <!--<el-button type="text" @click.native="logout">Logout</el-button>-->
-                    <a href="" @click.prevent.stop="logout">Logout</a>
-                  </li>
-                  <li v-if="isLogin">
-                    <a href="" @click.prevent.stop="getProfileInfo">Profile</a>
-                  </li>
-                </ul>
-              </div>
-              <!-- /.header-top -->
-
-              <div class="header-bottom">
-                <div class="header-action">
-                  <a
-                    href="listing-submit.html"
-                    class="header-action-inner"
-                    title="Add Listing"
-                    data-toggle="tooltip"
-                    data-placement="bottom"
-                  >
-                    <i class="fa fa-plus"></i> </a
-                  ><!-- /.header-action-inner -->
-                </div>
-                <!-- /.header-action -->
-
-                <ul
-                  class="header-nav-primary nav nav-pills collapse navbar-collapse"
-                >
-                  <li class="active">
-                    <a href="#">Home <i class="fa fa-chevron-down"></i></a>
-
-                    <ul class="sub-menu">
-                      <li><a href="index-video.html">Video v1</a></li>
-                      <li>
-                        <a href="index-video-transparent-header.html"
-                          >Video v2</a
-                        >
-                      </li>
-                      <li><a href="index-google-map.html">Google Map V1</a></li>
-                      <li>
-                        <a href="index-google-map-transparent-header.html"
-                          >Google Map v2</a
-                        >
-                      </li>
-                      <li><a href="index-image.html">Image v1</a></li>
-                      <li><a href="index.html">Image v2</a></li>
-                      <li>
-                        <a href="index-bootstrap-slider.html">Boxed Slider</a>
-                      </li>
-                    </ul>
-                  </li>
-
-                  <li>
-                    <a href="#">Listing <i class="fa fa-chevron-down"></i></a>
-
-                    <ul class="sub-menu">
-                      <li><a href="listing-detail.html">Detail</a></li>
-                      <li><a href="listing-map.html">Row + Map</a></li>
-                      <li><a href="listing-grid.html">Grid</a></li>
-                      <li>
-                        <a href="listing-grid-sidebar.html">Grid Sidebar</a>
-                      </li>
-                      <li><a href="listing-row.html">Row</a></li>
-                      <li>
-                        <a href="listing-row-sidebar.html">Row Sidebar</a>
-                      </li>
-                    </ul>
-                  </li>
-
-                  <li class="has-mega-menu ">
-                    <a href="#">Pages <i class="fa fa-chevron-down"></i></a>
-
-                    <ul class="mega-menu">
-                      <li>
-                        <a href="#">General</a>
-
-                        <ul>
-                          <li><a href="faq.html">FAQ</a></li>
-                          <li><a href="invoice.html">Invoice</a></li>
-                          <li><a href="pricing.html">Pricing</a></li>
-                          <li><a href="grid.html">Grid System</a></li>
-                          <li><a href="testimonials.html">Testimonials</a></li>
-                        </ul>
-                      </li>
-
-                      <li>
-                        <a href="#">User Account</a>
-                        <ul>
-                          <li>
-                            <a href="user-profile-edit.html">Profile Edit</a>
-                          </li>
-                          <li><a href="login.html">Login Form</a></li>
-                          <li><a href="register.html">Register Form</a></li>
-                          <li>
-                            <a href="change-password.html"
-                              >Change Password Form</a
-                            >
-                          </li>
-                        </ul>
-                      </li>
-
-                      <li>
-                        <a href="#">Miscellaneous</a>
-
-                        <ul>
-                          <li>
-                            <a href="sticky-footer.html">Sticky Footer</a>
-                          </li>
-                          <li>
-                            <a href="terms-conditions.html"
-                              >Terms &amp; Conditions</a
-                            >
-                          </li>
-                          <li><a href="error-403.html">403 - Forbidden</a></li>
-                          <li><a href="error-404.html">404 - Not Found</a></li>
-                          <li>
-                            <a href="error-500.html">500 - Internal Error</a>
-                          </li>
-                        </ul>
-                      </li>
-
-                      <li class="hidden-xs">
-                        <div class="special">
-                          <a href="register.html">Sign Up Now</a>
-                        </div>
-                        <!-- /.special-->
-                      </li>
-                    </ul>
-                  </li>
-
-                  <li>
-                    <!-- <a href="" @click.prevent.stop="getBlogList">Blog <i class="fa fa-chevron-down"></i></a>-->
-                    <a href="https://localhost:8080/#/blog_top"
-                      >Blog <i class="fa fa-chevron-down"></i
-                    ></a>
-                    <ul class="sub-menu">
-                      <li>
-                        <a href="blog-standard-right-sidebar.html"
-                          >Standard Right Sidebar</a
-                        >
-                      </li>
-                      <li>
-                        <a href="blog-standard-left-sidebar.html"
-                          >Standard Left Sidebar</a
-                        >
-                      </li>
-                      <li><a href="blog-boxed.html">Boxed Style</a></li>
-                      <li><a href="blog-condensed.html">Condensed Style</a></li>
-                      <li><a href="blog-detail.html">Detail Fullwidth</a></li>
-                      <li>
-                        <a href="blog-detail-right-sidebar.html"
-                          >Detail Right Sidebar</a
-                        >
-                      </li>
-                      <li>
-                        <a href="blog-detail-left-sidebar.html"
-                          >Detail Left Sidebar</a
-                        >
-                      </li>
-                    </ul>
-                  </li>
-
-                  <li>
-                    <a href="#">Admin <i class="fa fa-chevron-down"></i></a>
-
-                    <ul class="sub-menu">
-                      <li><a href="admin-dashboard.html">Dashboard</a></li>
-                      <li><a href="admin-grid.html">Grid System</a></li>
-                      <li><a href="admin-tables.html">Tables</a></li>
-                      <li><a href="admin-forms.html">Forms</a></li>
-                      <li>
-                        <a href="admin-notifications.html">Notifications</a>
-                      </li>
-                    </ul>
-                  </li>
-
-                  <li>
-                    <a href="#">Contact <i class="fa fa-chevron-down"></i></a>
-                    <ul class="sub-menu">
-                      <li><a href="contact-1.html">Contact v1</a></li>
-                      <li><a href="contact-2.html">Contact v2</a></li>
-                      <li><a href="contact-3.html">Contact v3</a></li>
-                    </ul>
-                  </li>
-                </ul>
-
-                <button
-                  class="navbar-toggle collapsed"
-                  type="button"
-                  data-toggle="collapse"
-                  data-target=".header-nav-primary"
-                >
-                  <span class="sr-only">Toggle navigation</span>
-                  <span class="icon-bar"></span>
-                  <span class="icon-bar"></span>
-                  <span class="icon-bar"></span>
-                </button>
-              </div>
-              <!-- /.header-bottom -->
-            </div>
-            <!-- /.header-content -->
-          </div>
-          <!-- /.header-inner -->
+  <div class="header-wrapper">
+    <div class="container">
+      <div class="header-inner">
+        <div class="header-logo">
+          <a href="#">
+            <img src="../../assets/img/logo.png" alt="Logo" />
+            <span>おれさぽ</span>
+          </a>
         </div>
-        <!-- /.container -->
+        <!-- /.header-logo -->
+        <div class="header-content">
+          <div class="header-top">
+            <div class="header-search" v-if="isLogin">
+              <input
+                type="text"
+                class="form-control"
+                placeholder="Search for..."
+              />
+            </div>
+            <!-- /.header-search -->
+            <ul
+              class="header-nav-social social-links nav nav-pills"
+              v-if="!isLogin"
+            >
+              <li>
+                <a href="#"><i class="fa fa-twitter"></i></a>
+              </li>
+              <li>
+                <a href="#" @click.prevent="fblogin()"
+                  ><i class="fa fa-facebook"></i
+                ></a>
+              </li>
+              <li>
+                <a href="#"><i class="fa fa-google-plus"></i></a>
+              </li>
+              <li></li>
+            </ul>
+            <!-- /.header-nav-social -->
+
+            <ul class="header-nav-secondary nav nav-pills">
+              <li v-if="!isLogin">
+                <router-link v-bind:to="{ name: 'login' }" key="key"
+                  >Login</router-link
+                >
+              </li>
+              <li v-if="!isLogin">
+                <router-link v-bind:to="{ name: 'register' }" key="key"
+                  >Register</router-link
+                >
+              </li>
+              <li v-if="isLogin">
+                <a
+                  class="text-success text-center"
+                  style="font-size:12px"
+                  href=""
+                  @click.prevent.stop="getProfileInfo"
+                >
+                  {{ username }} 様、お疲れ様です。</a
+                >
+              </li>
+              <li v-if="isLogin">
+                <!--<el-button type="text" @click.native="logout">Logout</el-button>-->
+                <a href="" @click.prevent.stop="logout">Logout</a>
+              </li>
+              <li v-if="isLogin">
+                <a href="" @click.prevent.stop="getProfileInfo">Profile</a>
+              </li>
+            </ul>
+          </div>
+          <!-- /.header-top -->
+          <div class="header-bottom">
+            <div class="header-action">
+              <a
+                href="#"
+                class="header-action-inner"
+                title="カートを見る"
+                data-toggle="tooltip"
+                data-placement="bottom"
+              >
+                <i class="fa fa-plus"></i> </a
+              ><!-- /.header-action-inner -->
+            </div>
+            <!-- /.header-action -->
+            <ul
+              class="header-nav-primary nav nav-pills collapse navbar-collapse"
+            >
+              <li class="dropdown">
+                <a href="#">ホーム<i class="fa fa-chevron-down"></i></a>
+
+                <ul class="sub-menu">
+                  <li><a href="/views/index.html">自分の状態を測る</a></li>
+                  <li>
+                    <a href="/views/blog/blog_top.html">体験談を読む</a>
+                  </li>
+                  <li><a href="/views/index.html">商品を購入する</a></li>
+                  <li><a href="/views/index.html">認知機能を知る</a></li>
+                </ul>
+              </li>
+
+              <li>
+                <a href="#">ブログ <i class="fa fa-chevron-down"></i></a>
+
+                <ul class="sub-menu">
+                  <li>
+                    <a href="/views/blog/blog_top.html">ブログトップ</a>
+                  </li>
+                  <li>
+                    <a href="/views/blog/blog_list.html">ブログ一覧</a>
+                  </li>
+                </ul>
+              </li>
+
+              <li>
+                <a href="#">商品 <i class="fa fa-chevron-down"></i></a>
+
+                <ul class="sub-menu">
+                  <li>
+                    <a href="/views/solution/solution_top.html">商品トップ</a>
+                  </li>
+                  <li>
+                    <a href="/views/solution/solution_list.html">商品一覧</a>
+                  </li>
+                </ul>
+              </li>
+              <li class="has-mega-menu ">
+                <a href="#">CogEvo <i class="fa fa-chevron-down"></i></a>
+
+                <ul class="mega-menu">
+                  <li>
+                    <a href="#">CogEvo紹介</a>
+
+                    <ul>
+                      <li><a href="https://cog-evo.jp/">CogEvoとは</a></li>
+                      <li>
+                        <a href="https://tbcare.jp/"
+                          >運営会社（株式会社トータルブレインケア）</a
+                        >
+                      </li>
+                    </ul>
+                  </li>
+
+                  <li>
+                    <a href="#">結果を見る</a>
+                    <ul>
+                      <li>
+                        <a href="/views/cogevo/cogevo_dashbord.html"
+                          >あなたの結果</a
+                        >
+                      </li>
+                      <li>
+                        <a href="/views/cogevo/cogevo_dashbord.html"
+                          >みんなの結果</a
+                        >
+                      </li>
+                    </ul>
+                  </li>
+
+                  <li class="hidden-xs">
+                    <div class="special">
+                      <a href="https://personal.tbcare.jp/login"
+                        >CogEvoを開始する</a
+                      >
+                    </div>
+                    <!-- /.special-->
+                  </li>
+                </ul>
+              </li>
+
+              <li>
+                <a href="#">ヘルプ <i class="fa fa-chevron-down"></i></a>
+                <ul class="sub-menu">
+                  <li><a href="#">「おれさぽ」とは</a></li>
+                  <li><a href="#">運営会社</a></li>
+                  <li><a href="#">FAQ</a></li>
+                  <li><a href="#">お問合せ</a></li>
+                </ul>
+              </li>
+            </ul>
+            <button
+              class="navbar-toggle collapsed"
+              type="button"
+              data-toggle="collapse"
+              data-target=".header-nav-primary"
+            >
+              <span class="sr-only">Toggle navigation</span>
+              <span class="icon-bar"></span>
+              <span class="icon-bar"></span>
+              <span class="icon-bar"></span>
+            </button>
+          </div>
+          <!-- /.header-bottom -->
+        </div>
+        <!-- /.header-content -->
       </div>
-      <!-- /.header-wrapper -->
-    </header>
+      <!-- /.header-inner -->
+    </div>
+    <!-- /.container -->
+    <!--</div>-->
+    <!-- /.header-wrapper -->
+    <!--</header>-->
     <!-- /.header -->
   </div>
 </template>
@@ -403,4 +333,5 @@ export default {
 @import "../../../public/assets/libraries/bootstrap-select/bootstrap-select.min.css";
 @import "../../../public/assets/libraries/bootstrap-fileinput/fileinput.min.css";
 @import "../../../public/assets/css/superlist.css";
+@import "../../../public/assets/css/oresapo.css";
 </style>

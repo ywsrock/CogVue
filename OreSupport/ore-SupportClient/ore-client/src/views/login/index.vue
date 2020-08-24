@@ -40,7 +40,7 @@
                     placement="right"
                     manual
                   >
-                    <el-form-item prop="password">                    
+                    <el-form-item prop="password">
                       <el-input
                         id="login-form-password"
                         :key="passwordType"
@@ -66,7 +66,6 @@
                       :loading="loading"
                       type="submit"
                       class="btn btn-primary"
-                      
                       @click.native.prevent="handleLogin"
                     >
                       Login
@@ -74,7 +73,10 @@
                   </div>
                 </el-form>
 
-                <el-dialog title="アカウントを選択して、ログインしてください。" :visible.sync="showDialog">
+                <el-dialog
+                  title="アカウントを選択して、ログインしてください。"
+                  :visible.sync="showDialog"
+                >
                   <br />
                   <br />
                   <br />
@@ -96,64 +98,68 @@
 </template>
 
 <script>
-import { validUsername } from '@/utils/validate'
-import SocialSign from './components/SocialSignin'
+import { validUsername } from "@/utils/validate";
+import SocialSign from "./components/SocialSignin";
 export default {
-  name: 'Login',
+  name: "Login",
   components: { SocialSign },
   data() {
     const validateUsername = (rule, value, callback) => {
       if (!validUsername(value)) {
-        callback(new Error('正しいユーザ名を入力してください。'))
+        callback(new Error("正しいユーザ名を入力してください。"));
       } else {
-        callback()
+        callback();
       }
-    }
+    };
     const validatePassword = (rule, value, callback) => {
       if (value.length < 6) {
-        callback(new Error('パスワード6桁以上を設定していくだいさ。'))
+        callback(new Error("パスワード6桁以上を設定していくだいさ。"));
       } else {
-        callback()
+        callback();
       }
-    }
+    };
     return {
       loginForm: {
-        username: '',
-        password: '',
-        type:"normal"
+        username: "",
+        password: "",
+        type: "normal",
       },
       loginRules: {
-        username: [{ required: true, trigger: 'blur', validator: validateUsername }],
-        password: [{ required: true, trigger: 'blur', validator: validatePassword }]
+        username: [
+          { required: true, trigger: "blur", validator: validateUsername },
+        ],
+        password: [
+          { required: true, trigger: "blur", validator: validatePassword },
+        ],
       },
-      passwordType: 'password',
+      passwordType: "password",
       capsTooltip: false,
       loading: false,
       showDialog: false,
       redirect: undefined,
-      otherQuery: {}
-    }
+      otherQuery: {},
+    };
   },
   watch: {
     $route: {
       handler: function(route) {
-        const query = route.query
+        const query = route.query;
         if (query) {
-          this.redirect = query.redirect
-          this.otherQuery = this.getOtherQuery(query)
+          this.redirect = query.redirect;
+          this.otherQuery = this.getOtherQuery(query);
         }
       },
-      immediate: true
-    }
+      immediate: true,
+    },
   },
   created() {
     // window.addEventListener('storage', this.afterQRScan)
   },
   mounted() {
-    if (this.loginForm.username === '') {
-      this.$refs.username.focus()
-    } else if (this.loginForm.password === '') {
-      this.$refs.password.focus()
+    if (this.loginForm.username === "") {
+      this.$refs.username.focus();
+    } else if (this.loginForm.password === "") {
+      this.$refs.password.focus();
     }
   },
   destroyed() {
@@ -161,75 +167,58 @@ export default {
   },
   methods: {
     checkCapslock(e) {
-      const { key } = e
-      this.capsTooltip = key && key.length === 1 && (key >= 'A' && key <= 'Z')
+      const { key } = e;
+      this.capsTooltip = key && key.length === 1 && key >= "A" && key <= "Z";
     },
     showPwd() {
-      if (this.passwordType === 'password') {
-        this.passwordType = ''
+      if (this.passwordType === "password") {
+        this.passwordType = "";
       } else {
-        this.passwordType = 'password'
+        this.passwordType = "password";
       }
       this.$nextTick(() => {
-        this.$refs.password.focus()
-      })
+        this.$refs.password.focus();
+      });
     },
     handleLogin() {
-      this.$refs.loginForm.validate(valid => {
+      this.$refs.loginForm.validate((valid) => {
         if (valid) {
-          this.loading = true
-          this.$store.dispatch('user/login', this.loginForm)
+          this.loading = true;
+          this.$store
+            .dispatch("user/login", this.loginForm)
             .then((res) => {
-              console.log(res)
-               this.$router.push({path:'/userInfo'})
+              console.log(res);
+              this.$router.push({ path: "/userInfo" });
               // this.$router.push({ path: this.redirect || '/', query: this.otherQuery })
-               this.loading = false
+              this.loading = false;
             })
             .catch(() => {
-              this.loading = false
-            })
+              this.loading = false;
+            });
         } else {
-          console.log('error submit!!')
-          return false
+          console.log("error submit!!");
+          return false;
         }
-      })
+      });
     },
     getOtherQuery(query) {
       return Object.keys(query).reduce((acc, cur) => {
-        if (cur !== 'redirect') {
-          acc[cur] = query[cur]
+        if (cur !== "redirect") {
+          acc[cur] = query[cur];
         }
-        return acc
-      }, {})
+        return acc;
+      }, {});
     },
-    singUp(){
-      this.$router.push("/register")
-    }
-    // afterQRScan() {
-    //   if (e.key === 'x-admin-oauth-code') {
-    //     const code = getQueryObject(e.newValue)
-    //     const codeMap = {
-    //       wechat: 'code',
-    //       tencent: 'code'
-    //     }
-    //     const type = codeMap[this.auth_type]
-    //     const codeName = code[type]
-    //     if (codeName) {
-    //       this.$store.dispatch('LoginByThirdparty', codeName).then(() => {
-    //         this.$router.push({ path: this.redirect || '/' })
-    //       })
-    //     } else {
-    //       alert('他方式登録失敗')
-    //     }
-    //   }
-    // }
-  }
-}
+    singUp() {
+      this.$router.push("/register");
+    },
+  },
+};
 </script>
 
 <style lang="scss">
-$bg:#2d3a4b;
-$light_gray:rgb(251, 255, 0);
+$bg: #2d3a4b;
+$light_gray: rgb(251, 255, 0);
 $cursor: #fff;
 @supports (-webkit-mask: none) and (not (cater-color: $cursor)) {
   .login-container .el-input input {
@@ -267,9 +256,9 @@ $cursor: #fff;
 </style>
 
 <style lang="scss" scoped>
-$bg:#2d3a4b;
-$dark_gray:#889aa4;
-$light_gray:#eee;
+$bg: #2d3a4b;
+$dark_gray: #889aa4;
+$light_gray: #eee;
 .login-container {
   min-height: 100%;
   width: 100%;
@@ -323,7 +312,7 @@ $light_gray:#eee;
     position: absolute;
     right: 0;
     bottom: 6px;
-/*     background-color: #4caf50; */
+    /*     background-color: #4caf50; */
   }
   .siginUP-button {
     position: absolute;
