@@ -116,10 +116,10 @@
 
                 <ul class="sub-menu">
                   <li>
-                    <a href="/views/solution/solution_top.html">商品トップ</a>
+                    <a href="/#/solution/top">商品トップ</a>
                   </li>
                   <li>
-                    <a href="/views/solution/solution_list.html">商品一覧</a>
+                    <a href="/#/solution/index">商品一覧</a>
                   </li>
                 </ul>
               </li>
