@@ -3,10 +3,10 @@
     <div class="container">
       <div class="header-inner">
         <div class="header-logo">
-          <a href="#">
+          <router-link to="/">
             <img src="../../assets/img/logo.png" alt="Logo" />
             <span>おれさぽ</span>
-          </a>
+          </router-link>
         </div>
         <!-- /.header-logo -->
         <div class="header-content">
@@ -134,9 +134,13 @@
                     <a href="#">CogEvo紹介</a>
 
                     <ul>
-                      <li><a href="https://cog-evo.jp/">CogEvoとは</a></li>
                       <li>
-                        <a href="https://tbcare.jp/"
+                        <a href="https://cog-evo.jp/" target="_blank"
+                          >CogEvoとは</a
+                        >
+                      </li>
+                      <li>
+                        <a href="https://tbcare.jp/" target="_blank"
                           >運営会社（株式会社トータルブレインケア）</a
                         >
                       </li>
