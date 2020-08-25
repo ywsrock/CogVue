@@ -1,0 +1,25 @@
+[2020-08-26T01:05:07.584] [INFO] startup - Listening on port 3000
+[2020-08-26T01:06:04.933] [INFO] startup - Listening on port 3000
+[2020-08-26T01:06:12.655] [INFO] users - logout
+[2020-08-26T01:06:14.981] [INFO] users - ユーザログ UserName:閻 文帥
+[2020-08-26T01:06:14.981] [INFO] users - Third Party by Facebook
+[2020-08-26T01:06:15.319] [INFO] users - profileInfo userID: 2588234901506497
+[2020-08-26T01:06:20.574] [INFO] users - profileInfo userID: 2588234901506497
+[2020-08-26T01:08:11.011] [INFO] users - profileInfo userID: 2588234901506497
+[2020-08-26T01:10:22.385] [INFO] users - profileInfo userID: 2588234901506497
+[2020-08-26T01:12:47.236] [INFO] users - profileInfo userID: 2588234901506497
+[2020-08-26T01:13:37.922] [INFO] users - profileInfo userID: 2588234901506497
+[2020-08-26T01:13:39.649] [INFO] users - profileInfo userID: 2588234901506497
+[2020-08-26T01:13:50.665] [INFO] users - profileInfo userID: 2588234901506497
+[2020-08-26T01:14:02.921] [INFO] users - profileInfo userID: 2588234901506497
+[2020-08-26T01:14:53.560] [INFO] users - logout
+[2020-08-26T01:15:01.034] [INFO] users - ユーザログ UserName:1@1.com
+[2020-08-26T01:15:01.035] [INFO] userDao - START getUserInfoByUserName: {"username":"1@1.com"}
+[2020-08-26T01:15:01.041] [INFO] userDao - END getUserInfoByUserName
+[2020-08-26T01:15:01.123] [INFO] users - login success UserID: 49
+[2020-08-26T01:15:01.134] [INFO] users - profileInfo userID: 49
+[2020-08-26T01:15:12.590] [INFO] users - logout
+[2020-08-26T01:15:14.691] [INFO] users - ユーザログ UserName:閻 文帥
+[2020-08-26T01:15:14.691] [INFO] users - Third Party by Facebook
+[2020-08-26T01:15:15.097] [INFO] users - profileInfo userID: 2588234901506497
+[2020-08-26T01:15:20.554] [INFO] users - logout
