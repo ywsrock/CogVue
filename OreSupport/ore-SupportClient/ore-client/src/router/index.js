@@ -13,9 +13,10 @@ import Layout from "@/layout/index.vue";
 // import blogDetail from "@/views/blog/blog_detail.vue"
 // import blogDelete from "@/views/blog/blog_list.vue"
 // import blogEdit from "@/views/blog/blog_edit.vue"
+import solutionRouter from "./solution/solutionRouter";
+
 Vue.use(VueRouter);
 const routes = [
-
   {
     path: "/",
     components: {
@@ -104,7 +105,8 @@ const routes = [
   //コグエボ結果表示
   taskRouter,
   //基本知識
-  knowledgeRouter
+  knowledgeRouter,
+  solutionRouter,
 ];
 const createRouter = () =>
   new VueRouter({
