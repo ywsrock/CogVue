@@ -52,7 +52,6 @@
               <li v-if="isLogin">
                 <a
                   class="text-success text-center"
-                  style="font-size:12px"
                   href=""
                   @click.prevent.stop="getProfileInfo"
                 >
@@ -89,7 +88,7 @@
                 <a href="#">ホーム<i class="fa fa-chevron-down"></i></a>
 
                 <ul class="sub-menu">
-                  <li><a href="/views/index.html">自分の状態を測る</a></li>
+                  <li><a href="">自分の状態を測る</a></li>
                   <li>
                     <a href="/views/blog/blog_top.html">体験談を読む</a>
                   </li>
@@ -103,10 +102,14 @@
 
                 <ul class="sub-menu">
                   <li>
-                    <a href="/views/blog/blog_top.html">ブログトップ</a>
+                    <a href="" @click.prevent.stop="blockClick(1)"
+                      >ブログトップ</a
+                    >
                   </li>
                   <li>
-                    <a href="/views/blog/blog_list.html">ブログ一覧</a>
+                    <a href="" @click.prevent.stop="blockClick(2)"
+                      >ブログ一覧</a
+                    >
                   </li>
                 </ul>
               </li>
@@ -144,12 +147,12 @@
                     <a href="#">結果を見る</a>
                     <ul>
                       <li>
-                        <a href="/views/cogevo/cogevo_dashbord.html"
+                        <a href="" @click.prevent.stop="taskClick(1)"
                           >あなたの結果</a
                         >
                       </li>
                       <li>
-                        <a href="/views/cogevo/cogevo_dashbord.html"
+                        <a href="" @click.prevent.stop="taskClick(2)"
                           >みんなの結果</a
                         >
                       </li>
@@ -163,6 +166,22 @@
                       >
                     </div>
                     <!-- /.special-->
+                  </li>
+                </ul>
+              </li>
+              <li>
+                <a href="#">基本知識<i class="fa fa-chevron-down"></i></a>
+
+                <ul class="sub-menu">
+                  <li>
+                    <a href="" @click.prevent.stop="clickKnowledge(1)"
+                      >基本知識詳細</a
+                    >
+                  </li>
+                  <li>
+                    <a href="" @click.prevent.stop="clickKnowledge(2)"
+                      >基本知識一覧</a
+                    >
                   </li>
                 </ul>
               </li>
@@ -208,6 +227,7 @@
 
 import store from "@/store";
 import { USER_INFO_STATIC_JS } from "../../utils/const";
+import { Switch } from "element-ui";
 
 export default {
   data() {
@@ -321,6 +341,40 @@ export default {
       this.isLogin = false;
       // this.$router.push(`/login?redirect=${this.$route.fullPath}`);
       this.$router.push(`/userInfo?redirect=${this.$route.fullPath}`);
+    },
+    // 基本知識クリック
+    clickKnowledge: function(index) {
+      switch (index) {
+        case 1:
+          this.$router.push("/knowledge/knowledgeDetail");
+          break;
+        default:
+          this.$router.push("/knowledge/knowledgeList");
+      }
+    },
+    // コグエボ結果
+    taskClick: function(index) {
+      switch (index) {
+        //個人結果
+        case 1:
+          this.$router.push("/task/userSummary");
+          break;
+        //　みんなの結果
+        default:
+          this.$router.push("/task/userSummary");
+      }
+    },
+    // ブログ
+    blockClick: function(index) {
+      switch (index) {
+        //ブログTOP
+        case 1:
+          this.$router.push("/blog/blog_top");
+          break;
+        //ブログ一覧
+        default:
+          this.$router.push("/blog/blogList");
+      }
     },
   },
 };
