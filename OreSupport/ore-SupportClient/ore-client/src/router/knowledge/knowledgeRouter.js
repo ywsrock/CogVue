@@ -15,12 +15,12 @@ const knowledgeRouter = {
     {
       path: "knowledgeDetail",
       name: "knowledgeDetail",
-      component: () => import("@/views/knowledge/knowledge_detail.vue")
+      component: () => import("@/views/knowledge/Detail.vue")
     },
     {
       path: "knowledgeList",
       name: "knowledgeList",
-      component: () => import("@/views/knowledge/knowledge_list.vue")
+      component: () => import("@/views/knowledge/List.vue")
     },
   ],
 };
