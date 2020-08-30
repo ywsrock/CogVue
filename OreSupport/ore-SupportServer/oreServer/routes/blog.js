@@ -35,7 +35,7 @@ router.get("/bloglist", [checkuser.verifyUser], async function (req, res, next) 
                 id: blog.id,
                 title: blog.Title,
                 content: blog.Content,
-                userName: blog.User.UserName
+                userName: blog.User.UserName || ""
             })
         })
 
@@ -46,7 +46,7 @@ router.get("/bloglist", [checkuser.verifyUser], async function (req, res, next) 
             data: {
                 title: "test",
                 content: contentArray,
-                userID:userID
+                userID: userID
             },
         }
     }
@@ -192,14 +192,14 @@ router.post("/blogUpdate", [checkuser.verifyUser], async function (req, res, nex
 
         // Blog登録処理
         blogObj = {
-            id:id ,
+            id: id,
             UserID: userID,
             Title: title,
             Content: content,
         };
 
         // DBにユーザ登録を呼び出す
-        const results = await blogmodel.blogUpdate(blogObj,{ key: "id", val: id });
+        const results = await blogmodel.blogUpdate(blogObj, { key: "id", val: id });
 
         // TODO　登録結果評価、エラーの場合、エラーメッセージを返す（再修正必要）
         if (typeof results.errors != "undefined") {

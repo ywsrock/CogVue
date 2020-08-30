@@ -2,8 +2,11 @@
   <div>
     <pre>
     <h1>ブログ編集</h1>
-  </pre>title :
-    <p>{{blogDetail.title}}</p>ブログ詳細
+  </pre
+    >
+    title :
+    <p>{{ blogDetail.title }}</p>
+    ブログ詳細
 
 <el-input
   type="text"
@@ -28,14 +31,15 @@
 </template>
 <script>
 import { Message } from "element-ui";
+/* eslint-disable */
 export default {
   data() {
     return {
       blogDetail: {
-        id:"",
+        id: "",
         title: "",
-        content: ""
-      }
+        content: "",
+      },
     };
   },
   mounted() {
@@ -51,12 +55,10 @@ export default {
     });
   },
 
-  methods:{
-
-
+  methods: {
     blogUpdate: function(e) {
       // 二重コミット防止のため、ボタンを非活性
-      e.target.disabled=true;
+      e.target.disabled = true;
       // // 全項目チェック、問題なければ、登録処理を行う
       // const isValid = this.validate(this.registForm, this.rules);
       // if (!isValid) {

@@ -5,15 +5,15 @@
         <div class="container">
           <div class="row">
             <div class="document-title">
-              <h1>Grid Version with Sidebar</h1>
+              <h1>商品・リスト</h1>
 
               <ul class="breadcrumb">
                 <li>
-                  <a href="#">Superlist</a>
+                  <a href="#">Solutions Store</a>
                 </li>
-                <li>
-                  <a href="#">Listing</a>
-                </li>
+                <!--<li>
+                  <a href="#"></a>
+                </li>-->
               </ul>
             </div>
             <!-- /.document-title -->
@@ -24,7 +24,11 @@
                   <div class="row">
                     <div class="col-sm-12 col-md-4">
                       <div class="form-group">
-                        <input type="text" placeholder="Keyword" class="form-control" />
+                        <input
+                          type="text"
+                          placeholder="商品名......"
+                          class="form-control"
+                        />
                       </div>
                       <!-- /.form-group -->
                     </div>
@@ -33,11 +37,13 @@
                     <div class="col-sm-12 col-md-4">
                       <div class="form-group">
                         <select class="form-control" title="Select Location">
-                          <option>Bronx</option>
-                          <option>Brooklyn</option>
-                          <option>Manhattan</option>
-                          <option>Staten Island</option>
-                          <option>Queens</option>
+                          <option>0 &nbsp;~ &nbsp;1000円</option>
+                          <option>1000円 &nbsp;~ &nbsp;2000円</option>
+                          <option>2000円 &nbsp;~ &nbsp;3000円</option>
+                          <option>3000円 &nbsp;~ &nbsp;4000円</option>
+                          <option>4000円 &nbsp;~ &nbsp;5000円</option>
+                          <option>5000円 &nbsp;~ &nbsp;6000円</option>
+                          <option>6000円 以上</option>
                         </select>
                       </div>
                       <!-- /.form-group -->
@@ -47,10 +53,10 @@
                     <div class="col-sm-12 col-md-4">
                       <div class="form-group">
                         <select class="form-control" title="Select Category">
-                          <option value>Automotive</option>
-                          <option value>Jobs</option>
-                          <option value>Nightlife</option>
-                          <option value>Services</option>
+                          <option value>記憶力サプリメント</option>
+                          <option value>空間力サプリメント</option>
+                          <option value>計画力サプリメント</option>
+                          <option value>見当識力サプリメント</option>
                         </select>
                       </div>
                       <!-- /.form-group -->
@@ -67,9 +73,7 @@
                         <a href="#">
                           <i class="fa fa-close"></i> Reset Filter
                         </a>
-                        <a href="#">
-                          <i class="fa fa-save"></i> Save Search
-                        </a>
+                        <a href="#"> <i class="fa fa-save"></i> Save Search </a>
                       </div>
                       <!-- /.filter-actions -->
                     </div>
@@ -77,8 +81,7 @@
 
                     <div class="col-sm-4">
                       <button type="submit" class="btn btn-primary">
-                        Redefine Search
-                        Result
+                        商品検索
                       </button>
                     </div>
                     <!-- /.col-* -->
@@ -118,7 +121,9 @@
                         <div class="card-simple-background">
                           <div class="card-simple-content">
                             <h2>
-                              <a href="listing-detail.html">Trip To Paris, France</a>
+                              <a href="/#/solution/detail"
+                                >Trip To Paris, France</a
+                              >
                             </h2>
                             <div class="card-simple-rating">
                               <i class="fa fa-star"></i>
@@ -131,7 +136,10 @@
 
                             <div class="card-simple-actions">
                               <a href="#" class="fa fa-star-o"></a>
-                              <a href="listing-detail.html" class="fa fa-search"></a>
+                              <a
+                                href="/#/solution/detail"
+                                class="fa fa-search"
+                              ></a>
                               <a href="#" class="fa fa-heart-o"></a>
                             </div>
                             <!-- /.card-simple-actions -->
@@ -156,7 +164,9 @@
                         <div class="card-simple-background">
                           <div class="card-simple-content">
                             <h2>
-                              <a href="listing-detail.html">Tasty Brazil Coffee</a>
+                              <a href="/#/solution/detail"
+                                >Tasty Brazil Coffee</a
+                              >
                             </h2>
                             <div class="card-simple-rating">
                               <i class="fa fa-star"></i>
@@ -169,7 +179,10 @@
 
                             <div class="card-simple-actions">
                               <a href="#" class="fa fa-star-o"></a>
-                              <a href="listing-detail.html" class="fa fa-search"></a>
+                              <a
+                                href="/#/solution/detail"
+                                class="fa fa-search"
+                              ></a>
                               <a href="#" class="fa fa-heart-o"></a>
                             </div>
                             <!-- /.card-simple-actions -->
@@ -192,7 +205,9 @@
                         <div class="card-simple-background">
                           <div class="card-simple-content">
                             <h2>
-                              <a href="listing-detail.html">Healthy Breakfast</a>
+                              <a href="/#/solution/detail"
+                                >Healthy Breakfast</a
+                              >
                             </h2>
                             <div class="card-simple-rating">
                               <i class="fa fa-star"></i>
@@ -205,7 +220,10 @@
 
                             <div class="card-simple-actions">
                               <a href="#" class="fa fa-star-o"></a>
-                              <a href="listing-detail.html" class="fa fa-search"></a>
+                              <a
+                                href="/#/solution/detail"
+                                class="fa fa-search"
+                              ></a>
                               <a href="#" class="fa fa-heart-o"></a>
                             </div>
                             <!-- /.card-simple-actions -->
@@ -230,7 +248,9 @@
                         <div class="card-simple-background">
                           <div class="card-simple-content">
                             <h2>
-                              <a href="listing-detail.html">Coffee &amp; Newspaper</a>
+                              <a href="/#/solution/detail"
+                                >Coffee &amp; Newspaper</a
+                              >
                             </h2>
                             <div class="card-simple-rating">
                               <i class="fa fa-star"></i>
@@ -243,7 +263,10 @@
 
                             <div class="card-simple-actions">
                               <a href="#" class="fa fa-star-o"></a>
-                              <a href="listing-detail.html" class="fa fa-search"></a>
+                              <a
+                                href="/#/solution/detail"
+                                class="fa fa-search"
+                              ></a>
                               <a href="#" class="fa fa-heart-o"></a>
                             </div>
                             <!-- /.card-simple-actions -->
@@ -266,7 +289,7 @@
                         <div class="card-simple-background">
                           <div class="card-simple-content">
                             <h2>
-                              <a href="listing-detail.html">Boat Trip</a>
+                              <a href="/#/solution/detail">Boat Trip</a>
                             </h2>
                             <div class="card-simple-rating">
                               <i class="fa fa-star"></i>
@@ -279,7 +302,10 @@
 
                             <div class="card-simple-actions">
                               <a href="#" class="fa fa-star-o"></a>
-                              <a href="listing-detail.html" class="fa fa-search"></a>
+                              <a
+                                href="/#/solution/detail"
+                                class="fa fa-search"
+                              ></a>
                               <a href="#" class="fa fa-heart-o"></a>
                             </div>
                             <!-- /.card-simple-actions -->
@@ -302,7 +328,9 @@
                         <div class="card-simple-background">
                           <div class="card-simple-content">
                             <h2>
-                              <a href="listing-detail.html">Italian Restaurant</a>
+                              <a href="/#/solution/detail"
+                                >Italian Restaurant</a
+                              >
                             </h2>
                             <div class="card-simple-rating">
                               <i class="fa fa-star"></i>
@@ -315,7 +343,10 @@
 
                             <div class="card-simple-actions">
                               <a href="#" class="fa fa-star-o"></a>
-                              <a href="listing-detail.html" class="fa fa-search"></a>
+                              <a
+                                href="/#/solution/detail"
+                                class="fa fa-search"
+                              ></a>
                               <a href="#" class="fa fa-heart-o"></a>
                             </div>
                             <!-- /.card-simple-actions -->
@@ -340,7 +371,9 @@
                         <div class="card-simple-background">
                           <div class="card-simple-content">
                             <h2>
-                              <a href="listing-detail.html">Best Brazil Coffee</a>
+                              <a href="/#/solution/detail"
+                                >Best Brazil Coffee</a
+                              >
                             </h2>
                             <div class="card-simple-rating">
                               <i class="fa fa-star"></i>
@@ -353,7 +386,10 @@
 
                             <div class="card-simple-actions">
                               <a href="#" class="fa fa-star-o"></a>
-                              <a href="listing-detail.html" class="fa fa-search"></a>
+                              <a
+                                href="/#/solution/detail"
+                                class="fa fa-search"
+                              ></a>
                               <a href="#" class="fa fa-heart-o"></a>
                             </div>
                             <!-- /.card-simple-actions -->
@@ -376,7 +412,7 @@
                         <div class="card-simple-background">
                           <div class="card-simple-content">
                             <h2>
-                              <a href="listing-detail.html">Retro Shop</a>
+                              <a href="/#/solution/detail">Retro Shop</a>
                             </h2>
                             <div class="card-simple-rating">
                               <i class="fa fa-star"></i>
@@ -389,7 +425,10 @@
 
                             <div class="card-simple-actions">
                               <a href="#" class="fa fa-star-o"></a>
-                              <a href="listing-detail.html" class="fa fa-search"></a>
+                              <a
+                                href="/#/solution/detail"
+                                class="fa fa-search"
+                              ></a>
                               <a href="#" class="fa fa-heart-o"></a>
                             </div>
                             <!-- /.card-simple-actions -->
@@ -414,7 +453,7 @@
                         <div class="card-simple-background">
                           <div class="card-simple-content">
                             <h2>
-                              <a href="listing-detail.html">Wine Tasting</a>
+                              <a href="/#/solution/detail">Wine Tasting</a>
                             </h2>
                             <div class="card-simple-rating">
                               <i class="fa fa-star"></i>
@@ -427,7 +466,10 @@
 
                             <div class="card-simple-actions">
                               <a href="#" class="fa fa-star-o"></a>
-                              <a href="listing-detail.html" class="fa fa-search"></a>
+                              <a
+                                href="/#/solution/detail"
+                                class="fa fa-search"
+                              ></a>
                               <a href="#" class="fa fa-heart-o"></a>
                             </div>
                             <!-- /.card-simple-actions -->
@@ -452,7 +494,9 @@
                         <div class="card-simple-background">
                           <div class="card-simple-content">
                             <h2>
-                              <a href="listing-detail.html">Affordable Office</a>
+                              <a href="/#/solution/detail"
+                                >Affordable Office</a
+                              >
                             </h2>
                             <div class="card-simple-rating">
                               <i class="fa fa-star"></i>
@@ -465,7 +509,10 @@
 
                             <div class="card-simple-actions">
                               <a href="#" class="fa fa-star-o"></a>
-                              <a href="listing-detail.html" class="fa fa-search"></a>
+                              <a
+                                href="/#/solution/detail"
+                                class="fa fa-search"
+                              ></a>
                               <a href="#" class="fa fa-heart-o"></a>
                             </div>
                             <!-- /.card-simple-actions -->
@@ -488,7 +535,7 @@
                         <div class="card-simple-background">
                           <div class="card-simple-content">
                             <h2>
-                              <a href="listing-detail.html">Quick Breakfast</a>
+                              <a href="/#/solution/detail">Quick Breakfast</a>
                             </h2>
                             <div class="card-simple-rating">
                               <i class="fa fa-star"></i>
@@ -501,7 +548,10 @@
 
                             <div class="card-simple-actions">
                               <a href="#" class="fa fa-star-o"></a>
-                              <a href="listing-detail.html" class="fa fa-search"></a>
+                              <a
+                                href="/#/solution/detail"
+                                class="fa fa-search"
+                              ></a>
                               <a href="#" class="fa fa-heart-o"></a>
                             </div>
                             <!-- /.card-simple-actions -->
@@ -526,7 +576,7 @@
                         <div class="card-simple-background">
                           <div class="card-simple-content">
                             <h2>
-                              <a href="listing-detail.html">Monumental City</a>
+                              <a href="/#/solution/detail">Monumental City</a>
                             </h2>
                             <div class="card-simple-rating">
                               <i class="fa fa-star"></i>
@@ -539,7 +589,10 @@
 
                             <div class="card-simple-actions">
                               <a href="#" class="fa fa-star-o"></a>
-                              <a href="listing-detail.html" class="fa fa-search"></a>
+                              <a
+                                href="/#/solution/detail"
+                                class="fa fa-search"
+                              ></a>
                               <a href="#" class="fa fa-heart-o"></a>
                             </div>
                             <!-- /.card-simple-actions -->
@@ -586,23 +639,26 @@
             <div class="col-sm-4 col-lg-3">
               <div class="sidebar">
                 <div class="widget">
-                  <h2 class="widgettitle">Recent Listings</h2>
+                  <h2 class="widgettitle">人気商品リスト</h2>
 
                   <div class="cards-small">
                     <div class="card-small">
                       <div class="card-small-image">
-                        <a href="listing-detail.html">
-                          <img src="../../assets/img/tmp/product-2.jpg" alt="Tasty Brazil Coffee" />
+                        <a href="/#/solution/detail">
+                          <img
+                            src="../../assets/img/tmp/product-2.jpg"
+                            alt="Tasty Brazil Coffee"
+                          />
                         </a>
                       </div>
                       <!-- /.card-small-image -->
 
                       <div class="card-small-content">
                         <h3>
-                          <a href="listing-detail.html">Tasty Brazil Coffee</a>
+                          <a href="/#/solution/detail">Tasty Brazil Coffee</a>
                         </h3>
                         <h4>
-                          <a href="listing-detail.html">New York / Village</a>
+                          <a href="/#/solution/detail">New York / Village</a>
                         </h4>
 
                         <div class="card-small-price">$180 / person</div>
@@ -616,18 +672,21 @@
                   <div class="cards-small">
                     <div class="card-small">
                       <div class="card-small-image">
-                        <a href="listing-detail.html">
-                          <img src="../../assets/img/tmp/product-3.jpg" alt="Healthy Breakfast" />
+                        <a href="/#/solution/detail">
+                          <img
+                            src="../../assets/img/tmp/product-3.jpg"
+                            alt="Healthy Breakfast"
+                          />
                         </a>
                       </div>
                       <!-- /.card-small-image -->
 
                       <div class="card-small-content">
                         <h3>
-                          <a href="listing-detail.html">Healthy Breakfast</a>
+                          <a href="/#/solution/detail">Healthy Breakfast</a>
                         </h3>
                         <h4>
-                          <a href="listing-detail.html">New York / Village</a>
+                          <a href="/#/solution/detail">New York / Village</a>
                         </h4>
 
                         <div class="card-small-price">$180 / person</div>
@@ -641,7 +700,7 @@
                   <div class="cards-small">
                     <div class="card-small">
                       <div class="card-small-image">
-                        <a href="listing-detail.html">
+                        <a href="/#/solution/detail">
                           <img
                             src="../../assets/img/tmp/product-4.jpg"
                             alt="Coffee &amp; Newspaper"
@@ -652,10 +711,12 @@
 
                       <div class="card-small-content">
                         <h3>
-                          <a href="listing-detail.html">Coffee &amp; Newspaper</a>
+                          <a href="/#/solution/detail"
+                            >Coffee &amp; Newspaper</a
+                          >
                         </h3>
                         <h4>
-                          <a href="listing-detail.html">New York / Village</a>
+                          <a href="/#/solution/detail">New York / Village</a>
                         </h4>
 
                         <div class="card-small-price">$180 / person</div>
@@ -704,7 +765,9 @@
                       </div>
                       <!-- /.form-group -->
 
-                      <button class="btn btn-primary btn-block" type="submit">Search</button>
+                      <button class="btn btn-primary btn-block" type="submit">
+                        Search
+                      </button>
                     </form>
                   </div>
                 </div>
@@ -718,8 +781,7 @@
                       <div class="day clearfix">
                         <span class="name">Mon</span>
                         <span class="hours">
-                          07:00 AM - 07:00
-                          PM
+                          07:00 AM - 07:00 PM
                         </span>
                       </div>
                       <!-- /.day -->
@@ -727,8 +789,7 @@
                       <div class="day clearfix">
                         <span class="name">Tue</span>
                         <span class="hours">
-                          07:00 AM - 07:00
-                          PM
+                          07:00 AM - 07:00 PM
                         </span>
                       </div>
                       <!-- /.day -->
@@ -736,8 +797,7 @@
                       <div class="day clearfix">
                         <span class="name">Wed</span>
                         <span class="hours">
-                          07:00 AM - 07:00
-                          PM
+                          07:00 AM - 07:00 PM
                         </span>
                       </div>
                       <!-- /.day -->
@@ -745,8 +805,7 @@
                       <div class="day clearfix">
                         <span class="name">Thu</span>
                         <span class="hours">
-                          07:00 AM - 07:00
-                          PM
+                          07:00 AM - 07:00 PM
                         </span>
                       </div>
                       <!-- /.day -->
@@ -754,8 +813,7 @@
                       <div class="day clearfix">
                         <span class="name">Fri</span>
                         <span class="hours">
-                          07:00 AM - 07:00
-                          PM
+                          07:00 AM - 07:00 PM
                         </span>
                       </div>
                       <!-- /.day -->
@@ -763,8 +821,7 @@
                       <div class="day clearfix">
                         <span class="name">Sat</span>
                         <span class="hours">
-                          07:00 AM - 02:00
-                          PM
+                          07:00 AM - 02:00 PM
                         </span>
                       </div>
                       <!-- /.day -->

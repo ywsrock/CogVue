@@ -382,7 +382,7 @@
                         <button
                           class="btn btn-primary btn-block"
                           type="submit"
-                          onclick="location.href='#/createBlog';return false;"
+                          onclick="location.href='#/blog/createBlog';return false;"
                         >
                           新規投稿
                         </button>
@@ -648,6 +648,7 @@
 </template>
 
 <script>
+/* eslint-disable */
 export default {
   data() {
     return {

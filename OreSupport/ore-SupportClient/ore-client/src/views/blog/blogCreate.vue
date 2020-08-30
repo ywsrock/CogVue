@@ -15,14 +15,14 @@
           required
         />
         <label for="content"><b>内容</b></label>
-          <textarea
-            class="form-control"
-            rows="7"
-            placeholder="内容"
-            name="content"
-            v-model="registForm.content"
-            :readonly="is_readonly"
-          ></textarea>
+        <textarea
+          class="form-control"
+          rows="7"
+          placeholder="内容"
+          name="content"
+          v-model="registForm.content"
+          :readonly="is_readonly"
+        ></textarea>
         <!-- <label for="repeatpassword"><b>その他</b></label>
         <input
           type="text"
@@ -72,7 +72,7 @@ export default {
     // blog登録処理ハンドラー
     createBlog: function(e) {
       // 二重コミット防止のため、ボタンを非活性
-      e.target.disabled=true;
+      e.target.disabled = true;
       // // 全項目チェック、問題なければ、登録処理を行う
       // const isValid = this.validate(this.registForm, this.rules);
       // if (!isValid) {
@@ -95,7 +95,7 @@ export default {
           });
       }
     },
-};
+  };
 </script>
 
 <style scoped>
