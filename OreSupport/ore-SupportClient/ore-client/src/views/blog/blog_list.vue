@@ -106,7 +106,7 @@
                         <button
                           class="btn btn-primary btn-block"
                           type="submit"
-                          onclick="location.href='#/createBlog';return false;"
+                          onclick="location.href='#/blog/createBlog';return false;"
                         >
                           新規投稿
                         </button>
@@ -399,7 +399,7 @@
 </template>
 
 <script>
-import { Message } from "element-ui";
+/* eslint-disable */
 export default {
   data() {
     return {
@@ -425,7 +425,7 @@ export default {
         });
       })
       .catch((err) => {
-        console.log("err-------");
+        console.log(err);
       });
   },
   methods: {
@@ -441,7 +441,7 @@ export default {
       // this.$store.dispatch("blog/getBlogDetail",row.id)
       // this.$store.dispatch("blog/getBlogDetail",row.id)
       // .then(res =>{   //成功の場合
-      this.$router.push("/blogDetail?id=" + id);
+      this.$router.push("/blog/blogDetail?id=" + id);
       // }).catch(error =>{
       //   console.log("err=====");
       // })
@@ -457,7 +457,7 @@ export default {
         .dispatch("blog/getBlogDetail", row.id)
         .then((res) => {
           //成功の場合
-          this.$router.push("/blogEdit?id=" + row.id);
+          this.$router.push("/blog/blogEdit?id=" + row.id);
         })
         .catch((error) => {
           console.log("err=====");

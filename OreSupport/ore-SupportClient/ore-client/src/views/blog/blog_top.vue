@@ -244,7 +244,7 @@ export default {
         //成功の場合
         .then((res) => {
           let userid = res.userID;
-          this.$router.push("/blogList?userid=" + userid);
+          this.$router.push("/blog/blogList?userid=" + userid);
         })
         //失敗の場合
         .catch();

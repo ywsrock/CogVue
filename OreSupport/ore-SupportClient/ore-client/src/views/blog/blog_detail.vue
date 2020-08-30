@@ -382,7 +382,7 @@
                         <button
                           class="btn btn-primary btn-block"
                           type="submit"
-                          onclick="location.href='#/createBlog';return false;"
+                          onclick="location.href='#/blog/createBlog';return false;"
                         >
                           新規投稿
                         </button>
@@ -648,6 +648,7 @@
 </template>
 
 <script>
+/* eslint-disable */
 export default {
   data() {
     return {
@@ -665,8 +666,6 @@ export default {
     //ブログ詳細取得
     this.$store
       .dispatch("blog/getBlogDetail", this.$route.query.id)
-      /* eslint-disable */
-
       .then((res) => {
         //成功の場合
         // this.$router.push("/blogDetail?id=" + this.$route.query.id);

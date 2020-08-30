@@ -15,14 +15,14 @@
           required
         />
         <label for="content"><b>内容</b></label>
-          <textarea
-            class="form-control"
-            rows="7"
-            placeholder="内容"
-            name="content"
-            v-model="registForm.content"
-            :readonly="is_readonly"
-          ></textarea>
+        <textarea
+          class="form-control"
+          rows="7"
+          placeholder="内容"
+          name="content"
+          v-model="registForm.content"
+          :readonly="is_readonly"
+        ></textarea>
         <!-- <label for="repeatpassword"><b>その他</b></label>
         <input
           type="text"
@@ -72,29 +72,29 @@ export default {
     // blog登録処理ハンドラー
     createBlog: function(e) {
       // 二重コミット防止のため、ボタンを非活性
-      e.target.disabled=true;
+      e.target.disabled = true;
       // // 全項目チェック、問題なければ、登録処理を行う
       // const isValid = this.validate(this.registForm, this.rules);
       // if (!isValid) {
-        // ユーザ登録処理
-         this.$store
-          .dispatch("blog/createBlog", this.registForm)
-          .then((res) => {
-            Message({
-              message: "作成OK",
-              type: "success",
-              duration: 5 * 1000,
-            }),
-              // ログイン画面に遷移
-              this.$router.push({ path: "/blogList" }).catch(err => {});
-          })
-          .catch((error) => {
-             e.target.disabled=false;
-            console.log(error.data);
-            console.log("作成失敗");
-          });
-      }
+      // ユーザ登録処理
+      this.$store
+        .dispatch("blog/createBlog", this.registForm)
+        .then((res) => {
+          Message({
+            message: "作成OK",
+            type: "success",
+            duration: 5 * 1000,
+          }),
+            // ログイン画面に遷移
+            this.$router.push({ path: "/blog/blogList" }).catch((err) => {});
+        })
+        .catch((error) => {
+          e.target.disabled = false;
+          console.log(error.data);
+          console.log("作成失敗");
+        });
     },
+  },
 };
 </script>
 

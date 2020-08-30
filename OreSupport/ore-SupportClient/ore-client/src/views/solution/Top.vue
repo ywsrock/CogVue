@@ -138,7 +138,7 @@
                           <div class="card-simple-actions">
                             <a href="#" class="fa fa-star-o"></a>
                             <a
-                              href="listing-detail.html"
+                              href="/#/solution/detail"
                               class="fa fa-search"
                             ></a>
                             <a href="#" class="fa fa-heart-o"></a>
@@ -181,7 +181,7 @@
                           <div class="card-simple-actions">
                             <a href="#" class="fa fa-star-o"></a>
                             <a
-                              href="listing-detail.html"
+                              href="/#/solution/detail"
                               class="fa fa-search"
                             ></a>
                             <a href="#" class="fa fa-heart-o"></a>
@@ -222,7 +222,7 @@
                           <div class="card-simple-actions">
                             <a href="#" class="fa fa-star-o"></a>
                             <a
-                              href="listing-detail.html"
+                              href="/#/solution/detail"
                               class="fa fa-search"
                             ></a>
                             <a href="#" class="fa fa-heart-o"></a>
@@ -265,7 +265,7 @@
                           <div class="card-simple-actions">
                             <a href="#" class="fa fa-star-o"></a>
                             <a
-                              href="listing-detail.html"
+                              href="/#/solution/detail"
                               class="fa fa-search"
                             ></a>
                             <a href="#" class="fa fa-heart-o"></a>
@@ -306,7 +306,7 @@
                           <div class="card-simple-actions">
                             <a href="#" class="fa fa-star-o"></a>
                             <a
-                              href="listing-detail.html"
+                              href="/#/solution/detail"
                               class="fa fa-search"
                             ></a>
                             <a href="#" class="fa fa-heart-o"></a>
@@ -347,7 +347,7 @@
                           <div class="card-simple-actions">
                             <a href="#" class="fa fa-star-o"></a>
                             <a
-                              href="listing-detail.html"
+                              href="/#/solution/detail"
                               class="fa fa-search"
                             ></a>
                             <a href="#" class="fa fa-heart-o"></a>
@@ -388,7 +388,7 @@
                           <div class="card-simple-actions">
                             <a href="#" class="fa fa-star-o"></a>
                             <a
-                              href="listing-detail.html"
+                              href="/#/solution/detail"
                               class="fa fa-search"
                             ></a>
                             <a href="#" class="fa fa-heart-o"></a>
@@ -425,7 +425,7 @@
                           <div class="card-simple-actions">
                             <a href="#" class="fa fa-star-o"></a>
                             <a
-                              href="listing-detail.html"
+                              href="/#/solution/detail"
                               class="fa fa-search"
                             ></a>
                             <a href="#" class="fa fa-heart-o"></a>
@@ -466,7 +466,7 @@
                           <div class="card-simple-actions">
                             <a href="#" class="fa fa-star-o"></a>
                             <a
-                              href="listing-detail.html"
+                              href="/#/solution/detail"
                               class="fa fa-search"
                             ></a>
                             <a href="#" class="fa fa-heart-o"></a>
@@ -507,7 +507,7 @@
                           <div class="card-simple-actions">
                             <a href="#" class="fa fa-star-o"></a>
                             <a
-                              href="listing-detail.html"
+                              href="/#/solution/detail"
                               class="fa fa-search"
                             ></a>
                             <a href="#" class="fa fa-heart-o"></a>
@@ -546,7 +546,7 @@
                           <div class="card-simple-actions">
                             <a href="#" class="fa fa-star-o"></a>
                             <a
-                              href="listing-detail.html"
+                              href="/#/solution/detail"
                               class="fa fa-search"
                             ></a>
                             <a href="#" class="fa fa-heart-o"></a>
@@ -587,7 +587,7 @@
                           <div class="card-simple-actions">
                             <a href="#" class="fa fa-star-o"></a>
                             <a
-                              href="listing-detail.html"
+                              href="/#/solution/detail"
                               class="fa fa-search"
                             ></a>
                             <a href="#" class="fa fa-heart-o"></a>
