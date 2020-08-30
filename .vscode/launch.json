@@ -1,23 +1,17 @@
 {
-    "version": "0.2.0",
-    "configurations": [
-      // {
-      //   "type": "node",
-      //   "request": "launch",
-      //   "name": "Launch Program",
-      //   "program": "${workspaceRoot}/DBORM/mysqlorm/bin/www"
-      // },
-      // {
-      //   "type": "node",
-      //   "request": "launch",
-      //   "name": "Launch Program",
-      //   "program": "${workspaceRoot}/OreSupport_Team/ore-SupportServer/oreServer/bin/www"
-      // },
-      {
-        "type": "node",
-        "request": "launch",
-        "name": "Launch Program",
-        "program":"C:/Users/htate/PBT_ORESAPO/PBL2020/OreSupport/ore-SupportServer/oreServer/bin/www"
-      }
-    ]
+  "version": "0.2.0",
+  "configurations": [
+    // {
+    //   "type": "node",
+    //   "request": "launch",
+    //   "name": "Launch Program",
+    //   "program": "${workspaceRoot}/DBORM/mysqlorm/bin/www"
+    // },
+    {
+      "type": "node",
+      "request": "launch",
+      "name": "Launch Program",
+      "program": "${workspaceRoot}/OreSupport/ore-SupportServer/oreServer/bin/www"
+    }
+  ]
 }

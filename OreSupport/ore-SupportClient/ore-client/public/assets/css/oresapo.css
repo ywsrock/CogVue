@@ -1,0 +1,19 @@
+button {
+  margin-top: 5px;
+  margin-right: 5px;
+}
+
+.btn {
+  font-size: 15px;
+}
+
+.page-header {
+  margin-bottom: 20px;
+}
+
+.header-content .nav > li > a,
+.header-content .nav > li .sub-menu li a,
+.header-content .nav > li .mega-menu > li > a,
+.header-content .nav > li .mega-menu > li ul a {
+  font-size: 20px;
+}

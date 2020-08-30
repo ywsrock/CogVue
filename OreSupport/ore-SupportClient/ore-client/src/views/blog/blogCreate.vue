@@ -15,15 +15,14 @@
           required
         />
         <label for="content"><b>内容</b></label>
-        <input
-          type="text"
-          ref="content"
-          placeholder="内容"
-          name="content"
-          v-model="registForm.content"
-          
-          required
-        />
+          <textarea
+            class="form-control"
+            rows="7"
+            placeholder="内容"
+            name="content"
+            v-model="registForm.content"
+            :readonly="is_readonly"
+          ></textarea>
         <!-- <label for="repeatpassword"><b>その他</b></label>
         <input
           type="text"
@@ -31,7 +30,7 @@
           placeholder="その他"
           name="repeatpassword"
           v-model="registForm.repeatpassword"
-          
+
           required
         /> -->
         <!-- <p style="color:red;font-size:12px" ref="e-password2"></p>
@@ -43,7 +42,7 @@
             name="remember"
             style="margin-bottom:15px"
           />
-          
+
         </label> -->
 
         <div class="clearfix">
@@ -87,7 +86,7 @@ export default {
               duration: 5 * 1000,
             }),
               // ログイン画面に遷移
-              this.$router.push({ path: "/login" }).catch(err => {});
+              this.$router.push({ path: "/blog/blogList" }).catch(err => {});
           })
           .catch((error) => {
              e.target.disabled=false;

@@ -1,156 +1,217 @@
 <template>
-  <div :class="className" :style="{height:height,width:width}" />
+  <div :class="className" :style="{ height: height, width: width }" />
 </template>
 
 <script>
-import echarts from 'echarts'
-require('echarts/theme/macarons') // echarts theme
-import resize from './mixins/resize'
+import echarts from "echarts";
+require("echarts/theme/macarons"); // echarts theme
+import resize from "./mixins/resize";
 
 export default {
   mixins: [resize],
   props: {
     className: {
       type: String,
-      default: 'chart'
+      default: "chart",
     },
     width: {
       type: String,
-      default: '100%'
+      default: "110%",
     },
     height: {
       type: String,
-      default: '350px'
+      default: "350px",
     },
     autoResize: {
       type: Boolean,
-      default: true
+      default: true,
     },
     chartData: {
       type: Object,
-      required: true
-    }
+      required: true,
+    },
   },
   data() {
     return {
-      chart: null
-    }
+      chart: null,
+    };
   },
   watch: {
     chartData: {
       deep: true,
       handler(val) {
-        this.setOptions(val)
-      }
-    }
+        this.setOptions(val);
+      },
+    },
   },
   mounted() {
     this.$nextTick(() => {
-      this.initChart()
-    })
+      this.initChart();
+    });
   },
   beforeDestroy() {
     if (!this.chart) {
-      return
+      return;
     }
-    this.chart.dispose()
-    this.chart = null
+    this.chart.dispose();
+    this.chart = null;
   },
   methods: {
     initChart() {
-      this.chart = echarts.init(this.$el, 'macarons')
-      this.setOptions(this.chartData)
+      this.chart = echarts.init(this.$el, "macarons");
+      this.setOptions(this.chartData);
     },
-    setOptions({ week, month,year } = {}) {
+    setOptions({
+      OrientationAbility,
+      AttentionAbility,
+      MemoryAbility,
+      PlanAblity,
+      SpatialAbility,
+    } = {}) {
       this.chart.setOption({
         xAxis: {
-          data: ['2020/01/01', '2020/01/02', '2020/01/03', '2020/01/04', '2020/01/05', '2020/01/06', '2020/01/07'],
+          data: [
+            "2020/01/01",
+            "2020/01/02",
+            "2020/01/03",
+            "2020/01/04",
+            "2020/01/05",
+            "2020/01/06",
+            "2020/01/07",
+          ],
           boundaryGap: false,
           axisTick: {
-            show: false
-          }
+            show: false,
+          },
         },
         grid: {
           left: 10,
-          right: 10,
+          // right: 10,
           bottom: 20,
-          top: 30,
-          containLabel: true
+          top: 90,
+          containLabel: true,
         },
         tooltip: {
-          trigger: 'axis',
+          trigger: "axis",
           axisPointer: {
-            type: 'cross'
+            type: "cross",
           },
-          padding: [5, 10]
+          padding: [5, 10],
         },
         yAxis: {
           axisTick: {
-            show: false
-          }
+            show: false,
+          },
+          splitLine: {
+            lineStyle: {
+              // color: "#57617B",
+            },
+          },
         },
         legend: {
-          data: ['週', '月', '年']
+          data: ["見当識", "注意力", "記憶力", "計画力", "空間認識力"],
         },
-        series: [{
-          name: '週', itemStyle: {
-            normal: {
-              color: '#FF005A',
-              lineStyle: {
-                color: '#FF005A',
-                width: 2
-              }
-            }
-          },
-          smooth: true,
-          type: 'line',
-          data: week,
-          animationDuration: 2800,
-          animationEasing: 'cubicInOut'
-        },
-        {
-          name: '月',
-          smooth: true,
-          type: 'line',
-          itemStyle: {
-            normal: {
-              color: '#3888fa',
-              lineStyle: {
-                color: '#3888fa',
-                width: 2
+        series: [
+          {
+            name: "見当識",
+            itemStyle: {
+              normal: {
+                color: "#FF005A",
+                lineStyle: {
+                  color: "#FF005A",
+                  width: 2,
+                },
               },
-              areaStyle: {
-                color: '#f3f8ff'
-              }
-            }
+            },
+            smooth: true,
+            type: "line",
+            data: OrientationAbility,
+            animationDuration: 2800,
+            animationEasing: "cubicInOut",
           },
-          data: month,
-          animationDuration: 2800,
-          animationEasing: 'quadraticOut'
-        },
-        {
-          name: '年',
-          smooth: true,
-          type: 'line',
-          itemStyle: {
-            normal: {
-              color: '#4b565b',
-              lineStyle: {
-                color: '#4b565b',
-                width: 2
+          {
+            name: "注意力",
+            smooth: true,
+            type: "line",
+            itemStyle: {
+              normal: {
+                color: "#3888fa",
+                lineStyle: {
+                  color: "#3888fa",
+                  width: 2,
+                },
+                areaStyle: {
+                  color: "#f3f8ff",
+                },
               },
-              areaStyle: {
-                color: '#f1f8ff'
-              }
-            }
+            },
+            data: AttentionAbility,
+            animationDuration: 2800,
+            animationEasing: "quadraticOut",
           },
-          data: year,
-          animationDuration: 2800,
-          animationEasing: 'quadraticOut'
-        }
-        ]
-      })
-    }
-  }
-}
+          {
+            name: "記憶力",
+            smooth: true,
+            type: "line",
+            itemStyle: {
+              normal: {
+                color: "#4b565b",
+                lineStyle: {
+                  color: "#4b565b",
+                  width: 2,
+                },
+                areaStyle: {
+                  color: "#f1f8ff",
+                },
+              },
+            },
+            data: MemoryAbility,
+            animationDuration: 2800,
+            animationEasing: "quadraticOut",
+          },
+          {
+            name: "計画力",
+            smooth: true,
+            type: "line",
+            itemStyle: {
+              normal: {
+                color: "#05f525",
+                lineStyle: {
+                  color: "#05f525",
+                  width: 2,
+                },
+                areaStyle: {
+                  color: "#f1f8ff",
+                },
+              },
+            },
+            data: PlanAblity,
+            animationDuration: 2800,
+            animationEasing: "quadraticOut",
+          },
+          {
+            name: "空間認識力",
+            smooth: true,
+            type: "line",
+            itemStyle: {
+              normal: {
+                color: "#f505cd",
+                lineStyle: {
+                  color: "#f505cd",
+                  width: 2,
+                },
+                areaStyle: {
+                  color: "#f1f8ff",
+                },
+              },
+            },
+            data: SpatialAbility,
+            animationDuration: 2800,
+            animationEasing: "quadraticOut",
+          },
+        ],
+      });
+    },
+  },
+};
 </script>

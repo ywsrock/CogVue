@@ -1,26 +1,26 @@
-export function sleep(wSec){
-    
-    var countSec = 0;
-    var id = setTimeout(function () {
-        countSec ++; 
-        // 経過時間 >= 待機時間の場合、待機終了。
-        if (countSec >= wSec) {
-            // タイマー停止
-            clearInterval(id);
-        }
-    }, wSec);   
+export function sleep(wSec) {
+
+  var countSec = 0;
+  var id = setTimeout(function () {
+    countSec++;
+    // 経過時間 >= 待機時間の場合、待機終了。
+    if (countSec >= wSec) {
+      // タイマー停止
+      clearInterval(id);
+    }
+  }, wSec);
 }
 
 /**
  * param1 Function func 実行関数
- * param2 number wait　町時間
- * param3 boolean immediate　実行状態
+ * param2 number wait 待ち時間
+ * param3 boolean immediate 実行状態
  * return *
  */
 export function debounce(func, wait, immediate) {
   let timeout, args, context, timestamp, result
 
-  const later = function() {
+  const later = function () {
     // 前回まで経過時間
     const last = +new Date() - timestamp
 
@@ -37,7 +37,7 @@ export function debounce(func, wait, immediate) {
     }
   }
 
-  return function(...args) {
+  return function (...args) {
     context = this
     timestamp = +new Date()
     const callNow = immediate && !timeout

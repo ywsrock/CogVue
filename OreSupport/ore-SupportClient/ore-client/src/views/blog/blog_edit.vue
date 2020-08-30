@@ -23,7 +23,7 @@
 >
 </el-input>
 <el-button  size="mini" @click="blogUpdate">Update</el-button>
-  
+
   </div>
 </template>
 <script>
@@ -71,7 +71,7 @@ export default {
               duration: 5 * 1000,
             }),
               // ブログリスト画面に遷移
-              this.$router.push("/blogList");
+              this.$router.push("/blog/blogList");
           })
           .catch((error) => {
             e.target.disabled=false;
