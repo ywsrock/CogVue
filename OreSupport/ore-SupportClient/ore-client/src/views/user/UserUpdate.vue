@@ -25,7 +25,7 @@
         <div class="main">
           <div class="main-inner">
             <div class="container">
-              <div class="row">
+              <div class="orig-row">
                 <div class="col-sm-4 col-lg-3">
                   <div class="sidebar">
                     <div class="widget">
@@ -95,7 +95,7 @@
                         >
                       </h3>
 
-                      <div class="row">
+                      <div class="orig-row">
                         <div class="form-group col-sm-6">
                           <label>姓</label>
                           <input
@@ -314,7 +314,7 @@
                         >
                       </h3>
 
-                      <div class="row">
+                      <div class="orig-row">
                         <div class="form-group col-sm-6">
                           <label>都道府県</label>
                           <input

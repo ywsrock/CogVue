@@ -29,7 +29,7 @@
 
                 <form class="filter" method="post" action="?">
                   <h2>詳細検索</h2>
-                  <div class="row">
+                  <div class="orig-row">
                     <div class="col-sm-12 col-md-4">
                       <div class="form-group">
                         <input
@@ -74,7 +74,7 @@
 
                   <hr />
 
-                  <div class="row">
+                  <div class="orig-row">
                     <div class="col-sm-8">
                       <div class="filter-actions">
                         <a href="#"
@@ -128,7 +128,7 @@
                 <!-- /.page-title -->
 
                 <div class="cards-simple-wrapper">
-                  <div class="row">
+                  <div class="orig-row">
                     <div
                       class="col-sm-6 col-md-4 col-lg-3"
                       v-for="item in tableData"

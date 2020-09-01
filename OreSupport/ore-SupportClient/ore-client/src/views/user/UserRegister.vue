@@ -4,7 +4,7 @@
       <div class="main-inner">
         <div class="container">
           <div class="content">
-            <div class="row">
+            <div class="orig-row">
               <div class="col-sm-4 col-sm-offset-4">
                 <div class="page-title">
                   <h1>Register</h1>
@@ -20,11 +20,14 @@
                       v-model="registForm.email"
                       @blur="checkEmail"
                       name="email"
-                      required    
-                      style="background-color:white;border: 2px solid #e9e9e9;"    
-                      class="form-control"                              
+                      required
+                      style="background-color:white;border: 2px solid #e9e9e9;"
+                      class="form-control"
                     />
-                  <p style="color:red;font-size:12px;float:top" ref="e-email"></p>                    
+                    <p
+                      style="color:red;font-size:12px;float:top"
+                      ref="e-email"
+                    ></p>
                   </div>
                   <!-- /.form-group -->
 
@@ -37,15 +40,17 @@
                       v-model="registForm.password"
                       @blur="checkPassword"
                       required
-                      style="background-color:white;border: 2px solid #e9e9e9;"    
-                      class="form-control"                              
+                      style="background-color:white;border: 2px solid #e9e9e9;"
+                      class="form-control"
                     />
-                  <p style="color:red;font-size:12px" ref="e-password"></p>                                    
+                    <p style="color:red;font-size:12px" ref="e-password"></p>
                   </div>
                   <!-- /.form-group -->
 
                   <div class="form-group">
-                    <label for="login-form-password-retype">Retype password</label>
+                    <label for="login-form-password-retype"
+                      >Retype password</label
+                    >
                     <input
                       type="password"
                       ref="repeatpassword"
@@ -53,13 +58,13 @@
                       v-model="registForm.repeatpassword"
                       @blur="checkrepeatPassword"
                       required
-                      style="background-color:white;border: 2px solid #e9e9e9;"    
-                      class="form-control"                              
+                      style="background-color:white;border: 2px solid #e9e9e9;"
+                      class="form-control"
                     />
-                  <p style="color:red;font-size:12px" ref="e-password2"></p>                                    
+                    <p style="color:red;font-size:12px" ref="e-password2"></p>
                   </div>
                   <!-- /.form-group -->
-                  
+
                   <label>
                     <input
                       type="checkbox"
@@ -74,7 +79,9 @@
                     <a href="#" style="color:dodgerblue">プライバシー</a>.
                   </p>
                   <div style="text-align: right;">
-                    <button type="submit" class="btn btn-primary">Register</button>
+                    <button type="submit" class="btn btn-primary">
+                      Register
+                    </button>
                   </div>
                   <!-- <button type="submit" class="btn btn-primary pull-right">Register</button> -->
                 </form>
@@ -196,16 +203,15 @@ export default {
       return check_result;
     },
 
-
     // ユーザ登録処理ハンドラー
     singUp: function(e) {
       // 二重コミット防止のため、ボタンを非活性
-      e.target.disabled=true;
+      e.target.disabled = true;
       // 全項目チェック、問題なければ、登録処理を行う
       const isValid = this.validate(this.registForm, this.rules);
       if (!isValid) {
         // ユーザ登録処理
-         this.$store
+        this.$store
           .dispatch("user/singUp", this.registForm)
           .then((res) => {
             Message({
@@ -214,10 +220,10 @@ export default {
               duration: 5 * 1000,
             }),
               // ログイン画面に遷移
-              this.$router.push({ path: "/login" }).catch(err => {});
+              this.$router.push({ path: "/login" }).catch((err) => {});
           })
           .catch((error) => {
-             e.target.disabled=false;
+            e.target.disabled = false;
             console.log(error.data);
             console.log("ユーザ登録失敗");
           });
@@ -253,7 +259,6 @@ hr {
   border: 1px solid #f1f1f1;
   margin-bottom: 25px;
 }
-
 
 /* Extra styles for the cancel button */
 .cancelbtn {

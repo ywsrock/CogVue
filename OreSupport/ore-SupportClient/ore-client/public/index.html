@@ -1,40 +1,111 @@
 <!DOCTYPE html>
 <html lang="en">
-<head>
-  <meta charset="utf-8">
-  <meta http-equiv="X-UA-Compatible" content="IE=edge">
-  <meta name="viewport" content="width=device-width,initial-scale=1.0">
-  <link rel="icon" href="<%= BASE_URL %>favicon.ico">
-  <title><%= htmlWebpackPlugin.options.title %></title>
-</head>
-<body>
-  <noscript>
-    <strong>We're sorry but <%= htmlWebpackPlugin.options.title %> doesn't work properly without JavaScript enabled. Please enable it to continue.</strong>
-  </noscript>
-  <div id="app"></div>
-  <!-- built files will be auto injected -->
-<script src="<%= BASE_URL %>assets/js/jquery.js" type="text/javascript"></script>
-<script src="<%= BASE_URL %>assets/js/map.js" type="text/javascript"></script>
-<script src="<%= BASE_URL %>assets/libraries/bootstrap-sass/javascripts/bootstrap/collapse.js" type="text/javascript"></script>
-<script src="<%= BASE_URL %>assets/libraries/bootstrap-sass/javascripts/bootstrap/carousel.js" type="text/javascript"></script>
-<script src="<%= BASE_URL %>assets/libraries/bootstrap-sass/javascripts/bootstrap/transition.js" type="text/javascript"></script>
-<script src="<%= BASE_URL %>assets/libraries/bootstrap-sass/javascripts/bootstrap/dropdown.js" type="text/javascript"></script>
-<script src="<%= BASE_URL %>assets/libraries/bootstrap-sass/javascripts/bootstrap/tooltip.js" type="text/javascript"></script>
-<script src="<%= BASE_URL %>assets/libraries/bootstrap-sass/javascripts/bootstrap/tab.js" type="text/javascript"></script>
-<script src="<%= BASE_URL %>assets/libraries/bootstrap-sass/javascripts/bootstrap/alert.js" type="text/javascript"></script>
-<script src="<%= BASE_URL %>assets/libraries/colorbox/jquery.colorbox-min.js" type="text/javascript"></script>
-<script src="<%= BASE_URL %>assets/libraries/flot/jquery.flot.min.js" type="text/javascript"></script>
-<script src="<%= BASE_URL %>assets/libraries/flot/jquery.flot.spline.js" type="text/javascript"></script>
-<script src="<%= BASE_URL %>assets/libraries/bootstrap-select/bootstrap-select.min.js" type="text/javascript"></script>
-<!--<script src="https://maps.googleapis.com/maps/api/js?libraries=weather,geometry,visualization,places,drawing" type="text/javascript"></script>
+  <head>
+    <meta charset="utf-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width,initial-scale=1.0" />
+    <link rel="icon" href="<%= BASE_URL %>favicon.ico" />
+
+    <title><%= htmlWebpackPlugin.options.title %></title>
+    <link
+      rel="stylesheet"
+      href="https://fonts.googleapis.com/css?family=Roboto:100,300,400,500,700,900"
+    />
+    <link
+      rel="stylesheet"
+      href="https://cdn.jsdelivr.net/npm/@mdi/font@latest/css/materialdesignicons.min.css"
+    />
+  </head>
+  <body>
+    <noscript>
+      <strong
+        >We're sorry but <%= htmlWebpackPlugin.options.title %> doesn't work
+        properly without JavaScript enabled. Please enable it to
+        continue.</strong
+      >
+    </noscript>
+    <div id="app"></div>
+    <!-- built files will be auto injected -->
+    <script
+      src="<%= BASE_URL %>assets/js/jquery.js"
+      type="text/javascript"
+    ></script>
+    <script
+      src="<%= BASE_URL %>assets/js/map.js"
+      type="text/javascript"
+    ></script>
+    <script
+      src="<%= BASE_URL %>assets/libraries/bootstrap-sass/javascripts/bootstrap/collapse.js"
+      type="text/javascript"
+    ></script>
+    <script
+      src="<%= BASE_URL %>assets/libraries/bootstrap-sass/javascripts/bootstrap/carousel.js"
+      type="text/javascript"
+    ></script>
+    <script
+      src="<%= BASE_URL %>assets/libraries/bootstrap-sass/javascripts/bootstrap/transition.js"
+      type="text/javascript"
+    ></script>
+    <script
+      src="<%= BASE_URL %>assets/libraries/bootstrap-sass/javascripts/bootstrap/dropdown.js"
+      type="text/javascript"
+    ></script>
+    <script
+      src="<%= BASE_URL %>assets/libraries/bootstrap-sass/javascripts/bootstrap/tooltip.js"
+      type="text/javascript"
+    ></script>
+    <script
+      src="<%= BASE_URL %>assets/libraries/bootstrap-sass/javascripts/bootstrap/tab.js"
+      type="text/javascript"
+    ></script>
+    <script
+      src="<%= BASE_URL %>assets/libraries/bootstrap-sass/javascripts/bootstrap/alert.js"
+      type="text/javascript"
+    ></script>
+    <script
+      src="<%= BASE_URL %>assets/libraries/colorbox/jquery.colorbox-min.js"
+      type="text/javascript"
+    ></script>
+    <script
+      src="<%= BASE_URL %>assets/libraries/flot/jquery.flot.min.js"
+      type="text/javascript"
+    ></script>
+    <script
+      src="<%= BASE_URL %>assets/libraries/flot/jquery.flot.spline.js"
+      type="text/javascript"
+    ></script>
+    <script
+      src="<%= BASE_URL %>assets/libraries/bootstrap-select/bootstrap-select.min.js"
+      type="text/javascript"
+    ></script>
+    <!--<script src="https://maps.googleapis.com/maps/api/js?libraries=weather,geometry,visualization,places,drawing" type="text/javascript"></script>
 <script type="text/javascript" src="<%= BASE_URL %>assets/libraries/jquery-google-map/infobox.js"></script>
 <script type="text/javascript" src="<%= BASE_URL %>assets/libraries/jquery-google-map/markerclusterer.js"></script>
 <script type="text/javascript" src="<%= BASE_URL %>assets/libraries/jquery-google-map/jquery-google-map.js"></script>-->
-<script type="text/javascript" src="<%= BASE_URL %>assets/libraries/owl.carousel/owl.carousel.js"></script>
-<script type="text/javascript" src="<%= BASE_URL %>assets/libraries/bootstrap-fileinput/fileinput.min.js"></script>
-<script src="<%= BASE_URL %>assets/js/superlist.js" type="text/javascript"></script>
-<script crossorigin="anonymous" src="https://connect.facebook.net/ja_JP/sdk.js#xfbml=1&version=v7.0" nonce="qdNK7LUP"></script>
-<script src="<%= BASE_URL %>assets/js/facebook.js" type="text/javascript"></script>
-<script src="<%= BASE_URL %>assets/js/headerfooter.js" type="text/javascript"></script>
-</body>
+    <script
+      type="text/javascript"
+      src="<%= BASE_URL %>assets/libraries/owl.carousel/owl.carousel.js"
+    ></script>
+    <script
+      type="text/javascript"
+      src="<%= BASE_URL %>assets/libraries/bootstrap-fileinput/fileinput.min.js"
+    ></script>
+    <script
+      src="<%= BASE_URL %>assets/js/superlist.js"
+      type="text/javascript"
+    ></script>
+    <script
+      crossorigin="anonymous"
+      src="https://connect.facebook.net/ja_JP/sdk.js#xfbml=1&version=v7.0"
+      nonce="qdNK7LUP"
+    ></script>
+    <script
+      src="<%= BASE_URL %>assets/js/facebook.js"
+      type="text/javascript"
+    ></script>
+    <script
+      src="<%= BASE_URL %>assets/js/headerfooter.js"
+      type="text/javascript"
+    ></script>
+  </body>
 </html>

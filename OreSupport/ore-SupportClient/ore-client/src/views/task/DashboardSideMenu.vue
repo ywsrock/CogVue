@@ -1,24 +1,24 @@
 <template>
   <div class="dashboard-container">
-    <div class="sidebar-admin">
+    <div class="orig-sidebar-admin">
       <ul>
         <li :class="{ active: activeTab === 'user-tab' }">
-          <a href="#" @click="activeTabClick('user-tab', 1)">
+          <a href="#" @click.prevent="activeTabClick('user-tab', 1)">
             <i class="fa fa-user"></i>
           </a>
         </li>
         <li :class="{ active: activeTab === 'statistics-tab' }">
-          <a href="#" @click="activeTabClick('statistics-tab', 1, $event)">
+          <a href="#" @click.prevent="activeTabClick('statistics-tab', 1)">
             <i class="fa fa-users"></i>
           </a>
         </li>
         <li :class="{ active: activeTab === 'help-tab' }">
-          <a href="#" @click="activeTabClick('help-tab', 1, $event)">
+          <a href="#" @click.prevent="activeTabClick('help-tab', 1)">
             <i class="fa fa-info-circle"></i>
           </a>
         </li>
         <li :class="{ active: activeTab === 'settings-tab' }">
-          <a href="#" @click="activeTabClick('settings-tab', 1, $event)">
+          <a href="#" @click.prevent="activeTabClick('settings-tab', 1)">
             <i class="fa fa-cog"></i>
           </a>
         </li>
@@ -26,7 +26,7 @@
     </div>
     <!-- /.sidebar-admin-->
 
-    <div class="sidebar-secondary-admin">
+    <div class="orig-sidebar-secondary-admin">
       <ul v-if="activeTab === 'user-tab'">
         <li :class="{ active: activeSecondTab === 1 }">
           <a href="#" @click.prevent="activeSecondTabClick(1)">
@@ -194,22 +194,22 @@
         </li>
 
         <li :class="{ active: activeSecondTab === 1 }">
-          <a href="#" @click="activeSecondTab = 1">
+          <a href="#" @click.prevent="activeSecondTabClick(1)">
             <span class="icon">
               <i class="fa fa-tachometer"></i>
             </span>
-            <span class="title">ほげほげ</span>
-            <span class="subtitle">ほげほげ</span>
+            <span class="title">行動詳細</span>
+            <span class="subtitle">行動詳細情報</span>
           </a>
         </li>
 
         <li :class="{ active: activeSecondTab === 2 }">
-          <a href="#" @click="activeSecondTab = 2">
+          <a href="#" @click.prevent="activeSecondTabClick(2)">
             <span class="icon">
               <i class="fa fa-tachometer"></i>
             </span>
-            <span class="title">foobarfoobar</span>
-            <span class="subtitle">foobarfoobar</span>
+            <span class="title">行動管理</span>
+            <span class="subtitle">行動の管理</span>
           </a>
         </li>
       </ul>
@@ -231,8 +231,21 @@ export default {
         "user-tab-4": "OrientationAbility",
         "user-tab-5": "PlanAblity",
         "user-tab-6": "AttentionAbility",
+        "settings-tab-1": "ActionCalendarDetail",
+        "settings-tab-2": "ActionCalendarManage",
       },
     };
+  },
+  watch: {
+    activeTab: {
+      handler: function(newValue, oldValue) {
+        if (newValue != oldValue) {
+          this.activeSecondTabClick(1);
+        }
+      },
+      deep: false,
+      immediate: true,
+    },
   },
   methods: {
     //アクティブ
@@ -262,6 +275,10 @@ export default {
         case "help-tab":
           break;
         case "settings-tab":
+          this.$parent.key = this.components[`settings-tab-${activeSecondTab}`];
+          this.$parent.currentAbility = this.components[
+            `settings-tab-${activeSecondTab}`
+          ];
           break;
         default:
           this.activeTab = "user-tab";

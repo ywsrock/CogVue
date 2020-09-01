@@ -5,13 +5,13 @@
         <div class="main-inner">
           <div class="content">
             <div class="mt-70 mb70">
-              <div class="detail-banner">
+              <div class="detail-banner orig-detail-banner " id="origiBanner">
                 <div class="container">
                   <div class="detail-banner-left">
                     <div class="detail-banner-info">
                       <div class="detail-banner-info">
                         <div class="detail-verified">
-                          タスクごとの記録
+                          アクション結果
                         </div>
                       </div>
                       <!-- /.detail-banner-info -->
@@ -26,80 +26,6 @@
                       <i class="fa fa-map-o"></i>現在の{{ abilityName }}情報把握
                     </div>
                     <!-- /.detail-banner-address -->
-
-                    <!-- /.detail-banner-rating -->
-
-                    <!-- /.detail-claim -->
-                    <div
-                      class="detail-banner-btn heart"
-                      :class="{ tabaAtive: activeTabObj.isTab1 }"
-                      @click="tabclickHand(1)"
-                    >
-                      <i class="fa fa-heart-o"></i>
-                      <span
-                        data-toggle="I Love It"
-                        style=" display: inline-block;width:200px"
-                        >ルート99 【{{ abilityName }}】</span
-                      >
-                      <div class="detail-banner-rating">
-                        <i class="detail-verified" style="float:left"
-                          >{{ ability_rate0 }}級</i
-                        >
-                        <el-rate
-                          v-model="ability_rate0"
-                          disabled
-                          text-color="#ff9900"
-                        >
-                        </el-rate>
-                      </div>
-                    </div>
-                    <div
-                      class="detail-banner-btn heart"
-                      :class="{ tabaAtive: activeTabObj.isTab2 }"
-                      @click="tabclickHand(2)"
-                    >
-                      <i class="fa fa-heart-o"></i>
-                      <span
-                        data-toggle="I Love It"
-                        style="display: inline-block;width:200px"
-                        >ステップ 【{{ abilityName }}】</span
-                      >
-                      <div class="detail-banner-rating">
-                        <i class="detail-verified" style="float:left"
-                          >{{ ability_rate1 }}級</i
-                        >
-                        <el-rate
-                          v-model="ability_rate1"
-                          disabled
-                          text-color="#ff9900"
-                        >
-                        </el-rate>
-                      </div>
-                    </div>
-                    <div
-                      class="detail-banner-btn heart"
-                      :class="{ tabaAtive: activeTabObj.isTab3 }"
-                      @click="tabclickHand(3)"
-                    >
-                      <i class="fa fa-heart-o"></i>
-                      <span
-                        data-toggle="I Love It"
-                        style=" display: inline-block;width:200px"
-                        >ナンバーステップ 【{{ abilityName }}】</span
-                      >
-                      <div class="detail-banner-rating">
-                        <i class="detail-verified" style="float:left"
-                          >{{ ability_rate2 }}級</i
-                        >
-                        <el-rate
-                          v-model="ability_rate2"
-                          disabled
-                          text-color="#ff9900"
-                        >
-                        </el-rate>
-                      </div>
-                    </div>
-                    <!-- /.detail-claim -->
                   </div>
                   <!-- /.detail-banner-left -->
                 </div>
@@ -109,12 +35,34 @@
             </div>
 
             <div class="container">
-              <CommonAbility
-                :showDataObj="showData"
-                :showAbilityName="abilityName"
-                :key="legendData[0]"
-                v-cloak
-              />
+              <h2>
+                【アクション】
+                <span class="text-secondary">{{ "記録一覧" }}</span>
+              </h2>
+              <ActionCalendar />
+              <div class="orig-row detail-content">
+                <h2>
+                  【アクション】
+                  <span class="text-secondary">{{ "効果" }}</span>
+                </h2>
+                <div class="col-sm-4">
+                  <div class="background-white overflo-div-height450">
+                    <ActionTimeLine />
+                  </div>
+                  <!--<div class="background-white p20 overflo-div-height450"></div>-->
+                </div>
+                <div class="col-sm-8">
+                  <div class="background-white p20">
+                    <div class="detail-map" style="text-align: center;">
+                      <ActionLineChart
+                        :chartData="showData"
+                        :proplegendData="legendData"
+                        :propxAxisData="xAxisData"
+                      />
+                    </div>
+                  </div>
+                </div>
+              </div>
             </div>
             <!-- /.container -->
           </div>
@@ -198,26 +146,30 @@
 </template>
 
 <script>
-import CommonAbility from "./components/CommonAbility";
+import ActionCalendar from "./components/ActionCalendar";
+import ActionTimeLine from "./components/ActionTimeLine";
+import ActionLineChart from "./components/TaskLineChart";
 
 export default {
-  name: "PlanAbility",
+  name: "ActionCalendarDetail",
   components: {
-    CommonAbility,
+    ActionCalendar,
+    ActionTimeLine,
+    ActionLineChart,
   },
   mounted() {
-    this.$http.get("/api/personal/CogEvo/PlanAbility").then(
+    this.$http.get("/api/personal/CogEvo/memoryAbility").then(
       (res) => {
-        this.dataObj = Object.assign({}, this.dataObj, res.data.PlanAbility);
+        this.dataObj = Object.assign({}, this.dataObj, res.data.MemoryAbility);
         this.legendData = this.dataObj.Flashlight.legendData;
         this.ability_rate0 = this.dataObj.Flashlight.cardPazulData.current_ability_rate;
         this.ability_rate1 = this.dataObj.CardMemory.cardPazulData.current_ability_rate;
         this.ability_rate2 = this.dataObj.Story.cardPazulData.current_ability_rate;
-        this.showData = Object.assign(
-          {},
-          this.showData,
-          this.dataObj.Flashlight
-        );
+        // this.showData = Object.assign(
+        //   {},
+        //   this.showData,
+        //   this.dataObj.Flashlight
+        // );
       },
       (error) => {
         console.log(error);
@@ -235,13 +187,15 @@ export default {
     return {
       dataObj: {},
       //コンポーネント表示データ
-      showData: {},
-      // // チャートlegendData
-      legendData: ["ルート99 "],
+      showData: { MemoryAbility: [123, 111, 121, 123] },
+      // チャートlegendData
+      legendData: ["アクション"],
+      //
+      xAxisData: ["1990/01/01", "1990/01/15", "1990/01/20", "1990/01/25"],
       // // ユーザ名
       userName: this.$session.get("UserName") || "",
       // // 能力名
-      abilityName: "計画力",
+      abilityName: "アクション結果",
       // // 等級
       ability_rate0: 5,
       ability_rate1: 3.5,
@@ -317,5 +271,15 @@ export default {
 .tabaAtive {
   background: #eee;
   color: black;
+}
+
+.orig-detail-banner {
+  height: 200px;
+}
+
+.overflo-div-height450 {
+  height: 470px;
+  overflow: auto;
+  text-align: left;
 }
 </style>

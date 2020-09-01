@@ -23,7 +23,9 @@ export default {
   },
   watch: {
     $route(to, from) {
-      this.routeKey = to.key;
+      if (to != from) {
+        this.routeKey = to.key;
+      }
     },
   },
 };

@@ -64,7 +64,7 @@
         <footer class="footer">
           <div class="footer-top">
             <div class="container">
-              <div class="row">
+              <div class="orig-row">
                 <div class="col-sm-4">
                   <h2>About Superlist</h2>
 

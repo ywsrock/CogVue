@@ -4,7 +4,7 @@
       <div class="main-inner">
         <div class="container">
           <div class="content">
-            <div class="row">
+            <div class="orig-row">
               <div class="col-sm-4 col-sm-offset-4">
                 <div class="page-title">
                   <h1>Login</h1>

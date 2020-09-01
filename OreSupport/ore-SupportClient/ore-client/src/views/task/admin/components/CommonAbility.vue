@@ -1,9 +1,9 @@
 <template>
   <div>
-    <div class="row detail-content">
+    <div class="orig-row detail-content">
       <div class="col-sm-7">
         <!--時系列Line-->
-        <div class="row detail-content">
+        <div class="orig-row detail-content">
           <h2>
             【推移】
             <span class="text-secondary">{{ legendData[0] }}</span>
@@ -176,7 +176,7 @@
               placement="top"
               style="color:#303133"
             >
-              <div class="row">
+              <div class="orig-row">
                 <div class="quiz-medal">
                   <div class="quiz-medal__circle quiz-medal__circle--gold">
                     <el-badge :value="cardPazulData.medal0" class="item">
@@ -272,7 +272,7 @@
               </div>
             </el-tooltip>
             <hr />
-            <div class="row">
+            <div class="orig-row">
               <div class="col-md-7 text-center">
                 <img
                   id="screen-shot"
@@ -299,7 +299,7 @@
     </div>
 
     <!--履歴データ表示-->
-    <div class="row detail-content">
+    <div class="orig-row detail-content">
       <h2>
         【最近の記録】
         <span class="text-secondary">{{ legendData[0] }}</span>

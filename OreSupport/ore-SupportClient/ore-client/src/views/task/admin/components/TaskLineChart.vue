@@ -37,11 +37,27 @@ export default {
         return [""];
       },
     },
+    propxAxisData: {
+      type: Array,
+      required: false,
+      default: function() {
+        return [
+          "2020/01/01",
+          "2020/01/02",
+          "2020/01/03",
+          "2020/01/04",
+          "2020/01/05",
+          "2020/01/06",
+          "2020/01/07",
+        ];
+      },
+    },
   },
   data() {
     return {
       chart: null,
       legendData: this.proplegendData,
+      xAxisData: this.propxAxisData,
     };
   },
   watch: {
@@ -79,22 +95,14 @@ export default {
       this.chart.setOption({
         xAxis: {
           type: "category",
-          data: [
-            "2020/01/01",
-            "2020/01/02",
-            "2020/01/03",
-            "2020/01/04",
-            "2020/01/05",
-            "2020/01/06",
-            "2020/01/07",
-          ],
+          data: that.xAxisData,
           boundaryGap: false,
           axisTick: {
             show: false,
           },
         },
         grid: {
-          left: 10,
+          left: 35,
           // right: 10,
           bottom: 20,
           top: 90,

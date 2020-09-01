@@ -7,7 +7,7 @@
         <div class="main">
           <div class="main-inner">
             <div class="container">
-              <div class="row">
+              <div class="orig-row">
                 <div class="col-sm-8 col-lg-9">
                   <div class="content">
                     <div class="page-title">
@@ -291,7 +291,7 @@
                           <span class="required">*</span>
                         </p>
 
-                        <div class="row">
+                        <div class="orig-row">
                           <div class="form-group col-sm-12">
                             <label for=""
                               >Comment <span class="required">*</span></label

@@ -1,8 +1,10 @@
 <template>
-  <div name="Layout">
-    <TopHeader :key="key" />
-    <MainForm />
-  </div>
+  <v-app>
+    <div name="Layout">
+      <TopHeader :key="key" />
+      <MainForm />
+    </div>
+  </v-app>
 </template>
 
 <script>
