@@ -23,6 +23,8 @@
 import Summary from "./admin/Summary";
 import MemoryAbility from "./admin/MemoryAbility";
 import SpatialAbility from "./admin/SpatialAbility";
+import ActionCalendarDetail from "./admin/ActionCalendarDetail";
+import ActionCalendarManage from "./admin/ActionCalendarManage";
 import OrientationAbility from "./admin/OrientationAbility";
 import PlanAblity from "./admin/PlanAblity";
 import AttentionAbility from "./admin/AttentionAbility";
@@ -40,6 +42,8 @@ export default {
     AttentionAbility,
     DashboardHeader,
     DashboardSideMenu,
+    ActionCalendarDetail,
+    ActionCalendarManage,
   },
   data() {
     return {

@@ -52,7 +52,7 @@
             </div>
 
             <div class="container">
-              <div class="row detail-content">
+              <div class="orig-row detail-content">
                 <div class="col-sm-7">
                   <div class="detail-gallery">
                     <h2>
@@ -121,7 +121,7 @@
                 <!-- /.col-* -->
               </div>
               <!--時系列Line-->
-              <div class="row detail-content">
+              <div class="orig-row detail-content">
                 <h2>
                   【推移】
                   <span class="text-secondary">認知機能バランス値</span>
@@ -220,7 +220,7 @@
                 </div>
               </div>
               <!--履歴データ表示-->
-              <div class="row detail-content">
+              <div class="orig-row detail-content">
                 <h2>
                   【トレーニング履歴】
                   <span class="text-secondary">最新20利用日</span>
@@ -244,7 +244,7 @@
       <footer class="footer">
         <div class="footer-top">
           <div class="container">
-            <div class="row">
+            <div class="orig-row">
               <div class="col-sm-4">
                 <h3>運営会社</h3>
 

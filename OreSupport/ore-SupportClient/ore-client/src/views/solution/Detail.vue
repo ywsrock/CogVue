@@ -836,7 +836,7 @@
                     method="post"
                     action="?"
                   >
-                    <div class="row">
+                    <div class="orig-row">
                       <div class="form-group col-sm-6">
                         <label for=""
                           >Name <span class="required">*</span></label
@@ -865,7 +865,7 @@
                     </div>
                     <!-- /.row -->
 
-                    <div class="row">
+                    <div class="orig-row">
                       <div class="form-group input-rating col-sm-3">
                         <div class="rating-title">Food</div>
 
@@ -1029,7 +1029,7 @@
                     </div>
                     <!-- /.row -->
 
-                    <div class="row">
+                    <div class="orig-row">
                       <div class="form-group col-sm-6">
                         <label for="">Pros</label>
                         <textarea

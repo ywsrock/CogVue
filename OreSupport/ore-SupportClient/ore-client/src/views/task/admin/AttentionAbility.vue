@@ -127,7 +127,7 @@
       <footer class="footer">
         <div class="footer-top">
           <div class="container">
-            <div class="row">
+            <div class="orig-row">
               <div class="col-sm-4">
                 <h3>運営会社</h3>
 
@@ -198,8 +198,6 @@
 </template>
 
 <script>
-import LineChart from "./components/TaskLineChart";
-import TransactionTable from "./components/TaskTransactionTable";
 import CommonAbility from "./components/CommonAbility";
 
 export default {

@@ -201,7 +201,7 @@
 import CommonAbility from "./components/CommonAbility";
 
 export default {
-  name: "PlanAbility",
+  name: "ActionCalendarManage",
   components: {
     CommonAbility,
   },

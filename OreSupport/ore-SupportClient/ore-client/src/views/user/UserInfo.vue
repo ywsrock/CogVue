@@ -16,7 +16,7 @@
       <title>メイン</title>
     </head>
 
-    <body class="">
+    <body class="orig-row">
       <div class="page-wrapper">
         <div id="header" class="header"></div>
 
@@ -43,7 +43,7 @@
                     </div>
                     <!-- /.col-* -->
 
-                    <div class="row">
+                    <div class="orig-row">
                       <div class="col-sm-6 col-xs-12 col-sm-pull-6">
                         <button
                           class="btn btn-primary col-md-5 col-xs-12 "
@@ -282,7 +282,7 @@
                 <!-- /.cards-simple-wrapper -->
 
                 <div class="block background-white fullwidth mt80">
-                  <div class="row">
+                  <div class="orig-row">
                     <div class="col-sm-6">
                       <div class="posts">
                         <div class="post">
@@ -569,7 +569,7 @@
                 <!-- /.page-header -->
 
                 <div class="block background-black-light fullwidth">
-                  <div class="row">
+                  <div class="orig-row">
                     <div class="col-md-3">
                       <div class="box">
                         <div class="box-icon">
@@ -657,7 +657,7 @@
                 <div
                   class="block background-secondary fullwidth mt80 mb-80 pt60 pb60"
                 >
-                  <div class="row">
+                  <div class="orig-row">
                     <div class="col-sm-12">
                       <div class="contact-info-wrapper">
                         <h2>Do You Have Any Questions?</h2>

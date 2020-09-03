@@ -3,7 +3,7 @@
     <div class="main">
       <div class="main-inner">
         <div class="container">
-          <div class="row">
+          <div class="orig-row">
             <div class="document-title">
               <h1>商品・リスト</h1>
 
@@ -21,7 +21,7 @@
             <div class="col-sm-8 col-lg-9">
               <div class="content">
                 <form class="filter" method="post" action="?">
-                  <div class="row">
+                  <div class="orig-row">
                     <div class="col-sm-12 col-md-4">
                       <div class="form-group">
                         <input
@@ -67,7 +67,7 @@
 
                   <hr />
 
-                  <div class="row">
+                  <div class="orig-row">
                     <div class="col-sm-8">
                       <div class="filter-actions">
                         <a href="#">
@@ -112,7 +112,7 @@
                 </h2>
                 <!-- /.page-title -->
                 <div class="cards-simple-wrapper">
-                  <div class="row">
+                  <div class="orig-row">
                     <div class="col-sm-6 col-lg-4">
                       <div
                         class="card-simple"
@@ -205,9 +205,7 @@
                         <div class="card-simple-background">
                           <div class="card-simple-content">
                             <h2>
-                              <a href="/#/solution/detail"
-                                >Healthy Breakfast</a
-                              >
+                              <a href="/#/solution/detail">Healthy Breakfast</a>
                             </h2>
                             <div class="card-simple-rating">
                               <i class="fa fa-star"></i>
@@ -494,9 +492,7 @@
                         <div class="card-simple-background">
                           <div class="card-simple-content">
                             <h2>
-                              <a href="/#/solution/detail"
-                                >Affordable Office</a
-                              >
+                              <a href="/#/solution/detail">Affordable Office</a>
                             </h2>
                             <div class="card-simple-rating">
                               <i class="fa fa-star"></i>

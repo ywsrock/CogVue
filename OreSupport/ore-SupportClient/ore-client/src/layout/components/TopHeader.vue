@@ -383,7 +383,7 @@ export default {
   },
 };
 </script>
-<style>
+<style scoped>
 @import "https://fonts.googleapis.com/css?family=Nunito:300,400,700";
 @import "../../../public/assets/libraries/font-awesome/css/font-awesome.min.css";
 @import "../../../public/assets/libraries/owl.carousel/assets/owl.carousel.css";

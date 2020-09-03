@@ -6,7 +6,7 @@
           <div class="header-statusbar-left">
             <h1>検測記録</h1>
 
-            <div class="display-inline-block">
+            <!--<div class="display-inline-block">
               <div class="hidden-xs visible-lg">
                 <div class="header-statusbar-search">
                   <input
@@ -16,7 +16,7 @@
                   />
                 </div>
               </div>
-            </div>
+            </div>-->
           </div>
 
           <div class="header-statusbar-right">
