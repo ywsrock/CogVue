@@ -1,5 +1,4 @@
-import request from '@/utils/request'
-
+import request from "@/utils/request";
 
 /**
  * ユーザログイン
@@ -7,11 +6,11 @@ import request from '@/utils/request'
  * @returns String
  */
 export function login(data) {
-    return request({
-        url: '/user/login',
-        method: 'post',
-        data
-    })
+  return request({
+    url: "/user/login",
+    method: "post",
+    data,
+  });
 }
 
 /**
@@ -20,11 +19,11 @@ export function login(data) {
  * @returns String
  */
 export function singUp(data) {
-    return request({
-        url: '/user/singUp',
-        method: 'post',
-        data
-    })
+  return request({
+    url: "/user/singUp",
+    method: "post",
+    data,
+  });
 }
 
 /**
@@ -33,11 +32,11 @@ export function singUp(data) {
  * @returns String
  */
 export function getInfo(token) {
-    return request({
-        url: '/user/profileInfo',
-        method: 'get',
-        params: { token }
-    })
+  return request({
+    url: "/user/profileInfo",
+    method: "get",
+    params: { token },
+  });
 }
 
 /**
@@ -46,11 +45,11 @@ export function getInfo(token) {
  * @returns String
  */
 export function getProfileInfo(token) {
-    return request({
-        url: '/user/profileInfo',
-        method: 'get',
-        params: { token }
-    })
+  return request({
+    url: "/user/profile",
+    method: "get",
+    params: { token },
+  });
 }
 /**
  * ユーザプロフィール更新
@@ -58,13 +57,12 @@ export function getProfileInfo(token) {
  * @returns String
  */
 export function updateUser(data) {
-    return request({
-        url: 'user/updatePro',
-        method: 'post',
-        data
-    })
+  return request({
+    url: "user/updatePro",
+    method: "post",
+    data,
+  });
 }
-
 
 /**
  * ユーザ画像アップロード
@@ -72,19 +70,19 @@ export function updateUser(data) {
  * @returns String
  */
 export function imageUp(data) {
-    return request({
-        url: 'user/imageUp',
-        method: 'post',
-        data
-    })
+  return request({
+    url: "user/imageUp",
+    method: "post",
+    data,
+  });
 }
 
 /**
  * ユーザログアウト
  */
 export function logout() {
-    return request({
-        url: 'user/logout',
-        method: 'post'
-    })
+  return request({
+    url: "user/logout",
+    method: "post",
+  });
 }
