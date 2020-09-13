@@ -548,34 +548,22 @@ export default {
     };
   },
   mounted() {
-    // VUEインスタン設定
-    var that = this;
-    // 外部JS引用、public/index.html中で、直接引用してもOK
-    STATIC_JS.forEach((p) => {
-      that
-        .$loadScript(p)
-        .then(() => {})
-        .catch(() => {
-          console.log("外部IS引用失敗");
-        });
-    });
-    this.$nextTick().then(function() {
-      // basic 情報
-      const info_basic = that.$store.getters.info.basicInfo;
-      that.basicInfo = Object.assign({}, that.basicInfo, info_basic);
-      // アドレス情報
-      const info_address = that.$store.getters.info.addressInfo;
-      that.addressInfo = Object.assign({}, that.basicInfo, info_address);
-      // パスワード情報
-      const info_pwd = that.$store.getters.info.passwordInfo;
-      that.passwordInfo = Object.assign({}, that.basicInfo, info_pwd);
-      // sns情報
-      const info_snsinfo = that.$store.getters.info.snsInfo;
-      that.snsInfo = Object.assign({}, that.basicInfo, info_snsinfo);
-      //  that.data =Object.assign(that.data,that.$store.getters.info)
-    });
+    this.fetchUserProfile();
   },
   methods: {
+    // ユーザーのプロフィールを取得
+    async fetchUserProfile() {
+      try {
+        const res = await this.$store.dispatch("user/getProfileInfo");
+        this.basicInfo = res.dataInfo.basicInfo;
+        this.addressInfo = res.dataInfo.addressInfo;
+        this.passwordInfo = res.dataInfo.passwordInfo;
+        this.snsInfo = res.dataInfo.snsInfo;
+      } catch (err) {
+        console.log("err:", err);
+      }
+    },
+
     //全項目チェックして基本情報保存
     basicInfo_Save: function() {
       this.checkEmail();
