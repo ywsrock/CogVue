@@ -88,31 +88,33 @@
 
               <div class="container">
                 <div class="block background-white fullwidth pt0 pb0">
-                  <div class="detail-gallery">
-                    <ul class="detail-gallery-index">
-                      <template v-for="information in informations">
-                        <li
-                          class="detail-gallery-list-item active"
+                  <div class="background-white p20">
+                    <div class="page-header">
+                      <h1>お知らせ</h1>
+                    </div>
+
+                    <table class="table mb0" style="color:black;">
+                      <tbody>
+                        <tr
+                          v-for="information in informations"
                           :key="information.id"
+                          style="color:black;border-bottom: solid 1px #d8d8d8;"
                         >
-                          <a data-target="../../assets/img/tmp/gallery-1.jpg">
-                            <img
-                              src="../../assets/img/tmp/gallery-1.jpg"
-                              alt="..."
-                            />
+                          <td>
                             <span
-                              style="position: absolute; top: 10px; left: 30px;"
-                            >
-                              <h4 style="color: white;">
-                                kokoko
-                              </h4>
+                              ><strong>
+                                {{ information.title }}
+                              </strong>
+                              {{ "(" + information.from + ")" }} </span
+                            ><br />
+                            <span>
+                              {{ information.content }}
                             </span>
-                          </a>
-                        </li>
-                      </template>
-                    </ul>
+                          </td>
+                        </tr>
+                      </tbody>
+                    </table>
                   </div>
-                  <!-- /.detail-gallery -->
                 </div>
 
                 <div class="page-header">
