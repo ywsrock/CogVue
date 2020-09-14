@@ -8,6 +8,7 @@ var indexRouter = require("./routes/index");
 var informationRouter = require("./routes/information");
 var usersRouter = require("./routes/users");
 var blogRouter = require("./routes/blog");
+var addressRouter = require("./routes/address");
 const log4js = require("log4js");
 const logConfig = require("./config/log4js");
 //log4Js設定
@@ -62,6 +63,7 @@ app.use("/", indexRouter);
 app.use("/user", usersRouter);
 app.use("/blog", blogRouter);
 app.use("/information", informationRouter);
+app.use("/address", addressRouter);
 
 // catch 404 and forward to error handler
 app.use(function (req, res, next) {
