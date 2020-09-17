@@ -311,9 +311,7 @@ router.get("/profileInfo", [checkuser.verifyUser], async function (req, res, nex
 //　ファイルアップ upload.single('imgAvatar')画像格納エンジ
 var upload1 = multer({ storage: Image_storage.Image_storage }).single('imgAvatar')
 router.post("/imageUp", [checkuser.verifyUser], async function (req, res, next) {
-    //ログ出力
-    log.info(`fileUpload: + ${req.file.filename}`);
-
+    
     var resObj = {};
     // ユーザIDID
     await upload1(req, res, function (err) {
@@ -322,6 +320,8 @@ router.post("/imageUp", [checkuser.verifyUser], async function (req, res, next) 
             resObj.code = STATUS_MESSAGE.CODE_403;
             resObj.message = STATUS_MESSAGE.FILEUP_ERROR_403;
         } else {
+              //ログ出力
+              log.info(`fileUpload: + ${req.file.filename}`);
             var port = req.app.settings.port;
             var respath = req.protocol + '://' + req.host + (port == 80 || port == 443 ? '' : ':' + port);
 
