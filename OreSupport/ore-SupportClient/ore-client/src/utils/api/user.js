@@ -32,11 +32,11 @@ export function singUp(data) {
  * @param token String
  * @returns String
  */
-export function getInfo(token) {
+export function getInfo(token,loginType="normal") {
     return request({
         url: '/user/profileInfo',
         method: 'get',
-        params: { token }
+        params: { token,loginType }
     })
 }
 
@@ -45,11 +45,11 @@ export function getInfo(token) {
  * @param token String
  * @returns String
  */
-export function getProfileInfo(token) {
+export function getProfileInfo(token,loginType="normal") {
     return request({
         url: '/user/profileInfo',
         method: 'get',
-        params: { token }
+        params: { token,loginType }
     })
 }
 /**

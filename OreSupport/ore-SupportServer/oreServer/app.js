@@ -47,10 +47,12 @@ app.use(express.json());
 app.use(express.urlencoded({ extended: false }));
 // cookie
 app.use(cookieParser());
-// 静的なファイル
-app.use(express.static(path.join(__dirname, 'public')));
 //セッション設定
 app.use(session(sessionOpt))
+
+// 静的なファイル
+app.use(express.static(path.join(__dirname, 'public')));
+
 //　ログ出力設定
 app.use(log4js.connectLogger(log4js.getLogger("http"), { level: 'auto' }));
 

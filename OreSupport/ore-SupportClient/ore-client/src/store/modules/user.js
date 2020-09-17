@@ -77,6 +77,8 @@ const actions = {
             login({ username: username, password: password, userId: userId, type: type })
                 .then(res => {
                     const data = res.data;
+                    //ログインタイプ
+                    that._vm.$session.set("loginType", type)
                     //グローバル情報設定へ代入
                     context.commit("set_token", data.token);
                     // //ユーザ名
@@ -108,10 +110,12 @@ const actions = {
     getInfo(context) {
         //　コンテキストインスタンス保存
         var that = this;
+        //ログインタイプ
+        var loginType = this._vm.$session.get("loginType")
         // セッション処理開始
         that._vm.$session.start();
         return new Promise((resolve, reject) => {
-            getInfo(context.state.token).then(res => {
+            getInfo(context.state.token,loginType).then(res => {
                 const data = res.data;
                 if (!data) {
                     reject("認証失敗しました。再ログインしてください。");
@@ -157,8 +161,10 @@ const actions = {
         var that = this;
         // セッション処理開始
         that._vm.$session.start();
+        //　ログインタイプ
+        var loginType = this._vm.$session.get("loginType")
         return new Promise((resolve, reject) => {
-            getProfileInfo(context.state.token).then(res => {
+            getProfileInfo(context.state.token,loginType).then(res => {
                 const data = res.data;
                 //　プロフィール情報取得
                 const { dataInfo, type } = data

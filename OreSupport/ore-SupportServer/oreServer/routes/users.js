@@ -184,12 +184,13 @@ router.get("/profileInfo", [checkuser.verifyUser], async function (req, res, nex
     var respath = req.protocol + '://' + req.host + (port == 80 || port == 443 ? '' : ':' + port);
     // ファイル存在チェック
     var imgpath = "00_00.jpg";
+    var loginType = req.query.loginType || ""
 
-    if (req.session.loginType != "normal") {
+    if ( loginType != "normal") {
         var resobj = {
             code: STATUS_MESSAGE.CODE_SUCCESS,
             data: {
-                type: req.session.loginType,
+                type: loginType,
                 name: req.userName,
                 // 権限
                 roles: ["admin", "superUser"],
@@ -256,7 +257,7 @@ router.get("/profileInfo", [checkuser.verifyUser], async function (req, res, nex
             code: STATUS_MESSAGE.CODE_SUCCESS,
             data: {
                 // ログインType
-                type: req.session.loginType,
+                type: loginType,
                 // ユーザ名
                 name: user.UserName,
                 // 権限
@@ -311,7 +312,7 @@ router.get("/profileInfo", [checkuser.verifyUser], async function (req, res, nex
 //　ファイルアップ upload.single('imgAvatar')画像格納エンジ
 var upload1 = multer({ storage: Image_storage.Image_storage }).single('imgAvatar')
 router.post("/imageUp", [checkuser.verifyUser], async function (req, res, next) {
-    
+
     var resObj = {};
     // ユーザIDID
     await upload1(req, res, function (err) {
