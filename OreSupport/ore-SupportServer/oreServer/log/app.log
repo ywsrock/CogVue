@@ -1,0 +1,6 @@
+[2020-09-19T13:20:07.616] [INFO] startup - Listening on port 3000
+[2020-09-19T13:20:22.494] [INFO] users - ユーザログ UserName:1@1.com
+[2020-09-19T13:20:22.494] [INFO] userDao - START getUserInfoByUserName: {"username":"1@1.com"}
+[2020-09-19T13:20:22.506] [INFO] userDao - END getUserInfoByUserName
+[2020-09-19T13:20:22.603] [INFO] users - login success UserID: 49
+[2020-09-19T13:20:22.621] [INFO] users - profileInfo userID: 49
