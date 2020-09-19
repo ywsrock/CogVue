@@ -42,3 +42,22 @@
 [2020-08-30T19:44:12.895] [INFO] users - profileInfo userID: 165
 [2020-08-30T19:46:54.800] [INFO] users - profileInfo userID: 165
 [2020-08-30T19:47:10.142] [INFO] users - profileInfo userID: 165
+[2020-09-19T14:02:16.834] [INFO] startup - Listening on port 3000
+[2020-09-19T14:02:18.181] [INFO] users - profileInfo userID: 165
+[2020-09-19T14:02:33.136] [INFO] startup - Listening on port 3000
+[2020-09-19T14:02:33.297] [INFO] users - profileInfo userID: 165
+[2020-09-19T14:02:48.440] [INFO] users - profileInfo userID: 165
+[2020-09-19T14:04:15.348] [INFO] userDao - START getUserProfileByUserID : {"key":"UserID","val":165}
+[2020-09-19T14:04:15.375] [INFO] userDao - END getUserProfileByUserID
+[2020-09-19T14:04:50.070] [INFO] users - profileInfo userID: 165
+[2020-09-19T14:04:52.292] [INFO] userDao - START getUserProfileByUserID : {"key":"UserID","val":165}
+[2020-09-19T14:04:52.301] [INFO] userDao - END getUserProfileByUserID
+[2020-09-19T14:04:52.302] [INFO] users - profileInfo success
+[2020-09-19T14:05:31.532] [INFO] users - updatePro:{"Update_type":"basicInfo","lastName":"a","firstName":null,"sex":null,"birthday":null,"email":"123@123.com","phone":null,"avatar":"http://localhost:3000/avatar/00_00.jpg","aboutMe":null}
+[2020-09-19T14:05:31.533] [INFO] userDao - START saveUserProfile: param1:{"LastName":"a","FirstName":null,"Sex":null,"Birthday":null,"Phone1":null,"Avatar":"http://localhost:3000/avatar/00_00.jpg","Aboutme":null} , param2:{"Email":"123@123.com"}
+[2020-09-19T14:05:31.565] [INFO] userDao - END saveUserProfile
+[2020-09-19T14:05:31.566] [INFO] users - updatePro success
+[2020-09-19T14:05:47.659] [INFO] users - profileInfo userID: 165
+[2020-09-19T14:05:49.875] [INFO] userDao - START getUserProfileByUserID : {"key":"UserID","val":165}
+[2020-09-19T14:05:49.882] [INFO] userDao - END getUserProfileByUserID
+[2020-09-19T14:05:49.883] [INFO] users - profileInfo success
