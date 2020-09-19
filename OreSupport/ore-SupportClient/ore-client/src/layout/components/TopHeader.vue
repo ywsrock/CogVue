@@ -60,19 +60,6 @@
           </div>
           <!-- /.header-top -->
           <div class="header-bottom">
-            <div class="header-action">
-              <a
-                href="#"
-                class="header-action-inner"
-                title="カートを見る"
-                data-toggle="tooltip"
-                data-placement="bottom"
-              >
-                <i class="fa fa-plus"></i>
-              </a>
-              <!-- /.header-action-inner -->
-            </div>
-            <!-- /.header-action -->
             <ul class="header-nav-primary nav nav-pills collapse navbar-collapse">
               <li class="dropdown">
                 <a href="#">
@@ -82,23 +69,14 @@
 
                 <ul class="sub-menu">
                   <li>
-                    <a href>自分の状態を測る</a>
-                  </li>
-                  <li>
-                    <a href="/views/blog/blog_top.html">体験談を読む</a>
-                  </li>
-                  <li>
-                    <a href="/views/index.html">商品を購入する</a>
-                  </li>
-                  <li>
-                    <a href="/views/index.html">認知機能を知る</a>
+                    <a href="/views/index.html">ホームに戻る</a>
                   </li>
                 </ul>
               </li>
 
               <li>
                 <a href="#">
-                  ブログ
+                  体験談を読む
                   <i class="fa fa-chevron-down"></i>
                 </a>
 
@@ -111,10 +89,64 @@
                   </li>
                 </ul>
               </li>
-
+              <li class="has-mega-menu">
+                <a href="#">
+                  認知機能を測定する
+                  <i class="fa fa-chevron-down"></i>
+                </a>
+                <ul class="mega-menu">
+                  <li class="hidden-xs">
+                    <div class="special" style="width:90%;">
+                      <a
+                        style="font-size: 15px;"
+                        href="https://personal.tbcare.jp/login"
+                      >CogEvoで認知認知機能の測定をする</a>
+                    </div>
+                    <!-- /.special-->
+                  </li>
+                  <li>
+                    <a style="font-size: 15px;" href="#">結果を見る</a>
+                    <ul>
+                      <li>
+                        <a
+                          style="font-size: 15px;"
+                          href
+                          @click.prevent.stop="taskClick(1)"
+                        >これまでの認知機能の推移を確認する</a>
+                      </li>
+                      <li>
+                        <a
+                          style="font-size: 15px;"
+                          href
+                          @click.prevent.stop="taskClick(2)"
+                        >統計的な認知機能のデータを確認する</a>
+                      </li>
+                    </ul>
+                  </li>
+                  <li>
+                    <a style="font-size: 15px;" href="#">CogEvoのご紹介</a>
+                    <ul>
+                      <li>
+                        <a
+                          style="font-size: 15px;"
+                          href="https://cog-evo.jp/"
+                          target="_blank"
+                        >CogEvoとは</a>
+                      </li>
+                      <li>
+                        <a
+                          style="font-size: 15px;"
+                          href="https://tbcare.jp/"
+                          target="_blank"
+                        >運営会社（株式会社トータルブレインケア）</a>
+                      </li>
+                    </ul>
+                  </li>
+                </ul>
+              </li>
               <li>
                 <a href="#">
-                  商品
+                  商品を購入する
                   <i class="fa fa-chevron-down"></i>
                 </a>
 
@@ -127,49 +159,10 @@
                   </li>
                 </ul>
               </li>
-              <li class="has-mega-menu">
-                <a href="#">
-                  CogEvo
-                  <i class="fa fa-chevron-down"></i>
-                </a>
 
-                <ul class="mega-menu">
-                  <li>
-                    <a href="#">CogEvo紹介</a>
-
-                    <ul>
-                      <li>
-                        <a href="https://cog-evo.jp/" target="_blank">CogEvoとは</a>
-                      </li>
-                      <li>
-                        <a href="https://tbcare.jp/" target="_blank">運営会社（株式会社トータルブレインケア）</a>
-                      </li>
-                    </ul>
-                  </li>
-
-                  <li>
-                    <a href="#">結果を見る</a>
-                    <ul>
-                      <li>
-                        <a href @click.prevent.stop="taskClick(1)">あなたの結果</a>
-                      </li>
-                      <li>
-                        <a href @click.prevent.stop="taskClick(2)">みんなの結果</a>
-                      </li>
-                    </ul>
-                  </li>
-
-                  <li class="hidden-xs">
-                    <div class="special">
-                      <a href="https://personal.tbcare.jp/login">CogEvoを開始する</a>
-                    </div>
-                    <!-- /.special-->
-                  </li>
-                </ul>
-              </li>
               <li>
                 <a href="#">
-                  基本知識
+                  認知機能を知る
                   <i class="fa fa-chevron-down"></i>
                 </a>
 
@@ -396,4 +389,16 @@ export default {
 @import "../../../public/assets/libraries/bootstrap-fileinput/fileinput.min.css";
 @import "../../../public/assets/css/superlist.css";
 @import "../../../public/assets/css/oresapo.css";
+
+.header-content .nav li a {
+  font-size: 15px;
+}
+
+.header-content .nav li .sub-menu li a {
+  font-size: 15px;
+}
+
+.header-logo span {
+  font-size: 15px;
+}
 </style>
