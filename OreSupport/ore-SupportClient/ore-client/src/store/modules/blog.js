@@ -107,6 +107,8 @@ const actions = {
                         //ブログ内容
                         context.commit("set_content",data.content)
 
+                        context.commit("set_content",data.comment)
+
 
                         resolve(data);
                     }).catch(error => {

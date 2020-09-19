@@ -2,6 +2,7 @@
 const db = require('../../common/db.common');
 const { Blog } = require("../../model/blog.model");
 const { User } = require("../../model/user.model");
+const { Comment } = require("../../model/comment.model");
 const { sequelize } = require('../../common/db.common');
 const Sequelize = require('sequelize');
 const { Op } = require('sequelize');
@@ -66,17 +67,45 @@ const getBlogList = async (queryInfo) => {
 
 
 
+// //ブログ詳細 old
+// const getBlogDetail = async(queryInfo) => {
+//     try {
+//         // 結果を返す
+//         const result = await Blog.findOne({
+//             where: {
+//                 [Op.and]: [{
+//                         [queryInfo.key]: queryInfo.val
+//                     },
+//                 ]
+//             }
+//         });
+//         return result;
+//     } catch (error) {
+//         console.error("情報取得エラー:" + error.stack);
+//         throw error;
+//     }
+// }
+
 //ブログ詳細
 const getBlogDetail = async (queryInfo) => {
     try {
         // 結果を返す
-        const result = await Blog.findOne({
-            where: {
-                [Op.and]: [{
-                    [queryInfo.key]: queryInfo.val
-                },
-                ]
+        Comment.hasOne (Comment, {
+            foreignKey: {
+                name: 'BlogID'
+            },
+            onDelete: 'SET NULL',
+            onUpdate: 'CASCADE'
+        })
+        Blog.belongsTo(User, {
+            foreignKey: {
+                name: 'id'
             }
+        });
+        const result = await Blog.findOne({
+            order:[['id', 'DESC']],
+            include: Comment,
+            attributes: {exclude: ['Password']}
         });
         return result;
     } catch (error) {
@@ -85,7 +114,9 @@ const getBlogDetail = async (queryInfo) => {
     }
 }
 
-const blogDelete = async (queryInfo) => {
+
+
+const blogDelete = async(queryInfo) => {
     try {
         // 結果を返す
         const result = await Blog.destroy({

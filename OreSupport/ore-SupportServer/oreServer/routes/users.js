@@ -375,6 +375,9 @@ router.post("/imageUp", [checkuser.verifyUser], async function (
   res,
   next
 ) {
+  //ログ出力
+  // log.info(`fileUpload: + ${req.file.filename}`);
+
   var resObj = {};
   // ユーザIDID
   await upload1(req, res, function (err) {

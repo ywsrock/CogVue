@@ -124,6 +124,7 @@ router.get("/blogdetail", async function (req, res, next) {
         id: blogDetail.id,
         title: blogDetail.Title,
         content: blogDetail.Content,
+        comment:blog.Comment.Comment1
       },
     };
   }
