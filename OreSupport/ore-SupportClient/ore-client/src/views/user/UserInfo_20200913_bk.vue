@@ -88,33 +88,131 @@
 
               <div class="container">
                 <div class="block background-white fullwidth pt0 pb0">
-                  <div class="background-white p20">
-                    <div class="page-header">
-                      <h1>お知らせ</h1>
-                    </div>
-
-                    <table class="table mb0" style="color:black;">
-                      <tbody>
-                        <tr
-                          v-for="information in informations"
-                          :key="information.id"
-                          style="color:black;border-bottom: solid 1px #d8d8d8;"
-                        >
-                          <td>
-                            <span
-                              ><strong>
-                                {{ information.title }}
-                              </strong>
-                              {{ "(" + information.from + ")" }} </span
-                            ><br />
-                            <span>
-                              {{ information.content }}
-                            </span>
-                          </td>
-                        </tr>
-                      </tbody>
-                    </table>
+                  <div class="detail-gallery">
+                    <ul class="detail-gallery-index">
+                      <li class="detail-gallery-list-item active">
+                        <a data-target="../../assets/img/tmp/gallery-1.jpg">
+                          <img
+                            src="../../assets/img/tmp/gallery-1.jpg"
+                            alt="..."
+                          />
+                          <span
+                            style="position: absolute; top: 10px; left: 30px;"
+                          >
+                            <h4 style="color: white;">
+                              新着情報その１
+                            </h4>
+                          </span>
+                        </a>
+                      </li>
+                      <li class="detail-gallery-list-item active">
+                        <a data-target="../../assets/img/tmp/gallery-2.jpg">
+                          <img
+                            src="../../assets/img/tmp/gallery-2.jpg"
+                            alt="..."
+                          />
+                          <span
+                            style="position: absolute; top: 10px; left: 30px;"
+                          >
+                            <h4 style="color: white;">
+                              今日のニュース
+                            </h4>
+                          </span>
+                        </a>
+                      </li>
+                      <li class="detail-gallery-list-item active">
+                        <a data-target="../../assets/img/tmp/gallery-3.jpg">
+                          <img
+                            src="../../assets/img/tmp/gallery-3.jpg"
+                            alt="..."
+                          />
+                          <span
+                            style="position: absolute; top: 10px; left: 30px;"
+                          >
+                            <h4 style="color: white;">
+                              「基礎知識：記憶力」更新
+                            </h4>
+                          </span>
+                        </a>
+                      </li>
+                      <li class="detail-gallery-list-item active">
+                        <a data-target="../../assets/img/tmp/gallery-4.jpg">
+                          <img
+                            src="../../assets/img/tmp/gallery-4.jpg"
+                            alt="..."
+                          />
+                          <span
+                            style="position: absolute; top: 10px; left: 30px;"
+                          >
+                            <h4 style="color: white;">
+                              今日のお勧め商品
+                            </h4>
+                          </span>
+                        </a>
+                      </li>
+                      <li class="detail-gallery-list-item active">
+                        <a data-target="../../assets/img/tmp/gallery-5.jpg">
+                          <img
+                            src="../../assets/img/tmp/gallery-5.jpg"
+                            alt="..."
+                          />
+                          <span
+                            style="position: absolute; top: 10px; left: 30px;"
+                          >
+                            <h4 style="color: white;">
+                              季節によって注意する所
+                            </h4>
+                          </span>
+                        </a>
+                      </li>
+                      <li class="detail-gallery-list-item active">
+                        <a data-target="../../assets/img/tmp/gallery-6.jpg">
+                          <img
+                            src="../../assets/img/tmp/gallery-6.jpg"
+                            alt="..."
+                          />
+                          <span
+                            style="position: absolute; top: 10px; left: 30px;"
+                          >
+                            <h4 style="color: white;">
+                              お勧め
+                            </h4>
+                          </span>
+                        </a>
+                      </li>
+                      <li class="detail-gallery-list-item active">
+                        <a data-target="../../assets/img/tmp/gallery-7.jpg">
+                          <img
+                            src="../../assets/img/tmp/gallery-7.jpg"
+                            alt="..."
+                          />
+                          <span
+                            style="position: absolute; top: 10px; left: 30px;"
+                          >
+                            <h4 style="color: white;">
+                              お勧め
+                            </h4>
+                          </span>
+                        </a>
+                      </li>
+                      <li class="detail-gallery-list-item active">
+                        <a data-target="../../assets/img/tmp/gallery-8.jpg">
+                          <img
+                            src="../../assets/img/tmp/gallery-8.jpg"
+                            alt="..."
+                          />
+                          <span
+                            style="position: absolute; top: 10px; left: 30px;"
+                          >
+                            <h4 style="color: white;">
+                              お勧め
+                            </h4>
+                          </span>
+                        </a>
+                      </li>
+                    </ul>
                   </div>
+                  <!-- /.detail-gallery -->
                 </div>
 
                 <div class="page-header">
@@ -187,38 +285,106 @@
                   <div class="orig-row">
                     <div class="col-sm-6">
                       <div class="posts">
-                        <template v-for="(blog, index) in blogList">
-                          <div v-if="index < 3" class="post" :key="blog.id">
-                            <div class="post-image">
-                              <img
-                                src="../../assets/img/tmp/tablet_family.png"
-                                alt=""
-                              />
-                              <a
-                                class="read-more"
-                                :href="'/#/blog/blogDetail?id=' + blog.id"
-                                >閲覧</a
-                              >
-                            </div>
-                            <!-- /.post-image -->
-
-                            <div class="post-content">
-                              <div class="post-label">記憶力</div>
-                              <!-- /.post-label -->
-                              <div class="post-date">07/12/2020</div>
-                              <!-- /.post-date -->
-                              <h2>
-                                {{ blog.title }}<br /><small
-                                  >{{ blog.userName }}さん</small
-                                >
-                              </h2>
-                              <p>{{ blog.content.substr(0, 20) }}...</p>
-                            </div>
-                            <!-- /.post-content -->
+                        <div class="post">
+                          <div class="post-image">
+                            <img
+                              src="../../assets/img/tmp/tablet_family.png"
+                              alt=""
+                            />
+                            <a
+                              class="read-more"
+                              href="blog-detail-right-sidebar.html"
+                              >View</a
+                            >
                           </div>
-                        </template>
+                          <!-- /.post-image -->
+
+                          <div class="post-content">
+                            <div class="post-label">記憶力</div>
+                            <!-- /.post-label -->
+                            <div class="post-date">07/12/2020</div>
+                            <!-- /.post-date -->
+                            <h2>
+                              ついにコグエボにデビューしました！<br /><small
+                                >40代 女性 にゃっきーさん</small
+                              >
+                            </h2>
+                            <p>
+                              コグエボは友人に紹介してくれたサイトです。今日試してみました...
+                            </p>
+                          </div>
+                          <!-- /.post-content -->
+                        </div>
+                        <!-- /.post -->
+
+                        <div class="post">
+                          <div class="post-image">
+                            <img
+                              src="../../assets/img/tmp/suppliment_pill_diet.png"
+                              alt=""
+                            />
+                            <a
+                              class="read-more"
+                              href="blog-detail-right-sidebar.html"
+                              >View</a
+                            >
+                          </div>
+                          <!-- /.post-image -->
+
+                          <div class="post-content">
+                            <div class="post-label">全般</div>
+                            <!-- /.post-label -->
+                            <div class="post-date">06/18/2020</div>
+                            <!-- /.post-date -->
+                            <h2>
+                              母の認知機能について<br /><small
+                                >50代 男性 ichiroさん</small
+                              >
+                            </h2>
+                            <p>
+                              最近物忘れの場合は多くなって気がします。大丈夫がなっと心配しいます...
+                            </p>
+                          </div>
+                          <!-- /.post-content -->
+                        </div>
+                        <!-- /.post -->
+
+                        <div class="post">
+                          <div class="post-image">
+                            <img
+                              src="../../assets/img/tmp/amabie_dance.png"
+                              alt=""
+                            />
+                            <a
+                              class="read-more"
+                              href="blog-detail-right-sidebar.html"
+                              >View</a
+                            >
+                          </div>
+                          <!-- /.post-image -->
+
+                          <div class="post-content">
+                            <div class="post-label">計画力</div>
+                            <!-- /.post-label -->
+                            <div class="post-date">05/26/2020</div>
+                            <!-- /.post-date -->
+                            <h2>
+                              たまには家族と温泉旅行にいこう！<br /><small
+                                >40代 男性 信也さん</small
+                              >
+                            </h2>
+                            <p>
+                              温泉行きたい！いっぱい遊んだり、会話を楽しんだり。また行きたい...
+                            </p>
+                          </div>
+                          <!-- /.post-content -->
+                        </div>
+                        <!-- /.post -->
                       </div>
+                      <!-- /.posts -->
                     </div>
+                    <!-- /post.col-* -->
+
                     <div class="col-sm-6">
                       <!-- level 1 -->
                       <div class="col-lg-6 col-md-12">
@@ -533,37 +699,61 @@
 </template>
 
 <script>
-export default {
-  data() {
-    return {
-      informations: [],
-      blogList: [],
-    };
-  },
-  mounted() {
-    this.fetchInformations();
-    this.fetchBlogList();
-  },
-  methods: {
-    // 公開されているお知らせを取得
-    async fetchInformations() {
-      try {
-        const res = await this.$store.dispatch("information/getInformations");
-        this.informations = res.informationList;
-      } catch (err) {
-        console.log("err:", err);
-      }
-    },
+// import store from "@/store";
+// import { USER_INFO_STATIC_JS } from "../../utils/const";
 
-    // ブログを取得
-    async fetchBlogList() {
-      try {
-        const res = await this.$store.dispatch("blog/getBlogList");
-        this.blogList = res.content;
-      } catch (err) {
-        console.log("err:", err);
-      }
-    },
-  },
-};
+// export default {
+//   data() {
+//     return {
+//       username: "",
+//       isLogin: false,
+//     };
+//   },
+//   mounted() {
+//     // if (store.getters.token){
+//     if (this.$session.get("jwt")) {
+//       this.isLogin = true;
+//     } else {
+//       this.isLogin = false;
+//     }
+//      // VUEインスタン設定
+//     var that = this;
+//     // 外部JS引用、public/index.html中で、直接引用してもOK
+//     USER_INFO_STATIC_JS.forEach((p) => {
+//       that
+//         .$loadScriptaddBody(p)
+//         // .$loadScriptaddBody(p)
+//         .then(() => {})
+//         .catch(() => {
+//           console.log("外部IS引用失敗");
+//         });
+//     })
+
+//   },
+//   computed: {
+//     getusername: function() {
+//       if (this.isLogin) {
+//         return (
+//           store.getters.info.basicInfo.lastName +
+//           store.getters.info.basicInfo.firstName
+//         );
+//       } else {
+//         return "";
+//       }
+//     },
+//   },
+//   methods: {
+//     getProfileInfo() {
+//       this.$router.push("/userInfo/userUpdate");
+//     },
+
+//     logout() {
+//       this.$store.dispatch("user/logout");
+//       this.$session.destroy();
+//       this.isLogin = false;
+//       // this.$router.push(`/login?redirect=${this.$route.fullPath}`);
+//       this.$router.push(`/userInfo?redirect=${this.$route.fullPath}`);
+//     },
+//   },
+// };
 </script>

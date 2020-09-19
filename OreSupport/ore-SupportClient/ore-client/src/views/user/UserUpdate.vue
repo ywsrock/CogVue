@@ -12,7 +12,7 @@
       <title>oreSupport ユーザプロフィール編集</title>
     </head>
 
-    <body class="" style="">
+    <body class style>
       <div class="page-wrapper">
         <header class="header">
           <div class="header-wrapper">
@@ -25,348 +25,340 @@
         <div class="main">
           <div class="main-inner">
             <div class="container">
-              <div class="orig-row">
-                <div class="col-sm-4 col-lg-3">
-                  <div class="sidebar">
-                    <div class="widget">
-                      <div class="user-photo">
-                        <a href="#">
-                          <img v-bind:src="basicInfo.avatar" alt="User Photo" />
-                          <span class="user-photo-action">
-                            <label for="file_photo">
-                              写真アップロード
-                              <input
-                                ref="upfile"
-                                id="file_photo"
-                                type="file"
-                                accept=".jpg, .jpeg, .png"
-                                v-on:change="onchange"
-                                style="display:none;"
-                              />
-                            </label>
-                          </span>
-                        </a>
-                      </div>
-                      <!-- /.user-photo -->
+              <div v-if="isModalShow" class="modal-background">
+                <div
+                  class="background-white p20 mb30"
+                  style="width: 50%; position: absolute; top: 20%; left: 25%;"
+                >
+                  <h3 class="page-title">
+                    住所をご選択ください
+                  </h3>
+                  <div
+                    v-for="(address, index) in addresses"
+                    :key="address.zipcode + index"
+                  >
+                    <div class="ml-4">
+                      <input
+                        class="form-check-input"
+                        v-model="addressesIndex"
+                        :value="index"
+                        type="radio"
+                        name="select-address"
+                        :id="address.zipcode + index"
+                      />
+                      <label
+                        class="form-check-label"
+                        :for="address.zipcode + index"
+                        >{{
+                          address.address1 + address.address2 + address.address3
+                        }}</label
+                      >
                     </div>
-                    <!-- /.widget -->
+                  </div>
+                  <div style="text-align: right;">
+                    <button
+                      @click="isModalShow = false"
+                      type="button"
+                      class="btn btn-primary mr-2"
+                      style="background-color: gray;"
+                    >
+                      キャンセル
+                    </button>
 
-                    <div class="widget">
-                      <ul class="menu-advanced">
-                        <li class="active">
-                          <a
-                            href="#"
-                            @click.prevent="is_readonly = !is_readonly"
-                            ><i class="fa fa-user"></i> プロフィール編集</a
-                          >
-                        </li>
-                        <!--<li>
+                    <button
+                      @click="selectAddress"
+                      type="button"
+                      class="btn btn-primary"
+                    >
+                      選択する
+                    </button>
+                  </div>
+                </div>
+              </div>
+            </div>
+
+            <div class="orig-row">
+              <div class="col-sm-4 col-lg-3">
+                <div class="sidebar">
+                  <div class="widget">
+                    <div class="user-photo">
+                      <a href="#">
+                        <img v-bind:src="basicInfo.avatar" alt="User Photo" />
+                        <span class="user-photo-action">
+                          <label for="file_photo">
+                            写真アップロード
+                            <input
+                              ref="upfile"
+                              id="file_photo"
+                              type="file"
+                              accept=".jpg, .jpeg, .png"
+                              v-on:change="onchange"
+                              style="display:none;"
+                            />
+                          </label>
+                        </span>
+                      </a>
+                    </div>
+                    <!-- /.user-photo -->
+                  </div>
+                  <!-- /.widget -->
+
+                  <div class="widget">
+                    <ul class="menu-advanced">
+                      <li class="active">
+                        <a href="#" @click.prevent="is_readonly = !is_readonly">
+                          <i class="fa fa-user"></i> プロフィール編集
+                        </a>
+                      </li>
+                      <!--<li>
                           <a href="#"
                             ><i class="fa fa-key"></i> パスワード変更</a
                           >
                         </li>
                         <li>
                           <a href="#"><i class="fa fa-sign-out"></i>退会</a>
-                        </li>-->
-                      </ul>
-                    </div>
-                    <!-- /.widget -->
+                      </li>-->
+                    </ul>
                   </div>
-                  <!-- /.sidebar -->
+                  <!-- /.widget -->
                 </div>
-                <!-- /.col-* -->
+                <!-- /.sidebar -->
+              </div>
+              <!-- /.col-* -->
 
-                <div class="col-sm-8 col-lg-9">
-                  <div class="content">
-                    <div class="page-title">
-                      <h1>プロフィール編集</h1>
-                    </div>
-                    <!-- /.page-title -->
+              <div class="col-sm-8 col-lg-9">
+                <div class="content">
+                  <div class="page-title">
+                    <h1>プロフィール編集</h1>
+                  </div>
+                  <!-- /.page-title -->
 
-                    <div class="background-white p20 mb30">
-                      <h3 class="page-title">
-                        基本情報
-                        <el-button
-                          type="primary"
-                          class="btn btn-primary btn-xs pull-right"
-                          @click="basicInfo_Save"
-                          v-if="!is_readonly"
-                          >保存</el-button
-                        >
-                      </h3>
+                  <div class="background-white p20 mb30">
+                    <h3 class="page-title">
+                      基本情報
+                      <el-button
+                        type="primary"
+                        class="btn btn-primary btn-xs pull-right"
+                        @click="basicInfo_Save"
+                        v-if="!is_readonly"
+                        >保存</el-button
+                      >
+                    </h3>
 
-                      <div class="orig-row">
-                        <div class="form-group col-sm-6">
-                          <label>姓</label>
-                          <input
-                            type="text"
-                            class="form-control"
-                            v-model="basicInfo.lastName"
-                            :readonly="is_readonly"
-                          />
-                        </div>
-                        <!-- /.form-group -->
-
-                        <div class="form-group col-sm-6">
-                          <label>名</label>
-                          <input
-                            type="text"
-                            class="form-control"
-                            v-model="basicInfo.firstName"
-                            :readonly="is_readonly"
-                          />
-                        </div>
-                        <!-- /.form-group -->
-
-                        <div class="form-group col-sm-6">
-                          <label>性別</label>
-                          <div
-                            v-if="is_readonly"
-                            class="form-control"
-                            readonly="true"
-                          >
-                            <div v-if="basicInfo.sex === '1'">
-                              女
-                            </div>
-                            <div v-else>
-                              男
-                            </div>
-                          </div>
-                          <div
-                            v-else
-                            class="form-control"
-                            :readonly="is_readonly"
-                          >
-                            <el-radio v-model="basicInfo.sex" label="1"
-                              >女</el-radio
-                            >
-                            <el-radio v-model="basicInfo.sex" label="2"
-                              >男</el-radio
-                            >
-                          </div>
-                        </div>
-                        <!-- /.form-group -->
-                        <div class="form-group col-sm-6">
-                          <label>生年月日</label>
-                          <input
-                            type="date"
-                            id="start"
-                            name="trip-start"
-                            v-model="basicInfo.birthday"
-                            min="1700-01-01"
-                            max="2100-12-31"
-                            class="form-control"
-                            :readonly="is_readonly"
-                          />
-                        </div>
-                        <!-- /.form-group -->
-                        <div class="form-group col-sm-6">
-                          <label>E-mail</label>
-                          <input
-                            type="text"
-                            ref="email"
-                            class="form-control"
-                            v-model="basicInfo.email"
-                            @blur="checkEmail"
-                            :readonly="is_readonly"
-                          />
-                          <p
-                            style="color:red;font-size:12px;float:top"
-                            ref="e-email"
-                          ></p>
-                        </div>
-                        <!-- /.form-group -->
-
-                        <div class="form-group col-sm-6">
-                          <label>Phone</label>
-                          <input
-                            type="text"
-                            ref="phone"
-                            placeholder="09012345678"
-                            class="form-control"
-                            v-model="basicInfo.phone"
-                            @blur="checkPhone"
-                            :readonly="is_readonly"
-                          />
-                          <p
-                            style="color:red;font-size:12px;float:top"
-                            ref="e-phone"
-                          ></p>
-                        </div>
-                        <!-- /.form-group -->
+                    <div class="orig-row">
+                      <div class="form-group col-sm-6">
+                        <label>姓</label>
+                        <input
+                          type="text"
+                          class="form-control"
+                          v-model="basicInfo.lastName"
+                          :readonly="is_readonly"
+                        />
                       </div>
-                      <!-- /.row -->
-                    </div>
+                      <!-- /.form-group -->
 
-                    <div class="background-white p20 mb30">
-                      <h3 class="page-title">
-                        SNS
-
-                        <el-button
-                          type="primary"
-                          class="btn btn-primary btn-xs pull-right"
-                          @click="snsInfo_Save"
-                          v-if="!is_readonly"
-                          >保存</el-button
-                        >
-                      </h3>
-
-                      <div class="form-horizontal">
-                        <div class="form-group">
-                          <label class="col-sm-2 control-label">Facebook</label>
-
-                          <div class="col-sm-9">
-                            <input
-                              type="text"
-                              ref="sns_facebook"
-                              class="form-control"
-                              v-model="snsInfo.sns_facebook"
-                              @blur="checkURL('sns_facebook')"
-                              :readonly="is_readonly"
-                            />
-                            <p
-                              style="color:red;font-size:12px;float:top"
-                              ref="e-sns_facebook"
-                            ></p>
-                          </div>
-                          <!-- /.col-* -->
-                        </div>
-                        <!-- /.form-group -->
-
-                        <div class="form-group">
-                          <label class="col-sm-2 control-label">Twitter</label>
-
-                          <div class="col-sm-9">
-                            <input
-                              type="text"
-                              ref="sns_twtitter"
-                              class="form-control"
-                              v-model="snsInfo.sns_twtitter"
-                              @blur="checkURL('sns_twtitter')"
-                              :readonly="is_readonly"
-                            />
-                            <p
-                              style="color:red;font-size:12px;float:top"
-                              ref="e-sns_twtitter"
-                            ></p>
-                          </div>
-                          <!-- /.col-* -->
-                        </div>
-                        <!-- /.form-group -->
-
-                        <div class="form-group">
-                          <label class="col-sm-2 control-label"
-                            >Instagram</label
-                          >
-
-                          <div class="col-sm-9">
-                            <input
-                              type="text"
-                              ref="sns_instagram"
-                              class="form-control"
-                              v-model="snsInfo.sns_instagram"
-                              @blur="checkURL('sns_instagram')"
-                              :readonly="is_readonly"
-                            />
-                            <p
-                              style="color:red;font-size:12px;float:top"
-                              ref="e-sns_instagram"
-                            ></p>
-                          </div>
-                          <!-- /.col-* -->
-                        </div>
-                        <!-- /.form-group -->
-
-                        <div class="form-group">
-                          <label class="col-sm-2 control-label">その他</label>
-                          <div class="col-sm-9">
-                            <input
-                              type="text"
-                              ref="sns_other"
-                              class="form-control"
-                              v-model="snsInfo.sns_other"
-                              @blur="checkURL('sns_other')"
-                              :readonly="is_readonly"
-                            />
-                            <p
-                              style="color:red;font-size:12px;float:top"
-                              ref="e-sns_other"
-                            ></p>
-                          </div>
-                          <!-- /.col-* -->
-                        </div>
-                        <!-- /.form-group -->
+                      <div class="form-group col-sm-6">
+                        <label>名</label>
+                        <input
+                          type="text"
+                          class="form-control"
+                          v-model="basicInfo.firstName"
+                          :readonly="is_readonly"
+                        />
                       </div>
-                      <!-- /.form-inline -->
-                    </div>
-                    <!-- /.background-white -->
+                      <!-- /.form-group -->
 
-                    <div class="background-white p20 mb30">
-                      <h3 class="page-title">
-                        アドレス
-
-                        <el-button
-                          type="primary"
-                          class="btn btn-primary btn-xs pull-right"
-                          @click="addressInfo_Save"
-                          v-if="!is_readonly"
-                          >保存</el-button
+                      <div class="form-group col-sm-6">
+                        <label>性別</label>
+                        <div
+                          v-if="is_readonly"
+                          class="form-control"
+                          readonly="true"
                         >
-                      </h3>
-
-                      <div class="orig-row">
-                        <div class="form-group col-sm-6">
-                          <label>都道府県</label>
-                          <input
-                            type="text"
-                            class="form-control"
-                            v-model="addressInfo.state"
-                            :readonly="is_readonly"
-                          />
+                          <div v-if="basicInfo.sex === '1'">女</div>
+                          <div v-else>男</div>
                         </div>
-                        <!-- /.form-group -->
-
-                        <div class="form-group col-sm-6">
-                          <label>市区</label>
-                          <input
-                            type="text"
-                            class="form-control"
-                            v-model="addressInfo.city"
-                            :readonly="is_readonly"
-                          />
+                        <div
+                          v-else
+                          class="form-control"
+                          :readonly="is_readonly"
+                        >
+                          <el-radio v-model="basicInfo.sex" label="1"
+                            >女</el-radio
+                          >
+                          <el-radio v-model="basicInfo.sex" label="2"
+                            >男</el-radio
+                          >
                         </div>
-                        <!-- /.form-group -->
+                      </div>
+                      <!-- /.form-group -->
+                      <div class="form-group col-sm-6">
+                        <label>生年月日</label>
+                        <input
+                          type="date"
+                          id="start"
+                          name="trip-start"
+                          v-model="basicInfo.birthday"
+                          min="1700-01-01"
+                          max="2100-12-31"
+                          class="form-control"
+                          :readonly="is_readonly"
+                        />
+                      </div>
+                      <!-- /.form-group -->
+                      <div class="form-group col-sm-6">
+                        <label>E-mail</label>
+                        <input
+                          type="text"
+                          ref="email"
+                          class="form-control"
+                          v-model="basicInfo.email"
+                          @blur="checkEmail"
+                          :readonly="is_readonly"
+                        />
+                        <p
+                          style="color:red;font-size:12px;float:top"
+                          ref="e-email"
+                        ></p>
+                      </div>
+                      <!-- /.form-group -->
 
-                        <div class="form-group col-sm-6">
-                          <label>町</label>
+                      <div class="form-group col-sm-6">
+                        <label>Phone</label>
+                        <input
+                          type="text"
+                          ref="phone"
+                          placeholder="09012345678"
+                          class="form-control"
+                          v-model="basicInfo.phone"
+                          @blur="checkPhone"
+                          :readonly="is_readonly"
+                        />
+                        <p
+                          style="color:red;font-size:12px;float:top"
+                          ref="e-phone"
+                        ></p>
+                      </div>
+                      <!-- /.form-group -->
+                    </div>
+                    <!-- /.row -->
+                  </div>
+
+                  <div class="background-white p20 mb30">
+                    <h3 class="page-title">
+                      SNS
+                      <el-button
+                        type="primary"
+                        class="btn btn-primary btn-xs pull-right"
+                        @click="snsInfo_Save"
+                        v-if="!is_readonly"
+                        >保存</el-button
+                      >
+                    </h3>
+
+                    <div class="form-horizontal">
+                      <div class="form-group">
+                        <label class="col-sm-2 control-label">Facebook</label>
+
+                        <div class="col-sm-9">
                           <input
                             type="text"
+                            ref="sns_facebook"
                             class="form-control"
-                            v-model="addressInfo.streat"
-                            :readonly="is_readonly"
-                          />
-                        </div>
-                        <!-- /.form-group -->
-
-                        <div class="form-group col-sm-3">
-                          <label>部屋番号</label>
-                          <input
-                            type="text"
-                            ref="houseNumber"
-                            class="form-control"
-                            v-model="addressInfo.houseNumber"
-                            placeholder="101"
-                            @blur="checkHouseNumber"
+                            v-model="snsInfo.sns_facebook"
+                            @blur="checkURL('sns_facebook')"
                             :readonly="is_readonly"
                           />
                           <p
                             style="color:red;font-size:12px;float:top"
-                            ref="e-houseNumber"
+                            ref="e-sns_facebook"
                           ></p>
                         </div>
-                        <!-- /.form-group -->
+                        <!-- /.col-* -->
+                      </div>
+                      <!-- /.form-group -->
 
-                        <div class="form-group col-sm-3">
+                      <div class="form-group">
+                        <label class="col-sm-2 control-label">Twitter</label>
+
+                        <div class="col-sm-9">
+                          <input
+                            type="text"
+                            ref="sns_twtitter"
+                            class="form-control"
+                            v-model="snsInfo.sns_twtitter"
+                            @blur="checkURL('sns_twtitter')"
+                            :readonly="is_readonly"
+                          />
+                          <p
+                            style="color:red;font-size:12px;float:top"
+                            ref="e-sns_twtitter"
+                          ></p>
+                        </div>
+                        <!-- /.col-* -->
+                      </div>
+                      <!-- /.form-group -->
+
+                      <div class="form-group">
+                        <label class="col-sm-2 control-label">Instagram</label>
+
+                        <div class="col-sm-9">
+                          <input
+                            type="text"
+                            ref="sns_instagram"
+                            class="form-control"
+                            v-model="snsInfo.sns_instagram"
+                            @blur="checkURL('sns_instagram')"
+                            :readonly="is_readonly"
+                          />
+                          <p
+                            style="color:red;font-size:12px;float:top"
+                            ref="e-sns_instagram"
+                          ></p>
+                        </div>
+                        <!-- /.col-* -->
+                      </div>
+                      <!-- /.form-group -->
+
+                      <div class="form-group">
+                        <label class="col-sm-2 control-label">その他</label>
+                        <div class="col-sm-9">
+                          <input
+                            type="text"
+                            ref="sns_other"
+                            class="form-control"
+                            v-model="snsInfo.sns_other"
+                            @blur="checkURL('sns_other')"
+                            :readonly="is_readonly"
+                          />
+                          <p
+                            style="color:red;font-size:12px;float:top"
+                            ref="e-sns_other"
+                          ></p>
+                        </div>
+                        <!-- /.col-* -->
+                      </div>
+                      <!-- /.form-group -->
+                    </div>
+                    <!-- /.form-inline -->
+                  </div>
+                  <!-- /.background-white -->
+
+                  <div class="background-white p20 mb30">
+                    <h3 class="page-title">
+                      アドレス
+                      <el-button
+                        type="primary"
+                        class="btn btn-primary btn-xs pull-right"
+                        @click="addressInfo_Save"
+                        v-if="!is_readonly"
+                        >保存</el-button
+                      >
+                    </h3>
+
+                    <div class="orig-row">
+                      <div class="col-sm-6">
+                        <div class="form-group">
                           <label>郵便番号</label>
                           <input
                             type="text"
@@ -377,43 +369,105 @@
                             @blur="checkPostalcode"
                             :readonly="is_readonly"
                           />
-                          <p
-                            style="color:red;font-size:12px;float:top"
-                            ref="e-postalcode"
-                          ></p>
                         </div>
-                        <!-- /.form-group -->
+                        <div v-if="!is_readonly">
+                          <button
+                            type="primary"
+                            class="btn btn-primary btn-xs pull-right"
+                            @click="searchAddress"
+                          >
+                            住所検索
+                          </button>
+                        </div>
+
+                        <p
+                          style="color:red;font-size:12px;float:top"
+                          ref="e-postalcode"
+                        ></p>
                       </div>
-                      <!-- /.row -->
+                      <!-- /.form-group -->
+
+                      <div class="form-group col-sm-3">
+                        <label>都道府県</label>
+                        <input
+                          type="text"
+                          class="form-control"
+                          v-model="addressInfo.state"
+                          :readonly="is_readonly"
+                        />
+                      </div>
+                      <!-- /.form-group -->
+
+                      <div class="form-group col-sm-3">
+                        <label>市区</label>
+                        <input
+                          type="text"
+                          class="form-control"
+                          v-model="addressInfo.city"
+                          :readonly="is_readonly"
+                        />
+                      </div>
+                      <!-- /.form-group -->
                     </div>
+                    <!-- /.row -->
 
-                    <div class="background-white p20 mb30">
-                      <h3 class="page-title">
-                        自分紹介
+                    <div class="row">
+                      <div class="form-group col-sm-6">
+                        <label>町村・番地</label>
+                        <input
+                          type="text"
+                          class="form-control"
+                          v-model="addressInfo.streat"
+                          :readonly="is_readonly"
+                        />
+                      </div>
+                      <!-- /.form-group -->
 
-                        <el-button
-                          type="primary"
-                          class="btn btn-primary btn-xs pull-right"
-                          @click="basicInfo_Save"
-                          v-if="!is_readonly"
-                          >保存</el-button
-                        >
-                      </h3>
-
-                      <textarea
-                        class="form-control"
-                        rows="7"
-                        v-model="basicInfo.aboutMe"
-                        :readonly="is_readonly"
-                      ></textarea>
+                      <div class="form-group col-sm-6">
+                        <label>建物・部屋番号等</label>
+                        <input
+                          type="text"
+                          ref="houseNumber"
+                          class="form-control"
+                          v-model="addressInfo.houseNumber"
+                          placeholder="101"
+                          @blur="checkHouseNumber"
+                          :readonly="is_readonly"
+                        />
+                        <p
+                          style="color:red;font-size:12px;float:top"
+                          ref="e-houseNumber"
+                        ></p>
+                      </div>
+                      <!-- /.form-group -->
                     </div>
                   </div>
-                  <!-- /.content -->
+
+                  <div class="background-white p20 mb30">
+                    <h3 class="page-title">
+                      自分紹介
+                      <el-button
+                        type="primary"
+                        class="btn btn-primary btn-xs pull-right"
+                        @click="basicInfo_Save"
+                        v-if="!is_readonly"
+                        >保存</el-button
+                      >
+                    </h3>
+
+                    <textarea
+                      class="form-control"
+                      rows="7"
+                      v-model="basicInfo.aboutMe"
+                      :readonly="is_readonly"
+                    ></textarea>
+                  </div>
                 </div>
-                <!-- /.col-* -->
+                <!-- /.content -->
               </div>
-              <!-- /.row -->
+              <!-- /.col-* -->
             </div>
+            <!-- /.row -->
             <!-- /.container -->
           </div>
           <!-- /.main-inner -->
@@ -524,6 +578,9 @@ export default {
         houseNumber: [{ validator: validateHouseNumber }],
       },
       is_readonly: true,
+      addresses: [],
+      isModalShow: false,
+      addressesIndex: 0,
     };
   },
   created() {
@@ -548,34 +605,49 @@ export default {
     };
   },
   mounted() {
-    // VUEインスタン設定
-    var that = this;
-    // 外部JS引用、public/index.html中で、直接引用してもOK
-    STATIC_JS.forEach((p) => {
-      that
-        .$loadScript(p)
-        .then(() => {})
-        .catch(() => {
-          console.log("外部IS引用失敗");
-        });
-    });
-    this.$nextTick().then(function() {
-      // basic 情報
-      const info_basic = that.$store.getters.info.basicInfo;
-      that.basicInfo = Object.assign({}, that.basicInfo, info_basic);
-      // アドレス情報
-      const info_address = that.$store.getters.info.addressInfo;
-      that.addressInfo = Object.assign({}, that.basicInfo, info_address);
-      // パスワード情報
-      const info_pwd = that.$store.getters.info.passwordInfo;
-      that.passwordInfo = Object.assign({}, that.basicInfo, info_pwd);
-      // sns情報
-      const info_snsinfo = that.$store.getters.info.snsInfo;
-      that.snsInfo = Object.assign({}, that.basicInfo, info_snsinfo);
-      //  that.data =Object.assign(that.data,that.$store.getters.info)
-    });
+    this.fetchUserProfile();
   },
   methods: {
+    // ユーザーのプロフィールを取得
+    async fetchUserProfile() {
+      try {
+        const res = await this.$store.dispatch("user/getProfileInfo");
+        this.basicInfo = res.dataInfo.basicInfo;
+        this.addressInfo = res.dataInfo.addressInfo;
+        this.passwordInfo = res.dataInfo.passwordInfo;
+        this.snsInfo = res.dataInfo.snsInfo;
+      } catch (err) {
+        console.log("err:", err);
+      }
+    },
+    // 住所自動検索
+    async searchAddress() {
+      try {
+        const params = new URLSearchParams();
+        params.append("postalcode", this.$refs["postalcode"].value);
+        const res = await this.$store.dispatch("address/autoSearch", params);
+        if (res.results.length === 1) {
+          this.addressInfo.state = res.results[0].address1;
+          this.addressInfo.city = res.results[0].address2;
+          this.addressInfo.streat = res.results[0].address3;
+        } else if (res.results.length > 1) {
+          this.addresses = res.results;
+          this.isModalShow = true;
+        } else {
+          alert("該当する住所がありません。");
+        }
+      } catch (err) {
+        console.log("err:", err);
+      }
+    },
+    // 住所が重複した場合、選択させる
+    selectAddress: function() {
+      this.addressInfo.state = this.addresses[this.addressesIndex].address1;
+      this.addressInfo.city = this.addresses[this.addressesIndex].address2;
+      this.addressInfo.streat = this.addresses[this.addressesIndex].address3;
+
+      this.isModalShow = false;
+    },
     //全項目チェックして基本情報保存
     basicInfo_Save: function() {
       this.checkEmail();
@@ -757,4 +829,16 @@ export default {
 @import "../../../public/static_src/owl.carousel.css";
 @import "../../../public/static_src/superlist.css";
 @import "../../../public/static_src/colorbox.css";
+
+.modal-background {
+  position: fixed;
+  background: rgba(0, 0, 0, 0.5);
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  z-index: 99999;
+  display: block;
+  overflow-y: auto;
+}
 </style>
