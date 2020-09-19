@@ -440,7 +440,7 @@ router.post("/imageUp", [checkuser.verifyUser], async function (
   next
 ) {
   //ログ出力
-  log.info(`fileUpload: + ${req.file.filename}`);
+  // log.info(`fileUpload: + ${req.file.filename}`);
 
   var resObj = {};
   // ユーザIDID

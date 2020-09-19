@@ -652,6 +652,7 @@
 export default {
   data() {
     return {
+      //  tableData: [],
       blogDetail: {
         title: "",
         content: "",
@@ -674,6 +675,10 @@ export default {
           const title = that.$store.getters.get_title;
           that.blogDetail.content = content;
           that.blogDetail.title = title;
+          // const blogInfo = that.$store.getters.get_content;
+          // that.tableData = blogInfo;
+
+
         });
       })
       .catch((error) => {
