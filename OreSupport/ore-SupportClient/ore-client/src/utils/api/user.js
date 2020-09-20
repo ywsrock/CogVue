@@ -1,5 +1,4 @@
-import request from '@/utils/request'
-
+import request from "@/utils/request";
 
 /**
  * ユーザログイン
@@ -8,10 +7,10 @@ import request from '@/utils/request'
  */
 export function login(data) {
     return request({
-        url: '/user/login',
-        method: 'post',
-        data
-    })
+        url: "/user/login",
+        method: "post",
+        data,
+    });
 }
 
 /**
@@ -21,10 +20,10 @@ export function login(data) {
  */
 export function singUp(data) {
     return request({
-        url: '/user/singUp',
-        method: 'post',
-        data
-    })
+        url: "/user/singUp",
+        method: "post",
+        data,
+    });
 }
 
 /**
@@ -32,12 +31,12 @@ export function singUp(data) {
  * @param token String
  * @returns String
  */
-export function getInfo(token,loginType="normal") {
+export function getInfo(token, loginType = "normal") {
     return request({
-        url: '/user/profileInfo',
-        method: 'get',
-        params: { token,loginType }
-    })
+        url: "/user/profileInfo",
+        method: "get",
+        params: { token, loginType },
+    });
 }
 
 /**
@@ -45,12 +44,12 @@ export function getInfo(token,loginType="normal") {
  * @param token String
  * @returns String
  */
-export function getProfileInfo(token,loginType="normal") {
+export function getProfileInfo(token, loginType = "normal") {
     return request({
-        url: '/user/profileInfo',
-        method: 'get',
-        params: { token,loginType }
-    })
+        url: "/user/profileInfo",
+        method: "get",
+        params: { token, loginType },
+    });
 }
 /**
  * ユーザプロフィール更新
@@ -59,12 +58,11 @@ export function getProfileInfo(token,loginType="normal") {
  */
 export function updateUser(data) {
     return request({
-        url: 'user/updatePro',
-        method: 'post',
-        data
-    })
+        url: "user/updatePro",
+        method: "post",
+        data,
+    });
 }
-
 
 /**
  * ユーザ画像アップロード
@@ -73,10 +71,10 @@ export function updateUser(data) {
  */
 export function imageUp(data) {
     return request({
-        url: 'user/imageUp',
-        method: 'post',
-        data
-    })
+        url: "user/imageUp",
+        method: "post",
+        data,
+    });
 }
 
 /**
@@ -84,7 +82,7 @@ export function imageUp(data) {
  */
 export function logout() {
     return request({
-        url: 'user/logout',
-        method: 'post'
-    })
+        url: "user/logout",
+        method: "post",
+    });
 }

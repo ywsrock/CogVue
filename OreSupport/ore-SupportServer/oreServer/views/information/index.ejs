@@ -1,0 +1,63 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <title><%= title %></title>
+
+    <link
+      rel="stylesheet"
+      href="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/css/bootstrap.min.css"
+      integrity="sha384-ggOyR0iXCbMQv3Xipma34MD+dH/1fQ784/j6cY/iJTQUOhcWr7x9JvoRxT2MZw1T"
+      crossorigin="anonymous"
+    />
+    <link rel="stylesheet" href="/stylesheets/style.css" />
+  </head>
+  <body>
+    <h1><%= title %></h1>
+    <div style="text-align: right">
+      <a href="/information/new" class="btn btn-primary mb-2">新規作成</a>
+    </div>
+    <table class="table">
+      <thead class="thead-light">
+        <tr>
+          <th>タイトル</th>
+          <th>カテゴリー</th>
+          <th style="width: 50%">内容</th>
+          <th>配信開始</th>
+          <th>配信終了</th>
+          <th></th>
+        </tr>
+      </thead>
+      <tbody>
+        <% informationList.forEach(function (value, key) { %>
+        <tr>
+          <td><%= value.title %></td>
+          <td><%= value.category %></td>
+          <td><%= value.content %></td>
+          <td><%= value.from %></td>
+          <td><%= value.to %></td>
+          <td>
+            <a href="/information/detail?informationID=<%= value.id %>">編集</a>
+            <a href="/information/delete?informationID=<%= value.id %>">削除</a>
+          </td>
+        </tr>
+        <% }); %>
+      </tbody>
+    </table>
+
+    <script
+      src="https://code.jquery.com/jquery-3.3.1.slim.min.js"
+      integrity="sha384-q8i/X+965DzO0rT7abK41JStQIAqVgRVzpbzo5smXKp4YfRvH+8abtTE1Pi6jizo"
+      crossorigin="anonymous"
+    ></script>
+    <script
+      src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.14.7/umd/popper.min.js"
+      integrity="sha384-UO2eT0CpHqdSJQ6hJty5KVphtPhzWj9WO1clHTMGa3JDZwrnQq4sF86dIHNDz0W1"
+      crossorigin="anonymous"
+    ></script>
+    <script
+      src="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/js/bootstrap.min.js"
+      integrity="sha384-JjSmVgyd0p3pXB1rRibZUAYoIIy6OrQ6VrjIEaFf/nJGzIxFDsf4x0xIM+B07jRM"
+      crossorigin="anonymous"
+    ></script>
+  </body>
+</html>
