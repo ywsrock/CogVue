@@ -51,17 +51,17 @@
                     <div class="item active">
                       <div
                         class="item-bg"
-                        style="background-image: url('../../assets/slider-2.jpg');"
+                        style="background-image: url('assets/img/tmp/slider-1.jpg')"
                       ></div>
                       <img
-                        src="../../assets/img/tmp/slider-2.jpg"
+                        src="../../assets/img/tmp/20200920amino.png"
+                        style="height:450px; width:100vw;"
                         alt
-                        style="height:400px; width:100vw;"
                       />
 
                       <div class="carousel-caption">
                         <div class="hero-slider-content">
-                          <h1>話題のサプリをプレゼント</h1>
+                          <h1>認知機能改善に運動を!!aminoVITALは運動の強い味方です</h1>
 
                           <div class="hero-slider-rating">
                             <i class="fa fa-star"></i>
@@ -81,17 +81,17 @@
                     <div class="item">
                       <div
                         class="item-bg"
-                        style="background-image: url('assets/img/tmp/slider-1.jpg')"
+                        style="background-image: url('../../assets/20200919houzi.png');"
                       ></div>
                       <img
-                        src="../../assets/img/tmp/slider-1.jpg"
-                        style="height:400px; width:100vw;"
+                        src="../../assets/img/tmp/20200919houzi.png"
                         alt
+                        style="height:450px; width:100vw;"
                       />
 
                       <div class="carousel-caption">
                         <div class="hero-slider-content">
-                          <h1>今だけお得!!半額キャンペーン!!</h1>
+                          <h1>ほうじ茶で「生」。華やかな香りを味わいませんか？</h1>
 
                           <div class="hero-slider-rating">
                             <i class="fa fa-star"></i>
@@ -116,7 +116,7 @@
                       <img
                         src="../../assets/img/tmp/slider-3.jpg"
                         alt
-                        style="height:400px; width:100vw;"
+                        style="height:450px; width:100vw;"
                       />
 
                       <div class="carousel-caption">
@@ -166,7 +166,7 @@
             <div class="container">
               <div class="block background-white fullwidth pt0 pb0">
                 <div class="row">
-                  <div class="col-sm-6 background-white p20">
+                  <div class="col-sm-8 background-white p20">
                     <div class="page-header">
                       <h1>お知らせ</h1>
                     </div>
@@ -196,103 +196,14 @@
                     </div>
                   </div>
 
-                  <div class="col-sm-6 background-white p20">
-                    <div class="page-header">
-                      <h1>新着商品</h1>
-                    </div>
-
-                    <div class="row cards-system">
-                      <div class="card-system col-sm-6" style="margin: 0px;">
-                        <div class="card-system-inner">
-                          <div
-                            class="card-system-image"
-                            style="background-image: url('https://www.cells.co.jp/daityo-p/wp-content/themes/dp-fancie-note-business/img/post_thumbnail/noimage.png');background-size: contain;"
-                          >
-                            <a href="listing-detail.html"></a>
-                          </div>
-                          <!-- /.card-system-image -->
-
-                          <div class="card-system-content">
-                            <h2>
-                              <a href="listing-detail.html">商品A</a>
-                            </h2>
-                            <h3>テキストテキストテキストテキスト</h3>
-                          </div>
-                        </div>
-                      </div>
-                      <!-- /.card-system -->
-
-                      <div class="card-system col-sm-6" style="margin: 0px;">
-                        <div class="card-system-inner">
-                          <div
-                            class="card-system-image"
-                            style="background-image: url('https://www.cells.co.jp/daityo-p/wp-content/themes/dp-fancie-note-business/img/post_thumbnail/noimage.png');background-size: contain;"
-                          >
-                            <a href="listing-detail.html"></a>
-                          </div>
-                          <!-- /.card-system-image -->
-
-                          <div class="card-system-content">
-                            <h2>
-                              <a href="listing-detail.html">商品B</a>
-                            </h2>
-                            <h3>テキストテキストテキストテキスト</h3>
-                          </div>
-                        </div>
-                      </div>
-                      <!-- /.card-system -->
-
-                      <div class="card-system col-sm-6" style="margin: 0px;">
-                        <div class="card-system-inner">
-                          <div
-                            class="card-system-image"
-                            style="background-image: url('https://www.cells.co.jp/daityo-p/wp-content/themes/dp-fancie-note-business/img/post_thumbnail/noimage.png');background-size: contain;"
-                          >
-                            <a href="listing-detail.html"></a>
-                          </div>
-                          <!-- /.card-system-image -->
-
-                          <div class="card-system-content">
-                            <h2>
-                              <a href="listing-detail.html">商品C</a>
-                            </h2>
-                            <h3>テキストテキストテキストテキスト</h3>
-                          </div>
-                        </div>
-                      </div>
-                      <!-- /.card-system -->
-
-                      <div class="card-system col-sm-6" style="margin: 0px;">
-                        <div class="card-system-inner">
-                          <div
-                            class="card-system-image"
-                            style="background-image: url('https://www.cells.co.jp/daityo-p/wp-content/themes/dp-fancie-note-business/img/post_thumbnail/noimage.png');background-size: contain;"
-                          >
-                            <a href="listing-detail.html"></a>
-                          </div>
-                          <!-- /.card-system-image -->
-
-                          <div class="card-system-content">
-                            <h2>
-                              <a href="listing-detail.html">商品D</a>
-                            </h2>
-                            <h3>テキストテキストテキストテキスト</h3>
-                          </div>
-                        </div>
-                      </div>
-                      <!-- /.card-system -->
-                    </div>
-                    <div style="text-align:right;">
-                      <a class="mt-5">新着商品一覧>></a>
-                    </div>
-
-                    <!-- /.cards-system -->
+                  <div class="col-sm-4 background-white p20 img_outer">
+                    <img class="inner_photo" src="../../assets/img/tmp/20200920imuse.png" />
                   </div>
                 </div>
               </div>
 
               <div class="page-header" style="margin-top: 20px !important;">
-                <h1>新着ブログ</h1>
+                <h1 class="mb-5">新着ブログ & 新着商品</h1>
                 <ul id="listing-detail-location" class="nav nav-tabs" role="tablist">
                   <li role="presentation" class="active">
                     <a
@@ -347,158 +258,403 @@
                 </ul>
               </div>
               <div class="posts row">
-                <template v-for="(blog, index) in blogList">
-                  <div v-if="index < 4" class="col-sm-6" :key="blog.id">
-                    <div
-                      class="post post-boxed"
-                      style="padding: 20px !important;margin: 5px !important;"
-                    >
-                      <div class="post-image">
-                        <img
-                          src="https://www.cells.co.jp/daityo-p/wp-content/themes/dp-fancie-note-business/img/post_thumbnail/noimage.png"
-                          alt="A Clockwork Origin"
-                        />
-                        <a
-                          class="read-more"
-                          :href="'/#/blog/blogDetail?id=' + blog.id"
-                          style="font-size: 8px !important; "
-                        >詳しく読む</a>
-                      </div>
-                      <!-- /.post-image -->
-
-                      <div class="post-content">
-                        <h2>
-                          <a href>{{ blog.title }}</a>
-                        </h2>
-                        <p>{{ blog.content }}</p>
-                      </div>
-                      <!-- /.post-content -->
-
-                      <div class="post-meta clearfix">
-                        <div class="post-meta-author">
-                          By
-                          <a href="blog-detail.html">{{ blog.userName }}</a>
-                        </div>
-                        <!-- /.post-meta-author -->
-                        <div class="post-meta-date">08/24/2015</div>
-                        <!-- /.post-meta-date -->
-                        <div class="post-meta-categories">
-                          <i class="fa fa-tags"></i>
-                          <a href="blog-detail.html">記憶力</a>
-                        </div>
-                        <!-- /.post-meta-categories -->
-                        <div class="post-meta-comments">
-                          <i class="fa fa-comments"></i>
-                          <a href="blog-detail.html">3 comments</a>
-                        </div>
-                        <!-- /.post-meta-more -->
-                      </div>
-                      <!-- /.post-meta -->
+                <div class="col-sm-6">
+                  <h3 style="margin-top: 0 !important;">新着ブログ</h3>
+                  <div
+                    class="post post-boxed"
+                    style="padding: 10px !important;margin: 5px !important;"
+                  >
+                    <div class="post-image">
+                      <img
+                        src="https://www.cells.co.jp/daityo-p/wp-content/themes/dp-fancie-note-business/img/post_thumbnail/noimage.png"
+                        alt="A Clockwork Origin"
+                      />
+                      <a class="read-more" href="#" style="font-size: 8px !important; ">詳しく読む</a>
                     </div>
-                    <!-- /.post -->
+                    <!-- /.post-image -->
+
+                    <div class="post-content">
+                      <h2>
+                        <a href>私もコグエボデビューしました！</a>
+                      </h2>
+                      <p>噂のコグエボを初めて見ました。今年で70歳ですが、何事にも挑戦していきたいと考えています...</p>
+
+                      <div class="post-meta-author">
+                        By
+                        <a href="blog-detail.html">ユーザー1</a>
+                      </div>
+                      <div class="post-meta-categories">
+                        <i class="fa fa-tags"></i>
+                        <a href="blog-detail.html">記憶力</a>
+                      </div>
+                      <!-- /.post-meta-categories -->
+                      <div class="post-meta-comments">
+                        <i class="fa fa-comments"></i>
+                        <a href="blog-detail.html">3 comments</a>
+                      </div>
+                      <!-- /.post-meta-more -->
+                    </div>
+                    <!-- /.post-content -->
                   </div>
-                </template>
+                  <!-- /.post -->
+
+                  <div
+                    class="post post-boxed"
+                    style="padding: 10px !important;margin: 5px !important;"
+                  >
+                    <div class="post-image">
+                      <img
+                        src="https://www.cells.co.jp/daityo-p/wp-content/themes/dp-fancie-note-business/img/post_thumbnail/noimage.png"
+                        alt="A Clockwork Origin"
+                      />
+                      <a class="read-more" href="#" style="font-size: 8px !important; ">詳しく読む</a>
+                    </div>
+                    <!-- /.post-image -->
+
+                    <div class="post-content">
+                      <h2>
+                        <a href>昔、よく行く公園で</a>
+                      </h2>
+                      <p>昔、旦那さんとよく行った公園に行きました。いっぱい昔のことを思い出しました。...</p>
+
+                      <div class="post-meta-author">
+                        By
+                        <a href="blog-detail.html">ユーザー2</a>
+                      </div>
+                      <div class="post-meta-categories">
+                        <i class="fa fa-tags"></i>
+                        <a href="blog-detail.html">記憶力</a>
+                      </div>
+                      <!-- /.post-meta-categories -->
+                      <div class="post-meta-comments">
+                        <i class="fa fa-comments"></i>
+                        <a href="blog-detail.html">5 comments</a>
+                      </div>
+                    </div>
+                    <!-- /.post-content -->
+                  </div>
+                  <!-- /.post -->
+                  <div
+                    class="post post-boxed"
+                    style="padding: 10px !important;margin: 5px !important;"
+                  >
+                    <div class="post-image">
+                      <img
+                        src="https://www.cells.co.jp/daityo-p/wp-content/themes/dp-fancie-note-business/img/post_thumbnail/noimage.png"
+                        alt="A Clockwork Origin"
+                      />
+                      <a class="read-more" href="#" style="font-size: 8px !important; ">詳しく読む</a>
+                    </div>
+                    <!-- /.post-image -->
+
+                    <div class="post-content">
+                      <h2>
+                        <a href>懐かしい！</a>
+                      </h2>
+                      <p>今日久々に音楽を聴きました。本棚で昔のCDを見つけたんです。聴くと...</p>
+
+                      <div class="post-meta-author">
+                        By
+                        <a href="blog-detail.html">ユーザー3</a>
+                      </div>
+                      <div class="post-meta-categories">
+                        <i class="fa fa-tags"></i>
+                        <a href="blog-detail.html">記憶力</a>
+                      </div>
+                      <!-- /.post-meta-categories -->
+                      <div class="post-meta-comments">
+                        <i class="fa fa-comments"></i>
+                        <a href="blog-detail.html">2 comments</a>
+                      </div>
+                    </div>
+                  </div>
+                  <!-- /.post -->
+                  <div
+                    class="post post-boxed"
+                    style="padding: 10px !important;margin: 5px !important;"
+                  >
+                    <div class="post-image">
+                      <img
+                        src="https://www.cells.co.jp/daityo-p/wp-content/themes/dp-fancie-note-business/img/post_thumbnail/noimage.png"
+                        alt="A Clockwork Origin"
+                      />
+                      <a class="read-more" href="#" style="font-size: 8px !important; ">詳しく読む</a>
+                    </div>
+                    <!-- /.post-image -->
+
+                    <div class="post-content">
+                      <h2>
+                        <a href>いい天気！</a>
+                      </h2>
+                      <p>旦那さんとひまわりを見に行きました。いい天気、いい景色でした。</p>
+
+                      <div class="post-meta-author">
+                        By
+                        <a href="blog-detail.html">ユーザー4</a>
+                      </div>
+                      <div class="post-meta-categories">
+                        <i class="fa fa-tags"></i>
+                        <a href="blog-detail.html">記憶力</a>
+                      </div>
+                      <!-- /.post-meta-categories -->
+                      <div class="post-meta-comments">
+                        <i class="fa fa-comments"></i>
+                        <a href="blog-detail.html">31 comments</a>
+                      </div>
+                    </div>
+                    <!-- /.post-content -->
+                  </div>
+                  <div
+                    class="post post-boxed"
+                    style="padding: 10px !important;margin: 5px !important;"
+                  >
+                    <div class="post-image">
+                      <img
+                        src="https://www.cells.co.jp/daityo-p/wp-content/themes/dp-fancie-note-business/img/post_thumbnail/noimage.png"
+                        alt="A Clockwork Origin"
+                      />
+                      <a class="read-more" href="#" style="font-size: 8px !important; ">詳しく読む</a>
+                    </div>
+                    <!-- /.post-image -->
+
+                    <div class="post-content">
+                      <h2>
+                        <a href>こんなに笑ったのは久しぶり</a>
+                      </h2>
+                      <p>大学の同級生と久しぶりにあってきました。楽しかったことをたくさん話してこんなに笑っ...</p>
+
+                      <div class="post-meta-author">
+                        By
+                        <a href="blog-detail.html">ユーザー5</a>
+                      </div>
+                      <div class="post-meta-categories">
+                        <i class="fa fa-tags"></i>
+                        <a href="blog-detail.html">記憶力</a>
+                      </div>
+                      <!-- /.post-meta-categories -->
+                      <div class="post-meta-comments">
+                        <i class="fa fa-comments"></i>
+                        <a href="blog-detail.html">5 comments</a>
+                      </div>
+                    </div>
+                    <!-- /.post-content -->
+                  </div>
+                  <div style="text-align:right;">
+                    <a class="mt-5">ブログ一覧>></a>
+                  </div>
+                </div>
+                <div class="col-sm-6">
+                  <h3 style="margin-top: 0 !important;">新着商品</h3>
+
+                  <div
+                    class="post post-boxed"
+                    style="padding: 10px !important;margin: 5px !important;"
+                  >
+                    <div class="post-image" style="width: 180px;">
+                      <img
+                        style="height: 120px;"
+                        src="../../assets/img/tmp/20200919koutya.png"
+                        alt="A Clockwork Origin"
+                      />
+                      <a class="read-more" href="#" style="font-size: 8px !important; ">商品を知る</a>
+                    </div>
+                    <!-- /.post-image -->
+
+                    <div class="post-content">
+                      <h2>
+                        <a href>午後の紅茶 STRAIGHT TEA</a>
+                      </h2>
+                      <p>紅茶葉の華やかな香りと心地よい渋みを引き出した、本格アイスストレートティーです。</p>
+
+                      <div class="post-meta-author">購入する</div>
+                      <div class="post-meta-author">口コミをみる</div>
+                    </div>
+                    <!-- /.post-content -->
+                  </div>
+
+                  <div
+                    class="post post-boxed"
+                    style="padding: 10px !important;margin: 5px !important;"
+                  >
+                    <div class="post-image">
+                      <img src="../../assets/img/tmp/20200920imuseeye.png" alt="A Clockwork Origin" />
+                      <a class="read-more" href="#" style="font-size: 8px !important; ">商品を知る</a>
+                    </div>
+                    <!-- /.post-image -->
+
+                    <div class="post-content">
+                      <h2>
+                        <a href>iMUSE eye（イミューズ アイ）</a>
+                      </h2>
+                      <p>新発想！ＫＷ(ケーダブリュ)乳酸菌が目の疲労感を軽減。</p>
+
+                      <div class="post-meta-author">購入する</div>
+                      <div class="post-meta-author">口コミをみる</div>
+                    </div>
+                    <!-- /.post-content -->
+                  </div>
+
+                  <div
+                    class="post post-boxed"
+                    style="padding: 10px !important;margin: 5px !important;"
+                  >
+                    <div class="post-image">
+                      <img
+                        src="https://www.cells.co.jp/daityo-p/wp-content/themes/dp-fancie-note-business/img/post_thumbnail/noimage.png"
+                        alt="A Clockwork Origin"
+                      />
+                      <a class="read-more" href="#" style="font-size: 8px !important; ">商品を知る</a>
+                    </div>
+                    <!-- /.post-image -->
+
+                    <div class="post-content">
+                      <h2>
+                        <a href>商品A</a>
+                      </h2>
+                      <p>テキストテキストテキストテキストテキストテキスト</p>
+
+                      <div class="post-meta-author">購入する</div>
+                      <div class="post-meta-author">口コミをみる</div>
+                    </div>
+                    <!-- /.post-content -->
+                  </div>
+
+                  <div
+                    class="post post-boxed"
+                    style="padding: 10px !important;margin: 5px !important;"
+                  >
+                    <div class="post-image">
+                      <img
+                        src="https://www.cells.co.jp/daityo-p/wp-content/themes/dp-fancie-note-business/img/post_thumbnail/noimage.png"
+                        alt="A Clockwork Origin"
+                      />
+                      <a class="read-more" href="#" style="font-size: 8px !important; ">商品を知る</a>
+                    </div>
+                    <!-- /.post-image -->
+
+                    <div class="post-content">
+                      <h2>
+                        <a href>商品B</a>
+                      </h2>
+                      <p>テキストテキストテキストテキストテキストテキスト</p>
+
+                      <div class="post-meta-author">購入する</div>
+                      <div class="post-meta-author">口コミをみる</div>
+                    </div>
+                    <!-- /.post-content -->
+                  </div>
+
+                  <div
+                    class="post post-boxed"
+                    style="padding: 10px !important;margin: 5px !important;"
+                  >
+                    <div class="post-image">
+                      <img
+                        src="https://www.cells.co.jp/daityo-p/wp-content/themes/dp-fancie-note-business/img/post_thumbnail/noimage.png"
+                        alt="A Clockwork Origin"
+                      />
+                      <a class="read-more" href="#" style="font-size: 8px !important; ">商品を知る</a>
+                    </div>
+                    <!-- /.post-image -->
+
+                    <div class="post-content">
+                      <h2>
+                        <a href>商品C</a>
+                      </h2>
+                      <p>テキストテキストテキストテキストテキストテキスト</p>
+
+                      <div class="post-meta-author">購入する</div>
+                      <div class="post-meta-author">口コミをみる</div>
+                    </div>
+                    <!-- /.post-content -->
+                  </div>
+
+                  <div style="text-align:right;">
+                    <a class="mt-5">新着商品一覧>></a>
+                  </div>
+
+                  <!-- /.cards-system -->
+                </div>
               </div>
-              <div class="block background-white fullwidth" style="padding-top: 20px !important;">
+              <div
+                class="block background-white fullwidth"
+                style="padding-top: 20px !important; margin-bottom: 0px !important;"
+              >
                 <div class="page-header">
-                  <h1>カテゴリー</h1>
+                  <h1>５つの認知機能</h1>
                 </div>
 
-                <div class="orig-row">
-                  <div class="col-md-3">
-                    <div class="box row">
-                      <img
-                        class="col-sm-6"
-                        style="width: 30% !important;"
-                        src="../../assets/img/tmp/u133.png"
-                      />
-                      <!-- /.box-icon -->
-                      <div class="col-sm-6">
-                        <h5 style="color:black !important">
-                          <strong>５つの認知機能</strong>
-                        </h5>
-                        <p style="color:black !important">認知機能についてご紹介します。</p>
-
-                        <a href="#">
-                          もっと読む
-                          <i class="fa fa-chevron-right"></i>
-                        </a>
+                <!-- test -->
+                <div class="row" style="display: flex;justify-content: center;align-items: center;">
+                  <div class="col-sm-4">
+                    <div class="statusbox" style="text-align: center;">
+                      <h2>記憶力</h2>
+                      <div
+                        class="statusbox-content"
+                        style="text-align: left; height:150px;"
+                      >テキストテキストテキストテキストテキストテキストテキストテキストテキストテキストテキストテキストテキストテキスト</div>
+                      <div style="text-align:right;">
+                        <a class="mt-5">詳しく読む>></a>
                       </div>
                     </div>
+                    <!-- /.statusbox -->
                   </div>
-                  <!-- /.col-sm-4 -->
-
-                  <div class="col-md-3">
-                    <div class="box row">
-                      <img
-                        class="col-sm-6"
-                        style="width: 30% !important;"
-                        src="../../assets/img/tmp/u136.png"
-                      />
-
-                      <!-- /.box-icon -->
-                      <div class="col-sm-6">
-                        <h5 style="color:black !important">
-                          <strong>研究成果</strong>
-                        </h5>
-                        <p style="color:black !important">最新の研究成果をご紹介します。</p>
-
-                        <a href="#">
-                          もっと読む
-                          <i class="fa fa-chevron-right"></i>
-                        </a>
+                  <div class="col-sm-4">
+                    <div class="statusbox" style="text-align: center;">
+                      <h2>注意力</h2>
+                      <div
+                        class="statusbox-content"
+                        style="text-align: left; height:150px;"
+                      >テキストテキストテキストテキストテキストテキストテキストテキストテキストテキストテキストテキストテキストテキスト</div>
+                      <div style="text-align:right;">
+                        <a class="mt-5">詳しく読む>></a>
                       </div>
                     </div>
+                    <!-- /.statusbox -->
                   </div>
-                  <!-- /.col-sm-4 -->
-
-                  <div class="col-md-3">
-                    <div class="box row">
-                      <img
-                        class="col-sm-6"
-                        style="width: 30% !important;"
-                        src="../../assets/img/tmp/u138.png"
-                      />
-
-                      <div class="col-sm-6">
-                        <h5 style="color:black !important">
-                          <strong>お悩み</strong>
-                        </h5>
-                        <p style="color:black !important">認知機能のお悩みをまとめました。</p>
-
-                        <a href="#">
-                          もっと読む
-                          <i class="fa fa-chevron-right"></i>
-                        </a>
-                      </div>
-                      <!-- /.box-content -->
-                    </div>
-                  </div>
-                  <!-- /.col-sm-4 -->
-
-                  <div class="col-md-3">
-                    <div class="box row">
-                      <img
-                        class="col-sm-6"
-                        style="width: 30% !important;height: 80% !important;"
-                        src="../../assets/img/tmp/u140.png"
-                      />
-                      <div class="col-sm-6">
-                        <h5 style="color:black !important">
-                          <strong>事例</strong>
-                        </h5>
-                        <p style="color:black !important">認知機能の改善が見られた方を紹介します。</p>
-
-                        <a href="#">
-                          もっと読む
-                          <i class="fa fa-chevron-right"></i>
-                        </a>
-                      </div>
-                      <!-- /.box-content -->
-                    </div>
-                  </div>
-                  <!-- /.col-sm-4 -->
                 </div>
+                <!-- /.row -->
+                <div class="row">
+                  <div class="col-sm-4">
+                    <div class="statusbox" style="text-align: center;">
+                      <h2>計画力</h2>
+                      <div
+                        class="statusbox-content"
+                        style="text-align: left; height:150px;"
+                      >テキストテキストテキストテキストテキストテキストテキストテキストテキストテキストテキストテキストテキストテキスト</div>
+                      <div style="text-align:right;">
+                        <a class="mt-5">詳しく読む>></a>
+                      </div>
+                    </div>
+                    <!-- /.statusbox -->
+                  </div>
+                  <div class="col-sm-4">
+                    <div class="statusbox" style="text-align: center;">
+                      <h2>見当識</h2>
+                      <div
+                        class="statusbox-content"
+                        style="text-align: left; height:150px;"
+                      >テキストテキストテキストテキストテキストテキストテキストテキストテキストテキストテキストテキストテキストテキスト</div>
+                      <div style="text-align:right;">
+                        <a class="mt-5">詳しく読む>></a>
+                      </div>
+                    </div>
+                  </div>
+                  <div class="col-sm-4">
+                    <div class="statusbox" style="text-align: center;">
+                      <h2>空間認識力</h2>
+                      <div
+                        class="statusbox-content"
+                        style="text-align: left; height:150px;"
+                      >テキストテキストテキストテキストテキストテキストテキストテキストテキストテキストテキストテキストテキストテキスト</div>
+                      <div style="text-align:right;">
+                        <a class="mt-5">詳しく読む>></a>
+                      </div>
+                    </div>
+                  </div>
+                </div>
+
+                <!-- test -->
               </div>
             </div>
             <!-- /.container -->
@@ -586,5 +742,31 @@ export default {
   z-index: 99999;
   display: block;
   overflow-y: auto;
+}
+/* 外枠に設定する class */
+.img_outer {
+  position: relative;
+  margin: 1em 0;
+  height: 300px;
+  background-color: #9e9;
+}
+
+/* 画像に対して指定する class */
+.inner_photo {
+  position: absolute;
+  top: 0;
+  bottom: 0;
+  right: 0;
+  height: auto;
+  width: auto;
+  max-width: 100%;
+  max-height: 100%;
+  margin: auto;
+}
+
+.statusbox h2 {
+  color: black !important;
+  font-size: 18px !important;
+  font-family: "Helvetica Neue", Helvetica, Arial, sans-serif !important;
 }
 </style>
