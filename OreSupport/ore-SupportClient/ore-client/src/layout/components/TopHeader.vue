@@ -5,34 +5,31 @@
         <div class="header-logo">
           <router-link to="/">
             <img src="../../assets/img/logo.png" alt="Logo" />
-            <span>おれさぽ</span>
+            <span>認知機能ソリューション</span>
           </router-link>
         </div>
         <!-- /.header-logo -->
         <div class="header-content">
           <div class="header-top">
             <div class="header-search" v-if="isLogin">
-              <input
-                type="text"
-                class="form-control"
-                placeholder="Search for..."
-              />
+              <input type="text" class="form-control" placeholder="Search for..." />
             </div>
             <!-- /.header-search -->
-            <ul
-              class="header-nav-social social-links nav nav-pills"
-              v-if="!isLogin"
-            >
+            <ul class="header-nav-social social-links nav nav-pills" v-if="!isLogin">
               <li>
-                <a href="#"><i class="fa fa-twitter"></i></a>
+                <a href="#">
+                  <i class="fa fa-twitter"></i>
+                </a>
               </li>
               <li>
-                <a href="#" @click.prevent="fblogin()"
-                  ><i class="fa fa-facebook"></i
-                ></a>
+                <a href="#" @click.prevent="fblogin()">
+                  <i class="fa fa-facebook"></i>
+                </a>
               </li>
               <li>
-                <a href="#"><i class="fa fa-google-plus"></i></a>
+                <a href="#">
+                  <i class="fa fa-google-plus"></i>
+                </a>
               </li>
               <li></li>
             </ul>
@@ -40,82 +37,118 @@
 
             <ul class="header-nav-secondary nav nav-pills">
               <li v-if="!isLogin">
-                <router-link v-bind:to="{ name: 'login' }" key="key"
-                  >Login</router-link
-                >
+                <router-link v-bind:to="{ name: 'login' }" key="key">Login</router-link>
               </li>
               <li v-if="!isLogin">
-                <router-link v-bind:to="{ name: 'register' }" key="key"
-                  >Register</router-link
-                >
+                <router-link v-bind:to="{ name: 'register' }" key="key">Register</router-link>
               </li>
               <li v-if="isLogin">
                 <a
                   class="text-success text-center"
-                  href=""
+                  href
                   @click.prevent.stop="getProfileInfo"
-                >
-                  {{ username }} 様、お疲れ様です。</a
-                >
+                >{{ username }} 様、お疲れ様です。</a>
               </li>
               <li v-if="isLogin">
                 <!--<el-button type="text" @click.native="logout">Logout</el-button>-->
-                <a href="" @click.prevent.stop="logout">Logout</a>
+                <a href @click.prevent.stop="logout">Logout</a>
               </li>
               <li v-if="isLogin">
-                <a href="" @click.prevent.stop="getProfileInfo">Profile</a>
+                <a href @click.prevent.stop="getProfileInfo">Profile</a>
               </li>
             </ul>
           </div>
           <!-- /.header-top -->
           <div class="header-bottom">
-            <div class="header-action">
-              <a
-                href="#"
-                class="header-action-inner"
-                title="カートを見る"
-                data-toggle="tooltip"
-                data-placement="bottom"
-              >
-                <i class="fa fa-plus"></i> </a
-              ><!-- /.header-action-inner -->
-            </div>
-            <!-- /.header-action -->
-            <ul
-              class="header-nav-primary nav nav-pills collapse navbar-collapse"
-            >
+            <ul class="header-nav-primary nav nav-pills collapse navbar-collapse">
               <li class="dropdown">
-                <a href="#">ホーム<i class="fa fa-chevron-down"></i></a>
-
-                <ul class="sub-menu">
-                  <li><a href="">自分の状態を測る</a></li>
-                  <li>
-                    <a href="/views/blog/blog_top.html">体験談を読む</a>
-                  </li>
-                  <li><a href="/views/index.html">商品を購入する</a></li>
-                  <li><a href="/views/index.html">認知機能を知る</a></li>
-                </ul>
-              </li>
-
-              <li>
-                <a href="#">ブログ <i class="fa fa-chevron-down"></i></a>
+                <a href="#">
+                  ホーム
+                  <i class="fa fa-chevron-down"></i>
+                </a>
 
                 <ul class="sub-menu">
                   <li>
-                    <a href="" @click.prevent.stop="blockClick(1)"
-                      >ブログトップ</a
-                    >
-                  </li>
-                  <li>
-                    <a href="" @click.prevent.stop="blockClick(2)"
-                      >ブログ一覧</a
-                    >
+                    <a href="/views/index.html">ホームに戻る</a>
                   </li>
                 </ul>
               </li>
 
               <li>
-                <a href="#">商品 <i class="fa fa-chevron-down"></i></a>
+                <a href="#">
+                  体験談を読む
+                  <i class="fa fa-chevron-down"></i>
+                </a>
+
+                <ul class="sub-menu">
+                  <li>
+                    <a href @click.prevent.stop="blockClick(1)">ブログトップ</a>
+                  </li>
+                  <li>
+                    <a href @click.prevent.stop="blockClick(2)">ブログ一覧</a>
+                  </li>
+                </ul>
+              </li>
+              <li class="has-mega-menu">
+                <a href="#">
+                  認知機能を測定する
+                  <i class="fa fa-chevron-down"></i>
+                </a>
+                <ul class="mega-menu">
+                  <li class="hidden-xs">
+                    <div class="special" style="width:90%;">
+                      <a
+                        style="font-size: 15px;"
+                        href="https://personal.tbcare.jp/login"
+                      >CogEvoで認知認知機能の測定をする</a>
+                    </div>
+                    <!-- /.special-->
+                  </li>
+                  <li>
+                    <a style="font-size: 15px;" href="#">結果を見る</a>
+                    <ul>
+                      <li>
+                        <a
+                          style="font-size: 15px;"
+                          href
+                          @click.prevent.stop="taskClick(1)"
+                        >これまでの認知機能の推移を確認する</a>
+                      </li>
+                      <li>
+                        <a
+                          style="font-size: 15px;"
+                          href
+                          @click.prevent.stop="taskClick(2)"
+                        >統計的な認知機能のデータを確認する</a>
+                      </li>
+                    </ul>
+                  </li>
+                  <li>
+                    <a style="font-size: 15px;" href="#">CogEvoのご紹介</a>
+                    <ul>
+                      <li>
+                        <a
+                          style="font-size: 15px;"
+                          href="https://cog-evo.jp/"
+                          target="_blank"
+                        >CogEvoとは</a>
+                      </li>
+                      <li>
+                        <a
+                          style="font-size: 15px;"
+                          href="https://tbcare.jp/"
+                          target="_blank"
+                        >運営会社（株式会社トータルブレインケア）</a>
+                      </li>
+                    </ul>
+                  </li>
+                </ul>
+              </li>
+              <li>
+                <a href="#">
+                  商品を購入する
+                  <i class="fa fa-chevron-down"></i>
+                </a>
 
                 <ul class="sub-menu">
                   <li>
@@ -126,77 +159,41 @@
                   </li>
                 </ul>
               </li>
-              <li class="has-mega-menu ">
-                <a href="#">CogEvo <i class="fa fa-chevron-down"></i></a>
 
-                <ul class="mega-menu">
-                  <li>
-                    <a href="#">CogEvo紹介</a>
-
-                    <ul>
-                      <li>
-                        <a href="https://cog-evo.jp/" target="_blank"
-                          >CogEvoとは</a
-                        >
-                      </li>
-                      <li>
-                        <a href="https://tbcare.jp/" target="_blank"
-                          >運営会社（株式会社トータルブレインケア）</a
-                        >
-                      </li>
-                    </ul>
-                  </li>
-
-                  <li>
-                    <a href="#">結果を見る</a>
-                    <ul>
-                      <li>
-                        <a href="" @click.prevent.stop="taskClick(1)"
-                          >あなたの結果</a
-                        >
-                      </li>
-                      <li>
-                        <a href="" @click.prevent.stop="taskClick(2)"
-                          >みんなの結果</a
-                        >
-                      </li>
-                    </ul>
-                  </li>
-
-                  <li class="hidden-xs">
-                    <div class="special">
-                      <a href="https://personal.tbcare.jp/login"
-                        >CogEvoを開始する</a
-                      >
-                    </div>
-                    <!-- /.special-->
-                  </li>
-                </ul>
-              </li>
               <li>
-                <a href="#">基本知識<i class="fa fa-chevron-down"></i></a>
+                <a href="#">
+                  認知機能を知る
+                  <i class="fa fa-chevron-down"></i>
+                </a>
 
                 <ul class="sub-menu">
                   <li>
-                    <a href="" @click.prevent.stop="clickKnowledge(1)"
-                      >基本知識詳細</a
-                    >
+                    <a href @click.prevent.stop="clickKnowledge(1)">基本知識詳細</a>
                   </li>
                   <li>
-                    <a href="" @click.prevent.stop="clickKnowledge(2)"
-                      >基本知識一覧</a
-                    >
+                    <a href @click.prevent.stop="clickKnowledge(2)">基本知識一覧</a>
                   </li>
                 </ul>
               </li>
 
               <li>
-                <a href="#">ヘルプ <i class="fa fa-chevron-down"></i></a>
+                <a href="#">
+                  ヘルプ
+                  <i class="fa fa-chevron-down"></i>
+                </a>
                 <ul class="sub-menu">
-                  <li><a href="#">「おれさぽ」とは</a></li>
-                  <li><a href="#">運営会社</a></li>
-                  <li><a href="#">FAQ</a></li>
-                  <li><a href="#">お問合せ</a></li>
+                  <li>
+                    <a href="#">「おれさぽ」とは</a>
+                  </li>
+                  <li>
+                    <a href="#">運営会社</a>
+                  </li>
+                  <li>
+                    <a href="#">FAQ</a>
+                  </li>
+                  <li>
+                    <a href="#">お問合せ</a>
+                  </li>
                 </ul>
               </li>
             </ul>
@@ -237,7 +234,7 @@ export default {
   data() {
     return {
       username: "",
-      isLogin: false,
+      isLogin: false
     };
   },
   mounted() {
@@ -267,13 +264,13 @@ export default {
           .dispatch("user/login", {
             username: response.name,
             userId: response.id,
-            type: "Facebook",
+            type: "Facebook"
           })
-          .then((res) => {
+          .then(res => {
             location.reload();
             // that.$router.push("/?type=facebook&time="+new Date().getTime());
           })
-          .catch((error) => {
+          .catch(error => {
             console.log("Login error");
           });
       });
@@ -293,7 +290,7 @@ export default {
       } else {
         return "";
       }
-    },
+    }
   },
   methods: {
     fblogin() {
@@ -320,7 +317,7 @@ export default {
       this.$store
         .dispatch("blog/getBlogList")
         //成功の場合
-        .then((res) => {
+        .then(res => {
           let userid = res.userID;
           this.$router.push("/blogList?userid=" + userid);
         })
@@ -379,8 +376,8 @@ export default {
         default:
           this.$router.push("/blog/blogList");
       }
-    },
-  },
+    }
+  }
 };
 </script>
 <style scoped>
@@ -392,4 +389,16 @@ export default {
 @import "../../../public/assets/libraries/bootstrap-fileinput/fileinput.min.css";
 @import "../../../public/assets/css/superlist.css";
 @import "../../../public/assets/css/oresapo.css";
+
+.header-content .nav li a {
+  font-size: 15px;
+}
+
+.header-content .nav li .sub-menu li a {
+  font-size: 15px;
+}
+
+.header-logo span {
+  font-size: 15px;
+}
 </style>
