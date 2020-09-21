@@ -16,21 +16,13 @@
                     <h2 class="detail-title">「{{ userName }}」さんの記録</h2>
 
                     <div class="detail-banner-address">
-                      <i class="fa fa-map-o"></i
-                      >トレーニング開始から現在までのサマリー
+                      <i class="fa fa-map-o"></i>トレーニング開始から現在までのサマリー
                     </div>
                     <!-- /.detail-banner-address -->
 
                     <div class="detail-banner-rating">
-                      <i class="detail-verified" style="float:left"
-                        >{{ ability_rate0 }}級</i
-                      >
-                      <el-rate
-                        v-model="ability_rate0"
-                        disabled
-                        text-color="#ff9900"
-                      >
-                      </el-rate>
+                      <i class="detail-verified" style="float:left">{{ ability_rate0 }}級</i>
+                      <el-rate v-model="ability_rate0" disabled text-color="#ff9900"></el-rate>
                       <p></p>
                     </div>
                     <!-- /.detail-banner-rating -->
@@ -38,9 +30,7 @@
                     <!-- /.detail-claim -->
                     <div class="detail-banner-btn heart">
                       <i class="fa fa-heart-o"></i>
-                      <span data-toggle="I Love It"
-                        >平均指数：{{ averageIndex }}</span
-                      >
+                      <span data-toggle="I Love It">平均指数：{{ averageIndex }}</span>
                     </div>
                     <!-- /.detail-claim -->
                   </div>
@@ -70,27 +60,14 @@
                 <div class="col-sm-5">
                   <h2>
                     【評価】
-                    <span class="text-secondary">総合サマリー </span>
+                    <span class="text-secondary">総合サマリー</span>
                   </h2>
-                  <div class="background-white p20 overflo-div-height450 ">
-                    <div class="detail-description">
-                      <h4>
-                        利用開始日 {{ useStart }} 最終利用日 {{ userEnd }}
-                      </h4>
+                  <div class="background-white p20 overflo-div-height450">
+                    <div class="detail-description" style="border-bottom: 0;">
+                      <h4>利用開始日 {{ useStart }}</h4>
+                      <h4>最終利用日 {{ userEnd }}</h4>
                       <hr />
-                      <p>
-                        {{ SummaryDec }}
-                      </p>
-                      <p>
-                        In congue mattis felis, non hendrerit orci dictum id.
-                        Etiam consequat nulla vitae tempus interdum.Nam gravida
-                        convallis lacus, at dignissim urna pulvinar sed.
-                      </p>
-                      <p>
-                        Cras ac mi odio. Aliquam erat volutpat. Cras euismod
-                        facilisis ligula in tristique. Proin et eleifend lacus,
-                        vitae dictum orci
-                      </p>
+                      <p>{{ SummaryDec }}</p>
                       <!--<transaction-table />-->
                     </div>
                     <!-- /.detail-follow -->
@@ -129,11 +106,7 @@
                 <div class="chart-wrapper">
                   <div class="background-white p20">
                     <!-- Nav tabs -->
-                    <ul
-                      id="listing-detail-location"
-                      class="nav nav-tabs"
-                      role="tablist"
-                    >
+                    <ul id="listing-detail-location" class="nav nav-tabs" role="tablist">
                       <li role="presentation" class="active">
                         <a
                           href="#simple-year-panel"
@@ -176,10 +149,7 @@
                         key="year"
                       >
                         <div class="detail-map">
-                          <line-chart
-                            :chart-data="lineChartData"
-                            height="450px"
-                          />
+                          <line-chart :chart-data="lineChartData" height="450px" />
                         </div>
                       </div>
                       <!-- year-property -->
@@ -192,10 +162,7 @@
                         key="month"
                       >
                         <div class="detail-map">
-                          <line-chart
-                            :chart-data="lineChartData"
-                            height="450px"
-                          />
+                          <line-chart :chart-data="lineChartData" height="450px" />
                         </div>
                       </div>
                       <!-- month-property -->
@@ -208,10 +175,7 @@
                         key="week"
                       >
                         <div class="detail-map">
-                          <line-chart
-                            :chart-data="lineChartData"
-                            height="450px"
-                          />
+                          <line-chart :chart-data="lineChartData" height="450px" />
                         </div>
                       </div>
                       <!-- week-property -->
@@ -249,8 +213,9 @@
                 <h3>運営会社</h3>
 
                 <p>
-                  会社名: 株式会社トータルブレインケア<br />
-                  事業内容: 認知機能に関するツールやプログラムの提供及び<br />インターネットサービス事業
+                  会社名: 株式会社トータルブレインケア
+                  <br />事業内容: 認知機能に関するツールやプログラムの提供及び
+                  <br />インターネットサービス事業
                 </p>
               </div>
               <!-- /.col-* -->
@@ -270,8 +235,9 @@
                 <h3>CogEvoカスタマーサポート</h3>
                 <p>
                   平日9:30〜17:00
-                  <br />土・日・祝日、および弊社休業日を除きます<br />
-                  電話：078-335-8467<br />
+                  <br />土・日・祝日、および弊社休業日を除きます
+                  <br />電話：078-335-8467
+                  <br />
                   <a href="https://cog-evo.jp/">https://cog-evo.jp/</a>
                 </p>
                 <!-- /.header-nav-social -->
@@ -294,12 +260,18 @@
 
             <div class="footer-bottom-right">
               <ul class="nav nav-pills">
-                <li><a href="index.html">Home</a></li>
-                <li><a href="pricing.html">Pricing</a></li>
+                <li>
+                  <a href="index.html">Home</a>
+                </li>
+                <li>
+                  <a href="pricing.html">Pricing</a>
+                </li>
                 <li>
                   <a href="terms-conditions.html">Terms &amp; Conditions</a>
                 </li>
-                <li><a href="contact-1.html">Contact</a></li>
+                <li>
+                  <a href="contact-1.html">Contact</a>
+                </li>
               </ul>
               <!-- /.nav -->
             </div>
@@ -324,26 +296,26 @@ export default {
   components: {
     LineChart,
     RaddarChart,
-    TransactionTable,
+    TransactionTable
   },
   created() {},
 
   mounted() {
     // LineChartデータ取得
     this.$http.get("/api/personal/CogEvo/summary").then(
-      (res) => {
+      res => {
         this.lineChartData = res.data.lineChartData.yearData;
       },
-      (error) => {
+      error => {
         console.log(error);
       }
     );
     // 履歴データ取得
     this.$http.get("/api/personal/CogEvo/transactionTable").then(
-      (res) => {
+      res => {
         this.TransactionData = res.data.transactionTableChartData;
       },
-      (error) => {
+      error => {
         console.log(error);
       }
     );
@@ -353,7 +325,7 @@ export default {
       if (to.path !== from.path) {
         this.$router.push(`${this.$route.path}`);
       }
-    },
+    }
   },
   data() {
     return {
@@ -370,8 +342,8 @@ export default {
       activeObj: {
         isActiveY: true,
         isActiveM: false,
-        isActiveW: false,
-      },
+        isActiveW: false
+      }
     };
   },
   methods: {
@@ -395,8 +367,8 @@ export default {
         this.activeObj.isActiveM = false;
         this.activeObj.isActiveW = true;
       });
-    },
-  },
+    }
+  }
 };
 </script>
 
