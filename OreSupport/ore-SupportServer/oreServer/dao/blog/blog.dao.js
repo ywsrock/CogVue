@@ -90,12 +90,12 @@ const getBlogList = async(queryInfo)=> {
 //     try {
 //         // 結果を返す
 //         const result = await Blog.findOne({
-//             where: {
-//                 [Op.and]: [{
-//                         [queryInfo.key]: queryInfo.val
-//                     },
-//                 ]
-//             }
+            // where: {
+            //     [Op.and]: [{
+            //             [queryInfo.key]: queryInfo.val
+            //         },
+            //     ]
+            // }
 //         });
 //         return result;
 //     } catch (error) {
@@ -108,23 +108,34 @@ const getBlogList = async(queryInfo)=> {
 const getBlogDetail = async(queryInfo) => {
     try {
         // 結果を返す
-        Comment.hasOne (Comment, {
+        Comment.hasMany (Blog, {
             foreignKey: {
-                name: 'BlogID'
+                name: 'id'
             },
             onDelete: 'SET NULL',
             onUpdate: 'CASCADE'
         })
-        Blog.belongsTo(User, {
+        Blog.belongsTo(Comment, {
             foreignKey: {
                 name: 'id'
-            }
+            },
+            targetKey : 'id' 
         });
-        const result = await Blog.findOne({
-            order:[['id', 'DESC']],
-            include: Comment,
+        const result = await Blog.findAll({
+            
+            where: {
+                [Op.and]: [{
+                        [queryInfo.key]: queryInfo.val
+                    },
+                ]
+            },
+            include: [{
+                model: Comment,
+                required: false
+            }],
+
             attributes: {exclude: ['Password']}
-        });
+        }).catch(error => console.log(error.message));;
         return result;
     } catch (error) {
         console.error("情報取得エラー:" + error.stack);
