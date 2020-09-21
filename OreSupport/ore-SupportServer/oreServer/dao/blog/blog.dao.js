@@ -135,7 +135,7 @@ const getBlogDetail = async(queryInfo) => {
             }],
 
             attributes: {exclude: ['Password']}
-        }).catch(error => console.log(error.message));;
+        });
         return result;
     } catch (error) {
         console.error("情報取得エラー:" + error.stack);
