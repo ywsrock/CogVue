@@ -5,22 +5,24 @@ const Blog = require("./blog.model")
 
 // ユーザモデル バリデーションも入れられる
 const Comment = sequelize.define('Comment', {
-id:{
+
+
+CommentID:{
         type:Sequelize.INTEGER,
         allowNull:false,
         primaryKey:true,
         autoIncrement: true,
         comment: "ID"
-} ,
-BlogID: {
-    type: Sequelize.STRING,
-    allowNull: true,
-    comment: "ブログID",
-    references: {
-        model: Blog,
-        key: "BlogID"
-      }
-},
+    } ,
+id: {
+        type: Sequelize.STRING,
+        allowNull: true,
+        comment: "ブログID",
+        references: {
+            model: Blog,
+            key: "id"
+        }
+    },
 UserID: {
     type: Sequelize.STRING,
     allowNull: true,
@@ -34,12 +36,7 @@ Comment1:{
     type: Sequelize.TEXT,
     allowNull: true,
     comment: "Comment1"
-},
-Timestamp: {
-    type: Sequelize.STRING,
-    allowNull: true,
-    comment: "更新日付"
-},
+}
 
 }, {
     tableName: "Tb_Comment", //　Maping　テーブル名指定

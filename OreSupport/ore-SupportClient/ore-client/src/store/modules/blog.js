@@ -14,6 +14,8 @@ const state = {
     // ユーザ
     content: [],
 
+    comment: [],
+
     userName:""
 
 }
@@ -25,6 +27,7 @@ const getters = {
     get_id: state => state.id,
     get_title: state => state.title,
     get_content: state => state.content,
+    get_comment: state => state.comment,
     get_userName: state => state.userName
 
 }
@@ -44,6 +47,9 @@ const mutations = {
     // データ
     set_content: (state, data) => {
         state.content = data
+    },
+    set_comment: (state, data) => {
+        state.comment = data
     },
     set_userName: (state, data) => {
         state.userName = data
@@ -107,7 +113,7 @@ const actions = {
                         //ブログ内容
                         context.commit("set_content",data.content)
 
-                        context.commit("set_content",data.comment)
+                        context.commit("set_comment",data.comment)
 
 
                         resolve(data);
