@@ -4,8 +4,8 @@
       <div class="header-inner">
         <div class="header-logo">
           <router-link to="/">
-            <img src="../../assets/img/logo.png" alt="Logo" />
-            <span>認知機能ソリューション</span>
+            <img style="width:250px;" src="../../assets/img/logo.png" alt="Logo" />
+            <span></span>
           </router-link>
         </div>
         <!-- /.header-logo -->
