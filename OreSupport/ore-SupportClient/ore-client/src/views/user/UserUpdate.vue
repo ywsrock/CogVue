@@ -483,7 +483,6 @@
 
 <script>
 import schema from "async-validator";
-import { STATIC_JS } from "../../utils/const";
 import { Message } from "element-ui";
 import {
   validEmail,

@@ -16,13 +16,20 @@
                     <h2 class="detail-title">「{{ userName }}」さんの記録</h2>
 
                     <div class="detail-banner-address">
-                      <i class="fa fa-map-o"></i>トレーニング開始から現在までのサマリー
+                      <i class="fa fa-map-o"></i
+                      >トレーニング開始から現在までのサマリー
                     </div>
                     <!-- /.detail-banner-address -->
 
                     <div class="detail-banner-rating">
-                      <i class="detail-verified" style="float:left">{{ ability_rate0 }}級</i>
-                      <el-rate v-model="ability_rate0" disabled text-color="#ff9900"></el-rate>
+                      <i class="detail-verified" style="float:left"
+                        >{{ ability_rate0 }}級</i
+                      >
+                      <el-rate
+                        v-model="ability_rate0"
+                        disabled
+                        text-color="#ff9900"
+                      ></el-rate>
                       <p></p>
                     </div>
                     <!-- /.detail-banner-rating -->
@@ -30,7 +37,9 @@
                     <!-- /.detail-claim -->
                     <div class="detail-banner-btn heart">
                       <i class="fa fa-heart-o"></i>
-                      <span data-toggle="I Love It">平均指数：{{ averageIndex }}</span>
+                      <span data-toggle="I Love It"
+                        >平均指数：{{ averageIndex }}</span
+                      >
                     </div>
                     <!-- /.detail-claim -->
                   </div>
@@ -50,7 +59,7 @@
                       <span class="text-secondary">5種バランスの指数平均</span>
                     </h2>
                     <div class="background-white p20">
-                      <raddar-chart />
+                      <raddar-chart :indicatorParams="indicatorParams" />
                     </div>
                   </div>
                   <!-- /.detail-gallery -->
@@ -106,7 +115,11 @@
                 <div class="chart-wrapper">
                   <div class="background-white p20">
                     <!-- Nav tabs -->
-                    <ul id="listing-detail-location" class="nav nav-tabs" role="tablist">
+                    <ul
+                      id="listing-detail-location"
+                      class="nav nav-tabs"
+                      role="tablist"
+                    >
                       <li role="presentation" class="active">
                         <a
                           href="#simple-year-panel"
@@ -149,7 +162,10 @@
                         key="year"
                       >
                         <div class="detail-map">
-                          <line-chart :chart-data="lineChartData" height="450px" />
+                          <line-chart
+                            :chart-data="lineChartData"
+                            height="450px"
+                          />
                         </div>
                       </div>
                       <!-- year-property -->
@@ -162,7 +178,10 @@
                         key="month"
                       >
                         <div class="detail-map">
-                          <line-chart :chart-data="lineChartData" height="450px" />
+                          <line-chart
+                            :chart-data="lineChartData"
+                            height="450px"
+                          />
                         </div>
                       </div>
                       <!-- month-property -->
@@ -175,7 +194,10 @@
                         key="week"
                       >
                         <div class="detail-map">
-                          <line-chart :chart-data="lineChartData" height="450px" />
+                          <line-chart
+                            :chart-data="lineChartData"
+                            height="450px"
+                          />
                         </div>
                       </div>
                       <!-- week-property -->
@@ -290,32 +312,49 @@
 import LineChart from "./components/LineChart";
 import RaddarChart from "./components/RaddarChart";
 import TransactionTable from "./components/TransactionTable";
+// import getCgevApi from "@/utils/cgevapi";
 
 export default {
   name: "Summary",
   components: {
     LineChart,
     RaddarChart,
-    TransactionTable
+    TransactionTable,
   },
   created() {},
 
   mounted() {
+    // var config = {
+    //   method: "get",
+    //   url: "/auth/authenticate",
+    //   params: {
+    //     customer_api_key: "9f6fb392e45701c8d475fc619a48092804e6f827",
+    //     api_user_secret: "eb3ef0f53cd76af1afe2ebc252c281ba71c6a51f",
+    //   },
+    // };
+    // getCgevApi(config).then(
+    //   (res) => {
+    //     this.lineChartData = res.data.lineChartData.yearData;
+    //   },
+    //   (error) => {
+    //     console.log(error);
+    //   }
+    // );
     // LineChartデータ取得
     this.$http.get("/api/personal/CogEvo/summary").then(
-      res => {
+      (res) => {
         this.lineChartData = res.data.lineChartData.yearData;
       },
-      error => {
+      (error) => {
         console.log(error);
       }
     );
     // 履歴データ取得
     this.$http.get("/api/personal/CogEvo/transactionTable").then(
-      res => {
+      (res) => {
         this.TransactionData = res.data.transactionTableChartData;
       },
-      error => {
+      (error) => {
         console.log(error);
       }
     );
@@ -325,12 +364,19 @@ export default {
       if (to.path !== from.path) {
         this.$router.push(`${this.$route.path}`);
       }
-    }
+    },
   },
   data() {
     return {
       lineChartData: {},
       TransactionData: [],
+      indicatorParams: [
+        { name: "計画力", max: 150 },
+        { name: "記憶力", max: 150 },
+        { name: "注意力", max: 150 },
+        { name: "見当識", max: 150 },
+        { name: "空間認識力", max: 150 },
+      ],
       userName: this.$session.get("UserName") || "",
       ability_rate0: 4,
       SummaryDec:
@@ -342,8 +388,8 @@ export default {
       activeObj: {
         isActiveY: true,
         isActiveM: false,
-        isActiveW: false
-      }
+        isActiveW: false,
+      },
     };
   },
   methods: {
@@ -367,8 +413,8 @@ export default {
         this.activeObj.isActiveM = false;
         this.activeObj.isActiveW = true;
       });
-    }
-  }
+    },
+  },
 };
 </script>
 

@@ -4,7 +4,11 @@
       <div class="header-inner">
         <div class="header-logo">
           <router-link to="/">
-            <img style="width:250px;" src="../../assets/img/logo.png" alt="Logo" />
+            <img
+              style="width:250px;"
+              src="../../assets/img/logo.png"
+              alt="Logo"
+            />
             <span></span>
           </router-link>
         </div>
@@ -12,10 +16,17 @@
         <div class="header-content">
           <div class="header-top">
             <div class="header-search" v-if="isLogin">
-              <input type="text" class="form-control" placeholder="Search for..." />
+              <input
+                type="text"
+                class="form-control"
+                placeholder="Search for..."
+              />
             </div>
             <!-- /.header-search -->
-            <ul class="header-nav-social social-links nav nav-pills" v-if="!isLogin">
+            <ul
+              class="header-nav-social social-links nav nav-pills"
+              v-if="!isLogin"
+            >
               <li>
                 <a href="#">
                   <i class="fa fa-twitter"></i>
@@ -37,17 +48,22 @@
 
             <ul class="header-nav-secondary nav nav-pills">
               <li v-if="!isLogin">
-                <router-link v-bind:to="{ name: 'login' }" key="key">Login</router-link>
+                <router-link v-bind:to="{ name: 'login' }" key="key"
+                  >Login</router-link
+                >
               </li>
               <li v-if="!isLogin">
-                <router-link v-bind:to="{ name: 'register' }" key="key">Register</router-link>
+                <router-link v-bind:to="{ name: 'register' }" key="key"
+                  >Register</router-link
+                >
               </li>
               <li v-if="isLogin">
                 <a
                   class="text-success text-center"
                   href
                   @click.prevent.stop="getProfileInfo"
-                >{{ username }} 様、お疲れ様です。</a>
+                  >{{ username }} 様、お疲れ様です。</a
+                >
               </li>
               <li v-if="isLogin">
                 <!--<el-button type="text" @click.native="logout">Logout</el-button>-->
@@ -60,7 +76,9 @@
           </div>
           <!-- /.header-top -->
           <div class="header-bottom">
-            <ul class="header-nav-primary nav nav-pills collapse navbar-collapse">
+            <ul
+              class="header-nav-primary nav nav-pills collapse navbar-collapse"
+            >
               <li class="dropdown">
                 <a href="#">
                   ホーム
@@ -100,7 +118,8 @@
                       <a
                         style="font-size: 15px;"
                         href="https://personal.tbcare.jp/login"
-                      >CogEvoで認知認知機能の測定をする</a>
+                        >CogEvoで認知認知機能の測定をする</a
+                      >
                     </div>
                     <!-- /.special-->
                   </li>
@@ -112,14 +131,16 @@
                           style="font-size: 15px;"
                           href
                           @click.prevent.stop="taskClick(1)"
-                        >これまでの認知機能の推移を確認する</a>
+                          >これまでの認知機能の推移を確認する</a
+                        >
                       </li>
                       <li>
                         <a
                           style="font-size: 15px;"
                           href
                           @click.prevent.stop="taskClick(2)"
-                        >統計的な認知機能のデータを確認する</a>
+                          >統計的な認知機能のデータを確認する</a
+                        >
                       </li>
                     </ul>
                   </li>
@@ -131,14 +152,16 @@
                           style="font-size: 15px;"
                           href="https://cog-evo.jp/"
                           target="_blank"
-                        >CogEvoとは</a>
+                          >CogEvoとは</a
+                        >
                       </li>
                       <li>
                         <a
                           style="font-size: 15px;"
                           href="https://tbcare.jp/"
                           target="_blank"
-                        >運営会社（株式会社トータルブレインケア）</a>
+                          >運営会社（株式会社トータルブレインケア）</a
+                        >
                       </li>
                     </ul>
                   </li>
@@ -168,10 +191,14 @@
 
                 <ul class="sub-menu">
                   <li>
-                    <a href @click.prevent.stop="clickKnowledge(1)">基本知識詳細</a>
+                    <a href @click.prevent.stop="clickKnowledge(1)"
+                      >基本知識詳細</a
+                    >
                   </li>
                   <li>
-                    <a href @click.prevent.stop="clickKnowledge(2)">基本知識一覧</a>
+                    <a href @click.prevent.stop="clickKnowledge(2)"
+                      >基本知識一覧</a
+                    >
                   </li>
                 </ul>
               </li>
@@ -227,14 +254,14 @@
 /* eslint-disable */
 
 import store from "@/store";
-import { USER_INFO_STATIC_JS } from "../../utils/const";
+// import { USER_INFO_STATIC_JS } from "../../utils/const";
 import { Switch } from "element-ui";
 
 export default {
   data() {
     return {
       username: "",
-      isLogin: false
+      isLogin: false,
     };
   },
   mounted() {
@@ -264,13 +291,13 @@ export default {
           .dispatch("user/login", {
             username: response.name,
             userId: response.id,
-            type: "Facebook"
+            type: "Facebook",
           })
-          .then(res => {
+          .then((res) => {
             location.reload();
             // that.$router.push("/?type=facebook&time="+new Date().getTime());
           })
-          .catch(error => {
+          .catch((error) => {
             console.log("Login error");
           });
       });
@@ -290,7 +317,7 @@ export default {
       } else {
         return "";
       }
-    }
+    },
   },
   methods: {
     fblogin() {
@@ -317,7 +344,7 @@ export default {
       this.$store
         .dispatch("blog/getBlogList")
         //成功の場合
-        .then(res => {
+        .then((res) => {
           let userid = res.userID;
           this.$router.push("/blogList?userid=" + userid);
         })
@@ -376,8 +403,8 @@ export default {
         default:
           this.$router.push("/blog/blogList");
       }
-    }
-  }
+    },
+  },
 };
 </script>
 <style scoped>

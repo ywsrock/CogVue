@@ -1,11 +1,10 @@
-import { getNumber } from "./mockUtils"
-
-
-// summary画面表示用データ
+/* 
+    ・CogEvoサイトの「記録」ページの「傾向」チャートの「現在」の内容
+ */
 export const raddarChart = {
     raddarChartData: [{
-        value: getNumber(6, 100, 150),
         name: '現在',
+        value: getNumber(6, 100, 150),
         label: {
             show: true,
             textStyle: {
@@ -17,14 +16,8 @@ export const raddarChart = {
         }
     },
     {
-        value: getNumber(6, 100, 150),
         name: '3ヶ月前',
-        // label: {
-        //     show: true,
-        //     formatter: function (params) {
-        //         return params.value;
-        //     }
-        // }
+        value: getNumber(6, 100, 150),
     }]
 }
 
