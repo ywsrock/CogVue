@@ -47,15 +47,20 @@ export default {
   },
   mounted() {
     this.$nextTick(() => {
-      this.$http.get("/api/personal/CogEvo/raddarChart").then(
-        (res) => {
-          this.chartDate = res.data.raddarChartData;
-          this.initChart();
-        },
-        (error) => {
-          console.log(error);
-        }
-      );
+      this.$store
+        .dispatch("cgev/authenticate")
+        .then(() => {
+          this.$store.dispatch("cgev/recordsCategories").then(
+            (res) => {
+              this.chartDate = res.raddarChartData;
+              this.initChart();
+            },
+            (error) => {
+              console.log(error);
+            }
+          );
+        })
+        .catch((error) => console.log(error));
     });
   },
   beforeDestroy() {

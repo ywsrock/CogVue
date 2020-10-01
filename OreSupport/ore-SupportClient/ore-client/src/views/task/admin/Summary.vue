@@ -324,22 +324,6 @@ export default {
   created() {},
 
   mounted() {
-    // var config = {
-    //   method: "get",
-    //   url: "/auth/authenticate",
-    //   params: {
-    //     customer_api_key: "9f6fb392e45701c8d475fc619a48092804e6f827",
-    //     api_user_secret: "eb3ef0f53cd76af1afe2ebc252c281ba71c6a51f",
-    //   },
-    // };
-    // getCgevApi(config).then(
-    //   (res) => {
-    //     this.lineChartData = res.data.lineChartData.yearData;
-    //   },
-    //   (error) => {
-    //     console.log(error);
-    //   }
-    // );
     // LineChartデータ取得
     this.$http.get("/api/personal/CogEvo/summary").then(
       (res) => {

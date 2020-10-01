@@ -35,5 +35,5 @@ export const CGEV_INFO = {
     // カスタマーAPIキー）
     CustomerApiKey: "9f6fb392e45701c8d475fc619a48092804e6f827",
     // ユーザシークレット
-    ApiUserSecret: "1806b37031b647e953e1798b8966d61ef029568c",
+    ApiUserSecret: "eb3ef0f53cd76af1afe2ebc252c281ba71c6a51f",
 }
