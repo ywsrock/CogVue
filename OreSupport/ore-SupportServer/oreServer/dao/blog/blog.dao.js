@@ -124,7 +124,7 @@ const getBlogDetail = async(queryInfo) => {
         const result = await Comment.findAll({
             where: {
                 [Op.and]: [{
-                        [queryInfo.key]: queryInfo.val
+                            [queryInfo.key]: queryInfo.val
                     },
                 ]
             },
@@ -150,9 +150,9 @@ const blogDelete = async(queryInfo) => {
         const result = await Blog.destroy({
             where: {
                 [Op.and]: [{
-                        [queryInfo.key]: queryInfo.val
-                    },
-                ]
+                    [queryInfo.key]: queryInfo.val
+                },
+            ]
             }
         });
         return result;
