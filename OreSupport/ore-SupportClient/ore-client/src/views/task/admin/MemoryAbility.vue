@@ -206,6 +206,18 @@ export default {
     CommonAbility,
   },
   mounted() {
+    //    Promise.all([
+    //   await this.$store.dispatch("cgev/authenticate"),
+    //   await this.$store.dispatch("cgev/recordsCategories"),
+    //   await this.$store.dispatch("cgev/recordsSummary"),
+    //   await this.$store.dispatch("cgev/recordsHistories"),
+    // ]).then(
+    //   ([
+
+    //   ]) => {
+
+    //   }
+    // );
     this.$http.get("/api/personal/CogEvo/memoryAbility").then(
       (res) => {
         this.dataObj = Object.assign({}, this.dataObj, res.data.MemoryAbility);

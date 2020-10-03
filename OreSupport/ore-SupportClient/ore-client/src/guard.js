@@ -1,25 +1,23 @@
 import router from "./router";
-import { getToken} from "./utils/auth"
-import store from './store';
+import { getToken } from "./utils/auth";
+import store from "./store";
+import { WHITELIST } from "@/utils/const"
 
-
-
-const whiteList = ['/userLogin','/register','/userInfo','/top', '/blogList'] // no redirect whitelis
 router.beforeEach(async (to, from, next) => {
   // ユーザToken 取得
   const userToken = await getToken();
   //トークン存在の場合ユーザ登録済みメイン画面に遷移
   if (userToken) {
     if (to.path === "/login") {
-      next({ path: '/userInfo' })
+      next({ path: "/userInfo" });
     } else {
       // ユーザ権限取得
       // const hasroles = store.getters["user/roles"];
       const hasroles = store.getters.roles;
       // 権限がある場合、処理続きます
       if (hasroles && hasroles.length > 0) {
-        console.log("●roles -" + hasroles)
-        next()
+        // console.log("●roles -" + hasroles);
+        next();
       } else {
         // ユーザ情報取得
         const { roles } = await store.dispatch("user/getInfo");
@@ -28,17 +26,17 @@ router.beforeEach(async (to, from, next) => {
         // const accessRoutes = {};
         // ルートを追加
         // router.addRoutes(accessRoutes)
-        next()
+        next();
       }
     }
   } else {
-    if (whiteList.indexOf(to.path) !== -1) {
-      next()
-    }else {
-    //ログイン画面に遷移
-    //next(`/login?redirect=${to.path}`);
-    next("/userInfo");
-    // next()
+    if (WHITELIST.indexOf(to.path) !== -1) {
+      next();
+    } else {
+      //ログイン画面に遷移
+      next(`/login?redirect=${to.path}`);
+      // next("/userInfo");
+      // next()
+    }
   }
-  }
-})
+});

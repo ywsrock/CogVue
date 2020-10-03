@@ -343,7 +343,7 @@ export default {
   watch: {
     showDataObj: {
       deep: true,
-      handler(showDataObj) {
+      handler: function(showDataObj) {
         this.dataObj = showDataObj;
         // 時系列データ
         this.lineChartData = showDataObj.lineChartData.yearData;
