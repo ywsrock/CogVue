@@ -33,7 +33,7 @@ var crossopt = (req, res, next) => {
   res.header("Access-Control-Allow-Origin", "https://localhost:8080");
   res.header(
     "Access-Control-Allow-Headers",
-    "X-Requested-With, Origin, X-Csrftoken, Content-Type, Accept,x-token"
+    "X-Requested-With, Origin, X-Csrftoken,x-xsrf-token, Content-Type, Accept,x-token"
   );
   res.set("Access-Control-Allow-Credentials", "true");
   res.header("Access-Control-Allow-Methods: GET, POST");

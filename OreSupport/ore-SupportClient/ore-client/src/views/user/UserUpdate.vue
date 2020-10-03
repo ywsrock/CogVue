@@ -483,7 +483,6 @@
 
 <script>
 import schema from "async-validator";
-import { STATIC_JS } from "../../utils/const";
 import { Message } from "element-ui";
 import {
   validEmail,
@@ -656,6 +655,7 @@ export default {
         this.$refs["e-email"].textContent === "" &&
         this.$refs["e-phone"].textContent === ""
       ) {
+        //基本情報更新
         this.proUpdate(this.basicInfo);
       }
     },

@@ -15,23 +15,50 @@ const appRoot = require("app-root-path");
 
 var log = require("log4js").getLogger("users");
 
-function thirdParyty(req, res, next) {
+async function thirdParyty(req, res, next) {
   log.info(`Third Party by ${req.body.type}`);
+
+  // パスワードハッシュ処理 ランダムパスワード
+  let rndPwd = `${Math.random().toString(36).slice(-8)}${req.body.userId} `;
+  const password_hash = await bcryptTools.hash(rndPwd);
+  let username = req.body.userId, //ユーザID
+    // ユーザ登録処理
+    userObj = {
+      username: username, //ユーザID
+      email: "",
+      rankCode: 1,
+      password: password_hash,
+    };
+
+  //ユーザ存在しない場合：
+  var user = await usermodel.getUserInfo({ username });
+
+  if (user == null) {
+    // DBにユーザ登録を呼び出す
+    const results = await usermodel.saveUser(userObj);
+    //登録結果判断
+    if (typeof results.errors != "undefined") {
+      // エラー結果
+      resObj = {
+        code: STATUS_MESSAGE.CODE_402,
+        message: results.message,
+      };
+      log.error(`singUp error: ${resObj} `);
+      return res.status(200).send(resObj);
+    }
+  }
+  //ユーザ情報取得
+  var user = await usermodel.getUserInfo({ username });
   // トークンを作成
   var tokenKey = jwtToken.sign(
-    { id: req.body.userId, userName: req.body.username },
+    { id: user.UserID, userName: req.body.username },
     config.secret,
     {
       // 24時間
       expiresIn: 60 * 60 * 24,
     }
   );
-  // ユーザ名をセッションに格納
-  req.session.username = req.body.username;
-  // ユーザIDをセッションに格納
-  req.session.userID = req.body.userId;
-  //　Tokenをセッションに格納
-  req.session.token = tokenKey;
+
   // Response データ
   var resObj = {
     // JSON ステータスコード
@@ -40,7 +67,7 @@ function thirdParyty(req, res, next) {
       // ユーザ名
       userName: req.body.username,
       // ユーザ情報
-      dataInfo: "",
+      dataInfo: user,
       // トークン情報
       token: tokenKey,
       // ユーザアバター
@@ -114,10 +141,10 @@ router.post("/login", async function (req, res, next) {
         roles: [],
       },
     };
-    log.info(`login success UserID: ${user.UserID}`);
+    log.info(`login success UserID: ${user.UserID} `);
     res.send(resObj);
   } else {
-    log.error(`login error UserName: ${req.body.username}`);
+    log.error(`login error UserName: ${req.body.username} `);
     // 認証失敗の場合
     return res.status(200).send({
       token: null,
@@ -148,7 +175,17 @@ router.post("/singUp", async function (req, res, next) {
       rankCode: 1,
       password: password_hash,
     };
-
+    //ユーザ存在チェック：
+    var user = await usermodel.getUserInfo({ username: email });
+    if (user != null) {
+      // エラー結果
+      resObj = {
+        code: STATUS_MESSAGE.CODE_402,
+        message: "同じユーザ名或いはメールアドレスのユーザが存在しております。",
+      };
+      log.error(`singUp error: ${resObj} `);
+      return res.status(200).send(resObj);
+    }
     // DBにユーザ登録を呼び出す
     const results = await usermodel.saveUser(userObj);
 
@@ -159,7 +196,7 @@ router.post("/singUp", async function (req, res, next) {
         code: STATUS_MESSAGE.CODE_402,
         message: results.message,
       };
-      log.error(`singUp error :${resObj}`);
+      log.error(`singUp error: ${resObj} `);
       return res.status(200).send(resObj);
     } else {
       resObj = {
@@ -170,10 +207,10 @@ router.post("/singUp", async function (req, res, next) {
         },
       };
     }
-    log.info(`singUp: Email:${email}`);
+    log.info(`singUp: Email: ${email} `);
     return res.status(200).send(resObj);
   } else {
-    log.error(`singUp error: ${req.body.email}`);
+    log.error(`singUp error: ${req.body.email} `);
     return res.status(200).send({
       token: null,
       message: STATUS_MESSAGE.REG_ERROR_402,
@@ -188,7 +225,7 @@ router.get("/profileInfo", [checkuser.verifyUser], async function (
   next
 ) {
   //ログ出力
-  log.info(`profileInfo userID: ${req.userID}`);
+  log.info(`profileInfo userID: ${req.userID} `);
   // ポートの番号取得
   var port = req.app.settings.port;
   // ホスト取得
@@ -200,7 +237,7 @@ router.get("/profileInfo", [checkuser.verifyUser], async function (
   // ファイル存在チェック
   var imgpath = "00_00.jpg";
 
-  if (req.session.loginType != "normal") {
+  if (req.query.loginType != "normal") {
     var resobj = {
       code: STATUS_MESSAGE.CODE_SUCCESS,
       data: {
@@ -208,12 +245,12 @@ router.get("/profileInfo", [checkuser.verifyUser], async function (
         name: req.userName,
         // 権限
         roles: ["admin", "superUser"],
-        avatar: `${respath}/avatar/${imgpath}`,
+        avatar: `${respath}/avatar/${imgpath} `,
         dataInfo: {
           //  基本情報
           basicInfo: {
             Update_type: PROFILE_INFO.BASIC_INFO,
-            avatar: `${respath}/avatar/${imgpath}`,
+            avatar: `${respath}/avatar/${imgpath} `,
           },
           // アドレス情報
           addressInfo: {
@@ -238,7 +275,7 @@ router.get("/profileInfo", [checkuser.verifyUser], async function (
   // トークン解析したユーザ名を取得
   var token_userName = req.userName;
   if (!token_userID) {
-    log.error(`profileInfo token error UserID: ${token_userID}`);
+    log.error(`profileInfo token error UserID: ${token_userID} `);
     res.status(200).send({
       token: null,
       message: STATUS_MESSAGE.LOGIN_ERROR_401,
@@ -251,7 +288,7 @@ router.get("/profileInfo", [checkuser.verifyUser], async function (
     val: req.userID,
   });
   if (typeof user.errors != "undefined") {
-    log.error(`profileInfo data query error key: UserID val: ${req.userID}`);
+    log.error(`profileInfo data query error key: UserID val: ${req.userID} `);
     // エラー結果
     resObj = {
       code: STATUS_MESSAGE.CODE_402,
@@ -268,9 +305,7 @@ router.get("/profileInfo", [checkuser.verifyUser], async function (
       req.host +
       (port == 80 || port == 443 ? "" : ":" + port);
     // ファイル存在チェック
-    var isExists = fs.existsSync(
-      `${appRoot}/public/avatar/${user.UserProfile.Avatar}`
-    );
+    var isExists = fs.existsSync(`${appRoot}/public/avatar/${user.UserProfile.Avatar}`);
     // ファイル存在チェック
     var imgpath = isExists ? user.UserProfile.Avatar : "00_00.jpg";
 
@@ -279,7 +314,7 @@ router.get("/profileInfo", [checkuser.verifyUser], async function (
       code: STATUS_MESSAGE.CODE_SUCCESS,
       data: {
         // ログインType
-        type: req.session.loginType,
+        type: req.query.loginType,
         // ユーザ名
         name: user.UserName,
         // 権限
@@ -330,7 +365,7 @@ router.get("/profileInfo", [checkuser.verifyUser], async function (
     res.status(200).send(resobj);
   }
 });
-
+/*
 // ユーザ情報取得処(プロフィールページ用)
 router.get("/profile", [checkuser.verifyUser], async function (req, res, next) {
   // トークイン解析したユーザIDを取得
@@ -367,9 +402,7 @@ router.get("/profile", [checkuser.verifyUser], async function (req, res, next) {
       req.host +
       (port == 80 || port == 443 ? "" : ":" + port);
     // ファイル存在チェック
-    var isExists = fs.existsSync(
-      `${appRoot}/public/avatar/${user.UserProfile.Avatar}`
-    );
+    var isExists = fs.existsSync(`${appRoot}/public/avatar/${user.UserProfile.Avatar}`);
     // ファイル存在チェック
     var imgpath = isExists ? user.UserProfile.Avatar : "00_00.jpg";
 
@@ -429,7 +462,7 @@ router.get("/profile", [checkuser.verifyUser], async function (req, res, next) {
     res.status(200).send(resobj);
   }
 });
-
+*/
 //　ファイルアップ upload.single('imgAvatar')画像格納エンジ
 var upload1 = multer({ storage: Image_storage.Image_storage }).single(
   "imgAvatar"
@@ -439,17 +472,16 @@ router.post("/imageUp", [checkuser.verifyUser], async function (
   res,
   next
 ) {
-  //ログ出力
-  log.info(`fileUpload: + ${req.file.filename}`);
-
   var resObj = {};
   // ユーザIDID
   await upload1(req, res, function (err) {
     if (err) {
-      log.error(`imageUp upload error: ${err}`);
+      log.error(`imageUp upload error: ${err} `);
       resObj.code = STATUS_MESSAGE.CODE_403;
       resObj.message = STATUS_MESSAGE.FILEUP_ERROR_403;
     } else {
+      //ログ出力
+      log.info(`fileUpload: + ${req.file.filename} `);
       var port = req.app.settings.port;
       var respath =
         req.protocol +
@@ -469,7 +501,7 @@ router.post("/imageUp", [checkuser.verifyUser], async function (
       );
       //  更新エラーの場合
       if (typeof ret.errors != "undefined") {
-        log.error(`imageUp query error key:UserID val:${req.userID}`);
+        log.error(`imageUp query error key: UserID val: ${req.userID} `);
         // エラー結果
         resObj = {
           code: STATUS_MESSAGE.CODE_403,
@@ -478,9 +510,7 @@ router.post("/imageUp", [checkuser.verifyUser], async function (
       } else {
         //更新成功の場合
         // ファイル存在チェック
-        var isExists = fs.existsSync(
-          `${appRoot}/public/avatar/${res.req.file.filename}`
-        );
+        var isExists = fs.existsSync(`${appRoot}/public/avatar/${res.req.file.filename}`);
         var imgpath = isExists ? res.req.file.filename : "00_00.jpg";
         resObj.code = STATUS_MESSAGE.CODE_SUCCESS;
         resObj.data = {
@@ -492,6 +522,7 @@ router.post("/imageUp", [checkuser.verifyUser], async function (
     res.status(200).send(resObj);
   });
 });
+
 // ユーザプロフィール更新
 router.post("/updatePro", [checkuser.verifyUser], async function (
   req,
@@ -516,7 +547,7 @@ router.post("/updatePro", [checkuser.verifyUser], async function (
         Sex: req.body.sex,
         Birthday: req.body.birthday,
         Phone1: req.body.phone,
-        Avatar: req.body.avatar,
+        // Avatar: req.body.avatar,
         Aboutme: req.body.aboutMe,
       }),
         // ユーザテーブル
@@ -561,7 +592,7 @@ router.post("/updatePro", [checkuser.verifyUser], async function (
     flg_u
   );
   if (typeof ret.errors != "undefined") {
-    log.error(`updatePro query error key:UserID val: ${req.userID}`);
+    log.error(`updatePro query error key: UserID val: ${req.userID} `);
     // エラー結果
     resObj = {
       code: STATUS_MESSAGE.CODE_402,
@@ -577,6 +608,7 @@ router.post("/updatePro", [checkuser.verifyUser], async function (
     res.status(200).send(resobj);
   }
 });
+
 // ログアウト処理
 router.post("/logout", function (req, res, next) {
   //ログ出力
