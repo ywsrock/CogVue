@@ -90,21 +90,20 @@ const getBlogList = async (queryInfo) => {
 const getBlogDetail = async (queryInfo) => {
     try {
         // 結果を返す
-        Comment.hasMany (Blog, {
+        Blog.hasMany (Comment, {
             foreignKey: {
                 name: 'id'
             },
             onDelete: 'SET NULL',
             onUpdate: 'CASCADE'
         })
-        Blog.belongsTo(Comment, {
+        Comment.belongsTo(Blog, {
             foreignKey: {
                 name: 'id'
             },
             targetKey : 'id' 
         });
-        const result = await Blog.findAll({
-            
+        const result = await Comment.findAll({
             where: {
                 [Op.and]: [{
                         [queryInfo.key]: queryInfo.val
@@ -112,7 +111,7 @@ const getBlogDetail = async (queryInfo) => {
                 ]
             },
             include: [{
-                model: Comment,
+                model: Blog,
                 required: false
             }],
 

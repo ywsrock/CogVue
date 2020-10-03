@@ -213,3 +213,38 @@
 [2020-09-21T23:52:59.534] [INFO] users - profileInfo userID: 49
 [2020-09-21T23:55:21.058] [INFO] startup - Listening on port 3000
 [2020-09-21T23:55:25.063] [INFO] users - profileInfo userID: 49
+[2020-09-22T00:01:10.982] [INFO] startup - Listening on port 3000
+[2020-09-22T00:01:55.817] [INFO] users - profileInfo userID: 49
+[2020-09-22T00:08:52.651] [INFO] startup - Listening on port 3000
+[2020-09-22T00:08:56.837] [INFO] users - profileInfo userID: 49
+[2020-09-22T20:21:26.713] [INFO] startup - Listening on port 3000
+[2020-09-22T20:22:30.681] [INFO] startup - Listening on port 3000
+[2020-09-22T20:22:41.190] [INFO] users - ユーザログ UserName:1@1.com
+[2020-09-22T20:22:41.190] [INFO] userDao - START getUserInfoByUserName: {"username":"1@1.com"}
+[2020-09-22T20:22:41.210] [INFO] userDao - END getUserInfoByUserName
+[2020-09-22T20:22:41.306] [INFO] users - login success UserID: 49
+[2020-09-22T20:22:41.325] [INFO] users - profileInfo userID: 49
+[2020-09-22T20:30:36.501] [INFO] startup - Listening on port 3000
+[2020-09-22T20:30:39.952] [INFO] users - profileInfo userID: 49
+[2020-09-22T20:32:52.693] [INFO] startup - Listening on port 3000
+[2020-09-22T20:32:56.804] [INFO] users - profileInfo userID: 49
+[2020-09-22T20:35:59.781] [INFO] startup - Listening on port 3000
+[2020-09-22T20:36:03.010] [INFO] users - profileInfo userID: 49
+[2020-09-22T20:36:58.301] [INFO] startup - Listening on port 3000
+[2020-09-22T20:37:02.257] [INFO] users - profileInfo userID: 49
+[2020-09-22T20:37:55.593] [INFO] startup - Listening on port 3000
+[2020-09-22T20:37:58.260] [INFO] users - profileInfo userID: 49
+[2020-09-22T20:38:23.938] [INFO] startup - Listening on port 3000
+[2020-09-22T20:38:26.184] [INFO] users - profileInfo userID: 49
+[2020-09-22T20:40:43.297] [INFO] startup - Listening on port 3000
+[2020-09-22T20:40:46.023] [INFO] users - profileInfo userID: 49
+[2020-09-22T20:42:11.265] [INFO] startup - Listening on port 3000
+[2020-09-22T20:42:13.487] [INFO] users - profileInfo userID: 49
+[2020-09-22T20:42:25.374] [INFO] startup - Listening on port 3000
+[2020-09-22T20:42:28.263] [INFO] users - profileInfo userID: 49
+[2020-09-27T23:07:07.643] [INFO] startup - Listening on port 3000
+[2020-09-27T23:07:19.336] [INFO] users - ユーザログ UserName:1@1.com
+[2020-09-27T23:07:19.336] [INFO] userDao - START getUserInfoByUserName: {"username":"1@1.com"}
+[2020-09-27T23:07:19.355] [INFO] userDao - END getUserInfoByUserName
+[2020-09-27T23:07:19.460] [INFO] users - login success UserID: 49
+[2020-09-27T23:07:19.482] [INFO] users - profileInfo userID: 49

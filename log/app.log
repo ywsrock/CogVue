@@ -17,3 +17,5 @@
 [2020-09-20T17:59:41.440] [INFO] startup - Listening on port 3000
 [2020-09-20T17:59:51.769] [INFO] users - profileInfo userID: 49
 [2020-09-20T18:04:59.215] [INFO] users - profileInfo userID: 49
+[2020-09-22T20:43:27.170] [INFO] startup - Listening on port 3000
+[2020-09-22T20:43:34.476] [INFO] users - profileInfo userID: 49
