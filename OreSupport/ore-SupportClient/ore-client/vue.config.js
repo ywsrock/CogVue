@@ -18,6 +18,16 @@ module.exports = {
     port: port,
     open: true,
     https: true,
+    proxy: {
+      '/CgevApi': {
+        target: 'https://api.cgev-stg.com/v1',
+        ws: true,
+        changeOrigin: true,
+        pathRewrite: {
+          '^/CgevApi': ''
+        }
+      }
+    },
     key: fs.readFileSync(getpath("privateCA/key.pem")),
     cert: fs.readFileSync(getpath("privateCA/cert.pem")),
     ca: fs.readFileSync(getpath('privateCA/csr.pem')),

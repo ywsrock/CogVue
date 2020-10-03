@@ -6,11 +6,11 @@ import request from "@/utils/request";
  * @returns String
  */
 export function login(data) {
-  return request({
-    url: "/user/login",
-    method: "post",
-    data,
-  });
+    return request({
+        url: "/user/login",
+        method: "post",
+        data,
+    });
 }
 
 /**
@@ -19,11 +19,11 @@ export function login(data) {
  * @returns String
  */
 export function singUp(data) {
-  return request({
-    url: "/user/singUp",
-    method: "post",
-    data,
-  });
+    return request({
+        url: "/user/singUp",
+        method: "post",
+        data,
+    });
 }
 
 /**
@@ -31,12 +31,12 @@ export function singUp(data) {
  * @param token String
  * @returns String
  */
-export function getInfo(token) {
-  return request({
-    url: "/user/profileInfo",
-    method: "get",
-    params: { token },
-  });
+export function getInfo(token, loginType = "normal") {
+    return request({
+        url: "/user/profileInfo",
+        method: "get",
+        params: { token, loginType },
+    });
 }
 
 /**
@@ -44,12 +44,12 @@ export function getInfo(token) {
  * @param token String
  * @returns String
  */
-export function getProfileInfo(token) {
-  return request({
-    url: "/user/profile",
-    method: "get",
-    params: { token },
-  });
+export function getProfileInfo(token, loginType = "normal") {
+    return request({
+        url: "/user/profileInfo",
+        method: "get",
+        params: { token, loginType },
+    });
 }
 /**
  * ユーザプロフィール更新
@@ -57,11 +57,11 @@ export function getProfileInfo(token) {
  * @returns String
  */
 export function updateUser(data) {
-  return request({
-    url: "user/updatePro",
-    method: "post",
-    data,
-  });
+    return request({
+        url: "user/updatePro",
+        method: "post",
+        data,
+    });
 }
 
 /**
@@ -70,19 +70,19 @@ export function updateUser(data) {
  * @returns String
  */
 export function imageUp(data) {
-  return request({
-    url: "user/imageUp",
-    method: "post",
-    data,
-  });
+    return request({
+        url: "user/imageUp",
+        method: "post",
+        data,
+    });
 }
 
 /**
  * ユーザログアウト
  */
 export function logout() {
-  return request({
-    url: "user/logout",
-    method: "post",
-  });
+    return request({
+        url: "user/logout",
+        method: "post",
+    });
 }

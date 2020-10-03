@@ -24,24 +24,43 @@ export default {
       type: String,
       default: "400px",
     },
+    indicatorParams: {
+      type: Array,
+      default: () => {
+        return [
+          { name: "計画力", max: 150 },
+          { name: "記憶力", max: 150 },
+          { name: "注意力", max: 150 },
+          { name: "見当識", max: 150 },
+          { name: "空間認識力", max: 150 },
+          // { name: "その他", max: 150 },
+        ];
+      },
+    },
   },
   data() {
     return {
       chart: null,
       chartDate: [],
+      chartLabels: this.indicatorParams,
     };
   },
   mounted() {
     this.$nextTick(() => {
-      this.$http.get("/api/personal/CogEvo/raddarChart").then(
-        (res) => {
-          this.chartDate = res.data.raddarChartData;
-          this.initChart();
-        },
-        (error) => {
-          console.log(error);
-        }
-      );
+      this.$store
+        .dispatch("cgev/authenticate")
+        .then(() => {
+          this.$store.dispatch("cgev/recordsCategories").then(
+            (res) => {
+              this.chartDate = res.raddarChartData;
+              this.initChart();
+            },
+            (error) => {
+              console.log(error);
+            }
+          );
+        })
+        .catch((error) => console.log(error));
     });
   },
   beforeDestroy() {
@@ -77,14 +96,7 @@ export default {
               shadowOffsetY: 15,
             },
           },
-          indicator: [
-            { name: "記憶力", max: 10000 },
-            { name: "区間把握力", max: 20000 },
-            { name: "見当識", max: 20000 },
-            { name: "計画力", max: 20000 },
-            { name: "注意力", max: 20000 },
-            { name: "その他", max: 20000 },
-          ],
+          indicator: this.chartLabels,
           name: {
             // // formatter: "{value}",
             // formatter: function(name) {

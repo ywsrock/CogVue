@@ -29,8 +29,7 @@
                         v-model="ability_rate0"
                         disabled
                         text-color="#ff9900"
-                      >
-                      </el-rate>
+                      ></el-rate>
                       <p></p>
                     </div>
                     <!-- /.detail-banner-rating -->
@@ -60,7 +59,7 @@
                       <span class="text-secondary">5種バランスの指数平均</span>
                     </h2>
                     <div class="background-white p20">
-                      <raddar-chart />
+                      <raddar-chart :indicatorParams="indicatorParams" />
                     </div>
                   </div>
                   <!-- /.detail-gallery -->
@@ -70,27 +69,14 @@
                 <div class="col-sm-5">
                   <h2>
                     【評価】
-                    <span class="text-secondary">総合サマリー </span>
+                    <span class="text-secondary">総合サマリー</span>
                   </h2>
-                  <div class="background-white p20 overflo-div-height450 ">
-                    <div class="detail-description">
-                      <h4>
-                        利用開始日 {{ useStart }} 最終利用日 {{ userEnd }}
-                      </h4>
+                  <div class="background-white p20 overflo-div-height450">
+                    <div class="detail-description" style="border-bottom: 0;">
+                      <h4>利用開始日 {{ useStart }}</h4>
+                      <h4>最終利用日 {{ userEnd }}</h4>
                       <hr />
-                      <p>
-                        {{ SummaryDec }}
-                      </p>
-                      <p>
-                        In congue mattis felis, non hendrerit orci dictum id.
-                        Etiam consequat nulla vitae tempus interdum.Nam gravida
-                        convallis lacus, at dignissim urna pulvinar sed.
-                      </p>
-                      <p>
-                        Cras ac mi odio. Aliquam erat volutpat. Cras euismod
-                        facilisis ligula in tristique. Proin et eleifend lacus,
-                        vitae dictum orci
-                      </p>
+                      <p>{{ SummaryDec }}</p>
                       <!--<transaction-table />-->
                     </div>
                     <!-- /.detail-follow -->
@@ -249,8 +235,9 @@
                 <h3>運営会社</h3>
 
                 <p>
-                  会社名: 株式会社トータルブレインケア<br />
-                  事業内容: 認知機能に関するツールやプログラムの提供及び<br />インターネットサービス事業
+                  会社名: 株式会社トータルブレインケア
+                  <br />事業内容: 認知機能に関するツールやプログラムの提供及び
+                  <br />インターネットサービス事業
                 </p>
               </div>
               <!-- /.col-* -->
@@ -270,8 +257,9 @@
                 <h3>CogEvoカスタマーサポート</h3>
                 <p>
                   平日9:30〜17:00
-                  <br />土・日・祝日、および弊社休業日を除きます<br />
-                  電話：078-335-8467<br />
+                  <br />土・日・祝日、および弊社休業日を除きます
+                  <br />電話：078-335-8467
+                  <br />
                   <a href="https://cog-evo.jp/">https://cog-evo.jp/</a>
                 </p>
                 <!-- /.header-nav-social -->
@@ -294,12 +282,18 @@
 
             <div class="footer-bottom-right">
               <ul class="nav nav-pills">
-                <li><a href="index.html">Home</a></li>
-                <li><a href="pricing.html">Pricing</a></li>
+                <li>
+                  <a href="index.html">Home</a>
+                </li>
+                <li>
+                  <a href="pricing.html">Pricing</a>
+                </li>
                 <li>
                   <a href="terms-conditions.html">Terms &amp; Conditions</a>
                 </li>
-                <li><a href="contact-1.html">Contact</a></li>
+                <li>
+                  <a href="contact-1.html">Contact</a>
+                </li>
               </ul>
               <!-- /.nav -->
             </div>
@@ -318,6 +312,7 @@
 import LineChart from "./components/LineChart";
 import RaddarChart from "./components/RaddarChart";
 import TransactionTable from "./components/TransactionTable";
+// import getCgevApi from "@/utils/cgevapi";
 
 export default {
   name: "Summary",
@@ -359,6 +354,13 @@ export default {
     return {
       lineChartData: {},
       TransactionData: [],
+      indicatorParams: [
+        { name: "計画力", max: 150 },
+        { name: "記憶力", max: 150 },
+        { name: "注意力", max: 150 },
+        { name: "見当識", max: 150 },
+        { name: "空間認識力", max: 150 },
+      ],
       userName: this.$session.get("UserName") || "",
       ability_rate0: 4,
       SummaryDec:
