@@ -57,10 +57,18 @@
                             <i class="fa fa-comments"></i>
                             <a href="blog-detail.html">3 コメント</a>
                           </div>
-                          <!-- <br> <el-button size="mini" @click="blogEdit(scope.$index, scope.row)">Edit</el-button>
-                          <el-button size="mini" type="danger" @click="blogDelete(scope.$index, scope.row)">Delete</el-button>-->
+
+                          <!-- <br> <button size="mini" @click="blogEdit(scope.$index, scope.row)">Edit</button>
+                          <button size="mini" type="danger" @click="blogDelete(scope.$index, scope.row)">Delete</button> -->
+
                           <!-- /.post-meta-comments -->
                           <div class="post-meta-more">
+                            <a @click="blogDelete(item.id)">削除する
+                              <i class="fa fa-chevron-right"></i>
+                            </a>
+                            <a @click="blogEdit(item.id)">編集する
+                              <i class="fa fa-chevron-right"></i>
+                            </a>
                             <a @click.prevent="getBlogDetail(item.id)">
                               もっと読む
                               <i class="fa fa-chevron-right"></i>
@@ -399,6 +407,7 @@
 </template>
 
 <script>
+import { Message } from "element-ui";
 /* eslint-disable */
 export default {
   data() {
@@ -429,10 +438,6 @@ export default {
       });
   },
   methods: {
-    // handleEdit: function(index, row){
-    //   alert(index, row)
-
-    // },
     getBlogDetail(id) {
       //apiからサーバーに命令をだす。(store action)
       // console.log(`val = ${JSON.stringify(row)}`)
@@ -446,31 +451,28 @@ export default {
       //   console.log("err=====");
       // })
     },
-
-    blogEdit(index, row) {
+    blogEdit(id) {
       //apiからサーバーに命令をだす。(store action)
-      // console.log(`val = ${JSON.stringify(row)}`)
-      console.log(`val = ${JSON.stringify(row)}`);
+      // console.log(`val = ${JSON.stringify(row)}`);
       // this.$router.push("/blogDetail");
       // this.$store.dispatch("blog/getBlogDetail",row.id)
       this.$store
-        .dispatch("blog/getBlogDetail", row.id)
+        .dispatch("blog/getBlogDetail", id)
         .then((res) => {
           //成功の場合
-          this.$router.push("/blog/blogEdit?id=" + row.id);
+          this.$router.push("/blog/blogEdit?id=" + id);
         })
         .catch((error) => {
           console.log("err=====");
         });
     },
-
     // handleEdit(index, row) {
     //   console.log(index, row)
     // },
-    blogDelete(index, row) {
-      console.log(`val = ${JSON.stringify(row)}`);
+    blogDelete(id) {
+      // console.log(`val = ${JSON.stringify(row)}`);
       this.$store
-        .dispatch("blog/blogDelete", row.id)
+        .dispatch("blog/blogDelete", id)
         .then((res) => {
           //成功の場合
           var that = this;
@@ -480,6 +482,11 @@ export default {
               this.$nextTick().then(function() {
                 const blogInfo = that.$store.getters.get_content;
                 that.tableData = blogInfo;
+              });
+              Message({
+                message: "削除OK",
+                type: "success",
+                duration: 5 * 1000,
               });
             })
             .catch((err) => {
@@ -491,7 +498,6 @@ export default {
         });
     },
   },
-
   filters: {
     content_slice: function(value) {
       if (!value) return "";
@@ -510,7 +516,6 @@ export default {
 @import "../../../public/assets/libraries/bootstrap-select/bootstrap-select.min.css";
 @import "../../../public/assets/libraries/bootstrap-fileinput/fileinput.min.css";
 @import "../../../public/assets/css/superlist.css";
-
 #content {
   display: -webkit-box;
   -webkit-box-orient: vertical;

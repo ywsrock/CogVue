@@ -12,6 +12,8 @@
                   <div class="content">
                     <div class="page-title">
                       <h1>{{ blogDetail.title }}</h1>
+                      <button @click.prevent="blogEdit(id)">編集する</button>
+                      <button  @click.prevent="blogDelete(id)">削除する</button>
                     </div>
                     <!-- /.page-title -->
 
@@ -70,6 +72,8 @@
                         </ul>
                       </div>
                       <!-- /.post-meta -->
+                      <br>
+                          <!-- <a @click.prevent="getBlogDetail(item.id)"> -->
 
                       <h2 id="reviews">23 Comments</h2>
 
@@ -648,22 +652,20 @@
 </template>
 
 <script>
+import { Message } from "element-ui";
 /* eslint-disable */
 export default {
   data() {
     return {
-      //  tableData: [],
       blogDetail: {
         title: "",
         content: "",
       },
     };
   },
-
   mounted() {
     var that = this;
     // console.log(this.$router.query); 次回の閻餐会
-
     //ブログ詳細取得
     this.$store
       .dispatch("blog/getBlogDetail", this.$route.query.id)
@@ -675,15 +677,52 @@ export default {
           const title = that.$store.getters.get_title;
           that.blogDetail.content = content;
           that.blogDetail.title = title;
-          // const blogInfo = that.$store.getters.get_content;
-          // that.tableData = blogInfo;
-
-
         });
       })
       .catch((error) => {
         console.log(error);
       });
+  },
+  methods: {
+    blogEdit(id) {
+      //apiからサーバーに命令をだす。(store action)
+      // console.log(`val = ${JSON.stringify(row)}`)
+      //console.log(`val = ${JSON.stringify(row)}`);
+      // this.$router.push("/blogDetail");
+      // this.$store.dispatch("blog/getBlogDetail",row.id)
+      this.$router.push("/blog/blogEdit?id=" + this.$route.query.id);
+      // this.$store
+      //   .dispatch("blog/getBlogDetail", this.$route.query.id)
+      //   .then((res) => {
+      //     //成功の場合
+      //     this.$router.push("/blog/blogEdit?id=" + id);
+      //   })
+      //   .catch((error) => {
+      //     console.log("err=====");
+      //   });
+    },
+    // handleEdit(index, row) {
+    //   console.log(index, row)
+    // },
+    blogDelete(id) {
+      // console.log(`val = ${JSON.stringify(row)}`);
+      this.$store
+        .dispatch("blog/blogDelete", this.$route.query.id)
+        .then((res) => {
+          Message({
+            message: "削除OK",
+            type: "success",
+            duration: 5 * 1000,
+          }),
+            // ログイン画面に遷移
+            this.$router.push({ path: "/blog/blogList" }).catch((err) => {});
+        })
+        .catch((error) => {
+          e.target.disabled = false;
+          console.log(error.data);
+          console.log("削除失敗");
+        });
+    },
   },
 };
 </script>
@@ -696,7 +735,6 @@ export default {
 @import "../../../public/assets/libraries/bootstrap-select/bootstrap-select.min.css";
 @import "../../../public/assets/libraries/bootstrap-fileinput/fileinput.min.css";
 @import "../../../public/assets/css/superlist.css";
-
 #content {
   display: -webkit-box;
   -webkit-box-orient: vertical;
