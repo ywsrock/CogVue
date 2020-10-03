@@ -24,7 +24,7 @@ var sessionOpt = {
   resave: false,
   saveUninitialized: false,
   cookie: {
-    MaxAge: 60 * 60 * 60,
+    MaxAge: 60 * 60 * 1000, //1時間設定
   },
 };
 

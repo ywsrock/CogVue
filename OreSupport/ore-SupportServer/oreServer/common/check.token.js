@@ -1,6 +1,6 @@
 const jwtToken = require("jsonwebtoken");
 const config = require('../config/secret.config')
-const ERROR_MESSAGE = require('./const').default;
+const ERROR_MESSAGE = require('./const').STATUS_MESSAGE;
 
 /* 
  * ユーザのトークンチェック 
