@@ -118,13 +118,19 @@ router.get("/blogdetail", async function (req, res, next) {
     // var title = blog.Title;
     // var content = blog.Content
 
+    let commentArray = []
+    blogDetail.forEach((model) => {
+      commentArray.push(model.Comment1)
+    })
+    
     resObj = {
       code: STATUS_MESSAGE.CODE_SUCCESS,
       data: {
         id: blogDetail.id,
         title: blogDetail.Title,
         content: blogDetail.Content,
-        comment: blogDetail.Comment.Comment1　|| "",
+        // comment: blogDetail.Comment1　|| "",
+        comment: commentArray
       },
     };
   }
