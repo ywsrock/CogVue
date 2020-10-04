@@ -1,7 +1,7 @@
 import { CGEV_INFO } from "@/utils/const";
 import { raddarChart } from "../cgevModel/categories";
 import { authenticate, recordsCategories, recordsSummary, recordsHistories, recordsTasksIdSummary } from "../../utils/api/cgevapi";
-
+import { TaskData } from "@/store/cgevModel/task";
 const state = {
     access_token: "",
     api_user_secret: CGEV_INFO.ApiUserSecret,
@@ -35,7 +35,7 @@ const mutations = {
     },
     setData: (state, dataObj) => {
         // state.data = dataObj.keys().length ? dataObj : {}
-        state.data = Object.assign(state.data, dataObj)
+        state.data = Object.assign({}, state.data, dataObj)
     }
 }
 
@@ -72,7 +72,7 @@ const actions = {
             commit("setAccessToken", cgevData.access_token)
             commit("setStatus", cgevData.status)
             commit("setError", cgevData.error)
-            commit("setData", { 'categories': cgevData.data })
+            commit("setData", { 'recordsCategories': cgevData.data })
             // 現在の値
             // raddarChart.raddarChartData[0].value = cgevData.data.chart_data
             raddarChart.raddarChartData[0].value = cgevData.data.chart_data
@@ -83,7 +83,7 @@ const actions = {
             commit("setAccessToken", "")
             commit("setStatus", "")
             commit("setError", "")
-            commit("setData", { 'categories': {} })
+            commit("setData", { 'recordsCategories': {} })
             raddarChart.raddarChartData[0].value = [0, 0, 0, 0, 0]
             raddarChart.raddarChartData[1].value = [0, 0, 0, 0, 0]
             return error
@@ -104,13 +104,14 @@ const actions = {
             commit("setAccessToken", cgevData.access_token)
             commit("setStatus", cgevData.status)
             commit("setError", cgevData.error)
-            commit("setData", { 'summary': cgevData.data })
+            commit("setData", { 'recordsSummary': cgevData.data })
+
             return cgevData.data
         } catch (error) {
             commit("setAccessToken", "")
             commit("setStatus", "")
             commit("setError", "")
-            commit("setData", { 'summary': {} })
+            commit("setData", { 'recordsSummary': {} })
             return error
         }
     },
@@ -129,34 +130,45 @@ const actions = {
             commit("setAccessToken", cgevData.access_token)
             commit("setStatus", cgevData.status)
             commit("setError", cgevData.error)
-            commit("setData", { 'histories': cgevData.data })
+            commit("setData", { 'recordsHistories': cgevData.data })
             return cgevData.data
         } catch (error) {
             commit("setAccessToken", "")
             commit("setStatus", "")
             commit("setError", "")
-            commit("setData", { 'histories': {} })
+            commit("setData", { 'recordsHistories': {} })
             return error
         }
     },
-    // ・指定したタスクについての記録を概要を取得する
-    recordsTasksIdSummary: async ({ commit, state }) => {
+    //指定したタスクについての記録を概要を取得する
+    recordsTasksIdSummary: async function ({ commit, dispatch }, { task_id }) {
         // チャートコンポーネント
         try {
+            if (state.access_token === "" || state.access_token === undefined) {
+                state.access_token = await dispatch("authenticate")
+                if (state.access_token === "") {
+                    return Promise.reject(TaskData); //初期値設定
+                }
+            }
             let res = await recordsTasksIdSummary({
                 access_token: state.access_token,
+                task_id: task_id
             });
             let cgevData = res.data
             commit("setAccessToken", cgevData.access_token)
             commit("setStatus", cgevData.status)
             commit("setError", cgevData.error)
-            commit("setData", { 'histories': cgevData.data })
+            commit("setData", {
+                task_id: {
+                    'recordsTasksIdSummary': cgevData.data
+                }
+            })
             return cgevData.data
         } catch (error) {
             commit("setAccessToken", "")
             commit("setStatus", "")
             commit("setError", "")
-            commit("setData", { 'histories': {} })
+            commit("setData", { 'recordsTasksIdSummary': {} })
             return error
         }
     }

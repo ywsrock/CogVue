@@ -442,6 +442,7 @@
 import LineChart from "./components/LineChart";
 import RaddarChart from "./components/RaddarChart";
 import TransactionTable from "./components/TransactionTable";
+import { CGEV_SESSION_KEY } from "@/utils/const";
 // import getCgevApi from "@/utils/cgevapi";
 
 export default {
@@ -464,40 +465,74 @@ export default {
           console.log(error);
         }
       );
+      // セッションクリア
+      if (this.$session.has(CGEV_SESSION_KEY.RECORDSCATEGORIES)) {
+        let recordsCategories = this.$session.get(
+          CGEV_SESSION_KEY.RECORDSCATEGORIES
+        );
+        let recordsSummary = this.$session.get(CGEV_SESSION_KEY.RECORDSSUMMARY);
+        let recordsHistories = this.$session.get(
+          CGEV_SESSION_KEY.RECORDSHISTORIES
+        );
 
-      Promise.all([
-        await this.$store.dispatch("cgev/authenticate"),
-        await this.$store.dispatch("cgev/recordsCategories"),
-        await this.$store.dispatch("cgev/recordsSummary"),
-        await this.$store.dispatch("cgev/recordsHistories"),
-      ]).then(
-        ([
-          // eslint-disable-next-line
-          authenticate,
+        // 画面表示値設定
+        this.setSummaryValues(
           recordsCategories,
           recordsSummary,
-          recordsHistories,
-        ]) => {
-          //傾向
-          this.chartDateParams = recordsCategories.raddarChartData;
-          //総合結果
-          this.userName = recordsSummary.name;
-          this.ability_rate0 = recordsSummary.star;
-          this.averageIndex = recordsSummary.performance;
-          this.useStart = recordsSummary.started_at;
-          this.userEnd = recordsSummary.last_updated_at;
-          this.SummaryDec = recordsSummary.analysed_message;
-          this.cardPazulData.medal0 = recordsSummary.rank_count_0;
-          this.cardPazulData.medal1 = recordsSummary.rank_count_1;
-          this.cardPazulData.medal2 = recordsSummary.rank_count_2;
-          this.cardPazulData.medal3 = recordsSummary.rank_count_3;
-          this.cardPazulData.medal4 = recordsSummary.rank_count_4;
-          this.cardPazulData.medal5 = recordsSummary.rank_count_5;
-          // this.cardPazulData.pazulDec = recordsSummary.analysed_message;
-          //履歴
-          this.TransactionData = recordsHistories.histories;
-        }
-      );
+          recordsHistories
+        );
+      } else {
+        Promise.all([
+          await this.$store.dispatch("cgev/authenticate"),
+          await this.$store.dispatch("cgev/recordsCategories"),
+          await this.$store.dispatch("cgev/recordsSummary"),
+          await this.$store.dispatch("cgev/recordsHistories"),
+        ])
+          .then(
+            ([
+              // eslint-disable-next-line
+              authenticate,
+              recordsCategories,
+              recordsSummary,
+              recordsHistories,
+            ]) => {
+              // 画面表示値設定
+              this.setSummaryValues(
+                recordsCategories,
+                recordsSummary,
+                recordsHistories
+              );
+
+              // セッション値保存
+              this.$session.set(
+                CGEV_SESSION_KEY.RECORDSCATEGORIES,
+                recordsCategories
+              );
+
+              this.$session.set(
+                CGEV_SESSION_KEY.RECORDSSUMMARY,
+                recordsSummary
+              );
+
+              this.$session.set(
+                CGEV_SESSION_KEY.RECORDSHISTORIES,
+                recordsHistories
+              );
+            }
+          )
+          /* eslint-disable */
+          .catch((error) => {
+            // セッションクリア
+            this.$session.has(CGEV_SESSION_KEY.RECORDSCATEGORIES) &&
+              this.$session.remove(CGEV_SESSION_KEY.RECORDSCATEGORIES);
+
+            this.$session.has(CGEV_SESSION_KEY.RECORDSSUMMARY) &&
+              this.$session.remove(CGEV_SESSION_KEY.RECORDSSUMMARY);
+
+            this.$session.has(CGEV_SESSION_KEY.RECORDSHISTORIES) &&
+              this.$session.remove(CGEV_SESSION_KEY.RECORDSHISTORIES);
+          });
+      }
     });
   },
   watch: {
@@ -561,6 +596,31 @@ export default {
     };
   },
   methods: {
+    setSummaryValues: function(
+      recordsCategories,
+      recordsSummary,
+      recordsHistories
+    ) {
+      //傾向
+      this.chartDateParams = recordsCategories.raddarChartData;
+      //総合結果
+      // this.userName = recordsSummary.name;
+      this.ability_rate0 = recordsSummary.star;
+      this.averageIndex = recordsSummary.performance;
+      this.useStart = recordsSummary.started_at;
+      this.userEnd = recordsSummary.last_updated_at;
+      this.SummaryDec = recordsSummary.analysed_message;
+      this.cardPazulData.medal0 = recordsSummary.rank_count_0;
+      this.cardPazulData.medal1 = recordsSummary.rank_count_1;
+      this.cardPazulData.medal2 = recordsSummary.rank_count_2;
+      this.cardPazulData.medal3 = recordsSummary.rank_count_3;
+      this.cardPazulData.medal4 = recordsSummary.rank_count_4;
+      this.cardPazulData.medal5 = recordsSummary.rank_count_5;
+      // this.cardPazulData.pazulDec = recordsSummary.analysed_message;
+      //履歴
+      this.TransactionData = recordsHistories.histories;
+    },
+
     clickYear: function() {
       this.$nextTick(() => {
         this.activeObj.isActiveY = true;

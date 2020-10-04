@@ -43,13 +43,9 @@
                       >
                       <div class="detail-banner-rating">
                         <i class="detail-verified" style="float:left"
-                          >{{ ability_rate0 }}級</i
+                          >{{ star_0 }}級</i
                         >
-                        <el-rate
-                          v-model="ability_rate0"
-                          disabled
-                          text-color="#ff9900"
-                        >
+                        <el-rate v-model="star_0" disabled text-color="#ff9900">
                         </el-rate>
                       </div>
                     </div>
@@ -66,10 +62,10 @@
                       >
                       <div class="detail-banner-rating">
                         <i class="detail-verified" style="float:left"
-                          >{{ ability_rate1 }}級</i
+                          >{{ star_1 }}級</i
                         >
                         <el-rate
-                          v-model="ability_rate1"
+                          v-model="star_1"
                           disabled
                           text-color="#ff9900"
                         >
@@ -112,7 +108,7 @@
               <CommonAbility
                 :showDataObj="showData"
                 :showAbilityName="abilityName"
-                :key="legendData[0]"
+                :key="task_name"
                 v-cloak
               />
             </div>
@@ -199,6 +195,8 @@
 
 <script>
 import CommonAbility from "./components/CommonAbility";
+import { TaskData } from "@/store/cgevModel/task";
+import { CGEV_SESSION_KEY } from "@/utils/const";
 
 export default {
   name: "OrientationAbility",
@@ -206,25 +204,76 @@ export default {
     CommonAbility,
   },
   mounted() {
-    this.$http.get("/api/personal/CogEvo/OrientationAbility").then(
-      (res) => {
-        this.dataObj = Object.assign(
-          {},
-          this.dataObj,
-          res.data.OrientationAbility
-        );
-        this.legendData = this.dataObj.Orientation.legendData;
-        this.ability_rate0 = this.dataObj.Orientation.cardPazulData.current_ability_rate;
-        this.showData = Object.assign(
-          {},
-          this.showData,
-          this.dataObj.Orientation
-        );
-      },
-      (error) => {
-        console.log(error);
-      }
-    );
+    if (this.$session.has(CGEV_SESSION_KEY.TASK_ID_1)) {
+      let sessionDataObj = this.$session.get(CGEV_SESSION_KEY.TASK_ID_1);
+      this.dataObj = Object.assign(this.dataObj, sessionDataObj);
+      // console.log(JSON.stringify(this.dataObj, null, "\t"));
+      this.task_name = this.dataObj.Flashlight.cardPazulData.task_name;
+      this.star_0 = this.dataObj.Flashlight.cardPazulData.star;
+      this.showData = Object.assign({}, this.showData, this.dataObj.Flashlight);
+    } else {
+      this.$nextTick(async () => {
+        await this.$store.dispatch("cgev/authenticate");
+        Promise.all([
+          await this.$store.dispatch("cgev/recordsTasksIdSummary", {
+            task_id: 1,
+          }),
+          /* eslint-disable */
+        ])
+          .then(([FlashlightData]) => {
+            if (Object.keys(FlashlightData).length === 0) {
+              throw new Error();
+            }
+            this.dataObj = Object.assign(this.dataObj, {
+              Flashlight: { cardPazulData: FlashlightData },
+            });
+            this.$session.set(CGEV_SESSION_KEY.TASK_ID_1, this.dataObj);
+            // console.log(JSON.stringify(this.dataObj, null, "\t"));
+
+            this.task_name = this.dataObj.Flashlight.cardPazulData.task_name;
+            this.star_0 = this.dataObj.Flashlight.cardPazulData.star;
+            this.showData = Object.assign(
+              {},
+              this.showData,
+              this.dataObj.Flashlight
+            );
+          })
+          .catch((error) => {
+            if (this.$session.has(CGEV_SESSION_KEY.TASK_ID_1)) {
+              this.$session.remove(CGEV_SESSION_KEY.TASK_ID_1);
+            }
+            // 失敗の場合、初期設定
+            this.dataObj = Object.assign({}, this.dataObj, TaskData);
+            this.task_name = this.dataObj.Flashlight.cardPazulData.task_name;
+            this.star_0 = this.dataObj.Flashlight.cardPazulData.star;
+            this.showData = Object.assign(
+              {},
+              this.showData,
+              this.dataObj.Flashlight
+            );
+          });
+      });
+    }
+
+    // this.$http.get("/api/personal/CogEvo/OrientationAbility").then(
+    //   (res) => {
+    //     this.dataObj = Object.assign(
+    //       {},
+    //       this.dataObj,
+    //       res.data.OrientationAbility
+    //     );
+    //     this.legendData = this.dataObj.Orientation.legendData;
+    //     this.star_0 = this.dataObj.Orientation.cardPazulData.current_ability_rate;
+    //     this.showData = Object.assign(
+    //       {},
+    //       this.showData,
+    //       this.dataObj.Orientation
+    //     );
+    //   },
+    //   (error) => {
+    //     console.log(error);
+    //   }
+    // );
   },
   watch: {
     $route: function(to, from) {
@@ -239,14 +288,14 @@ export default {
       //コンポーネント表示データ
       showData: {},
       // // チャートlegendData
-      legendData: ["見当識 "],
+      task_name: ["見当識 "],
       // // ユーザ名
       userName: this.$session.get("UserName") || "",
       // // 能力名
       abilityName: "見当識",
       // // 等級
-      ability_rate0: 0,
-      ability_rate1: 0,
+      star_0: 0,
+      star_1: 0,
       // 年、月、週 カレントアクティブ
       activeObj: {
         isActiveY: true,
@@ -264,9 +313,10 @@ export default {
       let that = this;
       this.activeTabObj.isTab1 = true;
       this.$nextTick().then(function() {
-        that.showData = that.dataObj.Orientation;
+        that.showData = that.dataObj.Flashlight;
+        that.task_name =
+          that.dataObj.Flashlight.cardPazulData.task_name || "見当識 ";
       });
-      this.legendData = this.dataObj.Orientation.legendData || ["1"];
     },
   },
 };

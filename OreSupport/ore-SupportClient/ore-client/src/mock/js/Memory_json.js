@@ -69,11 +69,11 @@ var lineData = {
 export const memory = {
     MemoryAbility: {
         Flashlight: {
-            lineChartData: lineData,
-            transactionTableChartData: data.list,
-            // チャートtask_name
-            task_name: ["フラッシュライト "],
             cardPazulData: {
+                lineChartData: lineData,
+                recents: data.list,
+                // チャートtask_name
+                task_name: "フラッシュライト ",
                 //カレントrate
                 star: Mock.Random.integer(1, 5),
                 //最終利用日
@@ -102,11 +102,11 @@ export const memory = {
         },
 
         CardMemory: {
-            lineChartData: lineData,
-            transactionTableChartData: data.list,
-            // チャートtask_name
-            task_name: ["カード記憶 "],
             cardPazulData: {
+                lineChartData: lineData,
+                recents: data.list,
+                // チャートtask_name
+                task_name: "カード記憶 ",
                 //カレントrate
                 star: Mock.Random.integer(1, 5),
                 //最終利用日
@@ -114,7 +114,7 @@ export const memory = {
                 //最高点
                 score_max: Mock.Random.float(60, 100, 2, 2),
                 // 標準点
-                standardPoint: Mock.Random.float(60, 100, 2, 2),
+                score_age: Mock.Random.float(60, 100, 2, 2),
                 //平均指数
                 performance: Mock.Random.float(60, 100, 2, 2),
                 //time
@@ -134,11 +134,11 @@ export const memory = {
             },
         },
         Story: {
-            lineChartData: lineData,
-            transactionTableChartData: data.list,
-            // チャートtask_name
-            task_name: ["ストーリー "],
             cardPazulData: {
+                lineChartData: lineData,
+                recents: data.list,
+                // チャートtask_name
+                task_name: "ストーリー ",
                 //カレントrate
                 star: Mock.Random.integer(1, 5),
                 //最終利用日
@@ -146,7 +146,7 @@ export const memory = {
                 //最高点
                 score_max: Mock.Random.float(60, 100, 2, 2),
                 // 標準点
-                standardPoint: Mock.Random.float(60, 100, 2, 2),
+                score_age: Mock.Random.float(60, 100, 2, 2),
                 //平均指数
                 performance: Mock.Random.float(60, 100, 2, 2),
                 //time

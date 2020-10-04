@@ -45,3 +45,20 @@ export const CGEV_INFO = {
     // ユーザシークレット
     ApiUserSecret: "1806b37031b647e953e1798b8966d61ef029568c",
 }
+export const CGEV_IMAGE_BASE = {
+    //イメージベースパス
+    cgev_image_base: "https://personal.tbcare.jp"
+}
+
+export const CGEV_SESSION_KEY = {
+    //サマリー
+    RECORDSCATEGORIES: 'RECORDSCATEGORIES',
+    RECORDSSUMMARY: 'RECORDSSUMMARY',
+    RECORDSHISTORIES: 'RECORDSHISTORIES',
+    //記憶
+    TASK_ID_567: 'TASK_ID_5_6_7',
+    //空間
+    TASK_ID_1112: 'TASK_ID_11_12',
+    //見当識
+    TASK_ID_1: 'TASK_ID_1',
+}
