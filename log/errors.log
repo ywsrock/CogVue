@@ -1,0 +1,46 @@
+[2020-10-04T20:15:45.014] [ERROR] userDao - getUserProfileByUserID error:Error: WHERE parameter "undefined" has invalid "undefined" value
+    at MySQLQueryGenerator.whereItemQuery (/Users/teroron/Desktop/PBL/PBL2020/OreSupport/ore-SupportServer/oreServer/node_modules/sequelize/lib/dialects/abstract/query-generator.js:2184:13)
+    at /Users/teroron/Desktop/PBL/PBL2020/OreSupport/ore-SupportServer/oreServer/node_modules/sequelize/lib/dialects/abstract/query-generator.js:2173:25
+    at Array.forEach (<anonymous>)
+    at MySQLQueryGenerator.whereItemsQuery (/Users/teroron/Desktop/PBL/PBL2020/OreSupport/ore-SupportServer/oreServer/node_modules/sequelize/lib/dialects/abstract/query-generator.js:2171:35)
+    at /Users/teroron/Desktop/PBL/PBL2020/OreSupport/ore-SupportServer/oreServer/node_modules/sequelize/lib/dialects/abstract/query-generator.js:2307:30
+    at Array.map (<anonymous>)
+    at MySQLQueryGenerator._whereGroupBind (/Users/teroron/Desktop/PBL/PBL2020/OreSupport/ore-SupportServer/oreServer/node_modules/sequelize/lib/dialects/abstract/query-generator.js:2306:21)
+    at MySQLQueryGenerator.whereItemQuery (/Users/teroron/Desktop/PBL/PBL2020/OreSupport/ore-SupportServer/oreServer/node_modules/sequelize/lib/dialects/abstract/query-generator.js:2242:19)
+    at /Users/teroron/Desktop/PBL/PBL2020/OreSupport/ore-SupportServer/oreServer/node_modules/sequelize/lib/dialects/abstract/query-generator.js:2173:25
+    at Array.forEach (<anonymous>)
+    at MySQLQueryGenerator.whereItemsQuery (/Users/teroron/Desktop/PBL/PBL2020/OreSupport/ore-SupportServer/oreServer/node_modules/sequelize/lib/dialects/abstract/query-generator.js:2171:35)
+    at MySQLQueryGenerator.getWhereConditions (/Users/teroron/Desktop/PBL/PBL2020/OreSupport/ore-SupportServer/oreServer/node_modules/sequelize/lib/dialects/abstract/query-generator.js:2583:19)
+    at MySQLQueryGenerator.selectQuery (/Users/teroron/Desktop/PBL/PBL2020/OreSupport/ore-SupportServer/oreServer/node_modules/sequelize/lib/dialects/abstract/query-generator.js:1315:28)
+    at QueryInterface.select (/Users/teroron/Desktop/PBL/PBL2020/OreSupport/ore-SupportServer/oreServer/node_modules/sequelize/lib/query-interface.js:1122:27)
+    at /Users/teroron/Desktop/PBL/PBL2020/OreSupport/ore-SupportServer/oreServer/node_modules/sequelize/lib/model.js:1759:34
+    at tryCatcher (/Users/teroron/Desktop/PBL/PBL2020/OreSupport/ore-SupportServer/oreServer/node_modules/bluebird/js/release/util.js:16:23)
+    at Promise._settlePromiseFromHandler (/Users/teroron/Desktop/PBL/PBL2020/OreSupport/ore-SupportServer/oreServer/node_modules/bluebird/js/release/promise.js:547:31)
+    at Promise._settlePromise (/Users/teroron/Desktop/PBL/PBL2020/OreSupport/ore-SupportServer/oreServer/node_modules/bluebird/js/release/promise.js:604:18)
+    at Promise._settlePromise0 (/Users/teroron/Desktop/PBL/PBL2020/OreSupport/ore-SupportServer/oreServer/node_modules/bluebird/js/release/promise.js:649:10)
+    at Promise._settlePromises (/Users/teroron/Desktop/PBL/PBL2020/OreSupport/ore-SupportServer/oreServer/node_modules/bluebird/js/release/promise.js:729:18)
+    at _drainQueueStep (/Users/teroron/Desktop/PBL/PBL2020/OreSupport/ore-SupportServer/oreServer/node_modules/bluebird/js/release/async.js:93:12)
+    at _drainQueue (/Users/teroron/Desktop/PBL/PBL2020/OreSupport/ore-SupportServer/oreServer/node_modules/bluebird/js/release/async.js:86:9)
+[2020-10-04T20:24:20.391] [ERROR] userDao - getUserProfileByUserID error:Error: WHERE parameter "undefined" has invalid "undefined" value
+    at MySQLQueryGenerator.whereItemQuery (/Users/teroron/Desktop/PBL/PBL2020/OreSupport/ore-SupportServer/oreServer/node_modules/sequelize/lib/dialects/abstract/query-generator.js:2184:13)
+    at /Users/teroron/Desktop/PBL/PBL2020/OreSupport/ore-SupportServer/oreServer/node_modules/sequelize/lib/dialects/abstract/query-generator.js:2173:25
+    at Array.forEach (<anonymous>)
+    at MySQLQueryGenerator.whereItemsQuery (/Users/teroron/Desktop/PBL/PBL2020/OreSupport/ore-SupportServer/oreServer/node_modules/sequelize/lib/dialects/abstract/query-generator.js:2171:35)
+    at /Users/teroron/Desktop/PBL/PBL2020/OreSupport/ore-SupportServer/oreServer/node_modules/sequelize/lib/dialects/abstract/query-generator.js:2307:30
+    at Array.map (<anonymous>)
+    at MySQLQueryGenerator._whereGroupBind (/Users/teroron/Desktop/PBL/PBL2020/OreSupport/ore-SupportServer/oreServer/node_modules/sequelize/lib/dialects/abstract/query-generator.js:2306:21)
+    at MySQLQueryGenerator.whereItemQuery (/Users/teroron/Desktop/PBL/PBL2020/OreSupport/ore-SupportServer/oreServer/node_modules/sequelize/lib/dialects/abstract/query-generator.js:2242:19)
+    at /Users/teroron/Desktop/PBL/PBL2020/OreSupport/ore-SupportServer/oreServer/node_modules/sequelize/lib/dialects/abstract/query-generator.js:2173:25
+    at Array.forEach (<anonymous>)
+    at MySQLQueryGenerator.whereItemsQuery (/Users/teroron/Desktop/PBL/PBL2020/OreSupport/ore-SupportServer/oreServer/node_modules/sequelize/lib/dialects/abstract/query-generator.js:2171:35)
+    at MySQLQueryGenerator.getWhereConditions (/Users/teroron/Desktop/PBL/PBL2020/OreSupport/ore-SupportServer/oreServer/node_modules/sequelize/lib/dialects/abstract/query-generator.js:2583:19)
+    at MySQLQueryGenerator.selectQuery (/Users/teroron/Desktop/PBL/PBL2020/OreSupport/ore-SupportServer/oreServer/node_modules/sequelize/lib/dialects/abstract/query-generator.js:1315:28)
+    at QueryInterface.select (/Users/teroron/Desktop/PBL/PBL2020/OreSupport/ore-SupportServer/oreServer/node_modules/sequelize/lib/query-interface.js:1122:27)
+    at /Users/teroron/Desktop/PBL/PBL2020/OreSupport/ore-SupportServer/oreServer/node_modules/sequelize/lib/model.js:1759:34
+    at tryCatcher (/Users/teroron/Desktop/PBL/PBL2020/OreSupport/ore-SupportServer/oreServer/node_modules/bluebird/js/release/util.js:16:23)
+    at Promise._settlePromiseFromHandler (/Users/teroron/Desktop/PBL/PBL2020/OreSupport/ore-SupportServer/oreServer/node_modules/bluebird/js/release/promise.js:547:31)
+    at Promise._settlePromise (/Users/teroron/Desktop/PBL/PBL2020/OreSupport/ore-SupportServer/oreServer/node_modules/bluebird/js/release/promise.js:604:18)
+    at Promise._settlePromise0 (/Users/teroron/Desktop/PBL/PBL2020/OreSupport/ore-SupportServer/oreServer/node_modules/bluebird/js/release/promise.js:649:10)
+    at Promise._settlePromises (/Users/teroron/Desktop/PBL/PBL2020/OreSupport/ore-SupportServer/oreServer/node_modules/bluebird/js/release/promise.js:729:18)
+    at _drainQueueStep (/Users/teroron/Desktop/PBL/PBL2020/OreSupport/ore-SupportServer/oreServer/node_modules/bluebird/js/release/async.js:93:12)
+    at _drainQueue (/Users/teroron/Desktop/PBL/PBL2020/OreSupport/ore-SupportServer/oreServer/node_modules/bluebird/js/release/async.js:86:9)

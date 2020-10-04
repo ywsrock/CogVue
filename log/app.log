@@ -57,3 +57,56 @@
 [2020-10-03T17:10:52.181] [INFO] users - profileInfo userID: 49
 [2020-10-03T17:14:13.129] [INFO] startup - Listening on port 3000
 [2020-10-03T17:14:20.655] [INFO] users - profileInfo userID: 49
+[2020-10-04T20:15:24.018] [INFO] startup - Listening on port 3000
+[2020-10-04T20:15:31.641] [INFO] users - profileInfo userID: 49 
+[2020-10-04T20:15:31.642] [INFO] userDao - START getUserProfileByUserID : {"key":"UserID","val":49}
+[2020-10-04T20:15:32.474] [INFO] userDao - END getUserProfileByUserID
+[2020-10-04T20:15:32.475] [INFO] users - profileInfo success
+[2020-10-04T20:15:43.265] [INFO] userDao - START getUserProfileByUserID : {}
+[2020-10-04T20:19:33.826] [INFO] startup - Listening on port 3000
+[2020-10-04T20:19:44.503] [INFO] users - profileInfo userID: 49 
+[2020-10-04T20:19:44.504] [INFO] userDao - START getUserProfileByUserID : {"key":"UserID","val":49}
+[2020-10-04T20:19:44.529] [INFO] userDao - END getUserProfileByUserID
+[2020-10-04T20:19:44.530] [INFO] users - profileInfo success
+[2020-10-04T20:24:05.924] [INFO] startup - Listening on port 3000
+[2020-10-04T20:24:09.054] [INFO] users - profileInfo userID: 49 
+[2020-10-04T20:24:09.055] [INFO] userDao - START getUserProfileByUserID : {"key":"UserID","val":49}
+[2020-10-04T20:24:09.076] [INFO] userDao - END getUserProfileByUserID
+[2020-10-04T20:24:09.076] [INFO] users - profileInfo success
+[2020-10-04T20:24:18.174] [INFO] userDao - START getUserProfileByUserID : {"userID":"49"}
+[2020-10-04T20:24:20.391] [ERROR] userDao - getUserProfileByUserID error:Error: WHERE parameter "undefined" has invalid "undefined" value
+    at MySQLQueryGenerator.whereItemQuery (/Users/teroron/Desktop/PBL/PBL2020/OreSupport/ore-SupportServer/oreServer/node_modules/sequelize/lib/dialects/abstract/query-generator.js:2184:13)
+    at /Users/teroron/Desktop/PBL/PBL2020/OreSupport/ore-SupportServer/oreServer/node_modules/sequelize/lib/dialects/abstract/query-generator.js:2173:25
+    at Array.forEach (<anonymous>)
+    at MySQLQueryGenerator.whereItemsQuery (/Users/teroron/Desktop/PBL/PBL2020/OreSupport/ore-SupportServer/oreServer/node_modules/sequelize/lib/dialects/abstract/query-generator.js:2171:35)
+    at /Users/teroron/Desktop/PBL/PBL2020/OreSupport/ore-SupportServer/oreServer/node_modules/sequelize/lib/dialects/abstract/query-generator.js:2307:30
+    at Array.map (<anonymous>)
+    at MySQLQueryGenerator._whereGroupBind (/Users/teroron/Desktop/PBL/PBL2020/OreSupport/ore-SupportServer/oreServer/node_modules/sequelize/lib/dialects/abstract/query-generator.js:2306:21)
+    at MySQLQueryGenerator.whereItemQuery (/Users/teroron/Desktop/PBL/PBL2020/OreSupport/ore-SupportServer/oreServer/node_modules/sequelize/lib/dialects/abstract/query-generator.js:2242:19)
+    at /Users/teroron/Desktop/PBL/PBL2020/OreSupport/ore-SupportServer/oreServer/node_modules/sequelize/lib/dialects/abstract/query-generator.js:2173:25
+    at Array.forEach (<anonymous>)
+    at MySQLQueryGenerator.whereItemsQuery (/Users/teroron/Desktop/PBL/PBL2020/OreSupport/ore-SupportServer/oreServer/node_modules/sequelize/lib/dialects/abstract/query-generator.js:2171:35)
+    at MySQLQueryGenerator.getWhereConditions (/Users/teroron/Desktop/PBL/PBL2020/OreSupport/ore-SupportServer/oreServer/node_modules/sequelize/lib/dialects/abstract/query-generator.js:2583:19)
+    at MySQLQueryGenerator.selectQuery (/Users/teroron/Desktop/PBL/PBL2020/OreSupport/ore-SupportServer/oreServer/node_modules/sequelize/lib/dialects/abstract/query-generator.js:1315:28)
+    at QueryInterface.select (/Users/teroron/Desktop/PBL/PBL2020/OreSupport/ore-SupportServer/oreServer/node_modules/sequelize/lib/query-interface.js:1122:27)
+    at /Users/teroron/Desktop/PBL/PBL2020/OreSupport/ore-SupportServer/oreServer/node_modules/sequelize/lib/model.js:1759:34
+    at tryCatcher (/Users/teroron/Desktop/PBL/PBL2020/OreSupport/ore-SupportServer/oreServer/node_modules/bluebird/js/release/util.js:16:23)
+    at Promise._settlePromiseFromHandler (/Users/teroron/Desktop/PBL/PBL2020/OreSupport/ore-SupportServer/oreServer/node_modules/bluebird/js/release/promise.js:547:31)
+    at Promise._settlePromise (/Users/teroron/Desktop/PBL/PBL2020/OreSupport/ore-SupportServer/oreServer/node_modules/bluebird/js/release/promise.js:604:18)
+    at Promise._settlePromise0 (/Users/teroron/Desktop/PBL/PBL2020/OreSupport/ore-SupportServer/oreServer/node_modules/bluebird/js/release/promise.js:649:10)
+    at Promise._settlePromises (/Users/teroron/Desktop/PBL/PBL2020/OreSupport/ore-SupportServer/oreServer/node_modules/bluebird/js/release/promise.js:729:18)
+    at _drainQueueStep (/Users/teroron/Desktop/PBL/PBL2020/OreSupport/ore-SupportServer/oreServer/node_modules/bluebird/js/release/async.js:93:12)
+    at _drainQueue (/Users/teroron/Desktop/PBL/PBL2020/OreSupport/ore-SupportServer/oreServer/node_modules/bluebird/js/release/async.js:86:9)
+[2020-10-04T20:28:47.860] [INFO] startup - Listening on port 3000
+[2020-10-04T20:28:50.748] [INFO] users - profileInfo userID: 49 
+[2020-10-04T20:28:50.749] [INFO] userDao - START getUserProfileByUserID : {"key":"UserID","val":49}
+[2020-10-04T20:28:50.770] [INFO] userDao - END getUserProfileByUserID
+[2020-10-04T20:28:50.771] [INFO] users - profileInfo success
+[2020-10-04T20:29:09.702] [INFO] userDao - START getUserProfileByUserID : {"key":"userId","val":"49"}
+[2020-10-04T20:29:09.715] [INFO] userDao - END getUserProfileByUserID
+[2020-10-04T20:31:41.088] [INFO] users - profileInfo userID: 49 
+[2020-10-04T20:31:41.088] [INFO] userDao - START getUserProfileByUserID : {"key":"UserID","val":49}
+[2020-10-04T20:31:41.129] [INFO] userDao - END getUserProfileByUserID
+[2020-10-04T20:31:41.129] [INFO] users - profileInfo success
+[2020-10-04T20:31:43.783] [INFO] userDao - START getUserProfileByUserID : {"key":"userId","val":"49"}
+[2020-10-04T20:31:43.792] [INFO] userDao - END getUserProfileByUserID
