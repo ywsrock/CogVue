@@ -286,7 +286,7 @@
               </div>
             </el-tooltip>
             <hr />
-            <div class="orig-row">
+            <div class="orig-row" v-loading="loading">
               <div class="col-md-7 text-center">
                 <img id="screen-shot" :src="cgevTaskImage" width="100%" />
               </div>
@@ -353,6 +353,13 @@ export default {
         return "";
       },
     },
+    loadFlg: {
+      type: Boolean,
+      require: true,
+      default: function() {
+        return true;
+      },
+    },
   },
   watch: {
     showDataObj: {
@@ -380,6 +387,8 @@ export default {
   data() {
     return {
       dataObj: {},
+      // ロード状態
+      loading: this.loadFlg,
       // 時系列データ
       lineChartData: {},
       // 履歴データ

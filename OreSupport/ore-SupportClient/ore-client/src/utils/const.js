@@ -46,8 +46,9 @@ export const CGEV_INFO = {
     ApiUserSecret: "1806b37031b647e953e1798b8966d61ef029568c",
 }
 export const CGEV_IMAGE_BASE = {
-    //イメージベースパス
-    cgev_image_base: "https://personal.tbcare.jp"
+    //イメージベースパス ( proxying 利用)
+    // cgev_image_base: "https://personal.tbcare.jp"
+    cgev_image_base: "/personalTbcare"
 }
 
 export const CGEV_SESSION_KEY = {
@@ -61,4 +62,8 @@ export const CGEV_SESSION_KEY = {
     TASK_ID_1112: 'TASK_ID_11_12',
     //見当識
     TASK_ID_1: 'TASK_ID_1',
+    //計画
+    TASK_ID_8910: 'TASK_ID_8_9_10',
+    //注意
+    TASK_ID_234: 'TASK_ID_2_3_4'
 }

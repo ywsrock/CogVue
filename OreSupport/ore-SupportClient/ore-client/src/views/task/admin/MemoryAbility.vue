@@ -3,7 +3,13 @@
     <div class="page-wrapper">
       <div class="main">
         <div class="main-inner">
-          <div class="content">
+          <div
+            class="content"
+            v-loading.fullscreen.lock="loadFlg"
+            element-loading-text="記録取得中......"
+            element-loading-spinner="el-icon-loading"
+            element-loading-background="rgba(0, 0, 0, 0.8)"
+          >
             <div class="mt-70 mb70">
               <div class="detail-banner">
                 <div class="container">
@@ -101,6 +107,7 @@
                 :showDataObj="showData"
                 :showAbilityName="abilityName"
                 :key="task_name"
+                :loadFlg="loadFlg"
                 v-cloak
               />
             </div>
@@ -205,6 +212,8 @@ export default {
       this.star_1 = this.dataObj.CardMemory.cardPazulData.star;
       this.star_2 = this.dataObj.Story.cardPazulData.star;
       this.showData = Object.assign({}, this.showData, this.dataObj.Flashlight);
+      //ロード完了
+      this.loadFlg = false;
     } else {
       this.$nextTick(async () => {
         await this.$store.dispatch("cgev/authenticate");
@@ -238,7 +247,6 @@ export default {
             );
             this.$session.set(CGEV_SESSION_KEY.TASK_ID_567, this.dataObj);
             // console.log(JSON.stringify(this.dataObj, null, "\t"));
-
             this.task_name = this.dataObj.Flashlight.cardPazulData.task_name;
             this.star_0 = this.dataObj.Flashlight.cardPazulData.star;
             this.star_1 = this.dataObj.CardMemory.cardPazulData.star;
@@ -248,6 +256,8 @@ export default {
               this.showData,
               this.dataObj.Flashlight
             );
+            //ロード完了
+            this.loadFlg = false;
           })
           .catch((error) => {
             if (this.$session.has(CGEV_SESSION_KEY.TASK_ID_567)) {
@@ -296,6 +306,8 @@ export default {
   data() {
     return {
       dataObj: {},
+      //ロード状態
+      loadFlg: true,
       //コンポーネント表示データ
       showData: TaskData.Flashlight,
       // // チャー.task_name

@@ -3,7 +3,13 @@
     <div class="page-wrapper">
       <div class="main">
         <div class="main-inner">
-          <div class="content">
+          <div
+            class="content"
+            v-loading.fullscreen.lock="loadFlg"
+            element-loading-text="記録取得中......"
+            element-loading-spinner="el-icon-loading"
+            element-loading-background="rgba(0, 0, 0, 0.8)"
+          >
             <div class="mt-70 mb70">
               <div class="detail-banner">
                 <div class="container">
@@ -481,6 +487,8 @@ export default {
           recordsSummary,
           recordsHistories
         );
+        //ロード完了
+        this.loadFlg = false;
       } else {
         Promise.all([
           await this.$store.dispatch("cgev/authenticate"),
@@ -518,6 +526,8 @@ export default {
                 CGEV_SESSION_KEY.RECORDSHISTORIES,
                 recordsHistories
               );
+              //ロード完了
+              this.loadFlg = false;
             }
           )
           /* eslint-disable */
@@ -544,6 +554,8 @@ export default {
   },
   data() {
     return {
+      //ロード状態
+      loadFlg: true,
       //rate
       cardPazulData: {
         //カレントrate

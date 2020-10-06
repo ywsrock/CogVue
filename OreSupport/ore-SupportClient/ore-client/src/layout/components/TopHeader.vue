@@ -117,7 +117,9 @@
                     <div class="special" style="width:90%;">
                       <a
                         style="font-size: 15px;"
-                        href="https://personal.tbcare.jp/login"
+                        href=""
+                        target="_blank"
+                        @click.prevent.stop="runTask"
                         >CogEvoで認知認知機能の測定をする</a
                       >
                     </div>
@@ -129,7 +131,7 @@
                       <li>
                         <a
                           style="font-size: 15px;"
-                          href
+                          href=""
                           @click.prevent.stop="taskClick(1)"
                           >これまでの認知機能の推移を確認する</a
                         >
@@ -256,6 +258,8 @@
 import store from "@/store";
 // import { USER_INFO_STATIC_JS } from "../../utils/const";
 import { Switch } from "element-ui";
+import { getToken } from "@/utils/auth";
+import { CGEV_SESSION_KEY } from "@/utils/const";
 
 export default {
   data() {
@@ -403,6 +407,44 @@ export default {
         default:
           this.$router.push("/blog/blogList");
       }
+    },
+    //タスク実行
+    runTask: function() {
+      const userToken = getToken();
+      if (!userToken) {
+        this.$router.push("/login");
+        return;
+      }
+      // top画面に移動
+      this.$router.push("/");
+      // 新しいタブを開き、ページを表示
+      this.$nextTick(async () => {
+        let access_token = await this.$store.dispatch("cgev/authenticate");
+        var url = location.href;
+        var winFeature =
+          "location=no,toolbar=no,menubar=no,scrollbars=yes,resizable=yes";
+
+        let subWin = await window.open(
+          `https://api.cgev-stg.com/v1/run/tasks?access_token=${access_token}&return_url=${url}`,
+          "_blank",
+          winFeature
+        );
+        // サブ画面閉じる時、指定画面遷移
+        if (subWin !== null && subWin != undefined) {
+          var that = this;
+          const timer = setInterval(() => {
+            if (!subWin.closed) return;
+            clearInterval(timer);
+            Object.keys(CGEV_SESSION_KEY).forEach(function(key) {
+              if (that.$session.has(key)) {
+                that.$session.remove(key);
+              }
+            });
+            that.$router.push("/task/userSummary");
+            subWin = null;
+          }, 100);
+        }
+      });
     },
   },
 };
