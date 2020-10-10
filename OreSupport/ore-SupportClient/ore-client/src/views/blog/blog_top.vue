@@ -131,7 +131,7 @@
                   <div class="orig-row">
                     <div
                       class="col-sm-6 col-md-4 col-lg-3"
-                      v-for="item in tableData"
+                      v-for="item in displayLists"
                       :key="item.id"
                     >
                       <div
@@ -182,15 +182,13 @@
                   <!-- /.row -->
                 </div>
                 <!-- /.cards-simple-wrapper -->
-
                 <div class="pager">
-                  <ul>
-                    <li><a href="#">Prev</a></li>
-                    <li><a href="#">5</a></li>
-                    <li class="active"><a>6</a></li>
-                    <li><a href="#">7</a></li>
-                    <li><a href="#">Next</a></li>
-                  </ul>
+                  <v-pagination
+                    v-model="page"
+                    :length="15"
+                    :total-visible="7"
+                    @input = "pageChange"
+                  ></v-pagination>
                 </div>
                 <!-- /.pagination -->
               </div>
@@ -204,6 +202,7 @@
 
         <div id="footer" class="footer"></div>
       </div>
+
       <!-- /.page-wrapper -->
     </body>
   </div>
@@ -213,8 +212,11 @@
 export default {
   data() {
     return {
+      page: 1,
       tableData: [],
       search: "",
+      displayLists: [],
+      pageSize: 12,
     };
   },
 
@@ -228,6 +230,7 @@ export default {
         this.$nextTick().then(function() {
           const blogInfo = that.$store.getters.get_content;
           that.tableData = blogInfo;
+          that.displayLists = that.tableData.slice(0,that.pageSize);
         });
       })
       /* eslint-disable */
@@ -237,6 +240,10 @@ export default {
   },
 
   methods: {
+  pageChange: function(pageNumber){
+    this.displayLists = this.tableData.slice(this.pageSize*(pageNumber -1), this.pageSize*(pageNumber));
+  },
+
     getBlogList() {
       //apiからサーバーに命令をだす。(store action)
       this.$store
