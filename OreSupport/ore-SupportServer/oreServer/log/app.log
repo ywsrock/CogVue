@@ -1,9 +1,0 @@
-[2020-10-03T18:07:57.872] [INFO] startup - Listening on port 3000
-[2020-10-03T18:08:13.832] [INFO] users - profileInfo userID: 49 
-[2020-10-03T18:08:13.833] [INFO] userDao - START getUserProfileByUserID : {"key":"UserID","val":49}
-[2020-10-03T18:08:13.858] [INFO] userDao - END getUserProfileByUserID
-[2020-10-03T18:08:13.858] [INFO] users - profileInfo success
-[2020-10-03T18:08:17.380] [INFO] users - profileInfo userID: 49 
-[2020-10-03T18:08:17.380] [INFO] userDao - START getUserProfileByUserID : {"key":"UserID","val":49}
-[2020-10-03T18:08:17.389] [INFO] userDao - END getUserProfileByUserID
-[2020-10-03T18:08:17.389] [INFO] users - profileInfo success
