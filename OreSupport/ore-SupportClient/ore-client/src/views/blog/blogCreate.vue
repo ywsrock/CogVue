@@ -270,7 +270,7 @@
 
                     <div class="background-white p20 mb30">
                       <div class="col-sm-4">
-                        <button href="#" class="btn btn-primary col-sm-5">
+                        <button type="submit" href="#" class="btn btn-primary col-sm-5">
                           登録
                         </button>
                         <button
@@ -282,12 +282,14 @@
                         <br /><br />
                       </div>
                       <div class="col-sm-4 pull-right">
-                        <button
+                        <a href @click.prevent="blogClick" class="btn btn-primary col-sm-5 pull-right">キャンセル</a>
+
+                        <!-- <button type="reset"
                           href="#"
                           class="btn btn-primary col-sm-5 pull-right"
                         >
                           キャンセル
-                        </button>
+                        </button> -->
                       </div>
                     </div>
                   </div>
@@ -344,6 +346,10 @@ export default {
           console.log(error.data);
           console.log("作成失敗");
         });
+    },
+
+    blogClick: function() {
+      this.$router.push("/blog/blogList");
     },
   },
 };
