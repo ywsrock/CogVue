@@ -185,7 +185,7 @@
                 <div class="pager">
                   <v-pagination
                     v-model="page"
-                    :length="15"
+                    :length="length"
                     :total-visible="7"
                     @input = "pageChange"
                   ></v-pagination>
@@ -213,6 +213,7 @@ export default {
   data() {
     return {
       page: 1,
+      length:0,
       tableData: [],
       search: "",
       displayLists: [],
@@ -230,6 +231,8 @@ export default {
         this.$nextTick().then(function() {
           const blogInfo = that.$store.getters.get_content;
           that.tableData = blogInfo;
+
+          that.length = Math.ceil(that.tableData.length/that.pageSize);
           that.displayLists = that.tableData.slice(0,that.pageSize);
         });
       })

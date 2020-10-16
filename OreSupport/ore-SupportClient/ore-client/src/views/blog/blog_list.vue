@@ -18,7 +18,7 @@
                     <div class="posts">
                       <div
                         class="post"
-                        v-for="item in tableData"
+                        v-for="item in displayLists"
                         :key="item.id"
                       >
                         <div class="post-image">
@@ -83,23 +83,12 @@
                     <!-- /.posts -->
 
                     <div class="pager">
-                      <ul>
-                        <li>
-                          <a href="#">Prev</a>
-                        </li>
-                        <li>
-                          <a href="#">5</a>
-                        </li>
-                        <li class="active">
-                          <a>6</a>
-                        </li>
-                        <li>
-                          <a href="#">7</a>
-                        </li>
-                        <li>
-                          <a href="#">Next</a>
-                        </li>
-                      </ul>
+                        <v-pagination
+                          v-model="page"
+                          :length="length"
+                          :total-visible="7"
+                          @input = "pageChange"
+                        ></v-pagination>
                     </div>
                     <!-- /.pagination -->
                   </div>
@@ -412,14 +401,12 @@ import { Message } from "element-ui";
 export default {
   data() {
     return {
-      // tableData: [
-      //   {
-      //     title:"test",
-      //     content: "2016-05-03",
-      //   },
-      // ],
+      page: 1,
+      length:0,
       tableData: [],
       search: "",
+      displayLists: [],
+      pageSize: 6,
     };
   },
   mounted() {
@@ -431,6 +418,9 @@ export default {
         this.$nextTick().then(function() {
           const blogInfo = that.$store.getters.get_content;
           that.tableData = blogInfo;
+
+          that.length = Math.ceil(that.tableData.length/that.pageSize);
+          that.displayLists = that.tableData.slice(0,that.pageSize);
         });
       })
       .catch((err) => {
@@ -438,6 +428,10 @@ export default {
       });
   },
   methods: {
+    pageChange: function(pageNumber){
+    this.displayLists = this.tableData.slice(this.pageSize*(pageNumber -1), this.pageSize*(pageNumber));
+  },
+
     getBlogDetail(id) {
       //apiからサーバーに命令をだす。(store action)
       // console.log(`val = ${JSON.stringify(row)}`)
