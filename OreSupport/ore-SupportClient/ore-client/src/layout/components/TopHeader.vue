@@ -169,7 +169,7 @@
                   </li>
                 </ul>
               </li>
-              <li>
+              <li v-show="false">
                 <a href="#">
                   商品を購入する
                   <i class="fa fa-chevron-down"></i>
