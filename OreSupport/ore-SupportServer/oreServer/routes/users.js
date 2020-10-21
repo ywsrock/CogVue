@@ -12,12 +12,12 @@ const Image_storage = require("../common/fileup");
 const multer = require("multer");
 const fs = require("fs");
 const appRoot = require("app-root-path");
-
 var log = require("log4js").getLogger("users");
 
+
+//thirdParytyログインの場合
 async function thirdParyty(req, res, next) {
   log.info(`Third Party by ${req.body.type}`);
-
   // パスワードハッシュ処理 ランダムパスワード
   let rndPwd = `${Math.random().toString(36).slice(-8)}${req.body.userId} `;
   const password_hash = await bcryptTools.hash(rndPwd);
@@ -236,7 +236,6 @@ router.get("/profileInfo", [checkuser.verifyUser], async function (
     (port == 80 || port == 443 ? "" : ":" + port);
   // ファイル存在チェック
   var imgpath = "00_00.jpg";
-
   if (req.query.loginType != "normal") {
     var resobj = {
       code: STATUS_MESSAGE.CODE_SUCCESS,
@@ -305,7 +304,9 @@ router.get("/profileInfo", [checkuser.verifyUser], async function (
       req.host +
       (port == 80 || port == 443 ? "" : ":" + port);
     // ファイル存在チェック
-    var isExists = fs.existsSync(`${appRoot}/public/avatar/${user.UserProfile.Avatar}`);
+    var isExists = fs.existsSync(
+      `${appRoot}/public/avatar/${user.UserProfile.Avatar}`
+    );
     // ファイル存在チェック
     var imgpath = isExists ? user.UserProfile.Avatar : "00_00.jpg";
 
@@ -365,104 +366,7 @@ router.get("/profileInfo", [checkuser.verifyUser], async function (
     res.status(200).send(resobj);
   }
 });
-/*
-// ユーザ情報取得処(プロフィールページ用)
-router.get("/profile", [checkuser.verifyUser], async function (req, res, next) {
-  // トークイン解析したユーザIDを取得
-  var token_userID = req.userID;
-  if (!token_userID) {
-    log.error(`profileInfo token error UserID: ${token_userID}`);
-    res.status(200).send({
-      token: null,
-      message: STATUS_MESSAGE.LOGIN_ERROR_401,
-    });
-    return;
-  }
 
-  // DBユーザ情報取得(ユーザ登録ずみなので、存在チェックしなくてもよい)
-  var user = await usermodel.getUserProfileByUserID({
-    key: "UserID",
-    val: req.userID,
-  });
-  if (typeof user.errors != "undefined") {
-    log.error(`profileInfo data query error key: UserID val: ${req.userID}`);
-    // エラー結果
-    resObj = {
-      code: STATUS_MESSAGE.CODE_402,
-      message: user.message,
-    };
-    return res.status(200).send(resObj);
-  } else {
-    // ポートの番号取得
-    var port = req.app.settings.port;
-    // ホスト取得
-    var respath =
-      req.protocol +
-      "://" +
-      req.host +
-      (port == 80 || port == 443 ? "" : ":" + port);
-    // ファイル存在チェック
-    var isExists = fs.existsSync(`${appRoot}/public/avatar/${user.UserProfile.Avatar}`);
-    // ファイル存在チェック
-    var imgpath = isExists ? user.UserProfile.Avatar : "00_00.jpg";
-
-    // トークンをキーとして、データを検索
-    var resobj = {
-      code: STATUS_MESSAGE.CODE_SUCCESS,
-      data: {
-        // ログインType
-        type: req.session.loginType,
-        // ユーザ名
-        name: user.UserName,
-        // 権限
-        roles: ["admin", "superUser"],
-        // ユーザ情報
-        dataInfo: {
-          UserID: user.UserID,
-          //  基本情報
-          basicInfo: {
-            Update_type: PROFILE_INFO.BASIC_INFO,
-            lastName: user.UserProfile.LastName,
-            firstName: user.UserProfile.FirstName,
-            sex: user.UserProfile.Sex,
-            birthday: user.UserProfile.Birthday,
-            email: user.Email,
-            phone: user.UserProfile.Phone1,
-            avatar: `${respath}/avatar/${imgpath}`,
-            aboutMe: user.UserProfile.Aboutme,
-          },
-          // アドレス情報
-          addressInfo: {
-            Update_type: PROFILE_INFO.ADRESS_INFO,
-            state: user.UserProfile.State,
-            city: user.UserProfile.City,
-            streat: user.UserProfile.streat,
-            houseNumber: user.UserProfile.houseNumber,
-            postalcode: user.UserProfile.postNumber,
-          },
-          // パスワード情報
-          passwordInfo: {
-            Update_type: PROFILE_INFO.PASSORD_INFO,
-            oldPassword: "",
-            newPassword: "",
-          },
-          //　sns情報
-          snsInfo: {
-            Update_type: PROFILE_INFO.SNS_INFO,
-            sns_facebook: user.UserProfile.sns_facebook,
-            sns_twtitter: user.UserProfile.sns_twitter,
-            sns_instagram: user.UserProfile.sns_instagram,
-            sns_other: user.UserProfile.sns_other,
-          },
-        },
-      },
-    };
-    log.info(`profileInfo success`);
-    //　結果を返す
-    res.status(200).send(resobj);
-  }
-});
-*/
 //　ファイルアップ upload.single('imgAvatar')画像格納エンジ
 var upload1 = multer({ storage: Image_storage.Image_storage }).single(
   "imgAvatar"
@@ -510,7 +414,9 @@ router.post("/imageUp", [checkuser.verifyUser], async function (
       } else {
         //更新成功の場合
         // ファイル存在チェック
-        var isExists = fs.existsSync(`${appRoot}/public/avatar/${res.req.file.filename}`);
+        var isExists = fs.existsSync(
+          `${appRoot}/public/avatar/${res.req.file.filename}`
+        );
         var imgpath = isExists ? res.req.file.filename : "00_00.jpg";
         resObj.code = STATUS_MESSAGE.CODE_SUCCESS;
         resObj.data = {

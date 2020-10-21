@@ -6,11 +6,11 @@
     "start": "node ./bin/www"
   },
   "dependencies": {
-    "request": "^2.88.2",
     "app-root-path": "^3.0.0",
     "bcryptjs": "^2.4.3",
     "cookie-parser": "~1.4.4",
     "date-utils": "^1.2.21",
+    "dateformat": "^3.0.3",
     "debug": "~2.6.9",
     "ejs": "~2.6.1",
     "express": "~4.16.1",
@@ -23,6 +23,7 @@
     "mysql": "^2.18.1",
     "mysql2": "^2.1.0",
     "nodemon": "^2.0.4",
+    "request": "^2.88.2",
     "sequelize": "^5.21.12"
   }
 }

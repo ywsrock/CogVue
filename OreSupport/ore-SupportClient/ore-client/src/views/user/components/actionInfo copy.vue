@@ -9,50 +9,18 @@
       <div class="background-white p20 mb30">
         <div class="container">
           <div>
-            <el-dialog :visible.sync="isModalShow">
+            <el-dialog title="行動作成" :visible.sync="isModalShow">
               <div>
-                <h3 class="page-title">
-                  行動作成
-                </h3>
                 <div class="orig-row">
-                  <div class="form-group col-12">
+                  <div class="form-group col-sm-6">
                     <label>アクション名</label>
                     <input
                       type="text"
                       class="form-control"
                       v-model="newAction.newName"
                     />
-                    <!--<v-container fluid>
-                      <v-combobox
-                        v-model="newAction.newName"
-                        :items="actionOptions"
-                        item-text="name"
-                        item-value="id"
-                        return-object
-                        multiple
-                        outlined
-                        dense
-                      ></v-combobox>
-                    </v-container>-->
-
-                    <!--<el-select
-                      v-model="newAction.newName"
-                      filterable
-                      allow-create
-                      default-first-option
-                      placeholder="アクション名"
-                      style="width:100%"
-                    >
-                      <el-option
-                        v-for="item in actionOptions"
-                        :key="item.id"
-                        :label="item.name"
-                        :value="item.name"
-                      >
-                      </el-option>
-                    </el-select>-->
                   </div>
-                  <div class="form-group col-sm-12">
+                  <div class="form-group col-sm-6">
                     <label>行動期間</label>
                     <el-date-picker
                       class="form-control"
@@ -208,7 +176,6 @@
 import schema from "async-validator";
 import { Message } from "element-ui";
 import ActionList from "./actionList";
-import dateFormat from "dateformat";
 import {
   validEmail,
   validPhone,
@@ -304,18 +271,18 @@ export default {
       currentActionDate: [],
       actionOptions: [
         {
-          name: "味噌汁",
-          id: "2",
+          value: "味噌汁",
+          label: "味噌汁",
         },
         {
-          name: "焼き魚",
-          id: "1",
+          value: "焼き魚",
+          label: "焼き魚",
         },
       ],
       newAction: {
         newDate: [
-          dateFormat(new Date(), "yyyy-mm-dd HH:MM:ss"),
-          dateFormat(new Date(), "yyyy-mm-dd HH:MM:ss"),
+          new Date("2020-01-01 01:10:11"),
+          new Date("2022-01-01 10:11:12"),
         ],
         newName: "",
         newMemo: "",
@@ -375,25 +342,20 @@ export default {
     },
 
     //アクション情報変更
-    async handlerSave() {
+    handlerSave() {
       let saveObj = {
         name: this.$refs.actionName.value,
         date: this.$refs.actionDate.value,
         memo: this.$refs.actionMemo.value,
       };
-      let res = await this.$store.dispatch("action/saveAction", this.saveObj);
       console.log(saveObj);
       this.is_readonly = true;
     },
     //新規作成
-    async handlerNewAction(index) {
+    handlerNewAction(index) {
       switch (index) {
         case 1: //保存の場合
-          let res = await this.$store.dispatch(
-            "action/saveAction",
-            this.newAction
-          );
-
+          console.log(this.newAction);
           break;
         default:
         //キャンセルの場合

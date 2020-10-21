@@ -5,6 +5,7 @@ import blogStore from "./modules/blog";
 import informationStore from "./modules/information";
 import addressStore from "./modules/address";
 import cgevStore from "./modules/cgevstore"
+import actionStore from "./modules/actionstore"
 import getters from "./getters";
 
 Vue.use(Vuex);
@@ -15,7 +16,8 @@ export default new Vuex.Store({
     blog: blogStore,
     information: informationStore,
     address: addressStore,
-    cgev: cgevStore
+    cgev: cgevStore,
+    action: actionStore
   },
   getters,
 });

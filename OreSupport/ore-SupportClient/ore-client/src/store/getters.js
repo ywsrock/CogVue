@@ -13,7 +13,8 @@ const getters = {
     apiUserSecret: (state) => state.cgev.api_user_secret,
     status: (state) => state.cgev.status,
     error: (state) => state.cgev.error,
-    data: (state) => state.cgev.data
+    data: (state) => state.cgev.data,
+    action: (state) => state.action.actionData
 }
 
 
