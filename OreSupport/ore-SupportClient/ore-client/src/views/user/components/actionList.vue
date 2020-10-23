@@ -47,54 +47,79 @@
 <script>
 import { MessageBox } from "element-ui";
 export default {
-  data() {
-    return {
-      showTooltip: true,
-      tableData: [
-        {
+  watch:{
+    actionData:{
+      handler:function(newV,oldV){
+        this.tableData = newV
+      }
+    },
+    deep:true
+  },
+   props:{
+    actionData:{
+      type:Array,
+      default:function(){
+        return [
+          {
           id: "1",
           startDate: "2016-05-04 11:00:01",
           endDate: "2019-05-04 11:00:01",
           name: "Tom",
           memo: "No. 189, Grove St, Los Angeles",
-        },
-        {
-          id: "2",
-          startDate: "2016-05-04 11:00:01",
-          endDate: "2019-05-04 11:00:01",
-          name: "John",
-          memo: "No. 189, Grove St, Los Angeles",
-        },
-        {
-          id: "3",
-          startDate: "2016-05-04 11:00:01",
-          endDate: "2019-05-04 11:00:01",
-          name: "Morgan",
-          memo: "No. 189, Grove St, Los Angeles",
-        },
-        {
-          id: "4",
-          startDate: "2016-05-04 11:00:01",
-          endDate: "2019-05-04 11:00:01",
-          name: "Jessy",
-          memo: "No. 189, Grove St, Los Angeles",
-        },
-        {
-          id: "5",
-          startDate: "2016-05-04 11:00:01",
-          endDate: "2019-05-04 11:00:01",
-          name: "Jessy",
-          memo: "No. 189, Grove St, Los Angeles",
-        },
-        {
-          id: "6",
-          startDate: "2016-05-04 11:00:01",
-          endDate: "2019-05-04 11:00:01",
-          name: "Jessy",
-          memo:
-            "No. 189, Grove St, Los AngelesasdfNo. 189, Grove St, Los AngelesNo. 189, Grove St, Los AngelesNo. 189, Grove St, Los AngelesNo. 189, Grove St, Los AngelesNo. 189, Grove St, Los AngelesNo. 189, Grove St, Los AngelesNo. 189, Grove St, Los AngelesNo. 189, Grove St, Los AngelesNo. 189, Grove St, Los AngelesNo. 189, Grove St, Los AngelesNo. 189, Grove St, Los AngelesNo. 189, Grove St, Los Angeles",
-        },
-      ],
+        }
+        ]
+      }
+    }
+    },
+  data() {
+    return {
+      showTooltip: true,
+      tableData:this.actionData,
+      // tableData: [
+      //   {
+      //     id: "1",
+      //     startDate: "2016-05-04 11:00:01",
+      //     endDate: "2019-05-04 11:00:01",
+      //     name: "Tom",
+      //     memo: "No. 189, Grove St, Los Angeles",
+      //   },
+      //   {
+      //     id: "2",
+      //     startDate: "2016-05-04 11:00:01",
+      //     endDate: "2019-05-04 11:00:01",
+      //     name: "John",
+      //     memo: "No. 189, Grove St, Los Angeles",
+      //   },
+      //   {
+      //     id: "3",
+      //     startDate: "2016-05-04 11:00:01",
+      //     endDate: "2019-05-04 11:00:01",
+      //     name: "Morgan",
+      //     memo: "No. 189, Grove St, Los Angeles",
+      //   },
+      //   {
+      //     id: "4",
+      //     startDate: "2016-05-04 11:00:01",
+      //     endDate: "2019-05-04 11:00:01",
+      //     name: "Jessy",
+      //     memo: "No. 189, Grove St, Los Angeles",
+      //   },
+      //   {
+      //     id: "5",
+      //     startDate: "2016-05-04 11:00:01",
+      //     endDate: "2019-05-04 11:00:01",
+      //     name: "Jessy",
+      //     memo: "No. 189, Grove St, Los Angeles",
+      //   },
+      //   {
+      //     id: "6",
+      //     startDate: "2016-05-04 11:00:01",
+      //     endDate: "2019-05-04 11:00:01",
+      //     name: "Jessy",
+      //     memo:
+      //       "No. 189, Grove St, Los AngelesasdfNo. 189, Grove St, Los AngelesNo. 189, Grove St, Los AngelesNo. 189, Grove St, Los AngelesNo. 189, Grove St, Los AngelesNo. 189, Grove St, Los AngelesNo. 189, Grove St, Los AngelesNo. 189, Grove St, Los AngelesNo. 189, Grove St, Los AngelesNo. 189, Grove St, Los AngelesNo. 189, Grove St, Los AngelesNo. 189, Grove St, Los AngelesNo. 189, Grove St, Los Angeles",
+      //   },
+      // ],
       search: "",
     };
   },

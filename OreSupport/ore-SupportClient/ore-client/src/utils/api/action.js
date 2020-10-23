@@ -14,12 +14,11 @@ export function saveAction(data) {
 
 /**
  *
- *行動管理　新規検索
+ *行動管理　アクション検索
  */
-export function queryAction(data) {
+export function queryAction() {
     return request({
         url: "/action/queryAction",
         method: "get",
-        params: { data },
     });
 }

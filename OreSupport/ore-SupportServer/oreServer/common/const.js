@@ -7,7 +7,11 @@ const STATUS_MESSAGE = {
     CODE_402: 402,
     REG_ERROR_402: "ユーザ登録失敗。",
     CODE_403: 403,
-    FILEUP_ERROR_403: "ファイルアップロード失敗"
+    FILEUP_ERROR_403: "ファイルアップロード失敗",
+    CODE_405:405,
+    ACTION_CREATE_ERROR:"アクション登録失敗",
+    CODE_406:406,
+    ACTION_QUERY_ERROR:"アクション取得失敗"
 }
 
 

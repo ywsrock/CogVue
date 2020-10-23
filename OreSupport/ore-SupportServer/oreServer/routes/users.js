@@ -303,7 +303,7 @@ router.get("/profileInfo", [checkuser.verifyUser], async function (
       "://" +
       req.host +
       (port == 80 || port == 443 ? "" : ":" + port);
-    // ファイル存在チェック
+
     var isExists = fs.existsSync(
       `${appRoot}/public/avatar/${user.UserProfile.Avatar}`
     );

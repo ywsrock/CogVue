@@ -25,7 +25,9 @@ const UserAction = sequelize.define("UserAction", {
         set(value) {
             if (!value) {
                 let now = dateFormat(new Date(), "yyyy-mm-dd HH:MM:ss")
-                this.setDataValue(now)
+                this.setDataValue('startDate',now)
+            }else{
+                this.setDataValue('startDate',value)
             }
         }
     },
@@ -36,9 +38,16 @@ const UserAction = sequelize.define("UserAction", {
         set(value) {
             if (!value) {
                 let now = dateFormat(new Date(), "yyyy-mm-dd HH:MM:ss")
-                this.setDataValue(now)
+                this.setDataValue('endDate',now)
+            }else{
+                this.setDataValue('endDate',value)
             }
         }
+    },
+    memo:{
+        type:DataTypes.STRING,
+        allowNull:true,
+        defaultValue:""
     },
     deleteFlg: {
         type: DataTypes.INTEGER,
@@ -55,8 +64,12 @@ const UserAction = sequelize.define("UserAction", {
 }, {
     timestamps: false,
     createdAt: false,
-    tableName: 'UserAction',
+    tableName: 'tb_useraction',
     modelName: 'UserAction'
 })
 
-UserAction.sync() //テーブル存在しない場合、自動作成
+UserAction.sync({ force: false });
+
+module.exports = {
+    UserAction:UserAction
+}

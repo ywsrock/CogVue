@@ -4,13 +4,16 @@ var path = require("path");
 var cookieParser = require("cookie-parser");
 // var logger = require('morgan');
 var session = require("express-session");
+const log4js = require("log4js");
+const logConfig = require("./config/log4js");
+
 var indexRouter = require("./routes/index");
 var informationRouter = require("./routes/information");
 var usersRouter = require("./routes/users");
 var blogRouter = require("./routes/blog");
 var addressRouter = require("./routes/address");
-const log4js = require("log4js");
-const logConfig = require("./config/log4js");
+var actionRouter = require("./routes/action");
+
 //log4Js設定
 log4js.configure(logConfig);
 
@@ -64,6 +67,7 @@ app.use("/user", usersRouter);
 app.use("/blog", blogRouter);
 app.use("/information", informationRouter);
 app.use("/address", addressRouter);
+app.use("/action",actionRouter)
 
 // catch 404 and forward to error handler
 app.use(function (req, res, next) {
