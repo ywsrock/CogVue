@@ -25,7 +25,7 @@ verifyUser = (req, res, next) => {
         message: ERROR_MESSAGE.RES_STATUS_TOKEN_ERROR_50008
       });
     }
-    //　解析結果を
+    //　解析結果
     req.userID = decoded.id;
     req.userName = decoded.userName;
     next();

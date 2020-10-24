@@ -14,7 +14,6 @@ const fs = require("fs");
 const appRoot = require("app-root-path");
 var log = require("log4js").getLogger("users");
 
-
 //thirdParytyログインの場合
 async function thirdParyty(req, res, next) {
   log.info(`Third Party by ${req.body.type}`);

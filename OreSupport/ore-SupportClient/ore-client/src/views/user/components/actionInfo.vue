@@ -22,35 +22,6 @@
                       class="form-control"
                       v-model="newAction.newName"
                     />
-                    <!--<v-container fluid>
-                      <v-combobox
-                        v-model="newAction.newName"
-                        :items="actionOptions"
-                        item-text="name"
-                        item-value="id"
-                        return-object
-                        multiple
-                        outlined
-                        dense
-                      ></v-combobox>
-                    </v-container>-->
-
-                    <!--<el-select
-                      v-model="newAction.newName"
-                      filterable
-                      allow-create
-                      default-first-option
-                      placeholder="アクション名"
-                      style="width:100%"
-                    >
-                      <el-option
-                        v-for="item in actionOptions"
-                        :key="item.id"
-                        :label="item.name"
-                        :value="item.name"
-                      >
-                      </el-option>
-                    </el-select>-->
                   </div>
                   <div class="form-group col-sm-12">
                     <label>行動期間</label>
@@ -137,13 +108,19 @@
               style="width:100%"
               v-if="!is_readonly"
             >
-              <el-option
-                v-for="item in actionOptions"
-                :key="item.value"
-                :label="item.label"
-                :value="item.value"
+              <el-option-group
+                v-for="group in actionOptions"
+                :key="group.label"
+                :label="group.label"
               >
-              </el-option>
+                <el-option
+                  v-for="item in group.options"
+                  :key="item.id"
+                  :label="item.name"
+                  :value="item.name + ':' + item.id"
+                >
+                </el-option>
+              </el-option-group>
             </el-select>
           </div>
           <div class="form-group col-sm-6">
@@ -198,24 +175,24 @@
         <h3 class="page-title">
           行動リスト
         </h3>
-        <ActionList />
+        <ActionList :actionData="actionHistoryData" />
       </div>
     </div>
   </div>
 </template>
 
 <script>
-import schema from "async-validator";
+// import schema from "async-validator";
 import { Message } from "element-ui";
 import ActionList from "./actionList";
 import dateFormat from "dateformat";
-import {
-  validEmail,
-  validPhone,
-  validURL,
-  validPostalcode,
-  isNumber,
-} from "@/utils/validate";
+// import {
+//   validEmail,
+//   validPhone,
+//   validURL,
+//   validPostalcode,
+//   isNumber,
+// } from "@/utils/validate";
 
 export default {
   components: {
@@ -252,47 +229,10 @@ export default {
     immediate: true,
   },
   data() {
-    // メールアドレスチェック
-    const validateEmail = (rule, value, callback) => {
-      if (!validEmail(value)) {
-        callback(new Error("正ししくメールアドレスを入力してください。"));
-      } else {
-        callback();
-      }
-    };
-    // 電話番号チェック
-    const validatePhone = (rule, value, callback) => {
-      if (!validPhone(value)) {
-        callback(new Error("半角数字・ハイフン無しで入力してください。"));
-      } else {
-        callback();
-      }
-    };
-    // URLチェック
-    const validateURL = (rule, value, callback) => {
-      if (!validURL(value)) {
-        callback(new Error("正しくURLを入力してください。"));
-      } else {
-        callback();
-      }
-    };
-    // 郵便番号チェック
-    const validatePostalcode = (rule, value, callback) => {
-      if (!validPostalcode(value)) {
-        callback(new Error("半角数字・ハイフン無しで入力してください。"));
-      } else {
-        callback();
-      }
-    };
-    // 部屋数字チェック
-    const validateHouseNumber = (rule, value, callback) => {
-      if (!isNumber(value)) {
-        callback(new Error("半角数字で入力してください。"));
-      } else {
-        callback();
-      }
-    };
     return {
+      // アクションの履歴情報
+      actionHistoryData: [],
+      // カレントアクション情報
       actionInfo: {
         id: "",
         startDate: "",
@@ -302,16 +242,8 @@ export default {
       },
       currentActionName: "",
       currentActionDate: [],
-      actionOptions: [
-        {
-          name: "味噌汁",
-          id: "2",
-        },
-        {
-          name: "焼き魚",
-          id: "1",
-        },
-      ],
+      actionOptions: [],
+
       newAction: {
         newDate: [
           dateFormat(new Date(), "yyyy-mm-dd HH:MM:ss"),
@@ -319,10 +251,7 @@ export default {
         ],
         newName: "",
         newMemo: "",
-      },
-      rules: {
-        date: [{ required: true }],
-        name: [{ required: true }],
+        id: "",
       },
       is_readonly: true,
       isModalShow: false,
@@ -338,97 +267,75 @@ export default {
   },
   created() {},
   mounted() {
-    this.fetchUserProfile();
+    this.fetchUserAction();
   },
   methods: {
     // ユーザーのプロフィールを取得
-    async fetchUserProfile() {
-      try {
-        const res = await this.$store.dispatch("user/getProfileInfo");
-        this.basicInfo = res.dataInfo.basicInfo;
-        this.addressInfo = res.dataInfo.addressInfo;
-        this.passwordInfo = res.dataInfo.passwordInfo;
-        this.snsInfo = res.dataInfo.snsInfo;
-        //画像パス親に設定
-        this.$parent.avatarSrc = this.basicInfo.avatar;
-      } catch (err) {
-        Message({
-          message: "ユーザ情報取得失敗、サイト管理者に連絡ください。",
-          type: "error",
-          duration: 5 * 1000,
+    fetchUserAction() {
+      // var that = this;
+      this.$store
+        .dispatch("action/queryAction")
+        .then((actionData) => {
+          //アクション履歴情報
+          this.actionHistoryData = actionData.userAction;
+          this.actionOptions = JSON.parse(actionData.actionOptions);
+        })
+        .catch((error) => {
+          console.log(error);
         });
-      }
     },
 
-    //全項目チェックして、情報保存
-    basicInfo_Save: function() {
-      this.checkEmail();
-      if (
-        this.$refs["e-email"].textContent === "" &&
-        this.$refs["e-phone"].textContent === ""
-      ) {
-        //基本情報更新
-        this.proUpdate(this.basicInfo);
-      }
-      //編集不可
-      this.is_readonly = true;
-    },
-
-    //アクション情報変更
-    async handlerSave() {
-      let saveObj = {
-        name: this.$refs.actionName.value,
-        date: this.$refs.actionDate.value,
-        memo: this.$refs.actionMemo.value,
-      };
-      let res = await this.$store.dispatch("action/saveAction", this.saveObj);
-      console.log(saveObj);
-      this.is_readonly = true;
-    },
     //新規作成
     async handlerNewAction(index) {
       switch (index) {
         case 1: //保存の場合
-          let res = await this.$store.dispatch(
-            "action/saveAction",
-            this.newAction
-          );
+          await this.$store
+            .dispatch("action/saveAction", this.newAction)
+            .then((res) => {
+              Object.assign(this.actionInfo, res.userAction);
+              //アクション情報再検索
+              this.fetchUserAction();
+              Message({
+                message: "アクション作成成功",
+                type: "success",
+                duration: 5 * 1000,
+              });
+            });
 
           break;
         default:
         //キャンセルの場合
       }
+
       this.isModalShow = false;
       // 値のクリア
       Object.assign(this.newAction, {
-        newDate: "",
+        newDate: [
+          dateFormat(new Date(), "yyyy-mm-dd HH:MM:ss"),
+          dateFormat(new Date(), "yyyy-mm-dd HH:MM:ss"),
+        ],
         newName: "",
         newMemo: "",
       });
     },
-
-    // メールのチェック処理
-    checkEmail: function() {
-      var fields = { email: this.$refs.email.value };
-      var ret = this.validate(fields, { email: this.rules.email });
-      if (ret) {
-        const { message } = ret[0];
-        this.$refs["e-email"].textContent = message;
-      } else {
-        this.$refs["e-email"].textContent = "";
-      }
-    },
-
-    // 画面項目チェック
-    validate: function(field, rules) {
-      var validator = new schema(rules);
-      var check_result;
-      validator.validate(field, { first: true }, (errors) => {
-        if (errors) {
-          check_result = errors;
-        }
+    //アクション情報変更
+    async handlerSave() {
+      let saveObj = {
+        newName: this.$refs.actionName.value,
+        newDate: this.$refs.actionDate.value,
+        newMemo: this.$refs.actionMemo.value,
+        id: this.actionInfo.id,
+      };
+      let res = await this.$store.dispatch("action/saveAction", saveObj);
+      Object.assign(this.actionInfo, res.userAction);
+      Message({
+        message: "アクション保存成功",
+        type: "success",
+        duration: 5 * 1000,
       });
-      return check_result;
+      //アクション情報再検索
+      this.fetchUserAction();
+      this.is_readonly = true;
     },
   },
 };

@@ -45,81 +45,29 @@
 </template>
 
 <script>
-import { MessageBox } from "element-ui";
 export default {
-  watch:{
-    actionData:{
-      handler:function(newV,oldV){
-        this.tableData = newV
-      }
-    },
-    deep:true
-  },
-   props:{
-    actionData:{
-      type:Array,
-      default:function(){
-        return [
-          {
-          id: "1",
-          startDate: "2016-05-04 11:00:01",
-          endDate: "2019-05-04 11:00:01",
-          name: "Tom",
-          memo: "No. 189, Grove St, Los Angeles",
+  watch: {
+    actionData: {
+      handler: function(newV, oldV) {
+        if (newV != oldV) {
+          this.tableData = newV;
         }
-        ]
-      }
-    }
+      },
     },
+    deep: true,
+  },
+  props: {
+    actionData: {
+      type: Array,
+      default: function() {
+        return [];
+      },
+    },
+  },
   data() {
     return {
       showTooltip: true,
-      tableData:this.actionData,
-      // tableData: [
-      //   {
-      //     id: "1",
-      //     startDate: "2016-05-04 11:00:01",
-      //     endDate: "2019-05-04 11:00:01",
-      //     name: "Tom",
-      //     memo: "No. 189, Grove St, Los Angeles",
-      //   },
-      //   {
-      //     id: "2",
-      //     startDate: "2016-05-04 11:00:01",
-      //     endDate: "2019-05-04 11:00:01",
-      //     name: "John",
-      //     memo: "No. 189, Grove St, Los Angeles",
-      //   },
-      //   {
-      //     id: "3",
-      //     startDate: "2016-05-04 11:00:01",
-      //     endDate: "2019-05-04 11:00:01",
-      //     name: "Morgan",
-      //     memo: "No. 189, Grove St, Los Angeles",
-      //   },
-      //   {
-      //     id: "4",
-      //     startDate: "2016-05-04 11:00:01",
-      //     endDate: "2019-05-04 11:00:01",
-      //     name: "Jessy",
-      //     memo: "No. 189, Grove St, Los Angeles",
-      //   },
-      //   {
-      //     id: "5",
-      //     startDate: "2016-05-04 11:00:01",
-      //     endDate: "2019-05-04 11:00:01",
-      //     name: "Jessy",
-      //     memo: "No. 189, Grove St, Los Angeles",
-      //   },
-      //   {
-      //     id: "6",
-      //     startDate: "2016-05-04 11:00:01",
-      //     endDate: "2019-05-04 11:00:01",
-      //     name: "Jessy",
-      //     memo:
-      //       "No. 189, Grove St, Los AngelesasdfNo. 189, Grove St, Los AngelesNo. 189, Grove St, Los AngelesNo. 189, Grove St, Los AngelesNo. 189, Grove St, Los AngelesNo. 189, Grove St, Los AngelesNo. 189, Grove St, Los AngelesNo. 189, Grove St, Los AngelesNo. 189, Grove St, Los AngelesNo. 189, Grove St, Los AngelesNo. 189, Grove St, Los AngelesNo. 189, Grove St, Los AngelesNo. 189, Grove St, Los Angeles",
-      //   },
-      // ],
+      tableData: this.actionData,
       search: "",
     };
   },
@@ -141,16 +89,30 @@ export default {
     },
     //アクションの削除
     handleDelete(index, row) {
+      var that = this;
       this.$confirm("このアクションを削除しますが?", "確認...", {
         confirmButtonText: "削除",
         cancelButtonText: "取消",
         type: "warning",
       })
         .then(() => {
-          this.$message({
-            type: "success",
-            message: "削除しました。",
-          });
+          that.$store
+            .dispatch("action/deleteAction", row.id)
+            .then(() => {
+              this.$message({
+                type: "success",
+                message: "削除しました。",
+              });
+              //アクション再検索
+              that.$parent.fetchUserAction();
+            })
+            .catch((error) => {
+              this.$message({
+                type: "error",
+                message: "処理失敗しました。",
+              });
+              console.log(error);
+            });
         })
         .catch(() => {
           this.$message({
@@ -158,11 +120,9 @@ export default {
             message: "取消しました。",
           });
         });
-      console.log(index, row);
     },
     //行クリック
-    handleRowClick(row, column, event) {
-      // this.$parent.is_readonly = true;
+    handleRowClick(row) {
       Object.assign(this.$parent.actionInfo, row);
     },
   },

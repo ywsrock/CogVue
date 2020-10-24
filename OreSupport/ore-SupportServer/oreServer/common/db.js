@@ -11,15 +11,15 @@ const databaseconfig = require('../config/database.config')
 ＠return Sequelizeインスタンス */
 const sequelize = new Sequelize(databaseconfig.database, databaseconfig.user, databaseconfig.password,
     {
-       host:databaseconfig.host,
-       dialect:databaseconfig.dialect,
-       pool:{
-            max:databaseconfig.max,
-            min:databaseconfig.min,
-            idle:databaseconfig.idle
-       }
+        host: databaseconfig.host,
+        dialect: databaseconfig.dialect,
+        pool: {
+            max: databaseconfig.max,
+            min: databaseconfig.min,
+            idle: databaseconfig.idle
+        }
     })
 
-    module.exports = {
-        sequelize
-    }
+module.exports = {
+    sequelize
+}

@@ -67,7 +67,7 @@ app.use("/user", usersRouter);
 app.use("/blog", blogRouter);
 app.use("/information", informationRouter);
 app.use("/address", addressRouter);
-app.use("/action",actionRouter)
+app.use("/action", actionRouter)
 
 // catch 404 and forward to error handler
 app.use(function (req, res, next) {

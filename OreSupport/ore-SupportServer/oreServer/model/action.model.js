@@ -25,9 +25,9 @@ const UserAction = sequelize.define("UserAction", {
         set(value) {
             if (!value) {
                 let now = dateFormat(new Date(), "yyyy-mm-dd HH:MM:ss")
-                this.setDataValue('startDate',now)
-            }else{
-                this.setDataValue('startDate',value)
+                this.setDataValue('startDate', now)
+            } else {
+                this.setDataValue('startDate', value)
             }
         }
     },
@@ -38,16 +38,16 @@ const UserAction = sequelize.define("UserAction", {
         set(value) {
             if (!value) {
                 let now = dateFormat(new Date(), "yyyy-mm-dd HH:MM:ss")
-                this.setDataValue('endDate',now)
-            }else{
-                this.setDataValue('endDate',value)
+                this.setDataValue('endDate', now)
+            } else {
+                this.setDataValue('endDate', value)
             }
         }
     },
-    memo:{
-        type:DataTypes.STRING,
-        allowNull:true,
-        defaultValue:""
+    memo: {
+        type: DataTypes.STRING,
+        allowNull: true,
+        defaultValue: ""
     },
     deleteFlg: {
         type: DataTypes.INTEGER,
@@ -71,5 +71,5 @@ const UserAction = sequelize.define("UserAction", {
 UserAction.sync({ force: false });
 
 module.exports = {
-    UserAction:UserAction
+    UserAction: UserAction
 }

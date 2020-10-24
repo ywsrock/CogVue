@@ -4,16 +4,18 @@ var checkuser = require("../common/check.token");
 const { STATUS_MESSAGE } = require("../common/const");
 const { UserAction } = require("../model/action.model");
 const { UserActionMaster } = require("../model/actionMaster")
-
+const { sequelize } = require('../common/db.common')
+var log = require("log4js").getLogger("users");
 // アクション情報保存
 router.post("/saveAction", [checkuser.verifyUser], async function (req, res, next) {
+    log.info(`/saveAction ${req.body}`);
 
     //新しいアクション作成
-    const userAction = await UserAction.build();
+    let userAction = await UserAction.build();
     //ユーザ
     userAction.userID = req.userID
     //アクション名
-    userAction.name = req.body.newName
+    userAction.name = String(req.body.newName).split(':')[0];
     //メモ
     userAction.memo = req.body.newMemo
     // 開始日
@@ -21,8 +23,24 @@ router.post("/saveAction", [checkuser.verifyUser], async function (req, res, nex
     // 終了日時
     userAction.endDate = req.body.newDate[1]
 
-    try {  //データ保存
-        await userAction.save()
+    try {
+        //データ更新
+        if (req.body.id !== "") {
+            await UserAction.update({
+                name: userAction.name,
+                memo: userAction.memo,
+                startDate: userAction.startDate,
+                endDate: userAction.endDate
+            }, {
+                where: {
+                    id: req.body.id
+                }
+            });
+        } else {
+            //データ保存
+            userAction = await userAction.save()
+        }
+
         let resObj = {
             // JSON ステータスコード
             code: STATUS_MESSAGE.CODE_SUCCESS,
@@ -32,6 +50,7 @@ router.post("/saveAction", [checkuser.verifyUser], async function (req, res, nex
         }
         return res.status(200).send(resObj);
     } catch (error) {
+        log.error(`/saveAction ${error}`)
         let resObj = {
             // JSON ステータスコード
             code: STATUS_MESSAGE.CODE_405,
@@ -43,6 +62,7 @@ router.post("/saveAction", [checkuser.verifyUser], async function (req, res, nex
 
 // 履歴データ取得
 router.get("/queryAction", [checkuser.verifyUser], async function (req, res, next) {
+    log.info(`/queryAction ${req.userID}`);
 
     let userID = req.userID
     let resObj = {}
@@ -59,40 +79,68 @@ router.get("/queryAction", [checkuser.verifyUser], async function (req, res, nex
         let userAction = await UserAction.findAll({
             where: {
                 userID: userID
-            }
+            },
+            order: sequelize.literal('id DESC'),
         });
 
         // 選択アクション編集
-       let actionOptions =  await editSelectAction(userActionMaster,userAction)
+        let actionOptions = await editSelectAction(userActionMaster, userAction)
 
         resObj = {
             // JSON ステータスコード
             code: STATUS_MESSAGE.CODE_SUCCESS,
             data: {
-                actionOptions:JSON.stringify(actionOptions),
-                userAction:userAction
+                actionOptions: JSON.stringify(actionOptions),
+                userAction: userAction
             }
         }
     } catch (error) {
+        log.error(`/queryAction ${error}`);
         resObj = {
             // JSON ステータスコード
             code: STATUS_MESSAGE.CODE_406,
-            message:STATUS_MESSAGE.ACTION_QUERY_ERROR
+            message: STATUS_MESSAGE.ACTION_QUERY_ERROR
         }
     }
     return res.status(200).send(resObj)
 })
 
+//履歴の削除
+router.get("/destroyAction", [checkuser.verifyUser], async function (req, res, next) {
+    log.info(`/destroyAction ${req.query.id}`);
+
+    let resObj = {}
+    try {
+        let rowNum = await UserAction.destroy({
+            where: {
+                id: req.query.id
+            }
+        })
+        resObj = {
+            code: STATUS_MESSAGE.CODE_SUCCESS,
+            data: {
+                rowNum: rowNum
+            }
+        }
+    } catch (error) {
+        log.info(`/destroyAction ${error}`);
+        resObj = {
+            code: STATUS_MESSAGE.CODE_407,
+            message: STATUS_MESSAGE.ACTION_DESTROY_ERROR
+        }
+    }
+    res.status(200).send(resObj)
+})
 //アクション変種
-function  editSelectAction (mastAction,userAction)  {
+function editSelectAction(mastAction, userAction) {
     let actionOptions = [
         {
-            label:"人気アクション",
-            options:[]
+            label: "人気アクション",
+            options: []
         },
         {
-            label:"ユーザアクション",
-            options:[]
+            label: "ユーザアクション",
+            options: []
         }
     ]
 
@@ -100,16 +148,16 @@ function  editSelectAction (mastAction,userAction)  {
     mastAction.forEach(element => {
         actionOptions[0].options.push(
             {
-               id:`m${element.id}`,
-               name:element.name,
+                id: `m${element.id}`,
+                name: element.name,
             }
         )
     });
     // ユーザアクション
     userAction.forEach(element => {
         actionOptions[1].options.push({
-            id:element.id,
-            name:element.name
+            id: element.id,
+            name: element.name
         })
     })
     return actionOptions

@@ -13,11 +13,11 @@ const UserActionMaster = sequelize.define("UserActionMaster", {
         type: DataTypes.STRING,
         allowNull: true
     },
-  
-    memo:{
-        type:DataTypes.STRING,
-        allowNull:true,
-        defaultValue:""
+
+    memo: {
+        type: DataTypes.STRING,
+        allowNull: true,
+        defaultValue: ""
     },
     deleteFlg: {
         type: DataTypes.INTEGER,
@@ -41,5 +41,5 @@ const UserActionMaster = sequelize.define("UserActionMaster", {
 UserActionMaster.sync({ force: false });
 
 module.exports = {
-    UserActionMaster:UserActionMaster
+    UserActionMaster: UserActionMaster
 }
