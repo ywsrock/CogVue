@@ -173,6 +173,13 @@
 
       <div class="background-white p20 mb30">
         <h3 class="page-title">
+          行動カレンダー
+        </h3>
+        <ActionCalendar />
+      </div>
+
+      <div class="background-white p20 mb30">
+        <h3 class="page-title">
           行動リスト
         </h3>
         <ActionList :actionData="actionHistoryData" />
@@ -186,17 +193,12 @@
 import { Message } from "element-ui";
 import ActionList from "./actionList";
 import dateFormat from "dateformat";
-// import {
-//   validEmail,
-//   validPhone,
-//   validURL,
-//   validPostalcode,
-//   isNumber,
-// } from "@/utils/validate";
+import ActionCalendar from "./ActionCalendar";
 
 export default {
   components: {
     ActionList,
+    ActionCalendar,
   },
   props: {
     avatarSrc: {
