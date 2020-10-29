@@ -1,0 +1,55 @@
+<% extend 'layout' %>
+<section>
+  <h1><%= @title %></h1>
+
+  <form class="form-group" action="/information/update" method="POST">
+    <input type="hidden" name="id" value="<%= @informationDetail.id %>" /><br />
+    <label for="information-title">Title</label>
+    <input
+      class="form-control"
+      type="text"
+      id="information-title"
+      name="title"
+      value="<%= @informationDetail.title %>"
+    /><br />
+    <label for="information-category">Category</label>
+    <input
+      class="form-control"
+      type="text"
+      id="information-category"
+      name="category"
+      value="<%= @informationDetail.category %>"
+    /><br />
+    <label for="information-date-from">From</label>
+    <input
+      class="form-control"
+      type="date"
+      id="information-date-from"
+      name="from"
+      value="<%= @informationDetail.from %>"
+    /><br />
+    <label for="information-date-to">To</label>
+    <input
+      class="form-control"
+      type="date"
+      id="information-date-to"
+      name="to"
+      value="<%= @informationDetail.to %>"
+    /><br />
+    <label for="information-content">Content</label>
+    <textarea
+      class="form-control"
+      id="information-content"
+      style="height: 150px"
+      name="content"
+    >
+        <%= @informationDetail.content %>
+      </textarea
+    >
+    <br />
+    <div style="text-align: right">
+      <a href="/information" class="btn btn-secondary">キャンセル</a>
+      <input type="submit" class="btn btn-primary pl-4 pr-4" value="送信" />
+    </div>
+  </form>
+</section>
