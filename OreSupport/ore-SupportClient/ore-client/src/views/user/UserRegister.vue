@@ -7,13 +7,38 @@
             <div class="orig-row">
               <div class="col-sm-4 col-sm-offset-4">
                 <div class="page-title">
-                  <h1>Register</h1>
+                  <h1>新規登録</h1>
                 </div>
                 <!-- /.page-title -->
 
-                <form @submit.prevent="singUp">
+                <form
+                  ref="signupForm"
+                  :model="signupForm"
+                  :rules="signupRules"
+                  class="signUp-form"
+                  autocomplete="on"
+                  label-position="left">
                   <div class="form-group">
-                    <label for="login-form-email">Email</label>
+                    <label for="login-form-nickname">ニックネーム</label>
+                    <input
+                      type="text"
+                      ref="nickname"
+                      v-model="registForm.nickname"
+                      @blur="checkNickname"
+                      name="nickname"
+                      required
+                      style="background-color:white;border: 2px solid #e9e9e9;"
+                      class="form-control"
+                    />
+                    <p
+                      style="color:red;font-size:12px;float:top"
+                      ref="e-nickname"
+                    ></p>
+                  </div>
+                  <!-- /.form-group -->
+
+                  <div class="form-group">
+                    <label for="login-form-email">メールアドレス</label>
                     <input
                       type="text"
                       ref="email"
@@ -32,7 +57,26 @@
                   <!-- /.form-group -->
 
                   <div class="form-group">
-                    <label for="login-form-password">Password</label>
+                    <label for="login-form-email">メールアドレス(確認)</label>
+                    <input
+                      type="text"
+                      ref="repeatemail"
+                      v-model="registForm.repeatemail"
+                      @blur="checkrepeatEmail"
+                      name="repeatemail"
+                      required
+                      style="background-color:white;border: 2px solid #e9e9e9;"
+                      class="form-control"
+                    />
+                    <p
+                      style="color:red;font-size:12px;float:top"
+                      ref="e-email2"
+                    ></p>
+                  </div>
+                  <!-- /.form-group -->
+
+                  <div class="form-group">
+                    <label for="login-form-password">パスワード</label>
                     <input
                       type="password"
                       ref="password"
@@ -49,8 +93,70 @@
 
                   <div class="form-group">
                     <label for="login-form-password-retype"
-                      >Retype password</label
-                    >
+                      >パスワード(確認)</label>
+                    <input
+                      type="password"
+                      ref="repeatpassword"
+                      name="repeatpassword"
+                      v-model="registForm.repeatpassword"
+                      @blur="checkrepeatPassword"
+                      required
+                      style="background-color:white;border: 2px solid #e9e9e9;"
+                      class="form-control"
+                    />
+                    <p style="color:red;font-size:12px" ref="e-password2"></p>
+                  </div>
+                  <!-- /.form-group -->
+
+                  <div class="form-group">
+                    <label for="login-form-password-retype"
+                      >性別</label>
+                    <input
+                      type="radio"
+                      ref="male"
+                      name="sex"
+                      v-model="registForm.sex"
+                      @blur="sex"
+                      required
+                      style="background-color:white;border: 2px solid #e9e9e9;"
+                      class="form-control"
+                      checked="checked"
+                    />男
+                    <input
+                      type="radio"
+                      ref="female"
+                      name="sex"
+                      v-model="registForm.sex"
+                      @blur="sex"
+                      required
+                      style="background-color:white;border: 2px solid #e9e9e9;"
+                      class="form-control"
+                    />女
+
+                    <p style="color:red;font-size:12px" ref="e-sex"></p>
+                  </div>
+                  <!-- /.form-group -->
+
+                  <div class="form-group">
+                    <label for="login-form-password-retype"
+                      >生年月日</label>
+                    <input
+                      type="date"
+                      ref="birthday"
+                      name="birthday"
+                      v-model="registForm.birthday"
+                      @blur="birthday"
+                      required
+                      style="background-color:white;border: 2px solid #e9e9e9;"
+                      class="form-control"
+                    />
+                    <p style="color:red;font-size:12px" ref="e-birthday"></p>
+                  </div>
+                  <!-- /.form-group -->
+
+                  <div class="form-group">
+                    <label for="login-form-password-retype"
+                      >利用目的</label>
                     <input
                       type="password"
                       ref="repeatpassword"
@@ -68,19 +174,16 @@
                   <label>
                     <input
                       type="checkbox"
-                      checked="checked"
-                      name="remember"
+                      name="agree"
                       style="margin-bottom:15px"
                     />
-                    パスワード記憶
-                  </label>
-                  <p>
-                    個人情報保護
+                    個人情報の取り扱いについて同意する
                     <a href="#" style="color:dodgerblue">プライバシー</a>.
-                  </p>
+                  </label>
+
                   <div style="text-align: right;">
                     <button type="submit" class="btn btn-primary">
-                      Register
+                      登録
                     </button>
                   </div>
                   <!-- <button type="submit" class="btn btn-primary pull-right">Register</button> -->
@@ -153,7 +256,7 @@ export default {
   },
   methods: {
     // メールのチェック処理
-    checkEmail: function(e) {
+    checkEmail: function (e) {
       var fields = { email: e.target.value };
       var ret = this.validate(fields, { email: this.rules.email });
       if (ret) {
@@ -165,7 +268,7 @@ export default {
       }
     },
     // パスワードのチェック処理
-    checkPassword: function(e) {
+    checkPassword: function (e) {
       var fields = { password: e.target.value };
       var ret = this.validate(fields, { password: this.rules.password });
       if (ret) {
@@ -177,7 +280,7 @@ export default {
       }
     },
     // パスワード2のチェック処理
-    checkrepeatPassword: function(e) {
+    checkrepeatPassword: function (e) {
       var fields = { repeatpassword: e.target.value };
       var ret = this.validate(fields, {
         repeatpassword: this.rules.repeatpassword,
@@ -192,7 +295,7 @@ export default {
     },
 
     // 画面項目チェック
-    validate: function(field, rules) {
+    validate: function (field, rules) {
       var validator = new schema(rules);
       var check_result;
       validator.validate(field, { first: true }, (errors, res) => {
@@ -204,7 +307,7 @@ export default {
     },
 
     // ユーザ登録処理ハンドラー
-    singUp: function(e) {
+    singUp: function (e) {
       // 二重コミット防止のため、ボタンを非活性
       e.target.disabled = true;
       // 全項目チェック、問題なければ、登録処理を行う
