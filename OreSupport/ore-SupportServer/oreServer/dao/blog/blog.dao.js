@@ -86,7 +86,7 @@ const getBlogList = async (queryInfo) => {
 //     }
 // }
 
-// ブログ詳細
+//ブログ詳細
 const getBlogDetail = async(queryInfo) => {
     try {
         // 結果を返す
@@ -182,41 +182,10 @@ const blogUpdate = async (queryInfo) => {
 }
 
 
-
-const createComment = async(queryInfo) => {
-    try {
-        // トランザクション処理開始
-        const t = await sequelize.transaction();
-        const result = await Blog.create({
-            
-            id:queryInfo.BlogID,
-
-            UserID: queryInfo.UserID,
-            // タイトル
-            commentName: queryInfo.commentName,
-            // Content
-            Comment: queryInfo.Comment,
-
-        });
-        // トランザクションコンミット
-        await t.commit();
-        // 結果を返す
-        return result;
-    } catch (error) {
-        await t.rollback();
-        console.error("情報取得エラー:" + error.stack);
-        return error;
-    }
-}
-
-
-
-
 module.exports = {
     createBlog: createBlog,
-    getBlogList:getBlogList,
-    getBlogDetail:getBlogDetail,
-    blogDelete:blogDelete,
-    blogUpdate:blogUpdate,
-    createComment:createComment
+    getBlogList: getBlogList,
+    getBlogDetail: getBlogDetail,
+    blogDelete: blogDelete,
+    blogUpdate: blogUpdate
 }

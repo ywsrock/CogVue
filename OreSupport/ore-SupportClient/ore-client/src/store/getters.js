@@ -16,7 +16,7 @@ const getters = {
     error: (state) => state.cgev.error,
     data: (state) => state.cgev.data,
     action: (state) => state.action.actionData,
-    get_comment: state => state.comment,
+    get_comment: state => state.blog.comment,
 
 }
 
