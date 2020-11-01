@@ -38,6 +38,11 @@ const blogRouter = {
       component: createBlog
     },
     {
+      path: "createBlog",
+      name: "createBlog",
+      component: createBlog
+    },
+    {
       path: "blogEdit",
       name: "blogEdit",
       component: blogEdit,

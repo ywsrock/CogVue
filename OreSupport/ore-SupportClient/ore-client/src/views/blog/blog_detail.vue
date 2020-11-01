@@ -104,7 +104,7 @@
                             <!-- /.comment-header -->
                             <div class="comment-content-wrapper">
                               <div class="comment-content">
-                                <p>{{ item }}</p>
+                                <p>{{ item.Comment1 }}</p>
                               </div>
                               <!-- /.comment-content -->
                             </div>
@@ -485,6 +485,7 @@ export default {
       .then(res => {
         //成功の場合
         // this.$router.push("/blogDetail?id=" + this.$route.query.id);
+        alert(JSON.stringify(that.$store.getters.get_comment));
         this.$nextTick().then(function() {
           const content = that.$store.getters.get_content;
           const title = that.$store.getters.get_title;

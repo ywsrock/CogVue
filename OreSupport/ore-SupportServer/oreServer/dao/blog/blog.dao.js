@@ -104,7 +104,7 @@ const getBlogList = async(queryInfo)=> {
 //     }
 // }
 
-//ブログ詳細
+// ブログ詳細
 const getBlogDetail = async(queryInfo) => {
     try {
         // 結果を返す
@@ -121,7 +121,7 @@ const getBlogDetail = async(queryInfo) => {
             },
             targetKey : 'id' 
         });
-        const result = await Comment.findAll({
+        const result = await Blog.findAll({
             where: {
                 [Op.and]: [{
                             [queryInfo.key]: queryInfo.val
@@ -129,8 +129,8 @@ const getBlogDetail = async(queryInfo) => {
                 ]
             },
             include: [{
-                model: Blog,
-                required: false
+                model: Comment,
+                required: false,
             }],
 
             attributes: {exclude: ['Password']}
@@ -199,10 +199,41 @@ const blogUpdate = async(queryInfo) => {
 }
 
 
+
+const createComment = async(queryInfo) => {
+    try {
+        // トランザクション処理開始
+        const t = await sequelize.transaction();
+        const result = await Blog.create({
+            
+            id:queryInfo.BlogID,
+
+            UserID: queryInfo.UserID,
+            // タイトル
+            commentName: queryInfo.commentName,
+            // Content
+            Comment: queryInfo.Comment,
+
+        });
+        // トランザクションコンミット
+        await t.commit();
+        // 結果を返す
+        return result;
+    } catch (error) {
+        await t.rollback();
+        console.error("情報取得エラー:" + error.stack);
+        return error;
+    }
+}
+
+
+
+
 module.exports = {
     createBlog: createBlog,
     getBlogList:getBlogList,
     getBlogDetail:getBlogDetail,
     blogDelete:blogDelete,
-    blogUpdate:blogUpdate
+    blogUpdate:blogUpdate,
+    createComment:createComment
 }
