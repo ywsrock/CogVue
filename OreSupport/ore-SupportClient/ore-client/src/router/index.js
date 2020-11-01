@@ -14,6 +14,9 @@ import Layout from "@/layout/index.vue";
 // import blogDelete from "@/views/blog/blog_list.vue"
 // import blogEdit from "@/views/blog/blog_edit.vue"
 import solutionRouter from "./solution/solutionRouter";
+import userList from "@/views/user/UserList.vue";
+import userDetail from "@/views/user/UserDetail.vue";
+import userDetail_1 from "@/views/user/UserDetail_1.vue";
 
 Vue.use(VueRouter);
 const routes = [
@@ -73,6 +76,34 @@ const routes = [
   //       component: () => import("@/views/blog/blog_edit.vue")
   //     }]
   // },
+
+  {
+    path: "/",
+    components: {
+      default: Layout,
+    },
+    redirect: "/userList",
+    children: [
+      {
+        path: "/userList",
+        name: "userList",
+        component: userList,
+      },
+      {
+        path: "/userDetail",
+        name: "userDetail",
+        component: userDetail,
+      },
+      {
+        path: "/userDetail_1",
+        name: "userDetail_1",
+        component: userDetail_1,
+      },
+    ],
+  },
+
+
+
   {
     path: "/login",
     name: "login",
