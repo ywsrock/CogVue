@@ -1,7 +1,7 @@
 <!DOCTYPE html>
 <html>
   <head>
-    <title><%= title %></title>
+    <title><%= @title %></title>
 
     <link
       rel="stylesheet"
@@ -12,38 +12,26 @@
     <link rel="stylesheet" href="/stylesheets/style.css" />
   </head>
   <body>
-    <h1><%= title %></h1>
-    <div style="text-align: right">
-      <a href="/information/new" class="btn btn-primary mb-2">新規作成</a>
-    </div>
-    <table class="table">
-      <thead class="thead-light">
-        <tr>
-          <th>タイトル</th>
-          <th>カテゴリー</th>
-          <th style="width: 50%">内容</th>
-          <th>配信開始</th>
-          <th>配信終了</th>
-          <th></th>
-        </tr>
-      </thead>
-      <tbody>
-        <% informationList.forEach(function (value, key) { %>
-        <tr>
-          <td><%= value.title %></td>
-          <td><%= value.category %></td>
-          <td><%= value.content %></td>
-          <td><%= value.from %></td>
-          <td><%= value.to %></td>
-          <td>
-            <a href="/information/detail?informationID=<%= value.id %>">編集</a>
-            <a href="/information/delete?informationID=<%= value.id %>">削除</a>
-          </td>
-        </tr>
-        <% }); %>
-      </tbody>
-    </table>
-
+    <% if @user? : %>
+    <nav class="navbar navbar-expand-lg navbar-black mb-5" style="padding: 0">
+      <div class="collapse navbar-collapse" id="navbarNav">
+        <ul class="navbar-nav" style="font-size: 20px">
+          <li class="nav-item">
+            <a class="nav-link" href="/information">お知らせ</a>
+          </li>
+          <li class="nav-item">
+            <a class="nav-link" href="/slide_image">スライド広告</a>
+          </li>
+          <li class="nav-item">
+            <a class="nav-link" href="/banner_image">バナー広告</a>
+          </li>
+        </ul>
+      </div>
+      <form action="/admin/logout" method="post">
+        <input type="submit" value="logout" class="btn btn-warning" />
+      </form>
+    </nav>
+    <% end %> <% content %>
     <script
       src="https://code.jquery.com/jquery-3.3.1.slim.min.js"
       integrity="sha384-q8i/X+965DzO0rT7abK41JStQIAqVgRVzpbzo5smXKp4YfRvH+8abtTE1Pi6jizo"

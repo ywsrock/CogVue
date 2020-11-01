@@ -37,31 +37,33 @@ export default {
         ];
       },
     },
+    chartDateParams: {
+      type: Array,
+      // default: () => [0, 0, 0, 0, 0],
+      default: () => [],
+    },
+  },
+  watch: {
+    chartDateParams: {
+      handler: function(newValue, oldValue) {
+        if (oldValue != newValue) {
+          this.chartDate = newValue;
+          this.initChart();
+        }
+      },
+      deep: true,
+      immediate: false,
+    },
   },
   data() {
     return {
       chart: null,
-      chartDate: [],
+      chartDate: this.chartDateParams,
       chartLabels: this.indicatorParams,
     };
   },
   mounted() {
-    this.$nextTick(() => {
-      this.$store
-        .dispatch("cgev/authenticate")
-        .then(() => {
-          this.$store.dispatch("cgev/recordsCategories").then(
-            (res) => {
-              this.chartDate = res.raddarChartData;
-              this.initChart();
-            },
-            (error) => {
-              console.log(error);
-            }
-          );
-        })
-        .catch((error) => console.log(error));
-    });
+    this.initChart();
   },
   beforeDestroy() {
     if (!this.chart) {

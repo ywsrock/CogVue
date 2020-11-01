@@ -256,9 +256,27 @@ const actions = {
 
     // トークン削除
     resetToken({ commit }) {
+        var that = this;
         return new Promise((resolve) => {
             commit("set_token", "");
-            commit("set_token", []);
+            commit("set_roles", []);
+            // ユーザ権限
+            // ユーザ名
+            commit("set_userName", "");
+            //　ユーザアバター
+            commit("set_avatar", "");
+            //　ユーザ紹介
+            commit("set_introduction", "");
+            //　詳細情報
+            commit("set_info", "");
+            // ユーザID保存
+            that._vm.$session.set("UserID", "");
+            // ユーザ名
+            that._vm.$session.set("UserName", "");
+
+            // セッション廃棄
+            that._vm.$session.clear();
+            that._vm.$session.destroy();
             removeToken();
             resolve();
         });

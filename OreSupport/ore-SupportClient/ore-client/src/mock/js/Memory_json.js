@@ -69,99 +69,99 @@ var lineData = {
 export const memory = {
     MemoryAbility: {
         Flashlight: {
-            lineChartData: lineData,
-            transactionTableChartData: data.list,
-            // チャートlegendData
-            legendData: ["フラッシュライト "],
             cardPazulData: {
+                lineChartData: lineData,
+                recents: data.list,
+                // チャートtask_name
+                task_name: "フラッシュライト ",
                 //カレントrate
-                current_ability_rate: Mock.Random.integer(1, 5),
+                star: Mock.Random.integer(1, 5),
                 //最終利用日
-                lastUseDate: Mock.Random.datetime('yyyy-MM-dd'),
+                last_updated_at: Mock.Random.datetime('yyyy-MM-dd'),
                 //最高点
-                maxPoint: Mock.Random.float(60, 100, 2, 2),
+                score_max: Mock.Random.float(60, 100, 2, 2),
                 // 標準点
-                standardPoint: Mock.Random.float(60, 100, 2, 2),
+                score_age: Mock.Random.float(60, 100, 2, 2),
                 //平均指数
-                averageIndex: Mock.Random.float(60, 100, 2, 2),
+                performance: Mock.Random.float(60, 100, 2, 2),
                 //time
-                timePoint: Mock.Random.datetime('HH:mm:ss'),
-                // medal
-                medal0: Mock.Random.integer(1, 100),
-                medal1: Mock.Random.integer(1, 100),
-                medal2: Mock.Random.integer(1, 100),
-                medal3: Mock.Random.integer(1, 100),
-                medal4: Mock.Random.integer(1, 100),
-                medal5: Mock.Random.integer(1, 100),
+                playtime: Mock.Random.datetime('HH:mm:ss'),
+                // rank_count_
+                rank_count_0: Mock.Random.integer(1, 100),
+                rank_count_1: Mock.Random.integer(1, 100),
+                rank_count_2: Mock.Random.integer(1, 100),
+                rank_count_3: Mock.Random.integer(1, 100),
+                rank_count_4: Mock.Random.integer(1, 100),
+                rank_count_5: Mock.Random.integer(1, 100),
                 // パズル画像
-                pazulImage: "https://personal.tbcare.jp/images/task/5.png",
+                task_image: "https://personal.tbcare.jp/images/task/5.png",
                 // パズル説明
-                pazulDec:
+                task_desc:
                     "ライトが光る順番を記憶し、次にその順番でライトをタッチしていくタスクです。",
             },
         },
 
         CardMemory: {
-            lineChartData: lineData,
-            transactionTableChartData: data.list,
-            // チャートlegendData
-            legendData: ["カード記憶 "],
             cardPazulData: {
+                lineChartData: lineData,
+                recents: data.list,
+                // チャートtask_name
+                task_name: "カード記憶 ",
                 //カレントrate
-                current_ability_rate: Mock.Random.integer(1, 5),
+                star: Mock.Random.integer(1, 5),
                 //最終利用日
-                lastUseDate: Mock.Random.datetime('yyyy-MM-dd'),
+                last_updated_at: Mock.Random.datetime('yyyy-MM-dd'),
                 //最高点
-                maxPoint: Mock.Random.float(60, 100, 2, 2),
+                score_max: Mock.Random.float(60, 100, 2, 2),
                 // 標準点
-                standardPoint: Mock.Random.float(60, 100, 2, 2),
+                score_age: Mock.Random.float(60, 100, 2, 2),
                 //平均指数
-                averageIndex: Mock.Random.float(60, 100, 2, 2),
+                performance: Mock.Random.float(60, 100, 2, 2),
                 //time
-                timePoint: Mock.Random.datetime('HH:mm:ss'),
-                // medal
-                medal0: Mock.Random.integer(1, 100),
-                medal1: Mock.Random.integer(1, 100),
-                medal2: Mock.Random.integer(1, 100),
-                medal3: Mock.Random.integer(1, 100),
-                medal4: Mock.Random.integer(1, 100),
-                medal5: Mock.Random.integer(1, 100),
+                playtime: Mock.Random.datetime('HH:mm:ss'),
+                // rank_count_
+                rank_count_0: Mock.Random.integer(1, 100),
+                rank_count_1: Mock.Random.integer(1, 100),
+                rank_count_2: Mock.Random.integer(1, 100),
+                rank_count_3: Mock.Random.integer(1, 100),
+                rank_count_4: Mock.Random.integer(1, 100),
+                rank_count_5: Mock.Random.integer(1, 100),
                 // パズル画像
-                pazulImage: "https://personal.tbcare.jp/images/task/6.png",
+                task_image: "https://personal.tbcare.jp/images/task/6.png",
                 // パズル説明
-                pazulDec:
+                task_desc:
                     "次々にカードをめくり、同じ記号のカードが一度でも開かれていれば「ある」、無ければ「ない」を選んでいきます。",
             },
         },
         Story: {
-            lineChartData: lineData,
-            transactionTableChartData: data.list,
-            // チャートlegendData
-            legendData: ["ストーリー "],
             cardPazulData: {
+                lineChartData: lineData,
+                recents: data.list,
+                // チャートtask_name
+                task_name: "ストーリー ",
                 //カレントrate
-                current_ability_rate: Mock.Random.integer(1, 5),
+                star: Mock.Random.integer(1, 5),
                 //最終利用日
-                lastUseDate: Mock.Random.datetime('yyyy-MM-dd'),
+                last_updated_at: Mock.Random.datetime('yyyy-MM-dd'),
                 //最高点
-                maxPoint: Mock.Random.float(60, 100, 2, 2),
+                score_max: Mock.Random.float(60, 100, 2, 2),
                 // 標準点
-                standardPoint: Mock.Random.float(60, 100, 2, 2),
+                score_age: Mock.Random.float(60, 100, 2, 2),
                 //平均指数
-                averageIndex: Mock.Random.float(60, 100, 2, 2),
+                performance: Mock.Random.float(60, 100, 2, 2),
                 //time
-                timePoint: Mock.Random.datetime('HH:mm:ss'),
-                // medal
-                medal0: Mock.Random.integer(1, 100),
-                medal1: Mock.Random.integer(1, 100),
-                medal2: Mock.Random.integer(1, 100),
-                medal3: Mock.Random.integer(1, 100),
-                medal4: Mock.Random.integer(1, 100),
-                medal5: Mock.Random.integer(1, 100),
+                playtime: Mock.Random.datetime('HH:mm:ss'),
+                // rank_count_
+                rank_count_0: Mock.Random.integer(1, 100),
+                rank_count_1: Mock.Random.integer(1, 100),
+                rank_count_2: Mock.Random.integer(1, 100),
+                rank_count_3: Mock.Random.integer(1, 100),
+                rank_count_4: Mock.Random.integer(1, 100),
+                rank_count_5: Mock.Random.integer(1, 100),
                 // パズル画像
-                pazulImage: "https://personal.tbcare.jp/images/task/7.png",
+                task_image: "https://personal.tbcare.jp/images/task/7.png",
                 // パズル説明
-                pazulDec:
+                task_desc:
                     "1分間表示された文章を読んで内容を覚え、その後で設問に答えるタスクです。文章を読む時間が短ければ短いほど得点が高くなります。",
             },
         }

@@ -26,6 +26,14 @@ module.exports = {
         pathRewrite: {
           '^/CgevApi': ''
         }
+      },
+      '/personalTbcare': {
+        target: 'https://personal.tbcare.jp',
+        ws: true,
+        changeOrigin: true,
+        pathRewrite: {
+          '^/personalTbcare': ''
+        }
       }
     },
     key: fs.readFileSync(getpath("privateCA/key.pem")),
@@ -44,5 +52,6 @@ module.exports = {
         '@': getpath('src')
       }
     }
-  }
+  },
+
 }

@@ -6,7 +6,7 @@
         <div class="orig-row detail-content">
           <h2>
             【推移】
-            <span class="text-secondary">{{ legendData[0] }}</span>
+            <span class="text-secondary">{{ task_name }}</span>
           </h2>
           <div class="chart-wrapper overflo-div-height450">
             <div class="background-white p20">
@@ -60,8 +60,8 @@
                   <div class="detail-map">
                     <line-chart
                       :chart-data="lineChartData"
-                      :proplegendData="legendData"
-                      :key="legendData[0]"
+                      :proplegendData="task_name"
+                      :key="task_name"
                     />
                   </div>
                 </div>
@@ -77,7 +77,7 @@
                   <div class="detail-map">
                     <line-chart
                       :chart-data="lineChartData"
-                      :proplegendData="legendData"
+                      :proplegendData="task_name"
                     />
                   </div>
                 </div>
@@ -93,7 +93,7 @@
                   <div class="detail-map">
                     <line-chart
                       :chart-data="lineChartData"
-                      :proplegendData="legendData"
+                      :proplegendData="task_name"
                     />
                   </div>
                 </div>
@@ -108,16 +108,16 @@
       <div class="col-sm-5">
         <h2>
           【{{ abilityName }}】
-          <span class="text-secondary">{{ legendData[0] }} </span>
+          <span class="text-secondary">{{ task_name }} </span>
         </h2>
         <div class="background-white p20 overflo-div-height450 ">
           <div class="detail-description">
             <div style="text-align: center ">
               <el-tag type="success" style="font-size:large"
-                >{{ cardPazulData.current_ability_rate }}級</el-tag
+                >{{ cardPazulData.star }}級</el-tag
               >
               <el-rate
-                v-model="cardPazulData.current_ability_rate"
+                v-model="cardPazulData.star"
                 disabled
                 show-score
                 text-color="#ff9900"
@@ -134,7 +134,7 @@
                   style="color:#303133"
                 >
                   <el-button type="text" class="fa fa-bullseye">
-                    &nbsp;{{ cardPazulData.maxPoint }}
+                    &nbsp;{{ cardPazulData.score_max }}
                   </el-button>
                 </el-tooltip>
 
@@ -144,7 +144,7 @@
                   style="color:#303133"
                 >
                   <el-button type="text" class="fa fa-dot-circle-o">
-                    &nbsp;{{ cardPazulData.standardPoint }}
+                    &nbsp;{{ cardPazulData.score_age }}
                   </el-button>
                 </el-tooltip>
 
@@ -154,7 +154,7 @@
                   style="color:#303133"
                 >
                   <el-button type="text" class="fa fa-line-chart">
-                    &nbsp;{{ cardPazulData.averageIndex }}
+                    &nbsp;{{ cardPazulData.performance }}
                   </el-button>
                 </el-tooltip>
 
@@ -164,11 +164,13 @@
                   style="color:#303133"
                 >
                   <el-button type="text" class="fa fa-clock-o">
-                    &nbsp;{{ cardPazulData.timePoint }}
+                    &nbsp;{{ cardPazulData.playtime }}
                   </el-button>
                 </el-tooltip>
               </h5>
-              <h5>最終トレーニング日:&nbsp;{{ cardPazulData.lastUseDate }}</h5>
+              <h5>
+                最終トレーニング日:&nbsp;{{ cardPazulData.last_updated_at }}
+              </h5>
             </div>
             <hr />
             <el-tooltip
@@ -177,112 +179,120 @@
               style="color:#303133"
             >
               <div class="orig-row">
-                <div class="quiz-medal">
-                  <div class="quiz-medal__circle quiz-medal__circle--gold">
-                    <el-badge :value="cardPazulData.medal0" class="item">
+                <div class="quiz-rank_count_">
+                  <div
+                    class="quiz-rank_count___circle quiz-rank_count___circle--gold"
+                  >
+                    <el-badge :value="cardPazulData.rank_count_0" class="item">
                       <span>
                         特
                       </span>
                     </el-badge>
                   </div>
                   <div
-                    class="quiz-medal__ribbon quiz-medal__ribbon--left"
+                    class="quiz-rank_count___ribbon quiz-rank_count___ribbon--left"
                   ></div>
                   <div
-                    class="quiz-medal__ribbon quiz-medal__ribbon--right"
+                    class="quiz-rank_count___ribbon quiz-rank_count___ribbon--right"
                   ></div>
                 </div>
 
-                <div class="quiz-medal">
-                  <div class="quiz-medal__circle quiz-medal__circle--silver">
-                    <el-badge :value="cardPazulData.medal1" class="item">
+                <div class="quiz-rank_count_">
+                  <div
+                    class="quiz-rank_count___circle quiz-rank_count___circle--silver"
+                  >
+                    <el-badge :value="cardPazulData.rank_count_1" class="item">
                       <span>
                         1
                       </span>
                     </el-badge>
                   </div>
                   <div
-                    class="quiz-medal__ribbon quiz-medal__ribbon--left"
+                    class="quiz-rank_count___ribbon quiz-rank_count___ribbon--left"
                   ></div>
                   <div
-                    class="quiz-medal__ribbon quiz-medal__ribbon--right"
+                    class="quiz-rank_count___ribbon quiz-rank_count___ribbon--right"
                   ></div>
                 </div>
-                <div class="quiz-medal">
-                  <div class="quiz-medal__circle quiz-medal__circle--bronze">
-                    <el-badge :value="cardPazulData.medal2" class="item">
+                <div class="quiz-rank_count_">
+                  <div
+                    class="quiz-rank_count___circle quiz-rank_count___circle--bronze"
+                  >
+                    <el-badge :value="cardPazulData.rank_count_2" class="item">
                       <span>
                         2
                       </span>
                     </el-badge>
                   </div>
                   <div
-                    class="quiz-medal__ribbon quiz-medal__ribbon--left"
+                    class="quiz-rank_count___ribbon quiz-rank_count___ribbon--left"
                   ></div>
                   <div
-                    class="quiz-medal__ribbon quiz-medal__ribbon--right"
+                    class="quiz-rank_count___ribbon quiz-rank_count___ribbon--right"
                   ></div>
                 </div>
 
-                <div class="quiz-medal">
-                  <div class="quiz-medal__circle quiz-medal__circle--silver">
-                    <el-badge :value="cardPazulData.medal3" class="item">
+                <div class="quiz-rank_count_">
+                  <div
+                    class="quiz-rank_count___circle quiz-rank_count___circle--silver"
+                  >
+                    <el-badge :value="cardPazulData.rank_count_3" class="item">
                       <span>
                         3
                       </span>
                     </el-badge>
                   </div>
                   <div
-                    class="quiz-medal__ribbon quiz-medal__ribbon--left"
+                    class="quiz-rank_count___ribbon quiz-rank_count___ribbon--left"
                   ></div>
                   <div
-                    class="quiz-medal__ribbon quiz-medal__ribbon--right"
+                    class="quiz-rank_count___ribbon quiz-rank_count___ribbon--right"
                   ></div>
                 </div>
-                <div class="quiz-medal">
-                  <div class="quiz-medal__circle quiz-medal__circle--silver">
-                    <el-badge :value="cardPazulData.medal4" class="item">
+                <div class="quiz-rank_count_">
+                  <div
+                    class="quiz-rank_count___circle quiz-rank_count___circle--silver"
+                  >
+                    <el-badge :value="cardPazulData.rank_count_4" class="item">
                       <span>
                         4
                       </span>
                     </el-badge>
                   </div>
                   <div
-                    class="quiz-medal__ribbon quiz-medal__ribbon--left"
+                    class="quiz-rank_count___ribbon quiz-rank_count___ribbon--left"
                   ></div>
                   <div
-                    class="quiz-medal__ribbon quiz-medal__ribbon--right"
+                    class="quiz-rank_count___ribbon quiz-rank_count___ribbon--right"
                   ></div>
                 </div>
-                <div class="quiz-medal">
-                  <div class="quiz-medal__circle quiz-medal__circle--silver">
-                    <el-badge :value="cardPazulData.medal5" class="item">
+                <div class="quiz-rank_count_">
+                  <div
+                    class="quiz-rank_count___circle quiz-rank_count___circle--silver"
+                  >
+                    <el-badge :value="cardPazulData.rank_count_5" class="item">
                       <span>
                         5
                       </span>
                     </el-badge>
                   </div>
                   <div
-                    class="quiz-medal__ribbon quiz-medal__ribbon--left"
+                    class="quiz-rank_count___ribbon quiz-rank_count___ribbon--left"
                   ></div>
                   <div
-                    class="quiz-medal__ribbon quiz-medal__ribbon--right"
+                    class="quiz-rank_count___ribbon quiz-rank_count___ribbon--right"
                   ></div>
                 </div>
               </div>
             </el-tooltip>
             <hr />
-            <div class="orig-row">
+            <div class="orig-row" v-loading="loading">
               <div class="col-md-7 text-center">
-                <img
-                  id="screen-shot"
-                  :src="cardPazulData.pazulImage"
-                  width="100%"
-                />
+                <img id="screen-shot" :src="cgevTaskImage" width="100%" />
               </div>
               <div class="col-md-5">
                 <h5>
-                  {{ cardPazulData.pazulDec }}
+                  {{ cardPazulData.task_desc }}
                 </h5>
               </div>
             </div>
@@ -302,15 +312,11 @@
     <div class="orig-row detail-content">
       <h2>
         【最近の記録】
-        <span class="text-secondary">{{ legendData[0] }}</span>
+        <span class="text-secondary">{{ task_name }}</span>
       </h2>
       <div class="chart-wrapper">
         <div class="background-white p20">
-          <transaction-table
-            :chartData="TransactionData"
-            v-cloak
-            :key="legendData[0]"
-          />
+          <transaction-table :chartData="recents" v-cloak :key="task_name" />
         </div>
       </div>
     </div>
@@ -321,6 +327,8 @@
 <script>
 import LineChart from "./TaskLineChart";
 import TransactionTable from "./TaskTransactionTable";
+import { CGEV_IMAGE_BASE } from "@/utils/const";
+import { TaskData } from "@/store/cgevModel/task";
 
 export default {
   name: "CommonAbility",
@@ -334,68 +342,86 @@ export default {
     showDataObj: {
       type: Object,
       require: true,
+      default: function() {
+        return TaskData.Flashlight;
+      },
     },
     showAbilityName: {
       type: String,
       require: true,
+      default: function() {
+        return "";
+      },
+    },
+    loadFlg: {
+      type: Boolean,
+      require: true,
+      default: function() {
+        return true;
+      },
     },
   },
   watch: {
     showDataObj: {
-      deep: true,
-      handler(showDataObj) {
-        this.dataObj = showDataObj;
-        // 時系列データ
-        this.lineChartData = showDataObj.lineChartData.yearData;
-        // 履歴データ
-        this.TransactionData = showDataObj.transactionTableChartData;
-        // チャートlegendData
-        this.legendData = showDataObj.legendData || ["1"];
-        // ユーザ名
-        // userName: this.$session.get("UserName") || "",
-        // 能力名
-        this.abilityName = this.showAbilityName || "";
-        //rate
-        this.cardPazulData = showDataObj.cardPazulData;
+      handler: function(showDataObj, oldValue) {
+        if (showDataObj !== oldValue) {
+          this.dataObj = showDataObj;
+          // 時系列データ
+          // this.lineChartData = showDataObj.cardPazulData.lineChartData.yearData;
+          // 履歴データ
+          this.recents = showDataObj.cardPazulData.recents;
+          // チャートlegendData
+          this.task_name = showDataObj.cardPazulData.task_name;
+          // ユーザ名
+          // userName: this.$session.get("UserName") || "",
+          // 能力名
+          this.abilityName = this.showAbilityName;
+          //rate
+          this.cardPazulData = showDataObj.cardPazulData;
+        }
       },
+      deep: true,
+      immediate: true,
     },
   },
   data() {
     return {
       dataObj: {},
+      // ロード状態
+      loading: this.loadFlg,
       // 時系列データ
       lineChartData: {},
       // 履歴データ
-      TransactionData: [],
+      recents: [],
       // チャートlegendData
-      legendData: [""],
+      task_name: "",
       // 能力名
       abilityName: "",
       //rate
       cardPazulData: {
         //カレントrate
-        current_ability_rate: 0,
+        star: 0,
         //最終利用日
-        lastUseDate: "",
+        last_updated_at: "",
         //最高点
-        maxPoint: 0,
+        score_max: 0,
         // 標準点
-        standardPoint: 0,
+        score_age: 0,
         //平均指数
-        averageIndex: 0,
+        performance: 0,
         //time
-        timePoint: "0",
-        // medal
-        medal0: 0,
-        medal1: 0,
-        medal2: 0,
-        medal3: 0,
-        medal4: 0,
-        medal5: 0,
+        playtime: "0",
+        // rank_count_
+        rank_count_0: 0,
+        rank_count_1: 0,
+        rank_count_2: 0,
+        rank_count_3: 0,
+        rank_count_4: 0,
+        rank_count_5: 0,
         // パズル画像
-        pazulImage: "",
+        task_image: "",
         // パズル説明
-        pazulDec: "",
+        task_desc: "",
       },
       // 年、月、週 カレントアクティブ
       activeObj: {
@@ -409,6 +435,11 @@ export default {
         isTab3: false,
       },
     };
+  },
+  computed: {
+    cgevTaskImage: function() {
+      return CGEV_IMAGE_BASE.cgev_image_base + this.cardPazulData.task_image;
+    },
   },
   methods: {
     clickYear: function() {
@@ -460,24 +491,24 @@ export default {
   text-align: center;
 }
 
-.quiz-medal {
+.quiz-rank_count_ {
   margin: 10px 0 0 30px;
   width: 40px;
 }
 // CSS reset END
 
-$gold-medal: #f9ad0e;
-$silver-medal: #d1d7da;
-$bronze-medal: #df7e08;
-$neutral-medal: #d1d7da;
+$gold-rank_count_: #f9ad0e;
+$silver-rank_count_: #d1d7da;
+$bronze-rank_count_: #df7e08;
+$neutral-rank_count_: #d1d7da;
 
-.quiz-medal {
+.quiz-rank_count_ {
   position: relative;
   margin-bottom: 16px;
   float: left;
 }
 
-.quiz-medal__circle {
+.quiz-rank_count___circle {
   font-family: "Roboto", sans-serif;
   font-size: 28px;
   font-weight: 500;
@@ -494,54 +525,54 @@ $neutral-medal: #d1d7da;
   z-index: 1;
 
   // Default colors
-  box-shadow: inset 0 0 0 darken($neutral-medal, 15%),
+  box-shadow: inset 0 0 0 darken($neutral-rank_count_, 15%),
     2px 2px 0 rgba(0, 0, 0, 0.08);
-  border-color: lighten(adjust-hue($neutral-medal, 10), 10%);
-  text-shadow: 2px 2px 0 darken($neutral-medal, 20%);
+  border-color: lighten(adjust-hue($neutral-rank_count_, 10), 10%);
+  text-shadow: 2px 2px 0 darken($neutral-rank_count_, 20%);
   background: linear-gradient(
     to bottom right,
-    $neutral-medal 50%,
-    darken($neutral-medal, 5%) 50%
+    $neutral-rank_count_ 50%,
+    darken($neutral-rank_count_, 5%) 50%
   );
 
-  &.quiz-medal__circle--gold {
-    box-shadow: inset 0 0 0 darken($gold-medal, 15%),
+  &.quiz-rank_count___circle--gold {
+    box-shadow: inset 0 0 0 darken($gold-rank_count_, 15%),
       2px 2px 0 rgba(0, 0, 0, 0.08);
-    border-color: lighten(adjust-hue($gold-medal, 10), 10%);
-    text-shadow: 0 0 4px darken($gold-medal, 20%);
+    border-color: lighten(adjust-hue($gold-rank_count_, 10), 10%);
+    text-shadow: 0 0 4px darken($gold-rank_count_, 20%);
     background: linear-gradient(
       to bottom right,
-      $gold-medal 50%,
-      darken($gold-medal, 5%) 50%
+      $gold-rank_count_ 50%,
+      darken($gold-rank_count_, 5%) 50%
     );
   }
 
-  &.quiz-medal__circle--silver {
-    box-shadow: inset 0 0 0 darken($silver-medal, 15%),
+  &.quiz-rank_count___circle--silver {
+    box-shadow: inset 0 0 0 darken($silver-rank_count_, 15%),
       2px 2px 0 rgba(0, 0, 0, 0.08);
-    border-color: lighten(adjust-hue($silver-medal, 10), 10%);
-    text-shadow: 0px 0px 4px darken($silver-medal, 20%);
+    border-color: lighten(adjust-hue($silver-rank_count_, 10), 10%);
+    text-shadow: 0px 0px 4px darken($silver-rank_count_, 20%);
     background: linear-gradient(
       to bottom right,
-      $silver-medal 50%,
-      darken($silver-medal, 5%) 50%
+      $silver-rank_count_ 50%,
+      darken($silver-rank_count_, 5%) 50%
     );
   }
 
-  &.quiz-medal__circle--bronze {
-    box-shadow: inset 0 0 0 darken($bronze-medal, 15%),
+  &.quiz-rank_count___circle--bronze {
+    box-shadow: inset 0 0 0 darken($bronze-rank_count_, 15%),
       2px 2px 0 rgba(0, 0, 0, 0.08);
-    border-color: lighten(adjust-hue($bronze-medal, 10), 10%);
-    text-shadow: 0 0 4px darken($bronze-medal, 20%);
+    border-color: lighten(adjust-hue($bronze-rank_count_, 10), 10%);
+    text-shadow: 0 0 4px darken($bronze-rank_count_, 20%);
     background: linear-gradient(
       to bottom right,
-      $bronze-medal 50%,
-      darken($bronze-medal, 5%) 50%
+      $bronze-rank_count_ 50%,
+      darken($bronze-rank_count_, 5%) 50%
     );
   }
 }
 
-.quiz-medal__ribbon {
+.quiz-rank_count___ribbon {
   content: "";
   display: block;
   position: absolute;
@@ -552,13 +583,13 @@ $neutral-medal: #d1d7da;
   top: 50px;
 }
 
-.quiz-medal__ribbon--left {
+.quiz-rank_count___ribbon--left {
   border-color: #fc402d #fc402d transparent #fc402d;
   left: 8px;
   transform: rotate(20deg) translateZ(-32px);
 }
 
-.quiz-medal__ribbon--right {
+.quiz-rank_count___ribbon--right {
   left: 28px;
   border-color: darken(#fc402d, 10%) darken(#fc402d, 10%) transparent
     darken(#fc402d, 10%);

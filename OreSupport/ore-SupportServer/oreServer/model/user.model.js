@@ -1,7 +1,7 @@
 const Sequelize = require("sequelize");
-const {sequelize} = require('../common/db.common');
+const { sequelize } = require('../common/db.common');
 const { freezeTableName } = require("../config/database.config");
-const {UserProfile} = require("./userprofile.model")
+const { UserProfile } = require("./userprofile.model")
 
 
 // ユーザモデル
@@ -96,7 +96,7 @@ const User = sequelize.define('User', {
     timestamps: false,　 // モデルに変更tamestamp カラム自動追加禁止
 });
 // モデルとDB同期取得 force オプションを必ずFalseを指定（trueの場合、テーブル削除して、再作成になる）
-var user =  User.sync({ force: false });
+var user = User.sync({ force: false });
 /* // ユーザテーブルとプロフィールテーブル関連
 User.hasOne(UserProfile,{
     foreignKey: {
@@ -109,5 +109,5 @@ UserProfile.belongsTo(User); */
 
 
 module.exports = {
-    User:User
+    User: User
 }

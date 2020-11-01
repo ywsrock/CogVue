@@ -4,70 +4,71 @@
     style="width: 100%;padding-top: 10px;"
     max-height="450px"
     height="450"
+    empty-text="トレーニング履歴見つかりません..."
   >
-    <el-table-column label="利用日" align="center" width="100px">
+    <el-table-column label="利用日" align="center" width="100%px">
       <template slot-scope="scope">
-        {{ scope.row.UseDate }}
+        {{ scope.row.target_at }}
       </template>
     </el-table-column>
     <el-table-column label="見当識" align="center">
       <template slot-scope="scope">
-        {{ scope.row.Orientation }}
+        {{ scope.row.task_id_1 }}
       </template>
     </el-table-column>
     <el-table-column label="視覚探索" align="center">
       <template slot-scope="scope">
-        {{ scope.row.VisualSearch }}
+        {{ scope.row.task_id_2 }}
       </template>
     </el-table-column>
     <el-table-column label="双子探し" align="center">
       <template slot-scope="scope">
-        {{ scope.row.TwinsSearch }}
+        {{ scope.row.task_id_3 }}
       </template>
     </el-table-column>
     <el-table-column label="ストップウォッチ" align="center">
       <template slot-scope="scope">
-        {{ scope.row.StopWatch }}
+        {{ scope.row.task_id_4 }}
       </template>
     </el-table-column>
     <el-table-column label="フラッシュライト" align="center">
       <template slot-scope="scope">
-        {{ scope.row.Flashlight }}
+        {{ scope.row.task_id_5 }}
       </template>
     </el-table-column>
     <el-table-column label="カード記憶" align="center" width="90px">
       <template slot-scope="scope">
-        {{ scope.row.CardMemory }}
+        {{ scope.row.task_id_6 }}
       </template>
     </el-table-column>
     <el-table-column label="ストーリー" align="center" width="90px">
       <template slot-scope="scope">
-        {{ scope.row.Story }}
+        {{ scope.row.task_id_7 }}
       </template>
     </el-table-column>
     <el-table-column label="ルート99" align="center">
       <template slot-scope="scope">
-        {{ scope.row.Route99 }}
+        {{ scope.row.task_id_8 }}
       </template>
     </el-table-column>
     <el-table-column label="ステップ" align="center">
       <template slot-scope="scope">
-        {{ scope.row.Step }}
+        {{ scope.row.task_id_9 }}
       </template>
     </el-table-column>
     <el-table-column label="ナンバーステップ" align="center">
       <template slot-scope="scope">
-        {{ scope.row.NumberStep }}
+        {{ scope.row.task_id_10 }}
       </template>
     </el-table-column>
     <el-table-column label="ジャストフィット" align="center">
       <template slot-scope="scope">
-        {{ scope.row.JustFit }}
+        {{ scope.row.task_id_11 }}
       </template>
     </el-table-column>
     <el-table-column label="さめがめ" align="center">
       <template slot-scope="scope">
-        {{ scope.row.Turtle }}
+        {{ scope.row.task_id_12 }}
       </template>
     </el-table-column>
   </el-table>
@@ -105,23 +106,7 @@ export default {
       item: [],
     };
   },
-  mounted() {
-    // this.$nextTick(() => {
-    //   this.$http.get("/api/personal/CogEvo/transactionTable").then(
-    //     (res) => {
-    //       this.item = res.data.transactionTableChartData;
-    //       this.list = res.data.transactionTableChartData;
-    //       console.log("---" & this.item);
-    //     },
-    //     (error) => {
-    //       console.log(error);
-    //     }
-    //   );
-    // });
-  },
-  // created() {
-  //   this.fetchData();
-  // },
+  mounted() {},
   methods: {
     indexMethod(index) {
       return index + 1;

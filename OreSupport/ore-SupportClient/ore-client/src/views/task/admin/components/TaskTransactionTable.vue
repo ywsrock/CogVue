@@ -7,22 +7,22 @@
   >
     <el-table-column label="トレーニング日" align="center" width="100px">
       <template slot-scope="scope">
-        {{ scope.row.UseDate }}
+        {{ scope.row.created_at }}
       </template>
     </el-table-column>
     <el-table-column label="時間" align="center">
       <template slot-scope="scope">
-        {{ scope.row.Orientation }}
+        {{ scope.row.playtime }}
       </template>
     </el-table-column>
     <el-table-column label="得点" align="center">
       <template slot-scope="scope">
-        {{ scope.row.VisualSearch }}
+        {{ scope.row.score }}
       </template>
     </el-table-column>
     <el-table-column label="指数" align="center">
       <template slot-scope="scope">
-        {{ scope.row.TwinsSearch }}
+        {{ scope.row.performance }}
       </template>
     </el-table-column>
   </el-table>

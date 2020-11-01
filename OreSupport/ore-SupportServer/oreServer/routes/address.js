@@ -9,6 +9,13 @@ router.post("/autoSearch", async function (req, res, next) {
     request.get(
       "https://zip-cloud.appspot.com/api/search?zipcode=" + postalcode,
       function (err, resZipcloud, body) {
+        if (!resZipcloud.body) {
+          resObj = {
+            code: STATUS_MESSAGE.CODE_402,
+            message: "住所取得エラー",
+          };
+          return res.status(500).send(resObj);
+        }
         resObj = {
           code: STATUS_MESSAGE.CODE_SUCCESS,
           data: JSON.parse(resZipcloud.body),

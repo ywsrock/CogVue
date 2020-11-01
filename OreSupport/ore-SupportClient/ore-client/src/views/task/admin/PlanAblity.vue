@@ -3,7 +3,13 @@
     <div class="page-wrapper">
       <div class="main">
         <div class="main-inner">
-          <div class="content">
+          <div
+            class="content"
+            v-loading.fullscreen.lock="loadFlg"
+            element-loading-text="記録取得中......"
+            element-loading-spinner="el-icon-loading"
+            element-loading-background="rgba(0, 0, 0, 0.8)"
+          >
             <div class="mt-70 mb70">
               <div class="detail-banner">
                 <div class="container">
@@ -43,13 +49,9 @@
                       >
                       <div class="detail-banner-rating">
                         <i class="detail-verified" style="float:left"
-                          >{{ ability_rate0 }}級</i
+                          >{{ star_0 }}級</i
                         >
-                        <el-rate
-                          v-model="ability_rate0"
-                          disabled
-                          text-color="#ff9900"
-                        >
+                        <el-rate v-model="star_0" disabled text-color="#ff9900">
                         </el-rate>
                       </div>
                     </div>
@@ -66,13 +68,9 @@
                       >
                       <div class="detail-banner-rating">
                         <i class="detail-verified" style="float:left"
-                          >{{ ability_rate1 }}級</i
+                          >{{ star_1 }}級</i
                         >
-                        <el-rate
-                          v-model="ability_rate1"
-                          disabled
-                          text-color="#ff9900"
-                        >
+                        <el-rate v-model="star_1" disabled text-color="#ff9900">
                         </el-rate>
                       </div>
                     </div>
@@ -89,13 +87,9 @@
                       >
                       <div class="detail-banner-rating">
                         <i class="detail-verified" style="float:left"
-                          >{{ ability_rate2 }}級</i
+                          >{{ star_2 }}級</i
                         >
-                        <el-rate
-                          v-model="ability_rate2"
-                          disabled
-                          text-color="#ff9900"
-                        >
+                        <el-rate v-model="star_2" disabled text-color="#ff9900">
                         </el-rate>
                       </div>
                     </div>
@@ -112,7 +106,8 @@
               <CommonAbility
                 :showDataObj="showData"
                 :showAbilityName="abilityName"
-                :key="legendData[0]"
+                :key="task_name"
+                :loadFlg="loadFlg"
                 v-cloak
               />
             </div>
@@ -199,6 +194,8 @@
 
 <script>
 import CommonAbility from "./components/CommonAbility";
+import { TaskData } from "@/store/cgevModel/task";
+import { CGEV_SESSION_KEY } from "@/utils/const";
 
 export default {
   name: "PlanAbility",
@@ -206,23 +203,97 @@ export default {
     CommonAbility,
   },
   mounted() {
-    this.$http.get("/api/personal/CogEvo/PlanAbility").then(
-      (res) => {
-        this.dataObj = Object.assign({}, this.dataObj, res.data.PlanAbility);
-        this.legendData = this.dataObj.Flashlight.legendData;
-        this.ability_rate0 = this.dataObj.Flashlight.cardPazulData.current_ability_rate;
-        this.ability_rate1 = this.dataObj.CardMemory.cardPazulData.current_ability_rate;
-        this.ability_rate2 = this.dataObj.Story.cardPazulData.current_ability_rate;
-        this.showData = Object.assign(
-          {},
-          this.showData,
-          this.dataObj.Flashlight
-        );
-      },
-      (error) => {
-        console.log(error);
-      }
-    );
+    if (this.$session.has(CGEV_SESSION_KEY.TASK_ID_8910)) {
+      let sessionDataObj = this.$session.get(CGEV_SESSION_KEY.TASK_ID_8910);
+      this.dataObj = Object.assign(this.dataObj, sessionDataObj);
+      this.task_name = this.dataObj.Flashlight.cardPazulData.task_name;
+      this.star_0 = this.dataObj.Flashlight.cardPazulData.star;
+      this.star_1 = this.dataObj.CardMemory.cardPazulData.star;
+      this.star_2 = this.dataObj.Story.cardPazulData.star;
+      this.showData = Object.assign({}, this.showData, this.dataObj.Flashlight);
+      //ロード完了
+      this.loadFlg = false;
+    } else {
+      this.$nextTick(async () => {
+        await this.$store.dispatch("cgev/authenticate");
+        Promise.all([
+          await this.$store.dispatch("cgev/recordsTasksIdSummary", {
+            task_id: 8,
+          }),
+          await this.$store.dispatch("cgev/recordsTasksIdSummary", {
+            task_id: 9,
+          }),
+          await this.$store.dispatch("cgev/recordsTasksIdSummary", {
+            task_id: 10,
+          }),
+          /* eslint-disable */
+        ])
+          .then(([FlashlightData, CardMemoryData, StoryData]) => {
+            if (Object.keys(FlashlightData).length === 0) {
+              throw new Error();
+            }
+            this.dataObj = Object.assign(
+              this.dataObj,
+              {
+                Flashlight: { cardPazulData: FlashlightData },
+              },
+              {
+                CardMemory: { cardPazulData: CardMemoryData },
+              },
+              {
+                Story: { cardPazulData: StoryData },
+              }
+            );
+            this.$session.set(CGEV_SESSION_KEY.TASK_ID_8910, this.dataObj);
+            // console.log(JSON.stringify(this.dataObj, null, "\t"));
+
+            this.task_name = this.dataObj.Flashlight.cardPazulData.task_name;
+            this.star_0 = this.dataObj.Flashlight.cardPazulData.star;
+            this.star_1 = this.dataObj.CardMemory.cardPazulData.star;
+            this.star_2 = this.dataObj.Story.cardPazulData.star;
+            this.showData = Object.assign(
+              {},
+              this.showData,
+              this.dataObj.Flashlight
+            );
+            //ロード完了
+            this.loadFlg = false;
+          })
+          .catch((error) => {
+            if (this.$session.has(CGEV_SESSION_KEY.TASK_ID_8910)) {
+              this.$session.remove(CGEV_SESSION_KEY.TASK_ID_8910);
+            }
+            // 失敗の場合、初期設定
+            this.dataObj = Object.assign({}, this.dataObj, TaskData);
+            this.task_name = this.dataObj.Flashlight.cardPazulData.task_name;
+            this.star_0 = this.dataObj.Flashlight.cardPazulData.star;
+            this.star_1 = this.dataObj.CardMemory.cardPazulData.star;
+            this.star_2 = this.dataObj.Story.cardPazulData.star;
+            this.showData = Object.assign(
+              {},
+              this.showData,
+              this.dataObj.Flashlight
+            );
+          });
+      });
+    }
+    // this.$http.get("/api/personal/CogEvo/PlanAbility").then(
+    //   (res) => {
+    //     this.dataObj = Object.assign({}, this.dataObj, res.data.PlanAbility);
+    //     this.task_name = this.dataObj.Flashlight.task_name;
+    //     this.star_0 = this.dataObj.Flashlight.cardPazulData.current_star_0
+    //     this.star_0 = this.dataObj.CardMemory.cardPazulData.current_star_0
+    //     this.star_0 = this.dataObj.Story.cardPazulData.current_star_0
+    //     this.showData = Object.assign(
+    //       {},
+    //       this.showData,
+    //       this.dataObj.Flashlight
+    //     );
+    //   },
+    //   (error) => {
+    //     console.log(error);
+    //   }
+    // );
   },
   watch: {
     $route: function(to, from) {
@@ -234,18 +305,20 @@ export default {
   data() {
     return {
       dataObj: {},
+      //ロード状態
+      loadFlg: true,
       //コンポーネント表示データ
-      showData: {},
-      // // チャートlegendData
-      legendData: ["ルート99 "],
+      showData: TaskData.Flashlight,
+      // // チャートtask_name
+      task_name: "ルート99 ",
       // // ユーザ名
       userName: this.$session.get("UserName") || "",
       // // 能力名
       abilityName: "計画力",
       // // 等級
-      ability_rate0: 5,
-      ability_rate1: 3.5,
-      ability_rate2: 4,
+      star_0: 5,
+      star_1: 3.5,
+      star_2: 4,
       // 年、月、週 カレントアクティブ
       activeObj: {
         isActiveY: true,
@@ -270,7 +343,8 @@ export default {
           this.$nextTick().then(function() {
             that.showData = that.dataObj.CardMemory;
           });
-          this.legendData = this.dataObj.CardMemory.legendData || ["2"];
+          this.task_name =
+            this.dataObj.CardMemory.task_name || "ナンバーステップ";
           break;
         case 3:
           this.activeTabObj.isTab1 = false;
@@ -280,7 +354,7 @@ export default {
             that.showData = that.dataObj.Story;
           });
 
-          this.legendData = this.dataObj.Story.legendData || ["3"];
+          this.task_name = this.dataObj.Story.task_name || "ステップ ";
           break;
         default:
           this.activeTabObj.isTab1 = true;
@@ -289,7 +363,7 @@ export default {
           this.$nextTick().then(function() {
             that.showData = that.dataObj.Flashlight;
           });
-          this.legendData = this.dataObj.Flashlight.legendData || ["1"];
+          this.task_name = this.dataObj.Flashlight.task_name || "ルート99 ";
       }
     },
   },

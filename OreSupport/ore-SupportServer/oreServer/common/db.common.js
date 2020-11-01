@@ -53,7 +53,7 @@ const beginTransaction = (connection) => {
  */
 const query = (connection, statement, params) => {
     return new Promise((resolve, reject) => {
-        connection.query(statement,params, (err, results, fields) => {
+        connection.query(statement, params, (err, results, fields) => {
             if (err) {
                 reject(err);
             } else {
@@ -98,13 +98,13 @@ const rollback = (connection, err) => {
  * 接続リソース開放
  * @Param connection Connection 
  */
-const　release = (connection) => {
-    return new Promise((resolve,reject) =>{
+const release = (connection) => {
+    return new Promise((resolve, reject) => {
         try {
             connection.release();
             resolve()
         } catch (error) {
-           reject(error) 
+            reject(error)
         }
     });
 };
@@ -119,16 +119,16 @@ const　release = (connection) => {
 ＠return Sequelizeインスタンス */
 const sequelize = new Sequelize(databaseconfig.database, databaseconfig.user, databaseconfig.password,
     {
-       host:databaseconfig.host,
-       dialect:databaseconfig.dialect,
-       define:{
-       freezeTableName: true
-    },
-       pool: {
-            max:databaseconfig.max,
-            min:databaseconfig.min,
-            idle:databaseconfig.idle
-       }
+        host: databaseconfig.host,
+        dialect: databaseconfig.dialect,
+        define: {
+            freezeTableName: true
+        },
+        pool: {
+            max: databaseconfig.max,
+            min: databaseconfig.min,
+            idle: databaseconfig.idle
+        }
     });
 
 module.exports = {
@@ -138,7 +138,7 @@ module.exports = {
     commit: commit,
     release: release,
     rollback: rollback,
-    sequelize:sequelize // ORM
+    sequelize: sequelize // ORM
 }
 
 

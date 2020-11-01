@@ -49,7 +49,7 @@ export function viewBlog(token) {
         url: '/blog/view',
         method: 'get',
         params: { token }
-        
+
     })
 }
 

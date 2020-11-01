@@ -4,13 +4,21 @@ var path = require("path");
 var cookieParser = require("cookie-parser");
 // var logger = require('morgan');
 var session = require("express-session");
+const log4js = require("log4js");
+const logConfig = require("./config/log4js");
+var ect = require("ect");
 var indexRouter = require("./routes/index");
 var informationRouter = require("./routes/information");
+var slideImageRouter = require("./routes/slide_image");
+var bannerImageRouter = require("./routes/banner_image");
+var adminAuthRouter = require("./routes/admin_auth");
 var usersRouter = require("./routes/users");
 var blogRouter = require("./routes/blog");
 var addressRouter = require("./routes/address");
-const log4js = require("log4js");
-const logConfig = require("./config/log4js");
+var actionRouter = require("./routes/action");
+var passport = require("passport");
+var bodyParser = require("body-parser");
+
 //log4Js設定
 log4js.configure(logConfig);
 
@@ -24,7 +32,7 @@ var sessionOpt = {
   resave: false,
   saveUninitialized: false,
   cookie: {
-    MaxAge: 60 * 60 * 60,
+    MaxAge: 60 * 60 * 1000, //1時間設定
   },
 };
 
@@ -41,8 +49,11 @@ var crossopt = (req, res, next) => {
 };
 
 // view engine setup
-app.set("views", path.join(__dirname, "views"));
-app.set("view engine", "ejs");
+app.engine(
+  "ect",
+  ect({ watch: true, root: __dirname + "/views", ext: ".ect" }).render
+);
+app.set("view engine", "ect");
 // crossアクセス許可
 app.use(crossopt);
 //ログ処理
@@ -59,11 +70,21 @@ app.use(session(sessionOpt));
 //　ログ出力設定
 app.use(log4js.connectLogger(log4js.getLogger("http"), { level: "auto" }));
 
+app.use(bodyParser.urlencoded({ extended: true }));
+
+app.use(passport.initialize());
+
+app.use(passport.session());
+
 app.use("/", indexRouter);
 app.use("/user", usersRouter);
 app.use("/blog", blogRouter);
 app.use("/information", informationRouter);
+app.use("/slide_image", slideImageRouter);
+app.use("/banner_image", bannerImageRouter);
 app.use("/address", addressRouter);
+app.use("/action", actionRouter);
+app.use("/admin", adminAuthRouter);
 
 // catch 404 and forward to error handler
 app.use(function (req, res, next) {

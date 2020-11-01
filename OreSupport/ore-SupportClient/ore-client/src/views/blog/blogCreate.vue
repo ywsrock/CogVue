@@ -1,64 +1,317 @@
 <template>
-  <div class="ユーザINFO">
-    <form @submit.prevent="createBlog" style="border:1px solid #ccc">
-      <div class="container">
-        <h1>ブログ登録</h1>
-        <p>ブログ新規作成</p>
-        <hr />
-        <label for="title"><b>タイトル</b></label>
-        <input
-          type="text"
-          ref="title"
-          placeholder="タイトル"
-          v-model="registForm.title"
-          name="title"
-          required
-        />
-        <label for="content"><b>内容</b></label>
-        <textarea
-          class="form-control"
-          rows="7"
-          placeholder="内容"
-          name="content"
-          v-model="registForm.content"
-          :readonly="is_readonly"
-        ></textarea>
-        <!-- <label for="repeatpassword"><b>その他</b></label>
-        <input
-          type="text"
-          ref="repeatpassword"
-          placeholder="その他"
-          name="repeatpassword"
-          v-model="registForm.repeatpassword"
+  <div id="ユーザINFO">
+    <body class="">
+      <div class="page-wrapper">
+        <div id="header" class="header"></div>
 
-          required
-        /> -->
-        <!-- <p style="color:red;font-size:12px" ref="e-password2"></p>
+        <div class="main">
+          <form @submit.prevent="createBlog" style="border:1px solid #ccc">
+            <div class="main-inner">
+              <div class="container">
+                <div class="content">
+                  <div class="page-title">
+                    <h1>ブログ投稿</h1>
+                  </div>
+                  <!-- /.page-title -->
 
-        <label>
-          <input
-            type="checkbox"
-            checked="checked"
-            name="remember"
-            style="margin-bottom:15px"
-          />
+                  <div class="background-white p20 mb30">
+                    <h3 class="page-title">
+                      投稿内容
+                    </h3>
 
-        </label> -->
+                    <div class="row">
+                      <div class="col-sm-8">
+                        <div class="form-group col-sm-12">
+                          <label for="title">タイトル</label>
+                          <input
+                            type="text"
+                            ref="title"
+                            placeholder="タイトル"
+                            v-model="registForm.title"
+                            name="title"
+                            required
+                            class="form-control"
+                          />
+                        </div>
+                        <!-- /.form-group -->
 
-        <div class="clearfix">
-          <button type="button" class="cancelbtn">キャンセル</button>
-          <button type="submit" class="signupbtn">新規作成</button>
+                        <div class="col-sm-4">
+                          <label>公開範囲</label>
+                          <select>
+                            <option value="公開">公開</option>
+                            <option value="友達">友達</option>
+                            <option value="個人">個人</option>
+                          </select>
+                        </div>
+                        <!-- /.form-group -->
+
+                        <div class="col-sm-4">
+                          <label>コメント可否</label>
+                          <select>
+                            <option value="可">可</option>
+                            <option value="不可">不可</option>
+                          </select>
+                        </div>
+                        <!-- /.form-group -->
+
+                        <div class="col-sm-4">
+                          <label>日付</label>
+                          <input
+                            class="form-control"
+                            type="date"
+                            name="uploadday"
+                          />
+                        </div>
+                        <!-- /.form-group -->
+                      </div>
+                      <!-- /.form-group -->
+
+                      <div class="col-sm-4">
+                        <div class="widget">
+                          <div class="user-photo col-sm-6">
+                            <a href="#">
+                              <img
+                                src="../../assets/img/tmp/agent-2.jpg"
+                                alt="User Photo"
+                              />
+                              <span class="user-photo-action">画像を追加</span>
+                            </a>
+                          </div>
+                          <!-- /.user-photo -->
+                          <div class="user-photo col-sm-6">
+                            <a href="#">
+                              <img
+                                src="../../assets/img/tmp/agent-2.jpg"
+                                alt="User Photo"
+                              />
+                              <span class="user-photo-action">画像を追加</span>
+                            </a>
+                          </div>
+                          <!-- /.user-photo -->
+                        </div>
+                        <!-- /.widget -->
+                      </div>
+                      <!-- col-sm-6 -->
+                    </div>
+                    <!-- /.row -->
+                  </div>
+
+                  <div class="background-white p20 mb30">
+                    <h3 class="page-title">
+                      内容
+
+                      <div class="col-sm-4 pull-right">
+                        <a href="#" class="btn btn-primary col-sm-5"
+                          >タグを登録</a
+                        >
+                        <a href="#" class="btn btn-primary col-sm-5 pull-right"
+                          >追加</a
+                        >
+                      </div>
+                    </h3>
+
+                    <div class="form-horizontal">
+                      <div class="form-group">
+                        <label class="col-sm-2">
+                          <select>
+                            <option value="質問">質問</option>
+                            <option value="タグ">タグ</option>
+                            <option value="カテゴリー">カテゴリー</option>
+                          </select></label
+                        >
+                        <label class="col-sm-4">
+                          <select>
+                            <option value="質問"
+                              >今日の朝ごはんはなんですか</option
+                            >
+                            <option value="タグ">今日の体調はどうですか</option>
+                          </select></label
+                        >
+
+                        <div class="col-sm-6">
+                          <input
+                            type="text"
+                            class="form-control"
+                            value="パンとミルク"
+                          />
+                        </div>
+                        <!-- /.col-* -->
+                      </div>
+                      <!-- /.form-group -->
+
+                      <div class="form-group">
+                        <label class="col-sm-2">
+                          <select>
+                            <option value="質問">質問</option>
+                            <option value="タグ">タグ</option>
+                            <option value="カテゴリー">カテゴリー</option>
+                          </select></label
+                        >
+                        <label class="col-sm-4">
+                          <select>
+                            <option value="質問"
+                              >今日の朝ごはんはなんですか</option
+                            >
+                            <option value="タグ" selected>睡眠時間は？</option>
+                          </select></label
+                        >
+
+                        <div class="col-sm-6">
+                          <input
+                            type="text"
+                            class="form-control"
+                            value="7時間です"
+                          />
+                        </div>
+                        <!-- /.col-* -->
+                      </div>
+                      <!-- /.form-group -->
+
+                      <div class="form-group">
+                        <label class="col-sm-2">
+                          <select>
+                            <option value="質問">質問</option>
+                            <option value="タグ" selected>タグ</option>
+                            <option value="カテゴリー">カテゴリー</option>
+                          </select></label
+                        >
+                        <label class="col-sm-4">
+                          <select>
+                            <option value="質問">ランニング</option>
+                            <option value="タグ">計算ドリル</option>
+                            <option value="タグ">サプリメント</option>
+                          </select></label
+                        >
+
+                        <div class="col-sm-6">
+                          <input
+                            type="text"
+                            class="form-control"
+                            placeholder="12時間"
+                          />
+                        </div>
+                        <!-- /.col-* -->
+                      </div>
+                      <!-- /.form-group -->
+
+                      <div class="form-group">
+                        <label class="col-sm-2">
+                          <select>
+                            <option value="質問">質問</option>
+                            <option value="タグ" selected>タグ</option>
+                            <option value="カテゴリー">カテゴリー</option>
+                          </select></label
+                        >
+                        <label class="col-sm-4">
+                          <select>
+                            <option value="質問">ランニング</option>
+                            <option value="タグ" selected>計算ドリル</option>
+                            <option value="タグ">サプリメント</option>
+                          </select></label
+                        >
+
+                        <div class="col-sm-6">
+                          <input
+                            type="text"
+                            class="form-control"
+                            placeholder="1時間"
+                          />
+                        </div>
+                        <!-- /.col-* -->
+                      </div>
+                      <!-- /.form-group -->
+
+                      <div class="form-group">
+                        <label class="col-sm-2">
+                          <select>
+                            <option value="質問">質問</option>
+                            <option value="タグ">タグ</option>
+                            <option value="カテゴリー" selected
+                              >カテゴリー</option
+                            >
+                          </select></label
+                        >
+                        <label class="col-sm-4">
+                          <select>
+                            <option value="質問">日常</option>
+                            <option value="タグ">CogEvo</option>
+                          </select></label
+                        >
+                      </div>
+                      <!-- /.form-group -->
+                    </div>
+                    <!-- /.form-inline -->
+                  </div>
+                  <!-- /.background-white -->
+
+                  <div class="background-white p20 mb30">
+                    <h3 class="page-title">
+                      本文
+
+                      <div class="col-sm-4 pull-right">
+                        <a href="#" class="btn btn-primary col-sm-5"
+                          >商品選択</a
+                        >
+                        <a href="#" class="btn btn-primary col-sm-5 pull-right"
+                          >CogEvoデータ</a
+                        >
+                      </div>
+                    </h3>
+
+                    <label for="content"><b>内容</b></label>
+                    <textarea
+                      class="form-control"
+                      rows="7"
+                      placeholder="内容"
+                      name="content"
+                      v-model="registForm.content"
+                      :readonly="is_readonly"
+                    ></textarea>
+
+                    <div class="background-white p20 mb30">
+                      <div class="col-sm-4">
+                        <button type="submit" href="#" class="btn btn-primary col-sm-5">
+                          登録
+                        </button>
+                        <button
+                          href="#"
+                          class="btn btn-primary col-sm-5 pull-right"
+                        >
+                          一時保存
+                        </button>
+                        <br /><br />
+                      </div>
+                      <div class="col-sm-4 pull-right">
+                        <a href @click.prevent="blogClick" class="btn btn-primary col-sm-5 pull-right">キャンセル</a>
+
+                        <!-- <button type="reset"
+                          href="#"
+                          class="btn btn-primary col-sm-5 pull-right"
+                        >
+                          キャンセル
+                        </button> -->
+                      </div>
+                    </div>
+                  </div>
+                  <!-- /.content -->
+                </div>
+                <!-- /.container -->
+              </div>
+              <!-- /.main-inner -->
+            </div>
+            <!-- /.main -->
+          </form>
         </div>
+        <div id="footer" class="footer"></div>
       </div>
-    </form>
+      <!-- /.page-wrapper -->
+    </body>
   </div>
 </template>
 
 <script>
 import { Message } from "element-ui";
-
 /* eslint-disable */
-
 export default {
   data() {
     return {
@@ -76,101 +329,43 @@ export default {
       // // 全項目チェック、問題なければ、登録処理を行う
       // const isValid = this.validate(this.registForm, this.rules);
       // if (!isValid) {
-        // ユーザ登録処理
-         this.$store
-          .dispatch("blog/createBlog", this.registForm)
-          .then((res) => {
-            Message({
-              message: "作成OK",
-              type: "success",
-              duration: 5 * 1000,
-            }),
-              // ログイン画面に遷移
-              this.$router.push({ path: "/blog/blogList" }).catch(err => {});
-          })
-          .catch((error) => {
-             e.target.disabled=false;
-            console.log(error.data);
-            console.log("作成失敗");
-          });
-      }
+      // ユーザ登録処理
+      this.$store
+        .dispatch("blog/createBlog", this.registForm)
+        .then((res) => {
+          Message({
+            message: "作成OK",
+            type: "success",
+            duration: 5 * 1000,
+          }),
+            // ログイン画面に遷移
+            this.$router.push({ path: "/blog/blogList" }).catch((err) => {});
+        })
+        .catch((error) => {
+          e.target.disabled = false;
+          console.log(error.data);
+          console.log("作成失敗");
+        });
     },
-  };
+    blogClick: function() {
+      this.$router.push("/blog/blogList");
+    },
+  },
+};
 </script>
 
-<style scoped>
-* {
-  box-sizing: border-box;
-}
-
-/* Full-width input fields */
-input[type="text"],
-input[type="password"] {
-  width: 100%;
-  padding: 15px;
-  margin: 5px 0 22px 0;
-  display: inline-block;
-  border: none;
-  background: #f1f1f1;
-}
-
-input[type="text"]:focus,
-input[type="password"]:focus {
-  background-color: #ddd;
-  outline: none;
-}
-
-hr {
-  border: 1px solid #f1f1f1;
-  margin-bottom: 25px;
-}
-
-/* Set a style for all buttons */
-button {
-  background-color: #4caf50;
-  color: white;
-  padding: 14px 20px;
-  margin: 8px 0;
-  border: none;
-  cursor: pointer;
-  width: 100%;
-  opacity: 0.9;
-}
-
-button:hover {
-  opacity: 1;
-}
-
-/* Extra styles for the cancel button */
-.cancelbtn {
-  padding: 14px 20px;
-  background-color: #f44336;
-}
-
-/* Float cancel and signup buttons and add an equal width */
-.cancelbtn,
-.signupbtn {
-  float: left;
-  width: 50%;
-}
-
-/* Add padding to container elements */
-.container {
-  padding: 16px;
-}
-
-/* Clear floats */
-.clearfix::after {
-  content: "";
-  clear: both;
-  display: table;
-}
-
-/* Change styles for cancel button and signup button on extra small screens */
-@media screen and (max-width: 300px) {
-  .cancelbtn,
-  .signupbtn {
-    width: 100%;
-  }
+<style>
+@import "https://fonts.googleapis.com/css?family=Nunito:300,400,700";
+@import "../../../public/assets/libraries/font-awesome/css/font-awesome.min.css";
+@import "../../../public/assets/libraries/owl.carousel/assets/owl.carousel.css";
+@import "../../../public/assets/libraries/colorbox/example1/colorbox.css";
+@import "../../../public/assets/libraries/bootstrap-select/bootstrap-select.min.css";
+@import "../../../public/assets/libraries/bootstrap-fileinput/fileinput.min.css";
+@import "../../../public/assets/css/superlist.css";
+#content {
+  display: -webkit-box;
+  -webkit-box-orient: vertical;
+  -webkit-line-clamp: 1;
+  overflow: hidden;
 }
 </style>

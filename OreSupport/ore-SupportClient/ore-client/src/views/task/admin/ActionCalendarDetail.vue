@@ -165,11 +165,6 @@ export default {
         this.ability_rate0 = this.dataObj.Flashlight.cardPazulData.current_ability_rate;
         this.ability_rate1 = this.dataObj.CardMemory.cardPazulData.current_ability_rate;
         this.ability_rate2 = this.dataObj.Story.cardPazulData.current_ability_rate;
-        // this.showData = Object.assign(
-        //   {},
-        //   this.showData,
-        //   this.dataObj.Flashlight
-        // );
       },
       (error) => {
         console.log(error);

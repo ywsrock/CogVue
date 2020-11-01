@@ -10,28 +10,28 @@ var log = require('log4js').getLogger("userDao");
  * 検索条件：ユーザ名とパスワード
  * 検索テーブル: ユーザ情報テーブル
  */
-const getUserInfoByUserName = async(queryInfo) => {
+const getUserInfoByUserName = async (queryInfo) => {
     log.info(`START getUserInfoByUserName: ${JSON.stringify(queryInfo)}`)
     try {
         // データ検索
         const result = await User.findOne({
-                where: {
-                    [Op.and]: [{
-                        [Op.or]: {
-                            UserName: {
-                                [Op.eq]: queryInfo.username
-                            },
-                            Email: {
-                                [Op.eq]: queryInfo.username
-                            }
+            where: {
+                [Op.and]: [{
+                    [Op.or]: {
+                        UserName: {
+                            [Op.eq]: queryInfo.username
                         },
-                        DisableFlag: {
-                            [Op.eq]: 0
+                        Email: {
+                            [Op.eq]: queryInfo.username
                         }
-                    }]
-                }
-            })
-            log.info(`END getUserInfoByUserName`)
+                    },
+                    DisableFlag: {
+                        [Op.eq]: 0
+                    }
+                }]
+            }
+        })
+        log.info(`END getUserInfoByUserName`)
         // 結果を返す
         return result;
     } catch (error) {
@@ -45,16 +45,16 @@ const getUserInfoByUserName = async(queryInfo) => {
  * 検索条件　指定field
  * 検索テーブル: ユーザ情報テーブル
  */
-const getUserInfoByField = async(queryInfo) => {
+const getUserInfoByField = async (queryInfo) => {
     log.info(`START getUserInfoByField : ${JSON.stringify(queryInfo)}`)
     try {
         // 結果を返す
         const result = await User.findOne({
             where: {
                 [Op.and]: [{
-                        [queryInfo.key]: queryInfo.val
-                    },
-                    { DisableFlag: 0 },
+                    [queryInfo.key]: queryInfo.val
+                },
+                { DisableFlag: 0 },
                 ]
             }
         });
@@ -70,7 +70,7 @@ const getUserInfoByField = async(queryInfo) => {
  * 登録データ：メールアドレス、パスワード
  * 検索テーブル: ユーザ情報テーブル
  */
-const saveUserAsEmailAndPassword = async(queryInfo) => {
+const saveUserAsEmailAndPassword = async (queryInfo) => {
     log.info(`START saveUserAsEmailAndPassword:${JSON.stringify(queryInfo)}`)
     try {
         // トランザクション処理開始
@@ -117,7 +117,7 @@ const saveUserAsEmailAndPassword = async(queryInfo) => {
 }
 
 // ユーザプロフィール情報取得
-const getUserProfileByUserID = async(queryInfo) => {
+const getUserProfileByUserID = async (queryInfo) => {
     log.info(`START getUserProfileByUserID : ${JSON.stringify(queryInfo)}`)
     try {
         // ユーザテーブルとプロフィールテーブル関連
@@ -138,9 +138,9 @@ const getUserProfileByUserID = async(queryInfo) => {
         const user = await User.findOne({
             where: {
                 [Op.and]: [{
-                        [queryInfo.key]: queryInfo.val
-                    },
-                    { DisableFlag: 0 }
+                    [queryInfo.key]: queryInfo.val
+                },
+                { DisableFlag: 0 }
                 ]
             },
             include: UserProfile, //　プリロードモード
@@ -156,7 +156,7 @@ const getUserProfileByUserID = async(queryInfo) => {
 }
 
 // ユーザプロフィール情報設定
-const saveUserProfile = async(updateProfile_obj, updateUser_obj, queryInfo, flg = false) => {
+const saveUserProfile = async (updateProfile_obj, updateUser_obj, queryInfo, flg = false) => {
     log.info(`START saveUserProfile: param1:${JSON.stringify(updateProfile_obj)} , param2:${JSON.stringify(updateUser_obj)}`)
     try {
         // ユーザテーブル更新の場合

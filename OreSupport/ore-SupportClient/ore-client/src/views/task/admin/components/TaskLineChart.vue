@@ -31,10 +31,10 @@ export default {
       required: true,
     },
     proplegendData: {
-      type: Array,
+      type: String,
       required: true,
       default: function() {
-        return [""];
+        return "";
       },
     },
     propxAxisData: {
@@ -127,12 +127,12 @@ export default {
         },
         legend: {
           // data: ["フラッシュライト"],
-          data: that.legendData,
+          data: [that.legendData],
         },
         series: [
           {
             // name: "フラッシュライト",
-            name: that.legendData[0],
+            name: that.legendData,
             itemStyle: {
               normal: {
                 color: "#FF005A",
