@@ -80,7 +80,7 @@
                     <br />
                     <!-- <a @click.prevent="getBlogDetail(item.id)"> -->
 
-                    <h2 id="reviews">23 Comments</h2>
+                    <h2 id="reviews"></h2>
 
                     <div class="comment-inner" v-for="item in blogDetail.comment" :key="item">
                       <div class="comments">
@@ -485,7 +485,7 @@ export default {
       .then(res => {
         //成功の場合
         // this.$router.push("/blogDetail?id=" + this.$route.query.id);
-        alert(JSON.stringify(that.$store.getters.get_comment));
+        
         this.$nextTick().then(function() {
           const content = that.$store.getters.get_content;
           const title = that.$store.getters.get_title;
