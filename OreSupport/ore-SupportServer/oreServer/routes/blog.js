@@ -1,6 +1,7 @@
 var express = require("express");
 var router = express.Router();
 var blogmodel = require("../dao/blog/blog.dao");
+var usermodel = require("../dao/user/user.dao");
 var checkuser = require("../common/check.token");
 const STATUS_MESSAGE = require("../common/const").STATUS_MESSAGE;
 
@@ -106,6 +107,11 @@ router.get("/blogdetail", async function (req, res, next) {
   //ブログ詳細取得
   var blogDetail = await blogmodel.getBlogDetail({ key: "id", val: id });
 
+
+  var userId = blogDetail[0].UserID
+  var userProfile = await usermodel.getUserProfileByUserID({ key: "userId", val: userId });
+
+
   if (typeof blogDetail.errors != "undefined") {
     // エラー結果
     resObj = {
@@ -118,12 +124,22 @@ router.get("/blogdetail", async function (req, res, next) {
     // var title = blog.Title;
     // var content = blog.Content
 
+    // let commentArray = []
+    // blogDetail.forEach((model) => {
+    //     commentArray.push(model.Comment1)
+    // })
+    
     resObj = {
       code: STATUS_MESSAGE.CODE_SUCCESS,
       data: {
-        id: blogDetail.id,
-        title: blogDetail.Title,
-        content: blogDetail.Content,
+        id:blogDetail[0].id,
+        //  blogDetail[0].Blog.id,
+        title: blogDetail[0].Title,
+        content: blogDetail[0].Content,
+        // comment: blogDetail.Comment1　|| "",
+        // comment: commentArray || "",
+        comment: blogDetail[0].Comments  || "",
+        userProfile:userProfile
       },
     };
   }
