@@ -39,7 +39,7 @@ Comment1:{
 }
 
 }, {
-    tableName: "Tb_Comment", //　Maping　テーブル名指定
+    tableName: "tb_comment", //　Maping　テーブル名指定
     modelName: "Comment", // モデル名指定
     timestamps: false,　 // モデルに変更tamestamp カラム自動追加禁止
 });
