@@ -1,0 +1,31 @@
+[2020-11-01T12:33:46.137] [INFO] startup - Listening on port 3000
+[2020-11-01T12:33:54.766] [INFO] users - profileInfo userID: 49 
+[2020-11-01T12:33:54.767] [INFO] userDao - START getUserProfileByUserID : {"key":"UserID","val":49}
+[2020-11-01T12:33:54.794] [INFO] userDao - END getUserProfileByUserID
+[2020-11-01T12:33:54.795] [INFO] users - profileInfo success
+[2020-11-01T12:35:10.792] [INFO] startup - Listening on port 3000
+[2020-11-01T12:35:44.769] [INFO] startup - Listening on port 3000
+[2020-11-01T12:35:53.079] [INFO] users - profileInfo userID: 49 
+[2020-11-01T12:35:53.080] [INFO] userDao - START getUserProfileByUserID : {"key":"UserID","val":49}
+[2020-11-01T12:35:53.095] [INFO] userDao - END getUserProfileByUserID
+[2020-11-01T12:35:53.096] [INFO] users - profileInfo success
+[2020-11-01T12:35:55.456] [INFO] users - profileInfo userID: 49 
+[2020-11-01T12:35:55.457] [INFO] userDao - START getUserProfileByUserID : {"key":"UserID","val":49}
+[2020-11-01T12:35:55.462] [INFO] userDao - END getUserProfileByUserID
+[2020-11-01T12:35:55.462] [INFO] users - profileInfo success
+[2020-11-01T12:35:57.815] [INFO] users - logout
+[2020-11-01T12:36:04.483] [INFO] users - ユーザログ UserName:1@1.com
+[2020-11-01T12:36:04.484] [INFO] userDao - START getUserInfoByUserName: {"username":"1@1.com"}
+[2020-11-01T12:36:04.489] [INFO] userDao - END getUserInfoByUserName
+[2020-11-01T12:36:04.572] [INFO] users - login success UserID: 49 
+[2020-11-01T12:36:04.582] [INFO] users - profileInfo userID: 49 
+[2020-11-01T12:36:04.582] [INFO] userDao - START getUserProfileByUserID : {"key":"UserID","val":49}
+[2020-11-01T12:36:04.585] [INFO] userDao - END getUserProfileByUserID
+[2020-11-01T12:36:04.586] [INFO] users - profileInfo success
+[2020-11-01T12:36:06.099] [INFO] users - profileInfo userID: 49 
+[2020-11-01T12:36:06.099] [INFO] userDao - START getUserProfileByUserID : {"key":"UserID","val":49}
+[2020-11-01T12:36:06.103] [INFO] userDao - END getUserProfileByUserID
+[2020-11-01T12:36:06.103] [INFO] users - profileInfo success
+[2020-11-01T12:36:07.433] [INFO] users - /queryAction 49
+[2020-11-01T12:36:43.508] [INFO] users - /saveAction [object Object]
+[2020-11-01T12:36:43.525] [INFO] users - /queryAction 49
