@@ -21,7 +21,6 @@ const state = {
     userName:"",
 
     commentName:""
-
 }
 
 /*
@@ -34,7 +33,6 @@ const getters = {
     get_comment: state => state.comment,
     get_userName: state => state.userName,
     get_userProfile: state => state.userProfile,
-
     get_commentName: state => state.commentName,
 
 }
@@ -91,7 +89,7 @@ const actions = {
 
         // ブログリスト
         getBlogList(context, blogInfo) {
-            return new Promise((resolve, reject) => {               
+            return new Promise((resolve, reject) => {
                 getBlogList()
                     .then(res => {
                         const data = res.data;
@@ -114,7 +112,7 @@ const actions = {
 
         // ブログ詳細
         getBlogDetail(context, blogId) {
-            return new Promise((resolve, reject) => {               
+            return new Promise((resolve, reject) => {
                 getBlogDetail(blogId)
                     .then(res => {
                         const data = res.data;
@@ -139,7 +137,7 @@ const actions = {
         },
 
         blogDelete(context, blogId) {
-            return new Promise((resolve, reject) => {               
+            return new Promise((resolve, reject) => {
                 blogDelete(blogId)
                     .then(res => {
                         const data = res.data;
@@ -157,7 +155,7 @@ const actions = {
                         reject(error);
                     })
             })
-        }, 
+        },
 
         blogUpdate(context, blogInfo) {
             return new Promise((resolve, reject) => {
@@ -189,7 +187,7 @@ const actions = {
 
 
         searchBlog(context, blogInfo) {
-            return new Promise((resolve, reject) => {               
+            return new Promise((resolve, reject) => {
                 searchBlog()
                     .then(res => {
                         const data = res.data;
