@@ -36,6 +36,11 @@ Comment1:{
     type: Sequelize.TEXT,
     allowNull: true,
     comment: "Comment1"
+},
+commentName:{
+    type: Sequelize.TEXT,
+    allowNull: true,
+    comment: "commentName"
 }
 
 }, {

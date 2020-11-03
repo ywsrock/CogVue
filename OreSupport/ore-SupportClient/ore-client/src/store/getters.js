@@ -17,6 +17,7 @@ const getters = {
     data: (state) => state.cgev.data,
     action: (state) => state.action.actionData,
     get_comment: state => state.blog.comment,
+    get_commentName: state => state.blog.commentName,
 
 }
 
