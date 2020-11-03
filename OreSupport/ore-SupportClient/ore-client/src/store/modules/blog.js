@@ -18,8 +18,9 @@ const state = {
 
     userProfile: [],
 
-    userName:""
+    userName:"",
 
+    image: ""
 }
 
 /*
@@ -31,7 +32,8 @@ const getters = {
     get_content: state => state.content,
     get_comment: state => state.comment,
     get_userName: state => state.userName,
-    get_userProfile: state => state.userProfile
+    get_userProfile: state => state.userProfile,
+    // get_image: state => state.image
 
 }
 
@@ -59,7 +61,10 @@ const mutations = {
     },
     set_userProfile: (state, data) => {
         state.userProfile = data
-    }
+    },
+    // set_image: (state, data) => {
+    //     state.image = data
+    // }
 
 }
 
@@ -84,7 +89,7 @@ const actions = {
 
         // ブログリスト
         getBlogList(context, blogInfo) {
-            return new Promise((resolve, reject) => {               
+            return new Promise((resolve, reject) => {
                 getBlogList()
                     .then(res => {
                         const data = res.data;
@@ -107,7 +112,7 @@ const actions = {
 
         // ブログ詳細
         getBlogDetail(context, blogId) {
-            return new Promise((resolve, reject) => {               
+            return new Promise((resolve, reject) => {
                 getBlogDetail(blogId)
                     .then(res => {
                         const data = res.data;
@@ -132,7 +137,7 @@ const actions = {
         },
 
         blogDelete(context, blogId) {
-            return new Promise((resolve, reject) => {               
+            return new Promise((resolve, reject) => {
                 blogDelete(blogId)
                     .then(res => {
                         const data = res.data;
@@ -150,7 +155,7 @@ const actions = {
                         reject(error);
                     })
             })
-        }, 
+        },
 
         blogUpdate(context, blogInfo) {
             return new Promise((resolve, reject) => {
@@ -164,6 +169,21 @@ const actions = {
                         reject(error);
                     })
             })
+        },
+
+        imageUp(context, blogInfo) {
+            return new Promise((resolve, reject) => {
+                imageUp(blogInfo)
+                    .then((res) => {
+                        var data = res.data;
+                        //　ユーザアバター
+                        context.commit("set_image", data.imgUrl);
+                        resolve(data);
+                    })
+                    .catch((err) => {
+                        reject(err);
+                    });
+            });
         },
 }
 
