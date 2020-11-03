@@ -89,7 +89,7 @@
           </div>
         </h3>
 
-        <div class="orig-row">
+        <div class="orig-row" v-if="false">
           <div class="form-group col-sm-6">
             <label>アクション名</label>
             <input
