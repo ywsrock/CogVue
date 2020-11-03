@@ -1,0 +1,164 @@
+[2020-09-19T15:58:25.103] [INFO] startup - Listening on port 3000
+[2020-09-19T16:03:24.325] [INFO] startup - Listening on port 3000
+[2020-09-19T16:04:57.272] [INFO] startup - Listening on port 3000
+[2020-09-19T16:14:15.505] [INFO] startup - Listening on port 3000
+[2020-09-19T16:17:46.402] [INFO] startup - Listening on port 3000
+[2020-09-19T18:27:37.082] [INFO] startup - Listening on port 3000
+[2020-09-19T18:41:22.809] [INFO] users - profileInfo userID: 49
+[2020-09-19T18:43:06.729] [INFO] users - profileInfo userID: 49
+[2020-09-19T22:30:11.949] [INFO] startup - Listening on port 3000
+[2020-09-19T22:30:17.482] [INFO] users - profileInfo userID: 49
+[2020-09-19T22:30:24.056] [INFO] users - profileInfo userID: 49
+[2020-09-19T22:43:48.119] [INFO] startup - Listening on port 3000
+[2020-09-19T22:44:37.498] [INFO] users - profileInfo userID: 49
+[2020-09-20T17:54:22.832] [INFO] startup - Listening on port 3000
+[2020-09-20T17:55:50.544] [INFO] users - profileInfo userID: 49
+[2020-09-20T17:57:12.357] [INFO] users - profileInfo userID: 49
+[2020-09-20T17:59:41.440] [INFO] startup - Listening on port 3000
+[2020-09-20T17:59:51.769] [INFO] users - profileInfo userID: 49
+[2020-09-20T18:04:59.215] [INFO] users - profileInfo userID: 49
+[2020-09-22T20:43:27.170] [INFO] startup - Listening on port 3000
+[2020-09-22T20:43:34.476] [INFO] users - profileInfo userID: 49
+[2020-10-03T15:47:08.176] [INFO] startup - Listening on port 3000
+[2020-10-03T15:47:22.412] [INFO] users - profileInfo userID: 49
+[2020-10-03T15:47:39.470] [INFO] users - profileInfo userID: 49
+[2020-10-03T15:47:51.761] [INFO] users - profileInfo userID: 49
+[2020-10-03T15:48:10.900] [INFO] users - profileInfo userID: 49
+[2020-10-03T15:53:13.660] [INFO] startup - Listening on port 3000
+[2020-10-03T15:53:29.383] [INFO] users - profileInfo userID: 49
+[2020-10-03T15:54:10.288] [INFO] users - profileInfo userID: 49
+[2020-10-03T15:57:28.266] [INFO] startup - Listening on port 3000
+[2020-10-03T15:58:00.672] [INFO] users - profileInfo userID: 49
+[2020-10-03T16:07:27.121] [INFO] startup - Listening on port 3000
+[2020-10-03T16:07:34.461] [INFO] users - profileInfo userID: 49
+[2020-10-03T16:09:23.058] [INFO] startup - Listening on port 3000
+[2020-10-03T16:09:29.478] [INFO] users - profileInfo userID: 49
+[2020-10-03T16:15:55.151] [INFO] startup - Listening on port 3000
+[2020-10-03T16:16:07.746] [INFO] users - profileInfo userID: 49
+[2020-10-03T16:18:43.360] [INFO] startup - Listening on port 3000
+[2020-10-03T16:18:49.020] [INFO] users - profileInfo userID: 49
+[2020-10-03T16:23:18.222] [INFO] startup - Listening on port 3000
+[2020-10-03T16:23:24.846] [INFO] users - profileInfo userID: 49
+[2020-10-03T16:25:51.770] [INFO] startup - Listening on port 3000
+[2020-10-03T16:26:07.269] [INFO] users - profileInfo userID: 49
+[2020-10-03T16:42:52.578] [INFO] startup - Listening on port 3000
+[2020-10-03T16:42:59.583] [INFO] users - profileInfo userID: 49
+[2020-10-03T16:45:04.231] [INFO] startup - Listening on port 3000
+[2020-10-03T16:45:10.032] [INFO] users - profileInfo userID: 49
+[2020-10-03T16:48:41.419] [INFO] startup - Listening on port 3000
+[2020-10-03T16:48:53.687] [INFO] users - profileInfo userID: 49
+[2020-10-03T16:54:50.662] [INFO] startup - Listening on port 3000
+[2020-10-03T16:55:02.123] [INFO] users - profileInfo userID: 49
+[2020-10-03T17:05:11.287] [INFO] startup - Listening on port 3000
+[2020-10-03T17:05:29.745] [INFO] users - profileInfo userID: 49
+[2020-10-03T17:07:23.743] [INFO] startup - Listening on port 3000
+[2020-10-03T17:07:28.880] [INFO] users - profileInfo userID: 49
+[2020-10-03T17:10:37.289] [INFO] startup - Listening on port 3000
+[2020-10-03T17:10:52.181] [INFO] users - profileInfo userID: 49
+[2020-10-03T17:14:13.129] [INFO] startup - Listening on port 3000
+[2020-10-03T17:14:20.655] [INFO] users - profileInfo userID: 49
+[2020-10-04T20:15:24.018] [INFO] startup - Listening on port 3000
+[2020-10-04T20:15:31.641] [INFO] users - profileInfo userID: 49 
+[2020-10-04T20:15:31.642] [INFO] userDao - START getUserProfileByUserID : {"key":"UserID","val":49}
+[2020-10-04T20:15:32.474] [INFO] userDao - END getUserProfileByUserID
+[2020-10-04T20:15:32.475] [INFO] users - profileInfo success
+[2020-10-04T20:15:43.265] [INFO] userDao - START getUserProfileByUserID : {}
+[2020-10-04T20:19:33.826] [INFO] startup - Listening on port 3000
+[2020-10-04T20:19:44.503] [INFO] users - profileInfo userID: 49 
+[2020-10-04T20:19:44.504] [INFO] userDao - START getUserProfileByUserID : {"key":"UserID","val":49}
+[2020-10-04T20:19:44.529] [INFO] userDao - END getUserProfileByUserID
+[2020-10-04T20:19:44.530] [INFO] users - profileInfo success
+[2020-10-04T20:24:05.924] [INFO] startup - Listening on port 3000
+[2020-10-04T20:24:09.054] [INFO] users - profileInfo userID: 49 
+[2020-10-04T20:24:09.055] [INFO] userDao - START getUserProfileByUserID : {"key":"UserID","val":49}
+[2020-10-04T20:24:09.076] [INFO] userDao - END getUserProfileByUserID
+[2020-10-04T20:24:09.076] [INFO] users - profileInfo success
+[2020-10-04T20:24:18.174] [INFO] userDao - START getUserProfileByUserID : {"userID":"49"}
+[2020-10-04T20:24:20.391] [ERROR] userDao - getUserProfileByUserID error:Error: WHERE parameter "undefined" has invalid "undefined" value
+    at MySQLQueryGenerator.whereItemQuery (/Users/teroron/Desktop/PBL/PBL2020/OreSupport/ore-SupportServer/oreServer/node_modules/sequelize/lib/dialects/abstract/query-generator.js:2184:13)
+    at /Users/teroron/Desktop/PBL/PBL2020/OreSupport/ore-SupportServer/oreServer/node_modules/sequelize/lib/dialects/abstract/query-generator.js:2173:25
+    at Array.forEach (<anonymous>)
+    at MySQLQueryGenerator.whereItemsQuery (/Users/teroron/Desktop/PBL/PBL2020/OreSupport/ore-SupportServer/oreServer/node_modules/sequelize/lib/dialects/abstract/query-generator.js:2171:35)
+    at /Users/teroron/Desktop/PBL/PBL2020/OreSupport/ore-SupportServer/oreServer/node_modules/sequelize/lib/dialects/abstract/query-generator.js:2307:30
+    at Array.map (<anonymous>)
+    at MySQLQueryGenerator._whereGroupBind (/Users/teroron/Desktop/PBL/PBL2020/OreSupport/ore-SupportServer/oreServer/node_modules/sequelize/lib/dialects/abstract/query-generator.js:2306:21)
+    at MySQLQueryGenerator.whereItemQuery (/Users/teroron/Desktop/PBL/PBL2020/OreSupport/ore-SupportServer/oreServer/node_modules/sequelize/lib/dialects/abstract/query-generator.js:2242:19)
+    at /Users/teroron/Desktop/PBL/PBL2020/OreSupport/ore-SupportServer/oreServer/node_modules/sequelize/lib/dialects/abstract/query-generator.js:2173:25
+    at Array.forEach (<anonymous>)
+    at MySQLQueryGenerator.whereItemsQuery (/Users/teroron/Desktop/PBL/PBL2020/OreSupport/ore-SupportServer/oreServer/node_modules/sequelize/lib/dialects/abstract/query-generator.js:2171:35)
+    at MySQLQueryGenerator.getWhereConditions (/Users/teroron/Desktop/PBL/PBL2020/OreSupport/ore-SupportServer/oreServer/node_modules/sequelize/lib/dialects/abstract/query-generator.js:2583:19)
+    at MySQLQueryGenerator.selectQuery (/Users/teroron/Desktop/PBL/PBL2020/OreSupport/ore-SupportServer/oreServer/node_modules/sequelize/lib/dialects/abstract/query-generator.js:1315:28)
+    at QueryInterface.select (/Users/teroron/Desktop/PBL/PBL2020/OreSupport/ore-SupportServer/oreServer/node_modules/sequelize/lib/query-interface.js:1122:27)
+    at /Users/teroron/Desktop/PBL/PBL2020/OreSupport/ore-SupportServer/oreServer/node_modules/sequelize/lib/model.js:1759:34
+    at tryCatcher (/Users/teroron/Desktop/PBL/PBL2020/OreSupport/ore-SupportServer/oreServer/node_modules/bluebird/js/release/util.js:16:23)
+    at Promise._settlePromiseFromHandler (/Users/teroron/Desktop/PBL/PBL2020/OreSupport/ore-SupportServer/oreServer/node_modules/bluebird/js/release/promise.js:547:31)
+    at Promise._settlePromise (/Users/teroron/Desktop/PBL/PBL2020/OreSupport/ore-SupportServer/oreServer/node_modules/bluebird/js/release/promise.js:604:18)
+    at Promise._settlePromise0 (/Users/teroron/Desktop/PBL/PBL2020/OreSupport/ore-SupportServer/oreServer/node_modules/bluebird/js/release/promise.js:649:10)
+    at Promise._settlePromises (/Users/teroron/Desktop/PBL/PBL2020/OreSupport/ore-SupportServer/oreServer/node_modules/bluebird/js/release/promise.js:729:18)
+    at _drainQueueStep (/Users/teroron/Desktop/PBL/PBL2020/OreSupport/ore-SupportServer/oreServer/node_modules/bluebird/js/release/async.js:93:12)
+    at _drainQueue (/Users/teroron/Desktop/PBL/PBL2020/OreSupport/ore-SupportServer/oreServer/node_modules/bluebird/js/release/async.js:86:9)
+[2020-10-04T20:28:47.860] [INFO] startup - Listening on port 3000
+[2020-10-04T20:28:50.748] [INFO] users - profileInfo userID: 49 
+[2020-10-04T20:28:50.749] [INFO] userDao - START getUserProfileByUserID : {"key":"UserID","val":49}
+[2020-10-04T20:28:50.770] [INFO] userDao - END getUserProfileByUserID
+[2020-10-04T20:28:50.771] [INFO] users - profileInfo success
+[2020-10-04T20:29:09.702] [INFO] userDao - START getUserProfileByUserID : {"key":"userId","val":"49"}
+[2020-10-04T20:29:09.715] [INFO] userDao - END getUserProfileByUserID
+[2020-10-04T20:31:41.088] [INFO] users - profileInfo userID: 49 
+[2020-10-04T20:31:41.088] [INFO] userDao - START getUserProfileByUserID : {"key":"UserID","val":49}
+[2020-10-04T20:31:41.129] [INFO] userDao - END getUserProfileByUserID
+[2020-10-04T20:31:41.129] [INFO] users - profileInfo success
+[2020-10-04T20:31:43.783] [INFO] userDao - START getUserProfileByUserID : {"key":"userId","val":"49"}
+[2020-10-04T20:31:43.792] [INFO] userDao - END getUserProfileByUserID
+[2020-10-25T17:31:27.087] [INFO] startup - Listening on port 3000
+[2020-10-25T17:32:02.591] [INFO] users - profileInfo userID: 49 
+[2020-10-25T17:32:02.592] [INFO] userDao - START getUserProfileByUserID : {"key":"UserID","val":49}
+[2020-10-25T17:32:08.560] [INFO] userDao - END getUserProfileByUserID
+[2020-10-25T17:32:08.561] [INFO] users - profileInfo success
+[2020-10-25T17:34:17.996] [INFO] startup - Listening on port 3000
+[2020-10-25T17:34:25.684] [INFO] users - profileInfo userID: 49 
+[2020-10-25T17:34:25.685] [INFO] userDao - START getUserProfileByUserID : {"key":"UserID","val":49}
+[2020-10-25T17:34:25.708] [INFO] userDao - END getUserProfileByUserID
+[2020-10-25T17:34:25.709] [INFO] users - profileInfo success
+[2020-10-25T17:36:43.589] [INFO] startup - Listening on port 3000
+[2020-10-25T17:36:58.092] [INFO] users - profileInfo userID: 49 
+[2020-10-25T17:36:58.093] [INFO] userDao - START getUserProfileByUserID : {"key":"UserID","val":49}
+[2020-10-25T17:36:58.122] [INFO] userDao - END getUserProfileByUserID
+[2020-10-25T17:36:58.123] [INFO] users - profileInfo success
+[2020-10-25T17:37:55.617] [INFO] userDao - START getUserProfileByUserID : {"key":"userId","val":"49"}
+[2020-10-25T17:37:55.631] [INFO] userDao - END getUserProfileByUserID
+[2020-10-25T17:39:43.344] [INFO] startup - Listening on port 3000
+[2020-10-25T17:39:51.050] [INFO] users - profileInfo userID: 49 
+[2020-10-25T17:39:51.051] [INFO] userDao - START getUserProfileByUserID : {"key":"UserID","val":49}
+[2020-10-25T17:39:51.077] [INFO] userDao - END getUserProfileByUserID
+[2020-10-25T17:39:51.078] [INFO] users - profileInfo success
+[2020-10-25T17:40:18.929] [INFO] userDao - START getUserProfileByUserID : {"key":"userId","val":"49"}
+[2020-10-25T17:40:18.937] [INFO] userDao - END getUserProfileByUserID
+[2020-10-25T17:45:28.967] [INFO] startup - Listening on port 3000
+[2020-10-25T17:45:39.705] [INFO] users - profileInfo userID: 49 
+[2020-10-25T17:45:39.707] [INFO] userDao - START getUserProfileByUserID : {"key":"UserID","val":49}
+[2020-10-25T17:45:39.743] [INFO] userDao - END getUserProfileByUserID
+[2020-10-25T17:45:39.744] [INFO] users - profileInfo success
+[2020-10-25T17:45:51.460] [INFO] userDao - START getUserProfileByUserID : {"key":"userId","val":"49"}
+[2020-10-25T17:45:51.471] [INFO] userDao - END getUserProfileByUserID
+[2020-10-25T17:47:12.455] [INFO] startup - Listening on port 3000
+[2020-10-25T17:47:32.349] [INFO] users - profileInfo userID: 49 
+[2020-10-25T17:47:32.351] [INFO] userDao - START getUserProfileByUserID : {"key":"UserID","val":49}
+[2020-10-25T17:47:32.387] [INFO] userDao - END getUserProfileByUserID
+[2020-10-25T17:47:32.388] [INFO] users - profileInfo success
+[2020-10-25T17:47:40.056] [INFO] userDao - START getUserProfileByUserID : {"key":"userId","val":"49"}
+[2020-10-25T17:47:40.064] [INFO] userDao - END getUserProfileByUserID
+[2020-10-25T17:55:03.730] [INFO] startup - Listening on port 3000
+[2020-10-25T17:55:17.482] [INFO] users - profileInfo userID: 49 
+[2020-10-25T17:55:17.483] [INFO] userDao - START getUserProfileByUserID : {"key":"UserID","val":49}
+[2020-10-25T17:55:17.522] [INFO] userDao - END getUserProfileByUserID
+[2020-10-25T17:55:17.523] [INFO] users - profileInfo success
+[2020-10-25T17:57:38.641] [INFO] userDao - START getUserProfileByUserID : {"key":"userId","val":"49"}
+[2020-10-25T17:57:44.844] [INFO] userDao - END getUserProfileByUserID
+[2020-10-25T18:01:41.283] [INFO] startup - Listening on port 3000
+[2020-10-25T18:01:47.990] [INFO] users - profileInfo userID: 49 
+[2020-10-25T18:01:47.991] [INFO] userDao - START getUserProfileByUserID : {"key":"UserID","val":49}
+[2020-10-25T18:01:48.010] [INFO] userDao - END getUserProfileByUserID
+[2020-10-25T18:01:48.010] [INFO] users - profileInfo success
+[2020-10-25T18:01:56.500] [INFO] userDao - START getUserProfileByUserID : {"key":"userId","val":"49"}
+[2020-10-25T18:01:56.517] [INFO] userDao - END getUserProfileByUserID

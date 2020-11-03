@@ -1,0 +1,38 @@
+<% extend 'layout' %>
+<section>
+  <h1><%= @title %></h1>
+  <div style="text-align: right">
+    <a href="/information/new" class="btn btn-primary mb-2">新規作成</a>
+  </div>
+  <table class="table">
+    <thead class="thead-light">
+      <tr>
+        <th>タイトル</th>
+        <th>カテゴリー</th>
+        <th style="width: 50%">内容</th>
+        <th>配信開始</th>
+        <th>配信終了</th>
+        <th></th>
+      </tr>
+    </thead>
+    <tbody>
+      <% for information in @informationList : %>
+      <tr>
+        <td><%= information.title %></td>
+        <td><%= information.category %></td>
+        <td><%= information.content %></td>
+        <td><%= information.from %></td>
+        <td><%= information.to %></td>
+        <td>
+          <a href="/information/detail?informationID=<%= information.id %>"
+            >編集</a
+          >
+          <a href="/information/delete?informationID=<%= information.id %>"
+            >削除</a
+          >
+        </td>
+      </tr>
+      <% end %>
+    </tbody>
+  </table>
+</section>
