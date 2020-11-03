@@ -60,3 +60,11 @@ export function blogUpdate(data) {
         data
     })
 }
+
+export function postComment(data) {
+    return request({
+        url: '/blog/postComment',
+        method: 'post',
+        data
+    })
+}

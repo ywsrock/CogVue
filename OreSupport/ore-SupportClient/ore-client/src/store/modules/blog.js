@@ -1,6 +1,6 @@
 /* eslint-disable */
 import { getToken, setToken, removeToken } from "@/utils/auth"
-import { createBlog,getBlogList,viewBlog,getBlogDetail,blogDelete, blogUpdate} from "@/utils/api/blog"
+import { createBlog,getBlogList,viewBlog,getBlogDetail,blogDelete, blogUpdate,postComment} from "@/utils/api/blog"
 import { resetRouter } from '@/router'
 
 
@@ -18,7 +18,9 @@ const state = {
 
     userProfile: [],
 
-    userName:""
+    userName:"",
+
+    commentName:""
 
 }
 
@@ -31,7 +33,9 @@ const getters = {
     get_content: state => state.content,
     get_comment: state => state.comment,
     get_userName: state => state.userName,
-    get_userProfile: state => state.userProfile
+    get_userProfile: state => state.userProfile,
+
+    get_commentName: state => state.commentName,
 
 }
 
@@ -59,7 +63,10 @@ const mutations = {
     },
     set_userProfile: (state, data) => {
         state.userProfile = data
-    }
+    },
+    set_commentName: (state, data) => {
+        state.commentName = data
+    },
 
 }
 
@@ -157,6 +164,20 @@ const actions = {
                 // var tile = blogInfo.title;
                 // var content = blogInfo.content;
                 blogUpdate(blogInfo)
+                    .then(res => {
+                        const data = res.data;
+                        resolve(data);
+                    }).catch(error => {
+                        reject(error);
+                    })
+            })
+        },
+
+        postComment(context, blogInfo) {
+            return new Promise((resolve, reject) => {
+                // var tile = blogInfo.title;
+                // var content = blogInfo.content;
+                postComment(blogInfo)
                     .then(res => {
                         const data = res.data;
                         resolve(data);

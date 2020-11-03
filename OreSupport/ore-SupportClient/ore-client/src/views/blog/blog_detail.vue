@@ -4,6 +4,7 @@
     <div class="page-wrapper">
       <div id="header" class="header"></div>
 
+      
       <div class="main">
         <div class="main-inner">
           <div class="container">
@@ -128,8 +129,10 @@
                     </div>
                     <!-- /.comments -->
 
+                    <form @submit.prevent="postComment" style="border:1px solid #ccc">
+
                     <h2>Write a Comment</h2>
-                    <form class="background-white p20 add-comment" method="post" action="?">
+                    <!-- <form class="background-white p20 add-comment" method="post" action="postComment"> -->
                       <p>
                         Required fields are marked
                         <span class="required">*</span>
@@ -138,38 +141,55 @@
                       <div class="orig-row">
                         <div class="form-group col-sm-12">
                           <label for>
-                            Comment
+                            comment
                             <span class="required">*</span>
                           </label>
-                          <textarea class="form-control" rows="5" id required></textarea>
+                          <textarea
+                      class="form-control"
+                      rows="7"
+                      placeholder="内容"
+                      name="comment"
+                      v-model="registForm.comment"
+
+                    ></textarea>
+                          <!-- <textarea class="form-control" rows="5" id required></textarea> -->
                         </div>
                         <!-- /.col-sm-12 -->
 
                         <div class="form-group col-sm-4">
                           <label for>
-                            Name
+                            commentName
                             <span class="required">*</span>
                           </label>
-                          <input type="text" class="form-control" id required />
+                          <input 
+                            type="text"
+                            ref="commentName"
+                            placeholder="commentName"
+                            v-model="registForm.commentName"
+                            name="commentName"
+                            required
+                            class="form-control"
+                             />
                         </div>
+                        
                         <!-- /.col-sm-4 -->
 
-                        <div class="form-group col-sm-4">
+                        <!-- <div class="form-group col-sm-4">
                           <label for>
                             Email
                             <span class="required">*</span>
                           </label>
                           <input type="email" class="form-control" id required />
-                        </div>
+                        </div> -->
                         <!-- /.col-sm-4 -->
 
-                        <div class="form-group col-sm-4">
+                        <!-- <div class="form-group col-sm-4">
                           <label for>Website</label>
                           <input type="text" class="form-control" id />
-                        </div>
+                        </div> -->
                         <!-- /.col-sm-4 -->
 
-                        <div class="col-sm-8">
+                        <!-- <div class="col-sm-8">
                           <p class="form-allowed-tags" id="form-allowed-tags">
                             You may use these
                             <abbr title="HyperText Markup Language">HTML</abbr>
@@ -183,10 +203,11 @@
                               &lt;strike&gt; &lt;strong&gt;
                             </code>
                           </p>
-                        </div>
+                        </div> -->
                         <!-- /.col-sm-8 -->
 
                         <div class="col-sm-4">
+
                           <button class="btn btn-primary btn-block" type="submit">
                             <i class="fa fa-comments"></i>Post Comment
                           </button>
@@ -473,10 +494,20 @@ export default {
         content: "",
         comment: [],
         userProfile:[]
-      }
+      },
+      registForm: {
+        comment: "",
+        commentName: "",
+        id:this.$route.query.id
+      },
     };
   },
   mounted() {
+    this.fetchBlogInfo();
+  },
+  methods: {
+    fetchBlogInfo() {
+
     var that = this;
     // console.log(this.$router.query); 次回の閻餐会
     //ブログ詳細取得
@@ -500,8 +531,11 @@ export default {
       .catch(error => {
         console.log(error);
       });
-  },
-  methods: {
+
+
+
+
+    },
     blogEdit(id) {
       //apiからサーバーに命令をだす。(store action)
       // console.log(`val = ${JSON.stringify(row)}`)
@@ -540,8 +574,42 @@ export default {
           console.log(error.data);
           console.log("削除失敗");
         });
-    }
+    },
+
+    postComment: function(e) {
+      // 二重コミット防止のため、ボタンを非活性
+      e.target.disabled = true;
+      // // 全項目チェック、問題なければ、登録処理を行う
+      // const isValid = this.validate(this.registForm, this.rules);
+      // if (!isValid) {
+      // ユーザ登録処理
+      this.$store
+        .dispatch("blog/postComment", this.registForm,this.$route.query.id)
+        .then((res) => {
+          Message({
+            message: "作成OK",
+            type: "success",
+            duration: 5 * 1000,
+          }),
+            // detail画面に遷移
+            this.fetchBlogInfo();
+            
+        })
+        .catch((error) => {
+          e.target.disabled = false;
+          console.log(error.data);
+          console.log("作成失敗");
+        });
+    },
+
+    blogClick: function() {
+      this.$router.push("/blog/blogList");
+    },
+
+
   }
+
+
 };
 </script>
 

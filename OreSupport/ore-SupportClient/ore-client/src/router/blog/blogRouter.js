@@ -8,6 +8,7 @@ import createBlog from "@/views/blog/blogCreate.vue";
 import blogList from "@/views/blog/blog_list.vue";
 import blogDetail from "@/views/blog/blog_detail.vue";
 import blogEdit from "@/views/blog/blog_edit.vue"
+import postComment from "@/views/blog/blog_detail.vue"
 
 const blogRouter = {
   path: "/blog",
@@ -36,6 +37,11 @@ const blogRouter = {
       path: "createBlog",
       name: "createBlog",
       component: createBlog
+    },
+    {
+      path: "postComment",
+      name: "postComment",
+      component: postComment
     },
     {
       path: "createBlog",

@@ -182,10 +182,38 @@ const blogUpdate = async (queryInfo) => {
 }
 
 
+const postComment = async (queryInfo) => {
+    try {
+        // トランザクション処理開始
+        const t = await sequelize.transaction();
+        const result = await Comment.create({
+
+            id: queryInfo.id,
+            // ユーザID
+            UserID: queryInfo.UserID,
+            // タイトル
+            Comment1: queryInfo.comment,
+            // Content
+            commentName: queryInfo.commentName,
+
+        });
+        // トランザクションコンミット
+        await t.commit();
+        // 結果を返す
+        return result;
+    } catch (error) {
+        await t.rollback();
+        console.error("情報取得エラー:" + error.stack);
+        return error;
+    }
+}
+
+
 module.exports = {
     createBlog: createBlog,
     getBlogList: getBlogList,
     getBlogDetail: getBlogDetail,
     blogDelete: blogDelete,
-    blogUpdate: blogUpdate
+    blogUpdate: blogUpdate,
+    postComment:postComment
 }
