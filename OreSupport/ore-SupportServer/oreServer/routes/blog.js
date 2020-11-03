@@ -4,6 +4,10 @@ var blogmodel = require("../dao/blog/blog.dao");
 var usermodel = require("../dao/user/user.dao");
 var checkuser = require("../common/check.token");
 const STATUS_MESSAGE = require("../common/const").STATUS_MESSAGE;
+const Image_storage = require("../common/fileup");
+const multer = require('multer');
+
+
 
 //ブログリスト取得
 router.get("/bloglist", async function (req, res, next) {
@@ -52,7 +56,11 @@ router.get("/bloglist", async function (req, res, next) {
   return res.status(200).send(resObj);
 });
 
+var upload1 = multer({ storage: Image_storage.blogImage_storage }).single(
+  "blogImg"
+);
 router.post("/create", [checkuser.verifyUser], async function (req, res, next) {
+  log.info(`fileUpload: ----------------------------- `);
   // 出力結果
   let resObj = {};
   // ユーザID(ベリファイチェックから)
@@ -61,6 +69,20 @@ router.post("/create", [checkuser.verifyUser], async function (req, res, next) {
   let title = req.body.title;
   //　title
   let content = req.body.content;
+
+
+  await upload1(req, res, function (err) {
+    if (err) {
+      log.error(`imageUp upload error: ${err} `);
+      resObj.code = STATUS_MESSAGE.CODE_403;
+      resObj.message = STATUS_MESSAGE.FILEUP_ERROR_403;
+    } else {
+      //ログ出力
+      log.info(`fileUpload: + ${req.file.filename} `);
+    }
+    log.info(`imageUp success`);
+  });
+
 
   // titleとcontent
   if ("" != title.trim() && "" != content.trim()) {
@@ -128,7 +150,7 @@ router.get("/blogdetail", async function (req, res, next) {
     // blogDetail.forEach((model) => {
     //     commentArray.push(model.Comment1)
     // })
-    
+
     resObj = {
       code: STATUS_MESSAGE.CODE_SUCCESS,
       data: {

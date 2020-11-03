@@ -44,7 +44,7 @@
                   </div>
                 </form>
               <div class="orig-row">
-                <div class="col-sm-8 col-lg-9">
+                <div class="col-sm-12 col-lg-9">
                   <div class="content">
                     <div class="page-title">
                       <h1>{{ list.tableData.length }}件がヒットしました</h1>
