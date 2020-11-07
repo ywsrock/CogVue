@@ -9,6 +9,7 @@ import blogList from "@/views/blog/blog_list.vue";
 import blogDetail from "@/views/blog/blog_detail.vue";
 import blogEdit from "@/views/blog/blog_edit.vue"
 import postComment from "@/views/blog/blog_detail.vue"
+import searchBlog from "@/views/blog/blog_list.vue";
 
 const blogRouter = {
   path: "/blog",
@@ -42,6 +43,11 @@ const blogRouter = {
       path: "postComment",
       name: "postComment",
       component: postComment
+    },
+    {
+      path: "searchBlog",
+      name: "searchBlog",
+      component: searchBlog
     },
     {
       path: "createBlog",
