@@ -7,18 +7,108 @@
         <div class="main">
           <div class="main-inner">
             <div class="container">
+                <form class="filter" method="post" action="?">
+                  <h2>詳細検索</h2>
+                  <div class="orig-row">
+                    <div class="col-sm-12 col-md-4">
+                      <div class="form-group">
+                        <input
+                          type="text"
+                          placeholder="例) 健康食品など"
+                          class="form-control"
+                        />
+                      </div>
+                      <!-- /.form-group -->
+                    </div>
+                    <!-- /.col-* -->
+
+                    <div class="col-sm-12 col-md-4">
+                      <div class="form-group">
+                        <select class="form-control" title="年齢">
+                          <option>40代以下</option>
+                          <option>40-50代</option>
+                          <option>50-60代</option>
+                          <option>60-70代</option>
+                          <option>70代以上</option>
+                        </select>
+                      </div>
+                      <!-- /.form-group -->
+                    </div>
+                    <!-- /.col-* -->
+
+                    <div class="col-sm-12 col-md-4">
+                      <div class="form-group">
+                        <select class="form-control" title="カテゴリ">
+                          <option value="">記憶力</option>
+                          <option value="">注意力</option>
+                          <option value="">見当識</option>
+                          <option value="">空間認識力</option>
+                          <option value="">計画力</option>
+                        </select>
+                      </div>
+                      <!-- /.form-group -->
+                    </div>
+                    <!-- /.col-* -->
+
+                    <div class="col-sm-12 col-md-4">
+                      <div class="form-group">
+                          <input type="checkbox" id="women" value="Women" v-model="searchBlogKey.sex">
+                          <label for="women">女性</label>
+                          <input type="checkbox" id="men" value="Men" v-model="searchBlogKey.sex">
+                          <label for="men">男性</label>
+                          <input type="checkbox" id="other" value="Other" v-model="searchBlogKey.sex">
+                          <label for="other">その他</label>
+                          <br>
+                          <!-- <span>Checked names: {{ searchBlogKey.sex }}</span> -->
+                      </div>
+                    </div>
+
+
+                  </div>
+                  <!-- /.row -->
+
+                  <hr />
+
+                  <div class="orig-row">
+                    <div class="col-sm-8">
+                      <div class="filter-actions">
+                        <a href="#"
+                          ><i class="fa fa-close"></i>検索条件リセット</a
+                        >
+                        <a href="#"
+                          ><i class="fa fa-save"></i> 検索条件の保存</a
+                        >
+                      </div>
+                      <!-- /.filter-actions -->
+                    </div>
+                    <!-- /.col-* -->
+
+                    <div class="col-sm-4">
+                      <button
+                        type="submit"
+                        class="btn btn-primary"
+                        href=""
+                        @click.prevent.stop="searchBlog"
+                      >
+                        検&nbsp;索
+                      </button>
+                    </div>
+                    <!-- /.col-* -->
+                  </div>
+                  <!-- /.row -->
+                </form>
               <div class="orig-row">
                 <div class="col-sm-8 col-lg-9">
                   <div class="content">
                     <div class="page-title">
-                      <h1>{{ tableData.length }}件がヒットしました</h1>
+                      <h1>{{ list.tableData.length }}件がヒットしました</h1>
                     </div>
                     <!-- /.page-title -->
 
                     <div class="posts">
                       <div
                         class="post"
-                        v-for="item in displayLists"
+                        v-for="item in list.displayLists"
                         :key="item.id"
                       >
                         <div class="post-image">
@@ -401,12 +491,20 @@ import { Message } from "element-ui";
 export default {
   data() {
     return {
-      page: 1,
-      length:0,
-      tableData: [],
-      search: "",
-      displayLists: [],
-      pageSize: 6,
+      list:{
+        page: 1,
+        length:0,
+        tableData: [],
+        search: "",
+        displayLists: [],
+        pageSize: 6,
+      },
+      searchBlogKey: {
+        sex: [],
+      },
+      searchBlogResult:{
+        result: []
+      }
     };
   },
   mounted() {
@@ -417,10 +515,10 @@ export default {
       .then((res) => {
         this.$nextTick().then(function() {
           const blogInfo = that.$store.getters.get_content;
-          that.tableData = blogInfo;
+          that.list.tableData = blogInfo;
 
-          that.length = Math.ceil(that.tableData.length/that.pageSize);
-          that.displayLists = that.tableData.slice(0,that.pageSize);
+          that.list.length = Math.ceil(that.list.tableData.length/that.list.pageSize);
+          that.list.displayLists = that.list.tableData.slice(0,that.list.pageSize);
         });
       })
       .catch((err) => {
@@ -475,7 +573,7 @@ export default {
             .then((res) => {
               this.$nextTick().then(function() {
                 const blogInfo = that.$store.getters.get_content;
-                that.tableData = blogInfo;
+                that.list.tableData = blogInfo;
               });
               Message({
                 message: "削除OK",
@@ -491,6 +589,33 @@ export default {
           console.log("err=====");
         });
     },
+
+
+
+    searchBlog() {
+      //apiからサーバーに命令をだす。(store action)
+      var that = this;
+
+      var formdata = new FormData();
+      formdata.append("sex", this.searchBlogKey.sex);
+
+
+      this.$store
+        .dispatch("blog/searchBlog",formdata)
+        //成功の場合
+      .then((res) => {
+        this.$nextTick().then(function() {
+          const blogInfo = that.$store.getters.get_content;
+          that.list.tableData = blogInfo;
+          // let userid = res.userID;
+
+        })})
+        //失敗の場合
+        .catch();
+      console.log("err=====");
+    },
+
+
   },
   filters: {
     content_slice: function(value) {

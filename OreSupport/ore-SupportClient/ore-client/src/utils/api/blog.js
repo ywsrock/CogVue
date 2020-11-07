@@ -68,3 +68,11 @@ export function postComment(data) {
         data
     })
 }
+
+
+export function searchBlog(data) {
+    return request({
+        url: '/blog/searchBlog',
+        method: 'get',
+    })
+}

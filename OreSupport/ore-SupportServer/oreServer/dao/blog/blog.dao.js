@@ -209,11 +209,40 @@ const postComment = async (queryInfo) => {
 }
 
 
+
+const searchBlog = async (queryInfo) => {
+    try {
+        User.hasOne(Blog, {
+            foreignKey: {
+                name: 'UserID'
+            },
+            onDelete: 'SET NULL',
+            onUpdate: 'CASCADE'
+        })
+        Blog.belongsTo(User, {
+            foreignKey: {
+                name: 'UserID'
+            }
+        });
+        const result = await Blog.findAll({
+            order: [['id', 'DESC']],
+            include: User,
+            attributes: { exclude: ['Password'] }
+        });
+        return result;
+    } catch (error) {
+        console.error("情報取得エラー:" + error.stack);
+        throw error;
+    }
+}
+
+
 module.exports = {
     createBlog: createBlog,
     getBlogList: getBlogList,
     getBlogDetail: getBlogDetail,
     blogDelete: blogDelete,
     blogUpdate: blogUpdate,
-    postComment:postComment
+    postComment:postComment,
+    searchBlog:searchBlog
 }

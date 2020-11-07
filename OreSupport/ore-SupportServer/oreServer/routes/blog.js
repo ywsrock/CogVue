@@ -286,4 +286,51 @@ router.post("/postComment", [checkuser.verifyUser], async function (req, res, ne
   }
 });
 
+
+router.get("/searchBlog", async function (req, res, next) {
+  // 出力結果
+  let resObj = {};
+  // ユーザID(ベリファイチェックから)
+  let userID = req.userID;
+
+  //ブログリスと取得
+  //var blogList = await blogmodel.getBlogList({ key: "UserID", val: userID })
+  var blogList = await blogmodel.searchBlog();
+
+  if (typeof blogList.errors != "undefined") {
+    // エラー結果
+    resObj = {
+      code: STATUS_MESSAGE.CODE_402,
+      message: blogList.message,
+    };
+    return res.status(200).send(resObj);
+  } else {
+    //DBの絡むと大文字小文字も併せないといけない
+    // var title = blog.Title;
+    // var content = blog.Content
+
+    contentArray = [];
+    blogList.forEach((blog) => {
+      contentArray.push({
+        id: blog.id,
+        title: blog.Title,
+        content: blog.Content,
+        userName: blog.User.UserName || "",
+      });
+    });
+
+    resObj = {
+      code: STATUS_MESSAGE.CODE_SUCCESS,
+
+      data: {
+        title: "test",
+        content: contentArray,
+        userID: userID,
+      },
+    };
+  }
+
+  return res.status(200).send(resObj);
+});
+
 module.exports = router;

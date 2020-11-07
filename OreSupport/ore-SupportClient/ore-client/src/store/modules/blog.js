@@ -1,6 +1,6 @@
 /* eslint-disable */
 import { getToken, setToken, removeToken } from "@/utils/auth"
-import { createBlog,getBlogList,viewBlog,getBlogDetail,blogDelete, blogUpdate,postComment} from "@/utils/api/blog"
+import { createBlog,getBlogList,viewBlog,getBlogDetail,blogDelete, blogUpdate,postComment,searchBlog} from "@/utils/api/blog"
 import { resetRouter } from '@/router'
 
 
@@ -180,6 +180,28 @@ const actions = {
                 postComment(blogInfo)
                     .then(res => {
                         const data = res.data;
+                        resolve(data);
+                    }).catch(error => {
+                        reject(error);
+                    })
+            })
+        },
+
+
+        searchBlog(context, blogInfo) {
+            return new Promise((resolve, reject) => {               
+                searchBlog()
+                    .then(res => {
+                        const data = res.data;
+                        // const content = data.content;
+
+                        context.commit("set_id",data.id)
+                        //ブログ名
+                        context.commit("set_title",data.title)
+                        //ブログ内容
+                        context.commit("set_content",data.content)
+
+
                         resolve(data);
                     }).catch(error => {
                         reject(error);
