@@ -33,9 +33,14 @@
                         <a href="blog-detail.html">記憶力</a>
                       </div>
                       <!-- /.post-meta-categories -->
-                      <div class="post-meta-comments">
+                      <div class="post-meta-categories">
                         <i class="fa fa-comments"></i>
                         <a href="blog-detail.html">3 コメント</a>
+                      </div>
+                      <div class="post-meta-comments">
+                        <i class="fa fa-heart"></i>
+                        <a v-if="likedFlg" href="" @click="destroyLike($event)">いいね取り消し</a>                        
+                        <a v-else href="" @click="createLike($event)">いいね！</a>
                       </div>
                       <!-- /.post-meta-comments -->
                     </div>
@@ -472,8 +477,10 @@ export default {
         title: "",
         content: "",
         comment: [],
-        userProfile:[]
-      }
+        userProfile:[],
+      },
+      likes: [],
+      likedFlg: false
     };
   },
   mounted() {
@@ -500,6 +507,7 @@ export default {
       .catch(error => {
         console.log(error);
       });
+    this.getLikes();
   },
   methods: {
     blogEdit(id) {
@@ -540,6 +548,49 @@ export default {
           console.log(error.data);
           console.log("削除失敗");
         });
+    },
+    async createLike($event) {
+      $event.preventDefault()
+      const params = {likeInfo: {userID: this.$session.get("UserID"), blogID: this.$route.query.id}};
+      const res = await this.$store.dispatch("like/createLike", params);
+      if (res.status == 20000) {
+          Message({
+            message: "いいねしました",
+            type: "success",
+            duration: 5 * 1000
+          })
+      }
+      this.getLikes();      
+    },
+    async destroyLike($event) {
+      $event.preventDefault()
+      const params = {likeInfo: {userID: this.$session.get("UserID"), blogID: this.$route.query.id}};
+      const res = await this.$store.dispatch("like/destroyLike", params);
+      if (res.status == 20000) {
+          Message({
+            message: "いいねを削除しました",
+            type: "success",
+            duration: 5 * 1000
+          })
+      }
+      this.getLikes();
+    },
+    async getLikes($event) {
+      const params = {blogID: this.$route.query.id};
+      const res = await this.$store.dispatch("like/getLikes", params);
+      this.likes = res.likes
+      this.didLiked();
+    },
+    didLiked(){
+      const userID = this.$session.get("UserID");
+      this.likedFlg = false;
+      let that = this;
+      this.likes.some(function(like){
+        if(like.userID === userID){ 
+          that.likedFlg = true;
+          return true; 
+        }
+      });
     }
   }
 };
