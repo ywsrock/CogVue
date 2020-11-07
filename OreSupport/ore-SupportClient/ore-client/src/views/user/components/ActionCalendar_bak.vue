@@ -2,6 +2,68 @@
   <div>
     <div>
       <v-row>
+        <div class="container">
+          <div>
+            <el-dialog :visible.sync="isModalShow">
+              <div>
+                <h3 class="page-title">
+                  行動作成
+                </h3>
+                <div class="orig-row">
+                  <div class="form-group col-12">
+                    <label>アクション名</label>
+                    <input
+                      type="text"
+                      class="form-control"
+                      v-model="newAction.newName"
+                    />
+                  </div>
+                  <div class="form-group col-sm-12">
+                    <label>行動期間</label>
+                    <el-date-picker
+                      class="form-control"
+                      v-model="newAction.newDate"
+                      type="datetimerange"
+                      value-format="yyyy-MM-dd HH:mm:ss"
+                      range-separator="〜"
+                      start-placeholder="開始日時"
+                      end-placeholder="終了日時"
+                      style="width:100%"
+                    >
+                    </el-date-picker>
+                  </div>
+                  <div class="form-group col-sm-12">
+                    <label>メモ</label>
+                    <textarea
+                      class="form-control"
+                      rows="3"
+                      v-model="newAction.newMemo"
+                    ></textarea>
+                  </div>
+                  <div class="orig-row  mx-auto">
+                    <div class="col">
+                      <el-button
+                        type="warning"
+                        class="btn btn-danger btn-xs col-sm-6"
+                        @click="handlerNewAction(0)"
+                        >取消</el-button
+                      >
+                    </div>
+                    <div class="col">
+                      <el-button
+                        type="primary"
+                        class="btn btn-primary btn-xs col-sm-6"
+                        @click="handlerNewAction(1)"
+                        >作成</el-button
+                      >
+                    </div>
+                  </div>
+                  <!-- /.form-group -->
+                </div>
+              </div>
+            </el-dialog>
+          </div>
+        </div>
         <v-col>
           <v-sheet height="64">
             <v-toolbar flat color="white">
@@ -98,189 +160,14 @@
                 </v-card-actions>
               </v-card>
             </v-menu>
-            <v-dialog v-model="creatOpen" persistent max-width="65%">
-              <!--<template v-slot:activator="{ on, attrs }">
-                <v-btn color="primary" dark v-bind="attrs" v-on="on">
-                  Open Dialog
-                </v-btn>
-              </template>-->
-              <!--<v-card>
-                <v-card-title>
-                  <span class="headline">User Profile</span>
-                </v-card-title>
-                <v-card-text>
-                  <v-container>
-                    <v-row>
-                      <v-col cols="12" sm="6" md="4">
-                        <v-text-field
-                          label="Legal first name*"
-                          required
-                        ></v-text-field>
-                      </v-col>
-                      <v-col cols="12" sm="6" md="4">
-                        <v-text-field
-                          label="Legal middle name"
-                          hint="example of helper text only on focus"
-                        ></v-text-field>
-                      </v-col>
-                      <v-col cols="12" sm="6" md="4">
-                        <v-text-field
-                          label="Legal last name*"
-                          hint="example of persistent helper text"
-                          persistent-hint
-                          required
-                        ></v-text-field>
-                      </v-col>
-                      <v-col cols="12">
-                        <v-text-field label="Email*" required></v-text-field>
-                      </v-col>
-                      <v-col cols="12">
-                        <v-text-field
-                          label="Password*"
-                          type="password"
-                          required
-                        ></v-text-field>
-                      </v-col>
-                      <v-col cols="12" sm="6">
-                        <v-select
-                          :items="['0-17', '18-29', '30-54', '54+']"
-                          label="Age*"
-                          required
-                        ></v-select>
-                      </v-col>
-                      <v-col cols="12" sm="6">
-                        <v-autocomplete
-                          :items="[
-                            'Skiing',
-                            'Ice hockey',
-                            'Soccer',
-                            'Basketball',
-                            'Hockey',
-                            'Reading',
-                            'Writing',
-                            'Coding',
-                            'Basejump',
-                          ]"
-                          label="Interests"
-                          multiple
-                        ></v-autocomplete>
-                      </v-col>
-                    </v-row>
-                  </v-container>
-                  <small>*indicates required field</small>
-                </v-card-text>
-                <v-card-actions>
-                  <v-spacer></v-spacer>
-                  <v-btn color="blue darken-1" text @click="creatOpen = false">
-                    Close
-                  </v-btn>
-                  <v-btn color="blue darken-1" text @click="creatOpen = false">
-                    Save
-                  </v-btn>
-                </v-card-actions>
-              </v-card>-->
-              <v-card class="container">
-                <div>
-                  <h3 class="page-title">
-                    行動作成
-                  </h3>
-                  <div class="orig-row">
-                    <div class="form-group col-12">
-                      <label>アクション名</label>
-                      <input
-                        type="text"
-                        class="form-control"
-                        v-model="newAction.newName"
-                      />
-                    </div>
-                    <div class="form-group col-sm-6">
-                      <label>行動開始時刻</label>
-
-                      <!--<el-date-picker
-                        class="form-control"
-                        v-model="newAction.newDate"
-                        type="datetimerange"
-                        value-format="yyyy-MM-dd HH:mm:ss"
-                        range-separator="〜"
-                        start-placeholder="開始日時"
-                        end-placeholder="終了日時"
-                        style="width:100%"
-                      >
-                      </el-date-picker>-->
-                      <v-datetime-picker
-                        v-model="newAction.newDate[0]"
-                        :time-picker-props="timeProps"
-                        :date-picker-props="dateProps"
-                        time-format="HH:mm:ss"
-                        style="color:red"
-                      >
-                        <template slot="dateIcon">
-                          <v-icon>mdi-calendar</v-icon>
-                        </template>
-                        <template slot="timeIcon">
-                          <v-icon>mdi-clock</v-icon>
-                        </template>
-                      </v-datetime-picker>
-                    </div>
-                    <div class="form-group col-sm-6">
-                      <label>行動終了時刻</label>
-                      <!--<el-date-picker
-                        class="form-control"
-                        v-model="newAction.newDate"
-                        type="datetimerange"
-                        value-format="yyyy-MM-dd HH:mm:ss"
-                        range-separator="〜"
-                        start-placeholder="開始日時"
-                        end-placeholder="終了日時"
-                        style="width:100%"
-                      >
-                      </el-date-picker>-->
-                      <v-datetime-picker
-                        v-model="newAction.newDate[1]"
-                        :time-picker-props="timeProps"
-                        :date-picker-props="dateProps"
-                        time-format="HH:mm:ss"
-                        style="color:red"
-                      >
-                        <template slot="dateIcon">
-                          <v-icon>mdi-calendar</v-icon>
-                        </template>
-                        <template slot="timeIcon">
-                          <v-icon>mdi-clock</v-icon>
-                        </template>
-                      </v-datetime-picker>
-                    </div>
-                    <div class="form-group col-sm-12">
-                      <label>メモ</label>
-                      <textarea
-                        class="form-control"
-                        rows="3"
-                        v-model="newAction.newMemo"
-                      ></textarea>
-                    </div>
-                    <div class="orig-row  mx-auto">
-                      <div class="col">
-                        <el-button
-                          type="warning"
-                          class="btn btn-danger btn-xs col-sm-6"
-                          @click="handlerNewAction(0)"
-                          >取消</el-button
-                        >
-                      </div>
-                      <div class="col">
-                        <el-button
-                          type="primary"
-                          class="btn btn-primary btn-xs col-sm-6"
-                          @click="handlerNewAction(1)"
-                          >作成</el-button
-                        >
-                      </div>
-                    </div>
-                    <!-- /.form-group -->
-                  </div>
-                </div>
-              </v-card>
-            </v-dialog>
+            <v-menu
+              v-model="creatOpen"
+              :close-on-content-click="false"
+              :activator="selectedElement"
+              offset-y
+            >
+              <v-card> </v-card>
+            </v-menu>
           </v-sheet>
         </v-col>
       </v-row>
@@ -294,16 +181,10 @@ import { Message } from "element-ui";
 export default {
   name: "ActionCalendar",
   data: () => ({
-    dateProps: {
-      headerColor: "red",
-    },
-    timeProps: {
-      headerColor: "red",
-      useSeconds: true,
-      ampmInTitle: true,
-    },
     //新規フォーム開く
     creatOpen: false,
+    // ダイアログ表示フラグ
+    isModalShow: false,
     // 新規アクション保存ブロック
     newAction: {
       newDate: [
@@ -441,30 +322,19 @@ export default {
         const start = this.dragEvent.start;
         this.dragTime = mouse - start;
       } else {
-        this.creatOpen = true;
-        // // // 開始時刻変換
-        // this.createStart = this.roundTime(mouse);
-        // this.createEvent = {
-        //   name: `Event #${this.events.length}`,
-        //   color: this.rndElement(this.colors),
-        //   start: this.createStart,
-        //   end: this.createStart,
-        //   timed: true,
-        // };
-        // // // 新規追加ポップアップ表示
-        // const open = () => {
-        //   setTimeout(() => {
-        //     this.creatOpen = true;
-        //   }, 10);
-        // };
-        // if (this.creatOpen) {
-        //   this.creatOpen = false;
-        //   setTimeout(open, 10);
-        // } else {
-        //   open();
-        // }
+        // 新規追加ポップアップ表示
+        this.isModalShow = true;
+        // 開始時刻変換
+        this.createStart = this.roundTime(mouse);
+        this.createEvent = {
+          name: `Event #${this.events.length}`,
+          color: this.rndElement(this.colors),
+          start: this.createStart,
+          end: this.createStart,
+          timed: true,
+        };
         // イベントを表示配列の末尾に追加
-        // this.events.push(this.createEvent);
+        this.events.push(this.createEvent);
       }
     },
     extendBottom(event) {
@@ -556,7 +426,7 @@ export default {
         //キャンセルの場合、処理しません
       }
       //表示フラグ初期化
-      this.creatOpen = false;
+      this.isModalShow = false;
       // 値のクリア
       Object.assign(this.newAction, {
         newDate: [

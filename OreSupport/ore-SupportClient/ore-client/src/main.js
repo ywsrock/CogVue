@@ -8,6 +8,8 @@ import './guard'
 import LoadScript from 'vue-plugin-load-script';
 import Axios from 'axios'
 import vuetify from './plugins/vuetify' // path to vuetify export
+import DatetimePicker from 'vuetify-datetime-picker'
+Vue.use(DatetimePicker)
 Vue.use(LoadScript);
 
 //開発環境

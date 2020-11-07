@@ -3,6 +3,7 @@ import Vuex from "vuex";
 import userStore from "./modules/user";
 import blogStore from "./modules/blog";
 import informationStore from "./modules/information";
+import likeStore from "./modules/like";
 import addressStore from "./modules/address";
 import cgevStore from "./modules/cgevstore"
 import actionStore from "./modules/actionstore"
@@ -17,7 +18,8 @@ export default new Vuex.Store({
     information: informationStore,
     address: addressStore,
     cgev: cgevStore,
-    action: actionStore
+    action: actionStore,
+    like: likeStore
   },
   getters,
 });

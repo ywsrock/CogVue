@@ -1,20 +1,24 @@
 const STATUS_MESSAGE = {
-    CODE_SUCCESS: 20000,
-    CODE_5008: 50008,
-    RES_STATUS_TOKEN_ERROR_50008: "トークン認証失敗",
-    CODE_401: 401,
-    LOGIN_ERROR_401: "ログイン失敗しました、ユーザ名とパスワードを確認してください。",
-    CODE_402: 402,
-    REG_ERROR_402: "ユーザ登録失敗。",
-    CODE_403: 403,
-    FILEUP_ERROR_403: "ファイルアップロード失敗",
-    CODE_405: 405,
-    ACTION_CREATE_ERROR: "アクション登録失敗",
-    CODE_406: 406,
-    ACTION_QUERY_ERROR: "アクション取得失敗",
-    CODE_407: 407,
-    ACTION_DESTROY_ERROR: "アクション削除失敗"
-}
+  CODE_SUCCESS: 20000,
+  CODE_5008: 50008,
+  RES_STATUS_TOKEN_ERROR_50008: "トークン認証失敗",
+  CODE_401: 401,
+  LOGIN_ERROR_401:
+    "ログイン失敗しました、ユーザ名とパスワードを確認してください。",
+  CODE_402: 402,
+  REG_ERROR_402: "ユーザ登録失敗。",
+  CODE_403: 403,
+  FILEUP_ERROR_403: "ファイルアップロード失敗",
+  CODE_405: 405,
+  ACTION_CREATE_ERROR: "アクション登録失敗",
+  CODE_406: 406,
+  ACTION_QUERY_ERROR: "アクション取得失敗",
+  CODE_407: 407,
+  ACTION_DESTROY_ERROR: "アクション削除失敗",
+  LIKE_CREATE_ERROR: "いいね登録失敗",
+  LIKE_QUERY_ERROR: "いいね取得失敗",
+  LIKE_DESTROY_ERROR: "いいね削除失敗",
+};
 
 
 // ハッシュ SALT
