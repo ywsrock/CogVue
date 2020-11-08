@@ -11,13 +11,13 @@
                   <h2>詳細検索</h2>
                   <div class="orig-row">
                     <searchFormRadiobox title='性別' :options="sexOptions" @emitSelectSex="emitSelectSex" />
-                    <searchFormSelectbox title='年代' :options="ageOptions" />
-                    <searchFormSelectbox title='住所' :options="prefecture" />
+                    <searchFormSelectbox title='年代' :options="ageOptions" @emitSelectAge="emitSelectAge" />
+                    <searchFormSelectbox title='住所' :options="prefecture" @emitSelectPref="emitSelectPref" />
                     <searchFormSelectbox title='職業' :options="professions" />
-                    <searchFormSelectDatebox title='投稿日' />
+                    <searchFormSelectDatebox title='投稿日' @emitSelectDate="emitSelectDate" />
                     <searchFormCheckbox title='カテゴリ' :options="categories" />
                     <searchFormCheckbox title='行動タグ' :options="actions" />
-                    <searchFormFreeWordbox title='フリーワード' />
+                    <searchFormFreeWordbox title='フリーワード' @emitSelectFreeWord="emitSelectFreeWord" />
                   </div>
                   <hr />
                   <div class="orig-row">
@@ -137,12 +137,15 @@ export default {
         pageSize: 10,
       },
       searchBlogKey: {
-        sex: [],
+        sex: "",
+        pref: "",
+        age: "",
+        freeWord: ""
       },
       searchBlogResult:{
         result: []
       },
-      sexOptions: [{label: '男性', value: 'men'}, {label: '女性', value: 'women'}, {label: 'その他', value: 'other'}],
+      sexOptions: [{label: '男性', value: 2}, {label: '女性', value: 1}],
       prefecture: ['青森県', '岩手県', '宮城県', '秋田県', '山形県', '福島県', '茨城県', '栃木県'],
       ageOptions: ['40代以下', '40-50代', '50-60代', '60-70代', '70代以上'],
       professions: ['教師', '銀行員', 'エンジニア', '医師'],
@@ -218,15 +221,22 @@ export default {
         });
     },
     searchBlog() {
+      // デバッグ用。パラメータが取得できているか確認。不要になったら消してOK
+      alert(this.searchBlogKey.sex);
+      alert(this.searchBlogKey.pref);
+      alert(this.searchBlogKey.from);
+      alert(this.searchBlogKey.to);
+      alert(this.searchBlogKey.age);
+      alert(this.searchBlogKey.freeWord);
+
       //apiからサーバーに命令をだす。(store action)
       var that = this;
 
-      var formdata = new FormData();
-      formdata.append("sex", this.searchBlogKey.sex);
-
+      const params = new URLSearchParams();
+      params.append("sex", this.searchBlogKey.sex);
 
       this.$store
-        .dispatch("blog/searchBlog",formdata)
+        .dispatch("blog/searchBlog",params)
         //成功の場合
       .then((res) => {
         this.$nextTick().then(function() {
@@ -241,7 +251,20 @@ export default {
     },
     emitSelectSex(sex) {
       this.searchBlogKey.sex = sex;
-    }
+    },
+    emitSelectPref(pref) {
+      this.searchBlogKey.pref = pref;
+    },
+    emitSelectDate(params) {
+      this.searchBlogKey.from = params.from;
+      this.searchBlogKey.to = params.to;
+    },
+    emitSelectAge(age) {
+      this.searchBlogKey.age = age;      
+    },
+    emitSelectFreeWord(freeWord) {
+      this.searchBlogKey.freeWord = freeWord;      
+    },
   },
   filters: {
     content_slice: function(value) {

@@ -29,7 +29,9 @@ export default {
   },
   methods: {
     onChange: function(){
-      this.$emit("emitSelectSex", this.sex);
+      if (this.title === '性別') {
+        this.$emit("emitSelectSex", this.sex);
+      }
     }
   },
 
