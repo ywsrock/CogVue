@@ -60,8 +60,8 @@
                     </div>
                     <div class="pager">
                         <v-pagination
-                          v-model="page"
-                          :length="length"
+                          v-model="list.page"
+                          :length="list.length"
                           :total-visible="7"
                           @input = "pageChange"
                         ></v-pagination>
@@ -169,7 +169,7 @@ export default {
   },
   methods: {
     pageChange: function(pageNumber){
-      this.displayLists = this.tableData.slice(this.pageSize*(pageNumber -1), this.pageSize*(pageNumber));
+      this.list.displayLists = this.list.tableData.slice(this.list.pageSize*(pageNumber -1), this.list.pageSize*(pageNumber));
     },
     blogEdit(id) {
       //apiからサーバーに命令をだす。(store action)
@@ -246,8 +246,8 @@ export default {
   filters: {
     content_slice: function(value) {
       if (!value) return "";
-      value = value.toString();
-      return value.slice(0, 100) + "....";
+      let target = value.toString();
+      return target.slice(0, 100) + "....";
     },
   },
 };
