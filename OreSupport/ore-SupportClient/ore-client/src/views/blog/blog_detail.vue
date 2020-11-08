@@ -33,7 +33,7 @@
                         <span class="tag-border">東京都</span>
                         <span class="tag-border">教師</span>
                         <span class="tag-border"><i class="fa fa-heart mr-2"></i>{{ likes.length }}</span>
-                        <span class="tag-border">💬３コメント</span>
+                        <span class="tag-border"><i class="fa fa-comments mr-2"></i>{{ blogDetail.comment.length }}</span>
                         <span style="padding-left: 5px;">投稿日 2020年10月17日 13:00</span>
                       </p>
                       <p style="margin-bottom: 0px">
@@ -44,7 +44,7 @@
                       <p>{{ blogDetail.content }}</p>
                     </div>
                     <h2 id="reviews"></h2>
-                    <div class="comment-inner" v-for="item in blogDetail.comment" :key="item">
+                    <div v-for="item in blogDetail.comment" :key="item.commentID">
                       <div class="comments">
                         <div class="comment">
                           <div class="comment-image">
@@ -381,4 +381,5 @@ p {
   padding-left: 100px;  
   padding-right: 100px;  
 }
+
 </style>
