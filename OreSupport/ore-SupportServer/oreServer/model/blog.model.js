@@ -29,7 +29,11 @@ const Blog = sequelize.define('Blog', {
         type: Sequelize.TEXT,
         allowNull: true,
         comment: "Content"
-    }
+    },
+    BlogImage: {
+        type: Sequelize.STRING,
+        allowNull: true
+      },
 
 }, {
     tableName: "Tb_Blog", //　Maping　テーブル名指定
