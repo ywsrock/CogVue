@@ -4,7 +4,7 @@
     <div class="page-wrapper">
       <div id="header" class="header"></div>
 
-      
+
       <div class="main">
         <div class="main-inner">
           <div class="container">
@@ -16,7 +16,7 @@
                     <div style="text-align: right;">
                       <button @click.prevent="blogEdit(id)">編集する</button>
                       <button @click.prevent="blogDelete(id)">削除する</button>
-                      <button v-if="likedFlg" @click="destroyLike($event)">いいね取り消し</button>                        
+                      <button v-if="likedFlg" @click="destroyLike($event)">いいね取り消し</button>
                       <button v-else @click="createLike($event)">いいね！</button>
                     </div>
                   </div>
@@ -97,7 +97,7 @@
                           タイトル
                           <span class="required">*</span>
                         </label>
-                        <input 
+                        <input
                           type="text"
                           ref="commentName"
                           placeholder="タイトル"
@@ -220,7 +220,7 @@ export default {
         .then(res => {
           //成功の場合
           // this.$router.push("/blogDetail?id=" + this.$route.query.id);
-          
+
           this.$nextTick().then(function() {
             const content = that.$store.getters.get_content;
             const title = that.$store.getters.get_title;
@@ -293,7 +293,7 @@ export default {
           }),
             // detail画面に遷移
             this.fetchBlogInfo();
-            
+
         })
         .catch((error) => {
           e.target.disabled = false;
@@ -344,9 +344,9 @@ export default {
       this.likedFlg = false;
       let that = this;
       this.likes.some(function(like){
-        if(like.userID === userID){ 
+        if(like.userID === userID){
           that.likedFlg = true;
-          return true; 
+          return true;
         }
       });
     }
@@ -378,8 +378,8 @@ p {
 }
 
 .post-meta {
-  padding-left: 100px;  
-  padding-right: 100px;  
+  padding-left: 100px;
+  padding-right: 100px;
 }
 
 </style>

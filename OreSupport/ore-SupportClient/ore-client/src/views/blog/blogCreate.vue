@@ -69,7 +69,11 @@
                         <div class="widget">
                           <div class="user-photo">
                             <a href="#">
-                              <img :src="blogImg" alt="User Photo" />
+                              <img
+                                :src="blogImg"
+                                @error="defaultBlogImg"
+                                alt="User Photo"
+                              />
                               <input
                                 ref="upfile"
                                 id="file_photo"
@@ -82,7 +86,7 @@
                         </div>
                         <!-- /.widget -->
                       </div>
-                      <!-- col-sm-6 -->
+                      <!-- col-sm-4 -->
                     </div>
                     <!-- /.row -->
 
@@ -165,6 +169,7 @@
 
 <script>
 import { Message } from "element-ui";
+var img = require("../../../public/favicon.png");
 /* eslint-disable */
 export default {
   data() {
@@ -172,19 +177,27 @@ export default {
       registForm: {
         title: "",
         content: "",
-        image: "",
+        blogimage: "",
+        filename: "",
       },
-      blogImg: "",
+      blogImg: "" || img,
+      defaultsrc: img,
+
       category: ["食事", "運動", "脳トレ", "音楽", "その他"],
       tags: ["サンマ", "マラソン", "モーツァルト", "パズル"],
     };
   },
   methods: {
+    defaultBlogImg: function() {
+      return this.defaultsrc;
+    },
     onchange: function(e) {
       e.preventDefault();
       const files = e.target.files;
       const file = files[0];
-        this.registForm.image = files[0];
+      console.log(file.name);
+      this.registForm.filename = file.name;
+      this.registForm.blogimage = files[0];
       const reader = new FileReader();
       reader.readAsDataURL(file);
       reader.onload = (e) => {
@@ -192,54 +205,26 @@ export default {
       };
     },
 
-    //   let that = this;
-    //   //ファイル取得
-    //   let fl = this.$refs.upfile.files[0];
-    //   //ファイルの形式
-    //   const isJPG = fl.type === "image/jpeg";
-    //   //ファイルサイズ
-    //   const isLt2M = fl.size / 1024 / 1024 < 2;
-    //   if (!isJPG) {
-    //     Message({
-    //       message: "jpegファイルをアップロードしてください。",
-    //       type: "error",
-    //       duration: 5 * 1000,
-    //     });
-    //     return;
-    //   }
-    //   if (!isLt2M) {
-    //     Message({
-    //       message: "サイズは2MB以下のファイルをアップロードしてくだい。",
-    //       type: "error",
-    //       duration: 5 * 1000,
-    //     });
-    //     return;
-    //   }
-    //   //Content-Type:form/multipart で送信されます
-    //   let data = new FormData();
-    //   data.append("imgBlog", fl, fl.name);
-    //   this.$store
-    //     .dispatch("blog/imageUp", data)
-    //     .then(function(data) {
-    //       return data.imgUrl;
-    //     })
-    //     // .then(function(text) {
-    //     //   that.basicInfo.avatar = text;
-    //     // })
-    //     .catch(function(error) {
-    //       window.alert("Error: " + error.message);
-    //     });
-
-    // blog登録処理ハンドラー
     createBlog: function(e) {
       // 二重コミット防止のため、ボタンを非活性
       e.target.disabled = true;
-      // // 全項目チェック、問題なければ、登録処理を行う
-      // const isValid = this.validate(this.registForm, this.rules);
-      // if (!isValid) {
+
+      let that = this;
+      let fl = this.$refs.upfile.files[0];
+
+      //Content-Type:form/multipart で送信されます
+      let data = new FormData();
+      // data.append("key", value, parameter);
+      data.append(
+        "imgBlog",
+        this.registForm.blogimage,
+        this.registForm.filename
+      );
+
+      data.append("registForm", JSON.stringify(this.registForm));
       // ユーザ登録処理
       this.$store
-        .dispatch("blog/createBlog", this.registForm)
+        .dispatch("blog/createBlog", data)
         .then((res) => {
           Message({
             message: "作成OK",
@@ -255,7 +240,6 @@ export default {
           console.log("作成失敗");
         });
     },
-
     blogClick: function() {
       this.$router.push("/blog/blogList");
     },
