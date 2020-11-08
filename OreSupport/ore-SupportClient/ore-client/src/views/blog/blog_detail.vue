@@ -23,7 +23,7 @@
                     <div class="post-meta clearfix">
                       <div class="post-meta-author">
                         By
-                        <a href="blog-detail.html">1@1.comさん&nbsp;{{blogDetail.userProfile.UserProfile.Birthday}}&nbsp;女性</a>
+                        <!-- <a href="blog-detail.html">1@1.comさん&nbsp;{{blogDetail.userProfile.UserProfile.Birthday}}&nbsp;女性</a> -->
                       </div>
                       <!-- /.post-meta-author -->
                       <div class="post-meta-date">2020/07/07</div>
@@ -485,7 +485,7 @@ export default {
       .then(res => {
         //成功の場合
         // this.$router.push("/blogDetail?id=" + this.$route.query.id);
-        
+
         this.$nextTick().then(function() {
           const content = that.$store.getters.get_content;
           const title = that.$store.getters.get_title;

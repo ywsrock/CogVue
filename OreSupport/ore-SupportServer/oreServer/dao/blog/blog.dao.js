@@ -24,7 +24,8 @@ const createBlog = async (queryInfo) => {
             Title: queryInfo.Title,
             // Content
             Content: queryInfo.Content,
-
+            // ブログ画像
+            BlogImage: queryInfo.BlogImage,
         });
         // トランザクションコンミット
         await t.commit();
@@ -101,7 +102,7 @@ const getBlogDetail = async(queryInfo) => {
             foreignKey: {
                 name: 'id'
             },
-            targetKey : 'id' 
+            targetKey : 'id'
         });
         const result = await Blog.findAll({
             where: {
@@ -152,6 +153,8 @@ const blogUpdate = async (queryInfo) => {
             Title: queryInfo.Title,
             // Content
             Content: queryInfo.Content,
+            // ブログ画像のファイル名
+            BlogImage: queryInfo.BlogImage
 
         }, {
             where: {
