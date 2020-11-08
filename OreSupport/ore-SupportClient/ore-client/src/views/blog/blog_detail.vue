@@ -12,82 +12,38 @@
               <div class="col-sm-8 col-lg-9">
                 <div class="content">
                   <div class="page-title">
-                    <h1>{{ blogDetail.title }}</h1>
-                    <button @click.prevent="blogEdit(id)">編集する</button>
-                    <button @click.prevent="blogDelete(id)">削除する</button>
+                    <h1 style="text-align: center; font-weight: bold;">{{ blogDetail.title }}</h1>
+                    <div style="text-align: right;">
+                      <button @click.prevent="blogEdit(id)">編集する</button>
+                      <button @click.prevent="blogDelete(id)">削除する</button>
+                      <button v-if="likedFlg" @click="destroyLike($event)">いいね取り消し</button>                        
+                      <button v-else @click="createLike($event)">いいね！</button>
+                    </div>
                   </div>
                   <!-- /.page-title -->
-
                   <div class="posts post-detail">
-                    <img src="../../assets/img/tmp/blog-1.jpg" alt="A Clockwork Origin" />
-
+                    <div style="text-align: center;">
+                      <img src="../../assets/img/tmp/20200920park.png" alt="blog image" />
+                    </div>
                     <div class="post-meta clearfix">
-                      <div class="post-meta-author">
-                        By
-                        <a href="blog-detail.html">1@1.comさん&nbsp;{{blogDetail.userProfile.UserProfile.Birthday}}&nbsp;女性</a>
-                      </div>
-                      <!-- /.post-meta-author -->
-                      <div class="post-meta-date">2020/07/07</div>
-                      <!-- /.post-meta-date -->
-                      <div class="post-meta-categories">
-                        <i class="fa fa-tags"></i>
-                        <a href="blog-detail.html">記憶力</a>
-                      </div>
-                      <!-- /.post-meta-categories -->
-                      <div class="post-meta-categories">
-                        <i class="fa fa-comments"></i>
-                        <a href="blog-detail.html">3 コメント</a>
-                      </div>
-                      <div class="post-meta-comments">
-                        <i class="fa fa-heart"></i>
-                        <a v-if="likedFlg" href="" @click="destroyLike($event)">いいね取り消し</a>                        
-                        <a v-else href="" @click="createLike($event)">いいね！</a>
-                      </div>
-                      <!-- /.post-meta-comments -->
+                      <p style="margin-bottom: 5px">
+                        <span class="tag-border">1@1.comさん</span>
+                        <span class="tag-border">男性</span>
+                        <span class="tag-border">50代</span>
+                        <span class="tag-border">東京都</span>
+                        <span class="tag-border">教師</span>
+                        <span class="tag-border"><i class="fa fa-heart mr-2"></i>{{ likes.length }}</span>
+                        <span class="tag-border">💬３コメント</span>
+                        <span style="padding-left: 5px;">投稿日 2020年10月17日 13:00</span>
+                      </p>
+                      <p style="margin-bottom: 0px">
+                        <span class="tag-border">行動タグ：焼肉、散歩、ダイエット</span>
+                      </p>
                     </div>
-                    <!-- /.post-meta -->
-
-                    <div class="post-content">
-                      <p class="drop-cap">{{ blogDetail.content }}</p>
-                      <img
-                        class="post-content-image pull-left"
-                        src="../../assets/img/tmp/product-3.jpg"
-                        alt="..."
-                      />
-                      <img
-                        class="post-content-image pull-right"
-                        src="../../assets/img/tmp/product-9.jpg"
-                        alt="..."
-                      />
+                    <div class="post-content" style="font-size: 25px; min-height: 200px;">
+                      <p>{{ blogDetail.content }}</p>
                     </div>
-                    <!-- /.post-content -->
-
-                    <div class="post-meta-tags clearfix">
-                      Tags:
-                      <ul>
-                        <li class="tag">
-                          <a href="#">Coffee</a>
-                        </li>
-                        <li class="tag">
-                          <a href="#">Breakfast</a>
-                        </li>
-                        <li class="tag">
-                          <a href="#">Wine</a>
-                        </li>
-                        <li class="tag">
-                          <a href="#">Healthy Food</a>
-                        </li>
-                        <li class="tag">
-                          <a href="#">Raw Food</a>
-                        </li>
-                      </ul>
-                    </div>
-                    <!-- /.post-meta -->
-                    <br />
-                    <!-- <a @click.prevent="getBlogDetail(item.id)"> -->
-
                     <h2 id="reviews"></h2>
-
                     <div class="comment-inner" v-for="item in blogDetail.comment" :key="item">
                       <div class="comments">
                         <div class="comment">
@@ -134,87 +90,40 @@
                     </div>
                     <!-- /.comments -->
 
-                    <form @submit.prevent="postComment" style="border:1px solid #ccc">
-
-                    <h2>Write a Comment</h2>
-                    <!-- <form class="background-white p20 add-comment" method="post" action="postComment"> -->
-                      <p>
-                        Required fields are marked
-                        <span class="required">*</span>
-                      </p>
-
+                    <form @submit.prevent="postComment">
+                      <div class="form-group col-sm-4" style="padding-left: 0;">
+                        <h3 style="margin-top: 0px;">コメントを投稿する</h3>
+                        <label for>
+                          タイトル
+                          <span class="required">*</span>
+                        </label>
+                        <input 
+                          type="text"
+                          ref="commentName"
+                          placeholder="タイトル"
+                          v-model="registForm.commentName"
+                          name="commentName"
+                          required
+                          class="form-control"
+                            />
+                      </div>
                       <div class="orig-row">
                         <div class="form-group col-sm-12">
                           <label for>
-                            comment
+                            内容
                             <span class="required">*</span>
                           </label>
                           <textarea
-                      class="form-control"
-                      rows="7"
-                      placeholder="内容"
-                      name="comment"
-                      v-model="registForm.comment"
-
-                    ></textarea>
-                          <!-- <textarea class="form-control" rows="5" id required></textarea> -->
-                        </div>
-                        <!-- /.col-sm-12 -->
-
-                        <div class="form-group col-sm-4">
-                          <label for>
-                            commentName
-                            <span class="required">*</span>
-                          </label>
-                          <input 
-                            type="text"
-                            ref="commentName"
-                            placeholder="commentName"
-                            v-model="registForm.commentName"
-                            name="commentName"
-                            required
                             class="form-control"
-                             />
+                            rows="7"
+                            placeholder="内容"
+                            name="comment"
+                            v-model="registForm.comment"
+                          ></textarea>
                         </div>
-                        
-                        <!-- /.col-sm-4 -->
-
-                        <!-- <div class="form-group col-sm-4">
-                          <label for>
-                            Email
-                            <span class="required">*</span>
-                          </label>
-                          <input type="email" class="form-control" id required />
-                        </div> -->
-                        <!-- /.col-sm-4 -->
-
-                        <!-- <div class="form-group col-sm-4">
-                          <label for>Website</label>
-                          <input type="text" class="form-control" id />
-                        </div> -->
-                        <!-- /.col-sm-4 -->
-
-                        <!-- <div class="col-sm-8">
-                          <p class="form-allowed-tags" id="form-allowed-tags">
-                            You may use these
-                            <abbr title="HyperText Markup Language">HTML</abbr>
-                            tags and attributes:
-                            <code>
-                              &lt;a href=&quot;&quot; title=&quot;&quot;&gt;
-                              &lt;abbr title=&quot;&quot;&gt; &lt;b&gt;
-                              &lt;blockquote cite=&quot;&quot;&gt;
-                              &lt;cite&gt; &lt;code&gt; &lt;em&gt; &lt;i&gt;
-                              &lt;q cite=&quot;&quot;&gt; &lt;s&gt;
-                              &lt;strike&gt; &lt;strong&gt;
-                            </code>
-                          </p>
-                        </div> -->
-                        <!-- /.col-sm-8 -->
-
                         <div class="col-sm-4">
-
                           <button class="btn btn-primary btn-block" type="submit">
-                            <i class="fa fa-comments"></i>Post Comment
+                            <i class="fa fa-comments"></i>送信
                           </button>
                         </div>
                         <!-- /.col-sm-4 -->
@@ -229,248 +138,27 @@
               <!-- /.col-* -->
 
               <div class="col-sm-4 col-lg-3">
-                <div class="sidebar">
-                  <div class="widget">
-                    <div class="card-small">
-                      <button
-                        class="btn btn-primary btn-block"
-                        type="submit"
-                        onclick="location.href='#/blog/createBlog';return false;"
-                      >新規投稿</button>
+                  <div class="sidebar"  style="width: 300px; margin: 0 0 0 auto;">
+                    <div class="widget">
+                      <blogCreateButton />
+                      <h2 class="widgettitle">注目されているブログ</h2>
+                      <recommendBlogItems />
                     </div>
 
-                    <h2 class="widgettitle">最近見たブログ</h2>
-                    <div class="cards-small">
-                      <div class="card-small">
-                        <div class="card-small-image">
-                          <a href="listing-detail.html">
-                            <img src="../../assets/img/tmp/product-2.jpg" alt="Tasty Brazil Coffee" />
-                          </a>
-                        </div>
-                        <!-- /.card-small-image -->
-
-                        <div class="card-small-content">
-                          <h3>
-                            <a href="listing-detail.html">開発が面白くなってきました</a>
-                          </h3>
-                          <h4>
-                            <a href="listing-detail.html">加藤さん</a>
-                          </h4>
-                          <div class="card-small-price">$180 / person</div>
-                        </div>
-                        <!-- /.card-small-content -->
-                      </div>
-                      <!-- /.card-small -->
+                    <div class="widget">
+                      <img
+                        src="../../assets/img/tmp/campaign-sample.png"
+                        alt="campaign"
+                        style="width: 300px"
+                      />
                     </div>
-                    <!-- /.cards-small -->
 
-                    <div class="cards-small">
-                      <div class="card-small">
-                        <div class="card-small-image">
-                          <a href="listing-detail.html">
-                            <img src="../../assets/img/tmp/product-3.jpg" alt="Healthy Breakfast" />
-                          </a>
-                        </div>
-                        <!-- /.card-small-image -->
-
-                        <div class="card-small-content">
-                          <h3>
-                            <a href="listing-detail.html">ガーナに行ってきました</a>
-                          </h3>
-                          <h4>
-                            <a href="listing-detail.html">舘山さん</a>
-                          </h4>
-
-                          <div class="card-small-price">$180 / person</div>
-                        </div>
-                        <!-- /.card-small-content -->
-                      </div>
-                      <!-- /.card-small -->
-                    </div>
-                    <!-- /.cards-small -->
-
-                    <div class="cards-small">
-                      <div class="card-small">
-                        <div class="card-small-image">
-                          <a href="listing-detail.html">
-                            <img
-                              src="../../assets/img/tmp/product-4.jpg"
-                              alt="Coffee &amp; Newspaper"
-                            />
-                          </a>
-                        </div>
-                        <!-- /.card-small-image -->
-
-                        <div class="card-small-content">
-                          <h3>
-                            <a href="listing-detail.html">javascript最高！！！</a>
-                          </h3>
-                          <h4>
-                            <a href="listing-detail.html">閻さん</a>
-                          </h4>
-
-                          <div class="card-small-price">$180 / person</div>
-                        </div>
-                        <!-- /.card-small-content -->
-                      </div>
-                      <!-- /.card-small -->
-                    </div>
-                    <!-- /.cards-small -->
-                  </div>
-                  <!-- /.widget -->
-
-                  <div class="widget">
-                    <h2 class="widgettitle">簡易検索</h2>
-
-                    <div class="background-white p20">
-                      <form method="post" action="?">
-                        <div class="form-group">
-                          <label for>Keyword</label>
-                          <input type="text" class="form-control" name id />
-                        </div>
-                        <!-- /.form-group -->
-
-                        <div class="form-group">
-                          <label for>Category</label>
-
-                          <select class="form-control" title="Select Category">
-                            <option>Automotive</option>
-                            <option>Real Estate</option>
-                          </select>
-                        </div>
-                        <!-- /.form-group -->
-
-                        <div class="form-group">
-                          <label for>Location</label>
-                          <select class="form-control" title="Select Location">
-                            <option>New York</option>
-                            <option>San Francisco</option>
-                          </select>
-                        </div>
-                        <!-- /.form-group -->
-
-                        <div class="form-group">
-                          <label for>Starting Price</label>
-                          <input type="text" class="form-control" name id />
-                        </div>
-                        <!-- /.form-group -->
-
-                        <button class="btn btn-primary btn-block" type="submit">検索</button>
-                      </form>
+                    <div class="widget">
+                      <h2 class="widgettitle">おすすめの行動タグ</h2>
+                      <recommendActionTag />
                     </div>
                   </div>
-                  <!-- /.widget -->
-
-                  <div class="widget">
-                    <h2 class="widgettitle">Working Hours</h2>
-
-                    <div class="p20 background-white">
-                      <div class="working-hours">
-                        <div class="day clearfix">
-                          <span class="name">Mon</span>
-                          <span class="hours">07:00 AM - 07:00 PM</span>
-                        </div>
-                        <!-- /.day -->
-
-                        <div class="day clearfix">
-                          <span class="name">Tue</span>
-                          <span class="hours">07:00 AM - 07:00 PM</span>
-                        </div>
-                        <!-- /.day -->
-
-                        <div class="day clearfix">
-                          <span class="name">Wed</span>
-                          <span class="hours">07:00 AM - 07:00 PM</span>
-                        </div>
-                        <!-- /.day -->
-
-                        <div class="day clearfix">
-                          <span class="name">Thu</span>
-                          <span class="hours">07:00 AM - 07:00 PM</span>
-                        </div>
-                        <!-- /.day -->
-
-                        <div class="day clearfix">
-                          <span class="name">Fri</span>
-                          <span class="hours">07:00 AM - 07:00 PM</span>
-                        </div>
-                        <!-- /.day -->
-
-                        <div class="day clearfix">
-                          <span class="name">Sat</span>
-                          <span class="hours">07:00 AM - 02:00 PM</span>
-                        </div>
-                        <!-- /.day -->
-
-                        <div class="day clearfix">
-                          <span class="name">Sun</span>
-                          <span class="hours">Closed</span>
-                        </div>
-                        <!-- /.day -->
-                      </div>
-                    </div>
-                  </div>
-                  <!-- /.widget -->
-
-                  <div class="widget">
-                    <h2 class="widgettitle">Categories</h2>
-
-                    <ul class="menu">
-                      <li>
-                        <a href="#">Automotive</a>
-                      </li>
-                      <li>
-                        <a href="#">Jobs</a>
-                      </li>
-                      <li>
-                        <a href="#">Nightlife</a>
-                      </li>
-                      <li>
-                        <a href="#">Services</a>
-                      </li>
-                      <li>
-                        <a href="#">Transportation</a>
-                      </li>
-                      <li>
-                        <a href="#">Real Estate</a>
-                      </li>
-                      <li>
-                        <a href="#">Restaurants</a>
-                      </li>
-                    </ul>
-                    <!-- /.menu -->
-                  </div>
-                  <!-- /.wifget -->
-
-                  <div class="widget">
-                    <h2 class="widgettitle">Archives</h2>
-
-                    <ul class="menu">
-                      <li>
-                        <a href="#">
-                          August
-                          <strong class="pull-right">12</strong>
-                        </a>
-                      </li>
-                      <li>
-                        <a href="#">
-                          July
-                          <strong class="pull-right">23</strong>
-                        </a>
-                      </li>
-                      <li>
-                        <a href="#">
-                          June
-                          <strong class="pull-right">53</strong>
-                        </a>
-                      </li>
-                    </ul>
-                    <!-- /.menu -->
-                  </div>
-                  <!-- /.wifget -->
                 </div>
-                <!-- /.sidebar -->
-              </div>
               <!-- /.col-* -->
             </div>
             <!-- /.row -->
@@ -490,8 +178,17 @@
 
 <script>
 import { Message } from "element-ui";
+import recommendBlogItems from "./recommend_blog_items"
+import blogCreateButton from "./blog_create_button"
+import recommendActionTag from "./recommend_action_tag"
+
 /* eslint-disable */
 export default {
+  components: {
+    recommendBlogItems,
+    blogCreateButton,
+    recommendActionTag
+  },
   data() {
     return {
       blogDetail: {
@@ -673,5 +370,15 @@ export default {
 }
 p {
   white-space: pre-wrap;
+}
+
+.tag-border {
+  border-right: 1px solid rgba(0, 0, 0, 0.1);
+  padding: 0 5px;
+}
+
+.post-meta {
+  padding-left: 100px;  
+  padding-right: 100px;  
 }
 </style>

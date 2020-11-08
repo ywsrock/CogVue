@@ -45,7 +45,7 @@ router.post("/create", [checkuser.verifyUser], async function (
 });
 
 // いいね取得
-router.post("/index", [checkuser.verifyUser], async function (
+router.post("/index", async function (
   req,
   res,
   next
