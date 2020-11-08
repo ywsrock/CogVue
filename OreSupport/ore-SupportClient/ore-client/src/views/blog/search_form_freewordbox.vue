@@ -8,6 +8,8 @@
         class="form-control"
         style="width: 200px; display: flex;"
         id="freeword"
+        ref="freeword"
+        @change="onChange"
       />
     </div>
   </div>
@@ -20,6 +22,11 @@ export default {
       type: String,
       required: true      
     },
-  }
+  },
+  methods: {
+    onChange: function(){
+      this.$emit("emitSelectFreeWord", this.$refs.freeword.value);
+    }
+  },
 };
 </script>
