@@ -20,7 +20,9 @@ const state = {
 
     userName:"",
 
-    commentName:""
+    commentName:"",
+
+    blogImg: "",
 }
 
 /*
@@ -34,7 +36,7 @@ const getters = {
     get_userName: state => state.userName,
     get_userProfile: state => state.userProfile,
     get_commentName: state => state.commentName,
-
+    get_blogImg: state => state.blogImg,
 }
 
 /*
@@ -64,6 +66,9 @@ const mutations = {
     },
     set_commentName: (state, data) => {
         state.commentName = data
+    },
+    set_blogImg: (state, data) => {
+        state.blogImg = data
     },
 
 }
@@ -128,7 +133,7 @@ const actions = {
 
                         context.commit("set_userProfile",data.userProfile)
 
-
+                        context.commit("set_blogImg",data.blogImg)
                         resolve(data);
                     }).catch(error => {
                         reject(error);
