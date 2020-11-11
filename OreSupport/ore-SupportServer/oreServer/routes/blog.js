@@ -168,6 +168,7 @@ router.post("/create", [checkuser.verifyUser], async function (req, res, next) {
 router.get("/blogdetail", async function (req, res, next) {
   console.log(req.query.blogID);
   let resObj = {};
+
   // ポートの番号取得
   var port = req.app.settings.port;
   var respath =
@@ -186,6 +187,8 @@ router.get("/blogdetail", async function (req, res, next) {
     val: userId,
   });
 
+
+
   if (typeof blogDetail.errors != "undefined") {
     // エラー結果
     resObj = {
@@ -203,7 +206,7 @@ router.get("/blogdetail", async function (req, res, next) {
     //     commentArray.push(model.Comment1)
     // })
 
-    // let imgUrl = `${respath}/blogImg/${blogDetail[0].BlogImage}`,
+      let imgUrl = `${respath}/blogImg/${blogDetail[0].BlogImage}`;
 
       resObj = {
         code: STATUS_MESSAGE.CODE_SUCCESS,
@@ -216,7 +219,7 @@ router.get("/blogdetail", async function (req, res, next) {
           // comment: commentArray || "",
           comment: blogDetail[0].Comments || "",
           userProfile: userProfile,
-          // imgUrl: imgUrl,
+          imgUrl: imgUrl,
         },
       };
   }
