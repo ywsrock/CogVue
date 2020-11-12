@@ -6,181 +6,172 @@
       </div>
       <!-- /.page-title -->
 
-      <div class="background-white p20 mb30">
-        <div class="container">
-          <div>
-            <el-dialog :visible.sync="isModalShow">
-              <div>
-                <h3 class="page-title">
-                  行動作成
-                </h3>
-                <div class="orig-row">
-                  <div class="form-group col-12">
-                    <label>アクション名</label>
-                    <input
-                      type="text"
-                      class="form-control"
-                      v-model="newAction.newName"
-                    />
-                  </div>
-                  <div class="form-group col-sm-12">
-                    <label>行動期間</label>
-                    <el-date-picker
-                      class="form-control"
-                      v-model="newAction.newDate"
-                      type="datetimerange"
-                      value-format="yyyy-MM-dd HH:mm:ss"
-                      range-separator="〜"
-                      start-placeholder="開始日時"
-                      end-placeholder="終了日時"
-                      style="width:100%"
+      <v-dialog v-model="isModalShow" fullscreen hide-overlay>
+        <v-card tile>
+          <v-toolbar flat dark :color="actionInfo.color">
+            <v-btn icon dark @click="isModalShow = false">
+              <v-icon>mdi-close</v-icon>
+            </v-btn>
+            <v-toolbar-title class="text-h3">行動履歴編集</v-toolbar-title>
+            <v-spacer></v-spacer>
+            <v-toolbar-items>
+              <v-btn dark text @click="handlerSave" class="text-h4">
+                保存
+              </v-btn>
+              <v-btn dark text @click="isModalShow = false" class="text-h4">
+                取消
+              </v-btn>
+            </v-toolbar-items>
+          </v-toolbar>
+          <ValidationObserver ref="editActionForm" v-slot="{ reset }">
+            <div class="orig-row ma-5" @reset.prevent="reset">
+              >
+              <div class="form-group col-sm-12">
+                <label class="font-weight-black text-h4">アクション名</label>
+                <ValidationProvider
+                  rules="required|max:30"
+                  name="アクション名"
+                  v-slot="{ errors }"
+                >
+                  <v-combobox
+                    v-model="currentActionName"
+                    :items="actionOptions[1].options"
+                    ref="actionName"
+                    style="width:100%"
+                    v-if="!is_readonly"
+                    class="text-h5"
+                    item-text="text"
+                    item-value="value"
+                  >
+                  </v-combobox>
+                  <span class="red--text">{{ errors[0] }}</span>
+                </ValidationProvider>
+                <!--MASTERアクション表示-->
+                <v-chip-group active-class="deep-purple accent-4 white--text">
+                  <template v-for="master in actionOptions[0].options">
+                    <v-chip
+                      class="ma-2"
+                      color="orange"
+                      text-color="white"
+                      :key="master.id"
+                      @click="currentActionName = master.name"
                     >
-                    </el-date-picker>
-                  </div>
-                  <div class="form-group col-sm-12">
-                    <label>メモ</label>
-                    <textarea
-                      class="form-control"
-                      rows="3"
-                      v-model="newAction.newMemo"
-                    ></textarea>
-                  </div>
-                  <div class="orig-row  mx-auto">
-                    <div class="col">
-                      <el-button
-                        type="warning"
-                        class="btn btn-danger btn-xs col-sm-6"
-                        @click="handlerNewAction(0)"
-                        >取消</el-button
-                      >
-                    </div>
-                    <div class="col">
-                      <el-button
-                        type="primary"
-                        class="btn btn-primary btn-xs col-sm-6"
-                        @click="handlerNewAction(1)"
-                        >作成</el-button
-                      >
-                    </div>
-                  </div>
-                  <!-- /.form-group -->
+                      {{ master.name }}
+                      <v-icon right>
+                        mdi-star
+                      </v-icon>
+                    </v-chip>
+                  </template>
+                </v-chip-group>
+              </div>
+              <div class="form-group col-sm-12">
+                <div class="form-group col-sm-6">
+                  <label class="font-weight-black text-h4">行動開始時刻</label>
+                  <ValidationProvider
+                    rules="required"
+                    via="startDate"
+                    name="行動開始時刻"
+                    v-slot="{ errors }"
+                  >
+                    <v-datetime-picker
+                      v-model="actionInfo.startDate"
+                      :time-picker-props="timeProps"
+                      :date-picker-props="dateProps"
+                      time-format="HH:mm:ss"
+                      date-format="yyyy-MM-dd"
+                      clearText="取消"
+                      okText="選択"
+                    >
+                      <template slot="dateIcon">
+                        <v-icon>mdi-calendar</v-icon>
+                      </template>
+                      <template slot="timeIcon">
+                        <v-icon>mdi-clock</v-icon>
+                      </template>
+                    </v-datetime-picker>
+                    <span class="red--text">{{ errors[0] }}</span>
+                  </ValidationProvider>
+                </div>
+                <div class="form-group col-sm-6">
+                  <label class="font-weight-black text-h4">行動終了時刻</label>
+                  <ValidationProvider
+                    rules="required|actionTerm:@行動開始時刻"
+                    via="endDate"
+                    name="行動終了時刻"
+                    v-slot="{ errors }"
+                  >
+                    <v-datetime-picker
+                      v-model="actionInfo.endDate"
+                      :time-picker-props="timeProps"
+                      :date-picker-props="dateProps"
+                      time-format="HH:mm:ss"
+                      date-format="yyyy-MM-dd"
+                      clearText="取消"
+                      okText="選択"
+                    >
+                      <template slot="dateIcon">
+                        <v-icon>mdi-calendar</v-icon>
+                      </template>
+                      <template slot="timeIcon">
+                        <v-icon>mdi-clock</v-icon>
+                      </template>
+                    </v-datetime-picker>
+                    <span class="red--text">{{ errors[0] }}</span>
+                  </ValidationProvider>
                 </div>
               </div>
-            </el-dialog>
-          </div>
-        </div>
-        <h3 class="page-title">
-          行動管理
-
-          <div class="pull-right" v-if="!is_readonly">
-            <el-button
-              type="warning"
-              class="btn btn-danger btn-xs"
-              @click="is_readonly = true"
-              >取消</el-button
-            >
-
-            <el-button
-              type="primary"
-              class="btn btn-primary btn-xs"
-              @click="handlerSave"
-              >保存</el-button
-            >
-          </div>
-        </h3>
-
-        <div class="orig-row" v-if="false">
-          <div class="form-group col-sm-6">
-            <label>アクション名</label>
-            <input
-              type="text"
-              class="form-control"
-              v-bind:value="actionInfo.name"
-              v-if="is_readonly"
-              :readonly="is_readonly"
-            />
-
-            <el-select
-              v-model="currentActionName"
-              clearable
-              placeholder="選択..."
-              ref="actionName"
-              style="width:100%"
-              v-if="!is_readonly"
-            >
-              <el-option-group
-                v-for="group in actionOptions"
-                :key="group.label"
-                :label="group.label"
-              >
-                <el-option
-                  v-for="item in group.options"
-                  :key="item.id"
-                  :label="item.name"
-                  :value="item.name + ':' + item.id"
+              <div class="form-group col-sm-12">
+                <label class="font-weight-black text-h4">メモ</label>
+                <ValidationProvider
+                  rules="max:100"
+                  name="メモ"
+                  v-slot="{ errors }"
                 >
-                </el-option>
-              </el-option-group>
-            </el-select>
-          </div>
-          <div class="form-group col-sm-6">
-            <label>行動期間</label>
-            <input
-              type="text"
-              id="start"
-              name="trip-start"
-              v-bind:value="actionTerm"
-              class="form-control"
-              :readonly="is_readonly"
-              v-if="is_readonly"
-            />
-            <el-date-picker
-              ref="actionDate"
-              class="form-control"
-              v-model="currentActionDate"
-              type="datetimerange"
-              value-format="yyyy-MM-dd HH:mm:ss"
-              range-separator="To"
-              start-placeholder="開始日時"
-              end-placeholder="終了日時"
-              v-if="!is_readonly"
-              style="width:100%"
-            >
-            </el-date-picker>
-          </div>
-          <div class="form-group col-sm-12">
-            <label>メモ</label>
-            <textarea
-              ref="actionMemo"
-              class="form-control"
-              rows="3"
-              v-bind:value="actionInfo.memo"
-              :readonly="is_readonly"
-            ></textarea>
-          </div>
-          <div class="form-group col-sm-12">
-            <el-button
-              type="primary"
-              class="btn btn-primary btn-xs pull-right"
-              @click="isModalShow = true"
-              >新規作成</el-button
-            >
-          </div>
-          <!-- /.form-group -->
-        </div>
-        <!-- /.row -->
-      </div>
+                  <v-textarea
+                    counter
+                    ref="actionMemo"
+                    rows="10"
+                    v-model="actionInfo.memo"
+                    :readonly="is_readonly"
+                    height="120%"
+                  ></v-textarea>
+                  <span class="red--text">{{ errors[0] }}</span>
+                </ValidationProvider>
+              </div>
+              <div class="form-group col-sm-12">
+                <v-btn
+                  dark
+                  text
+                  @click="handlerSave"
+                  class="btn btn-primary btn-xs col-sm-1 text-h4 float-right"
+                >
+                  保存
+                </v-btn>
+                <v-btn
+                  dark
+                  text
+                  @click="isModalShow = false"
+                  class="btn btn-danger btn-xs col-sm-1 text-h4 float-right"
+                >
+                  取消
+                </v-btn>
+              </div>
+              <!-- /.form-group -->
+            </div>
+          </ValidationObserver>
+        </v-card>
+      </v-dialog>
 
       <div class="background-white p20 mb30">
         <h3 class="page-title">
           行動カレンダー
         </h3>
-        <ActionCalendar />
+        <ActionCalendar ref="child" :actionData="actionHistoryData" />
       </div>
 
       <div class="background-white p20 mb30">
         <h3 class="page-title">
-          行動リスト
+          行動履歴リスト
         </h3>
         <ActionList :actionData="actionHistoryData" />
       </div>
@@ -194,11 +185,37 @@ import { Message } from "element-ui";
 import ActionList from "./actionList";
 import dateFormat from "dateformat";
 import ActionCalendar from "./ActionCalendar";
+import { ValidationProvider, ValidationObserver, extend } from "vee-validate";
+import { required, max } from "vee-validate/dist/rules";
+
+//必須
+extend("required", {
+  ...required,
+  message: "{_field_} 入力してください。",
+});
+
+//文字数
+extend("max", {
+  ...max,
+  params: ["length"],
+  message: "{_field_} を{length}文字以ない入力ください。",
+});
+extend("actionTerm", {
+  params: ["startDate"],
+  validate(value, { startDate }) {
+    if (new Date(value) >= new Date(startDate)) {
+      return true;
+    }
+  },
+  message: "行動終了時刻は開始時刻より後で設定してくだいさい。",
+});
 
 export default {
   components: {
     ActionList,
     ActionCalendar,
+    ValidationProvider,
+    ValidationObserver,
   },
   props: {
     avatarSrc: {
@@ -206,6 +223,13 @@ export default {
     },
   },
   watch: {
+    "actionInfo.id": {
+      handler: function(newV, oldV) {
+        if (newV !== oldV) {
+          this.currentActionID = newV;
+        }
+      },
+    },
     "actionInfo.name": {
       handler: function(newV, oldV) {
         if (newV !== oldV) {
@@ -232,6 +256,19 @@ export default {
   },
   data() {
     return {
+      //カレンダー日付属性設定
+      dateProps: {
+        headerColor: "red",
+        locale: window.navigator.language,
+        // headerDateFormat: "yyyy-MM-dd",
+      },
+      //カレンダー時間属性設定
+      timeProps: {
+        format: "ampm",
+        headerColor: "red",
+        useSeconds: true,
+        ampmInTitle: true,
+      },
       // アクションの履歴情報
       actionHistoryData: [],
       // カレントアクション情報
@@ -242,9 +279,10 @@ export default {
         name: "",
         memo: "",
       },
+      currentActionID: "",
       currentActionName: "",
       currentActionDate: [],
-      actionOptions: [],
+      actionOptions: [{ options: [] }, { options: [] }],
 
       newAction: {
         newDate: [
@@ -322,22 +360,60 @@ export default {
     },
     //アクション情報変更
     async handlerSave() {
-      let saveObj = {
-        newName: this.$refs.actionName.value,
-        newDate: this.$refs.actionDate.value,
-        newMemo: this.$refs.actionMemo.value,
-        id: this.actionInfo.id,
-      };
-      let res = await this.$store.dispatch("action/saveAction", saveObj);
-      Object.assign(this.actionInfo, res.userAction);
-      Message({
-        message: "アクション保存成功",
-        type: "success",
-        duration: 5 * 1000,
+      // 項目チェック行う
+      let success = await this.$refs.editActionForm.validate();
+      if (!success) {
+        return;
+      }
+
+      await this.$confirm("このアクションを変更しますが?", "確認...", {
+        confirmButtonText: "変更",
+        cancelButtonText: "取消",
+        type: "warning",
+      }).then(async () => {
+        let actionNewName = await this.ActionIDToName(
+          this.$refs.actionName.value
+        );
+        let saveObj = {
+          newName: actionNewName,
+          newDate: [this.actionInfo.startDate, this.actionInfo.endDate],
+          newMemo: this.$refs.actionMemo.value,
+          id: this.actionInfo.id,
+        };
+        let res = await this.$store.dispatch("action/saveAction", saveObj);
+        Object.assign(this.actionInfo, res.userAction);
+        this.$refs.child.selectedEvent = this.actionInfo;
+        Message({
+          message: "アクション保存成功",
+          type: "success",
+          duration: 5 * 1000,
+        });
+        //キャンセルの場合、処理しません
+        this.$nextTick(() => {
+          this.$refs.editActionForm.reset();
+        });
+        //アクション情報再検索
+        await this.fetchUserAction();
+        this.is_readonly = true;
+        this.isModalShow = false;
       });
-      //アクション情報再検索
-      this.fetchUserAction();
-      this.is_readonly = true;
+    },
+    //アクション取消
+    handleCancel() {
+      //MODAL画面非表示
+      this.isModalShow = false;
+      //キャンセルの場合、処理しません
+      this.$nextTick(() => {
+        this.$refs.createActionForm.reset();
+      });
+    },
+    // アクションIDから名前変更
+    ActionIDToName(selectValue) {
+      let newActionName = this.currentActionName;
+      if (typeof selectValue === "object") {
+        newActionName = selectValue.text;
+      }
+      return newActionName;
     },
   },
 };
