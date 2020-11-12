@@ -23,19 +23,19 @@
                 {{ $refs.calendar.title }}
               </v-toolbar-title>
               <v-spacer></v-spacer>
-              <el-select v-model="type" placeholder="選択">
-                <el-option
-                  v-for="item in items"
-                  :key="item.value"
-                  :label="item.label"
-                  :value="item.value"
-                >
-                  <span style="float: left">{{ item.label }}</span>
-                  <span style="float: right; color: #8492a6; font-size: 13px">{{
-                    item.value
-                  }}</span>
-                </el-option>
-              </el-select>
+              <v-row justify="end">
+                <v-col cols="2">
+                  <v-select
+                    v-model="type"
+                    :items="items"
+                    item-text="label"
+                    item-value="value"
+                    class="h-25"
+                  >
+                    >
+                  </v-select>
+                </v-col>
+              </v-row>
             </v-toolbar>
           </v-sheet>
           <v-sheet height="600">
@@ -75,210 +75,196 @@
               <v-card color="grey lighten-4" min-width="350px" flat draggable>
                 <v-toolbar :color="selectedEvent.color" dark>
                   <v-btn icon>
-                    <v-icon>mdi-pencil</v-icon>
+                    <v-icon>mdi-human-edit</v-icon>
                   </v-btn>
                   <v-toolbar-title
                     v-html="selectedEvent.name"
+                    class="text-h4"
                   ></v-toolbar-title>
                   <v-spacer></v-spacer>
-                  <v-btn icon>
-                    <v-icon>mdi-heart</v-icon>
-                  </v-btn>
-                  <v-btn icon>
-                    <v-icon>mdi-dots-vertical</v-icon>
-                  </v-btn>
+                  <v-menu v-model="show" offset-y>
+                    <template v-slot:activator="{ on, attrs }">
+                      <v-btn icon v-bind="attrs" v-on="on" @click="show = true">
+                        <v-icon>mdi-dots-vertical</v-icon>
+                      </v-btn>
+                    </template>
+                    <v-list>
+                      <v-list-item @click="handleEdit(selectedEvent)">
+                        <v-list-item-title class="text-h5"
+                          >編集</v-list-item-title
+                        >
+                      </v-list-item>
+                      <v-divider></v-divider>
+                      <v-list-item>
+                        <v-list-item-title
+                          class="text-h5"
+                          @click="
+                            handleDelete(selectedEvent);
+                            selectedOpen = false;
+                          "
+                          >削除</v-list-item-title
+                        >
+                      </v-list-item>
+                    </v-list>
+                  </v-menu>
                 </v-toolbar>
+                <v-card-title
+                  ><p class="text-h5">
+                    行動期間:<span>{{
+                      selectedEvent.start | getDateFormat
+                    }}</span>
+                    〜 :<span>{{ selectedEvent.end | getDateFormat }}</span>
+                  </p></v-card-title
+                >
                 <v-card-text>
-                  <span v-html="selectedEvent.details"></span>
+                  <v-textarea
+                    name="memo"
+                    :value="selectedEvent.memo"
+                    class="ma-0 text-h5"
+                    no-resize
+                    rows="5"
+                    :readonly="true"
+                    counter
+                  ></v-textarea>
                 </v-card-text>
                 <v-card-actions>
-                  <v-btn text color="secondary" @click="selectedOpen = false">
-                    Cancel
+                  <v-btn
+                    text
+                    color="secondary"
+                    @click="selectedOpen = false"
+                    class="text-h5"
+                  >
+                    取消
                   </v-btn>
+                  <!--<v-btn text color="secondary" @click="selectedOpen = false">
+                    削除
+                  </v-btn>
+                  <v-btn text color="secondary" @click="selectedOpen = false">
+                    編集
+                  </v-btn>-->
                 </v-card-actions>
               </v-card>
             </v-menu>
             <v-dialog v-model="creatOpen" persistent max-width="65%">
-              <!--<template v-slot:activator="{ on, attrs }">
-                <v-btn color="primary" dark v-bind="attrs" v-on="on">
-                  Open Dialog
-                </v-btn>
-              </template>-->
-              <!--<v-card>
-                <v-card-title>
-                  <span class="headline">User Profile</span>
-                </v-card-title>
-                <v-card-text>
-                  <v-container>
-                    <v-row>
-                      <v-col cols="12" sm="6" md="4">
-                        <v-text-field
-                          label="Legal first name*"
-                          required
-                        ></v-text-field>
-                      </v-col>
-                      <v-col cols="12" sm="6" md="4">
-                        <v-text-field
-                          label="Legal middle name"
-                          hint="example of helper text only on focus"
-                        ></v-text-field>
-                      </v-col>
-                      <v-col cols="12" sm="6" md="4">
-                        <v-text-field
-                          label="Legal last name*"
-                          hint="example of persistent helper text"
-                          persistent-hint
-                          required
-                        ></v-text-field>
-                      </v-col>
-                      <v-col cols="12">
-                        <v-text-field label="Email*" required></v-text-field>
-                      </v-col>
-                      <v-col cols="12">
-                        <v-text-field
-                          label="Password*"
-                          type="password"
-                          required
-                        ></v-text-field>
-                      </v-col>
-                      <v-col cols="12" sm="6">
-                        <v-select
-                          :items="['0-17', '18-29', '30-54', '54+']"
-                          label="Age*"
-                          required
-                        ></v-select>
-                      </v-col>
-                      <v-col cols="12" sm="6">
-                        <v-autocomplete
-                          :items="[
-                            'Skiing',
-                            'Ice hockey',
-                            'Soccer',
-                            'Basketball',
-                            'Hockey',
-                            'Reading',
-                            'Writing',
-                            'Coding',
-                            'Basejump',
-                          ]"
-                          label="Interests"
-                          multiple
-                        ></v-autocomplete>
-                      </v-col>
-                    </v-row>
-                  </v-container>
-                  <small>*indicates required field</small>
-                </v-card-text>
-                <v-card-actions>
-                  <v-spacer></v-spacer>
-                  <v-btn color="blue darken-1" text @click="creatOpen = false">
-                    Close
-                  </v-btn>
-                  <v-btn color="blue darken-1" text @click="creatOpen = false">
-                    Save
-                  </v-btn>
-                </v-card-actions>
-              </v-card>-->
               <v-card class="container">
-                <div>
-                  <h3 class="page-title">
-                    行動作成
-                  </h3>
-                  <div class="orig-row">
-                    <div class="form-group col-12">
-                      <label>アクション名</label>
-                      <input
-                        type="text"
-                        class="form-control"
-                        v-model="newAction.newName"
-                      />
-                    </div>
-                    <div class="form-group col-sm-6">
-                      <label>行動開始時刻</label>
-
-                      <!--<el-date-picker
-                        class="form-control"
-                        v-model="newAction.newDate"
-                        type="datetimerange"
-                        value-format="yyyy-MM-dd HH:mm:ss"
-                        range-separator="〜"
-                        start-placeholder="開始日時"
-                        end-placeholder="終了日時"
-                        style="width:100%"
-                      >
-                      </el-date-picker>-->
-                      <v-datetime-picker
-                        v-model="newAction.newDate[0]"
-                        :time-picker-props="timeProps"
-                        :date-picker-props="dateProps"
-                        time-format="HH:mm:ss"
-                        style="color:red"
-                      >
-                        <template slot="dateIcon">
-                          <v-icon>mdi-calendar</v-icon>
-                        </template>
-                        <template slot="timeIcon">
-                          <v-icon>mdi-clock</v-icon>
-                        </template>
-                      </v-datetime-picker>
-                    </div>
-                    <div class="form-group col-sm-6">
-                      <label>行動終了時刻</label>
-                      <!--<el-date-picker
-                        class="form-control"
-                        v-model="newAction.newDate"
-                        type="datetimerange"
-                        value-format="yyyy-MM-dd HH:mm:ss"
-                        range-separator="〜"
-                        start-placeholder="開始日時"
-                        end-placeholder="終了日時"
-                        style="width:100%"
-                      >
-                      </el-date-picker>-->
-                      <v-datetime-picker
-                        v-model="newAction.newDate[1]"
-                        :time-picker-props="timeProps"
-                        :date-picker-props="dateProps"
-                        time-format="HH:mm:ss"
-                        style="color:red"
-                      >
-                        <template slot="dateIcon">
-                          <v-icon>mdi-calendar</v-icon>
-                        </template>
-                        <template slot="timeIcon">
-                          <v-icon>mdi-clock</v-icon>
-                        </template>
-                      </v-datetime-picker>
-                    </div>
-                    <div class="form-group col-sm-12">
-                      <label>メモ</label>
-                      <textarea
-                        class="form-control"
-                        rows="3"
-                        v-model="newAction.newMemo"
-                      ></textarea>
-                    </div>
-                    <div class="orig-row  mx-auto">
-                      <div class="col">
-                        <el-button
-                          type="warning"
-                          class="btn btn-danger btn-xs col-sm-6"
-                          @click="handlerNewAction(0)"
-                          >取消</el-button
+                <ValidationObserver ref="createActionForm" v-slot="{ reset }">
+                  <div @reset.prevent="reset">
+                    <h3 class="page-title font-weight-black text-h4">
+                      行動作成
+                    </h3>
+                    <div class="orig-row">
+                      <div class="form-group col-12">
+                        <label class="font-weight-black text-h5"
+                          >アクション名</label
                         >
-                      </div>
-                      <div class="col">
-                        <el-button
-                          type="primary"
-                          class="btn btn-primary btn-xs col-sm-6"
-                          @click="handlerNewAction(1)"
-                          >作成</el-button
+                        <ValidationProvider
+                          rules="required|max:30"
+                          name="アクション名"
+                          v-slot="{ errors }"
                         >
+                          <input
+                            type="text"
+                            class="form-control"
+                            v-model="newAction.newName"
+                          />
+                          <span class="red--text">{{ errors[0] }}</span>
+                        </ValidationProvider>
                       </div>
+                      <div class="form-group col-sm-6">
+                        <label class="font-weight-black text-h5"
+                          >行動開始時刻</label
+                        >
+                        <ValidationProvider
+                          rules="required"
+                          via="startDate"
+                          name="行動開始時刻"
+                          v-slot="{ errors }"
+                        >
+                          <v-datetime-picker
+                            v-model="newAction.newDate[0]"
+                            :time-picker-props="timeProps"
+                            :date-picker-props="dateProps"
+                            time-format="HH:mm:ss"
+                            date-format="yyyy-MM-dd"
+                            clearText="取消"
+                            okText="選択"
+                          >
+                            <template slot="dateIcon">
+                              <v-icon>mdi-calendar</v-icon>
+                            </template>
+                            <template slot="timeIcon">
+                              <v-icon>mdi-clock</v-icon>
+                            </template>
+                          </v-datetime-picker>
+                          <span class="red--text">{{ errors[0] }}</span>
+                        </ValidationProvider>
+                      </div>
+                      <div class="form-group col-sm-6">
+                        <label class="font-weight-black text-h5"
+                          >行動終了時刻</label
+                        >
+                        <ValidationProvider
+                          rules="required|actionTerm:@行動開始時刻"
+                          via="endDate"
+                          name="行動終了時刻"
+                          v-slot="{ errors }"
+                        >
+                          <v-datetime-picker
+                            v-model="newAction.newDate[1]"
+                            :time-picker-props="timeProps"
+                            :date-picker-props="dateProps"
+                            time-format="HH:mm:ss"
+                            date-format="yyyy-MM-dd"
+                            clearText="取消"
+                            okText="選択"
+                          >
+                            <template slot="dateIcon">
+                              <v-icon>mdi-calendar</v-icon>
+                            </template>
+                            <template slot="timeIcon">
+                              <v-icon>mdi-clock</v-icon>
+                            </template>
+                          </v-datetime-picker>
+                          <span class="red--text">{{ errors[0] }}</span>
+                        </ValidationProvider>
+                      </div>
+                      <div class="form-group col-sm-12">
+                        <label class="font-weight-black text-h5">メモ</label>
+                        <ValidationProvider
+                          rules="max:100"
+                          name="メモ"
+                          v-slot="{ errors }"
+                        >
+                          <textarea
+                            class="form-control h-100"
+                            rows="5"
+                            v-model="newAction.newMemo"
+                          ></textarea>
+                          <span class="red--text">{{ errors[0] }}</span>
+                        </ValidationProvider>
+                      </div>
+                      <div class="orig-row  mx-auto">
+                        <div class="col">
+                          <el-button
+                            type="warning"
+                            class="btn btn-danger btn-xs col-sm-6"
+                            @click="handlerNewAction(0)"
+                            >取消</el-button
+                          >
+                        </div>
+                        <div class="col">
+                          <el-button
+                            type="primary"
+                            class="btn btn-primary btn-xs col-sm-6"
+                            @click="handlerNewAction(1)"
+                            >作成</el-button
+                          >
+                        </div>
+                      </div>
+                      <!-- /.form-group -->
                     </div>
-                    <!-- /.form-group -->
                   </div>
-                </div>
+                </ValidationObserver>
               </v-card>
             </v-dialog>
           </v-sheet>
@@ -291,13 +277,72 @@
 <script>
 import dateFormat from "dateformat";
 import { Message } from "element-ui";
+import { ValidationProvider, ValidationObserver, extend } from "vee-validate";
+import { required, max } from "vee-validate/dist/rules";
+//必須
+extend("required", {
+  ...required,
+  message: "{_field_} 入力してください。",
+});
+
+//文字数
+extend("max", {
+  ...max,
+  params: ["length"],
+  message: "{_field_} を{length}文字以ない入力ください。",
+});
+extend("actionTerm", {
+  params: ["startDate"],
+  validate(value, { startDate }) {
+    if (new Date(value) >= new Date(startDate)) {
+      return true;
+    }
+  },
+  message: "行動終了時刻は開始時刻より後で設定してくだいさい。",
+});
+
 export default {
   name: "ActionCalendar",
+  components: {
+    ValidationProvider,
+    ValidationObserver,
+  },
+  filters: {
+    getDateFormat: function(date) {
+      return dateFormat(date, "yyyy-mm-dd HH:MM:ss");
+    },
+  },
+  watch: {
+    actionData: {
+      handler: function(newV, oldV) {
+        if (newV != oldV) {
+          this.updateRange({ start: null, end: null });
+        }
+      },
+    },
+    immediate: true,
+    deep: true,
+  },
+
+  props: {
+    actionData: {
+      type: Array,
+      requird: true,
+      default: function() {
+        return [];
+      },
+    },
+  },
   data: () => ({
+    //アクション編集menu
+    show: false,
     dateProps: {
       headerColor: "red",
+      locale: window.navigator.language,
+      // headerDateFormat: "yyyy-MM-dd",
     },
     timeProps: {
+      format: "ampm",
       headerColor: "red",
       useSeconds: true,
       ampmInTitle: true,
@@ -321,6 +366,7 @@ export default {
       endDate: "",
       name: "",
       memo: "",
+      color: "teal darken-1",
     },
 
     focus: "",
@@ -344,30 +390,25 @@ export default {
       "cyan",
       "green",
       "orange",
-      "grey darken-1",
-    ],
-    names: [
-      "サプリA",
-      "味噌汁",
-      "ランニング",
-      "サプリB",
-      "アクション1",
-      "アクション2",
-      "アクション3",
-      "アクション4",
+      // "grey darken-1",
+      "red darken-1",
+      "pink darken-1",
+      "purple darken-1",
+      "light-blue",
+      "teal",
+      "lime",
     ],
     items: [
-      { lable: "month", value: "month" },
-      { lable: "week", value: "week" },
-      { lable: "day", value: "day" },
+      { label: "月", value: "month" },
+      { label: "週", value: "week" },
+      { label: "日", value: "day" },
     ],
   }),
   mounted() {
     this.$refs.calendar.checkChange();
   },
   methods: {
-    viewDay({ date, year }) {
-      alert(year);
+    viewDay({ date }) {
       this.focus = date;
       this.type = "day";
     },
@@ -398,32 +439,53 @@ export default {
       }
       nativeEvent.stopPropagation();
     },
+    // eslint-disable-next-line
     updateRange({ start, end }) {
       const events = [];
 
-      const min = new Date(`${start.date}T00:00:00`);
-      const max = new Date(`${end.date}T23:59:59`);
-      const days = (max.getTime() - min.getTime()) / 86400000;
-      const eventCount = this.rnd(days, days + 20);
+      // const min = new Date(`${start.date}T00:00:00`);
+      // const max = new Date(`${end.date}T23:59:59`);
+      // const days = (max.getTime() - min.getTime()) / 86400000;
+      // const eventCount = this.rnd(days, days + 20);
 
-      for (let i = 0; i < eventCount; i++) {
-        const allDay = this.rnd(0, 3) === 0;
-        const firstTimestamp = this.rnd(min.getTime(), max.getTime());
-        const first = new Date(firstTimestamp - (firstTimestamp % 900000));
-        const secondTimestamp = this.rnd(2, allDay ? 288 : 8) * 900000;
-        const second = new Date(first.getTime() + secondTimestamp);
+      // for (let i = 0; i < eventCount; i++) {
+      //   const allDay = this.rnd(0, 3) === 0;
+      //   const firstTimestamp = this.rnd(min.getTime(), max.getTime());
+      //   const first = new Date(firstTimestamp - (firstTimestamp % 900000));
+      //   const secondTimestamp = this.rnd(2, allDay ? 288 : 8) * 900000;
+      //   const second = new Date(first.getTime() + secondTimestamp);
 
+      //   events.push({
+      //     name: this.names[this.rnd(0, this.names.length - 1)],
+      //     start: first,
+      //     end: second,
+      //     color: this.colors[this.rnd(0, this.colors.length - 1)],
+      //     timed: !allDay,
+      //   });
+      // }
+      //アクションの終了日付と現在の日付比較
+      let isTimed = false;
+      //アクションクリア処理
+      // this.events.splice(0, this.events.length);
+      this.actionData.forEach((element) => {
+        isTimed = new Date() > new Date(element.endDate);
         events.push({
-          name: this.names[this.rnd(0, this.names.length - 1)],
-          start: first,
-          end: second,
+          id: element.id,
+          name: element.name,
+          start: new Date(element.startDate),
+          end: new Date(element.endDate),
           color: this.colors[this.rnd(0, this.colors.length - 1)],
-          timed: !allDay,
+          timed: !isTimed,
+          startDate: element.startDate,
+          endDate: element.endDate,
+          memo: element.memo,
         });
-      }
-
+      });
+      // this.$nextTick(function() {
       this.events = events;
+      // });
     },
+
     rnd(a, b) {
       return Math.floor((b - a + 1) * Math.random()) + a;
     },
@@ -441,7 +503,7 @@ export default {
         const start = this.dragEvent.start;
         this.dragTime = mouse - start;
       } else {
-        this.creatOpen = true;
+        // this.creatOpen = true;
         // // // 開始時刻変換
         // this.createStart = this.roundTime(mouse);
         // this.createEvent = {
@@ -451,18 +513,20 @@ export default {
         //   end: this.createStart,
         //   timed: true,
         // };
-        // // // 新規追加ポップアップ表示
-        // const open = () => {
-        //   setTimeout(() => {
-        //     this.creatOpen = true;
-        //   }, 10);
-        // };
-        // if (this.creatOpen) {
-        //   this.creatOpen = false;
-        //   setTimeout(open, 10);
-        // } else {
-        //   open();
-        // }
+        // 新規追加ポップアップ表示
+        this.newAction.newDate[0] = `${tms.date} ${tms.time}:01`;
+        this.newAction.newDate[1] = `${tms.date} ${tms.time}:59`;
+        const open = () => {
+          setTimeout(() => {
+            this.creatOpen = true;
+          }, 10);
+        };
+        if (this.creatOpen) {
+          this.creatOpen = false;
+          setTimeout(open, 10);
+        } else {
+          open();
+        }
         // イベントを表示配列の末尾に追加
         // this.events.push(this.createEvent);
       }
@@ -537,8 +601,25 @@ export default {
     },
     //新規作成
     async handlerNewAction(index) {
+      //画面項目チェック
+      let success = await this.$refs.createActionForm.validate();
       switch (index) {
         case 1: //保存の場合
+          if (!success) {
+            // break;
+            return;
+          }
+
+          this.newAction.newDate[0] = dateFormat(
+            new Date(this.newAction.newDate[0]),
+            "yyyy-mm-dd HH:MM:ss"
+          );
+
+          this.newAction.newDate[1] = dateFormat(
+            new Date(this.newAction.newDate[1]),
+            "yyyy-mm-dd HH:MM:ss"
+          );
+
           await this.$store
             .dispatch("action/saveAction", this.newAction)
             .then((res) => {
@@ -550,10 +631,28 @@ export default {
                 type: "success",
                 duration: 5 * 1000,
               });
+              this.createEvent = {
+                name: `Event #${this.newAction.newName}`,
+                color: this.rndElement(this.colors),
+                start: dateFormat(
+                  this.newAction.newDate[0],
+                  "yyyy-mm-dd HH:MM:ss"
+                ),
+                end: dateFormat(
+                  this.newAction.newDate[1],
+                  "yyyy-mm-dd HH:MM:ss"
+                ),
+                timed: true,
+              };
+              //イベントを配列の末尾に追加
+              this.events.push(this.createEvent);
             });
           break;
         default:
         //キャンセルの場合、処理しません
+        // this.$nextTick(() => {
+        //   this.$refs.createActionForm.reset();
+        // });
       }
       //表示フラグ初期化
       this.creatOpen = false;
@@ -566,6 +665,50 @@ export default {
         newName: "",
         newMemo: "",
       });
+      //キャンセルの場合、処理しません
+      this.$nextTick(() => {
+        this.$refs.createActionForm.reset();
+      });
+    },
+    //アクションの編集
+    handleEdit(event) {
+      this.$parent.is_readonly = false;
+      this.$parent.isModalShow = true;
+      Object.assign(this.$parent.actionInfo, event);
+    },
+    //アクションの削除
+    handleDelete(event) {
+      var that = this;
+      this.$confirm("このアクションを削除しますが?", "確認...", {
+        confirmButtonText: "削除",
+        cancelButtonText: "取消",
+        type: "warning",
+      })
+        .then(() => {
+          that.$store
+            .dispatch("action/deleteAction", event.id)
+            .then(() => {
+              this.$message({
+                type: "success",
+                message: "削除しました。",
+              });
+              //アクション再検索
+              that.$parent.fetchUserAction();
+            })
+            .catch((error) => {
+              this.$message({
+                type: "error",
+                message: "処理失敗しました。",
+              });
+              console.log(error);
+            });
+        })
+        .catch(() => {
+          this.$message({
+            type: "info",
+            message: "取消しました。",
+          });
+        });
     },
   },
 };
@@ -611,5 +754,15 @@ export default {
   z-index: 99999;
   display: block;
   overflow-y: auto;
+}
+.v-input {
+  font-size: 16px;
+}
+.v-menu .v-label {
+  font-size: 20px !important ;
+}
+
+.v-autocomplete__content .v-list__tile .v-divider .v-list-item {
+  height: 10px !important ;
 }
 </style>
