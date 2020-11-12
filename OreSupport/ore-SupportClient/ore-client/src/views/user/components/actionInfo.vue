@@ -25,7 +25,6 @@
           </v-toolbar>
           <ValidationObserver ref="editActionForm" v-slot="{ reset }">
             <div class="orig-row ma-5" @reset.prevent="reset">
-              >
               <div class="form-group col-sm-12">
                 <label class="font-weight-black text-h4">アクション名</label>
                 <ValidationProvider
