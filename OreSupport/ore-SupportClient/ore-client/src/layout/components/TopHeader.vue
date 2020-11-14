@@ -15,13 +15,6 @@
         <!-- /.header-logo -->
         <div class="header-content">
           <div class="header-top">
-            <div class="header-search" v-if="isLogin">
-              <input
-                type="text"
-                class="form-control"
-                placeholder="Search for..."
-              />
-            </div>
             <!-- /.header-search -->
             <ul
               class="header-nav-social social-links nav nav-pills"
@@ -49,12 +42,12 @@
             <ul class="header-nav-secondary nav nav-pills">
               <li v-if="!isLogin">
                 <router-link v-bind:to="{ name: 'login' }" key="key"
-                  >Login</router-link
+                  >ログイン</router-link
                 >
               </li>
               <li v-if="!isLogin">
                 <router-link v-bind:to="{ name: 'register' }" key="key"
-                  >Register</router-link
+                  >新規登録</router-link
                 >
               </li>
               <li v-if="isLogin">
@@ -67,10 +60,10 @@
               </li>
               <li v-if="isLogin">
                 <!--<el-button type="text" @click.native="logout">Logout</el-button>-->
-                <a href @click.prevent.stop="logout">Logout</a>
+                <a href @click.prevent.stop="logout">ログアウト</a>
               </li>
               <li v-if="isLogin">
-                <a href @click.prevent.stop="getProfileInfo">Profile</a>
+                <a href @click.prevent.stop="getProfileInfo">設定</a>
               </li>
             </ul>
           </div>
@@ -91,84 +84,82 @@
                   </li>
                 </ul>
               </li>
-
+              <!--認知概要-->
               <li>
                 <a href="#">
-                  体験談を読む
+                  認知概要
                   <i class="fa fa-chevron-down"></i>
                 </a>
 
                 <ul class="sub-menu">
                   <li>
-                    <a href @click.prevent.stop="blockClick(1)">ブログトップ</a>
+                    <a href @click.prevent.stop="clickKnowledge(1)"
+                      >認知機能とは</a
+                    >
                   </li>
                   <li>
-                    <a href @click.prevent.stop="blockClick(2)">ブログ一覧</a>
+                    <!--<a href @click.prevent.stop="clickKnowledge(2)"
+                      >基本知識一覧</a
+                    >-->
                   </li>
                 </ul>
               </li>
-              <li class="has-mega-menu">
+              <!--認知測定-->
+              <li>
                 <a href="#">
-                  認知機能を測定する
+                  認知測定
                   <i class="fa fa-chevron-down"></i>
                 </a>
-                <ul class="mega-menu">
-                  <li class="hidden-xs">
-                    <div class="special" style="width:90%;">
-                      <a
-                        style="font-size: 15px;"
-                        href=""
-                        target="_blank"
-                        @click.prevent.stop="runTask"
-                        >CogEvoで認知認知機能の測定をする</a
-                      >
-                    </div>
-                    <!-- /.special-->
-                  </li>
+
+                <ul class="sub-menu">
                   <li>
-                    <a style="font-size: 15px;" href="#">結果を見る</a>
-                    <ul>
-                      <li>
-                        <a
-                          style="font-size: 15px;"
-                          href=""
-                          @click.prevent.stop="taskClick(1)"
-                          >これまでの認知機能の推移を確認する</a
-                        >
-                      </li>
-                      <li>
-                        <a
-                          style="font-size: 15px;"
-                          href
-                          @click.prevent.stop="taskClick(2)"
-                          >統計的な認知機能のデータを確認する</a
-                        >
-                      </li>
-                    </ul>
+                    <a href @click.prevent.stop="taskClick(1)">結果表示</a>
                   </li>
+                  <li><a href @click.prevent.stop="runTask">測定開始</a></li>
                   <li>
-                    <a style="font-size: 15px;" href="#">CogEvoのご紹介</a>
-                    <ul>
-                      <li>
-                        <a
-                          style="font-size: 15px;"
-                          href="https://cog-evo.jp/"
-                          target="_blank"
-                          >CogEvoとは</a
-                        >
-                      </li>
-                      <li>
-                        <a
-                          style="font-size: 15px;"
-                          href="https://tbcare.jp/"
-                          target="_blank"
-                          >運営会社（株式会社トータルブレインケア）</a
-                        >
-                      </li>
-                    </ul>
+                    <a href="https://cog-evo.jp/" target="_blank">CogEvoとは</a>
                   </li>
                 </ul>
               </li>
+
+              <!--ブログ-->
+              <li>
+                <a href="#">
+                  ブログ
+                  <i class="fa fa-chevron-down"></i>
+                </a>
+
+                <ul class="sub-menu">
+                  <li>
+                    <!--<a href @click.prevent.stop="blockClick(1)"></a>-->
+                  </li>
+                  <li>
+                    <a href @click.prevent.stop="blockClick(1)">検索</a>
+                  </li>
+                  <li>
+                    <a href @click.prevent.stop="blockClick(2)">新規投稿</a>
+                  </li>
+                </ul>
+              </li>
+              <!--行動管理-->
+              <li>
+                <a href="#">
+                  行動管理
+                  <i class="fa fa-chevron-down"></i>
+                </a>
+
+                <ul class="sub-menu">
+                  <li>
+                    <a href @click.prevent.stop="blockClick(1)">行動履歴 </a>
+                  </li>
+                  <li>
+                    <a href @click.prevent.stop="blockClick(2)"
+                      >行動登録/削除</a
+                    >
+                  </li>
+                </ul>
+              </li>
+              <!--商品購入-->
               <li v-show="false">
                 <a href="#">
                   商品を購入する
@@ -187,41 +178,20 @@
 
               <li>
                 <a href="#">
-                  認知機能を知る
-                  <i class="fa fa-chevron-down"></i>
-                </a>
-
-                <ul class="sub-menu">
-                  <li>
-                    <a href @click.prevent.stop="clickKnowledge(1)"
-                      >基本知識詳細</a
-                    >
-                  </li>
-                  <li>
-                    <a href @click.prevent.stop="clickKnowledge(2)"
-                      >基本知識一覧</a
-                    >
-                  </li>
-                </ul>
-              </li>
-
-              <li>
-                <a href="#">
                   ヘルプ
                   <i class="fa fa-chevron-down"></i>
                 </a>
                 <ul class="sub-menu">
                   <li>
-                    <a href="#">「おれさぽ」とは</a>
+                    <a href="http://www.cognisolution.com/" target="_blank"
+                      >企業情報</a
+                    >
                   </li>
                   <li>
-                    <a href="#">運営会社</a>
+                    <a href="#">Cogneesとは </a>
                   </li>
                   <li>
-                    <a href="#">FAQ</a>
-                  </li>
-                  <li>
-                    <a href="#">お問合せ</a>
+                    <a href="#">FAQ/お問合せ</a>
                   </li>
                 </ul>
               </li>
@@ -399,13 +369,13 @@ export default {
     // ブログ
     blockClick: function(index) {
       switch (index) {
-        //ブログTOP
+        //検索
         case 1:
-          this.$router.push("/blog/blog_top");
-          break;
-        //ブログ一覧
-        default:
           this.$router.push("/blog/blogList");
+          break;
+        //新規
+        default:
+          this.$router.push("/blog/createBlog");
       }
     },
     //タスク実行
