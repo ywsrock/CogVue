@@ -109,7 +109,20 @@
               </div>
               <!-- /.detail-banner -->
             </div>
-
+            <div class="row float-right">
+              <v-btn
+                tile
+                color="green"
+                height="20px"
+                class="white--text"
+                @click="refreshData()"
+              >
+                <v-icon left>
+                  mdi-hand-peace
+                </v-icon>
+                最新結果取得
+              </v-btn>
+            </div>
             <div class="container">
               <CommonAbility
                 :showDataObj="showData"
@@ -126,74 +139,7 @@
         <!-- /.main-inner -->
       </div>
       <!-- /.main -->
-
-      <footer class="footer">
-        <div class="footer-top">
-          <div class="container">
-            <div class="orig-row">
-              <div class="col-sm-4">
-                <h3>運営会社</h3>
-
-                <p>
-                  会社名: 株式会社トータルブレインケア<br />
-                  事業内容: 認知機能に関するツールやプログラムの提供及び<br />インターネットサービス事業
-                </p>
-              </div>
-              <!-- /.col-* -->
-
-              <div class="col-sm-4">
-                <h3>脳活バランサーCogEvo パーソナル</h3>
-
-                <p>
-                  CogEvoは脳のリハビリテーションから生まれた
-                  認知機能別トレーニングができる
-                  エビデンス（科学的根拠）に基づいたクラウドサービスです。
-                </p>
-              </div>
-              <!-- /.col-* -->
-
-              <div class="col-sm-4">
-                <h3>CogEvoカスタマーサポート</h3>
-                <p>
-                  平日9:30〜17:00
-                  <br />土・日・祝日、および弊社休業日を除きます<br />
-                  電話：078-335-8467<br />
-                  <a href="https://cog-evo.jp/">https://cog-evo.jp/</a>
-                </p>
-                <!-- /.header-nav-social -->
-              </div>
-              <!-- /.col-* -->
-            </div>
-            <!-- /.row -->
-          </div>
-          <!-- /.container -->
-        </div>
-        <!-- /.footer-top -->
-
-        <div class="footer-bottom">
-          <div class="container">
-            <div class="footer-bottom-left">
-              &copy; 2020 All rights reserved. Created by
-              <a href="#">oreSupport</a>.
-            </div>
-            <!-- /.footer-bottom-left -->
-
-            <div class="footer-bottom-right">
-              <ul class="nav nav-pills">
-                <li><a href="index.html">Home</a></li>
-                <li><a href="pricing.html">Pricing</a></li>
-                <li>
-                  <a href="terms-conditions.html">Terms &amp; Conditions</a>
-                </li>
-                <li><a href="contact-1.html">Contact</a></li>
-              </ul>
-              <!-- /.nav -->
-            </div>
-            <!-- /.footer-bottom-right -->
-          </div>
-          <!-- /.container -->
-        </div>
-      </footer>
+      <FooterCommon></FooterCommon>
       <!-- /.footer -->
     </div>
     <!-- /.page-wrapper -->
@@ -204,68 +150,17 @@
 import CommonAbility from "./components/CommonAbility";
 import { TaskData } from "@/store/cgevModel/task";
 import { CGEV_SESSION_KEY } from "@/utils/const";
+import FooterCommon from "./components/FooterCommon";
 
 export default {
   name: "OrientationAbility",
   components: {
     CommonAbility,
+    FooterCommon,
   },
   mounted() {
-    if (this.$session.has(CGEV_SESSION_KEY.TASK_ID_1)) {
-      let sessionDataObj = this.$session.get(CGEV_SESSION_KEY.TASK_ID_1);
-      this.dataObj = Object.assign(this.dataObj, sessionDataObj);
-      // console.log(JSON.stringify(this.dataObj, null, "\t"));
-      this.task_name = this.dataObj.Flashlight.cardPazulData.task_name;
-      this.star_0 = this.dataObj.Flashlight.cardPazulData.star;
-      this.showData = Object.assign({}, this.showData, this.dataObj.Flashlight);
-      //ロード完了
-      this.loadFlg = false;
-    } else {
-      this.$nextTick(async () => {
-        await this.$store.dispatch("cgev/authenticate");
-        Promise.all([
-          await this.$store.dispatch("cgev/recordsTasksIdSummary", {
-            task_id: 1,
-          }),
-          /* eslint-disable */
-        ])
-          .then(([FlashlightData]) => {
-            if (Object.keys(FlashlightData).length === 0) {
-              throw new Error();
-            }
-            this.dataObj = Object.assign(this.dataObj, {
-              Flashlight: { cardPazulData: FlashlightData },
-            });
-            this.$session.set(CGEV_SESSION_KEY.TASK_ID_1, this.dataObj);
-            // console.log(JSON.stringify(this.dataObj, null, "\t"));
-
-            this.task_name = this.dataObj.Flashlight.cardPazulData.task_name;
-            this.star_0 = this.dataObj.Flashlight.cardPazulData.star;
-            this.showData = Object.assign(
-              {},
-              this.showData,
-              this.dataObj.Flashlight
-            );
-            //ロード完了
-            this.loadFlg = false;
-          })
-          .catch((error) => {
-            if (this.$session.has(CGEV_SESSION_KEY.TASK_ID_1)) {
-              this.$session.remove(CGEV_SESSION_KEY.TASK_ID_1);
-            }
-            // 失敗の場合、初期設定
-            this.dataObj = Object.assign({}, this.dataObj, TaskData);
-            this.task_name = this.dataObj.Flashlight.cardPazulData.task_name;
-            this.star_0 = this.dataObj.Flashlight.cardPazulData.star;
-            this.showData = Object.assign(
-              {},
-              this.showData,
-              this.dataObj.Flashlight
-            );
-          });
-      });
-    }
-
+    //データ取得
+    this.getOrientationData();
     // this.$http.get("/api/personal/CogEvo/OrientationAbility").then(
     //   (res) => {
     //     this.dataObj = Object.assign(
@@ -321,6 +216,7 @@ export default {
     };
   },
   methods: {
+    //機能クリック
     // eslint-disable-next-line
     tabclickHand: function(index) {
       let that = this;
@@ -330,6 +226,84 @@ export default {
         that.task_name =
           that.dataObj.Flashlight.cardPazulData.task_name || "見当識 ";
       });
+    },
+    //APIデータ取得
+    getOrientationData: function() {
+      //セッション存在チェック
+      if (this.$session.has(CGEV_SESSION_KEY.TASK_ID_1)) {
+        let sessionDataObj = this.$session.get(CGEV_SESSION_KEY.TASK_ID_1);
+        this.dataObj = Object.assign(this.dataObj, sessionDataObj);
+        // console.log(JSON.stringify(this.dataObj, null, "\t"));
+        this.task_name = this.dataObj.Flashlight.cardPazulData.task_name;
+        this.star_0 = this.dataObj.Flashlight.cardPazulData.star;
+        this.showData = Object.assign(
+          {},
+          this.showData,
+          this.dataObj.Flashlight
+        );
+        //ロード完了
+        this.loadFlg = false;
+      } else {
+        this.$nextTick(async () => {
+          await this.$store.dispatch("cgev/authenticate");
+          Promise.all([
+            await this.$store.dispatch("cgev/recordsTasksIdSummary", {
+              task_id: 1,
+            }),
+            /* eslint-disable */
+          ])
+            .then(([FlashlightData]) => {
+              if (Object.keys(FlashlightData).length === 0) {
+                throw new Error();
+              }
+              this.dataObj = Object.assign(this.dataObj, {
+                Flashlight: { cardPazulData: FlashlightData },
+              });
+              this.$session.set(CGEV_SESSION_KEY.TASK_ID_1, this.dataObj);
+              // console.log(JSON.stringify(this.dataObj, null, "\t"));
+
+              this.task_name = this.dataObj.Flashlight.cardPazulData.task_name;
+              this.star_0 = this.dataObj.Flashlight.cardPazulData.star;
+              this.showData = Object.assign(
+                {},
+                this.showData,
+                this.dataObj.Flashlight
+              );
+              //ロード完了
+              this.loadFlg = false;
+            })
+            .catch((error) => {
+              //セッションクリア
+              this.clearOrientationSession();
+              // 失敗の場合、初期設定
+              this.resetOrientationInfo();
+            });
+        });
+      }
+    },
+    //セッションクリア
+    clearOrientationSession: function() {
+      if (this.$session.has(CGEV_SESSION_KEY.TASK_ID_1)) {
+        this.$session.remove(CGEV_SESSION_KEY.TASK_ID_1);
+      }
+    },
+    //初期化
+    resetOrientationInfo: function() {
+      this.dataObj = Object.assign({}, this.dataObj, TaskData);
+      this.task_name = this.dataObj.Flashlight.cardPazulData.task_name;
+      this.star_0 = this.dataObj.Flashlight.cardPazulData.star;
+      this.showData = Object.assign({}, this.showData, this.dataObj.Flashlight);
+    },
+    //データ再主録
+    refreshData: function() {
+      //画面ロード状態
+      this.loadFlg = true;
+      //セッションクリア
+      this.clearOrientationSession();
+      //画面初期化
+      this.resetOrientationInfo();
+      //データ取得
+      this.getOrientationData();
     },
   },
 };
