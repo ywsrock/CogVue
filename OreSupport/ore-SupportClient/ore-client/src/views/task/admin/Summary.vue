@@ -47,6 +47,7 @@
                         >平均指数：{{ averageIndex }}</span
                       >
                     </div>
+
                     <!-- /.detail-claim -->
                   </div>
                   <!-- /.detail-banner-left -->
@@ -55,7 +56,20 @@
               </div>
               <!-- /.detail-banner -->
             </div>
-
+            <div class="row float-right">
+              <v-btn
+                tile
+                color="green"
+                height="20px"
+                class="white--text"
+                @click="refreshData()"
+              >
+                <v-icon left>
+                  mdi-hand-peace
+                </v-icon>
+                最新結果取得
+              </v-btn>
+            </div>
             <div class="container">
               <div class="orig-row detail-content">
                 <div class="col-sm-6">
@@ -362,82 +376,7 @@
         <!-- /.main-inner -->
       </div>
       <!-- /.main -->
-
-      <footer class="footer">
-        <div class="footer-top">
-          <div class="container">
-            <div class="orig-row">
-              <div class="col-sm-4">
-                <h3>運営会社</h3>
-
-                <p>
-                  会社名: 株式会社トータルブレインケア
-                  <br />事業内容: 認知機能に関するツールやプログラムの提供及び
-                  <br />インターネットサービス事業
-                </p>
-              </div>
-              <!-- /.col-* -->
-
-              <div class="col-sm-4">
-                <h3>脳活バランサーCogEvo パーソナル</h3>
-
-                <p>
-                  CogEvoは脳のリハビリテーションから生まれた
-                  認知機能別トレーニングができる
-                  エビデンス（科学的根拠）に基づいたクラウドサービスです。
-                </p>
-              </div>
-              <!-- /.col-* -->
-
-              <div class="col-sm-4">
-                <h3>CogEvoカスタマーサポート</h3>
-                <p>
-                  平日9:30〜17:00
-                  <br />土・日・祝日、および弊社休業日を除きます
-                  <br />電話：078-335-8467
-                  <br />
-                  <a href="https://cog-evo.jp/">https://cog-evo.jp/</a>
-                </p>
-                <!-- /.header-nav-social -->
-              </div>
-              <!-- /.col-* -->
-            </div>
-            <!-- /.row -->
-          </div>
-          <!-- /.container -->
-        </div>
-        <!-- /.footer-top -->
-
-        <div class="footer-bottom">
-          <div class="container">
-            <div class="footer-bottom-left">
-              &copy; 2020 All rights reserved. Created by
-              <a href="#">oreSupport</a>.
-            </div>
-            <!-- /.footer-bottom-left -->
-
-            <div class="footer-bottom-right">
-              <ul class="nav nav-pills">
-                <li>
-                  <a href="index.html">Home</a>
-                </li>
-                <li>
-                  <a href="pricing.html">Pricing</a>
-                </li>
-                <li>
-                  <a href="terms-conditions.html">Terms &amp; Conditions</a>
-                </li>
-                <li>
-                  <a href="contact-1.html">Contact</a>
-                </li>
-              </ul>
-              <!-- /.nav -->
-            </div>
-            <!-- /.footer-bottom-right -->
-          </div>
-          <!-- /.container -->
-        </div>
-      </footer>
+      <FooterCommon></FooterCommon>
       <!-- /.footer -->
     </div>
     <!-- /.page-wrapper -->
@@ -449,6 +388,7 @@ import LineChart from "./components/LineChart";
 import RaddarChart from "./components/RaddarChart";
 import TransactionTable from "./components/TransactionTable";
 import { CGEV_SESSION_KEY } from "@/utils/const";
+import FooterCommon from "./components/FooterCommon";
 // import getCgevApi from "@/utils/cgevapi";
 
 export default {
@@ -457,93 +397,13 @@ export default {
     LineChart,
     RaddarChart,
     TransactionTable,
+    FooterCommon,
   },
   created() {},
 
   mounted() {
-    this.$nextTick(async () => {
-      // LineChartデータ取得
-      this.$http.get("/api/personal/CogEvo/summary").then(
-        (res) => {
-          this.lineChartData = res.data.lineChartData.yearData;
-        },
-        (error) => {
-          console.log(error);
-        }
-      );
-      // セッションクリア
-      if (this.$session.has(CGEV_SESSION_KEY.RECORDSCATEGORIES)) {
-        let recordsCategories = this.$session.get(
-          CGEV_SESSION_KEY.RECORDSCATEGORIES
-        );
-        let recordsSummary = this.$session.get(CGEV_SESSION_KEY.RECORDSSUMMARY);
-        let recordsHistories = this.$session.get(
-          CGEV_SESSION_KEY.RECORDSHISTORIES
-        );
-
-        // 画面表示値設定
-        this.setSummaryValues(
-          recordsCategories,
-          recordsSummary,
-          recordsHistories
-        );
-        //ロード完了
-        this.loadFlg = false;
-      } else {
-        Promise.all([
-          await this.$store.dispatch("cgev/authenticate"),
-          await this.$store.dispatch("cgev/recordsCategories"),
-          await this.$store.dispatch("cgev/recordsSummary"),
-          await this.$store.dispatch("cgev/recordsHistories"),
-        ])
-          .then(
-            ([
-              // eslint-disable-next-line
-              authenticate,
-              recordsCategories,
-              recordsSummary,
-              recordsHistories,
-            ]) => {
-              // 画面表示値設定
-              this.setSummaryValues(
-                recordsCategories,
-                recordsSummary,
-                recordsHistories
-              );
-
-              // セッション値保存
-              this.$session.set(
-                CGEV_SESSION_KEY.RECORDSCATEGORIES,
-                recordsCategories
-              );
-
-              this.$session.set(
-                CGEV_SESSION_KEY.RECORDSSUMMARY,
-                recordsSummary
-              );
-
-              this.$session.set(
-                CGEV_SESSION_KEY.RECORDSHISTORIES,
-                recordsHistories
-              );
-              //ロード完了
-              this.loadFlg = false;
-            }
-          )
-          /* eslint-disable */
-          .catch((error) => {
-            // セッションクリア
-            this.$session.has(CGEV_SESSION_KEY.RECORDSCATEGORIES) &&
-              this.$session.remove(CGEV_SESSION_KEY.RECORDSCATEGORIES);
-
-            this.$session.has(CGEV_SESSION_KEY.RECORDSSUMMARY) &&
-              this.$session.remove(CGEV_SESSION_KEY.RECORDSSUMMARY);
-
-            this.$session.has(CGEV_SESSION_KEY.RECORDSHISTORIES) &&
-              this.$session.remove(CGEV_SESSION_KEY.RECORDSHISTORIES);
-          });
-      }
-    });
+    //APIからデータ取得
+    this.getSummaryData();
   },
   watch: {
     $route: function(to, from) {
@@ -608,6 +468,88 @@ export default {
     };
   },
   methods: {
+    //APIデータ取得
+    getSummaryData: function() {
+      this.$nextTick(async () => {
+        // LineChartデータ取得
+        this.$http.get("/api/personal/CogEvo/summary").then(
+          (res) => {
+            this.lineChartData = res.data.lineChartData.yearData;
+          },
+          (error) => {
+            console.log(error);
+          }
+        );
+        // セッションから値の取得
+        if (this.$session.has(CGEV_SESSION_KEY.RECORDSCATEGORIES)) {
+          let recordsCategories = this.$session.get(
+            CGEV_SESSION_KEY.RECORDSCATEGORIES
+          );
+          let recordsSummary = this.$session.get(
+            CGEV_SESSION_KEY.RECORDSSUMMARY
+          );
+          let recordsHistories = this.$session.get(
+            CGEV_SESSION_KEY.RECORDSHISTORIES
+          );
+
+          // 画面表示値設定
+          this.setSummaryValues(
+            recordsCategories,
+            recordsSummary,
+            recordsHistories
+          );
+          //ロード完了
+          this.loadFlg = false;
+        } else {
+          Promise.all([
+            await this.$store.dispatch("cgev/authenticate"),
+            await this.$store.dispatch("cgev/recordsCategories"),
+            await this.$store.dispatch("cgev/recordsSummary"),
+            await this.$store.dispatch("cgev/recordsHistories"),
+          ])
+            .then(
+              ([
+                // eslint-disable-next-line
+                authenticate,
+                recordsCategories,
+                recordsSummary,
+                recordsHistories,
+              ]) => {
+                // 画面表示値設定
+                this.setSummaryValues(
+                  recordsCategories,
+                  recordsSummary,
+                  recordsHistories
+                );
+
+                // セッション値保存
+                this.$session.set(
+                  CGEV_SESSION_KEY.RECORDSCATEGORIES,
+                  recordsCategories
+                );
+
+                this.$session.set(
+                  CGEV_SESSION_KEY.RECORDSSUMMARY,
+                  recordsSummary
+                );
+
+                this.$session.set(
+                  CGEV_SESSION_KEY.RECORDSHISTORIES,
+                  recordsHistories
+                );
+                //ロード完了
+                this.loadFlg = false;
+              }
+            )
+            /* eslint-disable */
+            .catch((error) => {
+              //セッションクリア
+              this.clearSession();
+            });
+        }
+      });
+    },
+    //表示データ設定
     setSummaryValues: function(
       recordsCategories,
       recordsSummary,
@@ -632,7 +574,27 @@ export default {
       //履歴
       this.TransactionData = recordsHistories.histories;
     },
+    // 最新データ取得
+    refreshData: function() {
+      //画面ロード状態に表示
+      this.loadFlg = true;
+      //セッションクリア
+      this.clearSession();
+      //APIデータ取得
+      this.getSummaryData();
+    },
+    //セッション情報削除
+    clearSession: function() {
+      // セッションクリア
+      this.$session.has(CGEV_SESSION_KEY.RECORDSCATEGORIES) &&
+        this.$session.remove(CGEV_SESSION_KEY.RECORDSCATEGORIES);
 
+      this.$session.has(CGEV_SESSION_KEY.RECORDSSUMMARY) &&
+        this.$session.remove(CGEV_SESSION_KEY.RECORDSSUMMARY);
+
+      this.$session.has(CGEV_SESSION_KEY.RECORDSHISTORIES) &&
+        this.$session.remove(CGEV_SESSION_KEY.RECORDSHISTORIES);
+    },
     clickYear: function() {
       this.$nextTick(() => {
         this.activeObj.isActiveY = true;
