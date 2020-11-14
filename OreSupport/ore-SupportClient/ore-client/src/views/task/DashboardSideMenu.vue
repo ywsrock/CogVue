@@ -1,6 +1,6 @@
 <template>
   <div class="dashboard-container">
-    <div class="orig-sidebar-admin">
+    <!-- <div class="orig-sidebar-admin col-sm-12">
       <ul>
         <li :class="{ active: activeTab === 'user-tab' }">
           <a href="#" @click.prevent="activeTabClick('user-tab', 1)">
@@ -24,9 +24,9 @@
         </li>
       </ul>
     </div>
-    <!-- /.sidebar-admin-->
+    /.sidebar-admin -->
 
-    <div class="orig-sidebar-secondary-admin">
+    <div class="orig-sidebar-secondary-admin col-sm-12">
       <ul v-if="activeTab === 'user-tab'">
         <li :class="{ active: activeSecondTab === 1 }">
           <a href="#" @click.prevent="activeSecondTabClick(1)">
@@ -89,130 +89,7 @@
         </li>
       </ul>
 
-      <ul v-if="activeTab === 'statistics-tab'">
-        <li class="reset_style">
-          <a href="#"></a>
-        </li>
-
-        <li :class="{ active: activeSecondTab === 1 }">
-          <a href="#" @click.prevent="activeSecondTabClick(1)">
-            <span class="icon">
-              <i class="fa fa-tachometer"></i>
-            </span>
-            <span class="title">サマリー</span>
-            <span class="subtitle">統計的な平均値</span>
-          </a>
-        </li>
-
-        <li :class="{ active: activeSecondTab === 2 }">
-          <a
-            href="#"
-            :class="{ 'search-tab-menu': activeSecondTab === 2 }"
-            @click.prevent="activeSecondTabClick(2)"
-          >
-            <span class="icon">
-              <i class="fa fa-tachometer"></i>
-            </span>
-            <span class="title">詳細</span>
-            <span class="subtitle">詳細なグラフを表示する</span>
-            <span v-if="activeSecondTab === 2">
-              <select class="form-control select-box" title="Select Option">
-                <option>年代</option>
-                <option>20 〜 30</option>
-                <option>30 〜 40</option>
-                <option>40 〜 50</option>
-                <option>50 〜 60</option>
-                <option>60 〜 70</option>
-                <option>70 〜 80</option>
-                <option>90 〜</option>
-              </select>
-              <select class="form-control select-box" title="Select Option">
-                <option>職業</option>
-                <option>プログラマー</option>
-                <option>バンカー</option>
-                <option>SIer</option>
-                <option>Call</option>
-              </select>
-              <select class="form-control select-box" title="Select Option">
-                <option>性別</option>
-                <option>男</option>
-                <option>女</option>
-              </select>
-              <select class="form-control select-box" title="Select Option">
-                <option>都道府県</option>
-                <option>北海道</option>
-                <option>青森県</option>
-                <option>秋田県</option>
-                <option>岩手県</option>
-              </select>
-              <button type="submit" class="btn btn-primary search-button">
-                表示
-              </button>
-            </span>
-          </a>
-        </li>
-      </ul>
-
-      <ul v-if="activeTab === 'help-tab'">
-        <li class="reset_style">
-          <a href="#"></a>
-        </li>
-        <li class="reset_style">
-          <a href="#"></a>
-        </li>
-
-        <li :class="{ active: activeSecondTab === 1 }">
-          <a href="#" @click="activeSecondTabClick(1)">
-            <span class="icon">
-              <i class="fa fa-tachometer"></i>
-            </span>
-            <span class="title">FAQ</span>
-            <span class="subtitle">よくあるFAQ</span>
-          </a>
-        </li>
-
-        <li :class="{ active: activeSecondTab === 2 }">
-          <a href="#" @click="activeSecondTabClick('2')">
-            <span class="icon">
-              <i class="fa fa-tachometer"></i>
-            </span>
-            <span class="title">お問い合わせ</span>
-            <span class="subtitle">メールでお問い合わせできます</span>
-          </a>
-        </li>
-      </ul>
-
-      <ul v-if="activeTab === 'settings-tab'">
-        <li class="reset_style">
-          <a href="#"></a>
-        </li>
-        <li class="reset_style">
-          <a href="#"></a>
-        </li>
-        <li class="reset_style">
-          <a href="#"></a>
-        </li>
-
-        <li :class="{ active: activeSecondTab === 1 }">
-          <a href="#" @click.prevent="activeSecondTabClick(1)">
-            <span class="icon">
-              <i class="fa fa-tachometer"></i>
-            </span>
-            <span class="title">行動詳細</span>
-            <span class="subtitle">行動詳細情報</span>
-          </a>
-        </li>
-
-        <li :class="{ active: activeSecondTab === 2 }">
-          <a href="#" @click.prevent="activeSecondTabClick(2)">
-            <span class="icon">
-              <i class="fa fa-tachometer"></i>
-            </span>
-            <span class="title">行動管理</span>
-            <span class="subtitle">行動の管理</span>
-          </a>
-        </li>
-      </ul>
+      
     </div>
     <!-- /.sidebar-secondary-admin -->
   </div>

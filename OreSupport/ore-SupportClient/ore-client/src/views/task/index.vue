@@ -2,14 +2,14 @@
   <div class="container-fluid h-100">
     <div class="page-wrapper">
       <div class="main">
-        <DashboardHeader className="sidebar-container" />
+        <!-- <DashboardHeader className="sidebar-container" /> -->
         <div class="row h-100">
-          <div class="col-sm-3" id="sidebar">
-            <div class="navestylemenublock sticky-top">
+          <div class="col-sm-12" id="sidebar">
+            <div class="navestylemenublock position-fixed">
               <DashboardSideMenu ref="child" />
             </div>
           </div>
-          <main class="col-sm-9 py-2" id="printable">
+          <main class="col-sm-12 py-2" id="printable">
             <component :is="currentAbility" :key="key" />
           </main>
         </div>

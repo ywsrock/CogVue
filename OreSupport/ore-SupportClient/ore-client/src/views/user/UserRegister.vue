@@ -167,7 +167,7 @@
                       style="background-color:white;border: 2px solid #e9e9e9;"
                       class="form-control"
                     />
-                    <p style="color:red;font-size:12px" ref="e-password2"></p>
+                    <p style="color:red;font-size:12px" ref="mmmmmmmm"></p>
                   </div>
                   <!-- /.form-group -->
 
@@ -220,6 +220,16 @@ export default {
         callback();
       }
     };
+    // 確認パスワード確認
+    var validateEmail2 = (rule, value, callback, source, options) => {
+      if (value === "") {
+        callback(new Error("確認メールアドレスを入力してください。"));
+      } else if (value !== this.registForm.email) {
+        callback(new Error("メールアドレスと一致しない。"));
+      } else {
+        callback();
+      }
+    };
 
     // パスワードチェック
     const validatePassword = (rule, value, callback) => {
@@ -244,11 +254,13 @@ export default {
     return {
       registForm: {
         email: "",
+        repeatemail: "",
         password: "",
         repeatpassword: "",
       },
       rules: {
         email: [{ required: true, validator: validateEmail }],
+        repeatemail: [{ required: true, validator: validateEmail2 }],
         password: [{ required: true, validator: validatePassword }],
         repeatpassword: [{ required: true, validator: validatePassword2 }],
       },
@@ -265,6 +277,18 @@ export default {
         this.$refs["e-email"].textContent = message;
       } else {
         this.$refs["e-email"].textContent = "";
+      }
+    },
+    // メール2のチェック処理
+    checkrepeatEmail: function (e) {
+      var fields = { repeatemail: e.target.value };
+      var ret = this.validate(fields, { repeatemail: this.rules.repeatemail });
+      if (ret) {
+        const { message, field } = ret[0];
+        // this.$refs.email.focus();
+        this.$refs["e-email2"].textContent = message;
+      } else {
+        this.$refs["e-email2"].textContent = "";
       }
     },
     // パスワードのチェック処理

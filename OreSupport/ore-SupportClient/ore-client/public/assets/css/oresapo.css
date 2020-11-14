@@ -35,12 +35,15 @@ button {
   clear: both;
 }
 
+#sidebar ul li{
+  float: left;
+}
+
 .orig-sidebar-admin {
   background-color: #363636;
   color: #fff;
   display: table-cell;
   vertical-align: top;
-  width: 80px;
 }
 .orig-sidebar-admin ul {
   list-style: none;
@@ -54,10 +57,10 @@ button {
   color: rgba(255, 255, 255, 0.8);
   display: block;
   font-size: 28px;
-  height: 80px;
-  line-height: 80px;
+  height: 60px;
+  line-height: 60px;
   text-align: center;
-  width: 80px;
+  width: 100px;
 }
 .orig-sidebar-admin ul li a:hover {
   color: #c6af5c;
@@ -73,7 +76,7 @@ button {
   display: table-cell;
   height: 100%;
   vertical-align: top;
-  width: 240px;
+
 }
 @media (max-width: 1199px) {
   .orig-sidebar-secondary-admin {
@@ -134,10 +137,12 @@ button {
   height: 80px;
   padding: 18px 20px 0px 20px;
   transition: all 0.15s linear;
+  width: 400px;
 }
 @media (max-width: 1199px) {
   .orig-sidebar-secondary-admin ul li a {
     text-align: center;
+    width: 100px;
   }
 }
 .orig-sidebar-secondary-admin ul li a span {
@@ -175,7 +180,7 @@ button {
   top: 50%;
   text-align: center;
   transform: translateY(-50%);
-  width: 18px;
+  
 }
 @media (max-width: 1199px) {
   .orig-sidebar-secondary-admin ul li a .title {
