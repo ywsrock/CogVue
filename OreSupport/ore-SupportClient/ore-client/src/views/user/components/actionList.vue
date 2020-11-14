@@ -85,6 +85,8 @@ export default {
     //アクションの編集
     handleEdit(index, row) {
       this.$parent.is_readonly = false;
+      this.$parent.isModalShow = true;
+      row.color = "teal darken-1";
       Object.assign(this.$parent.actionInfo, row);
     },
     //アクションの削除

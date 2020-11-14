@@ -1,11 +1,13 @@
 var express = require("express");
 var router = express.Router()
 var checkuser = require("../common/check.token");
+var log = require("log4js").getLogger("users");
 const { STATUS_MESSAGE } = require("../common/const");
 const { UserAction } = require("../model/action.model");
 const { UserActionMaster } = require("../model/actionMaster")
 const { sequelize } = require('../common/db.common')
-var log = require("log4js").getLogger("users");
+const dateFormat = require('dateformat')
+
 // アクション情報保存
 router.post("/saveAction", [checkuser.verifyUser], async function (req, res, next) {
     log.info(`/saveAction ${req.body}`);
@@ -19,9 +21,9 @@ router.post("/saveAction", [checkuser.verifyUser], async function (req, res, nex
     //メモ
     userAction.memo = req.body.newMemo
     // 開始日
-    userAction.startDate = req.body.newDate[0]
+    userAction.startDate = dateFormat(new Date(req.body.newDate[0]), "yyyy-mm-dd HH:MM:ss")
     // 終了日時
-    userAction.endDate = req.body.newDate[1]
+    userAction.endDate = dateFormat(new Date(req.body.newDate[1]), "yyyy-mm-dd HH:MM:ss")
 
     try {
         //データ更新
@@ -156,8 +158,9 @@ function editSelectAction(mastAction, userAction) {
     // ユーザアクション
     userAction.forEach(element => {
         actionOptions[1].options.push({
-            id: element.id,
-            name: element.name
+            value: element.id,
+            // text: `${element.name}</strong> 　過去実行日:${element.startDate}　〜　${element.endDate}`
+            text: element.name
         })
     })
     return actionOptions

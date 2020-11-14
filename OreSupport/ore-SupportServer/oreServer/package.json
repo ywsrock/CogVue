@@ -8,11 +8,14 @@
   "dependencies": {
     "app-root-path": "^3.0.0",
     "bcryptjs": "^2.4.3",
+    "body-parser": "^1.19.0",
     "cookie-parser": "~1.4.4",
     "date-utils": "^1.2.21",
     "dateformat": "^3.0.3",
     "debug": "~2.6.9",
+    "ect": "^0.5.9",
     "ejs": "~2.6.1",
+    "ejs-locals": "^1.0.2",
     "express": "~4.16.1",
     "express-session": "^1.17.1",
     "http-errors": "~1.6.3",
@@ -23,6 +26,8 @@
     "mysql": "^2.18.1",
     "mysql2": "^2.1.0",
     "nodemon": "^2.0.4",
+    "passport": "^0.4.1",
+    "passport-local": "^1.0.0",
     "request": "^2.88.2",
     "sequelize": "^5.21.12"
   }

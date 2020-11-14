@@ -5,7 +5,7 @@ const STATUS_MESSAGE = require("../common/const").STATUS_MESSAGE;
 require("date-utils");
 
 /* お知らせ一覧ページ */
-router.get("/", async function (req, res, next) {
+router.get("/", isAuthenticated, async function (req, res, next) {
   // 出力結果
   let resObj = {};
 
@@ -18,8 +18,8 @@ router.get("/", async function (req, res, next) {
       code: STATUS_MESSAGE.CODE_402,
       message: informationList.message,
     };
-    res.render("information/index", {
-      title: "管理画面 お知らせ一覧",
+    res.render("admin/information/index", {
+      title: "お知らせ一覧",
       informationList: [],
     });
   } else {
@@ -35,19 +35,23 @@ router.get("/", async function (req, res, next) {
       });
     });
 
-    res.render("information/index", {
-      title: "管理画面 お知らせ一覧",
+    res.render("admin/information/index", {
+      title: "お知らせ一覧",
       informationList: contentArray,
+      user: req.user,
     });
   }
 });
 
 /* お知らせ新規作成ページ */
-router.get("/new", function (req, res, next) {
-  res.render("information/new", { title: "管理画面 お知らせ新規作成" });
+router.get("/new", isAuthenticated, function (req, res, next) {
+  res.render("admin/information/new", {
+    title: "管理画面 お知らせ新規作成",
+    user: req.user,
+  });
 });
 
-router.post("/create", async function (req, res, next) {
+router.post("/create", isAuthenticated, async function (req, res, next) {
   // 出力結果
   let resObj = {};
 
@@ -96,7 +100,7 @@ router.post("/create", async function (req, res, next) {
 });
 
 /* お知らせ削除 */
-router.get("/delete", async function (req, res, next) {
+router.get("/delete", isAuthenticated, async function (req, res, next) {
   console.log(req.query.informationID);
 
   const id = req.query.informationID;
@@ -114,7 +118,7 @@ router.get("/delete", async function (req, res, next) {
     };
     return res.status(200).send(resObj);
   } else {
-    res.redirect("/information");
+    res.redirect("admin/information/index");
   }
 });
 
@@ -146,7 +150,7 @@ router.get("/detail", async function (req, res, next) {
       to: informationDetail.To.toFormat("YYYY-MM-DD"),
     };
 
-    res.render("information/detail", {
+    res.render("admin/information/detail", {
       title: "管理画面 お知らせ詳細",
       informationDetail: resObj,
     });
@@ -154,7 +158,7 @@ router.get("/detail", async function (req, res, next) {
 });
 
 /* お知らせ更新 */
-router.post("/update", async function (req, res, next) {
+router.post("/update", isAuthenticated, async function (req, res, next) {
   // 出力結果
   let resObj = {};
 
@@ -216,7 +220,7 @@ router.get("/publicList", async function (req, res, next) {
       code: STATUS_MESSAGE.CODE_402,
       message: informationList.message,
     };
-    res.render("information/index", {
+    res.render("admin/information/index", {
       title: "管理画面 お知らせ一覧",
       informationList: [],
     });
@@ -249,5 +253,15 @@ router.get("/publicList", async function (req, res, next) {
     // });
   }
 });
+
+// 認証されているか確認する。
+// 認証されていない場合、ログイン画面に遷移
+function isAuthenticated(req, res, next) {
+  if (req.isAuthenticated()) {
+    return next();
+  } else {
+    res.redirect("/admin/login");
+  }
+}
 
 module.exports = router;

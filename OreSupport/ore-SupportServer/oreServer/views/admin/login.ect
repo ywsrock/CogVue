@@ -1,0 +1,29 @@
+<% extend 'layout' %>
+<section>
+  <h1><%= @title %></h1>
+  <form action="/admin/login" method="post" class="mt-3 form-group">
+    <div>
+      <label for="username">ユーザーID：</label>
+      <input
+        style="width: 25%"
+        type="text"
+        class="form-control"
+        name="username"
+        id="username"
+      />
+    </div>
+    <div>
+      <label for="password">パスワード：</label>
+      <input
+        style="width: 25%"
+        type="password"
+        class="form-control"
+        name="password"
+        id="password"
+      />
+    </div>
+    <div>
+      <input type="submit" class="btn btn-primary mt-3" value="ログイン" />
+    </div>
+  </form>
+</section>
