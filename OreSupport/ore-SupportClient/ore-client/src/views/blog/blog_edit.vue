@@ -66,13 +66,24 @@
                         <div class="widget">
                           <div class="user-photo">
                             <a href="#">
-                              <!-- <img :src="blogImg" alt="User Photo" /> -->
+                              <img
+                                :src="blogImg"
+                                @error="defaultBlogImg"
+                                alt="User Photo"
+                              />
                               <input
                                 ref="upfile"
                                 id="file_photo"
                                 type="file"
                                 accept=".jpg, .jpeg, .png"
-
+                                @change="onchange"
+                              />
+                              <input
+                                ref="upfile"
+                                id="file_photo"
+                                type="file"
+                                accept=".jpg, .jpeg, .png"
+                                @change="onchange"
                               />
                             </a>
                           </div>
@@ -161,6 +172,8 @@
 
 <script>
 import { Message } from "element-ui";
+var img = require("../../../public/favicon.png");
+
 /* eslint-disable */
 export default {
   data() {
@@ -169,7 +182,12 @@ export default {
         id: "",
         title: "",
         content: "",
+        blogimage: "",
+        filename: "",
       },
+      registForm: {},
+      blogImg: "" || img,
+      defaultsrc: img,
       category: ["食事", "運動", "脳トレ", "音楽", "その他"],
       tags: ["サンマ", "マラソン", "モーツァルト", "パズル"],
     };
@@ -181,12 +199,30 @@ export default {
       const content = that.$store.getters.get_content;
       const title = that.$store.getters.get_title;
       const id = that.$store.getters.get_id;
+      const blogImg = that.$store.getters.get_blogImg;
       that.blogDetail.content = content;
       that.blogDetail.title = title;
       that.blogDetail.id = id;
+      that.blogImg = blogImg;
     });
   },
   methods: {
+    defaultBlogImg: function() {
+      return this.defaultsrc;
+    },
+    onchange: function(e) {
+      e.preventDefault();
+      const files = e.target.files;
+      const file = files[0];
+      console.log(file.name);
+      this.blogDetail.filename = file.name;
+      this.blogDetail.blogimage = files[0];
+      const reader = new FileReader();
+      reader.readAsDataURL(file);
+      reader.onload = (e) => {
+        this.blogImg = e.target.result;
+      };
+    },
     blogUpdate: function(e) {
       // 二重コミット防止のため、ボタンを非活性
       e.target.disabled = true;
@@ -195,8 +231,27 @@ export default {
       // if (!isValid) {
       // ユーザ登録処理
       console.log(`val = ${JSON.stringify(this.$route.query.id)}`);
+
+      let that = this;
+      let fl = this.$refs.upfile.files[0];
+
+      //Content-Type:form/multipart で送信されます
+      let data = new FormData();
+      // data.append("key", value, parameter);
+      data.append(
+        "imgBlog",
+        this.blogDetail.blogimage,
+        this.blogDetail.filename
+      );
+
+      data.append("blogDetail", JSON.stringify(this.blogDetail));
+
+
+
+
+
       this.$store
-        .dispatch("blog/blogUpdate", this.blogDetail)
+        .dispatch("blog/blogUpdate", data)
         .then((res) => {
           Message({
             message: "更新OK",
@@ -211,6 +266,9 @@ export default {
           console.log(error.data);
           console.log("作成失敗");
         });
+    },
+    blogClick : function() {
+      this.$router.push("/blog/blogList");
     },
   },
 };

@@ -20,7 +20,7 @@ const state = {
 
     userName:"",
 
-    image: ""
+    blogImg: ""
 }
 
 /*
@@ -33,7 +33,7 @@ const getters = {
     get_comment: state => state.comment,
     get_userName: state => state.userName,
     get_userProfile: state => state.userProfile,
-    // get_image: state => state.image
+    get_blogImg: state => state.blogImg
 
 }
 
@@ -62,9 +62,9 @@ const mutations = {
     set_userProfile: (state, data) => {
         state.userProfile = data
     },
-    // set_image: (state, data) => {
-    //     state.image = data
-    // }
+    set_blogImg: (state, data) => {
+        state.blogImg = data
+    }
 
 }
 
@@ -101,6 +101,7 @@ const actions = {
                         //ブログ内容
                         context.commit("set_content",data.content)
 
+                        // context.commit("set_blogImg",data.imgUrl)
 
                         resolve(data);
                     }).catch(error => {
@@ -128,6 +129,7 @@ const actions = {
 
                         context.commit("set_userProfile",data.userProfile)
 
+                        context.commit("set_blogImg",data.imgUrl)
 
                         resolve(data);
                     }).catch(error => {
@@ -171,20 +173,20 @@ const actions = {
             })
         },
 
-        imageUp(context, blogInfo) {
-            return new Promise((resolve, reject) => {
-                imageUp(blogInfo)
-                    .then((res) => {
-                        var data = res.data;
-                        //　ユーザアバター
-                        context.commit("set_image", data.imgUrl);
-                        resolve(data);
-                    })
-                    .catch((err) => {
-                        reject(err);
-                    });
-            });
-        },
+        // imageUp(context, blogInfo) {
+        //     return new Promise((resolve, reject) => {
+        //         imageUp(blogInfo)
+        //             .then((res) => {
+        //                 var data = res.data;
+        //                 //　ユーザアバター
+        //                 context.commit("set_image", data.imgUrl);
+        //                 resolve(data);
+        //             })
+        //             .catch((err) => {
+        //                 reject(err);
+        //             });
+        //     });
+        // },
 }
 
 export default {
