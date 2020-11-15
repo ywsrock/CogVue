@@ -20,8 +20,9 @@ const state = {
 
     userName:"",
 
-    commentName:""
+    commentName:"",
 
+    blogImg: "",
 }
 
 /*
@@ -34,9 +35,8 @@ const getters = {
     get_comment: state => state.comment,
     get_userName: state => state.userName,
     get_userProfile: state => state.userProfile,
-
     get_commentName: state => state.commentName,
-
+    get_blogImg: state => state.blogImg,
 }
 
 /*
@@ -67,6 +67,9 @@ const mutations = {
     set_commentName: (state, data) => {
         state.commentName = data
     },
+    set_blogImg: (state, data) => {
+        state.blogImg = data
+    },
 
 }
 
@@ -91,7 +94,7 @@ const actions = {
 
         // ブログリスト
         getBlogList(context, blogInfo) {
-            return new Promise((resolve, reject) => {               
+            return new Promise((resolve, reject) => {
                 getBlogList()
                     .then(res => {
                         const data = res.data;
@@ -114,7 +117,7 @@ const actions = {
 
         // ブログ詳細
         getBlogDetail(context, blogId) {
-            return new Promise((resolve, reject) => {               
+            return new Promise((resolve, reject) => {
                 getBlogDetail(blogId)
                     .then(res => {
                         const data = res.data;
@@ -130,7 +133,7 @@ const actions = {
 
                         context.commit("set_userProfile",data.userProfile)
 
-
+                        context.commit("set_blogImg",data.blogImg)
                         resolve(data);
                     }).catch(error => {
                         reject(error);
@@ -139,7 +142,7 @@ const actions = {
         },
 
         blogDelete(context, blogId) {
-            return new Promise((resolve, reject) => {               
+            return new Promise((resolve, reject) => {
                 blogDelete(blogId)
                     .then(res => {
                         const data = res.data;
@@ -157,7 +160,7 @@ const actions = {
                         reject(error);
                     })
             })
-        }, 
+        },
 
         blogUpdate(context, blogInfo) {
             return new Promise((resolve, reject) => {
@@ -189,7 +192,7 @@ const actions = {
 
 
         searchBlog(context, blogInfo) {
-            return new Promise((resolve, reject) => {               
+            return new Promise((resolve, reject) => {
                 searchBlog()
                     .then(res => {
                         const data = res.data;
