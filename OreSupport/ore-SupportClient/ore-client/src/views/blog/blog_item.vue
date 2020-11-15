@@ -1,19 +1,14 @@
 <template>
   <div>
     <div class="post-image">
-      <img
-        src="../../assets/img/tmp/20200920park.png"
-        alt="blog image"
-      />
-      <a class="read-more" href="" @click.prevent="getBlogDetail(item.id)">View</a>
+      <img src="../../assets/img/tmp/20200920park.png" alt="blog image" />
+      <a class="read-more" href @click.prevent="getBlogDetail(item.id)">View</a>
     </div>
     <div class="post-content">
       <h2>
-        <a href="" @click.prevent="getBlogDetail(item.id)">{{ item.title }}</a>
+        <a href @click.prevent="getBlogDetail(item.id)">{{ item.title }}</a>
       </h2>
-      <p style="margin-bottom: 5px">
-        {{ item.content | content_slice }}
-      </p>
+      <p style="margin-bottom: 5px">{{ item.content | content_slice }}</p>
       <p style="margin-bottom: 5px">
         <span class="tag-border">{{ item.userName }}さん</span>
         <span class="tag-border">男性</span>
@@ -37,8 +32,15 @@ export default {
   props: {
     item: {
       type: Object,
-      required: true      
-    },
+      required: true
+    }
+  },
+  filters: {
+    content_slice: function(value) {
+      if (!value) return "";
+      let target = value.toString();
+      return target.slice(0, 50) + "....";
+    }
   },
   methods: {
     getBlogDetail(id) {
