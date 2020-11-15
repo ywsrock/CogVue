@@ -2,6 +2,7 @@
 const db = require('../../common/db.common');
 const { Blog } = require("../../model/blog.model");
 const { User } = require("../../model/user.model");
+const { USERPROFILE } = require("../../model/userprofile.model");
 const { Comment } = require("../../model/comment.model");
 const { sequelize } = require('../../common/db.common');
 const Sequelize = require('sequelize');
@@ -212,25 +213,62 @@ const postComment = async (queryInfo) => {
 
 const searchBlog = async (queryInfo) => {
     try {
-        User.hasOne(Blog, {
+        User.hasOne(USERPROFILE, {
             foreignKey: {
                 name: 'UserID'
             },
             onDelete: 'SET NULL',
             onUpdate: 'CASCADE'
         })
-        Blog.belongsTo(User, {
+        USERPROFILE.belongsTo(User, {
             foreignKey: {
                 name: 'UserID'
             }
         });
-        const result = await Blog.findAll({
-            order: [['id', 'DESC']],
-            include: User,
+
+        let users = await User.findAll({
+            include: USERPROFILE,
+        });
+
+        for(let k in queryInfo) {
+            if(k!=='freeWord'){
+            console.log(queryInfo[k]);
+            users = await users.findAll({
+                where:{
+                    k: queryInfo[k]
+                }  
+        })};
+
+
+        users.hasOne(Blog, {
+            foreignKey: {
+                name: 'UserID'
+            },
+            onDelete: 'SET NULL',
+            onUpdate: 'CASCADE'
+        })
+        Blog.belongsTo(users, {
+            foreignKey: {
+                name: 'UserID'
+            }
+        });
+        const Blogs = await Blog.findAll({
+            include: users,
             attributes: { exclude: ['Password'] }
         });
+
+        
+        let result = [];
+
+        Blogs.forEach(Blog=>{
+            if (Blog.match(/queryInfo.freeWord/g)){
+            result.push(Blog)
+        }
+    });
+
         return result;
-    } catch (error) {
+        }
+        } catch (error) {
         console.error("情報取得エラー:" + error.stack);
         throw error;
     }

@@ -18,6 +18,7 @@ const getters = {
     action: (state) => state.action.actionData,
     get_comment: state => state.blog.comment,
     get_commentName: state => state.blog.commentName,
+    get_params:state => state.params
 
 }
 

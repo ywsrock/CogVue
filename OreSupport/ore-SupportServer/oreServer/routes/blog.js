@@ -287,15 +287,23 @@ router.post("/postComment", [checkuser.verifyUser], async function (req, res, ne
 });
 
 
-router.get("/searchBlog", async function (req, res, next) {
+router.post("/searchBlog", async function (req, res, next) {
   // 出力結果
   let resObj = {};
   // ユーザID(ベリファイチェックから)
   let userID = req.userID;
+  let sex = req.body.sex;
+  let age = req.body.age;
+  let pref = req.body.pref;
+  let freeWord = req.body.freeWord;
+
+  const params = {sex:sex,age:age,pref:pref,freeWord:freeWord}
+
 
   //ブログリスと取得
   //var blogList = await blogmodel.getBlogList({ key: "UserID", val: userID })
-  var blogList = await blogmodel.searchBlog();
+  var blogList = await blogmodel.searchBlog(params);
+
 
   if (typeof blogList.errors != "undefined") {
     // エラー結果

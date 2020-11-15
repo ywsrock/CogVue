@@ -20,7 +20,9 @@ const state = {
 
     userName:"",
 
-    commentName:""
+    commentName:"",
+
+    params:[]
 
 }
 
@@ -36,6 +38,8 @@ const getters = {
     get_userProfile: state => state.userProfile,
 
     get_commentName: state => state.commentName,
+
+    get_params:state => state.params
 
 }
 
@@ -66,6 +70,9 @@ const mutations = {
     },
     set_commentName: (state, data) => {
         state.commentName = data
+    },
+    set_params: (state, data) => {
+        state.params = data
     },
 
 }
@@ -190,7 +197,7 @@ const actions = {
 
         searchBlog(context, blogInfo) {
             return new Promise((resolve, reject) => {               
-                searchBlog()
+                searchBlog(blogInfo)
                     .then(res => {
                         const data = res.data;
                         // const content = data.content;

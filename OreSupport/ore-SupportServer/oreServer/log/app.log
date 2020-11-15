@@ -29,3 +29,83 @@
 [2020-11-01T12:36:07.433] [INFO] users - /queryAction 49
 [2020-11-01T12:36:43.508] [INFO] users - /saveAction [object Object]
 [2020-11-01T12:36:43.525] [INFO] users - /queryAction 49
+[2020-11-14T12:54:21.223] [INFO] startup - Listening on port 3000
+[2020-11-14T12:54:46.575] [INFO] users - ユーザログ UserName:1@1.com
+[2020-11-14T12:54:46.575] [INFO] userDao - START getUserInfoByUserName: {"username":"1@1.com"}
+[2020-11-14T12:54:46.584] [INFO] userDao - END getUserInfoByUserName
+[2020-11-14T12:54:46.682] [INFO] users - login success UserID: 49 
+[2020-11-14T12:54:46.700] [INFO] users - profileInfo userID: 49 
+[2020-11-14T12:54:46.700] [INFO] userDao - START getUserProfileByUserID : {"key":"UserID","val":49}
+[2020-11-14T12:54:46.718] [INFO] userDao - END getUserProfileByUserID
+[2020-11-14T12:54:46.718] [INFO] users - profileInfo success
+[2020-11-14T12:55:05.002] [INFO] users - like/index 44
+[2020-11-14T12:55:05.012] [INFO] userDao - START getUserProfileByUserID : {"key":"userId","val":"49"}
+[2020-11-14T12:55:05.022] [INFO] userDao - END getUserProfileByUserID
+[2020-11-14T12:55:14.888] [INFO] userDao - START getUserProfileByUserID : {"key":"userId","val":"49"}
+[2020-11-14T12:55:14.897] [INFO] userDao - END getUserProfileByUserID
+[2020-11-14T13:20:36.209] [INFO] users - like/index 45
+[2020-11-14T13:20:36.230] [INFO] userDao - START getUserProfileByUserID : {"key":"userId","val":"49"}
+[2020-11-14T13:20:36.292] [INFO] userDao - END getUserProfileByUserID
+[2020-11-14T13:26:31.220] [INFO] users - like/index 45
+[2020-11-14T13:26:31.253] [INFO] userDao - START getUserProfileByUserID : {"key":"userId","val":"49"}
+[2020-11-14T13:26:31.326] [INFO] userDao - END getUserProfileByUserID
+[2020-11-14T13:26:44.562] [INFO] userDao - START getUserProfileByUserID : {"key":"userId","val":"49"}
+[2020-11-14T13:26:44.581] [INFO] userDao - END getUserProfileByUserID
+[2020-11-14T13:26:49.774] [INFO] userDao - START getUserProfileByUserID : {"key":"userId","val":"49"}
+[2020-11-14T13:26:49.796] [INFO] userDao - END getUserProfileByUserID
+[2020-11-14T13:26:59.359] [INFO] users - like/create [object Object]
+[2020-11-14T13:26:59.369] [INFO] users - like/index 45
+[2020-11-14T13:27:00.043] [INFO] users - like/create [object Object]
+[2020-11-14T13:27:00.053] [INFO] users - like/index 45
+[2020-11-14T13:27:01.290] [INFO] users - like/destroy [object Object]
+[2020-11-14T13:27:01.299] [INFO] users - like/index 45
+[2020-11-14T13:27:03.032] [INFO] users - like/destroy [object Object]
+[2020-11-14T13:27:03.044] [INFO] users - like/index 45
+[2020-11-14T13:27:05.188] [INFO] users - like/create [object Object]
+[2020-11-14T13:27:05.201] [INFO] users - like/index 45
+[2020-11-14T13:27:16.726] [INFO] users - like/destroy [object Object]
+[2020-11-14T13:27:16.737] [INFO] users - like/index 45
+[2020-11-14T13:28:46.918] [INFO] users - like/index 46
+[2020-11-14T13:28:46.933] [INFO] userDao - START getUserProfileByUserID : {"key":"userId","val":"49"}
+[2020-11-14T13:28:46.963] [INFO] userDao - END getUserProfileByUserID
+[2020-11-14T13:28:56.987] [INFO] userDao - START getUserProfileByUserID : {"key":"userId","val":"49"}
+[2020-11-14T13:28:56.993] [INFO] userDao - END getUserProfileByUserID
+[2020-11-14T13:29:20.433] [INFO] users - like/index 46
+[2020-11-14T13:29:20.444] [INFO] userDao - START getUserProfileByUserID : {"key":"userId","val":"49"}
+[2020-11-14T13:29:20.461] [INFO] userDao - END getUserProfileByUserID
+[2020-11-14T13:29:37.552] [INFO] users - like/index 46
+[2020-11-14T13:29:37.554] [INFO] userDao - START getUserProfileByUserID : {"key":"userId","val":"49"}
+[2020-11-14T13:29:37.570] [INFO] userDao - END getUserProfileByUserID
+[2020-11-14T21:27:56.608] [INFO] users - profileInfo userID: 49 
+[2020-11-14T21:27:56.626] [INFO] userDao - START getUserProfileByUserID : {"key":"UserID","val":49}
+[2020-11-14T21:27:56.801] [INFO] userDao - END getUserProfileByUserID
+[2020-11-14T21:27:56.805] [INFO] users - profileInfo success
+[2020-11-14T21:27:59.036] [INFO] users - logout
+[2020-11-15T11:40:06.492] [INFO] users - ユーザログ UserName:1@1.com
+[2020-11-15T11:40:06.492] [INFO] userDao - START getUserInfoByUserName: {"username":"1@1.com"}
+[2020-11-15T11:40:06.514] [INFO] userDao - END getUserInfoByUserName
+[2020-11-15T11:40:06.608] [INFO] users - login success UserID: 49 
+[2020-11-15T11:40:06.633] [INFO] users - profileInfo userID: 49 
+[2020-11-15T11:40:06.636] [INFO] userDao - START getUserProfileByUserID : {"key":"UserID","val":49}
+[2020-11-15T11:40:06.681] [INFO] userDao - END getUserProfileByUserID
+[2020-11-15T11:40:06.682] [INFO] users - profileInfo success
+[2020-11-15T11:40:36.902] [INFO] users - like/index 46
+[2020-11-15T11:40:36.917] [INFO] userDao - START getUserProfileByUserID : {"key":"userId","val":"49"}
+[2020-11-15T11:40:36.936] [INFO] userDao - END getUserProfileByUserID
+[2020-11-15T11:41:30.123] [INFO] users - profileInfo userID: 49 
+[2020-11-15T11:41:30.124] [INFO] userDao - START getUserProfileByUserID : {"key":"UserID","val":49}
+[2020-11-15T11:41:30.154] [INFO] userDao - END getUserProfileByUserID
+[2020-11-15T11:41:30.154] [INFO] users - profileInfo success
+[2020-11-15T12:32:34.828] [INFO] users - profileInfo userID: 49 
+[2020-11-15T12:32:34.830] [INFO] userDao - START getUserProfileByUserID : {"key":"UserID","val":49}
+[2020-11-15T12:32:35.023] [INFO] userDao - END getUserProfileByUserID
+[2020-11-15T12:32:35.024] [INFO] users - profileInfo success
+[2020-11-15T12:35:16.908] [INFO] users - profileInfo userID: 49 
+[2020-11-15T12:35:16.908] [INFO] userDao - START getUserProfileByUserID : {"key":"UserID","val":49}
+[2020-11-15T12:35:17.002] [INFO] userDao - END getUserProfileByUserID
+[2020-11-15T12:35:17.002] [INFO] users - profileInfo success
+[2020-11-15T12:43:13.800] [INFO] startup - Listening on port 3000
+[2020-11-15T12:43:22.357] [INFO] users - profileInfo userID: 49 
+[2020-11-15T12:43:22.357] [INFO] userDao - START getUserProfileByUserID : {"key":"UserID","val":49}
+[2020-11-15T12:43:22.399] [INFO] userDao - END getUserProfileByUserID
+[2020-11-15T12:43:22.400] [INFO] users - profileInfo success

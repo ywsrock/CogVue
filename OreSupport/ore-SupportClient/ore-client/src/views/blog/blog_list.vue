@@ -222,18 +222,26 @@ export default {
     },
     searchBlog() {
       // デバッグ用。パラメータが取得できているか確認。不要になったら消してOK
-      alert(this.searchBlogKey.sex);
-      alert(this.searchBlogKey.pref);
-      alert(this.searchBlogKey.from);
-      alert(this.searchBlogKey.to);
-      alert(this.searchBlogKey.age);
-      alert(this.searchBlogKey.freeWord);
+      // alert(this.searchBlogKey.sex);
+      // alert(this.searchBlogKey.pref);
+      // alert(this.searchBlogKey.from);
+      // alert(this.searchBlogKey.to);
+      // alert(this.searchBlogKey.age);
+      // alert(this.searchBlogKey.freeWord);
 
       //apiからサーバーに命令をだす。(store action)
       var that = this;
 
-      const params = new URLSearchParams();
-      params.append("sex", this.searchBlogKey.sex);
+      // const params = new URLSearchParams();
+      // params.append("sex", this.searchBlogKey.sex);
+      let params = {};
+      //連想配列に要素を追加
+      params['sex'] = this.searchBlogKey.sex;
+      params['pref'] = this.searchBlogKey.pref;
+      params['from'] = this.searchBlogKey.from;
+      params['to'] = this.searchBlogKey.to;
+      params['age'] = this.searchBlogKey.age;
+      params['freeWord'] = this.searchBlogKey.freeWord;
 
       this.$store
         .dispatch("blog/searchBlog",params)
@@ -242,7 +250,7 @@ export default {
         this.$nextTick().then(function() {
           const blogInfo = that.$store.getters.get_content;
           that.list.tableData = blogInfo;
-          // let userid = res.userID;
+
 
         })})
         //失敗の場合

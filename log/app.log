@@ -162,3 +162,219 @@
 [2020-10-25T18:01:48.010] [INFO] users - profileInfo success
 [2020-10-25T18:01:56.500] [INFO] userDao - START getUserProfileByUserID : {"key":"userId","val":"49"}
 [2020-10-25T18:01:56.517] [INFO] userDao - END getUserProfileByUserID
+[2020-11-15T12:45:56.737] [INFO] startup - Listening on port 3000
+[2020-11-15T12:57:20.508] [INFO] startup - Listening on port 3000
+[2020-11-15T12:57:59.325] [INFO] users - profileInfo userID: 49 
+[2020-11-15T12:57:59.327] [INFO] userDao - START getUserProfileByUserID : {"key":"UserID","val":49}
+[2020-11-15T12:58:01.637] [INFO] userDao - END getUserProfileByUserID
+[2020-11-15T12:58:01.638] [INFO] users - profileInfo success
+[2020-11-15T13:03:04.187] [INFO] startup - Listening on port 3000
+[2020-11-15T13:03:10.816] [INFO] users - profileInfo userID: 49 
+[2020-11-15T13:03:10.818] [INFO] userDao - START getUserProfileByUserID : {"key":"UserID","val":49}
+[2020-11-15T13:03:10.846] [INFO] userDao - END getUserProfileByUserID
+[2020-11-15T13:03:10.846] [INFO] users - profileInfo success
+[2020-11-15T13:07:49.519] [INFO] startup - Listening on port 3000
+[2020-11-15T13:07:57.298] [INFO] users - profileInfo userID: 49 
+[2020-11-15T13:07:57.299] [INFO] userDao - START getUserProfileByUserID : {"key":"UserID","val":49}
+[2020-11-15T13:07:57.348] [INFO] userDao - END getUserProfileByUserID
+[2020-11-15T13:07:57.349] [INFO] users - profileInfo success
+[2020-11-15T13:15:45.478] [INFO] startup - Listening on port 3000
+[2020-11-15T13:18:00.407] [INFO] startup - Listening on port 3000
+[2020-11-15T13:18:05.098] [INFO] users - profileInfo userID: 49 
+[2020-11-15T13:18:05.099] [INFO] userDao - START getUserProfileByUserID : {"key":"UserID","val":49}
+[2020-11-15T13:18:05.155] [INFO] userDao - END getUserProfileByUserID
+[2020-11-15T13:18:05.156] [INFO] users - profileInfo success
+[2020-11-15T13:21:19.355] [INFO] startup - Listening on port 3000
+[2020-11-15T13:33:50.222] [INFO] startup - Listening on port 3000
+[2020-11-15T13:33:57.636] [INFO] users - profileInfo userID: 49 
+[2020-11-15T13:33:57.637] [INFO] userDao - START getUserProfileByUserID : {"key":"UserID","val":49}
+[2020-11-15T13:33:57.659] [INFO] userDao - END getUserProfileByUserID
+[2020-11-15T13:33:57.659] [INFO] users - profileInfo success
+[2020-11-15T13:40:08.659] [INFO] startup - Listening on port 3000
+[2020-11-15T13:40:15.075] [INFO] users - profileInfo userID: 49 
+[2020-11-15T13:40:15.076] [INFO] userDao - START getUserProfileByUserID : {"key":"UserID","val":49}
+[2020-11-15T13:40:15.127] [INFO] userDao - END getUserProfileByUserID
+[2020-11-15T13:40:15.128] [INFO] users - profileInfo success
+[2020-11-15T13:50:25.873] [INFO] startup - Listening on port 3000
+[2020-11-15T13:50:33.323] [INFO] users - profileInfo userID: 49 
+[2020-11-15T13:50:33.324] [INFO] userDao - START getUserProfileByUserID : {"key":"UserID","val":49}
+[2020-11-15T13:50:33.391] [INFO] userDao - END getUserProfileByUserID
+[2020-11-15T13:50:33.391] [INFO] users - profileInfo success
+[2020-11-15T13:56:15.501] [INFO] startup - Listening on port 3000
+[2020-11-15T13:56:26.122] [INFO] users - profileInfo userID: 49 
+[2020-11-15T13:56:26.123] [INFO] userDao - START getUserProfileByUserID : {"key":"UserID","val":49}
+[2020-11-15T13:56:26.173] [INFO] userDao - END getUserProfileByUserID
+[2020-11-15T13:56:26.174] [INFO] users - profileInfo success
+[2020-11-15T13:56:37.152] [ERROR] app - アクセスエラー ClientError [NotFoundError]: Not Found
+    at /Users/teroron/Desktop/PBL/PBL2020/OreSupport/ore-SupportServer/oreServer/app.js:93:8
+    at Layer.handle [as handle_request] (/Users/teroron/Desktop/PBL/PBL2020/OreSupport/ore-SupportServer/oreServer/node_modules/express/lib/router/layer.js:95:5)
+    at trim_prefix (/Users/teroron/Desktop/PBL/PBL2020/OreSupport/ore-SupportServer/oreServer/node_modules/express/lib/router/index.js:317:13)
+    at /Users/teroron/Desktop/PBL/PBL2020/OreSupport/ore-SupportServer/oreServer/node_modules/express/lib/router/index.js:284:7
+    at Function.process_params (/Users/teroron/Desktop/PBL/PBL2020/OreSupport/ore-SupportServer/oreServer/node_modules/express/lib/router/index.js:335:12)
+    at next (/Users/teroron/Desktop/PBL/PBL2020/OreSupport/ore-SupportServer/oreServer/node_modules/express/lib/router/index.js:275:10)
+    at /Users/teroron/Desktop/PBL/PBL2020/OreSupport/ore-SupportServer/oreServer/node_modules/express/lib/router/index.js:635:15
+    at next (/Users/teroron/Desktop/PBL/PBL2020/OreSupport/ore-SupportServer/oreServer/node_modules/express/lib/router/index.js:260:14)
+    at Function.handle (/Users/teroron/Desktop/PBL/PBL2020/OreSupport/ore-SupportServer/oreServer/node_modules/express/lib/router/index.js:174:3)
+    at router (/Users/teroron/Desktop/PBL/PBL2020/OreSupport/ore-SupportServer/oreServer/node_modules/express/lib/router/index.js:47:12)
+    at Layer.handle [as handle_request] (/Users/teroron/Desktop/PBL/PBL2020/OreSupport/ore-SupportServer/oreServer/node_modules/express/lib/router/layer.js:95:5)
+    at trim_prefix (/Users/teroron/Desktop/PBL/PBL2020/OreSupport/ore-SupportServer/oreServer/node_modules/express/lib/router/index.js:317:13)
+    at /Users/teroron/Desktop/PBL/PBL2020/OreSupport/ore-SupportServer/oreServer/node_modules/express/lib/router/index.js:284:7
+    at Function.process_params (/Users/teroron/Desktop/PBL/PBL2020/OreSupport/ore-SupportServer/oreServer/node_modules/express/lib/router/index.js:335:12)
+    at next (/Users/teroron/Desktop/PBL/PBL2020/OreSupport/ore-SupportServer/oreServer/node_modules/express/lib/router/index.js:275:10)
+    at /Users/teroron/Desktop/PBL/PBL2020/OreSupport/ore-SupportServer/oreServer/node_modules/express/lib/router/index.js:635:15
+    at next (/Users/teroron/Desktop/PBL/PBL2020/OreSupport/ore-SupportServer/oreServer/node_modules/express/lib/router/index.js:260:14)
+    at Function.handle (/Users/teroron/Desktop/PBL/PBL2020/OreSupport/ore-SupportServer/oreServer/node_modules/express/lib/router/index.js:174:3)
+    at router (/Users/teroron/Desktop/PBL/PBL2020/OreSupport/ore-SupportServer/oreServer/node_modules/express/lib/router/index.js:47:12)
+    at Layer.handle [as handle_request] (/Users/teroron/Desktop/PBL/PBL2020/OreSupport/ore-SupportServer/oreServer/node_modules/express/lib/router/layer.js:95:5)
+    at trim_prefix (/Users/teroron/Desktop/PBL/PBL2020/OreSupport/ore-SupportServer/oreServer/node_modules/express/lib/router/index.js:317:13)
+    at /Users/teroron/Desktop/PBL/PBL2020/OreSupport/ore-SupportServer/oreServer/node_modules/express/lib/router/index.js:284:7
+    at Function.process_params (/Users/teroron/Desktop/PBL/PBL2020/OreSupport/ore-SupportServer/oreServer/node_modules/express/lib/router/index.js:335:12)
+    at next (/Users/teroron/Desktop/PBL/PBL2020/OreSupport/ore-SupportServer/oreServer/node_modules/express/lib/router/index.js:275:10)
+    at SessionStrategy.strategy.pass (/Users/teroron/Desktop/PBL/PBL2020/OreSupport/ore-SupportServer/oreServer/node_modules/passport/lib/middleware/authenticate.js:343:9)
+    at SessionStrategy.authenticate (/Users/teroron/Desktop/PBL/PBL2020/OreSupport/ore-SupportServer/oreServer/node_modules/passport/lib/strategies/session.js:75:10)
+    at attempt (/Users/teroron/Desktop/PBL/PBL2020/OreSupport/ore-SupportServer/oreServer/node_modules/passport/lib/middleware/authenticate.js:366:16)
+    at authenticate (/Users/teroron/Desktop/PBL/PBL2020/OreSupport/ore-SupportServer/oreServer/node_modules/passport/lib/middleware/authenticate.js:367:7)
+    at Layer.handle [as handle_request] (/Users/teroron/Desktop/PBL/PBL2020/OreSupport/ore-SupportServer/oreServer/node_modules/express/lib/router/layer.js:95:5)
+    at trim_prefix (/Users/teroron/Desktop/PBL/PBL2020/OreSupport/ore-SupportServer/oreServer/node_modules/express/lib/router/index.js:317:13)
+    at /Users/teroron/Desktop/PBL/PBL2020/OreSupport/ore-SupportServer/oreServer/node_modules/express/lib/router/index.js:284:7
+    at Function.process_params (/Users/teroron/Desktop/PBL/PBL2020/OreSupport/ore-SupportServer/oreServer/node_modules/express/lib/router/index.js:335:12)
+    at next (/Users/teroron/Desktop/PBL/PBL2020/OreSupport/ore-SupportServer/oreServer/node_modules/express/lib/router/index.js:275:10)
+    at initialize (/Users/teroron/Desktop/PBL/PBL2020/OreSupport/ore-SupportServer/oreServer/node_modules/passport/lib/middleware/initialize.js:53:5)
+    at Layer.handle [as handle_request] (/Users/teroron/Desktop/PBL/PBL2020/OreSupport/ore-SupportServer/oreServer/node_modules/express/lib/router/layer.js:95:5)
+    at trim_prefix (/Users/teroron/Desktop/PBL/PBL2020/OreSupport/ore-SupportServer/oreServer/node_modules/express/lib/router/index.js:317:13)
+    at /Users/teroron/Desktop/PBL/PBL2020/OreSupport/ore-SupportServer/oreServer/node_modules/express/lib/router/index.js:284:7
+    at Function.process_params (/Users/teroron/Desktop/PBL/PBL2020/OreSupport/ore-SupportServer/oreServer/node_modules/express/lib/router/index.js:335:12)
+    at next (/Users/teroron/Desktop/PBL/PBL2020/OreSupport/ore-SupportServer/oreServer/node_modules/express/lib/router/index.js:275:10)
+    at urlencodedParser (/Users/teroron/Desktop/PBL/PBL2020/OreSupport/ore-SupportServer/oreServer/node_modules/body-parser/lib/types/urlencoded.js:82:7)
+    at Layer.handle [as handle_request] (/Users/teroron/Desktop/PBL/PBL2020/OreSupport/ore-SupportServer/oreServer/node_modules/express/lib/router/layer.js:95:5)
+    at trim_prefix (/Users/teroron/Desktop/PBL/PBL2020/OreSupport/ore-SupportServer/oreServer/node_modules/express/lib/router/index.js:317:13)
+    at /Users/teroron/Desktop/PBL/PBL2020/OreSupport/ore-SupportServer/oreServer/node_modules/express/lib/router/index.js:284:7
+    at Function.process_params (/Users/teroron/Desktop/PBL/PBL2020/OreSupport/ore-SupportServer/oreServer/node_modules/express/lib/router/index.js:335:12)
+    at next (/Users/teroron/Desktop/PBL/PBL2020/OreSupport/ore-SupportServer/oreServer/node_modules/express/lib/router/index.js:275:10)
+    at /Users/teroron/Desktop/PBL/PBL2020/OreSupport/ore-SupportServer/oreServer/node_modules/log4js/lib/connect-logger.js:300:12
+    at Layer.handle [as handle_request] (/Users/teroron/Desktop/PBL/PBL2020/OreSupport/ore-SupportServer/oreServer/node_modules/express/lib/router/layer.js:95:5)
+    at trim_prefix (/Users/teroron/Desktop/PBL/PBL2020/OreSupport/ore-SupportServer/oreServer/node_modules/express/lib/router/index.js:317:13)
+    at /Users/teroron/Desktop/PBL/PBL2020/OreSupport/ore-SupportServer/oreServer/node_modules/express/lib/router/index.js:284:7
+    at Function.process_params (/Users/teroron/Desktop/PBL/PBL2020/OreSupport/ore-SupportServer/oreServer/node_modules/express/lib/router/index.js:335:12)
+    at next (/Users/teroron/Desktop/PBL/PBL2020/OreSupport/ore-SupportServer/oreServer/node_modules/express/lib/router/index.js:275:10)
+    at session (/Users/teroron/Desktop/PBL/PBL2020/OreSupport/ore-SupportServer/oreServer/node_modules/express-session/index.js:475:7)
+    at Layer.handle [as handle_request] (/Users/teroron/Desktop/PBL/PBL2020/OreSupport/ore-SupportServer/oreServer/node_modules/express/lib/router/layer.js:95:5)
+    at trim_prefix (/Users/teroron/Desktop/PBL/PBL2020/OreSupport/ore-SupportServer/oreServer/node_modules/express/lib/router/index.js:317:13)
+    at /Users/teroron/Desktop/PBL/PBL2020/OreSupport/ore-SupportServer/oreServer/node_modules/express/lib/router/index.js:284:7
+    at Function.process_params (/Users/teroron/Desktop/PBL/PBL2020/OreSupport/ore-SupportServer/oreServer/node_modules/express/lib/router/index.js:335:12)
+    at next (/Users/teroron/Desktop/PBL/PBL2020/OreSupport/ore-SupportServer/oreServer/node_modules/express/lib/router/index.js:275:10)
+    at serveStatic (/Users/teroron/Desktop/PBL/PBL2020/OreSupport/ore-SupportServer/oreServer/node_modules/serve-static/index.js:75:16)
+    at Layer.handle [as handle_request] (/Users/teroron/Desktop/PBL/PBL2020/OreSupport/ore-SupportServer/oreServer/node_modules/express/lib/router/layer.js:95:5)
+    at trim_prefix (/Users/teroron/Desktop/PBL/PBL2020/OreSupport/ore-SupportServer/oreServer/node_modules/express/lib/router/index.js:317:13)
+    at /Users/teroron/Desktop/PBL/PBL2020/OreSupport/ore-SupportServer/oreServer/node_modules/express/lib/router/index.js:284:7
+    at Function.process_params (/Users/teroron/Desktop/PBL/PBL2020/OreSupport/ore-SupportServer/oreServer/node_modules/express/lib/router/index.js:335:12)
+    at next (/Users/teroron/Desktop/PBL/PBL2020/OreSupport/ore-SupportServer/oreServer/node_modules/express/lib/router/index.js:275:10)
+    at cookieParser (/Users/teroron/Desktop/PBL/PBL2020/OreSupport/ore-SupportServer/oreServer/node_modules/cookie-parser/index.js:57:14)
+    at Layer.handle [as handle_request] (/Users/teroron/Desktop/PBL/PBL2020/OreSupport/ore-SupportServer/oreServer/node_modules/express/lib/router/layer.js:95:5)
+    at trim_prefix (/Users/teroron/Desktop/PBL/PBL2020/OreSupport/ore-SupportServer/oreServer/node_modules/express/lib/router/index.js:317:13)
+    at /Users/teroron/Desktop/PBL/PBL2020/OreSupport/ore-SupportServer/oreServer/node_modules/express/lib/router/index.js:284:7
+    at Function.process_params (/Users/teroron/Desktop/PBL/PBL2020/OreSupport/ore-SupportServer/oreServer/node_modules/express/lib/router/index.js:335:12)
+    at next (/Users/teroron/Desktop/PBL/PBL2020/OreSupport/ore-SupportServer/oreServer/node_modules/express/lib/router/index.js:275:10)
+    at urlencodedParser (/Users/teroron/Desktop/PBL/PBL2020/OreSupport/ore-SupportServer/oreServer/node_modules/express/node_modules/body-parser/lib/types/urlencoded.js:82:7)
+    at Layer.handle [as handle_request] (/Users/teroron/Desktop/PBL/PBL2020/OreSupport/ore-SupportServer/oreServer/node_modules/express/lib/router/layer.js:95:5)
+    at trim_prefix (/Users/teroron/Desktop/PBL/PBL2020/OreSupport/ore-SupportServer/oreServer/node_modules/express/lib/router/index.js:317:13)
+    at /Users/teroron/Desktop/PBL/PBL2020/OreSupport/ore-SupportServer/oreServer/node_modules/express/lib/router/index.js:284:7
+    at Function.process_params (/Users/teroron/Desktop/PBL/PBL2020/OreSupport/ore-SupportServer/oreServer/node_modules/express/lib/router/index.js:335:12)
+    at next (/Users/teroron/Desktop/PBL/PBL2020/OreSupport/ore-SupportServer/oreServer/node_modules/express/lib/router/index.js:275:10)
+    at /Users/teroron/Desktop/PBL/PBL2020/OreSupport/ore-SupportServer/oreServer/node_modules/express/node_modules/body-parser/lib/read.js:130:5
+    at invokeCallback (/Users/teroron/Desktop/PBL/PBL2020/OreSupport/ore-SupportServer/oreServer/node_modules/express/node_modules/raw-body/index.js:224:16)
+    at done (/Users/teroron/Desktop/PBL/PBL2020/OreSupport/ore-SupportServer/oreServer/node_modules/express/node_modules/raw-body/index.js:213:7)
+    at IncomingMessage.onEnd (/Users/teroron/Desktop/PBL/PBL2020/OreSupport/ore-SupportServer/oreServer/node_modules/express/node_modules/raw-body/index.js:273:7)
+    at IncomingMessage.emit (events.js:323:22)
+    at endReadableNT (_stream_readable.js:1204:12)
+    at processTicksAndRejections (internal/process/task_queues.js:84:21)
+ {
+  message: 'Not Found'
+}
+[2020-11-15T13:57:05.309] [ERROR] app - アクセスエラー ClientError [NotFoundError]: Not Found
+    at /Users/teroron/Desktop/PBL/PBL2020/OreSupport/ore-SupportServer/oreServer/app.js:93:8
+    at Layer.handle [as handle_request] (/Users/teroron/Desktop/PBL/PBL2020/OreSupport/ore-SupportServer/oreServer/node_modules/express/lib/router/layer.js:95:5)
+    at trim_prefix (/Users/teroron/Desktop/PBL/PBL2020/OreSupport/ore-SupportServer/oreServer/node_modules/express/lib/router/index.js:317:13)
+    at /Users/teroron/Desktop/PBL/PBL2020/OreSupport/ore-SupportServer/oreServer/node_modules/express/lib/router/index.js:284:7
+    at Function.process_params (/Users/teroron/Desktop/PBL/PBL2020/OreSupport/ore-SupportServer/oreServer/node_modules/express/lib/router/index.js:335:12)
+    at next (/Users/teroron/Desktop/PBL/PBL2020/OreSupport/ore-SupportServer/oreServer/node_modules/express/lib/router/index.js:275:10)
+    at /Users/teroron/Desktop/PBL/PBL2020/OreSupport/ore-SupportServer/oreServer/node_modules/express/lib/router/index.js:635:15
+    at next (/Users/teroron/Desktop/PBL/PBL2020/OreSupport/ore-SupportServer/oreServer/node_modules/express/lib/router/index.js:260:14)
+    at Function.handle (/Users/teroron/Desktop/PBL/PBL2020/OreSupport/ore-SupportServer/oreServer/node_modules/express/lib/router/index.js:174:3)
+    at router (/Users/teroron/Desktop/PBL/PBL2020/OreSupport/ore-SupportServer/oreServer/node_modules/express/lib/router/index.js:47:12)
+    at Layer.handle [as handle_request] (/Users/teroron/Desktop/PBL/PBL2020/OreSupport/ore-SupportServer/oreServer/node_modules/express/lib/router/layer.js:95:5)
+    at trim_prefix (/Users/teroron/Desktop/PBL/PBL2020/OreSupport/ore-SupportServer/oreServer/node_modules/express/lib/router/index.js:317:13)
+    at /Users/teroron/Desktop/PBL/PBL2020/OreSupport/ore-SupportServer/oreServer/node_modules/express/lib/router/index.js:284:7
+    at Function.process_params (/Users/teroron/Desktop/PBL/PBL2020/OreSupport/ore-SupportServer/oreServer/node_modules/express/lib/router/index.js:335:12)
+    at next (/Users/teroron/Desktop/PBL/PBL2020/OreSupport/ore-SupportServer/oreServer/node_modules/express/lib/router/index.js:275:10)
+    at /Users/teroron/Desktop/PBL/PBL2020/OreSupport/ore-SupportServer/oreServer/node_modules/express/lib/router/index.js:635:15
+    at next (/Users/teroron/Desktop/PBL/PBL2020/OreSupport/ore-SupportServer/oreServer/node_modules/express/lib/router/index.js:260:14)
+    at Function.handle (/Users/teroron/Desktop/PBL/PBL2020/OreSupport/ore-SupportServer/oreServer/node_modules/express/lib/router/index.js:174:3)
+    at router (/Users/teroron/Desktop/PBL/PBL2020/OreSupport/ore-SupportServer/oreServer/node_modules/express/lib/router/index.js:47:12)
+    at Layer.handle [as handle_request] (/Users/teroron/Desktop/PBL/PBL2020/OreSupport/ore-SupportServer/oreServer/node_modules/express/lib/router/layer.js:95:5)
+    at trim_prefix (/Users/teroron/Desktop/PBL/PBL2020/OreSupport/ore-SupportServer/oreServer/node_modules/express/lib/router/index.js:317:13)
+    at /Users/teroron/Desktop/PBL/PBL2020/OreSupport/ore-SupportServer/oreServer/node_modules/express/lib/router/index.js:284:7
+    at Function.process_params (/Users/teroron/Desktop/PBL/PBL2020/OreSupport/ore-SupportServer/oreServer/node_modules/express/lib/router/index.js:335:12)
+    at next (/Users/teroron/Desktop/PBL/PBL2020/OreSupport/ore-SupportServer/oreServer/node_modules/express/lib/router/index.js:275:10)
+    at SessionStrategy.strategy.pass (/Users/teroron/Desktop/PBL/PBL2020/OreSupport/ore-SupportServer/oreServer/node_modules/passport/lib/middleware/authenticate.js:343:9)
+    at SessionStrategy.authenticate (/Users/teroron/Desktop/PBL/PBL2020/OreSupport/ore-SupportServer/oreServer/node_modules/passport/lib/strategies/session.js:75:10)
+    at attempt (/Users/teroron/Desktop/PBL/PBL2020/OreSupport/ore-SupportServer/oreServer/node_modules/passport/lib/middleware/authenticate.js:366:16)
+    at authenticate (/Users/teroron/Desktop/PBL/PBL2020/OreSupport/ore-SupportServer/oreServer/node_modules/passport/lib/middleware/authenticate.js:367:7)
+    at Layer.handle [as handle_request] (/Users/teroron/Desktop/PBL/PBL2020/OreSupport/ore-SupportServer/oreServer/node_modules/express/lib/router/layer.js:95:5)
+    at trim_prefix (/Users/teroron/Desktop/PBL/PBL2020/OreSupport/ore-SupportServer/oreServer/node_modules/express/lib/router/index.js:317:13)
+    at /Users/teroron/Desktop/PBL/PBL2020/OreSupport/ore-SupportServer/oreServer/node_modules/express/lib/router/index.js:284:7
+    at Function.process_params (/Users/teroron/Desktop/PBL/PBL2020/OreSupport/ore-SupportServer/oreServer/node_modules/express/lib/router/index.js:335:12)
+    at next (/Users/teroron/Desktop/PBL/PBL2020/OreSupport/ore-SupportServer/oreServer/node_modules/express/lib/router/index.js:275:10)
+    at initialize (/Users/teroron/Desktop/PBL/PBL2020/OreSupport/ore-SupportServer/oreServer/node_modules/passport/lib/middleware/initialize.js:53:5)
+    at Layer.handle [as handle_request] (/Users/teroron/Desktop/PBL/PBL2020/OreSupport/ore-SupportServer/oreServer/node_modules/express/lib/router/layer.js:95:5)
+    at trim_prefix (/Users/teroron/Desktop/PBL/PBL2020/OreSupport/ore-SupportServer/oreServer/node_modules/express/lib/router/index.js:317:13)
+    at /Users/teroron/Desktop/PBL/PBL2020/OreSupport/ore-SupportServer/oreServer/node_modules/express/lib/router/index.js:284:7
+    at Function.process_params (/Users/teroron/Desktop/PBL/PBL2020/OreSupport/ore-SupportServer/oreServer/node_modules/express/lib/router/index.js:335:12)
+    at next (/Users/teroron/Desktop/PBL/PBL2020/OreSupport/ore-SupportServer/oreServer/node_modules/express/lib/router/index.js:275:10)
+    at urlencodedParser (/Users/teroron/Desktop/PBL/PBL2020/OreSupport/ore-SupportServer/oreServer/node_modules/body-parser/lib/types/urlencoded.js:82:7)
+    at Layer.handle [as handle_request] (/Users/teroron/Desktop/PBL/PBL2020/OreSupport/ore-SupportServer/oreServer/node_modules/express/lib/router/layer.js:95:5)
+    at trim_prefix (/Users/teroron/Desktop/PBL/PBL2020/OreSupport/ore-SupportServer/oreServer/node_modules/express/lib/router/index.js:317:13)
+    at /Users/teroron/Desktop/PBL/PBL2020/OreSupport/ore-SupportServer/oreServer/node_modules/express/lib/router/index.js:284:7
+    at Function.process_params (/Users/teroron/Desktop/PBL/PBL2020/OreSupport/ore-SupportServer/oreServer/node_modules/express/lib/router/index.js:335:12)
+    at next (/Users/teroron/Desktop/PBL/PBL2020/OreSupport/ore-SupportServer/oreServer/node_modules/express/lib/router/index.js:275:10)
+    at /Users/teroron/Desktop/PBL/PBL2020/OreSupport/ore-SupportServer/oreServer/node_modules/log4js/lib/connect-logger.js:300:12
+    at Layer.handle [as handle_request] (/Users/teroron/Desktop/PBL/PBL2020/OreSupport/ore-SupportServer/oreServer/node_modules/express/lib/router/layer.js:95:5)
+    at trim_prefix (/Users/teroron/Desktop/PBL/PBL2020/OreSupport/ore-SupportServer/oreServer/node_modules/express/lib/router/index.js:317:13)
+    at /Users/teroron/Desktop/PBL/PBL2020/OreSupport/ore-SupportServer/oreServer/node_modules/express/lib/router/index.js:284:7
+    at Function.process_params (/Users/teroron/Desktop/PBL/PBL2020/OreSupport/ore-SupportServer/oreServer/node_modules/express/lib/router/index.js:335:12)
+    at next (/Users/teroron/Desktop/PBL/PBL2020/OreSupport/ore-SupportServer/oreServer/node_modules/express/lib/router/index.js:275:10)
+    at session (/Users/teroron/Desktop/PBL/PBL2020/OreSupport/ore-SupportServer/oreServer/node_modules/express-session/index.js:475:7)
+    at Layer.handle [as handle_request] (/Users/teroron/Desktop/PBL/PBL2020/OreSupport/ore-SupportServer/oreServer/node_modules/express/lib/router/layer.js:95:5)
+    at trim_prefix (/Users/teroron/Desktop/PBL/PBL2020/OreSupport/ore-SupportServer/oreServer/node_modules/express/lib/router/index.js:317:13)
+    at /Users/teroron/Desktop/PBL/PBL2020/OreSupport/ore-SupportServer/oreServer/node_modules/express/lib/router/index.js:284:7
+    at Function.process_params (/Users/teroron/Desktop/PBL/PBL2020/OreSupport/ore-SupportServer/oreServer/node_modules/express/lib/router/index.js:335:12)
+    at next (/Users/teroron/Desktop/PBL/PBL2020/OreSupport/ore-SupportServer/oreServer/node_modules/express/lib/router/index.js:275:10)
+    at serveStatic (/Users/teroron/Desktop/PBL/PBL2020/OreSupport/ore-SupportServer/oreServer/node_modules/serve-static/index.js:75:16)
+    at Layer.handle [as handle_request] (/Users/teroron/Desktop/PBL/PBL2020/OreSupport/ore-SupportServer/oreServer/node_modules/express/lib/router/layer.js:95:5)
+    at trim_prefix (/Users/teroron/Desktop/PBL/PBL2020/OreSupport/ore-SupportServer/oreServer/node_modules/express/lib/router/index.js:317:13)
+    at /Users/teroron/Desktop/PBL/PBL2020/OreSupport/ore-SupportServer/oreServer/node_modules/express/lib/router/index.js:284:7
+    at Function.process_params (/Users/teroron/Desktop/PBL/PBL2020/OreSupport/ore-SupportServer/oreServer/node_modules/express/lib/router/index.js:335:12)
+    at next (/Users/teroron/Desktop/PBL/PBL2020/OreSupport/ore-SupportServer/oreServer/node_modules/express/lib/router/index.js:275:10)
+    at cookieParser (/Users/teroron/Desktop/PBL/PBL2020/OreSupport/ore-SupportServer/oreServer/node_modules/cookie-parser/index.js:57:14)
+    at Layer.handle [as handle_request] (/Users/teroron/Desktop/PBL/PBL2020/OreSupport/ore-SupportServer/oreServer/node_modules/express/lib/router/layer.js:95:5)
+    at trim_prefix (/Users/teroron/Desktop/PBL/PBL2020/OreSupport/ore-SupportServer/oreServer/node_modules/express/lib/router/index.js:317:13)
+    at /Users/teroron/Desktop/PBL/PBL2020/OreSupport/ore-SupportServer/oreServer/node_modules/express/lib/router/index.js:284:7
+    at Function.process_params (/Users/teroron/Desktop/PBL/PBL2020/OreSupport/ore-SupportServer/oreServer/node_modules/express/lib/router/index.js:335:12)
+    at next (/Users/teroron/Desktop/PBL/PBL2020/OreSupport/ore-SupportServer/oreServer/node_modules/express/lib/router/index.js:275:10)
+    at urlencodedParser (/Users/teroron/Desktop/PBL/PBL2020/OreSupport/ore-SupportServer/oreServer/node_modules/express/node_modules/body-parser/lib/types/urlencoded.js:82:7)
+    at Layer.handle [as handle_request] (/Users/teroron/Desktop/PBL/PBL2020/OreSupport/ore-SupportServer/oreServer/node_modules/express/lib/router/layer.js:95:5)
+    at trim_prefix (/Users/teroron/Desktop/PBL/PBL2020/OreSupport/ore-SupportServer/oreServer/node_modules/express/lib/router/index.js:317:13)
+    at /Users/teroron/Desktop/PBL/PBL2020/OreSupport/ore-SupportServer/oreServer/node_modules/express/lib/router/index.js:284:7
+    at Function.process_params (/Users/teroron/Desktop/PBL/PBL2020/OreSupport/ore-SupportServer/oreServer/node_modules/express/lib/router/index.js:335:12)
+    at next (/Users/teroron/Desktop/PBL/PBL2020/OreSupport/ore-SupportServer/oreServer/node_modules/express/lib/router/index.js:275:10)
+    at /Users/teroron/Desktop/PBL/PBL2020/OreSupport/ore-SupportServer/oreServer/node_modules/express/node_modules/body-parser/lib/read.js:130:5
+    at invokeCallback (/Users/teroron/Desktop/PBL/PBL2020/OreSupport/ore-SupportServer/oreServer/node_modules/express/node_modules/raw-body/index.js:224:16)
+    at done (/Users/teroron/Desktop/PBL/PBL2020/OreSupport/ore-SupportServer/oreServer/node_modules/express/node_modules/raw-body/index.js:213:7)
+    at IncomingMessage.onEnd (/Users/teroron/Desktop/PBL/PBL2020/OreSupport/ore-SupportServer/oreServer/node_modules/express/node_modules/raw-body/index.js:273:7)
+    at IncomingMessage.emit (events.js:323:22)
+    at endReadableNT (_stream_readable.js:1204:12)
+    at processTicksAndRejections (internal/process/task_queues.js:84:21)
+ {
+  message: 'Not Found'
+}
+[2020-11-15T13:59:25.129] [INFO] startup - Listening on port 3000
