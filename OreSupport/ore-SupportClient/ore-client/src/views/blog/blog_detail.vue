@@ -15,8 +15,8 @@
                         {{ blogDetail.title }}
                       </h1>
                       <div style="text-align: right;">
-                        <button @click.prevent="blogEdit(id)">編集する</button>
-                        <button @click.prevent="blogDelete(id)">
+                        <button @click.prevent="blogEdit()">編集する</button>
+                        <button @click.prevent="blogDelete()">
                           削除する
                         </button>
                         <button v-if="likedFlg" @click="destroyLike($event)">
@@ -33,7 +33,7 @@
                         <!-- <img src="../../assets/img/tmp/20200920park.png" alt="blog image" /> -->
                         <img
                           :src="blogDetail.blogImg"
-
+                          @error="defaultBlogImg()"
                           alt="blog image"
                         />
                       </div>
@@ -235,9 +235,8 @@ export default {
         comment: [],
         userProfile: [],
         blogImg: "" || img,
-        defaultsrc: img,
-
       },
+      defaultsrc: img,
       registForm: {
         comment: "",
         commentName: "",
@@ -250,6 +249,7 @@ export default {
   mounted() {
     this.fetchBlogInfo();
     this.getLikes();
+    // this.defaultBlogImg();
   },
   methods: {
     defaultBlogImg: function() {
@@ -276,7 +276,6 @@ export default {
             that.blogDetail.comment = comment;
             that.blogDetail.userProfile = userProfile;
             that.blogDetail.blogImg = blogImg;
-
           });
         })
         .catch((error) => {

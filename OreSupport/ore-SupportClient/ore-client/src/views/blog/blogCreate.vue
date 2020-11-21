@@ -202,11 +202,13 @@ export default {
       reader.readAsDataURL(file);
       reader.onload = (e) => {
         this.blogImg = e.target.result;
+        // const blob = new Blob([new Uint8Array(e.target.result)], {type: file.type });
       };
     },
 
     createBlog: function(e) {
       // 二重コミット防止のため、ボタンを非活性
+
       e.target.disabled = true;
 
       let that = this;
@@ -215,13 +217,16 @@ export default {
       //Content-Type:form/multipart で送信されます
       let data = new FormData();
       // data.append("key", value, parameter);
-      data.append(
-        "imgBlog",
-        this.registForm.blogimage,
-        this.registForm.filename
-      );
+      if (fl !== undefined) {
+        data.append(
+          "imgBlog",
+          this.registForm.blogimage,
+          this.registForm.filename
+        );
+      }
 
       data.append("registForm", JSON.stringify(this.registForm));
+
       // ユーザ登録処理
       this.$store
         .dispatch("blog/createBlog", data)
