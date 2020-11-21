@@ -133,7 +133,8 @@ const actions = {
 
                         context.commit("set_userProfile",data.userProfile)
 
-                        context.commit("set_blogImg",data.blogImg)
+                        context.commit("set_blogImg",data.imgUrl)
+
                         resolve(data);
                     }).catch(error => {
                         reject(error);
@@ -164,8 +165,6 @@ const actions = {
 
         blogUpdate(context, blogInfo) {
             return new Promise((resolve, reject) => {
-                // var tile = blogInfo.title;
-                // var content = blogInfo.content;
                 blogUpdate(blogInfo)
                     .then(res => {
                         const data = res.data;
