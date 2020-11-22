@@ -54,7 +54,7 @@
               <div class="col-sm-12 col-lg-9">
                 <div class="content">
                   <div class="page-title">
-                    <h1>{{ list.tableData.length }}件表示</h1>
+                    <h1>{{ list.tableData.length }}件ヒットしました</h1>
                   </div>
                   <div class="posts">
                     <div class="post" v-for="item in list.displayLists" :key="item.id">
@@ -291,11 +291,6 @@ export default {
               0,
               that.list.pageSize
             );
-          })
-          Message({
-            message: that.list.tableData.length + '件ヒットしました',
-            type: "success",
-            duration: 5 * 1000,
           })
         })
         //失敗の場合
