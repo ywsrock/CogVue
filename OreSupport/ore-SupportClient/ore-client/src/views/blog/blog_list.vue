@@ -35,11 +35,8 @@
               <div class="orig-row">
                 <div class="col-sm-8">
                   <div class="filter-actions">
-                    <a href="#">
+                    <a href @click.prevent="reset()">
                       <i class="fa fa-close"></i>検索条件リセット
-                    </a>
-                    <a href="#">
-                      <i class="fa fa-save"></i> 検索条件の保存
                     </a>
                   </div>
                 </div>
@@ -183,7 +180,12 @@ export default {
     };
   },
   mounted() {
-    var that = this;
+    this.fetchBlogInfo();
+    
+  },
+  methods: {
+    fetchBlogInfo(){
+      var that = this;
     //
     this.$store
       .dispatch("blog/getBlogList", this.$route.query.userid)
@@ -203,8 +205,8 @@ export default {
       .catch(err => {
         console.log(err);
       });
-  },
-  methods: {
+    },
+
     pageChange: function(pageNumber) {
       this.list.displayLists = this.list.tableData.slice(
         this.list.pageSize * (pageNumber - 1),
@@ -257,6 +259,11 @@ export default {
           console.log("err=====");
         });
     },
+    reset(){
+    this.searchFormSelectbox = "";
+    this.fetchBlogInfo();
+    this.emitSelectSex() ;
+  },
     searchBlog() {
       // デバッグ用。パラメータが取得できているか確認。不要になったら消してOK
       alert(this.searchBlogKey.sex);
@@ -302,7 +309,7 @@ export default {
     emitSelectFreeWord(freeWord) {
       this.searchBlogKey.freeWord = freeWord;
     }
-  }
+  },
 };
 </script>
 

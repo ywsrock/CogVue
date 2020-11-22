@@ -16,7 +16,7 @@
         <span class="tag-border">東京都</span>
         <span class="tag-border">教師</span>
         <span class="tag-border">投稿日</span>
-        <span style="padding-left: 5px;">2020年10月17日 13:00</span>
+        <span style="padding-left: 5px;">{{ item.timeStamp }}</span>
       </p>
       <p style="margin-bottom: 5px">
         <span class="tag-border">行動タグ：焼肉、散歩、ダイエット</span>
@@ -33,6 +33,13 @@ export default {
     item: {
       type: Object,
       required: true
+    },
+    data() {
+    return {
+      likes: [],
+      likedFlg: false,
+    }
+
     }
   },
   filters: {
@@ -45,7 +52,7 @@ export default {
   methods: {
     getBlogDetail(id) {
       this.$router.push("/blog/blogDetail?id=" + id);
-    }
+    },
   }
 };
 </script>

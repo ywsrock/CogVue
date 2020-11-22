@@ -2,6 +2,7 @@ const db = require("../../common/db.common");
 const { Blog } = require("../../model/blog.model");
 const { User } = require("../../model/user.model");
 const { Comment } = require("../../model/comment.model");
+const { UserProfile } = require("../../model/userprofile.model")
 const { sequelize } = require("../../common/db.common");
 const Sequelize = require("sequelize");
 const { Op } = require("sequelize");
@@ -23,6 +24,8 @@ const createBlog = async (queryInfo) => {
       Content: queryInfo.Content,
       // ブログ画像
       BlogImage: queryInfo.BlogImage,
+      // 更新日
+      Timestamp: Sequelize.fn("NOW")
     });
     // トランザクションコンミット
     await t.commit();
@@ -49,10 +52,28 @@ const getBlogList = async (queryInfo) => {
         name: "UserID",
       },
     });
+    UserProfile.belongsTo(User,{
+      foreignKey: {
+        name: "UserID",
+      },
+      
+    });
+    User.belongsTo(UserProfile, {
+      foreignKey: {
+        name: "UserID",
+      },
+      targetKey: "UserID",
+    });
     const result = await Blog.findAll({
       order: [["id", "DESC"]],
-      include: User,
-      attributes: { exclude: ["Password"] },
+      include: [
+        {model:User,
+        include:
+        [{
+          model:UserProfile,
+          required: false,
+        }
+      ]}]
     });
     return result;
   } catch (error) {
@@ -97,6 +118,19 @@ const getBlogDetail = async (queryInfo) => {
       },
       targetKey: "id",
     });
+    User.belongsTo(Comment,{
+      foreignKey: {
+        name: "UserID",
+      },
+      
+    });
+    Comment.belongsTo(User, {
+      foreignKey: {
+        name: "UserID",
+      },
+      targetKey: "UserID",
+    });
+
     const result = await Blog.findAll({
       where: {
         [Op.and]: [
@@ -109,6 +143,13 @@ const getBlogDetail = async (queryInfo) => {
         {
           model: Comment,
           required: false,
+          include:[
+            {
+              model:User,
+              required: false,
+            }
+            
+          ]
         },
       ],
 
@@ -189,6 +230,8 @@ const postComment = async (queryInfo) => {
       Comment1: queryInfo.comment,
       // Content
       commentName: queryInfo.commentName,
+      // 更新日
+      Timestamp: Sequelize.fn("NOW")
     });
     // トランザクションコンミット
     await t.commit();
