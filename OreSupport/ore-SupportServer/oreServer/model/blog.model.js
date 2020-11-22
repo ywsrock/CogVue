@@ -33,7 +33,12 @@ const Blog = sequelize.define('Blog', {
     BlogImage: {
         type: Sequelize.STRING,
         allowNull: true
-      },
+    },
+    Timestamp: {
+        type: Sequelize.STRING,
+        allowNull: true,
+        comment: "更新日付"
+    },
 
 }, {
     tableName: "Tb_Blog", //　Maping　テーブル名指定

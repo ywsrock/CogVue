@@ -40,6 +40,8 @@ router.get("/bloglist", async function (req, res, next) {
         title: blog.Title,
         content: blog.Content,
         userName: blog.User.UserName || "",
+        timeStamp:blog.Timestamp,
+        userProfile:blog.User
       });
     });
 
@@ -194,6 +196,9 @@ router.get("/blogdetail", async function (req, res, next) {
     val: userId,
   });
 
+
+
+
   if (typeof blogDetail.errors != "undefined") {
     // エラー結果
     resObj = {
@@ -229,6 +234,7 @@ router.get("/blogdetail", async function (req, res, next) {
         comment: blogDetail[0].Comments || "",
         userProfile: userProfile,
         imgUrl: imgUrl,
+        timeStamp:blogDetail[0].Timestamp
       },
     };
   }
@@ -380,6 +386,7 @@ router.post("/postComment", [checkuser.verifyUser], async function (
   var comment = req.body.comment;
 
   var commentName = req.body.commentName;
+
 
   // titleとcontent
   if ("" != comment.trim() && "" != commentName.trim()) {

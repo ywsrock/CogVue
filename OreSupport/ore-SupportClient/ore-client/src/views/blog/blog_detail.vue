@@ -39,7 +39,7 @@
                       </div>
                       <div class="post-meta clearfix">
                         <p style="margin-bottom: 5px">
-                          <span class="tag-border">1@1.comさん</span>
+                          <span class="tag-border">{{ blogDetail.userProfile.UserName}}</span>
                           <span class="tag-border">男性</span>
                           <span class="tag-border">50代</span>
                           <span class="tag-border">東京都</span>
@@ -53,7 +53,7 @@
                             >{{ blogDetail.comment.length }}</span
                           >
                           <span style="padding-left: 5px;"
-                            >投稿日 2020年10月17日 13:00</span
+                            >投稿日 {{ blogDetail.timeStamp}}</span
                           >
                         </p>
                         <p style="margin-bottom: 0px">
@@ -81,12 +81,12 @@
                             <!-- /.comment-image -->
                             <div class="comment-inner">
                               <div class="comment-header">
-                                <h2>Nancy Collins</h2>
+                                <h2>{{ item.User.UserName }}</h2>
                                 <span class="separator">&#8226;</span>
-                                <span class="comment-date">08/24/2015</span>
+                                <span class="comment-date">{{ item.Timestamp }}</span>
                                 <div class="comment-reply">
                                   <a href="#">
-                                    <i class="fa fa-reply"></i> Reply
+                                    <!-- <i class="fa fa-reply"></i> Reply -->
                                   </a>
                                 </div>
                                 <!-- /.comment-reply -->
@@ -235,6 +235,7 @@ export default {
         comment: [],
         userProfile: [],
         blogImg: "" || img,
+
       },
       defaultsrc: img,
       registForm: {
@@ -276,6 +277,7 @@ export default {
             that.blogDetail.comment = comment;
             that.blogDetail.userProfile = userProfile;
             that.blogDetail.blogImg = blogImg;
+            that.blogDetail.timeStamp = res.timeStamp;
           });
         })
         .catch((error) => {
@@ -338,6 +340,7 @@ export default {
             duration: 5 * 1000,
           }),
             // detail画面に遷移
+            this.registForm = ""
             this.fetchBlogInfo();
         })
         .catch((error) => {
