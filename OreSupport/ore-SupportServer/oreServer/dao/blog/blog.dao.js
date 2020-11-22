@@ -4,7 +4,6 @@ const { User } = require("../../model/user.model");
 const { Comment } = require("../../model/comment.model");
 const { UserProfile } = require("../../model/userprofile.model")
 const { sequelize } = require("../../common/db.common");
-const { UserProfile } = require("../../model/userprofile.model")
 const Sequelize = require("sequelize");
 const { Op } = require("sequelize");
 
