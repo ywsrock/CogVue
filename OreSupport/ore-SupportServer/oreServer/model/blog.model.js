@@ -37,9 +37,8 @@ const Blog = sequelize.define('Blog', {
     Timestamp: {
         type: Sequelize.STRING,
         allowNull: true,
-        comment: "更新日付"
+        comment: "投稿日付"
     },
-
 }, {
     tableName: "Tb_Blog", //　Maping　テーブル名指定
     modelName: "Blog", // モデル名指定

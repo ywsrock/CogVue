@@ -9,6 +9,7 @@ const multer = require("multer");
 var log = require("log4js").getLogger("users");
 const fs = require("fs");
 const appRoot = require("app-root-path");
+const Sequelize = require("sequelize");
 
 //ブログリスト取得
 router.get("/bloglist", async function (req, res, next) {
@@ -142,6 +143,7 @@ router.post("/create", [checkuser.verifyUser], async function (req, res, next) {
         // filename取得、本体は/public/blogImge/の中
         // undefined以外の場合は値を取得し、undefinedの場合は空
         BlogImage: req.file !== undefined ? req.file.filename : "",
+        Timestamp: Sequelize.fn("NOW")
       };
 
       // DBにユーザ登録を呼び出す
@@ -427,15 +429,22 @@ router.post("/postComment", [checkuser.verifyUser], async function (
   }
 });
 
-router.get("/searchBlog", async function (req, res, next) {
+router.post("/searchBlog", async function (req, res, next) {
   // 出力結果
   let resObj = {};
+  const searchObj = {
+    sex: req.body.sex,
+    freeWord: req.body.freeWord,
+    from: req.body.from,
+    to: req.body.to,
+    pref: req.body.pref
+  }
+
   // ユーザID(ベリファイチェックから)
   let userID = req.userID;
 
-  //ブログリスと取得
-  //var blogList = await blogmodel.getBlogList({ key: "UserID", val: userID })
-  var blogList = await blogmodel.searchBlog();
+  //ブログ検索
+  var blogList = await blogmodel.searchBlog(searchObj);
 
   if (typeof blogList.errors != "undefined") {
     // エラー結果
@@ -445,10 +454,6 @@ router.get("/searchBlog", async function (req, res, next) {
     };
     return res.status(200).send(resObj);
   } else {
-    //DBの絡むと大文字小文字も併せないといけない
-    // var title = blog.Title;
-    // var content = blog.Content
-
     contentArray = [];
     blogList.forEach((blog) => {
       contentArray.push({

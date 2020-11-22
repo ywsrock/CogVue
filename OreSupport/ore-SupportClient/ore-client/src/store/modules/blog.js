@@ -190,9 +190,9 @@ const actions = {
         },
 
 
-        searchBlog(context, blogInfo) {
+        searchBlog(context, searchObj) {
             return new Promise((resolve, reject) => {
-                searchBlog()
+                searchBlog(searchObj)
                     .then(res => {
                         const data = res.data;
                         // const content = data.content;

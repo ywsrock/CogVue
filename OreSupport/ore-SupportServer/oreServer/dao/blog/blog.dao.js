@@ -4,6 +4,7 @@ const { User } = require("../../model/user.model");
 const { Comment } = require("../../model/comment.model");
 const { UserProfile } = require("../../model/userprofile.model")
 const { sequelize } = require("../../common/db.common");
+const { UserProfile } = require("../../model/userprofile.model")
 const Sequelize = require("sequelize");
 const { Op } = require("sequelize");
 
@@ -24,8 +25,8 @@ const createBlog = async (queryInfo) => {
       Content: queryInfo.Content,
       // ブログ画像
       BlogImage: queryInfo.BlogImage,
-      // 更新日
-      Timestamp: Sequelize.fn("NOW")
+      // 投稿日
+      Timestamp: queryInfo.Timestamp
     });
     // トランザクションコンミット
     await t.commit();
@@ -246,7 +247,9 @@ const postComment = async (queryInfo) => {
 
 const searchBlog = async (queryInfo) => {
   try {
-    User.hasOne(Blog, {
+
+    // ユーザーとブログ
+    User.hasMany(Blog, {
       foreignKey: {
         name: "UserID",
       },
@@ -258,11 +261,59 @@ const searchBlog = async (queryInfo) => {
         name: "UserID",
       },
     });
-    const result = await Blog.findAll({
-      order: [["id", "DESC"]],
-      include: User,
-      attributes: { exclude: ["Password"] },
+
+    // ユーザーとプロフィール
+    User.hasOne(UserProfile, {
+      foreignKey: {
+        name: "UserID",
+      },
+      onDelete: "SET NULL",
+      onUpdate: "CASCADE",
     });
+    UserProfile.belongsTo(User, {
+      foreignKey: {
+        name: "UserID",
+      },
+    });
+
+    const blogs = await Blog.findAll({
+      include: {
+        model: User,
+        include: {
+          model: UserProfile,
+        }
+      },
+    });
+
+
+    let result = [];
+    let regexp = new RegExp(queryInfo.freeWord, 'i');
+    let from, to;
+    if (queryInfo.from) {
+      from = new Date(queryInfo.from);
+    } else {
+      from = new Date('1900-01-01');
+    }
+
+    if (queryInfo.to) {
+      to = new Date(queryInfo.to);
+    } else {
+      to = new Date('3000-01-01');
+    }
+
+    // 投稿日, フリーワード, 性別, 住所で絞り込み
+    blogs.forEach(blog => {
+      if ((queryInfo.freeWord && (blog.Content.match(regexp) || blog.Title.match(regexp))) || !queryInfo.freeWord) {
+        if (blog.Timestamp >= from && blog.Timestamp <= to) {
+          if (blog.User.UserProfile.Sex == queryInfo.sex || !queryInfo.sex) {
+            if (blog.User.UserProfile.State == queryInfo.pref || !queryInfo.pref) {
+              result.push(blog);
+            }
+          }
+        }
+      }
+    });
+
     return result;
   } catch (error) {
     console.error("情報取得エラー:" + error.stack);

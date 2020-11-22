@@ -54,7 +54,7 @@
               <div class="col-sm-12 col-lg-9">
                 <div class="content">
                   <div class="page-title">
-                    <h1>{{ list.tableData.length }}件がヒットしました</h1>
+                    <h1>{{ list.tableData.length }}件表示</h1>
                   </div>
                   <div class="posts">
                     <div class="post" v-for="item in list.displayLists" :key="item.id">
@@ -143,7 +143,9 @@ export default {
         sex: "",
         pref: "",
         age: "",
-        freeWord: ""
+        freeWord: "",
+        from: "",
+        to: ""
       },
       searchBlogResult: {
         result: []
@@ -265,19 +267,15 @@ export default {
     this.emitSelectSex() ;
   },
     searchBlog() {
-      // デバッグ用。パラメータが取得できているか確認。不要になったら消してOK
-      alert(this.searchBlogKey.sex);
-      alert(this.searchBlogKey.pref);
-      alert(this.searchBlogKey.from);
-      alert(this.searchBlogKey.to);
-      alert(this.searchBlogKey.age);
-      alert(this.searchBlogKey.freeWord);
-
       //apiからサーバーに命令をだす。(store action)
       var that = this;
 
       const params = new URLSearchParams();
       params.append("sex", this.searchBlogKey.sex);
+      params.append("freeWord", this.searchBlogKey.freeWord);
+      params.append("from", this.searchBlogKey.from);
+      params.append("to", this.searchBlogKey.to);
+      params.append("pref", this.searchBlogKey.pref);
 
       this.$store
         .dispatch("blog/searchBlog", params)
@@ -286,8 +284,19 @@ export default {
           this.$nextTick().then(function() {
             const blogInfo = that.$store.getters.get_content;
             that.list.tableData = blogInfo;
-            // let userid = res.userID;
-          });
+            that.list.length = Math.ceil(
+              that.list.tableData.length / that.list.pageSize
+            );
+            that.list.displayLists = that.list.tableData.slice(
+              0,
+              that.list.pageSize
+            );
+          })
+          Message({
+            message: that.list.tableData.length + '件ヒットしました',
+            type: "success",
+            duration: 5 * 1000,
+          })
         })
         //失敗の場合
         .catch();
