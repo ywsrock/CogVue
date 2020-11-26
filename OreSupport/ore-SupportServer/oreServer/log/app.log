@@ -182,3 +182,40 @@
 [2020-11-14T22:21:25.972] [INFO] userDao - END getUserProfileByUserID
 [2020-11-14T22:21:25.972] [INFO] users - profileInfo success
 [2020-11-14T22:21:28.455] [INFO] users - /queryAction 49
+[2020-11-20T20:01:46.032] [INFO] users - ユーザログ UserName:1@1.com
+[2020-11-20T20:01:46.032] [INFO] userDao - START getUserInfoByUserName: {"username":"1@1.com"}
+[2020-11-20T20:01:46.084] [INFO] userDao - END getUserInfoByUserName
+[2020-11-20T20:01:46.148] [INFO] users - login success UserID: 49 
+[2020-11-20T20:01:46.158] [INFO] users - profileInfo userID: 49 
+[2020-11-20T20:01:46.159] [INFO] userDao - START getUserProfileByUserID : {"key":"UserID","val":49}
+[2020-11-20T20:01:46.170] [INFO] userDao - END getUserProfileByUserID
+[2020-11-20T20:01:46.171] [INFO] users - profileInfo success
+[2020-11-20T20:01:48.600] [INFO] users - profileInfo userID: 49 
+[2020-11-20T20:01:48.601] [INFO] userDao - START getUserProfileByUserID : {"key":"UserID","val":49}
+[2020-11-20T20:01:48.604] [INFO] userDao - END getUserProfileByUserID
+[2020-11-20T20:01:48.604] [INFO] users - profileInfo success
+[2020-11-20T20:01:54.391] [INFO] users - logout
+[2020-11-21T13:02:52.696] [INFO] startup - Listening on port 3000
+[2020-11-21T13:04:11.419] [INFO] users - ユーザ対象 UserName:ywsrock
+[2020-11-21T13:17:59.614] [INFO] users - ユーザ対象 UserName:ywsrock
+[2020-11-21T19:15:05.841] [INFO] users - ユーザログ UserName:1@1.com
+[2020-11-21T19:15:05.841] [INFO] userDao - START getUserInfoByUserName: {"username":"1@1.com"}
+[2020-11-21T19:15:05.847] [INFO] userDao - END getUserInfoByUserName
+[2020-11-21T19:15:05.934] [INFO] users - login success UserID: 49 
+[2020-11-21T19:15:05.945] [INFO] users - profileInfo userID: 49 
+[2020-11-21T19:15:05.946] [INFO] userDao - START getUserProfileByUserID : {"key":"UserID","val":49}
+[2020-11-21T19:15:05.953] [INFO] userDao - END getUserProfileByUserID
+[2020-11-21T19:15:05.953] [INFO] users - profileInfo success
+[2020-11-21T19:15:08.206] [INFO] users - profileInfo userID: 49 
+[2020-11-21T19:15:08.206] [INFO] userDao - START getUserProfileByUserID : {"key":"UserID","val":49}
+[2020-11-21T19:15:08.212] [INFO] userDao - END getUserProfileByUserID
+[2020-11-21T19:15:08.212] [INFO] users - profileInfo success
+[2020-11-21T19:15:09.491] [INFO] users - /queryAction 49
+[2020-11-21T21:41:51.927] [INFO] users - profileInfo userID: 49 
+[2020-11-21T21:41:51.927] [INFO] userDao - START getUserProfileByUserID : {"key":"UserID","val":49}
+[2020-11-21T21:41:51.935] [INFO] userDao - END getUserProfileByUserID
+[2020-11-21T21:41:51.936] [INFO] users - profileInfo success
+[2020-11-21T21:41:52.035] [INFO] users - profileInfo userID: 49 
+[2020-11-21T21:41:52.035] [INFO] userDao - START getUserProfileByUserID : {"key":"UserID","val":49}
+[2020-11-21T21:41:52.040] [INFO] userDao - END getUserProfileByUserID
+[2020-11-21T21:41:52.040] [INFO] users - profileInfo success

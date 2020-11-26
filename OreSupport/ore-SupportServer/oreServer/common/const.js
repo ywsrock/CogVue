@@ -19,6 +19,11 @@ const STATUS_MESSAGE = {
 
 // ハッシュ SALT
 const BCRYPT_SALT = 10
+//暗号設定情報
+const CIPHERSETTING = {
+    ALGORITHM: "aes-128-cbc",
+    PASSWORD: "P@ssw0rd"
+}
 
 // プロフィール情報
 const PROFILE_INFO = {
@@ -36,5 +41,6 @@ const PROFILE_INFO = {
 module.exports = {
     STATUS_MESSAGE,
     BCRYPT_SALT,
-    PROFILE_INFO
+    PROFILE_INFO,
+    CIPHERSETTING
 }

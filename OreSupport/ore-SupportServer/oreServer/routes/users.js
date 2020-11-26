@@ -7,12 +7,17 @@ const PROFILE_INFO = require("../common/const").PROFILE_INFO;
 const bcryptTools = require("../common/bcrypt_tools");
 const config = require("../config/secret.config");
 const jwtToken = require("jsonwebtoken");
-const User = require("../model/user.model");
+const { User } = require("../model/user.model");
+const { UserProfile } = require("../model/userprofile.model")
 const Image_storage = require("../common/fileup");
 const multer = require("multer");
 const fs = require("fs");
 const appRoot = require("app-root-path");
+const { createSMTPTTransport, sendMail } = require("../common/nodeMailer")
 var log = require("log4js").getLogger("users");
+var dateFormat = require('dateformat');
+const { Op } = require('sequelize');
+
 
 //thirdParytyログインの場合
 async function thirdParyty(req, res, next) {
@@ -152,6 +157,102 @@ router.post("/login", async function (req, res, next) {
   }
 });
 
+/* ユーザパスワードリセット */
+router.post("/restPassword", async function (req, res, next) {
+  //ユーザパスワード変更
+  log.info("ユーザ対象 UserName:" + req.body.username);
+
+  //ユーザ名
+  let userName = req.body.username
+  //ユーザメール
+  let email = req.body.email
+  //年月日
+  let birthday = req.body.birthday
+  if (undefined !== birthday) {
+    birthday = dateFormat(new Date(birthday), "yyyy-mm-dd")
+  } else {
+    birthday = ""
+  }
+
+  // ユーザ有効性チェック
+  User.hasOne(UserProfile, { as: 'userprofile', foreignKey: 'UserID' })
+  //指定情報存在するか
+  let { count, rows } = await User.findAndCountAll({
+    include: {
+      model: UserProfile,
+      as: 'userprofile'
+    },
+    where: {
+      '$userprofile.birthday$': { [Op.eq]: birthday },
+      Email: email
+    }
+  })
+
+  let restUrl = ""
+  //送信先
+  let mailList = []
+  //送信MSG本体
+  let msg = {
+    from: '<info@cognisolution.com>', // sender address
+    subject: "テストメール", // Subject line
+    // text: "ユーザパスワード変更URL : ", // plain text body
+    html: `パスワードの再設定
+`, // html body
+  }
+
+  //存在の場合
+  if (count > 0) {
+    //ユーザID取得
+    let userID = rows[0].UserID
+    //一時リンク作成
+    let currentTime = dateFormat(new Date(), "yyyy-mm-dd HH:MM:ss")
+    // ポートの番号取得
+    let port = req.app.settings.port;
+    // ホスト取得
+    let respath =
+      req.protocol +
+      "://" +
+      req.host +
+      (port == 80 || port == 443 ? "" : ":" + port);
+    //リセットURL
+    restUrl = `${respath}?pwdRestT=${currentTime}&userID=${userID}`
+
+    msg.text = restUrl
+    msg.html = `<b>${restUrl}</b>`
+
+
+    //パスワードリセットテーブルに更新
+    //メール送信のトランスポート取得
+    let trans = createSMTPTTransport()
+    mailList.push("a1906wy@aiit.ac.jp")
+
+    //メール配信
+    let errList = sendMail(trans, msg, mailList)
+    //送信エラー
+    errList.forEach(err => {
+      console.log(err)
+      // 送信失敗の場合
+      return res.status(200).send({
+        token: null,
+        message: STATUS_MESSAGE.LOGIN_ERROR_401,
+      });
+    })
+
+  } else {
+    return res.status(200).send({
+      token: null,
+      message: STATUS_MESSAGE.LOGIN_ERROR_401,
+    });
+  }
+
+  //送信成功の場合
+  return res.status(200).send({
+    code: STATUS_MESSAGE.CODE_SUCCESS,
+    data: {
+      message: "mail success",
+    },
+  });
+})
 // ユーザ登録
 router.post("/singUp", async function (req, res, next) {
   //ログ出力
