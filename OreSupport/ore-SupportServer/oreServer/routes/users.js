@@ -3,17 +3,18 @@ var router = express.Router();
 var usermodel = require("../dao/user/user.dao");
 var checkuser = require("../common/check.token");
 const STATUS_MESSAGE = require("../common/const").STATUS_MESSAGE;
-const PROFILE_INFO = require("../common/const").PROFILE_INFO;
+const { PROFILE_INFO, MAIL_SETTING } = require("../common/const");
 const bcryptTools = require("../common/bcrypt_tools");
 const config = require("../config/secret.config");
 const jwtToken = require("jsonwebtoken");
 const { User } = require("../model/user.model");
 const { UserProfile } = require("../model/userprofile.model")
+const { RestInfo } = require("../model/restinfo.model")
 const Image_storage = require("../common/fileup");
 const multer = require("multer");
 const fs = require("fs");
 const appRoot = require("app-root-path");
-const { createSMTPTTransport, sendMail } = require("../common/nodeMailer")
+const { createSMTPTTransport, sendMail, dateDiff } = require("../common/nodeMailer")
 var log = require("log4js").getLogger("users");
 var dateFormat = require('dateformat');
 const { Op } = require('sequelize');
@@ -168,15 +169,16 @@ router.post("/restPassword", async function (req, res, next) {
   let email = req.body.email
   //年月日
   let birthday = req.body.birthday
+  //年月日存在しない場合、空設定
   if (undefined !== birthday) {
     birthday = dateFormat(new Date(birthday), "yyyy-mm-dd")
   } else {
     birthday = ""
   }
 
-  // ユーザ有効性チェック
+  //モデル関連設定 letf join　関連テーブル、別名指定　外部キーUserID
   User.hasOne(UserProfile, { as: 'userprofile', foreignKey: 'UserID' })
-  //指定情報存在するか
+  //指定情報存在かどうか　件数のユーザ情報取得
   let { count, rows } = await User.findAndCountAll({
     include: {
       model: UserProfile,
@@ -187,17 +189,16 @@ router.post("/restPassword", async function (req, res, next) {
       Email: email
     }
   })
-
+  //パスワード設定ＵＲＬ
   let restUrl = ""
-  //送信先
+  //送信先リスト
   let mailList = []
   //送信MSG本体
   let msg = {
-    from: '<info@cognisolution.com>', // sender address
-    subject: "テストメール", // Subject line
-    // text: "ユーザパスワード変更URL : ", // plain text body
-    html: `パスワードの再設定
-`, // html body
+    from: `<${MAIL_SETTING.FROM}>`, // sender address
+    subject: `${MAIL_SETTING.SUBJECT}`, // Subject line
+    text: `${MAIL_SETTING.TEXT}`, // plain text body
+    html: `${MAIL_SETTING.HTML}`, // html body
   }
 
   //存在の場合
@@ -209,23 +210,32 @@ router.post("/restPassword", async function (req, res, next) {
     // ポートの番号取得
     let port = req.app.settings.port;
     // ホスト取得
-    let respath =
-      req.protocol +
-      "://" +
-      req.host +
-      (port == 80 || port == 443 ? "" : ":" + port);
-    //リセットURL
-    restUrl = `${respath}?pwdRestT=${currentTime}&userID=${userID}`
+    let respath = req.protocol + "://" + req.hostname + (port == 80 || port == 443 ? "" : ":" + port);
+    //リンクQueryParam作成
+    let queryParam = {
+      Timestamp: currentTime,
+      UserID: userID,
+      RandomKey: Math.random().toString(36).slice(-8)
+    }
+    let encryptParam = await bcryptTools.CipherStr(JSON.stringify(queryParam))
+    //url作成
+    restUrl = await `${respath}/user/checkPassword?accessKey=${encryptParam}`
+    //リセット情報保存
+    await RestInfo.create({
+      UserID: queryParam.UserID,
+      Timestamp: queryParam.Timestamp,
+      RandomKey: queryParam.RandomKey,
+      URL: restUrl
+    })
+    //メール内容設定
+    msg.text = msg.text.replace("#url#", restUrl)
+    msg.html = `<b>${msg.html.replace("#url#", restUrl)}</b>`
 
-    msg.text = restUrl
-    msg.html = `<b>${restUrl}</b>`
-
-
-    //パスワードリセットテーブルに更新
+    //パスワードリセット
     //メール送信のトランスポート取得
     let trans = createSMTPTTransport()
+    //宛先アドレス設定
     mailList.push("a1906wy@aiit.ac.jp")
-
     //メール配信
     let errList = sendMail(trans, msg, mailList)
     //送信エラー
@@ -253,6 +263,96 @@ router.post("/restPassword", async function (req, res, next) {
     },
   });
 })
+
+//現在の有効チェック
+router.get("/checkPassword", async function (req, res, next) {
+  // //リンクのQueryParamの取得
+  let accessKey = req.query.accessKey;
+  if ("" === accessKey.trim()) {
+    res.sendStatus(404)
+    return
+  }
+  let decryptParam = await bcryptTools.DecipherStr(accessKey)
+  //キー解析
+  let queryParam = await JSON.parse(decryptParam)
+  let { rows, count } = await RestInfo.findAndCountAll({
+    where: {
+      Timestamp: queryParam.Timestamp,
+      UserID: queryParam.UserID,
+      RandomKey: queryParam.RandomKey
+    }
+  })
+  if (count == 0) {
+    //存在しません
+    res.sendStatus(404)
+    return
+  }
+  //有効期間チェック
+  let hoursDiff = await dateDiff(dateFormat(new Date(), "yyyy-mm-dd HH:MM:ss"), rows[0].Timestamp, "hours")
+  //時間超えたら、404
+  if (hoursDiff > MAIL_SETTING.EXPIRATERM) {
+    res.sendStatus(404)
+    return
+  }
+  //変更画面rendering
+  res.render("restpassword/restInfo", { key: accessKey, msg: "" })
+})
+//パスワード設定
+router.post("/setPassword", async function (req, rest, next) {
+  //key情報取得
+  let accessKey = req.body.key
+  if (undefined == accessKey || "" == accessKey.trim()){
+    res.render("restpassword/restInfo", { key: accessKey, msg: "新パスワードチェックしてください。" })
+    return 
+  }
+  let decryptParam = await bcryptTools.DecipherStr(accessKey)
+  //キー解析
+  let queryParam = await JSON.parse(decryptParam)
+  let { rows, count } = await RestInfo.findAndCountAll({
+    where: {
+      Timestamp: queryParam.Timestamp,
+      UserID: queryParam.UserID,
+      RandomKey: queryParam.RandomKey
+    }
+  })
+  if (count == 0) {
+    //存在しません
+    res.sendStatus(404)
+    return
+  }
+  //有効期間チェック
+  let hoursDiff = await dateDiff(dateFormat(new Date(), "yyyy-mm-dd HH:MM:ss"), rows[0].Timestamp, "hours")
+  //時間超えたら、404
+  if (hoursDiff > MAIL_SETTING.EXPIRATERM) {
+    res.sendStatus(404)
+    return
+  }
+  //ユーザＩＤ取得
+  let userID = queryParam.UserID
+  //パスワード
+  let newPassword = req.body.newPassword
+  if ("" == await newPassword.trim() || undefined == newPassword) {
+    //変更画面rendering
+    res.render("restpassword/restInfo", { key: accessKey, msg: "新パスワードチェックしてください。" })
+    return
+  }
+
+  //パスワード更新
+  let results = await User.update({
+    Password: newPassword
+  }, {
+    where: {
+      UserID: userID
+    }
+  })
+
+  if (typeof results.errors != "undefined") {
+    res.render("restpassword/restInfo", { key: accessKey, msg: "パスワード変更失敗。サイト管理者までご連絡ください。" })
+    return
+  }
+  res.status(200).send("パスワード変更しました。再ログインくだい。")
+})
+
 // ユーザ登録
 router.post("/singUp", async function (req, res, next) {
   //ログ出力

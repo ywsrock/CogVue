@@ -37,10 +37,25 @@ const PROFILE_INFO = {
     SNS_INFO: "snsInfo",
 }
 
+//パスワードリセットメール設定
+const MAIL_SETTING = {
+    FROM: 'info@cognisolution.com',
+    SUBJECT: "パスワード設定確認",
+    TEXT: "パスワード再設定:#url#",
+    HTML: "パスワード再設定:#url#",
+    HOST: "mail38.onamae.ne.jp",
+    PORT: 465,
+    SECURE: true, // true for 465, false for other ports
+    USER: 'info@cognisolution.com', // generated ethereal user
+    PASS: 'Benz300SLR)', // generated ethereal password
+    EXPIRATERM: 2    //hours
+}
+
 
 module.exports = {
     STATUS_MESSAGE,
     BCRYPT_SALT,
     PROFILE_INFO,
-    CIPHERSETTING
+    CIPHERSETTING,
+    MAIL_SETTING
 }

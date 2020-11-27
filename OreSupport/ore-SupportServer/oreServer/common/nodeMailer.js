@@ -1,4 +1,8 @@
 const nodemailer = require("nodemailer");
+const {MAIL_SETTING} = require("../common/const");
+const { commit } = require("./db.common");
+const moment = require("moment")
+
 
 
 /*  手順
@@ -7,30 +11,16 @@ const nodemailer = require("nodemailer");
   * ③sendMail　メッセージオブジェクト送信
   *  
   * */
-
-//送信先リスト
-// var mailList = [
-//     "a1906wy@aiit.ac.jp",
-//     "a1933jh@aiit.ac.jp",
-//     "a18z1zw@aiit.ac.jp",
-//     "a1923ht@aiit.ac.jp",
-//     "a1911tk@aiit.ac.jp",
-//     "a1908rk@aiit.ac.jp"
-// ]
-
-
-
-//メールトランスポート
 const createSMTPTTransport = function () {
     let transport = nodemailer.createTransport({
         // 発信ホスト
-        host: "mail38.onamae.ne.jp",
-        port: 465,
-        secure: true, // true for 465, false for other ports
+        host: MAIL_SETTING.HOST,
+        port: MAIL_SETTING.PORT,
+        secure: MAIL_SETTING.SECURE, // true for 465, false for other ports
         // service: 'Gmail',
         auth: {
-            user: 'info@cognisolution.com', // generated ethereal user
-            pass: 'Benz300SLR)', // generated ethereal password
+            user: MAIL_SETTING.USER,
+            pass: MAIL_SETTING.PASS
         },
     });
     return transport
@@ -50,13 +40,21 @@ const sendMail = function (trans, msg, maillist) {
                 errMsg.push(to + "送信失敗")
             }
         })
-        // i += 1;
+        i += 1;
         // if (i === maillist.length) { msg.transport.close() }
     })
     return errMsg
 }
 
+//日付DIFF
+const dateDiff = function(startDate,endDate,measurement){
+    var d1 = moment(startDate,"YYYY-MM-DD hh:mm:ss")
+    var d2 = moment(endDate,"YYYY-MM-DD hh:mm:ss")
+    return d1.diff(d2,measurement)
+}
+
 module.exports = {
     createSMTPTTransport,
-    sendMail
+    sendMail,
+    dateDiff
 }

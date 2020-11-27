@@ -19,7 +19,7 @@ const compareSync = function (key, hash) {
 };
 
 //指定文字暗号化
-const CipherStr = function (str) {
+const CipherStr =  function (str) {
 
     /*  引数
            アルコーリズム　とパスワード指定
@@ -29,6 +29,7 @@ const CipherStr = function (str) {
             暗号オブジェクト 
      */
     let cipherIns = crypto.createCipher(CIPHERSETTING.ALGORITHM, CIPHERSETTING.PASSWORD);
+    // let cipherIns =  crypto.createCipheriv(CIPHERSETTING.ALGORITHM, CIPHERSETTING.PASSWORD);
     /*   指定文字暗号
             dataで暗号を更新する。
         引数
@@ -36,7 +37,7 @@ const CipherStr = function (str) {
             input_encoding 'utf8', 'ascii' or 'binary'が指定できる
             output_encoding 暗号化されたデータの出力形式。'binary', 'base64' or 'hex'が指定できる。
      */
-    let cipherStr = cipherIns.update(str, 'utf8', 'hex')
+    let cipherStr =  cipherIns.update(str, 'utf8', 'hex')
     /*   暗号化されたデータを取得する。
         ※ finalメソッドが呼び出された後、暗号オブジェクトは使えません。
     引数
@@ -50,6 +51,7 @@ const CipherStr = function (str) {
 //指定文字複合
 const DecipherStr = function (deStr) {
     var Decipher = crypto.createDecipher(CIPHERSETTING.ALGORITHM, CIPHERSETTING.PASSWORD);
+    // var Decipher = crypto.createDecipheriv(CIPHERSETTING.ALGORITHM, CIPHERSETTING.PASSWORD);
     var deCipherStr = Decipher.update(deStr, 'hex', 'utf8')
     deCipherStr += Decipher.final('utf8');
     return deCipherStr
