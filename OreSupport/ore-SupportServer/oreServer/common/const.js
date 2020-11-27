@@ -13,7 +13,11 @@ const STATUS_MESSAGE = {
     CODE_406: 406,
     ACTION_QUERY_ERROR: "アクション取得失敗",
     CODE_407: 407,
-    ACTION_DESTROY_ERROR: "アクション削除失敗"
+    ACTION_DESTROY_ERROR: "アクション削除失敗",
+    CODE_401: 408,
+    LOGIN_ERROR_408: "入力された情報を確認してください。",
+    CODE_401: 409,
+    LOGIN_ERROR_409: "送信失敗しました。メールアドレスを確認してください。",
 }
 
 
@@ -48,8 +52,12 @@ const MAIL_SETTING = {
     SECURE: true, // true for 465, false for other ports
     USER: 'info@cognisolution.com', // generated ethereal user
     PASS: 'Benz300SLR)', // generated ethereal password
-    EXPIRATERM: 2    //hours
+    EXPIRATERM: 2,    //hours
+    CLINENTLOGINURL: "https://localhost:8080/#/userLogin" //oresupport login url
 }
+
+
+
 
 
 module.exports = {
