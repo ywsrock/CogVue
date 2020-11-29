@@ -72,6 +72,11 @@
                     </el-button>
                   </div>
                 </el-form>
+                <span
+                  ><a href @click.prevent="handleRestPasswd()"
+                    >メールアドレスを忘れた場合</a
+                  ></span
+                >
 
                 <el-dialog
                   title="アカウントを選択して、ログインしてください。"
@@ -211,6 +216,9 @@ export default {
     },
     singUp() {
       this.$router.push("/register");
+    },
+    handleRestPasswd() {
+      this.$router.push("/resetPassword");
     },
   },
 };

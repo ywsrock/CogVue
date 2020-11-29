@@ -43,6 +43,11 @@ const routes = [
     // hidden: true
   },
   {
+    path: "/resetPassword",
+    name: "resetPassword",
+    component: () => import("@/views/login/components/RestPasswd.vue"),
+  },
+  {
     path: "/register",
     name: "register",
     component: Layout,

@@ -8,6 +8,7 @@ import {
     getProfileInfo,
     updateUser,
     imageUp,
+    restPassword,
 } from "@/utils/api/user";
 import { resetRouter } from "@/router";
 
@@ -103,6 +104,17 @@ const actions = {
                     reject(error);
                 });
         });
+    },
+
+    //パスワードリセット
+    restPassword(context, userInfo) {
+        return new Promise((resolve, reject) => {
+            restPassword(userInfo).then(res => {
+                resolve(res)
+            }).catch(error => {
+                reject(error)
+            })
+        })
     },
 
     /* ユーザ新規登録 */

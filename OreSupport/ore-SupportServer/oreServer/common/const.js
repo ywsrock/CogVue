@@ -1,28 +1,36 @@
 const STATUS_MESSAGE = {
-  CODE_SUCCESS: 20000,
-  CODE_5008: 50008,
-  RES_STATUS_TOKEN_ERROR_50008: "トークン認証失敗",
-  CODE_401: 401,
-  LOGIN_ERROR_401:
-    "ログイン失敗しました、ユーザ名とパスワードを確認してください。",
-  CODE_402: 402,
-  REG_ERROR_402: "ユーザ登録失敗。",
-  CODE_403: 403,
-  FILEUP_ERROR_403: "ファイルアップロード失敗",
-  CODE_405: 405,
-  ACTION_CREATE_ERROR: "アクション登録失敗",
-  CODE_406: 406,
-  ACTION_QUERY_ERROR: "アクション取得失敗",
-  CODE_407: 407,
-  ACTION_DESTROY_ERROR: "アクション削除失敗",
-  LIKE_CREATE_ERROR: "いいね登録失敗",
-  LIKE_QUERY_ERROR: "いいね取得失敗",
-  LIKE_DESTROY_ERROR: "いいね削除失敗",
-};
+    CODE_SUCCESS: 20000,
+    CODE_5008: 50008,
+    RES_STATUS_TOKEN_ERROR_50008: "トークン認証失敗",
+    CODE_401: 401,
+    LOGIN_ERROR_401: "ログイン失敗しました、ユーザ名とパスワードを確認してください。",
+    CODE_402: 402,
+    REG_ERROR_402: "ユーザ登録失敗。",
+    CODE_403: 403,
+    FILEUP_ERROR_403: "ファイルアップロード失敗",
+    CODE_405: 405,
+    ACTION_CREATE_ERROR: "アクション登録失敗",
+    CODE_406: 406,
+    ACTION_QUERY_ERROR: "アクション取得失敗",
+    CODE_407: 407,
+    ACTION_DESTROY_ERROR: "アクション削除失敗",
+    CODE_401: 408,
+    LOGIN_ERROR_408: "入力された情報を確認してください。",
+    CODE_401: 409,
+    LOGIN_ERROR_409: "送信失敗しました。メールアドレスを確認してください。",
+    LIKE_CREATE_ERROR: "いいね登録失敗",
+    LIKE_QUERY_ERROR: "いいね取得失敗",
+    LIKE_DESTROY_ERROR: "いいね削除失敗",
+}
 
 
 // ハッシュ SALT
 const BCRYPT_SALT = 10
+//暗号設定情報
+const CIPHERSETTING = {
+    ALGORITHM: "aes-128-cbc",
+    PASSWORD: "P@ssw0rd"
+}
 
 // プロフィール情報
 const PROFILE_INFO = {
@@ -36,9 +44,29 @@ const PROFILE_INFO = {
     SNS_INFO: "snsInfo",
 }
 
+//パスワードリセットメール設定
+const MAIL_SETTING = {
+    FROM: 'info@cognisolution.com',
+    SUBJECT: "パスワード設定確認",
+    TEXT: "パスワード再設定:#url#",
+    HTML: "パスワード再設定:#url#",
+    HOST: "mail38.onamae.ne.jp",
+    PORT: 465,
+    SECURE: true, // true for 465, false for other ports
+    USER: 'info@cognisolution.com', // generated ethereal user
+    PASS: 'Benz300SLR)', // generated ethereal password
+    EXPIRATERM: 2,    //hours
+    CLINENTLOGINURL: "https://localhost:8080/#/userLogin" //oresupport login url
+}
+
+
+
+
 
 module.exports = {
     STATUS_MESSAGE,
     BCRYPT_SALT,
-    PROFILE_INFO
+    PROFILE_INFO,
+    CIPHERSETTING,
+    MAIL_SETTING
 }

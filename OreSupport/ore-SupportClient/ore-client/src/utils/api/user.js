@@ -14,6 +14,19 @@ export function login(data) {
 }
 
 /**
+ * パスワードリセット
+ * @param data Object
+ * @returns String
+ */
+export function restPassword(data) {
+    return request({
+        url: "user/restPassword",
+        method: "post",
+        data
+    })
+}
+
+/**
  * ユーザ登録
  * @param data Object
  * @returns String

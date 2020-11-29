@@ -8,6 +8,7 @@ export const ORE_SUPPORT_API_BASE_PATH = "http://localhost:3000/"
 // no redirect whitelis
 export const WHITELIST = [
     "/userLogin",
+    "/resetPassword",
     "/register",
     "/userInfo",
     "/top",
