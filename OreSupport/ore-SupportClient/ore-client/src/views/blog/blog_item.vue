@@ -51,7 +51,7 @@ export default {
   },
   methods: {
     getBlogDetail(id) {
-      this.$router.push("/blog/blogDetail?id=" + id);
+      this.$router.push("/blog/blogDetail/?id=" + id);
     },
   }
 };
