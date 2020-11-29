@@ -12,6 +12,8 @@ export const WHITELIST = [
     "/userInfo",
     "/top",
     "/blog",
+    "/blog/blogList",
+    "/blog/blogDetail/",
 
     "/solution/top",
     "/knowledge/knowledgeDetail",

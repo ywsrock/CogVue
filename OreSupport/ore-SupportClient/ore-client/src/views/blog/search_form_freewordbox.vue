@@ -10,6 +10,7 @@
         id="freeword"
         ref="freeword"
         @change="onChange"
+        v-model="freeword"
       />
     </div>
   </div>
@@ -19,6 +20,10 @@
 export default {
   props: {
     title: {
+      type: String,
+      required: true      
+    },
+    freeword: {
       type: String,
       required: true      
     },

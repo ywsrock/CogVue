@@ -29,13 +29,13 @@
                 <searchFormSelectDatebox title="投稿日" @emitSelectDate="emitSelectDate" />
                 <searchFormCheckbox title="カテゴリ" :options="categories" />
                 <searchFormCheckbox title="行動タグ" :options="actions" />
-                <searchFormFreeWordbox title="フリーワード" @emitSelectFreeWord="emitSelectFreeWord" />
+                <searchFormFreeWordbox title="フリーワード" :freeword="searchBlogKey.freeWord" @emitSelectFreeWord="emitSelectFreeWord" />
               </div>
               <hr />
               <div class="orig-row">
                 <div class="col-sm-8">
                   <div class="filter-actions">
-                    <a href @click.prevent="reset()">
+                    <a href="#" @click="reset($event)">
                       <i class="fa fa-close"></i>検索条件リセット
                     </a>
                   </div>
@@ -261,10 +261,22 @@ export default {
           console.log("err=====");
         });
     },
-    reset(){
-    this.searchFormSelectbox = "";
-    this.fetchBlogInfo();
-    this.emitSelectSex() ;
+    reset($event){
+    $event.preventDefault();
+    alert(this.searchBlogKey.sex)
+    this.searchBlogKey.sex = "";
+    alert(this.searchBlogKey.sex)
+    alert(this.searchBlogKey.freeWord)
+    this.searchBlogKey.freeWord = "";
+    alert(this.searchBlogKey.freeWord)
+    this.searchBlogKey= {
+        sex: "",
+        pref: "",
+        age: "",
+        freeWord: "",
+        from: "",
+        to: ""
+      }
   },
     searchBlog() {
       //apiからサーバーに命令をだす。(store action)

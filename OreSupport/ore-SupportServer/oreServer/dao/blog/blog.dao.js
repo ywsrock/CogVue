@@ -132,6 +132,7 @@ const getBlogDetail = async (queryInfo) => {
     });
 
     const result = await Blog.findAll({
+      attributes:[sequelize.fn('upper', sequelize.col('Title'))],
       where: {
         [Op.and]: [
           {
@@ -154,6 +155,7 @@ const getBlogDetail = async (queryInfo) => {
       ],
 
       attributes: { exclude: ["Password"] },
+      
     });
     return result;
   } catch (error) {

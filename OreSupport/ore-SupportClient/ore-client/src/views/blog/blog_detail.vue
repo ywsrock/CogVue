@@ -15,7 +15,7 @@
                         {{ blogDetail.title }}
                       </h1>
                       <div style="text-align: right;">
-                        <button @click.prevent="blogEdit()">編集する</button>
+                        <button v-if="isMyProfile" @click.prevent="blogEdit()">編集する</button>
                         <button @click.prevent="blogDelete()">
                           削除する
                         </button>
@@ -31,7 +31,7 @@
                     <div class="posts post-detail">
                       <div style="text-align: center;">
                         <!-- <img src="../../assets/img/tmp/20200920park.png" alt="blog image" /> -->
-                        <img
+                        <img class="tateyama"
                           :src="blogDetail.blogImg"
                           @error="defaultBlogImg()"
                           alt="blog image"
@@ -117,11 +117,13 @@
                         <!-- /.comment -->
                       </div>
                       <!-- /.comments -->
+                      
 
-                      <form @submit.prevent="postComment">
+                      <form @submit.prevent="postComment"  v-if="isLogin">
                         <div
                           class="form-group col-sm-4"
                           style="padding-left: 0;"
+                          
                         >
                           <h3 style="margin-top: 0px;">コメントを投稿する</h3>
                           <label for>
@@ -245,13 +247,23 @@ export default {
       },
       likes: [],
       likedFlg: false,
+      isLogin:false,
+      isMyProfile:false
     };
   },
-  mounted() {
+   mounted() {
     this.fetchBlogInfo();
     this.getLikes();
     // this.defaultBlogImg();
+
+    if (this.$session.get("jwt")) {
+      this.isLogin = true;
+      this.username = this.$session.get("UserName");
+    } else {
+      this.isLogin = false;
+    }
   },
+
   methods: {
     defaultBlogImg: function() {
       return this.defaultsrc;
@@ -278,6 +290,11 @@ export default {
             that.blogDetail.userProfile = userProfile;
             that.blogDetail.blogImg = blogImg;
             that.blogDetail.timeStamp = res.timeStamp;
+            if (that.$session.get("UserID") == that.blogDetail.userProfile.UserID ) {
+              that.isMyProfile = true;
+            } else {
+              that.isMyProfile = false;
+            }
           });
         })
         .catch((error) => {
@@ -437,5 +454,8 @@ p {
 .post-meta {
   padding-left: 100px;
   padding-right: 100px;
+}
+.tateyama {
+  border-radius: 100px 25px 50px 50px / 50px 25px 50px 25px;
 }
 </style>
