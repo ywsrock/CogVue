@@ -1,6 +1,6 @@
 /* eslint-disable */
 import { getToken, setToken, removeToken } from "@/utils/auth"
-import { createBlog,getBlogList,viewBlog,getBlogDetail,blogDelete, blogUpdate} from "@/utils/api/blog"
+import { createBlog,getBlogList,viewBlog,getBlogDetail,blogDelete, blogUpdate,postComment,searchBlog} from "@/utils/api/blog"
 import { resetRouter } from '@/router'
 
 
@@ -18,8 +18,11 @@ const state = {
 
     userProfile: [],
 
-    userName:""
+    userName:"",
 
+    commentName:"",
+
+    blogImg: "",
 }
 
 /*
@@ -31,8 +34,9 @@ const getters = {
     get_content: state => state.content,
     get_comment: state => state.comment,
     get_userName: state => state.userName,
-    get_userProfile: state => state.userProfile
-
+    get_userProfile: state => state.userProfile,
+    get_commentName: state => state.commentName,
+    get_blogImg: state => state.blogImg,
 }
 
 /*
@@ -59,7 +63,13 @@ const mutations = {
     },
     set_userProfile: (state, data) => {
         state.userProfile = data
-    }
+    },
+    set_commentName: (state, data) => {
+        state.commentName = data
+    },
+    set_blogImg: (state, data) => {
+        state.blogImg = data
+    },
 
 }
 
@@ -84,7 +94,7 @@ const actions = {
 
         // ブログリスト
         getBlogList(context, blogInfo) {
-            return new Promise((resolve, reject) => {               
+            return new Promise((resolve, reject) => {
                 getBlogList()
                     .then(res => {
                         const data = res.data;
@@ -107,7 +117,7 @@ const actions = {
 
         // ブログ詳細
         getBlogDetail(context, blogId) {
-            return new Promise((resolve, reject) => {               
+            return new Promise((resolve, reject) => {
                 getBlogDetail(blogId)
                     .then(res => {
                         const data = res.data;
@@ -123,6 +133,7 @@ const actions = {
 
                         context.commit("set_userProfile",data.userProfile)
 
+                        context.commit("set_blogImg",data.imgUrl)
 
                         resolve(data);
                     }).catch(error => {
@@ -132,7 +143,7 @@ const actions = {
         },
 
         blogDelete(context, blogId) {
-            return new Promise((resolve, reject) => {               
+            return new Promise((resolve, reject) => {
                 blogDelete(blogId)
                     .then(res => {
                         const data = res.data;
@@ -150,15 +161,49 @@ const actions = {
                         reject(error);
                     })
             })
-        }, 
+        },
 
         blogUpdate(context, blogInfo) {
             return new Promise((resolve, reject) => {
-                // var tile = blogInfo.title;
-                // var content = blogInfo.content;
                 blogUpdate(blogInfo)
                     .then(res => {
                         const data = res.data;
+                        resolve(data);
+                    }).catch(error => {
+                        reject(error);
+                    })
+            })
+        },
+
+        postComment(context, blogInfo) {
+            return new Promise((resolve, reject) => {
+                // var tile = blogInfo.title;
+                // var content = blogInfo.content;
+                postComment(blogInfo)
+                    .then(res => {
+                        const data = res.data;
+                        resolve(data);
+                    }).catch(error => {
+                        reject(error);
+                    })
+            })
+        },
+
+
+        searchBlog(context, searchObj) {
+            return new Promise((resolve, reject) => {
+                searchBlog(searchObj)
+                    .then(res => {
+                        const data = res.data;
+                        // const content = data.content;
+
+                        context.commit("set_id",data.id)
+                        //ブログ名
+                        context.commit("set_title",data.title)
+                        //ブログ内容
+                        context.commit("set_content",data.content)
+
+
                         resolve(data);
                     }).catch(error => {
                         reject(error);

@@ -5,7 +5,7 @@
         <div id="header" class="header"></div>
 
         <div class="main">
-
+          <form>
             <div class="main-inner">
               <div class="container">
                 <div class="content">
@@ -24,270 +24,129 @@
                         <div class="form-group col-sm-12">
                           <label for="title">タイトル</label>
                           <input
-                           type="text"
-                           placeholder="Please input"
-                           v-model="blogDetail.title"
-                           maxlength="30"
-                           show-word-limit
+                            type="text"
+                            v-model="blogDetail.title"
+                            maxlength="30"
+                            show-word-limit
                           />
                         </div>
-                        <!-- /.form-group -->
 
-                        <div class="col-sm-4">
-                          <label>公開範囲</label>
-                          <select>
-                            <option value="公開">公開</option>
-                            <option value="友達">友達</option>
-                            <option value="個人">個人</option>
-                          </select>
-                        </div>
                         <!-- /.form-group -->
+                        <div class="form-group col-sm-12">
+                          <label for="title">カテゴリ</label>
+                          <v-sheet>
+                            <v-chip-group multiple active-class="primary--text">
+                              <v-chip v-for="tag in category" :key="tag">
+                                {{ tag }}
+                              </v-chip>
+                            </v-chip-group>
+                          </v-sheet>
+                        </div>
 
-                        <div class="col-sm-4">
-                          <label>コメント可否</label>
-                          <select>
-                            <option value="可">可</option>
-                            <option value="不可">不可</option>
-                          </select>
-                        </div>
-                        <!-- /.form-group -->
+                        <div class="form-group col-sm-12">
+                          <label for="title">
+                            行動タグ
+                            <br />
+                            行動タグの追加については<a href="#">こちら</a>から
+                          </label>
 
-                        <div class="col-sm-4">
-                          <label>日付</label>
-                          <input
-                            class="form-control"
-                            type="date"
-                            name="uploadday"
-                          />
+                          <v-sheet>
+                            <v-chip-group multiple active-class="primary--text">
+                              <v-chip v-for="tag in tags" :key="tag">
+                                {{ tag }}
+                              </v-chip>
+                            </v-chip-group>
+                          </v-sheet>
                         </div>
-                        <!-- /.form-group -->
                       </div>
+
                       <!-- /.form-group -->
 
                       <div class="col-sm-4">
                         <div class="widget">
-                          <div class="user-photo col-sm-6">
+                          <div class="user-photo">
                             <a href="#">
                               <img
-                                src="../../assets/img/tmp/agent-2.jpg"
+                                :src="blogImg"
+                                @error="defaultBlogImg"
                                 alt="User Photo"
                               />
-                              <span class="user-photo-action">画像を追加</span>
-                            </a>
-                          </div>
-                          <!-- /.user-photo -->
-                          <div class="user-photo col-sm-6">
-                            <a href="#">
-                              <img
-                                src="../../assets/img/tmp/agent-2.jpg"
-                                alt="User Photo"
+                              <input
+                                ref="upfile"
+                                id="file_photo"
+                                type="file"
+                                accept=".jpg, .jpeg, .png"
+                                @change="onchange"
                               />
-                              <span class="user-photo-action">画像を追加</span>
                             </a>
                           </div>
-                          <!-- /.user-photo -->
                         </div>
                         <!-- /.widget -->
                       </div>
-                      <!-- col-sm-6 -->
+                      <!-- col-sm-4 -->
                     </div>
                     <!-- /.row -->
-                  </div>
 
-                  <div class="background-white p20 mb30">
-                    <h3 class="page-title">
-                      内容
-
-                      <div class="col-sm-4 pull-right">
-                        <a href="#" class="btn btn-primary col-sm-5"
-                          >タグを登録</a
-                        >
-                        <a href="#" class="btn btn-primary col-sm-5 pull-right"
-                          >追加</a
-                        >
-                      </div>
-                    </h3>
-
-                    <div class="form-horizontal">
-                      <div class="form-group">
-                        <label class="col-sm-2">
-                          <select>
-                            <option value="質問">質問</option>
-                            <option value="タグ">タグ</option>
-                            <option value="カテゴリー">カテゴリー</option>
-                          </select></label
-                        >
-                        <label class="col-sm-4">
-                          <select>
-                            <option value="質問"
-                              >今日の朝ごはんはなんですか</option
-                            >
-                            <option value="タグ">今日の体調はどうですか</option>
-                          </select></label
-                        >
-
-                        <div class="col-sm-6">
-                          <input
-                            type="text"
-                            class="form-control"
-                            value="パンとミルク"
-                          />
-                        </div>
-                        <!-- /.col-* -->
-                      </div>
-                      <!-- /.form-group -->
-
-                      <div class="form-group">
-                        <label class="col-sm-2">
-                          <select>
-                            <option value="質問">質問</option>
-                            <option value="タグ">タグ</option>
-                            <option value="カテゴリー">カテゴリー</option>
-                          </select></label
-                        >
-                        <label class="col-sm-4">
-                          <select>
-                            <option value="質問"
-                              >今日の朝ごはんはなんですか</option
-                            >
-                            <option value="タグ" selected>睡眠時間は？</option>
-                          </select></label
-                        >
-
-                        <div class="col-sm-6">
-                          <input
-                            type="text"
-                            class="form-control"
-                            value="7時間です"
-                          />
-                        </div>
-                        <!-- /.col-* -->
-                      </div>
-                      <!-- /.form-group -->
-
-                      <div class="form-group">
-                        <label class="col-sm-2">
-                          <select>
-                            <option value="質問">質問</option>
-                            <option value="タグ" selected>タグ</option>
-                            <option value="カテゴリー">カテゴリー</option>
-                          </select></label
-                        >
-                        <label class="col-sm-4">
-                          <select>
-                            <option value="質問">ランニング</option>
-                            <option value="タグ">計算ドリル</option>
-                            <option value="タグ">サプリメント</option>
-                          </select></label
-                        >
-
-                        <div class="col-sm-6">
-                          <input
-                            type="text"
-                            class="form-control"
-                            placeholder="12時間"
-                          />
-                        </div>
-                        <!-- /.col-* -->
-                      </div>
-                      <!-- /.form-group -->
-
-                      <div class="form-group">
-                        <label class="col-sm-2">
-                          <select>
-                            <option value="質問">質問</option>
-                            <option value="タグ" selected>タグ</option>
-                            <option value="カテゴリー">カテゴリー</option>
-                          </select></label
-                        >
-                        <label class="col-sm-4">
-                          <select>
-                            <option value="質問">ランニング</option>
-                            <option value="タグ" selected>計算ドリル</option>
-                            <option value="タグ">サプリメント</option>
-                          </select></label
-                        >
-
-                        <div class="col-sm-6">
-                          <input
-                            type="text"
-                            class="form-control"
-                            placeholder="1時間"
-                          />
-                        </div>
-                        <!-- /.col-* -->
-                      </div>
-                      <!-- /.form-group -->
-
-                      <div class="form-group">
-                        <label class="col-sm-2">
-                          <select>
-                            <option value="質問">質問</option>
-                            <option value="タグ">タグ</option>
-                            <option value="カテゴリー" selected
-                              >カテゴリー</option
-                            >
-                          </select></label
-                        >
-                        <label class="col-sm-4">
-                          <select>
-                            <option value="質問">日常</option>
-                            <option value="タグ">CogEvo</option>
-                          </select></label
-                        >
-                      </div>
-                      <!-- /.form-group -->
-                    </div>
-                    <!-- /.form-inline -->
-                  </div>
-                  <!-- /.background-white -->
-
-                  <div class="background-white p20 mb30">
                     <h3 class="page-title">
                       本文
 
-                      <div class="col-sm-4 pull-right">
+                      <!-- <div class="col-sm-4 pull-right">
                         <a href="#" class="btn btn-primary col-sm-5"
                           >商品選択</a
                         >
                         <a href="#" class="btn btn-primary col-sm-5 pull-right"
                           >CogEvoデータ</a
                         >
-                      </div>
+                      </div> -->
                     </h3>
-
-                    <label for="content"><b>内容</b></label>
-                    <textarea
-                      type="textarea"
-                      placeholder="Please input"
-                      v-model="blogDetail.content"
-                      maxlength="2000"
-                      show-word-limit
-                    ></textarea>
-
-                    <div class="background-white p20 mb30">
-                      <div class="col-sm-4">
-                        <button href="#" class="btn btn-primary col-sm-5" @click="blogUpdate">
-                          更新
-                        </button>
-                        <button
-                          href="#"
-                          class="btn btn-primary col-sm-5 pull-right"
-                        >
-                          一時保存
-                        </button>
-                        <br /><br />
+                    <div class="row">
+                      <div class="col-sm-12">
+                        <div class="form-group col-sm-12">
+                          <label for="content">内容 </label>
+                          <textarea
+                            type="textarea"
+                            v-model="blogDetail.content"
+                            maxlength="2000"
+                            show-word-limit
+                          ></textarea>
+                        </div>
                       </div>
-                      <div class="col-sm-4 pull-right">
-                        <button
+                    </div>
+                  </div>
+                  <!-- /.background-white p20 mb30 -->
+
+                  <div class="col-sm-4">
+                    <button
+                      href="#"
+                      class="btn btn-primary col-sm-5"
+                      @click="blogUpdate"
+                    >
+                      更新
+                    </button>
+                    <button
+                      href="#"
+                      class="btn btn-primary col-sm-5 pull-right"
+                    >
+                      一時保存
+                    </button>
+                    <br /><br />
+                  </div>
+                  <div class="col-sm-4 pull-right">
+                    <a
+                      href
+                      @click.prevent="blogClick"
+                      class="btn btn-primary col-sm-5 pull-right"
+                      >戻る</a
+                    >
+
+                    <!-- <button type="reset"
                           href="#"
                           class="btn btn-primary col-sm-5 pull-right"
                         >
                           キャンセル
-                        </button>
-                      </div>
-                    </div>
+                        </button> -->
                   </div>
+
                   <!-- /.content -->
                 </div>
                 <!-- /.container -->
@@ -295,7 +154,7 @@
               <!-- /.main-inner -->
             </div>
             <!-- /.main -->
-
+          </form>
         </div>
         <div id="footer" class="footer"></div>
       </div>
@@ -304,35 +163,62 @@
   </div>
 </template>
 
-
-
-
 <script>
 import { Message } from "element-ui";
+var img = require("../../../public/favicon.png");
+
 /* eslint-disable */
 export default {
   data() {
     return {
       blogDetail: {
         id: "",
+        id: "",
         title: "",
         content: "",
+        blogimage: "",
+        filename: "",
       },
+      blogImg: "" || img,
+      defaultsrc: img,
+      category: ["食事", "運動", "脳トレ", "音楽", "その他"],
+      tags: ["サンマ", "マラソン", "モーツァルト", "パズル"],
     };
   },
   mounted() {
     var that = this;
-    // console.log(this.$router.query); 次回の閻餐会
-    this.$nextTick().then(function() {
-      const content = that.$store.getters.get_content;
-      const title = that.$store.getters.get_title;
-      const id = that.$store.getters.get_id;
-      that.blogDetail.content = content;
-      that.blogDetail.title = title;
-      that.blogDetail.id = id;
-    });
+    this.$store
+      .dispatch("blog/getBlogDetail", this.$route.query.id)
+      .then((res) => {
+        this.$nextTick().then(function() {
+          const content = that.$store.getters.get_content;
+          const title = that.$store.getters.get_title;
+          const id = that.$store.getters.get_id;
+          const blogImg = that.$store.getters.get_blogImg;
+          that.blogDetail.content = content;
+          that.blogDetail.title = title;
+          that.blogDetail.id = id;
+          that.blogImg = blogImg;
+        });
+      });
   },
   methods: {
+    defaultBlogImg: function() {
+      return this.defaultsrc;
+    },
+    onchange: function(e) {
+      e.preventDefault();
+      const files = e.target.files;
+      const file = files[0];
+      console.log(file.name);
+      this.blogDetail.filename = file.name;
+      this.blogDetail.blogimage = files[0];
+      const reader = new FileReader();
+      reader.readAsDataURL(file);
+      reader.onload = (e) => {
+        this.blogImg = e.target.result;
+      };
+    },
     blogUpdate: function(e) {
       // 二重コミット防止のため、ボタンを非活性
       e.target.disabled = true;
@@ -340,9 +226,20 @@ export default {
       // const isValid = this.validate(this.registForm, this.rules);
       // if (!isValid) {
       // ユーザ登録処理
-      console.log(`val = ${JSON.stringify(this.$route.query.id)}`);
+      //console.log(`val = ${JSON.stringify(this.$route.query.id)}`);
+      let that = this;
+      let fl = this.$refs.upfile.files[0];
+      //Content-Type:form/multipart で送信されます
+      let data = new FormData();
+      // data.append("key", value, parameter);
+      data.append(
+        "imgBlog",
+        this.blogDetail.blogimage,
+        this.blogDetail.filename
+      );
+      data.append("blogDetail", JSON.stringify(this.blogDetail));
       this.$store
-        .dispatch("blog/blogUpdate", this.blogDetail)
+        .dispatch("blog/blogUpdate", data)
         .then((res) => {
           Message({
             message: "更新OK",
@@ -357,6 +254,9 @@ export default {
           console.log(error.data);
           console.log("作成失敗");
         });
+    },
+    blogClick: function() {
+      this.$router.push("/blog/blogList");
     },
   },
 };
