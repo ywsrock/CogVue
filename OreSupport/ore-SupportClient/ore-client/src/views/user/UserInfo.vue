@@ -23,38 +23,9 @@
         <div class="main">
           <div class="main-inner" style="padding: 0px !important;">
             <div class="content">
-              <!-- モーダル -->
               <div class="container">
-                <div v-if="isModalShow" class="modal-background">
-                  <div
-                    class="background-white p20 mb30"
-                    style="width: 70%; height: 70%; position: absolute; top: 15%; left: 15%;"
-                  >
-                    <h3 class="page-title">
-                      メンテナンスのお知らせ (2020/09/18)
-                    </h3>
-                    <p>
-                      テキストテキストテキストテキストテキストテキストテキストテキストテキストテキストテキストテキストテキストテキストテキストテキストテキストテキストテキストテキストテキストテキストテキストテキストテキストテキストテキストテキストテキストテキストテキストテキストテキストテキストテキストテキストテキストテキストテキスト
-                    </p>
-
-                    <div
-                      style="text-align: right;margin-bottom: 0;position: absolute;bottom: 20px;right: 20px;"
-                    >
-                      <button
-                        @click="isModalShow = false"
-                        type="button"
-                        class="btn btn-primary mr-2"
-                      >
-                        閉じる
-                      </button>
-                    </div>
-                  </div>
-                </div>
-              </div>
-              <!-- モーダル -->
-
-
-              <div class="container">
+                <!-- お知らせの詳細確認用のモーダル -->
+                <TopInformationModal v-if="isModalShow" :informationDetail="informationDetail" @emitCloseModal="emitCloseModal" />
                 <div class="row">
                   <div class="col-lg-9">
                     <!-- スライダー -->
@@ -83,7 +54,7 @@
                             <td>
                               <strong>
                                 <a
-                                  @click="sohwInfoModal($event)"
+                                  @click="sohwInfoModal($event, information)"
                                   style="color:#de0000; border-bottom: solid 1px red;"
                                   >{{ information.title }}</a
                                 >
@@ -95,386 +66,43 @@
                     </div>
 
                     <!-- 新着ブログ -->
-                    <div>
-                      <h3 style="margin-bottom: 10px; border-bottom: solid 3px #FFFF00; padding-left: 15px; padding-bottom: 5px;">
-                        新着ブログ
-                        <div style="text-align: right;float:right;">
-                          <a href="/#/blog/blogList" style="font-size: 14px; color: black; text-align: right;">
-                            もっと見る＞
-                          </a>
-                        </div>
-                      </h3>
-                    </div>
-                    <div class="row">
-                      <template v-for="n of 4">
-                        <div class="col-lg-3" :key="n">
-                          <v-hover v-slot="{ hover }">
-                            <v-card
-                              max-width="200px"
-                              :elevation="hover ? 8 : 2"
-                              :class="{ 'on-hover': hover }"
-                              tile
-                            >
-                              <v-img
-                                height="100px"
-                                src="https://cdn.vuetifyjs.com/images/cards/docks.jpg"
-                              >
-                              </v-img>
-                              <v-card-title>Title</v-card-title>
-                              <v-card-text class="text--primary">
-                                <div>Whitehaven Beach</div>
-                              </v-card-text>
-                                <div style="text-align: right; margin: 5px 10px 5px 0;">
-                                  <v-icon color="yellow" size="35" style="padding-bottom: 10px;">mdi-thumb-up</v-icon>
-                                  <span style="font-size: 25px;">20</span>
-                                </div>
-                            </v-card>
-                          </v-hover>
-                        </div>
-                      </template>
-                    </div>
+                    <TopNewInfoTitle Title="新着ブログ" TitleClassName="top-new-blog-title" Link="/#/blog/blogList" />
+                    <TopNewInfoCards iconName="mdi-thumb-up" iconComment="20" />
+
 
                     <!-- 新着商品 -->
-                    <div>
-                      <h3 style="margin-bottom: 10px; border-bottom: solid 3px #FA60F4; padding-left: 15px; padding-bottom: 5px;">
-                        新着商品
-                        <div style="text-align: right;float:right;">                        
-                          <a href="#" style="font-size: 14px; color: black; text-align: right;">
-                            もっと見る＞
-                          </a>
-                        </div>
-                      </h3>
-                    </div>
-                    <div class="row">
-                      <template v-for="n of 4">
-                        <div class="col-lg-3" :key="n">
-                          <v-hover v-slot="{ hover }">                          
-                            <v-card
-                              max-width="200px"
-                              :elevation="hover ? 8 : 2"
-                              :class="{ 'on-hover': hover }"
-                              tile
-                            >
-                              <v-img
-                                height="100px"
-                                src="https://cdn.vuetifyjs.com/images/cards/docks.jpg"
-                              >
-                              </v-img>
-                              <v-card-title>Title</v-card-title>
-                              <v-card-text class="text--primary">
-                                <div>Whitehaven Beach</div>
-                              </v-card-text>
-                              <div style="text-align: right; margin: 5px 10px 5px 0;">
-                                <v-icon color="yellow" size="35" style="padding-bottom: 15px;">mdi-cursor-pointer</v-icon>
-                                <span style="font-size: 20px;">CHECK!!</span>
-                              </div>
-                            </v-card>
-                          </v-hover>                            
-                        </div>
-                      </template>
-                    </div>
+                    <TopNewInfoTitle Title="新着商品" TitleClassName="top-new-product-title" Link="#" />                    
+                    <TopNewInfoCards :iconName="'mdi-cursor-pointer'" :iconComment="'CHECK!!'" />
 
                     <!-- 新着セミナー -->
-                    <div>
-                      <h3 style="margin-bottom: 10px; border-bottom: solid 3px #90EE90; padding-left: 15px; padding-bottom: 5px;">
-                        新着セミナー
-                        <div style="text-align: right;float:right;">                       
-                          <a href="#" style="font-size: 14px; color: black;">
-                            もっと見る＞
-                          </a>
-                        </div>
-                      </h3>
-                    </div>
-                    <div class="row">
-                      <template v-for="n of 4">
-                        <div class="col-lg-3" :key="n">
-                          <v-hover v-slot="{ hover }">                                                    
-                            <v-card
-                              max-width="200px"
-                              :elevation="hover ? 8 : 2"
-                              :class="{ 'on-hover': hover }"
-                              tile
-                            >
-                              <v-img
-                                height="100px"
-                                src="https://cdn.vuetifyjs.com/images/cards/docks.jpg"
-                              >
-                              </v-img>
-                              <v-card-title>Title</v-card-title>
-                              <v-card-text class="text--primary">
-                                <div>Whitehaven Beach</div>
-                              </v-card-text>
-                              <div style="text-align: right; margin: 5px 10px 5px 0;">
-                                <v-icon color="yellow" size="35" style="padding-bottom: 15px;">mdi-human</v-icon>
-                                <span style="font-size: 20px;">JOIN!!</span>
-                              </div>
-                            </v-card>
-                          </v-hover>
-                        </div>
-                      </template>
-                    </div>
+                    <TopNewInfoTitle Title="新着セミナー" TitleClassName="top-new-seminor-title" Link="#" />                                        
+                    <TopNewInfoCards :iconName="'mdi-human'" :iconComment="'JOIN!!'" />
 
                     <!-- タブ -->
                     <el-tabs type="card" @tab-click="handleClick" style="margin-top: 20px;">
-                      <el-tab-pane label="User">
-                        <div class="row">
-                          <div class="col-lg-6">
-                            <div>
-                              <h3 style="margin-bottom: 10px; border-bottom: solid 3px #FFFF00; padding-left: 15px; padding-bottom: 5px; margin-top: 0;">
-                                人気ブログ
-                                <div style="text-align: right;float:right;">                                                
-                                  <a href="/#/blog/blogList" style="font-size: 14px; color: black;">もっと見る＞</a>
-                                </div>
-                              </h3>   
-                            </div>
-                            <template v-for="n of 3">
-                              <v-hover v-slot="{ hover }" :key="n">                                                        
-                                <v-card
-                                  :elevation="hover ? 8 : 2"
-                                  :class="{ 'on-hover': hover }"
-                                  style="margin-bottom: 24px; height: 140px"
-                                  tile
-                                >
-                                  <img
-                                    src="../../assets/img/tmp/20200920park.png"
-                                    alt="popular blog image"
-                                    style="width: 170px; margin: 0 5px; height: auto; max-height: 130px; position: absolute; top: 50%; transform: translateY(-50%);"
-                                  />
-                                  <div style="text-align: right; padding: 100px 10px 5px 0;">
-                                    <v-icon color="yellow" size="35" style="padding-bottom: 10px;">mdi-thumb-up</v-icon>
-                                    <span style="font-size: 25px;">20</span>
-                                  </div>
-                                </v-card>
-                              </v-hover>                              
-                            </template>
-                          </div>
-                          <div class="col-lg-6">
-                            <div>
-                              <h3 style="margin-bottom: 10px; border-bottom: solid 3px #FA60F4; padding-left: 15px; padding-bottom: 5px; margin-top: 0;">
-                                人気商品
-                                <div style="text-align: right;float:right;">                                                                                
-                                  <a href="#" style="font-size: 14px; color: black;">もっと見る＞</a>
-                                </div>
-                              </h3>            
-                            </div>                                            
-                            <template v-for="n of 3">
-                              <v-hover v-slot="{ hover }" :key="n">                                                                                      
-                                <v-card
-                                  :elevation="hover ? 8 : 2"
-                                  :class="{ 'on-hover': hover }"
-                                  style="margin-bottom: 24px; height: 140px"
-                                  tile
-                                >
-                                  <img
-                                    src="../../assets/img/tmp/20200920imuseeye.png"
-                                    alt="popular blog image"
-                                    style="width: 170px; margin: 0 5px; height: auto; max-height: 130px; position: absolute; top: 50%; transform: translateY(-50%);"
-                                  />
-                                  <div style="text-align: right; padding: 100px 10px 5px 0;">
-                                    <v-icon color="yellow" size="35" style="padding-bottom: 15px;">mdi-cursor-pointer</v-icon>
-                                    <span style="font-size: 20px;">CHECK!!</span>
-                                  </div>
-                                </v-card>
-                              </v-hover>
-                            </template>
-                          </div>
-                        </div>
-                      </el-tab-pane>
-                      <el-tab-pane label="Config">
-                        <div class="row">
-                          <div class="col-lg-6">
-                            <div>
-                              <h3 style="margin-bottom: 10px; border-bottom: solid 3px #FFFF00; padding-left: 15px; padding-bottom: 5px; margin-top: 0;">
-                                人気ブログ
-                                <div style="text-align: right;float:right;">                                                
-                                  <a href="/#/blog/blogList" style="font-size: 14px; color: black;">もっと見る＞</a>
-                                </div>
-                              </h3>   
-                            </div>
-                            <template v-for="n of 3">
-                              <v-hover v-slot="{ hover }" :key="n">                                                                                                                    
-                                <v-card
-                                  :elevation="hover ? 8 : 2"
-                                  :class="{ 'on-hover': hover }"
-                                  style="margin-bottom: 24px; height: 140px"
-                                  tile
-                                >
-                                  <img
-                                    src="../../assets/img/tmp/20200920cogevo.png"
-                                    alt="popular blog image"
-                                    style="width: 170px; margin: 0 5px; height: auto; max-height: 130px; position: absolute; top: 50%; transform: translateY(-50%);"
-                                  />
-                                  <div style="text-align: right; padding: 100px 10px 5px 0;">
-                                    <v-icon color="yellow" size="35" style="padding-bottom: 10px;">mdi-thumb-up</v-icon>
-                                    <span style="font-size: 25px;">20</span>
-                                  </div>
-                                </v-card>
-                              </v-hover>
-                            </template>
-                          </div>
+                      <el-tab-pane label="すべて">
+                        <PopularBlogAndProduct />
+                      </el-tab-pane>  
 
-                          <div class="col-lg-6">
-                            <div>
-                              <h3 style="margin-bottom: 10px; border-bottom: solid 3px #FA60F4; padding-left: 15px; padding-bottom: 5px; margin-top: 0;">
-                                人気商品
-                                <div style="text-align: right;float:right;">                                                                                
-                                  <a href="#" style="font-size: 14px; color: black;">もっと見る＞</a>
-                                </div>
-                              </h3>            
-                            </div>                                            
-                            <template v-for="n of 3">
-                              <v-hover v-slot="{ hover }" :key="n">                                                                                                                    
-                                <v-card
-                                  :elevation="hover ? 8 : 2"
-                                  :class="{ 'on-hover': hover }"
-                                  style="margin-bottom: 24px; height: 140px"
-                                  tile
-                                >
-                                  <img
-                                    src="../../assets/img/tmp/20200920oyasumi.png"
-                                    alt="popular blog image"
-                                    style="width: 170px; margin: 0 5px; height: auto; max-height: 130px; position: absolute; top: 50%; transform: translateY(-50%);"
-                                  />
-                                  <div style="text-align: right; padding: 100px 10px 5px 0;">
-                                    <v-icon color="yellow" size="35" style="padding-bottom: 15px;">mdi-cursor-pointer</v-icon>
-                                    <span style="font-size: 20px;">CHECK!!</span>
-                                  </div>
-                                </v-card>
-                              </v-hover>
-                            </template>
-                          </div>
-                        </div>
-                      </el-tab-pane>
-                      <el-tab-pane label="Role">
-                        <div class="row">
-                          <div class="col-lg-6">
-                            <div>
-                              <h3 style="margin-bottom: 10px; border-bottom: solid 3px #FFFF00; padding-left: 15px; padding-bottom: 5px; margin-top: 0;">
-                                人気ブログ
-                                <div style="text-align: right;float:right;">                                                
-                                  <a href="/#/blog/blogList" style="font-size: 14px; color: black;">もっと見る＞</a>
-                                </div>
-                              </h3>   
-                            </div>
-                            <template v-for="n of 3">
-                              <v-hover v-slot="{ hover }" :key="n">                                                                                                                    
-                                <v-card
-                                  :elevation="hover ? 8 : 2"
-                                  :class="{ 'on-hover': hover }"
-                                  style="margin-bottom: 24px; height: 140px"
-                                  tile
-                                >
-                                  <img
-                                    src="../../assets/img/tmp/20200920cd.jpg"
-                                    alt="popular blog image"
-                                    style="width: 170px; margin: 0 5px; height: auto; max-height: 130px; position: absolute; top: 50%; transform: translateY(-50%);"
-                                  />
-                                  <div style="text-align: right; padding: 100px 10px 5px 0;">
-                                    <v-icon color="yellow" size="35" style="padding-bottom: 10px;">mdi-thumb-up</v-icon>
-                                    <span style="font-size: 25px;">20</span>
-                                  </div>
-                                </v-card>
-                              </v-hover>
-                            </template>
-                          </div>
+                      <el-tab-pane label="見当識">
+                        <PopularBlogAndProduct />
+                      </el-tab-pane>  
 
-                          <div class="col-lg-6">
-                            <div>
-                              <h3 style="margin-bottom: 10px; border-bottom: solid 3px #FA60F4; padding-left: 15px; padding-bottom: 5px; margin-top: 0;">
-                                人気商品
-                                <div style="text-align: right;float:right;">                                                                                
-                                  <a href="#" style="font-size: 14px; color: black;">もっと見る＞</a>
-                                </div>
-                              </h3>            
-                            </div>                                            
-                            <template v-for="n of 3">
-                              <v-hover v-slot="{ hover }" :key="n">                                                                                                                                                  
-                                <v-card
-                                  :elevation="hover ? 8 : 2"
-                                  :class="{ 'on-hover': hover }"
-                                  style="margin-bottom: 24px; height: 140px"
-                                  tile
-                                >
-                                  <img
-                                    src="../../assets/img/tmp/20200920candle2.jpg"
-                                    alt="popular blog image"
-                                    style="width: 170px; margin: 0 5px; height: auto; max-height: 130px; position: absolute; top: 50%; transform: translateY(-50%);"
-                                  />
-                                  <div style="text-align: right; padding: 100px 10px 5px 0;">
-                                    <v-icon color="yellow" size="35" style="padding-bottom: 15px;">mdi-cursor-pointer</v-icon>
-                                    <span style="font-size: 20px;">CHECK!!</span>
-                                  </div>
-                                </v-card>
-                              </v-hover>
-                            </template>
-                          </div>
-                        </div>
-                      </el-tab-pane>
-                      <el-tab-pane label="Task">
-                        <div class="row">
-                          <div class="col-lg-6">
-                            <div>
-                              <h3 style="margin-bottom: 10px; border-bottom: solid 3px #FFFF00; padding-left: 15px; padding-bottom: 5px; margin-top: 0;">
-                                人気ブログ
-                                <div style="text-align: right;float:right;">                                                
-                                  <a href="/#/blog/blogList" style="font-size: 14px; color: black;">もっと見る＞</a>
-                                </div>
-                              </h3>   
-                            </div>
-                            <template v-for="n of 3">
-                              <v-hover v-slot="{ hover }" :key="n">                                                                                                                    
-                                <v-card
-                                  :elevation="hover ? 8 : 2"
-                                  :class="{ 'on-hover': hover }"
-                                  style="margin-bottom: 24px; height: 140px"
-                                  tile
-                                >
-                                  <img
-                                    src="../../assets/img/tmp/3352188_s.jpg"
-                                    alt="popular blog image"
-                                    style="width: 170px; margin: 0 5px; height: auto; max-height: 130px; position: absolute; top: 50%; transform: translateY(-50%);"
-                                  />
-                                  <div style="text-align: right; padding: 100px 10px 5px 0;">
-                                    <v-icon color="yellow" size="35" style="padding-bottom: 10px;">mdi-thumb-up</v-icon>
-                                    <span style="font-size: 25px;">20</span>
-                                  </div>
-                                </v-card>
-                              </v-hover>
-                            </template>
-                          </div>
+                      <el-tab-pane label="注意力">
+                        <PopularBlogAndProduct />
+                      </el-tab-pane>  
 
-                          <div class="col-lg-6">
-                            <div>
-                              <h3 style="margin-bottom: 10px; border-bottom: solid 3px #FA60F4; padding-left: 15px; padding-bottom: 5px; margin-top: 0;">
-                                人気商品
-                                <div style="text-align: right;float:right;">                                                                                
-                                  <a href="#" style="font-size: 14px; color: black;">もっと見る＞</a>
-                                </div>
-                              </h3>            
-                            </div>                                            
-                            <template v-for="n of 3">
-                              <v-hover v-slot="{ hover }" :key="n">                                                                                                                    
-                                <v-card
-                                  :elevation="hover ? 8 : 2"
-                                  :class="{ 'on-hover': hover }"
-                                  style="margin-bottom: 24px; height: 140px"
-                                  tile
-                                >
-                                  <img
-                                    src="../../assets/img/tmp/20200920kurumi.jpg"
-                                    alt="popular blog image"
-                                    style="width: 170px; margin: 0 5px; height: auto; max-height: 130px; position: absolute; top: 50%; transform: translateY(-50%);"
-                                  />
-                                  <div style="text-align: right; padding: 100px 10px 5px 0;">
-                                    <v-icon color="yellow" size="35" style="padding-bottom: 15px;">mdi-cursor-pointer</v-icon>
-                                    <span style="font-size: 20px;">CHECK!!</span>
-                                  </div>
-                                </v-card>
-                              </v-hover>
-                            </template>
-                          </div>
-                        </div>
-                      </el-tab-pane>
+                      <el-tab-pane label="記憶力">
+                        <PopularBlogAndProduct />
+                      </el-tab-pane>  
+
+                      <el-tab-pane label="計画力">
+                        <PopularBlogAndProduct />
+                      </el-tab-pane>  
+
+                      <el-tab-pane label="空間認識力">
+                        <PopularBlogAndProduct />
+                      </el-tab-pane>  
                     </el-tabs>
 
                     <!-- 認知機能基礎知識 -->
@@ -496,195 +124,18 @@
                       </li>
                     </ul>
 
-
+                    <!-- 認知機能学習コンテンツ -->
                     <div style="margin: 30px 0;">
-                      <div style="overflow: hidden; margin: 10px 0;">
-                        <v-card
-                          elevation="2"
-                          tile
-                          style="background-color: #FF7878; height: 220px; width: 20%; float: left;"
-                        >
-                          <p style="position: absolute; top: 50%; transform: translateY(-50%); margin: 0 10px; font-size: 18px;"><strong>認知機能とは？</strong><br />この章では認知機能を学びます</p>
-                        </v-card>
-                        <v-card
-                          elevation="2"
-                          tile
-                          style="background-color: #FFD4D4; height: 220px; margin-left: 5px; float: left; width: 78%;"
-                        >
-                          <div style="overflow: hidden;">
-                            <template v-for="n of 4">
-                              <div style="padding: 12px 5px; float: left;" :key="n">
-                                <v-hover v-slot="{ hover }">
-                                  <v-card
-                                    max-width="150px"
-                                    :elevation="hover ? 8 : 2"
-                                    :class="{ 'on-hover': hover }"
-                                    tile
-                                    style="margin-left: 5px;"
-                                  >
-                                    <v-img
-                                      height="100px"
-                                      src="https://cdn.vuetifyjs.com/images/cards/docks.jpg"
-                                    >
-                                    </v-img>
-                                    <v-card-title>Title</v-card-title>
-                                    <!-- <v-card-text class="text--primary">
-                                      <div>Whitehaven Beach</div>
-                                    </v-card-text> -->
-                                    <div style="text-align: right; margin: 5px 10px 5px 0;">
-                                      <v-icon color="yellow" size="35" style="padding-bottom: 5px; margin-right: 5px;">mdi-book-open</v-icon>
-                                      <span style="font-size: 15px;">READ MORE</span>
-                                    </div>
-                                  </v-card>
-                                </v-hover>
-                              </div>
-                            </template>
-                          </div>
-                        </v-card>
-                      </div>
-
-                      <div style="overflow: hidden; margin: 10px 0;">
-                        <v-card
-                          elevation="2"
-                          tile
-                          style="background-color: #90EE90; height: 220px; width: 20%; float: left;"
-                        >
-                          <p style="position: absolute; top: 50%; transform: translateY(-50%); margin: 0 10px; font-size: 18px;"><strong>認知機能を把握し<br />改善する方法</strong></p>                      
-                        </v-card>
-                        <v-card
-                          elevation="2"
-                          tile
-                          style="background-color: #DCFFDC; height: 220px; margin-left: 5px; float: left; width: 78%;"
-                        >
-                          <div style="overflow: hidden;">
-                            <template v-for="n of 4">
-                              <div style="padding: 12px 5px; float: left;" :key="n">
-                                <v-hover v-slot="{ hover }">
-                                  <v-card
-                                    max-width="150px"
-                                    :elevation="hover ? 8 : 2"
-                                    :class="{ 'on-hover': hover }"
-                                    tile
-                                    style="margin-left: 5px;"                                    
-                                  >
-                                    <v-img
-                                      height="100px"
-                                      src="https://cdn.vuetifyjs.com/images/cards/docks.jpg"
-                                    >
-                                    </v-img>
-                                    <v-card-title>Title</v-card-title>
-                                    <!-- <v-card-text class="text--primary">
-                                      <div>Whitehaven Beach</div>
-                                    </v-card-text> -->
-                                    <div style="text-align: right; margin: 5px 10px 5px 0;">
-                                      <v-icon color="yellow" size="35" style="padding-bottom: 5px; margin-right: 5px;">mdi-book-open</v-icon>
-                                      <span style="font-size: 15px;">READ MORE</span>
-                                    </div>
-                                  </v-card>
-                                </v-hover>
-                              </div>
-                            </template>
-                          </div>
-                        </v-card>
-                      </div>
-                      <div style="overflow: hidden; margin: 10px 0;">
-                        <v-card
-                          elevation="2"
-                          tile
-                          style="background-color: #8585FF; height: 220px; width: 20%; float: left;"
-                        >
-                          <p style="position: absolute; top: 50%; transform: translateY(-50%); margin: 0 10px; font-size: 18px;"><strong>認知機能とQOL</strong></p>                      
-                        </v-card>
-
-                        <v-card
-                          elevation="2"
-                          tile
-                          style="background-color: #ECECFF; height: 220px; margin-left: 5px; float: left; width: 78%;"
-                        >
-                          <div style="overflow: hidden;">
-                            <template v-for="n of 4">
-                              <div style="padding: 12px 5px; float: left;" :key="n">
-                                <v-hover v-slot="{ hover }">
-                                  <v-card
-                                    max-width="150px"
-                                    :elevation="hover ? 8 : 2"
-                                    :class="{ 'on-hover': hover }"
-                                    tile
-                                    style="margin-left: 5px;"                                    
-                                  >
-                                    <v-img
-                                      height="100px"
-                                      src="https://cdn.vuetifyjs.com/images/cards/docks.jpg"
-                                    >
-                                    </v-img>
-                                    <v-card-title>Title</v-card-title>                                    
-                                    <!-- <v-card-text class="text--primary">
-                                      <div>Whitehaven Beach</div>
-                                    </v-card-text> -->
-                                    <div style="text-align: right; margin: 5px 10px 5px 0;">
-                                      <v-icon color="yellow" size="35" style="padding-bottom: 5px; margin-right: 5px;">mdi-book-open</v-icon>
-                                      <span style="font-size: 15px;">READ MORE</span>
-                                    </div>
-                                  </v-card>
-                                </v-hover>
-                              </div>
-                            </template>
-                          </div>
-                        </v-card>
-                      </div>
+                      <CognitiveStudyContents Title="認知機能とは？" SubTitle="この章では認知機能を学びます" TitleBackgroundColor="#FF7878" ContentsBackgroundColor="#FFD4D4" />
+                      <CognitiveStudyContents Title="認知機能を把握し改善する方法" SubTitle="" TitleBackgroundColor="#90EE90" ContentsBackgroundColor="#DCFFDC" />
+                      <CognitiveStudyContents Title="認知機能とQOL" SubTitle="" TitleBackgroundColor="#8585FF" ContentsBackgroundColor="#ECECFF" />
                     </div>
-                    
-
-                    
                     
                     <!-- ボトムバナー -->
                     <div class="row">
-                      <div class="col-sm-4">
-                        <v-hover v-slot="{ hover }">
-                          <v-card
-                            max-width="100%"
-                            :elevation="hover ? 8 : 2"
-                            :class="{ 'on-hover': hover }"
-                            tile
-                          >
-                            <img
-                              style="max-width: 100%;"
-                              src="../../assets/img/tmp/20200920orunitin.png"
-                            />
-
-                          </v-card>
-                        </v-hover>
-                      </div>
-                      <div class="col-sm-4">
-                        <v-hover v-slot="{ hover }">
-                          <v-card
-                            max-width="100%"
-                            :elevation="hover ? 8 : 2"
-                            :class="{ 'on-hover': hover }"
-                            tile
-                          >
-                            <img
-                              style="max-width: 100%;"
-                              src="../../assets/img/tmp/20200920sitorurin.png"
-                            />
-                          </v-card>
-                        </v-hover>
-                      </div>
-                      <div class="col-sm-4">
-                        <v-hover v-slot="{ hover }">
-                          <v-card
-                            max-width="100%"
-                            :elevation="hover ? 8 : 2"
-                            :class="{ 'on-hover': hover }"
-                            tile
-                          >
-                            <img
-                              style="max-width: 100%;"
-                              src="../../assets/img/tmp/20200920orunitinplus.png"
-                            />
-                          </v-card>
-                        </v-hover>
-                      </div>
+                      <TopBottomBanner :bannerImage="bottomBannerImage1" />
+                      <TopBottomBanner :bannerImage="bottomBannerImage2" />
+                      <TopBottomBanner :bannerImage="bottomBannerImage3" />
                     </div>
                   </div>
 
@@ -932,23 +383,12 @@
                   </v-col>
                 </v-row>
               </v-footer>
-
-
             </div>
             <!-- /.content -->
           </div>
           <!-- /.main-inner -->
         </div>
         <!-- /.main -->
-
-
-
-
-
-
-
-
-
       </div>
       <!-- /.page-wrapper -->
     </body>
@@ -956,6 +396,13 @@
 </template>
 
 <script>
+import TopNewInfoCards from "./components/TopNewInfoCards";
+import TopNewInfoTitle from "./components/TopNewInfoTitle";
+import PopularBlogAndProduct from "./components/PopularBlogAndProduct";
+import CognitiveStudyContents from "./components/CognitiveStudyContents";
+import TopBottomBanner from "./components/TopBottomBanner";
+import TopInformationModal from "./components/TopInformationModal";
+
 export default {
   data() {
     return {
@@ -963,9 +410,21 @@ export default {
       blogList: [],
       isModalShow: false,
       sliderImages: [require('../../assets/img/tmp/20200920rutein.png'), require('../../assets/img/tmp/20200920tbcwebinar.png'), require('../../assets/img/tmp/20200920amino.png'), require('../../assets/img/tmp/20200920tbcseminar.png')],
+      bottomBannerImage1: require('../../assets/img/tmp/20200920orunitin.png'),
+      bottomBannerImage2: require('../../assets/img/tmp/20200920sitorurin.png'),
+      bottomBannerImage3: require('../../assets/img/tmp/20200920orunitinplus.png'),
       links: ['ホーム', '認知概要', '認知測定', 'ブログ', '行動管理', 'ヘルプ'],
-      activeName: 'first'
+      activeName: 'first',
+      informationDetail: {}
     };
+  },
+  components: {
+    TopNewInfoCards,
+    TopNewInfoTitle,
+    PopularBlogAndProduct,
+    CognitiveStudyContents,
+    TopBottomBanner,
+    TopInformationModal
   },
   mounted() {
     this.fetchInformations();
@@ -995,10 +454,14 @@ export default {
         console.log("err:", err);
       }
     },
-    sohwInfoModal: function($event) {
+    sohwInfoModal: function($event, information) {
       $event.preventDefault();
+      this.informationDetail = information;
       this.isModalShow = true;
     },
+    emitCloseModal(status) {
+      this.isModalShow = status;
+    }
   },
 };
 </script>
