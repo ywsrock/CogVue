@@ -34,7 +34,7 @@ const UserActionMaster = sequelize.define("UserActionMaster", {
 }, {
     timestamps: false,
     createdAt: false,
-    tableName: 'tb_useractionMaster',
+    tableName: 'tb_useractionmaster',
     modelName: 'UserActionMaster'
 })
 

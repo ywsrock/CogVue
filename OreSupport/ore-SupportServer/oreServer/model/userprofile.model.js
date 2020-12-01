@@ -115,7 +115,7 @@ const UserProfile = sequelize.define('UserProfile', {
     allowNull: true
   }
 }, {
-  tableName: "TB_USERPROFILE", //　Maping　テーブル名指定
+  tableName: "tb_userprofile", //　Maping　テーブル名指定
   modelName: "UserProfile", // モデル名指定
   timestamps: false,　 // モデルに変更tamestamp カラム自動追加禁止
 });
