@@ -84,7 +84,7 @@ CREATE TABLE `tb_information` (
   `From` datetime NOT NULL COMMENT 'From',
   `To` datetime NOT NULL COMMENT 'To',
   PRIMARY KEY (`ID`)
-) ENGINE=InnoDB DEFAULT CHARSET=latin1;
+) ENGINE=InnoDB DEFAULT CHARSET=utf8mb4;
 /*!40101 SET character_set_client = @saved_cs_client */;
 
 
