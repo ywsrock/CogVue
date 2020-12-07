@@ -8,6 +8,50 @@ export function isExternal(path) {
 }
 
 /**
+ * @param password String
+ * @returns Boolean
+ */
+export function validPasswd(password) {
+  return /^(?=.*[a-z])(?=.*[A-Z])(?=.*\d)(?=.*[@$!%*?&])[A-Za-z\d@$!%*?&]{6,10}$/.test(password)
+}
+
+/**
+ * @param str String
+ * @returns Boolean
+ * @describe 少なくとも1つの大文字英字
+ */
+export function validUpper(password) {
+  return /^(?=.*[A-Z])$/.test(password)
+}
+
+/**
+ * @param str String
+ * @returns Boolean
+ * @describe 少なくとも1つの小文字の英字
+ */
+export function validLower(password) {
+  return /^(?=.*[a-z])$/.test(password)
+}
+
+/**
+ * @param str String
+ * @returns Boolean
+ * @describe 少なくとも1桁
+ */
+export function validNumber(password) {
+  return /^(?=.*\d)$/.test(password)
+}
+
+/**
+ * @param str String
+ * @returns Boolean
+ * @describe 少なくとも1つの特殊文字
+ */
+export function validSymbol(password) {
+  return /^(?=.*[@$!%*?&])$/.test(password)
+}
+
+/**
  * @param str String
  * @returns Boolean
  */
