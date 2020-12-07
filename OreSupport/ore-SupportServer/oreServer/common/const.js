@@ -18,6 +18,9 @@ const STATUS_MESSAGE = {
     LOGIN_ERROR_408: "入力された情報を確認してください。",
     CODE_401: 409,
     LOGIN_ERROR_409: "送信失敗しました。メールアドレスを確認してください。",
+    LIKE_CREATE_ERROR: "いいね登録失敗",
+    LIKE_QUERY_ERROR: "いいね取得失敗",
+    LIKE_DESTROY_ERROR: "いいね削除失敗",
 }
 
 

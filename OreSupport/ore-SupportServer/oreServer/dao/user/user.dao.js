@@ -136,6 +136,8 @@ const getUserProfileByUserID = async (queryInfo) => {
 
         // 関連検索
         const user = await User.findOne({
+            
+
             where: {
                 [Op.and]: [{
                     [queryInfo.key]: queryInfo.val
@@ -144,7 +146,8 @@ const getUserProfileByUserID = async (queryInfo) => {
                 ]
             },
             include: UserProfile, //　プリロードモード
-            attributes: { exclude: ['Password'] }
+            attributes: { exclude: ['Password'] },
+            // attributes:[[sequelize.fn(('TIMESTAMPDIFF'), 'YEAR', sequelize.col('Birthday'), sequelize.fn('CURDATE')), 'age']],
         });
         log.info(`END getUserProfileByUserID`)
         return user;

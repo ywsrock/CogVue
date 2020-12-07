@@ -39,7 +39,7 @@ const Information = sequelize.define(
     },
   },
   {
-    tableName: "TB_INFORMATION", //　Maping　テーブル名指定
+    tableName: "tb_information", //　Maping　テーブル名指定
     modelName: "Information", // モデル名指定
     timestamps: false, // モデルに変更tamestamp カラム自動追加禁止
   }

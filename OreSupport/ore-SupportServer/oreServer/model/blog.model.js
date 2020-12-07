@@ -29,10 +29,18 @@ const Blog = sequelize.define('Blog', {
         type: Sequelize.TEXT,
         allowNull: true,
         comment: "Content"
-    }
-
+    },
+    BlogImage: {
+        type: Sequelize.STRING,
+        allowNull: true
+    },
+    Timestamp: {
+        type: Sequelize.STRING,
+        allowNull: true,
+        comment: "投稿日付"
+    },
 }, {
-    tableName: "Tb_Blog", //　Maping　テーブル名指定
+    tableName: "tb_blog", //　Maping　テーブル名指定
     modelName: "Blog", // モデル名指定
     timestamps: false,　 // モデルに変更tamestamp カラム自動追加禁止
 });

@@ -36,7 +36,17 @@ Comment1:{
     type: Sequelize.TEXT,
     allowNull: true,
     comment: "Comment1"
-}
+},
+commentName:{
+    type: Sequelize.TEXT,
+    allowNull: true,
+    comment: "commentName"
+},
+Timestamp: {
+    type: Sequelize.STRING,
+    allowNull: true,
+    comment: "更新日付"
+},
 
 }, {
     tableName: "tb_comment", //　Maping　テーブル名指定
