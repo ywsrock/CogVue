@@ -73,8 +73,10 @@
                   </div>
                 </el-form>
                 <span
-                  ><a href @click.prevent="handleRestPasswd()"
-                    >メールアドレスを忘れた場合</a
+                  >パスワードを忘れた方は<a
+                    href
+                    @click.prevent="handleRestPasswd()"
+                    >こちら</a
                   ></span
                 >
 
@@ -103,7 +105,7 @@
 </template>
 
 <script>
-import { validUsername } from "@/utils/validate";
+import { validUsername, validPasswd } from "@/utils/validate";
 import SocialSign from "./components/SocialSignin";
 export default {
   name: "Login",
@@ -119,6 +121,12 @@ export default {
     const validatePassword = (rule, value, callback) => {
       if (value.length < 6) {
         callback(new Error("パスワード6桁以上を設定していくだいさ。"));
+      } else if (!validPasswd(value)) {
+        callback(
+          new Error(
+            "最小6文字、最大10文字、少なくとも1つの大文字、1つの小文字、1つの数字、および1つの特殊文字"
+          )
+        );
       } else {
         callback();
       }

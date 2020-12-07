@@ -66,7 +66,6 @@
                               label="生年月日"
                               required
                               readonly
-                              @click.prevent="menu1 = true"
                             ></v-text-field>
                           </v-col>
                           <v-col>
@@ -96,18 +95,13 @@
                           </v-col>
                         </v-row>
                       </validation-provider>
-                      <!--<div class="float-right">-->
-                      <v-btn
-                        class="mr-4 text-h5"
-                        type="submit"
-                        :disabled="invalid"
-                      >
+
+                      <v-btn class="mr-4" type="submit" :disabled="invalid">
                         送信
                       </v-btn>
-                      <v-btn @click="clear" class="text-h5 ">
+                      <v-btn @click="clear">
                         戻る
                       </v-btn>
-                      <!--</div>-->
                     </form>
                   </validation-observer>
                 </div>
