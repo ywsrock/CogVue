@@ -68,8 +68,14 @@
                             <a href="#">
                               <img
                                 :src="blogImg"
+                                v-if="!isDefault"
                                 @error="defaultBlogImg"
                                 alt="User Photo"
+                              />
+                              <img
+                                :src="defaultsrc"
+                                v-if="isDefault"
+                                alt="Default Photo"
                               />
                               <input
                                 ref="upfile"
@@ -78,6 +84,13 @@
                                 accept=".jpg, .jpeg, .png"
                                 @change="onchange"
                               />
+                              <button
+                                id="file_photo"
+                                type="file"
+                                @click="imageDelete"
+                              >
+                                削除ボタン
+                              </button>
                             </a>
                           </div>
                         </div>
@@ -165,14 +178,13 @@
 
 <script>
 import { Message } from "element-ui";
-var img = require("../../../public/favicon.png");
+var img = require("../../../public/00_00.jpg");
 
 /* eslint-disable */
 export default {
   data() {
     return {
       blogDetail: {
-        id: "",
         id: "",
         title: "",
         content: "",
@@ -181,8 +193,17 @@ export default {
       },
       blogImg: "" || img,
       defaultsrc: img,
-      category: ["食事", "運動", "脳トレ", "音楽", "その他"],
+      category: [
+        "食事",
+        "サプリ",
+        "運動",
+        "脳トレ",
+        "音楽",
+        "社会参加",
+        "その他",
+      ],
       tags: ["サンマ", "マラソン", "モーツァルト", "パズル"],
+      isDefault: false,
     };
   },
   mounted() {
@@ -203,9 +224,33 @@ export default {
       });
   },
   methods: {
+    imageDelete: function(e) {
+      e.preventDefault();
+      this.isDefault = true;
+      this.blogDetail.blogimage = "";
+      this.blogDetail.filename = "";
+
+      // this.blogImg = img;
+      // this.$store
+      //   .dispatch("blog/imageDelete", this.$route.query.id)
+      //   .then((res) => {
+      //     Message({
+      //       message: "削除しました",
+      //       type: "success",
+      //       duration: 5 * 1000,
+      //     });
+      //   })
+      //   .catch((error) => {
+      //     e.target.disabled = false;
+      //     console.log(error.data);
+      //     console.log("失敗しました");
+      //   });
+    },
+
     defaultBlogImg: function() {
       return this.defaultsrc;
     },
+
     onchange: function(e) {
       e.preventDefault();
       const files = e.target.files;
@@ -222,21 +267,19 @@ export default {
     blogUpdate: function(e) {
       // 二重コミット防止のため、ボタンを非活性
       e.target.disabled = true;
-      // // 全項目チェック、問題なければ、登録処理を行う
-      // const isValid = this.validate(this.registForm, this.rules);
-      // if (!isValid) {
-      // ユーザ登録処理
-      //console.log(`val = ${JSON.stringify(this.$route.query.id)}`);
       let that = this;
-      let fl = this.$refs.upfile.files[0];
+      // let fl = this.$refs.upfile.files[0];
       //Content-Type:form/multipart で送信されます
       let data = new FormData();
-      // data.append("key", value, parameter);
-      data.append(
-        "imgBlog",
-        this.blogDetail.blogimage,
-        this.blogDetail.filename
-      );
+
+      if (!this.isDefault) {
+        // data.append("key", value, parameter);
+        data.append(
+          "imgBlog",
+          this.blogDetail.blogimage,
+          this.blogDetail.filename
+        );
+      }
       data.append("blogDetail", JSON.stringify(this.blogDetail));
       this.$store
         .dispatch("blog/blogUpdate", data)

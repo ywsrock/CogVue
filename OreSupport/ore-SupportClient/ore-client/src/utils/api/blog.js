@@ -69,11 +69,18 @@ export function postComment(data) {
     })
 }
 
-
 export function searchBlog(data) {
     return request({
         url: '/blog/searchBlog',
         method: 'post',
         data
+    })
+}
+
+export function imageDelete(blogID) {
+    return request({
+        url: '/blog/imageDelete',
+        method: 'post',
+        params: { blogID }
     })
 }
