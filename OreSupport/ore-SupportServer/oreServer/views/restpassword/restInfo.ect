@@ -11,34 +11,91 @@
   </head>
 
   <body>
-    <div class="alert alert-primary" role="alert">パスワード変更dummy</div>
-    <p><%= @msg %></p>
-    <form action="/user/setPassword" method="POST">
-      <div class="form-group">
-        <label for="newPassword">新パスワード</label>
-        <input
-          type="password"
-          class="form-control"
-          id="newPassword"
-          name="newPassword"
-          placeholder="Password"
-          required
-        />
+    <div
+      class="d-flex align-items-center justify-content-center alert alert-success h4"
+      role="alert"
+    >
+      パスワード再設定
+    </div>
+    <div class="main-inner">
+      <div class="container">
+        <div class="content">
+          <div class="orig-row">
+            <div class="col-sm-11">
+              <p id="errMSG" name="errMSG" style="color: red"></p>
+              <form action="/user/setPassword" method="POST" id="passForm">
+                <div class="form-group">
+                  <label for="newPassword">新パスワード</label>
+                  <input
+                    type="password"
+                    class="form-control"
+                    id="newPassword"
+                    name="newPassword"
+                    placeholder="新パスワード"
+                    minlength="6"
+                    maxlength="16"
+                    required
+                  />
+                </div>
+                <div class="form-group">
+                  <label for="newPassword1">新しいパスワード（確認用)</label>
+                  <input
+                    type="password"
+                    class="form-control"
+                    id="newPassword1"
+                    name="newPassword1"
+                    placeholder="確認パスワード"
+                    minlength="6"
+                    maxlength="16"
+                    required
+                  />
+                </div>
+                <input type="hidden" id="key" name="key" value="<%= @key %>" />
+                <button type="submit" id="submit" class="btn btn-primary">
+                  変更
+                </button>
+                <button type="reset" class="btn btn-secondary">取消</button>
+              </form>
+            </div>
+            <div class="orig-row">
+              <div class="list-group mt-5 col-sm-11">
+                <button
+                  type="button"
+                  class="list-group-item list-group-item-action list-group-item-success"
+                >
+                  パスワードポリシー
+                </button>
+                <button
+                  type="button"
+                  class="list-group-item list-group-item-action"
+                >
+                  ①　6桁以上、16桁以下の英数字
+                </button>
+                <button
+                  type="button"
+                  class="list-group-item list-group-item-action"
+                >
+                  ②　最低1つの大文字の英字
+                </button>
+                <button
+                  type="button"
+                  class="list-group-item list-group-item-action"
+                >
+                  ③　「@ $ ! % * ? & 」いずれの符号を含む
+                </button>
+                <button
+                  type="button"
+                  class="list-group-item list-group-item-action"
+                >
+                  ④　最低1つの数字
+                </button>
+              </div>
+            </div>
+          </div>
+        </div>
       </div>
-      <div class="form-group">
-        <label for="newPassword1">新しいパスワード（確認用)</label>
-        <input
-          type="password"
-          class="form-control"
-          id="newPassword1"
-          name="newPassword1"
-          placeholder="Password1"
-          required
-        />
-      </div>
-      <input type="hidden" id="key" name="key" value="<%= @key %>" />
-      <button type="submit" class="btn btn-primary">Submit</button>
-    </form>
+    </div>
+
     <script
       src="https://code.jquery.com/jquery-3.2.1.slim.min.js"
       integrity="sha384-KJ3o2DKtIkvYIK3UENzmM7KCkRr/rE9/Qpg6aAZGJwFDMVNA/GpGFF93hXpG5KkN"
@@ -54,5 +111,55 @@
       integrity="sha384-JZR6Spejh4U02d8jOt6vLEHfe/JQGiRRSQQxSfFWpi1MquVdAyjUar5+76PVCmYl"
       crossorigin="anonymous"
     ></script>
+
+    <script>
+      $(document).ready(function () {
+        $("#newPassword").focus();
+
+        var checkPwd = function (event) {
+          var check_password = $("#newPassword").val();
+          var isMatch = /^(?=.*[a-z])(?=.*[A-Z])(?=.*\d)(?=.*[@$!%*?&])[A-Za-z\d@$!%*?&]{6,16}$/.test(
+            check_password
+          );
+          if (isMatch) {
+            $("#errMSG").text("");
+            $("#newPassword").css("background-color", "");
+            return true;
+          } else {
+            $("#errMSG").text(
+              "正しくパスワード入力してください。（ポリシー確認）"
+            );
+            $("#newPassword").focus();
+            $("#newPassword").css("background-color", "orange");
+            return false;
+          }
+        };
+        var checkPwd1 = function () {
+          if ($("#newPassword").val() !== $("#newPassword1").val()) {
+            $("#errMSG").text("確認パスワードと新パスワード不一致");
+            $("#newPassword1").focus();
+            $("#newPassword1").css("background-color", "orange");
+            return false;
+          } else {
+            $("#errMSG").text();
+            $("#newPassword1").css("background-color", "");
+            return true;
+          }
+        };
+
+        $("#newPassword").blur(checkPwd);
+        $("#newPassword1").blur(checkPwd1);
+
+        $("#passForm").submit(function (event) {
+          event.preventDefault;
+          if (checkPwd() && checkPwd1()) {
+            $("#errMSG").text();
+            return true;
+          } else {
+            return false;
+          }
+        });
+      });
+    </script>
   </body>
 </html>
