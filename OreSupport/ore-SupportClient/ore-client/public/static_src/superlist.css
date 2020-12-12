@@ -12905,24 +12905,24 @@ h2.widgettitle {
 .detail-banner:before {
   background: -webkit-linear-gradient(
     to right,
-    rgba(0, 0, 0, 0.3) -10%,
-    rgba(0, 0, 0, 0.5) 20%,
-    rgba(0, 0, 0, 0.5) 40%,
-    transparent 80%
+    rgba(68, 68, 68, 1) 100%,
+    rgba(68, 68, 68, 1) 100%,
+    rgba(68, 68, 68, 1) 100%,
+    transparent 100%
   );
   background: -moz-linear-gradient(
     to right,
-    rgba(0, 0, 0, 0.3) -10%,
-    rgba(0, 0, 0, 0.5) 20%,
-    rgba(0, 0, 0, 0.5) 40%,
-    transparent 80%
+    rgba(68, 68, 68, 1) 100%,
+    rgba(68, 68, 68, 1) 100%,
+    rgba(68, 68, 68, 1) 100%,
+    transparent 100%
   );
   background: linear-gradient(
     to right,
-    rgba(0, 0, 0, 0.3) -10%,
-    rgba(0, 0, 0, 0.5) 20%,
-    rgba(0, 0, 0, 0.5) 40%,
-    transparent 80%
+    rgba(68, 68, 68, 1) 100%,
+    rgba(68, 68, 68, 1) 100%,
+    rgba(68, 68, 68, 1) 100%,
+    transparent 100%
   );
   bottom: 0px;
   content: "";
@@ -12989,8 +12989,8 @@ h2.widgettitle {
   color: #fff;
   display: inline-block;
   margin-top: 20px;
-  margin-right: 20px;
-  padding: 9px 15px;
+  margin-right: 10px;
+  padding: 9px 10px;
   cursor: pointer;
   transition: all linear 0.15s;
 }

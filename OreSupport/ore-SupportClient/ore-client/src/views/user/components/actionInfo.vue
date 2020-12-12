@@ -210,6 +210,7 @@ extend("actionTerm", {
 });
 
 export default {
+  name: "actionInfo",
   components: {
     ActionList,
     ActionCalendar,
@@ -250,11 +251,19 @@ export default {
         }
       },
     },
+    creatOpen: {
+      handler: function(newV) {
+        // if (newV !== oldV) {
+        this.$refs.child.creatOpen = newV;
+        // }
+      },
+    },
     deep: true,
     immediate: true,
   },
   data() {
     return {
+      creatOpen: false,
       //カレンダー日付属性設定
       dateProps: {
         headerColor: "red",

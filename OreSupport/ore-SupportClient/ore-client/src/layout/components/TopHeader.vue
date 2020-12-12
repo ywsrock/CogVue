@@ -131,13 +131,13 @@
 
                 <ul class="sub-menu">
                   <li>
-                    <!--<a href @click.prevent.stop="blockClick(1)"></a>-->
+                    <!--<a href @click.prevent.stop="blogClick(1)"></a>-->
                   </li>
                   <li>
-                    <a href @click.prevent.stop="blockClick(1)">検索</a>
+                    <a href @click.prevent.stop="blogClick(1)">検索</a>
                   </li>
                   <li>
-                    <a href @click.prevent.stop="blockClick(2)">新規投稿</a>
+                    <a href @click.prevent.stop="blogClick(2)">新規投稿</a>
                   </li>
                 </ul>
               </li>
@@ -150,10 +150,10 @@
 
                 <ul class="sub-menu">
                   <li>
-                    <a href @click.prevent.stop="blockClick(1)">行動履歴 </a>
+                    <a href @click.prevent.stop="actionClick(1)">行動履歴 </a>
                   </li>
                   <li>
-                    <a href @click.prevent.stop="blockClick(2)"
+                    <a href @click.prevent.stop="actionClick(2)"
                       >行動登録/削除</a
                     >
                   </li>
@@ -367,11 +367,23 @@ export default {
       }
     },
     // ブログ
-    blockClick: function(index) {
+    blogClick: function(index) {
       switch (index) {
         //検索
         case 1:
           this.$router.push("/blog/blogList");
+          break;
+        //新規
+        default:
+          this.$router.push("/blog/createBlog");
+      }
+    },
+    // アクション管理
+    actionClick: function(index) {
+      switch (index) {
+        //検索
+        case 1:
+          this.$router.push("/action/userAction");
           break;
         //新規
         default:

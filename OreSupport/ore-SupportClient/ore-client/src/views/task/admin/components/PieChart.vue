@@ -54,6 +54,15 @@ export default {
       this.chart = echarts.init(this.$el, "macarons");
 
       this.chart.setOption({
+        title: {
+          text: "ユーザ全体の利用割合",
+          subtext: "年齢層",
+          left: "center",
+          textStyle: {
+            color: "#212121",
+            fontWeight: "bold",
+          },
+        },
         tooltip: {
           trigger: "item",
           formatter: "{a} <br/>{b} : {c} ({d}%)",
@@ -61,15 +70,21 @@ export default {
         legend: {
           left: "center",
           bottom: "10",
-          data: ["記憶力", "見当識", "空間把握力", "計画力", "注意力"],
+          data: ["20", "30", "40", "50", "60", "70", "80", "90"],
         },
         series: [
           {
-            name: "認知機能測定点数",
+            name: "ユーザ全体の利用割合",
             type: "pie",
+            // label: {
+            //   normal: {
+            //     formatter: "{c}",
+            //     position: "inside",
+            //   },
+            // },
             roseType: "radius",
-            radius: [15, 95],
-            center: ["50%", "38%"],
+            // radius: [15, 95],
+            radius: "50%",
             data: this.chartDate,
             animationEasing: "cubicInOut",
             animationDuration: 2600,

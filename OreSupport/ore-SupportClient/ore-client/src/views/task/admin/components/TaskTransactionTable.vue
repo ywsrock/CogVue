@@ -5,7 +5,7 @@
     max-height="450px"
     height="450"
   >
-    <el-table-column label="トレーニング日" align="center" width="100px">
+    <el-table-column label="トレーニング日" align="center">
       <template slot-scope="scope">
         {{ scope.row.created_at }}
       </template>

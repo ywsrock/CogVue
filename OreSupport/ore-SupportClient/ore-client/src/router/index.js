@@ -2,6 +2,7 @@ import Vue from "vue";
 import VueRouter from "vue-router";
 import userRouter from "./user/userRouter";
 import taskRouter from "./task/taskRouter";
+import actionRouter from "./action/actionRouter";
 import knowledgeRouter from "./knowledge/knowledgeRouter";
 import blogRouter from "./blog/blogRouter";
 import top from "@/views/user/UserInfo.vue";
@@ -66,6 +67,8 @@ const routes = [
   //基本知識
   knowledgeRouter,
   solutionRouter,
+  //行動管理
+  actionRouter
 ];
 const createRouter = () =>
   new VueRouter({

@@ -47,21 +47,21 @@
                         >平均指数：{{ averageIndex }}</span
                       >
                     </div>
-
                     <!-- /.detail-claim -->
                   </div>
                   <!-- /.detail-banner-left -->
                 </div>
+
                 <!-- /.container -->
               </div>
               <!-- /.detail-banner -->
             </div>
-            <div class="row float-right">
+            <div class="form-group max-width">
               <v-btn
                 tile
                 color="green"
                 height="20px"
-                class="white--text"
+                class="float-right white--text text-h5"
                 @click="refreshData()"
               >
                 <v-icon left>
@@ -72,9 +72,9 @@
             </div>
             <div class="container">
               <div class="orig-row detail-content">
-                <div class="col-sm-6">
+                <div class="col-sm-4">
                   <div class="detail-gallery">
-                    <h2>
+                    <h2 class="text-h4">
                       【傾向】
                       <span class="text-secondary">5種バランスの指数平均</span>
                     </h2>
@@ -88,9 +88,9 @@
                   <!-- /.detail-gallery -->
                 </div>
                 <!-- /.col-sm-7 -->
-
-                <div class="col-sm-6">
-                  <h2>
+                <!--評価-->
+                <div class="col-sm-4">
+                  <h2 class="text-h4">
                     【評価】
                     <span class="text-secondary">総合サマリー</span>
                   </h2>
@@ -258,12 +258,12 @@
               </div>
               <!--時系列Line-->
               <div class="orig-row detail-content">
-                <h2>
+                <h2 class="text-h4">
                   【推移】
                   <span class="text-secondary">認知機能バランス値</span>
                 </h2>
                 <div class="chart-wrapper">
-                  <div class="background-white p20">
+                  <div class="col-8 background-white p30">
                     <!-- Nav tabs -->
                     <ul
                       id="listing-detail-location"
@@ -315,6 +315,7 @@
                           <line-chart
                             :chart-data="lineChartData"
                             height="450px"
+                            dateFmt="yyyy"
                           />
                         </div>
                       </div>
@@ -331,6 +332,7 @@
                           <line-chart
                             :chart-data="lineChartData"
                             height="450px"
+                            dateFmt="yyyy/mm"
                           />
                         </div>
                       </div>
@@ -347,6 +349,7 @@
                           <line-chart
                             :chart-data="lineChartData"
                             height="450px"
+                            dateFmt="yyyy年第W週"
                           />
                         </div>
                       </div>
@@ -357,12 +360,12 @@
               </div>
               <!--履歴データ表示-->
               <div class="orig-row detail-content">
-                <h2>
+                <h2 class="text-h4">
                   【トレーニング履歴】
                   <span class="text-secondary">最新20利用日</span>
                 </h2>
-                <div class="chart-wrapper">
-                  <div class="background-white p20">
+                <div class="col-8 chart-wrapper">
+                  <div class="background-white p30 overflow-auto">
                     <transaction-table :chartData="TransactionData" v-cloak />
                   </div>
                 </div>
@@ -668,8 +671,8 @@ export default {
 }
 
 .quiz-medal {
-  margin: 10px 0 0 30px;
-  width: 40px;
+  margin: auto 0 0 6%;
+  width: 8%;
 }
 // CSS reset END
 
