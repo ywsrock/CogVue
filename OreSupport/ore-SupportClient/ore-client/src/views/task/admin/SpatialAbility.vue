@@ -105,12 +105,12 @@
               </div>
               <!-- /.detail-banner -->
             </div>
-            <div class="row float-right">
+            <div class="form-group max-width">
               <v-btn
                 tile
                 color="green"
                 height="20px"
-                class="white--text"
+                class="float-right white--text text-h5"
                 @click="refreshData()"
               >
                 <v-icon left>

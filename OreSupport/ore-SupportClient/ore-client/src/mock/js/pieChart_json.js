@@ -4,11 +4,15 @@ import Mock from "mockjs"
 // summary画面表示用データ
 export const pieChart = {
     pieChartData: [
-        { value: Mock.Random.integer(10, 200), name: "記憶力" },
-        { value: Mock.Random.integer(10, 200), name: "見当識" },
-        { value: Mock.Random.integer(10, 200), name: "空間把握力" },
-        { value: Mock.Random.integer(10, 200), name: "計画力" },
-        { value: Mock.Random.integer(10, 200), name: "注意" },
+        { value: Mock.Random.integer(10, 200), name: "20" },
+        { value: Mock.Random.integer(10, 200), name: "30" },
+        { value: Mock.Random.integer(10, 200), name: "40" },
+        { value: Mock.Random.integer(10, 200), name: "50" },
+        { value: Mock.Random.integer(10, 200), name: "60" },
+        { value: Mock.Random.integer(10, 200), name: "70" },
+        { value: Mock.Random.integer(10, 200), name: "80" },
+        { value: Mock.Random.integer(10, 200), name: "90" },
+        { value: Mock.Random.integer(10, 200), name: "100" },
     ]
 }
 

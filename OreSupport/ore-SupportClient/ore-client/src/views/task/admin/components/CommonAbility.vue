@@ -1,15 +1,15 @@
 <template>
   <div>
     <div class="orig-row detail-content">
-      <div class="col-sm-7">
+      <div class="col-sm-4">
         <!--時系列Line-->
         <div class="orig-row detail-content">
-          <h2>
+          <h2 class="text-h4">
             【推移】
             <span class="text-secondary">{{ task_name }}</span>
           </h2>
-          <div class="chart-wrapper overflo-div-height450">
-            <div class="background-white p20">
+          <div class="chart-wrapper overflo-div-height450 overflow-auto">
+            <div class="background-white p-5">
               <!-- Nav tabs -->
               <ul
                 id="listing-detail-location"
@@ -62,6 +62,7 @@
                       :chart-data="lineChartData"
                       :proplegendData="task_name"
                       :key="task_name"
+                      dateFmt="yyyy"
                     />
                   </div>
                 </div>
@@ -78,6 +79,7 @@
                     <line-chart
                       :chart-data="lineChartData"
                       :proplegendData="task_name"
+                      dateFmt="yyyy/mm"
                     />
                   </div>
                 </div>
@@ -89,11 +91,13 @@
                   v-if="activeObj.isActiveW"
                   id="simple-week-panel"
                   key="week"
+                  dateFmt="W"
                 >
                   <div class="detail-map">
                     <line-chart
                       :chart-data="lineChartData"
                       :proplegendData="task_name"
+                      dateFmt="yyyy年第W週"
                     />
                   </div>
                 </div>
@@ -105,8 +109,8 @@
       </div>
       <!-- /.col-sm-7 -->
 
-      <div class="col-sm-5">
-        <h2>
+      <div class="col-sm-4">
+        <h2 class="text-h4">
           【{{ abilityName }}】
           <span class="text-secondary">{{ task_name }} </span>
         </h2>
@@ -310,12 +314,12 @@
 
     <!--履歴データ表示-->
     <div class="orig-row detail-content">
-      <h2>
+      <h2 class="text-h4">
         【最近の記録】
         <span class="text-secondary">{{ task_name }}</span>
       </h2>
       <div class="chart-wrapper">
-        <div class="background-white p20">
+        <div class="background-white p10 overflow-auto">
           <transaction-table :chartData="recents" v-cloak :key="task_name" />
         </div>
       </div>
@@ -368,6 +372,15 @@ export default {
           this.dataObj = showDataObj;
           // 時系列データ
           // this.lineChartData = showDataObj.cardPazulData.lineChartData.yearData;
+          // LineChartデータ取得
+          this.$http.get("/api/personal/CogEvo/summary").then(
+            (res) => {
+              this.lineChartData = res.data.lineChartData.yearData;
+            },
+            (error) => {
+              console.log(error);
+            }
+          );
           // 履歴データ
           this.recents = showDataObj.cardPazulData.recents;
           // チャートlegendData
@@ -492,9 +505,10 @@ export default {
 }
 
 .quiz-rank_count_ {
-  margin: 10px 0 0 30px;
-  width: 40px;
+  margin: auto 0 0 6%;
+  width: 8%;
 }
+
 // CSS reset END
 
 $gold-rank_count_: #f9ad0e;

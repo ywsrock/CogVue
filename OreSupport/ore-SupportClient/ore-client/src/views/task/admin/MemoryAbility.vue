@@ -36,6 +36,7 @@
                     <!-- /.detail-banner-rating -->
 
                     <!-- /.detail-claim -->
+
                     <div
                       class="detail-banner-btn heart"
                       :class="{ tabaAtive: activeTabObj.isTab1 }"
@@ -47,6 +48,7 @@
                         style=" display: inline-block;width:200px"
                         >フラッシュライト 【{{ abilityName }}】</span
                       >
+
                       <div class="detail-banner-rating">
                         <i class="detail-verified" style="float:left"
                           >{{ star_0 }}級</i
@@ -56,7 +58,7 @@
                       </div>
                     </div>
                     <div
-                      class="detail-banner-btn heart"
+                      class="detail-banner-btn heart "
                       :class="{ tabaAtive: activeTabObj.isTab2 }"
                       @click="tabclickHand(2)"
                     >
@@ -75,7 +77,7 @@
                       </div>
                     </div>
                     <div
-                      class="detail-banner-btn heart"
+                      class="detail-banner-btn heart "
                       :class="{ tabaAtive: activeTabObj.isTab3 }"
                       @click="tabclickHand(3)"
                     >
@@ -101,12 +103,12 @@
               </div>
               <!-- /.detail-banner -->
             </div>
-            <div class="row float-right">
+            <div class="form-group max-width">
               <v-btn
                 tile
                 color="green"
                 height="20px"
-                class="white--text"
+                class="float-right white--text text-h5"
                 @click="refreshData()"
               >
                 <v-icon left>

@@ -95,6 +95,12 @@
                         >
                       </v-list-item>
                       <v-divider></v-divider>
+                      <v-list-item @click="startTime(clicktms)">
+                        <v-list-item-title class="text-h5"
+                          >新規作成</v-list-item-title
+                        >
+                      </v-list-item>
+                      <v-divider></v-divider>
                       <v-list-item>
                         <v-list-item-title
                           class="text-h5"
@@ -320,6 +326,13 @@ export default {
         }
       },
     },
+    // creatOpen: {
+    //   handler: function(newV, oldV) {
+    //     if (newV !== oldV) {
+    //       this.creatOpen = newV;
+    //     }
+    //   },
+    // },
     immediate: true,
     deep: true,
   },
@@ -349,6 +362,8 @@ export default {
     },
     //新規フォーム開く
     creatOpen: false,
+    //click tms
+    clicktms: "",
     // 新規アクション保存ブロック
     newAction: {
       newDate: [
@@ -498,6 +513,7 @@ export default {
       }
     },
     startTime(tms) {
+      this.clicktms = tms;
       const mouse = this.toTime(tms);
       if (this.dragEvent && this.dragTime === null) {
         const start = this.dragEvent.start;
@@ -515,7 +531,7 @@ export default {
         // };
         // 新規追加ポップアップ表示
         this.newAction.newDate[0] = `${tms.date} ${tms.time}:01`;
-        this.newAction.newDate[1] = `${tms.date} ${tms.time}:59`;
+        this.newAction.newDate[1] = `${tms.date} ${tms.time}:30`;
         const open = () => {
           setTimeout(() => {
             this.creatOpen = true;
@@ -644,6 +660,8 @@ export default {
                 ),
                 timed: true,
               };
+
+              this.type = "month";
               //イベントを配列の末尾に追加
               this.events.push(this.createEvent);
             });

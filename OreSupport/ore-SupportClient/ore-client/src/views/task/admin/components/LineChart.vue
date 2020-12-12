@@ -1,11 +1,16 @@
 <template>
-  <div :class="className" :style="{ height: height, width: width }" />
+  <div
+    class="overflow-auto"
+    :class="className"
+    :style="{ height: height, width: width }"
+  />
 </template>
 
 <script>
 import echarts from "echarts";
 require("echarts/theme/macarons"); // echarts theme
 import resize from "./mixins/resize";
+import dateFormat from "dateformat";
 
 export default {
   mixins: [resize],
@@ -16,7 +21,11 @@ export default {
     },
     width: {
       type: String,
-      default: "110%",
+      default: "100%",
+    },
+    dateFmt: {
+      type: String,
+      default: "yyyy/mm",
     },
     height: {
       type: String,
@@ -68,22 +77,30 @@ export default {
       PlanAblity,
       SpatialAbility,
     } = {}) {
+      var that = this;
       this.chart.setOption({
         xAxis: {
           data: [
             "2020/01/01",
-            "2020/01/02",
-            "2020/01/03",
-            "2020/01/04",
-            "2020/01/05",
-            "2020/01/06",
-            "2020/01/07",
+            "2021/01/02",
+            "2022/01/03",
+            "2023/01/04",
+            "2024/01/05",
+            "2025/01/06",
+            "2026/01/07",
           ],
           boundaryGap: false,
           axisTick: {
-            show: false,
+            show: true,
+          },
+          axisLabel: {
+            interval: 0,
+            formatter: function(value) {
+              return dateFormat(value, that.dateFmt);
+            },
           },
         },
+
         grid: {
           left: 10,
           // right: 10,

@@ -6,6 +6,7 @@
 import echarts from "echarts";
 require("echarts/theme/macarons"); // echarts theme
 import resize from "./mixins/resize";
+import dateFormat from "dateformat";
 
 export default {
   mixins: [resize],
@@ -13,6 +14,10 @@ export default {
     className: {
       type: String,
       default: "chart",
+    },
+    dateFmt: {
+      type: String,
+      default: "yyyy/mm",
     },
     width: {
       type: String,
@@ -43,12 +48,12 @@ export default {
       default: function() {
         return [
           "2020/01/01",
-          "2020/01/02",
-          "2020/01/03",
-          "2020/01/04",
-          "2020/01/05",
-          "2020/01/06",
-          "2020/01/07",
+          "2021/01/02",
+          "2022/01/03",
+          "2023/01/04",
+          "2024/01/05",
+          "2025/01/06",
+          "2026/01/07",
         ];
       },
     },
@@ -99,6 +104,13 @@ export default {
           boundaryGap: false,
           axisTick: {
             show: false,
+          },
+          axisLabel: {
+            interval: 0,
+            formatter: function(value) {
+              return dateFormat(value, that.dateFmt);
+            },
+            rotate: 40,
           },
         },
         grid: {
