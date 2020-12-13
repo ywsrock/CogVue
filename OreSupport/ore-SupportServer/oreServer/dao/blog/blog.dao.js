@@ -322,7 +322,7 @@ const searchBlog = async (queryInfo) => {
   }
 };
 
-const blogImageDelete = async (queryInfo) => {
+const imageDelete = async (queryInfo) => {
   try {
     const result = await Blog.update(
       {
@@ -350,5 +350,5 @@ module.exports = {
   blogUpdate: blogUpdate,
   postComment: postComment,
   searchBlog: searchBlog,
-  blogImageDelete: blogImageDelete,
+  imageDelete: imageDelete,
 };

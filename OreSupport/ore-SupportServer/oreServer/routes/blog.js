@@ -274,77 +274,137 @@ router.get("/blogDelete", async function (req, res, next) {
   return res.status(200).send(resObj);
 });
 
-router.post("/blogUpdate", [checkuser.verifyUser], async function (
-  req,
-  res,
-  next
-) {
-  // 出力結果
-  let resObj = {};
+router.post(
+  "/blogUpdate",
+  [checkuser.verifyUser],
+  async function (req, res, next) {
+    // 出力結果
+    let resObj = {};
 
-  //　id
-  let id = req.body.id;
-  // ユーザID(ベリファイチェックから)
-  let userID = req.userID;
-  //　title
-  let title = req.body.title;
-  //　content
-  let content = req.body.content;
-  // ポートの番号取得
-  var port = req.app.settings.port;
-  // ホスト取得
-  var respath =
-    req.protocol +
-    "://" +
-    req.host +
-    (port == 80 || port == 443 ? "" : ":" + port);
+    //　id
+    let id = req.body.id;
+    // ユーザID(ベリファイチェックから)
+    let userID = req.userID;
+    //　title
+    let title = req.body.title;
+    //　content
+    let content = req.body.content;
+    // ポートの番号取得
+    var port = req.app.settings.port;
+    // ホスト取得
+    var respath =
+      req.protocol +
+      "://" +
+      req.host +
+      (port == 80 || port == 443 ? "" : ":" + port);
 
-  // まずmulterのインスタンス作成
-  await upload1(req, res, function (err) {
-    if (err) {
-      log.error(`imageUp upload error: ${err} `);
-      resObj.code = STATUS_MESSAGE.CODE_403;
-      resObj.message = STATUS_MESSAGE.FILEUP_ERROR_403;
-    } else {
-      //ログ出力
-      // log.info(`fileUpload: + ${req.file.filename} `);
-      // JSON文字列をオブジェクトに変換
-      let blogDetail = JSON.parse(req.body.blogDetail);
-      id = blogDetail.id;
-      // ユーザID(ベリファイチェックから)
-      userID = req.userID;
-      //　title
-      title = blogDetail.title;
-      //　title
-      content = blogDetail.content;
-      // ファイル存在チェック
-      var isExists = fs.existsSync(
-        `${appRoot}/public/blogImg/${res.req.file.filename}`
-      );
-      //　ファイルが存在しない場合"00_00.jpg"
-      var imgpath = isExists ? res.req.file.filename : "00_00.jpg";
-      resObj.code = STATUS_MESSAGE.CODE_SUCCESS;
-      // respathはhttp://ホスト名:ポート
-      resObj.data = {
-        imgUrl: `${respath}/blogImg/${imgpath}`,
-      };
-    }
-    log.info(`imageUp success`);
+    // まずmulterのインスタンス作成
+    await upload1(req, res, function (err) {
+      if (err) {
+        log.error(`imageUp upload error: ${err} `);
+        resObj.code = STATUS_MESSAGE.CODE_403;
+        resObj.message = STATUS_MESSAGE.FILEUP_ERROR_403;
+      } else {
+        //ログ出力
+        // log.info(`fileUpload: + ${req.file.filename} `);
+        // JSON文字列をオブジェクトに変換
+        let blogDetail = JSON.parse(req.body.blogDetail);
+        id = blogDetail.id;
+        // ユーザID(ベリファイチェックから)
+        userID = req.userID;
+        //　title
+        title = blogDetail.title;
+        //　title
+        content = blogDetail.content;
+        // ファイル存在チェック
+        var isExists = false;
+        if (undefined !== res.req.file) {
+          isExists = fs.existsSync(
+            `${appRoot}/public/blogImg/${res.req.file.filename}`
+          );
+        }
+        //　ファイルが存在しない場合"00_00.jpg"
+        var imgpath = isExists ? res.req.file.filename : "00_00.jpg";
+        resObj.code = STATUS_MESSAGE.CODE_SUCCESS;
+        // respathはhttp://ホスト名:ポート
+        resObj.data = {
+          imgUrl: `${respath}/blogImg/${imgpath}`,
+        };
+      }
+      // log.info(`imageUp success`);
+
+      // titleとcontent
+      if ("" != title.trim() && "" != content.trim()) {
+        // Blog登録処理
+        blogObj = {
+          id: id,
+          UserID: userID,
+          Title: title,
+          Content: content,
+          // filename取得、本体は/public/blogImge/の中
+          // isExistsがファイルが存在するかのフラグ
+          // isExistsがTrueの場合filename読み込んで、Falseの場合は空にする
+          BlogImage: isExists ? req.file.filename : ""
+        };
+
+        // DBにユーザ登録を呼び出す
+        const results = blogmodel.blogUpdate(blogObj, { key: "id", val: id });
+
+        // TODO　登録結果評価、エラーの場合、エラーメッセージを返す（再修正必要）
+        if (typeof results.errors != "undefined") {
+          // エラー結果
+          resObj = {
+            code: STATUS_MESSAGE.CODE_402,
+            message: "サーバーブログ作成エラー",
+          };
+          return res.status(200).send(resObj);
+        } else {
+          resObj = {
+            // JSON ステータスコード
+            code: STATUS_MESSAGE.CODE_SUCCESS,
+            data: {
+              message: "ブログ更新成功",
+            },
+          };
+        }
+        return res.status(200).send(resObj);
+      } else {
+        return res.status(200).send({
+          token: null,
+          message: "ブログの内容エラー",
+        });
+      }
+    });
+  }
+);
+
+router.post(
+  "/postComment",
+  [checkuser.verifyUser],
+  async function (req, res, next) {
+    // 出力結果
+    let resObj = {};
+    // ユーザID(ベリファイチェックから)
+    let userID = req.userID;
+    //　title
+    var id = req.body.id;
+
+    var comment = req.body.comment;
+
+    var commentName = req.body.commentName;
 
     // titleとcontent
-    if ("" != title.trim() && "" != content.trim()) {
-      // Blog登録処理
-      blogObj = {
+    if ("" != comment.trim() && "" != commentName.trim()) {
+      // Comment登録処理
+      CommentObj = {
         id: id,
         UserID: userID,
-        Title: title,
-        Content: content,
-        // filename取得、本体は/public/blogImge/の中
-        BlogImage: req.file.filename,
+        comment: comment,
+        commentName: commentName,
       };
 
       // DBにユーザ登録を呼び出す
-      const results = blogmodel.blogUpdate(blogObj, { key: "id", val: id });
+      const results = await blogmodel.postComment(CommentObj);
 
       // TODO　登録結果評価、エラーの場合、エラーメッセージを返す（再修正必要）
       if (typeof results.errors != "undefined") {
@@ -359,7 +419,7 @@ router.post("/blogUpdate", [checkuser.verifyUser], async function (
           // JSON ステータスコード
           code: STATUS_MESSAGE.CODE_SUCCESS,
           data: {
-            message: "ブログ更新成功",
+            message: "ブログ作成成功",
           },
         };
       }
@@ -371,7 +431,6 @@ router.post("/blogUpdate", [checkuser.verifyUser], async function (
       });
     }
   });
-});
 
 router.post("/postComment", [checkuser.verifyUser], async function (
   req,
@@ -477,5 +536,66 @@ router.post("/searchBlog", async function (req, res, next) {
 
   return res.status(200).send(resObj);
 });
+
+router.post("/imageDelete", async function (req, res, next) {
+  //　id
+  let id = req.query.blogID;
+
+  blogObj = {
+    id: id,
+  };
+  // DBにユーザ登録を呼び出す
+  const results = blogmodel.imageDelete(blogObj, { key: "id", val: id });
+
+  // TODO　登録結果評価、エラーの場合、エラーメッセージを返す（再修正必要）
+  if (typeof results.errors != "undefined") {
+    // エラー結果
+    resObj = {
+      code: STATUS_MESSAGE.CODE_402,
+      message: "削除失敗",
+    };
+    return res.status(200).send(resObj);
+  } else {
+    resObj = {
+      // JSON ステータスコード
+      code: STATUS_MESSAGE.CODE_SUCCESS,
+      data: {
+        message: "削除成功",
+      },
+    };
+  }
+  return res.status(200).send(resObj);
+});
+
+// router.post("/imageDelete", async function (req, res, next) {
+//   console.log(req.query.blogID);
+
+//   var id = req.query.blogID;
+//   //ブログ詳細取得
+//   var imageDelete = await blogmodel.imageDelete({ key: "id", val: id });
+
+//   if (typeof imageDelete.errors != "undefined") {
+//     // エラー結果
+//     resObj = {
+//       code: STATUS_MESSAGE.CODE_402,
+//       message: imageDelete.message,
+//     };
+//     return res.status(200).send(resObj);
+//   } else {
+//     //DBの絡むと大文字小文字も併せないといけない
+//     // var title = blog.Title;
+//     // var content = blog.Content
+
+//     resObj = {
+//       code: STATUS_MESSAGE.CODE_SUCCESS,
+//       data: {
+//         id: imageDelete.id,
+//         title: imageDelete.Title,
+//         content: imageDelete.Content,
+//       },
+//     };
+//   }
+//   return res.status(200).send(resObj);
+// });
 
 module.exports = router;
