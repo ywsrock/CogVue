@@ -65,30 +65,14 @@
                 >
                   パスワードポリシー
                 </button>
+                <% for policy in @pwdPolicy :%>
                 <button
                   type="button"
                   class="list-group-item list-group-item-action"
                 >
-                  ①　6桁以上、16桁以下の英数字
+                  <%=policy%>
                 </button>
-                <button
-                  type="button"
-                  class="list-group-item list-group-item-action"
-                >
-                  ②　最低1つの大文字の英字
-                </button>
-                <button
-                  type="button"
-                  class="list-group-item list-group-item-action"
-                >
-                  ③　「@ $ ! % * ? & 」いずれの符号を含む
-                </button>
-                <button
-                  type="button"
-                  class="list-group-item list-group-item-action"
-                >
-                  ④　最低1つの数字
-                </button>
+                <%end%>
               </div>
             </div>
           </div>
@@ -147,8 +131,8 @@
           }
         };
 
-        $("#newPassword").blur(checkPwd);
-        $("#newPassword1").blur(checkPwd1);
+        $("#newPassword").keyup(checkPwd);
+        $("#newPassword1").keyup(checkPwd1);
 
         $("#passForm").submit(function (event) {
           event.preventDefault;
