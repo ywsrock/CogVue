@@ -44,12 +44,41 @@ const PROFILE_INFO = {
     SNS_INFO: "snsInfo",
 }
 
+//メール本文
+const MAILTEXT = `
+<h3>Cognees ユーザー様</h3>
+<br>
+<br>
+※本メールは自動送信されています、<br>
+心当たりの無い方は本メールの破棄をお願い致します。<br>
+<br>
+<br>
+パスワード再設定用のURLを送付致します。<br>
+以下のURLより変更をお願い致します。<br>
+<br>
+再設定用URL<br>
+#url#<br>
+<br>
+本URLの有効期限は2020/11/30 12:00までとなります。<br>
+変更したパスワードは大切に保管してください。<br>
+<br>
+<br>
+〇お問合せ先<br>
+Cognees サポート窓口<br>
+cognees_support@cognisolution.com<br>
+<br>
+〇運営会社<br>
+株式会社 Cognisolution<br>
+住所：〒165-0026 東京都中野区新井1-12-14　秀光建設本社ビル3<br>
+web：http://www.cognisolution.com/<br>
+`
+
 //パスワードリセットメール設定
 const MAIL_SETTING = {
     FROM: 'info@cognisolution.com',
     SUBJECT: "パスワード設定確認",
-    TEXT: "パスワード再設定:#url#",
-    HTML: "パスワード再設定:#url#",
+    TEXT: MAILTEXT,
+    HTML: MAILTEXT,
     HOST: "mail38.onamae.ne.jp",
     PORT: 465,
     SECURE: true, // true for 465, false for other ports
@@ -58,6 +87,14 @@ const MAIL_SETTING = {
     EXPIRATERM: 2,    //hours
     CLINENTLOGINURL: "https://localhost:8080/#/userLogin" //oresupport login url
 }
+
+// パスワードセットポリシー
+const PASSWORDPOLICY = [
+    "   ①　6桁以上、16桁以下の英数字",
+    "   ②　最低1つの大文字の英字",
+    "   ③　「@ $ ! % * ? & 」いずれの符号を含む",
+    "   ④　最低1つの数字"
+]
 
 
 
@@ -68,5 +105,6 @@ module.exports = {
     BCRYPT_SALT,
     PROFILE_INFO,
     CIPHERSETTING,
-    MAIL_SETTING
+    MAIL_SETTING,
+    PASSWORDPOLICY,
 }

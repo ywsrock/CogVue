@@ -3,7 +3,7 @@ var router = express.Router();
 var usermodel = require("../dao/user/user.dao");
 var checkuser = require("../common/check.token");
 const STATUS_MESSAGE = require("../common/const").STATUS_MESSAGE;
-const { PROFILE_INFO, MAIL_SETTING } = require("../common/const");
+const { PROFILE_INFO, MAIL_SETTING, PASSWORDPOLICY } = require("../common/const");
 const bcryptTools = require("../common/bcrypt_tools");
 const config = require("../config/secret.config");
 const jwtToken = require("jsonwebtoken");
@@ -234,7 +234,7 @@ router.post("/restPassword", async function (req, res, next) {
     })
     //メール内容設定
     msg.text = msg.text.replace("#url#", restUrl)
-    msg.html = `<b>${msg.html.replace("#url#", restUrl)}</b>`
+    msg.html = `${msg.html.replace("#url#", restUrl)}`
 
     //パスワードリセット
     //メール送信のトランスポート取得
@@ -303,7 +303,7 @@ router.get("/checkPassword", async function (req, res, next) {
     return
   }
   //変更画面rendering
-  res.render("restpassword/restInfo", { key: accessKey, msg: "" })
+  res.render("restpassword/restInfo", { key: accessKey, msg: "", pwdPolicy: PASSWORDPOLICY })
 })
 //パスワード設定
 router.post("/setPassword", async function (req, res, next) {
