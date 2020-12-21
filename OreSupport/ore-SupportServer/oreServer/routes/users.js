@@ -277,7 +277,7 @@ router.get("/checkPassword", async function (req, res, next) {
   // //リンクのQueryParamの取得
   let accessKey = req.query.accessKey;
   if ("" === accessKey.trim()) {
-    res.sendStatus(404)
+    res.render("restpassword/linkTimeout", { loginUrl: MAIL_SETTING.CLINENTLOGINURL })
     return
   }
   let decryptParam = await bcryptTools.DecipherStr(accessKey)
@@ -292,14 +292,14 @@ router.get("/checkPassword", async function (req, res, next) {
   })
   if (count == 0) {
     //存在しません
-    res.sendStatus(404)
+    res.render("restpassword/linkTimeout", { loginUrl: MAIL_SETTING.CLINENTLOGINURL })
     return
   }
   //有効期間チェック
   let hoursDiff = await dateDiff(dateFormat(new Date(), "yyyy-mm-dd HH:MM:ss"), rows[0].Timestamp, "hours")
   //時間超えたら、404
   if (hoursDiff > MAIL_SETTING.EXPIRATERM) {
-    res.sendStatus(404)
+    res.render("restpassword/linkTimeout", { loginUrl: MAIL_SETTING.CLINENTLOGINURL })
     return
   }
   //変更画面rendering
@@ -327,14 +327,13 @@ router.post("/setPassword", async function (req, res, next) {
     })
     if (count == 0) {
       //存在しません
-      res.sendStatus(404)
+      res.render("restpassword/linkTimeout", { loginUrl: MAIL_SETTING.CLINENTLOGINURL })
       return
     }
     //有効期間チェック
     let hoursDiff = await dateDiff(dateFormat(new Date(), "yyyy-mm-dd HH:MM:ss"), rows[0].Timestamp, "hours")
-    //時間超えたら、404
     if (hoursDiff > MAIL_SETTING.EXPIRATERM) {
-      res.sendStatus(404)
+      res.render("restpassword/linkTimeout", { loginUrl: MAIL_SETTING.CLINENTLOGINURL })
       return
     }
     //ユーザＩＤ取得
@@ -370,8 +369,8 @@ router.post("/setPassword", async function (req, res, next) {
       }
     })
 
-    res.send(`パスワード変更しました。再ログインくだい。`)
-    // res.redirect("https://localhost:8080/#/userLogin")
+    // res.send(`パスワード変更しました。再ログインくだい。`)
+    res.render("restpassword/linkTimeout", { sucflg: 1, loginUrl: MAIL_SETTING.CLINENTLOGINURL })
   } catch (error) {
     console.log(error)
   }

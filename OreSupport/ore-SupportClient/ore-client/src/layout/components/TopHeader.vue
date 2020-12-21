@@ -146,12 +146,12 @@
               </li>
               <!--行動管理-->
               <li>
-                <a href="#">
+                <a @click.prevent.stop="actionClick(1)">
                   行動管理
                   <i class="fa fa-chevron-down"></i>
                 </a>
 
-                <ul class="sub-menu">
+                <!-- <ul class="sub-menu">
                   <li>
                     <a href @click.prevent.stop="actionClick(1)">行動履歴 </a>
                   </li>
@@ -160,7 +160,7 @@
                       >行動登録/削除</a
                     >
                   </li>
-                </ul>
+                </ul>-->
               </li>
               <!--商品購入-->
               <li v-show="false">
