@@ -37,7 +37,15 @@
           </v-row>
         </v-btn>
 
-        <v-btn elevation="2" tile block color="#FF7878" class="my-1" href="#">
+        <v-btn
+          elevation="2"
+          tile
+          block
+          color="#FF7878"
+          class="my-1"
+          href="#"
+          @click.prevent.stop="runTask"
+        >
           <v-row>
             <v-col cols="3" class="align-self-center">
               <v-icon color="black" size="30" style="padding-right: 5px;"
@@ -59,7 +67,7 @@
           left
           color="purple lighten-3"
           class="my-1"
-          href="#"
+          @click.prevent.stop="blogClick(2)"
         >
           <v-row>
             <v-col cols="3" class="align-self-center">
@@ -112,6 +120,8 @@
 </template>
 
 <script>
+import { getToken } from "@/utils/auth";
+import { CGEV_SESSION_KEY } from "@/utils/const";
 export default {
   name: "actionSideMenu",
   methods: {
@@ -123,6 +133,57 @@ export default {
       setTimeout(() => {
         this.$parent.createOpen = true;
       }, 100);
+    },
+
+    // ブログ
+    blogClick: function(index) {
+      switch (index) {
+        //検索
+        case 1:
+          this.$router.push("/blog/blogList");
+          break;
+        //新規
+        default:
+          this.$router.push("/blog/createBlog");
+      }
+    },
+    //タスク実行
+    runTask: function() {
+      const userToken = getToken();
+      if (!userToken) {
+        this.$router.push("/login");
+        return;
+      }
+      // top画面に移動
+      this.$router.push("/");
+      // 新しいタブを開き、ページを表示
+      this.$nextTick(async () => {
+        let access_token = await this.$store.dispatch("cgev/authenticate");
+        var url = location.href;
+        var winFeature =
+          "location=no,toolbar=no,menubar=no,scrollbars=yes,resizable=yes";
+
+        let subWin = await window.open(
+          `https://api.cgev-stg.com/v1/run/tasks?access_token=${access_token}&return_url=${url}`,
+          "_blank",
+          winFeature
+        );
+        // サブ画面閉じる時、指定画面遷移
+        if (subWin !== null && subWin != undefined) {
+          var that = this;
+          const timer = setInterval(() => {
+            if (!subWin.closed) return;
+            clearInterval(timer);
+            Object.keys(CGEV_SESSION_KEY).forEach(function(key) {
+              if (that.$session.has(key)) {
+                that.$session.remove(key);
+              }
+            });
+            that.$router.push("/task/userSummary");
+            subWin = null;
+          }, 100);
+        }
+      });
     },
   },
 };
