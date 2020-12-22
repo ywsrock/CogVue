@@ -3607,3 +3607,1425 @@
 }
 [2020-12-21T22:39:33.962] [INFO] startup - Listening on port 3000
 [2020-12-21T22:40:26.817] [INFO] users - ユーザ対象 UserName:111
+[2020-12-21T23:04:04.173] [INFO] startup - Listening on port 3000
+[2020-12-21T23:04:07.875] [INFO] users - ユーザログ UserName:閻 文帥
+[2020-12-21T23:04:07.876] [INFO] users - Third Party by Facebook
+[2020-12-21T23:04:07.959] [INFO] userDao - START getUserInfoByUserName: {"username":"2588234901506497"}
+[2020-12-21T23:04:07.965] [INFO] userDao - END getUserInfoByUserName
+[2020-12-21T23:04:07.965] [INFO] userDao - START getUserInfoByUserName: {"username":"2588234901506497"}
+[2020-12-21T23:04:07.967] [INFO] userDao - END getUserInfoByUserName
+[2020-12-21T23:04:08.636] [INFO] users - profileInfo userID: 193 
+[2020-12-21T23:04:11.068] [INFO] users - profileInfo userID: 193 
+[2020-12-21T23:04:11.068] [INFO] userDao - START getUserProfileByUserID : {"key":"UserID","val":193}
+[2020-12-21T23:04:11.076] [INFO] userDao - END getUserProfileByUserID
+[2020-12-21T23:04:11.076] [INFO] users - profileInfo success
+[2020-12-21T23:04:13.229] [INFO] users - /queryAction 193
+[2020-12-21T23:28:39.767] [INFO] startup - Listening on port 3000
+[2020-12-22T22:25:33.305] [INFO] users - profileInfo userID: 193 
+[2020-12-22T22:25:33.306] [INFO] userDao - START getUserProfileByUserID : {"key":"UserID","val":193}
+[2020-12-22T22:25:33.407] [INFO] userDao - END getUserProfileByUserID
+[2020-12-22T22:25:33.407] [INFO] users - profileInfo success
+[2020-12-22T22:25:36.918] [INFO] users - profileInfo userID: 193 
+[2020-12-22T22:25:36.918] [INFO] userDao - START getUserProfileByUserID : {"key":"UserID","val":193}
+[2020-12-22T22:25:36.923] [INFO] userDao - END getUserProfileByUserID
+[2020-12-22T22:25:36.923] [INFO] users - profileInfo success
+[2020-12-22T22:28:51.917] [INFO] users - updatePro:{"Update_type":"basicInfo","lastName":"hhhh","firstName":"bunsui","sex":"1","birthday":null,"email":"yws@gmail.com","phone":null,"avatar":"http://localhost:3000/avatar/00_00.jpg","aboutMe":null}
+[2020-12-22T22:28:51.917] [INFO] userDao - START saveUserProfile: param1:{"LastName":"hhhh","FirstName":"bunsui","Sex":"1","Birthday":null,"Phone1":null,"Aboutme":null} , param2:{"Email":"yws@gmail.com"}
+[2020-12-22T22:28:51.930] [INFO] userDao - END saveUserProfile
+[2020-12-22T22:28:51.930] [INFO] users - updatePro success
+[2020-12-22T22:28:52.602] [INFO] users - updatePro:{"Update_type":"basicInfo","lastName":"hhhh","firstName":"bunsui","sex":"1","birthday":null,"email":"yws@gmail.com","phone":null,"avatar":"http://localhost:3000/avatar/00_00.jpg","aboutMe":null}
+[2020-12-22T22:28:52.602] [INFO] userDao - START saveUserProfile: param1:{"LastName":"hhhh","FirstName":"bunsui","Sex":"1","Birthday":null,"Phone1":null,"Aboutme":null} , param2:{"Email":"yws@gmail.com"}
+[2020-12-22T22:28:52.606] [INFO] userDao - END saveUserProfile
+[2020-12-22T22:28:52.606] [INFO] users - updatePro success
+[2020-12-22T22:28:54.030] [INFO] users - updatePro:{"Update_type":"basicInfo","lastName":"hhhh","firstName":"bunsui","sex":"1","birthday":null,"email":"yws@gmail.com","phone":null,"avatar":"http://localhost:3000/avatar/00_00.jpg","aboutMe":null}
+[2020-12-22T22:28:54.030] [INFO] userDao - START saveUserProfile: param1:{"LastName":"hhhh","FirstName":"bunsui","Sex":"1","Birthday":null,"Phone1":null,"Aboutme":null} , param2:{"Email":"yws@gmail.com"}
+[2020-12-22T22:28:54.034] [INFO] userDao - END saveUserProfile
+[2020-12-22T22:28:54.034] [INFO] users - updatePro success
+[2020-12-22T22:28:57.242] [INFO] users - updatePro:{"Update_type":"basicInfo","lastName":"hhhh","firstName":"bunsui","sex":"1","birthday":null,"email":"yws@gmail.com","phone":null,"avatar":"http://localhost:3000/avatar/00_00.jpg","aboutMe":null}
+[2020-12-22T22:28:57.242] [INFO] userDao - START saveUserProfile: param1:{"LastName":"hhhh","FirstName":"bunsui","Sex":"1","Birthday":null,"Phone1":null,"Aboutme":null} , param2:{"Email":"yws@gmail.com"}
+[2020-12-22T22:28:57.245] [INFO] userDao - END saveUserProfile
+[2020-12-22T22:28:57.245] [INFO] users - updatePro success
+[2020-12-22T22:28:59.006] [INFO] users - updatePro:{"Update_type":"basicInfo","lastName":"hhhh","firstName":"bunsui","sex":"1","birthday":null,"email":"yws@gmail.com","phone":null,"avatar":"http://localhost:3000/avatar/00_00.jpg","aboutMe":null}
+[2020-12-22T22:28:59.006] [INFO] userDao - START saveUserProfile: param1:{"LastName":"hhhh","FirstName":"bunsui","Sex":"1","Birthday":null,"Phone1":null,"Aboutme":null} , param2:{"Email":"yws@gmail.com"}
+[2020-12-22T22:28:59.010] [INFO] userDao - END saveUserProfile
+[2020-12-22T22:28:59.010] [INFO] users - updatePro success
+[2020-12-22T22:29:00.788] [INFO] users - updatePro:{"Update_type":"basicInfo","lastName":"hhhh","firstName":"bunsui","sex":"1","birthday":null,"email":"yws@gmail.com","phone":null,"avatar":"http://localhost:3000/avatar/00_00.jpg","aboutMe":null}
+[2020-12-22T22:29:00.788] [INFO] userDao - START saveUserProfile: param1:{"LastName":"hhhh","FirstName":"bunsui","Sex":"1","Birthday":null,"Phone1":null,"Aboutme":null} , param2:{"Email":"yws@gmail.com"}
+[2020-12-22T22:29:00.793] [INFO] userDao - END saveUserProfile
+[2020-12-22T22:29:00.793] [INFO] users - updatePro success
+[2020-12-22T22:29:01.799] [INFO] users - updatePro:{"Update_type":"basicInfo","lastName":"hhhh","firstName":"bunsui","sex":"1","birthday":null,"email":"yws@gmail.com","phone":null,"avatar":"http://localhost:3000/avatar/00_00.jpg","aboutMe":null}
+[2020-12-22T22:29:01.799] [INFO] userDao - START saveUserProfile: param1:{"LastName":"hhhh","FirstName":"bunsui","Sex":"1","Birthday":null,"Phone1":null,"Aboutme":null} , param2:{"Email":"yws@gmail.com"}
+[2020-12-22T22:29:01.802] [INFO] userDao - END saveUserProfile
+[2020-12-22T22:29:01.803] [INFO] users - updatePro success
+[2020-12-22T22:29:03.156] [INFO] users - updatePro:{"Update_type":"basicInfo","lastName":"hhhh","firstName":"bunsui","sex":"1","birthday":null,"email":"yws@gmail.com","phone":null,"avatar":"http://localhost:3000/avatar/00_00.jpg","aboutMe":null}
+[2020-12-22T22:29:03.156] [INFO] userDao - START saveUserProfile: param1:{"LastName":"hhhh","FirstName":"bunsui","Sex":"1","Birthday":null,"Phone1":null,"Aboutme":null} , param2:{"Email":"yws@gmail.com"}
+[2020-12-22T22:29:03.160] [INFO] userDao - END saveUserProfile
+[2020-12-22T22:29:03.160] [INFO] users - updatePro success
+[2020-12-22T22:29:03.942] [INFO] users - updatePro:{"Update_type":"basicInfo","lastName":"hhhh","firstName":"bunsui","sex":"1","birthday":null,"email":"yws@gmail.com","phone":null,"avatar":"http://localhost:3000/avatar/00_00.jpg","aboutMe":null}
+[2020-12-22T22:29:03.942] [INFO] userDao - START saveUserProfile: param1:{"LastName":"hhhh","FirstName":"bunsui","Sex":"1","Birthday":null,"Phone1":null,"Aboutme":null} , param2:{"Email":"yws@gmail.com"}
+[2020-12-22T22:29:03.945] [INFO] userDao - END saveUserProfile
+[2020-12-22T22:29:03.946] [INFO] users - updatePro success
+[2020-12-22T22:29:04.664] [INFO] users - updatePro:{"Update_type":"basicInfo","lastName":"hhhh","firstName":"bunsui","sex":"1","birthday":null,"email":"yws@gmail.com","phone":null,"avatar":"http://localhost:3000/avatar/00_00.jpg","aboutMe":null}
+[2020-12-22T22:29:04.664] [INFO] userDao - START saveUserProfile: param1:{"LastName":"hhhh","FirstName":"bunsui","Sex":"1","Birthday":null,"Phone1":null,"Aboutme":null} , param2:{"Email":"yws@gmail.com"}
+[2020-12-22T22:29:04.668] [INFO] userDao - END saveUserProfile
+[2020-12-22T22:29:04.668] [INFO] users - updatePro success
+[2020-12-22T22:29:05.527] [INFO] users - updatePro:{"Update_type":"basicInfo","lastName":"hhhh","firstName":"bunsui","sex":"1","birthday":null,"email":"yws@gmail.com","phone":null,"avatar":"http://localhost:3000/avatar/00_00.jpg","aboutMe":null}
+[2020-12-22T22:29:05.527] [INFO] userDao - START saveUserProfile: param1:{"LastName":"hhhh","FirstName":"bunsui","Sex":"1","Birthday":null,"Phone1":null,"Aboutme":null} , param2:{"Email":"yws@gmail.com"}
+[2020-12-22T22:29:05.531] [INFO] userDao - END saveUserProfile
+[2020-12-22T22:29:05.531] [INFO] users - updatePro success
+[2020-12-22T22:29:08.490] [INFO] users - updatePro:{"Update_type":"basicInfo","lastName":"hhhh","firstName":"bunsui","sex":"1","birthday":null,"email":"yws@gmail.com","phone":null,"avatar":"http://localhost:3000/avatar/00_00.jpg","aboutMe":null}
+[2020-12-22T22:29:08.490] [INFO] userDao - START saveUserProfile: param1:{"LastName":"hhhh","FirstName":"bunsui","Sex":"1","Birthday":null,"Phone1":null,"Aboutme":null} , param2:{"Email":"yws@gmail.com"}
+[2020-12-22T22:29:08.494] [INFO] userDao - END saveUserProfile
+[2020-12-22T22:29:08.494] [INFO] users - updatePro success
+[2020-12-22T22:29:11.137] [INFO] users - updatePro:{"Update_type":"snsInfo","sns_facebook":null,"sns_twtitter":null,"sns_instagram":null,"sns_other":null}
+[2020-12-22T22:29:11.137] [INFO] userDao - START saveUserProfile: param1:{"sns_twitter":null,"sns_instagram":null,"sns_other":null} , param2:{}
+[2020-12-22T22:29:11.139] [INFO] userDao - END saveUserProfile
+[2020-12-22T22:29:11.140] [INFO] users - updatePro success
+[2020-12-22T22:29:13.815] [INFO] users - updatePro:{"Update_type":"AdressInfo","state":null,"city":null,"streat":null,"houseNumber":null,"postalcode":null}
+[2020-12-22T22:29:13.815] [INFO] userDao - START saveUserProfile: param1:{"State":null,"City":null,"Streat":null,"houseNumber":null,"postNumber":null} , param2:{}
+[2020-12-22T22:29:13.817] [INFO] userDao - END saveUserProfile
+[2020-12-22T22:29:13.817] [INFO] users - updatePro success
+[2020-12-22T22:29:15.029] [INFO] users - updatePro:{"Update_type":"AdressInfo","state":null,"city":null,"streat":null,"houseNumber":null,"postalcode":null}
+[2020-12-22T22:29:15.029] [INFO] userDao - START saveUserProfile: param1:{"State":null,"City":null,"Streat":null,"houseNumber":null,"postNumber":null} , param2:{}
+[2020-12-22T22:29:15.031] [INFO] userDao - END saveUserProfile
+[2020-12-22T22:29:15.031] [INFO] users - updatePro success
+[2020-12-22T22:29:15.996] [INFO] users - updatePro:{"Update_type":"AdressInfo","state":null,"city":null,"streat":null,"houseNumber":null,"postalcode":null}
+[2020-12-22T22:29:15.996] [INFO] userDao - START saveUserProfile: param1:{"State":null,"City":null,"Streat":null,"houseNumber":null,"postNumber":null} , param2:{}
+[2020-12-22T22:29:15.998] [INFO] userDao - END saveUserProfile
+[2020-12-22T22:29:15.998] [INFO] users - updatePro success
+[2020-12-22T22:29:17.470] [INFO] users - updatePro:{"Update_type":"AdressInfo","state":null,"city":null,"streat":null,"houseNumber":null,"postalcode":null}
+[2020-12-22T22:29:17.470] [INFO] userDao - START saveUserProfile: param1:{"State":null,"City":null,"Streat":null,"houseNumber":null,"postNumber":null} , param2:{}
+[2020-12-22T22:29:17.474] [INFO] userDao - END saveUserProfile
+[2020-12-22T22:29:17.474] [INFO] users - updatePro success
+[2020-12-22T22:30:05.489] [INFO] users - profileInfo userID: 193 
+[2020-12-22T22:30:05.489] [INFO] userDao - START getUserProfileByUserID : {"key":"UserID","val":193}
+[2020-12-22T22:30:05.495] [INFO] userDao - END getUserProfileByUserID
+[2020-12-22T22:30:05.495] [INFO] users - profileInfo success
+[2020-12-22T22:30:06.358] [INFO] users - profileInfo userID: 193 
+[2020-12-22T22:30:06.359] [INFO] userDao - START getUserProfileByUserID : {"key":"UserID","val":193}
+[2020-12-22T22:30:06.366] [INFO] userDao - END getUserProfileByUserID
+[2020-12-22T22:30:06.366] [INFO] users - profileInfo success
+[2020-12-22T22:30:07.716] [INFO] users - profileInfo userID: 193 
+[2020-12-22T22:30:07.716] [INFO] userDao - START getUserProfileByUserID : {"key":"UserID","val":193}
+[2020-12-22T22:30:07.721] [INFO] userDao - END getUserProfileByUserID
+[2020-12-22T22:30:07.721] [INFO] users - profileInfo success
+[2020-12-22T22:56:27.511] [INFO] users - profileInfo userID: 193 
+[2020-12-22T22:56:27.511] [INFO] userDao - START getUserProfileByUserID : {"key":"UserID","val":193}
+[2020-12-22T22:56:27.517] [INFO] userDao - END getUserProfileByUserID
+[2020-12-22T22:56:27.517] [INFO] users - profileInfo success
+[2020-12-22T22:56:27.614] [INFO] users - profileInfo userID: 193 
+[2020-12-22T22:56:27.614] [INFO] userDao - START getUserProfileByUserID : {"key":"UserID","val":193}
+[2020-12-22T22:56:27.619] [INFO] userDao - END getUserProfileByUserID
+[2020-12-22T22:56:27.619] [INFO] users - profileInfo success
+[2020-12-22T22:56:54.628] [INFO] users - profileInfo userID: 193 
+[2020-12-22T22:56:54.628] [INFO] userDao - START getUserProfileByUserID : {"key":"UserID","val":193}
+[2020-12-22T22:56:54.639] [INFO] userDao - END getUserProfileByUserID
+[2020-12-22T22:56:54.639] [INFO] users - profileInfo success
+[2020-12-22T22:56:54.855] [INFO] users - profileInfo userID: 193 
+[2020-12-22T22:56:54.855] [INFO] userDao - START getUserProfileByUserID : {"key":"UserID","val":193}
+[2020-12-22T22:56:54.860] [INFO] userDao - END getUserProfileByUserID
+[2020-12-22T22:56:54.861] [INFO] users - profileInfo success
+[2020-12-22T22:57:37.248] [INFO] users - profileInfo userID: 193 
+[2020-12-22T22:57:37.248] [INFO] userDao - START getUserProfileByUserID : {"key":"UserID","val":193}
+[2020-12-22T22:57:37.255] [INFO] userDao - END getUserProfileByUserID
+[2020-12-22T22:57:37.255] [INFO] users - profileInfo success
+[2020-12-22T22:57:37.359] [INFO] users - profileInfo userID: 193 
+[2020-12-22T22:57:37.359] [INFO] userDao - START getUserProfileByUserID : {"key":"UserID","val":193}
+[2020-12-22T22:57:37.363] [INFO] userDao - END getUserProfileByUserID
+[2020-12-22T22:57:37.363] [INFO] users - profileInfo success
+[2020-12-22T22:57:38.766] [INFO] users - profileInfo userID: 193 
+[2020-12-22T22:57:38.766] [INFO] userDao - START getUserProfileByUserID : {"key":"UserID","val":193}
+[2020-12-22T22:57:38.771] [INFO] userDao - END getUserProfileByUserID
+[2020-12-22T22:57:38.771] [INFO] users - profileInfo success
+[2020-12-22T23:00:47.408] [INFO] users - profileInfo userID: 193 
+[2020-12-22T23:00:47.408] [INFO] userDao - START getUserProfileByUserID : {"key":"UserID","val":193}
+[2020-12-22T23:00:47.414] [INFO] userDao - END getUserProfileByUserID
+[2020-12-22T23:00:47.414] [INFO] users - profileInfo success
+[2020-12-22T23:00:47.518] [INFO] users - profileInfo userID: 193 
+[2020-12-22T23:00:47.518] [INFO] userDao - START getUserProfileByUserID : {"key":"UserID","val":193}
+[2020-12-22T23:00:47.522] [INFO] userDao - END getUserProfileByUserID
+[2020-12-22T23:00:47.522] [INFO] users - profileInfo success
+[2020-12-22T23:00:48.991] [INFO] users - profileInfo userID: 193 
+[2020-12-22T23:00:48.991] [INFO] userDao - START getUserProfileByUserID : {"key":"UserID","val":193}
+[2020-12-22T23:00:48.995] [INFO] userDao - END getUserProfileByUserID
+[2020-12-22T23:00:48.995] [INFO] users - profileInfo success
+[2020-12-22T23:03:56.335] [INFO] users - profileInfo userID: 193 
+[2020-12-22T23:03:56.335] [INFO] userDao - START getUserProfileByUserID : {"key":"UserID","val":193}
+[2020-12-22T23:03:56.345] [INFO] userDao - END getUserProfileByUserID
+[2020-12-22T23:03:56.345] [INFO] users - profileInfo success
+[2020-12-22T23:03:56.393] [INFO] users - profileInfo userID: 193 
+[2020-12-22T23:03:56.394] [INFO] userDao - START getUserProfileByUserID : {"key":"UserID","val":193}
+[2020-12-22T23:03:56.398] [INFO] userDao - END getUserProfileByUserID
+[2020-12-22T23:03:56.398] [INFO] users - profileInfo success
+[2020-12-22T23:03:59.196] [INFO] users - profileInfo userID: 193 
+[2020-12-22T23:03:59.196] [INFO] userDao - START getUserProfileByUserID : {"key":"UserID","val":193}
+[2020-12-22T23:03:59.201] [INFO] userDao - END getUserProfileByUserID
+[2020-12-22T23:03:59.201] [INFO] users - profileInfo success
+[2020-12-22T23:06:29.985] [INFO] users - ユーザログ UserName:閻 文帥
+[2020-12-22T23:06:29.985] [INFO] users - Third Party by Facebook
+[2020-12-22T23:06:30.072] [INFO] userDao - START getUserInfoByUserName: {"username":"2588234901506497"}
+[2020-12-22T23:06:30.075] [INFO] userDao - END getUserInfoByUserName
+[2020-12-22T23:06:30.075] [INFO] userDao - START getUserInfoByUserName: {"username":"2588234901506497"}
+[2020-12-22T23:06:30.081] [INFO] userDao - END getUserInfoByUserName
+[2020-12-22T23:06:30.519] [INFO] users - profileInfo userID: 193 
+[2020-12-22T23:06:31.961] [INFO] users - profileInfo userID: 193 
+[2020-12-22T23:06:31.962] [INFO] userDao - START getUserProfileByUserID : {"key":"UserID","val":193}
+[2020-12-22T23:06:31.966] [INFO] userDao - END getUserProfileByUserID
+[2020-12-22T23:06:31.966] [INFO] users - profileInfo success
+[2020-12-22T23:06:34.179] [INFO] users - profileInfo userID: 193 
+[2020-12-22T23:06:34.179] [INFO] userDao - START getUserProfileByUserID : {"key":"UserID","val":193}
+[2020-12-22T23:06:34.183] [INFO] userDao - END getUserProfileByUserID
+[2020-12-22T23:06:34.183] [INFO] users - profileInfo success
+[2020-12-22T23:09:56.280] [INFO] users - profileInfo userID: 193 
+[2020-12-22T23:09:56.387] [INFO] users - profileInfo userID: 193 
+[2020-12-22T23:09:56.387] [INFO] userDao - START getUserProfileByUserID : {"key":"UserID","val":193}
+[2020-12-22T23:09:56.392] [INFO] userDao - END getUserProfileByUserID
+[2020-12-22T23:09:56.393] [INFO] users - profileInfo success
+[2020-12-22T23:09:59.692] [INFO] users - profileInfo userID: 193 
+[2020-12-22T23:09:59.692] [INFO] userDao - START getUserProfileByUserID : {"key":"UserID","val":193}
+[2020-12-22T23:09:59.696] [INFO] userDao - END getUserProfileByUserID
+[2020-12-22T23:09:59.696] [INFO] users - profileInfo success
+[2020-12-22T23:10:14.654] [INFO] users - profileInfo userID: 193 
+[2020-12-22T23:10:14.768] [INFO] users - profileInfo userID: 193 
+[2020-12-22T23:10:14.768] [INFO] userDao - START getUserProfileByUserID : {"key":"UserID","val":193}
+[2020-12-22T23:10:14.771] [INFO] userDao - END getUserProfileByUserID
+[2020-12-22T23:10:14.771] [INFO] users - profileInfo success
+[2020-12-22T23:10:16.764] [INFO] users - profileInfo userID: 193 
+[2020-12-22T23:10:16.765] [INFO] userDao - START getUserProfileByUserID : {"key":"UserID","val":193}
+[2020-12-22T23:10:16.768] [INFO] userDao - END getUserProfileByUserID
+[2020-12-22T23:10:16.768] [INFO] users - profileInfo success
+[2020-12-22T23:10:53.646] [INFO] users - profileInfo userID: 193 
+[2020-12-22T23:10:53.710] [INFO] users - profileInfo userID: 193 
+[2020-12-22T23:10:53.711] [INFO] userDao - START getUserProfileByUserID : {"key":"UserID","val":193}
+[2020-12-22T23:10:53.715] [INFO] userDao - END getUserProfileByUserID
+[2020-12-22T23:10:53.716] [INFO] users - profileInfo success
+[2020-12-22T23:10:55.898] [INFO] users - profileInfo userID: 193 
+[2020-12-22T23:10:55.898] [INFO] userDao - START getUserProfileByUserID : {"key":"UserID","val":193}
+[2020-12-22T23:10:55.902] [INFO] userDao - END getUserProfileByUserID
+[2020-12-22T23:10:55.902] [INFO] users - profileInfo success
+[2020-12-22T23:11:11.860] [INFO] users - profileInfo userID: 193 
+[2020-12-22T23:11:11.921] [INFO] users - profileInfo userID: 193 
+[2020-12-22T23:11:11.921] [INFO] userDao - START getUserProfileByUserID : {"key":"UserID","val":193}
+[2020-12-22T23:11:11.925] [INFO] userDao - END getUserProfileByUserID
+[2020-12-22T23:11:11.925] [INFO] users - profileInfo success
+[2020-12-22T23:11:13.595] [INFO] users - profileInfo userID: 193 
+[2020-12-22T23:11:13.596] [INFO] userDao - START getUserProfileByUserID : {"key":"UserID","val":193}
+[2020-12-22T23:11:13.600] [INFO] userDao - END getUserProfileByUserID
+[2020-12-22T23:11:13.600] [INFO] users - profileInfo success
+[2020-12-22T23:11:27.144] [INFO] users - profileInfo userID: 193 
+[2020-12-22T23:11:27.258] [INFO] users - profileInfo userID: 193 
+[2020-12-22T23:11:27.258] [INFO] userDao - START getUserProfileByUserID : {"key":"UserID","val":193}
+[2020-12-22T23:11:27.261] [INFO] userDao - END getUserProfileByUserID
+[2020-12-22T23:11:27.262] [INFO] users - profileInfo success
+[2020-12-22T23:11:30.416] [INFO] users - profileInfo userID: 193 
+[2020-12-22T23:11:30.416] [INFO] userDao - START getUserProfileByUserID : {"key":"UserID","val":193}
+[2020-12-22T23:11:30.420] [INFO] userDao - END getUserProfileByUserID
+[2020-12-22T23:11:30.420] [INFO] users - profileInfo success
+[2020-12-22T23:12:08.809] [INFO] users - profileInfo userID: 193 
+[2020-12-22T23:12:08.863] [INFO] users - profileInfo userID: 193 
+[2020-12-22T23:12:08.863] [INFO] userDao - START getUserProfileByUserID : {"key":"UserID","val":193}
+[2020-12-22T23:12:08.868] [INFO] userDao - END getUserProfileByUserID
+[2020-12-22T23:12:08.868] [INFO] users - profileInfo success
+[2020-12-22T23:12:10.339] [INFO] users - profileInfo userID: 193 
+[2020-12-22T23:12:10.339] [INFO] userDao - START getUserProfileByUserID : {"key":"UserID","val":193}
+[2020-12-22T23:12:10.343] [INFO] userDao - END getUserProfileByUserID
+[2020-12-22T23:12:10.343] [INFO] users - profileInfo success
+[2020-12-22T23:12:21.697] [INFO] users - updatePro:{"Update_type":"basicInfo","lastName":"hhhh","firstName":"bunsui","sex":"1","birthday":null,"email":"yws@gmail.com","phone":null,"avatar":"http://localhost:3000/avatar/00_00.jpg","aboutMe":null}
+[2020-12-22T23:12:21.697] [INFO] userDao - START saveUserProfile: param1:{"LastName":"hhhh","FirstName":"bunsui","Sex":"1","Birthday":null,"Phone1":null,"Aboutme":null} , param2:{"Email":"yws@gmail.com"}
+[2020-12-22T23:12:21.701] [INFO] userDao - END saveUserProfile
+[2020-12-22T23:12:21.701] [INFO] users - updatePro success
+[2020-12-22T23:12:22.661] [INFO] users - updatePro:{"Update_type":"basicInfo","lastName":"hhhh","firstName":"bunsui","sex":"1","birthday":null,"email":"yws@gmail.com","phone":null,"avatar":"http://localhost:3000/avatar/00_00.jpg","aboutMe":null}
+[2020-12-22T23:12:22.662] [INFO] userDao - START saveUserProfile: param1:{"LastName":"hhhh","FirstName":"bunsui","Sex":"1","Birthday":null,"Phone1":null,"Aboutme":null} , param2:{"Email":"yws@gmail.com"}
+[2020-12-22T23:12:22.665] [INFO] userDao - END saveUserProfile
+[2020-12-22T23:12:22.665] [INFO] users - updatePro success
+[2020-12-22T23:15:07.994] [INFO] users - profileInfo userID: 193 
+[2020-12-22T23:15:08.103] [INFO] users - profileInfo userID: 193 
+[2020-12-22T23:15:08.103] [INFO] userDao - START getUserProfileByUserID : {"key":"UserID","val":193}
+[2020-12-22T23:15:08.109] [INFO] userDao - END getUserProfileByUserID
+[2020-12-22T23:15:08.109] [INFO] users - profileInfo success
+[2020-12-22T23:15:09.370] [INFO] users - profileInfo userID: 193 
+[2020-12-22T23:15:09.370] [INFO] userDao - START getUserProfileByUserID : {"key":"UserID","val":193}
+[2020-12-22T23:15:09.374] [INFO] userDao - END getUserProfileByUserID
+[2020-12-22T23:15:09.374] [INFO] users - profileInfo success
+[2020-12-22T23:15:28.060] [INFO] users - profileInfo userID: 193 
+[2020-12-22T23:15:28.633] [INFO] users - profileInfo userID: 193 
+[2020-12-22T23:15:28.687] [INFO] users - profileInfo userID: 193 
+[2020-12-22T23:15:28.687] [INFO] userDao - START getUserProfileByUserID : {"key":"UserID","val":193}
+[2020-12-22T23:15:28.691] [INFO] userDao - END getUserProfileByUserID
+[2020-12-22T23:15:28.692] [INFO] users - profileInfo success
+[2020-12-22T23:15:30.035] [INFO] users - profileInfo userID: 193 
+[2020-12-22T23:15:30.035] [INFO] userDao - START getUserProfileByUserID : {"key":"UserID","val":193}
+[2020-12-22T23:15:30.039] [INFO] userDao - END getUserProfileByUserID
+[2020-12-22T23:15:30.039] [INFO] users - profileInfo success
+[2020-12-22T23:17:06.461] [INFO] users - profileInfo userID: 193 
+[2020-12-22T23:17:06.538] [INFO] users - profileInfo userID: 193 
+[2020-12-22T23:17:06.538] [INFO] userDao - START getUserProfileByUserID : {"key":"UserID","val":193}
+[2020-12-22T23:17:06.543] [INFO] userDao - END getUserProfileByUserID
+[2020-12-22T23:17:06.543] [INFO] users - profileInfo success
+[2020-12-22T23:17:07.527] [INFO] users - profileInfo userID: 193 
+[2020-12-22T23:17:07.528] [INFO] userDao - START getUserProfileByUserID : {"key":"UserID","val":193}
+[2020-12-22T23:17:07.531] [INFO] userDao - END getUserProfileByUserID
+[2020-12-22T23:17:07.532] [INFO] users - profileInfo success
+[2020-12-22T23:17:21.416] [INFO] users - profileInfo userID: 193 
+[2020-12-22T23:17:21.522] [INFO] users - profileInfo userID: 193 
+[2020-12-22T23:17:21.522] [INFO] userDao - START getUserProfileByUserID : {"key":"UserID","val":193}
+[2020-12-22T23:17:21.526] [INFO] userDao - END getUserProfileByUserID
+[2020-12-22T23:17:21.526] [INFO] users - profileInfo success
+[2020-12-22T23:17:22.807] [INFO] users - profileInfo userID: 193 
+[2020-12-22T23:17:22.808] [INFO] userDao - START getUserProfileByUserID : {"key":"UserID","val":193}
+[2020-12-22T23:17:22.811] [INFO] userDao - END getUserProfileByUserID
+[2020-12-22T23:17:22.811] [INFO] users - profileInfo success
+[2020-12-22T23:17:53.803] [INFO] users - profileInfo userID: 193 
+[2020-12-22T23:17:54.444] [INFO] users - profileInfo userID: 193 
+[2020-12-22T23:17:54.499] [INFO] users - profileInfo userID: 193 
+[2020-12-22T23:17:54.500] [INFO] userDao - START getUserProfileByUserID : {"key":"UserID","val":193}
+[2020-12-22T23:17:54.508] [INFO] userDao - END getUserProfileByUserID
+[2020-12-22T23:17:54.508] [INFO] users - profileInfo success
+[2020-12-22T23:17:55.463] [INFO] users - profileInfo userID: 193 
+[2020-12-22T23:17:55.463] [INFO] userDao - START getUserProfileByUserID : {"key":"UserID","val":193}
+[2020-12-22T23:17:55.468] [INFO] userDao - END getUserProfileByUserID
+[2020-12-22T23:17:55.468] [INFO] users - profileInfo success
+[2020-12-22T23:18:46.324] [INFO] users - profileInfo userID: 193 
+[2020-12-22T23:18:46.378] [INFO] users - profileInfo userID: 193 
+[2020-12-22T23:18:46.379] [INFO] userDao - START getUserProfileByUserID : {"key":"UserID","val":193}
+[2020-12-22T23:18:46.385] [INFO] userDao - END getUserProfileByUserID
+[2020-12-22T23:18:46.385] [INFO] users - profileInfo success
+[2020-12-22T23:18:47.826] [INFO] users - profileInfo userID: 193 
+[2020-12-22T23:18:47.826] [INFO] userDao - START getUserProfileByUserID : {"key":"UserID","val":193}
+[2020-12-22T23:18:47.829] [INFO] userDao - END getUserProfileByUserID
+[2020-12-22T23:18:47.829] [INFO] users - profileInfo success
+[2020-12-22T23:18:57.196] [INFO] users - profileInfo userID: 193 
+[2020-12-22T23:18:57.269] [INFO] users - profileInfo userID: 193 
+[2020-12-22T23:18:57.270] [INFO] userDao - START getUserProfileByUserID : {"key":"UserID","val":193}
+[2020-12-22T23:18:57.273] [INFO] userDao - END getUserProfileByUserID
+[2020-12-22T23:18:57.273] [INFO] users - profileInfo success
+[2020-12-22T23:18:58.738] [INFO] users - profileInfo userID: 193 
+[2020-12-22T23:18:58.738] [INFO] userDao - START getUserProfileByUserID : {"key":"UserID","val":193}
+[2020-12-22T23:18:58.742] [INFO] userDao - END getUserProfileByUserID
+[2020-12-22T23:18:58.742] [INFO] users - profileInfo success
+[2020-12-22T23:19:05.628] [INFO] users - profileInfo userID: 193 
+[2020-12-22T23:19:05.712] [INFO] users - profileInfo userID: 193 
+[2020-12-22T23:19:05.712] [INFO] userDao - START getUserProfileByUserID : {"key":"UserID","val":193}
+[2020-12-22T23:19:05.717] [INFO] userDao - END getUserProfileByUserID
+[2020-12-22T23:19:05.717] [INFO] users - profileInfo success
+[2020-12-22T23:19:06.948] [INFO] users - profileInfo userID: 193 
+[2020-12-22T23:19:06.948] [INFO] userDao - START getUserProfileByUserID : {"key":"UserID","val":193}
+[2020-12-22T23:19:06.952] [INFO] userDao - END getUserProfileByUserID
+[2020-12-22T23:19:06.952] [INFO] users - profileInfo success
+[2020-12-22T23:19:19.957] [INFO] users - profileInfo userID: 193 
+[2020-12-22T23:19:20.014] [INFO] users - profileInfo userID: 193 
+[2020-12-22T23:19:20.014] [INFO] userDao - START getUserProfileByUserID : {"key":"UserID","val":193}
+[2020-12-22T23:19:20.019] [INFO] userDao - END getUserProfileByUserID
+[2020-12-22T23:19:20.019] [INFO] users - profileInfo success
+[2020-12-22T23:19:21.718] [INFO] users - profileInfo userID: 193 
+[2020-12-22T23:19:21.718] [INFO] userDao - START getUserProfileByUserID : {"key":"UserID","val":193}
+[2020-12-22T23:19:21.723] [INFO] userDao - END getUserProfileByUserID
+[2020-12-22T23:19:21.724] [INFO] users - profileInfo success
+[2020-12-22T23:19:52.924] [INFO] users - profileInfo userID: 193 
+[2020-12-22T23:19:53.025] [INFO] users - profileInfo userID: 193 
+[2020-12-22T23:19:53.025] [INFO] userDao - START getUserProfileByUserID : {"key":"UserID","val":193}
+[2020-12-22T23:19:53.030] [INFO] userDao - END getUserProfileByUserID
+[2020-12-22T23:19:53.031] [INFO] users - profileInfo success
+[2020-12-22T23:19:54.352] [INFO] users - profileInfo userID: 193 
+[2020-12-22T23:19:54.352] [INFO] userDao - START getUserProfileByUserID : {"key":"UserID","val":193}
+[2020-12-22T23:19:54.358] [INFO] userDao - END getUserProfileByUserID
+[2020-12-22T23:19:54.358] [INFO] users - profileInfo success
+[2020-12-22T23:20:33.521] [INFO] users - profileInfo userID: 193 
+[2020-12-22T23:20:33.594] [INFO] users - profileInfo userID: 193 
+[2020-12-22T23:20:33.594] [INFO] userDao - START getUserProfileByUserID : {"key":"UserID","val":193}
+[2020-12-22T23:20:33.599] [INFO] userDao - END getUserProfileByUserID
+[2020-12-22T23:20:33.599] [INFO] users - profileInfo success
+[2020-12-22T23:20:35.087] [INFO] users - profileInfo userID: 193 
+[2020-12-22T23:20:35.088] [INFO] userDao - START getUserProfileByUserID : {"key":"UserID","val":193}
+[2020-12-22T23:20:35.091] [INFO] userDao - END getUserProfileByUserID
+[2020-12-22T23:20:35.091] [INFO] users - profileInfo success
+[2020-12-22T23:21:41.111] [INFO] users - profileInfo userID: 193 
+[2020-12-22T23:21:41.219] [INFO] users - profileInfo userID: 193 
+[2020-12-22T23:21:41.219] [INFO] userDao - START getUserProfileByUserID : {"key":"UserID","val":193}
+[2020-12-22T23:21:41.223] [INFO] userDao - END getUserProfileByUserID
+[2020-12-22T23:21:41.223] [INFO] users - profileInfo success
+[2020-12-22T23:21:42.440] [INFO] users - profileInfo userID: 193 
+[2020-12-22T23:21:42.440] [INFO] userDao - START getUserProfileByUserID : {"key":"UserID","val":193}
+[2020-12-22T23:21:42.443] [INFO] userDao - END getUserProfileByUserID
+[2020-12-22T23:21:42.443] [INFO] users - profileInfo success
+[2020-12-22T23:22:09.737] [INFO] users - profileInfo userID: 193 
+[2020-12-22T23:22:09.787] [INFO] users - profileInfo userID: 193 
+[2020-12-22T23:22:09.787] [INFO] userDao - START getUserProfileByUserID : {"key":"UserID","val":193}
+[2020-12-22T23:22:09.791] [INFO] userDao - END getUserProfileByUserID
+[2020-12-22T23:22:09.791] [INFO] users - profileInfo success
+[2020-12-22T23:22:11.076] [INFO] users - profileInfo userID: 193 
+[2020-12-22T23:22:11.076] [INFO] userDao - START getUserProfileByUserID : {"key":"UserID","val":193}
+[2020-12-22T23:22:11.080] [INFO] userDao - END getUserProfileByUserID
+[2020-12-22T23:22:11.080] [INFO] users - profileInfo success
+[2020-12-22T23:23:28.724] [INFO] users - profileInfo userID: 193 
+[2020-12-22T23:23:28.800] [INFO] users - profileInfo userID: 193 
+[2020-12-22T23:23:28.800] [INFO] userDao - START getUserProfileByUserID : {"key":"UserID","val":193}
+[2020-12-22T23:23:28.805] [INFO] userDao - END getUserProfileByUserID
+[2020-12-22T23:23:28.805] [INFO] users - profileInfo success
+[2020-12-22T23:23:30.709] [INFO] users - profileInfo userID: 193 
+[2020-12-22T23:23:30.709] [INFO] userDao - START getUserProfileByUserID : {"key":"UserID","val":193}
+[2020-12-22T23:23:30.712] [INFO] userDao - END getUserProfileByUserID
+[2020-12-22T23:23:30.712] [INFO] users - profileInfo success
+[2020-12-22T23:23:47.693] [INFO] users - profileInfo userID: 193 
+[2020-12-22T23:23:47.755] [INFO] users - profileInfo userID: 193 
+[2020-12-22T23:23:47.755] [INFO] userDao - START getUserProfileByUserID : {"key":"UserID","val":193}
+[2020-12-22T23:23:47.760] [INFO] userDao - END getUserProfileByUserID
+[2020-12-22T23:23:47.760] [INFO] users - profileInfo success
+[2020-12-22T23:23:49.038] [INFO] users - profileInfo userID: 193 
+[2020-12-22T23:23:49.038] [INFO] userDao - START getUserProfileByUserID : {"key":"UserID","val":193}
+[2020-12-22T23:23:49.043] [INFO] userDao - END getUserProfileByUserID
+[2020-12-22T23:23:49.043] [INFO] users - profileInfo success
+[2020-12-22T23:24:05.165] [INFO] users - profileInfo userID: 193 
+[2020-12-22T23:24:05.240] [INFO] users - profileInfo userID: 193 
+[2020-12-22T23:24:05.240] [INFO] userDao - START getUserProfileByUserID : {"key":"UserID","val":193}
+[2020-12-22T23:24:05.243] [INFO] userDao - END getUserProfileByUserID
+[2020-12-22T23:24:05.243] [INFO] users - profileInfo success
+[2020-12-22T23:24:07.219] [INFO] users - profileInfo userID: 193 
+[2020-12-22T23:24:07.219] [INFO] userDao - START getUserProfileByUserID : {"key":"UserID","val":193}
+[2020-12-22T23:24:07.223] [INFO] userDao - END getUserProfileByUserID
+[2020-12-22T23:24:07.223] [INFO] users - profileInfo success
+[2020-12-22T23:33:08.399] [INFO] users - profileInfo userID: 193 
+[2020-12-22T23:33:08.509] [INFO] users - profileInfo userID: 193 
+[2020-12-22T23:33:08.509] [INFO] userDao - START getUserProfileByUserID : {"key":"UserID","val":193}
+[2020-12-22T23:33:08.514] [INFO] userDao - END getUserProfileByUserID
+[2020-12-22T23:33:08.514] [INFO] users - profileInfo success
+[2020-12-22T23:33:09.701] [INFO] users - profileInfo userID: 193 
+[2020-12-22T23:33:09.701] [INFO] userDao - START getUserProfileByUserID : {"key":"UserID","val":193}
+[2020-12-22T23:33:09.705] [INFO] userDao - END getUserProfileByUserID
+[2020-12-22T23:33:09.705] [INFO] users - profileInfo success
+[2020-12-22T23:36:06.288] [INFO] users - profileInfo userID: 193 
+[2020-12-22T23:36:06.394] [INFO] users - profileInfo userID: 193 
+[2020-12-22T23:36:06.394] [INFO] userDao - START getUserProfileByUserID : {"key":"UserID","val":193}
+[2020-12-22T23:36:06.400] [INFO] userDao - END getUserProfileByUserID
+[2020-12-22T23:36:06.400] [INFO] users - profileInfo success
+[2020-12-22T23:36:07.934] [INFO] users - profileInfo userID: 193 
+[2020-12-22T23:36:07.934] [INFO] userDao - START getUserProfileByUserID : {"key":"UserID","val":193}
+[2020-12-22T23:36:07.938] [INFO] userDao - END getUserProfileByUserID
+[2020-12-22T23:36:07.938] [INFO] users - profileInfo success
+[2020-12-22T23:41:11.899] [INFO] users - profileInfo userID: 193 
+[2020-12-22T23:41:12.011] [INFO] users - profileInfo userID: 193 
+[2020-12-22T23:41:12.011] [INFO] userDao - START getUserProfileByUserID : {"key":"UserID","val":193}
+[2020-12-22T23:41:12.016] [INFO] userDao - END getUserProfileByUserID
+[2020-12-22T23:41:12.016] [INFO] users - profileInfo success
+[2020-12-22T23:41:13.492] [INFO] users - profileInfo userID: 193 
+[2020-12-22T23:41:13.492] [INFO] userDao - START getUserProfileByUserID : {"key":"UserID","val":193}
+[2020-12-22T23:41:13.496] [INFO] userDao - END getUserProfileByUserID
+[2020-12-22T23:41:13.496] [INFO] users - profileInfo success
+[2020-12-22T23:42:19.561] [INFO] users - profileInfo userID: 193 
+[2020-12-22T23:42:19.633] [INFO] users - profileInfo userID: 193 
+[2020-12-22T23:42:19.633] [INFO] userDao - START getUserProfileByUserID : {"key":"UserID","val":193}
+[2020-12-22T23:42:19.637] [INFO] userDao - END getUserProfileByUserID
+[2020-12-22T23:42:19.637] [INFO] users - profileInfo success
+[2020-12-22T23:42:21.429] [INFO] users - profileInfo userID: 193 
+[2020-12-22T23:42:21.429] [INFO] userDao - START getUserProfileByUserID : {"key":"UserID","val":193}
+[2020-12-22T23:42:21.434] [INFO] userDao - END getUserProfileByUserID
+[2020-12-22T23:42:21.434] [INFO] users - profileInfo success
+[2020-12-22T23:45:41.501] [INFO] users - profileInfo userID: 193 
+[2020-12-22T23:45:41.570] [INFO] users - profileInfo userID: 193 
+[2020-12-22T23:45:41.570] [INFO] userDao - START getUserProfileByUserID : {"key":"UserID","val":193}
+[2020-12-22T23:45:41.575] [INFO] userDao - END getUserProfileByUserID
+[2020-12-22T23:45:41.575] [INFO] users - profileInfo success
+[2020-12-22T23:45:44.118] [INFO] users - profileInfo userID: 193 
+[2020-12-22T23:45:44.118] [INFO] userDao - START getUserProfileByUserID : {"key":"UserID","val":193}
+[2020-12-22T23:45:44.122] [INFO] userDao - END getUserProfileByUserID
+[2020-12-22T23:45:44.122] [INFO] users - profileInfo success
+[2020-12-22T23:52:52.737] [INFO] users - profileInfo userID: 193 
+[2020-12-22T23:52:52.807] [INFO] users - profileInfo userID: 193 
+[2020-12-22T23:52:52.807] [INFO] userDao - START getUserProfileByUserID : {"key":"UserID","val":193}
+[2020-12-22T23:52:52.812] [INFO] userDao - END getUserProfileByUserID
+[2020-12-22T23:52:52.812] [INFO] users - profileInfo success
+[2020-12-22T23:52:54.088] [INFO] users - profileInfo userID: 193 
+[2020-12-22T23:52:54.088] [INFO] userDao - START getUserProfileByUserID : {"key":"UserID","val":193}
+[2020-12-22T23:52:54.091] [INFO] userDao - END getUserProfileByUserID
+[2020-12-22T23:52:54.091] [INFO] users - profileInfo success
+[2020-12-22T23:54:15.720] [INFO] users - profileInfo userID: 193 
+[2020-12-22T23:54:15.827] [INFO] users - profileInfo userID: 193 
+[2020-12-22T23:54:15.827] [INFO] userDao - START getUserProfileByUserID : {"key":"UserID","val":193}
+[2020-12-22T23:54:15.832] [INFO] userDao - END getUserProfileByUserID
+[2020-12-22T23:54:15.833] [INFO] users - profileInfo success
+[2020-12-22T23:54:17.318] [INFO] users - profileInfo userID: 193 
+[2020-12-22T23:54:17.318] [INFO] userDao - START getUserProfileByUserID : {"key":"UserID","val":193}
+[2020-12-22T23:54:17.321] [INFO] userDao - END getUserProfileByUserID
+[2020-12-22T23:54:17.322] [INFO] users - profileInfo success
+[2020-12-22T23:55:02.619] [INFO] users - profileInfo userID: 193 
+[2020-12-22T23:55:02.697] [INFO] users - profileInfo userID: 193 
+[2020-12-22T23:55:02.697] [INFO] userDao - START getUserProfileByUserID : {"key":"UserID","val":193}
+[2020-12-22T23:55:02.702] [INFO] userDao - END getUserProfileByUserID
+[2020-12-22T23:55:02.702] [INFO] users - profileInfo success
+[2020-12-22T23:55:04.018] [INFO] users - profileInfo userID: 193 
+[2020-12-22T23:55:04.019] [INFO] userDao - START getUserProfileByUserID : {"key":"UserID","val":193}
+[2020-12-22T23:55:04.023] [INFO] userDao - END getUserProfileByUserID
+[2020-12-22T23:55:04.023] [INFO] users - profileInfo success
+[2020-12-22T23:55:21.726] [INFO] users - profileInfo userID: 193 
+[2020-12-22T23:55:21.787] [INFO] users - profileInfo userID: 193 
+[2020-12-22T23:55:21.787] [INFO] userDao - START getUserProfileByUserID : {"key":"UserID","val":193}
+[2020-12-22T23:55:21.791] [INFO] userDao - END getUserProfileByUserID
+[2020-12-22T23:55:21.791] [INFO] users - profileInfo success
+[2020-12-22T23:55:23.087] [INFO] users - profileInfo userID: 193 
+[2020-12-22T23:55:23.087] [INFO] userDao - START getUserProfileByUserID : {"key":"UserID","val":193}
+[2020-12-22T23:55:23.090] [INFO] userDao - END getUserProfileByUserID
+[2020-12-22T23:55:23.090] [INFO] users - profileInfo success
+[2020-12-22T23:56:09.193] [INFO] users - profileInfo userID: 193 
+[2020-12-22T23:56:09.253] [INFO] users - profileInfo userID: 193 
+[2020-12-22T23:56:09.253] [INFO] userDao - START getUserProfileByUserID : {"key":"UserID","val":193}
+[2020-12-22T23:56:09.257] [INFO] userDao - END getUserProfileByUserID
+[2020-12-22T23:56:09.257] [INFO] users - profileInfo success
+[2020-12-22T23:56:10.346] [INFO] users - profileInfo userID: 193 
+[2020-12-22T23:56:10.346] [INFO] userDao - START getUserProfileByUserID : {"key":"UserID","val":193}
+[2020-12-22T23:56:10.349] [INFO] userDao - END getUserProfileByUserID
+[2020-12-22T23:56:10.349] [INFO] users - profileInfo success
+[2020-12-22T23:58:38.108] [INFO] users - profileInfo userID: 193 
+[2020-12-22T23:58:38.219] [INFO] users - profileInfo userID: 193 
+[2020-12-22T23:58:38.220] [INFO] userDao - START getUserProfileByUserID : {"key":"UserID","val":193}
+[2020-12-22T23:58:38.224] [INFO] userDao - END getUserProfileByUserID
+[2020-12-22T23:58:38.224] [INFO] users - profileInfo success
+[2020-12-22T23:58:39.194] [INFO] users - profileInfo userID: 193 
+[2020-12-22T23:58:39.194] [INFO] userDao - START getUserProfileByUserID : {"key":"UserID","val":193}
+[2020-12-22T23:58:39.198] [INFO] userDao - END getUserProfileByUserID
+[2020-12-22T23:58:39.198] [INFO] users - profileInfo success
+[2020-12-22T23:59:49.860] [INFO] users - profileInfo userID: 193 
+[2020-12-22T23:59:49.920] [INFO] users - profileInfo userID: 193 
+[2020-12-22T23:59:49.921] [INFO] userDao - START getUserProfileByUserID : {"key":"UserID","val":193}
+[2020-12-22T23:59:49.927] [INFO] userDao - END getUserProfileByUserID
+[2020-12-22T23:59:49.927] [INFO] users - profileInfo success
+[2020-12-22T23:59:51.191] [INFO] users - profileInfo userID: 193 
+[2020-12-22T23:59:51.191] [INFO] userDao - START getUserProfileByUserID : {"key":"UserID","val":193}
+[2020-12-22T23:59:51.195] [INFO] userDao - END getUserProfileByUserID
+[2020-12-22T23:59:51.195] [INFO] users - profileInfo success
+[2020-12-23T00:00:05.266] [INFO] users - profileInfo userID: 193 
+[2020-12-23T00:00:05.371] [INFO] users - profileInfo userID: 193 
+[2020-12-23T00:00:05.371] [INFO] userDao - START getUserProfileByUserID : {"key":"UserID","val":193}
+[2020-12-23T00:00:05.375] [INFO] userDao - END getUserProfileByUserID
+[2020-12-23T00:00:05.375] [INFO] users - profileInfo success
+[2020-12-23T00:00:07.016] [INFO] users - profileInfo userID: 193 
+[2020-12-23T00:00:07.016] [INFO] userDao - START getUserProfileByUserID : {"key":"UserID","val":193}
+[2020-12-23T00:00:07.020] [INFO] userDao - END getUserProfileByUserID
+[2020-12-23T00:00:07.020] [INFO] users - profileInfo success
+[2020-12-23T00:00:14.352] [INFO] users - profileInfo userID: 193 
+[2020-12-23T00:00:14.434] [INFO] users - profileInfo userID: 193 
+[2020-12-23T00:00:14.434] [INFO] userDao - START getUserProfileByUserID : {"key":"UserID","val":193}
+[2020-12-23T00:00:14.438] [INFO] userDao - END getUserProfileByUserID
+[2020-12-23T00:00:14.438] [INFO] users - profileInfo success
+[2020-12-23T00:00:15.755] [INFO] users - profileInfo userID: 193 
+[2020-12-23T00:00:15.755] [INFO] userDao - START getUserProfileByUserID : {"key":"UserID","val":193}
+[2020-12-23T00:00:15.759] [INFO] userDao - END getUserProfileByUserID
+[2020-12-23T00:00:15.759] [INFO] users - profileInfo success
+[2020-12-23T00:00:23.382] [INFO] users - profileInfo userID: 193 
+[2020-12-23T00:00:23.433] [INFO] users - profileInfo userID: 193 
+[2020-12-23T00:00:23.433] [INFO] userDao - START getUserProfileByUserID : {"key":"UserID","val":193}
+[2020-12-23T00:00:23.437] [INFO] userDao - END getUserProfileByUserID
+[2020-12-23T00:00:23.437] [INFO] users - profileInfo success
+[2020-12-23T00:00:24.591] [INFO] users - profileInfo userID: 193 
+[2020-12-23T00:00:24.592] [INFO] userDao - START getUserProfileByUserID : {"key":"UserID","val":193}
+[2020-12-23T00:00:24.595] [INFO] userDao - END getUserProfileByUserID
+[2020-12-23T00:00:24.595] [INFO] users - profileInfo success
+[2020-12-23T00:02:56.007] [INFO] users - profileInfo userID: 193 
+[2020-12-23T00:02:56.058] [INFO] users - profileInfo userID: 193 
+[2020-12-23T00:02:56.058] [INFO] userDao - START getUserProfileByUserID : {"key":"UserID","val":193}
+[2020-12-23T00:02:56.063] [INFO] userDao - END getUserProfileByUserID
+[2020-12-23T00:02:56.063] [INFO] users - profileInfo success
+[2020-12-23T00:02:57.519] [INFO] users - profileInfo userID: 193 
+[2020-12-23T00:02:57.519] [INFO] userDao - START getUserProfileByUserID : {"key":"UserID","val":193}
+[2020-12-23T00:02:57.522] [INFO] userDao - END getUserProfileByUserID
+[2020-12-23T00:02:57.522] [INFO] users - profileInfo success
+[2020-12-23T00:04:15.738] [INFO] users - profileInfo userID: 193 
+[2020-12-23T00:04:15.813] [INFO] users - profileInfo userID: 193 
+[2020-12-23T00:04:15.813] [INFO] userDao - START getUserProfileByUserID : {"key":"UserID","val":193}
+[2020-12-23T00:04:15.817] [INFO] userDao - END getUserProfileByUserID
+[2020-12-23T00:04:15.817] [INFO] users - profileInfo success
+[2020-12-23T00:04:17.855] [INFO] users - profileInfo userID: 193 
+[2020-12-23T00:04:17.897] [INFO] users - profileInfo userID: 193 
+[2020-12-23T00:04:17.898] [INFO] userDao - START getUserProfileByUserID : {"key":"UserID","val":193}
+[2020-12-23T00:04:17.901] [INFO] userDao - END getUserProfileByUserID
+[2020-12-23T00:04:17.901] [INFO] users - profileInfo success
+[2020-12-23T00:04:19.282] [INFO] users - profileInfo userID: 193 
+[2020-12-23T00:04:19.282] [INFO] userDao - START getUserProfileByUserID : {"key":"UserID","val":193}
+[2020-12-23T00:04:19.286] [INFO] userDao - END getUserProfileByUserID
+[2020-12-23T00:04:19.286] [INFO] users - profileInfo success
+[2020-12-23T00:04:43.597] [INFO] users - profileInfo userID: 193 
+[2020-12-23T00:04:43.659] [INFO] users - profileInfo userID: 193 
+[2020-12-23T00:04:43.660] [INFO] userDao - START getUserProfileByUserID : {"key":"UserID","val":193}
+[2020-12-23T00:04:43.665] [INFO] userDao - END getUserProfileByUserID
+[2020-12-23T00:04:43.665] [INFO] users - profileInfo success
+[2020-12-23T00:04:44.780] [INFO] users - profileInfo userID: 193 
+[2020-12-23T00:04:44.780] [INFO] userDao - START getUserProfileByUserID : {"key":"UserID","val":193}
+[2020-12-23T00:04:44.783] [INFO] userDao - END getUserProfileByUserID
+[2020-12-23T00:04:44.784] [INFO] users - profileInfo success
+[2020-12-23T00:04:58.522] [INFO] users - profileInfo userID: 193 
+[2020-12-23T00:04:58.599] [INFO] users - profileInfo userID: 193 
+[2020-12-23T00:04:58.600] [INFO] userDao - START getUserProfileByUserID : {"key":"UserID","val":193}
+[2020-12-23T00:04:58.603] [INFO] userDao - END getUserProfileByUserID
+[2020-12-23T00:04:58.603] [INFO] users - profileInfo success
+[2020-12-23T00:04:59.613] [INFO] users - profileInfo userID: 193 
+[2020-12-23T00:04:59.613] [INFO] userDao - START getUserProfileByUserID : {"key":"UserID","val":193}
+[2020-12-23T00:04:59.616] [INFO] userDao - END getUserProfileByUserID
+[2020-12-23T00:04:59.616] [INFO] users - profileInfo success
+[2020-12-23T00:05:26.007] [INFO] users - profileInfo userID: 193 
+[2020-12-23T00:05:26.066] [INFO] users - profileInfo userID: 193 
+[2020-12-23T00:05:26.066] [INFO] userDao - START getUserProfileByUserID : {"key":"UserID","val":193}
+[2020-12-23T00:05:26.070] [INFO] userDao - END getUserProfileByUserID
+[2020-12-23T00:05:26.070] [INFO] users - profileInfo success
+[2020-12-23T00:05:27.280] [INFO] users - profileInfo userID: 193 
+[2020-12-23T00:05:27.280] [INFO] userDao - START getUserProfileByUserID : {"key":"UserID","val":193}
+[2020-12-23T00:05:27.284] [INFO] userDao - END getUserProfileByUserID
+[2020-12-23T00:05:27.284] [INFO] users - profileInfo success
+[2020-12-23T00:06:14.776] [INFO] users - profileInfo userID: 193 
+[2020-12-23T00:06:14.883] [INFO] users - profileInfo userID: 193 
+[2020-12-23T00:06:14.884] [INFO] userDao - START getUserProfileByUserID : {"key":"UserID","val":193}
+[2020-12-23T00:06:14.888] [INFO] userDao - END getUserProfileByUserID
+[2020-12-23T00:06:14.889] [INFO] users - profileInfo success
+[2020-12-23T00:06:16.333] [INFO] users - profileInfo userID: 193 
+[2020-12-23T00:06:16.333] [INFO] userDao - START getUserProfileByUserID : {"key":"UserID","val":193}
+[2020-12-23T00:06:16.337] [INFO] userDao - END getUserProfileByUserID
+[2020-12-23T00:06:16.337] [INFO] users - profileInfo success
+[2020-12-23T00:08:02.032] [INFO] users - profileInfo userID: 193 
+[2020-12-23T00:08:02.136] [INFO] users - profileInfo userID: 193 
+[2020-12-23T00:08:02.136] [INFO] userDao - START getUserProfileByUserID : {"key":"UserID","val":193}
+[2020-12-23T00:08:02.141] [INFO] userDao - END getUserProfileByUserID
+[2020-12-23T00:08:02.141] [INFO] users - profileInfo success
+[2020-12-23T00:08:04.534] [INFO] users - profileInfo userID: 193 
+[2020-12-23T00:08:04.534] [INFO] userDao - START getUserProfileByUserID : {"key":"UserID","val":193}
+[2020-12-23T00:08:04.537] [INFO] userDao - END getUserProfileByUserID
+[2020-12-23T00:08:04.537] [INFO] users - profileInfo success
+[2020-12-23T00:08:23.175] [INFO] users - profileInfo userID: 193 
+[2020-12-23T00:08:23.284] [INFO] users - profileInfo userID: 193 
+[2020-12-23T00:08:23.285] [INFO] userDao - START getUserProfileByUserID : {"key":"UserID","val":193}
+[2020-12-23T00:08:23.287] [INFO] userDao - END getUserProfileByUserID
+[2020-12-23T00:08:23.288] [INFO] users - profileInfo success
+[2020-12-23T00:08:24.385] [INFO] users - profileInfo userID: 193 
+[2020-12-23T00:08:24.385] [INFO] userDao - START getUserProfileByUserID : {"key":"UserID","val":193}
+[2020-12-23T00:08:24.389] [INFO] userDao - END getUserProfileByUserID
+[2020-12-23T00:08:24.389] [INFO] users - profileInfo success
+[2020-12-23T00:10:55.832] [INFO] users - profileInfo userID: 193 
+[2020-12-23T00:10:55.915] [INFO] users - profileInfo userID: 193 
+[2020-12-23T00:10:55.915] [INFO] userDao - START getUserProfileByUserID : {"key":"UserID","val":193}
+[2020-12-23T00:10:55.920] [INFO] userDao - END getUserProfileByUserID
+[2020-12-23T00:10:55.920] [INFO] users - profileInfo success
+[2020-12-23T00:10:57.203] [INFO] users - profileInfo userID: 193 
+[2020-12-23T00:10:57.203] [INFO] userDao - START getUserProfileByUserID : {"key":"UserID","val":193}
+[2020-12-23T00:10:57.207] [INFO] userDao - END getUserProfileByUserID
+[2020-12-23T00:10:57.207] [INFO] users - profileInfo success
+[2020-12-23T00:13:30.185] [INFO] users - profileInfo userID: 193 
+[2020-12-23T00:13:30.299] [INFO] users - profileInfo userID: 193 
+[2020-12-23T00:13:30.299] [INFO] userDao - START getUserProfileByUserID : {"key":"UserID","val":193}
+[2020-12-23T00:13:30.304] [INFO] userDao - END getUserProfileByUserID
+[2020-12-23T00:13:30.304] [INFO] users - profileInfo success
+[2020-12-23T00:13:31.500] [INFO] users - profileInfo userID: 193 
+[2020-12-23T00:13:31.500] [INFO] userDao - START getUserProfileByUserID : {"key":"UserID","val":193}
+[2020-12-23T00:13:31.503] [INFO] userDao - END getUserProfileByUserID
+[2020-12-23T00:13:31.503] [INFO] users - profileInfo success
+[2020-12-23T00:14:21.789] [INFO] users - profileInfo userID: 193 
+[2020-12-23T00:14:21.850] [INFO] users - profileInfo userID: 193 
+[2020-12-23T00:14:21.850] [INFO] userDao - START getUserProfileByUserID : {"key":"UserID","val":193}
+[2020-12-23T00:14:21.854] [INFO] userDao - END getUserProfileByUserID
+[2020-12-23T00:14:21.854] [INFO] users - profileInfo success
+[2020-12-23T00:14:23.178] [INFO] users - profileInfo userID: 193 
+[2020-12-23T00:14:23.179] [INFO] userDao - START getUserProfileByUserID : {"key":"UserID","val":193}
+[2020-12-23T00:14:23.182] [INFO] userDao - END getUserProfileByUserID
+[2020-12-23T00:14:23.182] [INFO] users - profileInfo success
+[2020-12-23T00:14:59.209] [INFO] users - profileInfo userID: 193 
+[2020-12-23T00:14:59.330] [INFO] users - profileInfo userID: 193 
+[2020-12-23T00:14:59.330] [INFO] userDao - START getUserProfileByUserID : {"key":"UserID","val":193}
+[2020-12-23T00:14:59.335] [INFO] userDao - END getUserProfileByUserID
+[2020-12-23T00:14:59.335] [INFO] users - profileInfo success
+[2020-12-23T00:15:00.305] [INFO] users - profileInfo userID: 193 
+[2020-12-23T00:15:00.305] [INFO] userDao - START getUserProfileByUserID : {"key":"UserID","val":193}
+[2020-12-23T00:15:00.309] [INFO] userDao - END getUserProfileByUserID
+[2020-12-23T00:15:00.309] [INFO] users - profileInfo success
+[2020-12-23T00:15:32.186] [INFO] users - profileInfo userID: 193 
+[2020-12-23T00:15:32.260] [INFO] users - profileInfo userID: 193 
+[2020-12-23T00:15:32.260] [INFO] userDao - START getUserProfileByUserID : {"key":"UserID","val":193}
+[2020-12-23T00:15:32.264] [INFO] userDao - END getUserProfileByUserID
+[2020-12-23T00:15:32.264] [INFO] users - profileInfo success
+[2020-12-23T00:15:33.638] [INFO] users - profileInfo userID: 193 
+[2020-12-23T00:15:33.638] [INFO] userDao - START getUserProfileByUserID : {"key":"UserID","val":193}
+[2020-12-23T00:15:33.641] [INFO] userDao - END getUserProfileByUserID
+[2020-12-23T00:15:33.641] [INFO] users - profileInfo success
+[2020-12-23T00:15:55.890] [INFO] users - profileInfo userID: 193 
+[2020-12-23T00:15:55.950] [INFO] users - profileInfo userID: 193 
+[2020-12-23T00:15:55.950] [INFO] userDao - START getUserProfileByUserID : {"key":"UserID","val":193}
+[2020-12-23T00:15:55.954] [INFO] userDao - END getUserProfileByUserID
+[2020-12-23T00:15:55.954] [INFO] users - profileInfo success
+[2020-12-23T00:15:57.288] [INFO] users - profileInfo userID: 193 
+[2020-12-23T00:15:57.289] [INFO] userDao - START getUserProfileByUserID : {"key":"UserID","val":193}
+[2020-12-23T00:15:57.293] [INFO] userDao - END getUserProfileByUserID
+[2020-12-23T00:15:57.293] [INFO] users - profileInfo success
+[2020-12-23T00:16:18.658] [INFO] users - profileInfo userID: 193 
+[2020-12-23T00:16:18.715] [INFO] users - profileInfo userID: 193 
+[2020-12-23T00:16:18.716] [INFO] userDao - START getUserProfileByUserID : {"key":"UserID","val":193}
+[2020-12-23T00:16:18.720] [INFO] userDao - END getUserProfileByUserID
+[2020-12-23T00:16:18.720] [INFO] users - profileInfo success
+[2020-12-23T00:16:19.804] [INFO] users - profileInfo userID: 193 
+[2020-12-23T00:16:19.805] [INFO] userDao - START getUserProfileByUserID : {"key":"UserID","val":193}
+[2020-12-23T00:16:19.807] [INFO] userDao - END getUserProfileByUserID
+[2020-12-23T00:16:19.807] [INFO] users - profileInfo success
+[2020-12-23T00:24:38.429] [INFO] users - profileInfo userID: 193 
+[2020-12-23T00:24:38.495] [INFO] users - profileInfo userID: 193 
+[2020-12-23T00:24:38.495] [INFO] userDao - START getUserProfileByUserID : {"key":"UserID","val":193}
+[2020-12-23T00:24:38.500] [INFO] userDao - END getUserProfileByUserID
+[2020-12-23T00:24:38.500] [INFO] users - profileInfo success
+[2020-12-23T00:24:40.226] [INFO] users - profileInfo userID: 193 
+[2020-12-23T00:24:40.226] [INFO] userDao - START getUserProfileByUserID : {"key":"UserID","val":193}
+[2020-12-23T00:24:40.229] [INFO] userDao - END getUserProfileByUserID
+[2020-12-23T00:24:40.229] [INFO] users - profileInfo success
+[2020-12-23T00:24:46.963] [INFO] users - profileInfo userID: 193 
+[2020-12-23T00:24:47.019] [INFO] users - profileInfo userID: 193 
+[2020-12-23T00:24:47.019] [INFO] userDao - START getUserProfileByUserID : {"key":"UserID","val":193}
+[2020-12-23T00:24:47.023] [INFO] userDao - END getUserProfileByUserID
+[2020-12-23T00:24:47.023] [INFO] users - profileInfo success
+[2020-12-23T00:24:48.801] [INFO] users - profileInfo userID: 193 
+[2020-12-23T00:24:48.801] [INFO] userDao - START getUserProfileByUserID : {"key":"UserID","val":193}
+[2020-12-23T00:24:48.804] [INFO] userDao - END getUserProfileByUserID
+[2020-12-23T00:24:48.805] [INFO] users - profileInfo success
+[2020-12-23T00:25:40.628] [INFO] users - profileInfo userID: 193 
+[2020-12-23T00:25:40.741] [INFO] users - profileInfo userID: 193 
+[2020-12-23T00:25:40.741] [INFO] userDao - START getUserProfileByUserID : {"key":"UserID","val":193}
+[2020-12-23T00:25:40.745] [INFO] userDao - END getUserProfileByUserID
+[2020-12-23T00:25:40.745] [INFO] users - profileInfo success
+[2020-12-23T00:25:41.512] [INFO] users - profileInfo userID: 193 
+[2020-12-23T00:25:41.512] [INFO] userDao - START getUserProfileByUserID : {"key":"UserID","val":193}
+[2020-12-23T00:25:41.515] [INFO] userDao - END getUserProfileByUserID
+[2020-12-23T00:25:41.515] [INFO] users - profileInfo success
+[2020-12-23T00:29:51.856] [INFO] users - profileInfo userID: 193 
+[2020-12-23T00:29:51.959] [INFO] users - profileInfo userID: 193 
+[2020-12-23T00:29:51.959] [INFO] userDao - START getUserProfileByUserID : {"key":"UserID","val":193}
+[2020-12-23T00:29:51.963] [INFO] userDao - END getUserProfileByUserID
+[2020-12-23T00:29:51.963] [INFO] users - profileInfo success
+[2020-12-23T00:30:00.471] [INFO] users - profileInfo userID: 193 
+[2020-12-23T00:30:00.471] [INFO] userDao - START getUserProfileByUserID : {"key":"UserID","val":193}
+[2020-12-23T00:30:00.474] [INFO] userDao - END getUserProfileByUserID
+[2020-12-23T00:30:00.474] [INFO] users - profileInfo success
+[2020-12-23T00:30:20.163] [INFO] users - profileInfo userID: 193 
+[2020-12-23T00:30:20.243] [INFO] users - profileInfo userID: 193 
+[2020-12-23T00:30:20.243] [INFO] userDao - START getUserProfileByUserID : {"key":"UserID","val":193}
+[2020-12-23T00:30:20.247] [INFO] userDao - END getUserProfileByUserID
+[2020-12-23T00:30:20.247] [INFO] users - profileInfo success
+[2020-12-23T00:30:22.698] [INFO] users - profileInfo userID: 193 
+[2020-12-23T00:30:22.698] [INFO] userDao - START getUserProfileByUserID : {"key":"UserID","val":193}
+[2020-12-23T00:30:22.701] [INFO] userDao - END getUserProfileByUserID
+[2020-12-23T00:30:22.701] [INFO] users - profileInfo success
+[2020-12-23T00:39:19.941] [INFO] users - profileInfo userID: 193 
+[2020-12-23T00:39:20.007] [INFO] users - profileInfo userID: 193 
+[2020-12-23T00:39:20.007] [INFO] userDao - START getUserProfileByUserID : {"key":"UserID","val":193}
+[2020-12-23T00:39:20.012] [INFO] userDao - END getUserProfileByUserID
+[2020-12-23T00:39:20.012] [INFO] users - profileInfo success
+[2020-12-23T00:39:28.298] [INFO] users - profileInfo userID: 193 
+[2020-12-23T00:39:28.298] [INFO] userDao - START getUserProfileByUserID : {"key":"UserID","val":193}
+[2020-12-23T00:39:28.301] [INFO] userDao - END getUserProfileByUserID
+[2020-12-23T00:39:28.301] [INFO] users - profileInfo success
+[2020-12-23T00:41:40.029] [INFO] users - profileInfo userID: 193 
+[2020-12-23T00:41:40.132] [INFO] users - profileInfo userID: 193 
+[2020-12-23T00:41:40.132] [INFO] userDao - START getUserProfileByUserID : {"key":"UserID","val":193}
+[2020-12-23T00:41:40.136] [INFO] userDao - END getUserProfileByUserID
+[2020-12-23T00:41:40.137] [INFO] users - profileInfo success
+[2020-12-23T00:41:41.564] [INFO] users - profileInfo userID: 193 
+[2020-12-23T00:41:41.565] [INFO] userDao - START getUserProfileByUserID : {"key":"UserID","val":193}
+[2020-12-23T00:41:41.568] [INFO] userDao - END getUserProfileByUserID
+[2020-12-23T00:41:41.569] [INFO] users - profileInfo success
+[2020-12-23T00:44:41.197] [INFO] users - profileInfo userID: 193 
+[2020-12-23T00:44:41.302] [INFO] users - profileInfo userID: 193 
+[2020-12-23T00:44:41.302] [INFO] userDao - START getUserProfileByUserID : {"key":"UserID","val":193}
+[2020-12-23T00:44:41.307] [INFO] userDao - END getUserProfileByUserID
+[2020-12-23T00:44:41.307] [INFO] users - profileInfo success
+[2020-12-23T00:44:42.609] [INFO] users - profileInfo userID: 193 
+[2020-12-23T00:44:42.609] [INFO] userDao - START getUserProfileByUserID : {"key":"UserID","val":193}
+[2020-12-23T00:44:42.612] [INFO] userDao - END getUserProfileByUserID
+[2020-12-23T00:44:42.613] [INFO] users - profileInfo success
+[2020-12-23T00:44:57.503] [INFO] users - profileInfo userID: 193 
+[2020-12-23T00:44:57.556] [INFO] users - profileInfo userID: 193 
+[2020-12-23T00:44:57.556] [INFO] userDao - START getUserProfileByUserID : {"key":"UserID","val":193}
+[2020-12-23T00:44:57.559] [INFO] userDao - END getUserProfileByUserID
+[2020-12-23T00:44:57.559] [INFO] users - profileInfo success
+[2020-12-23T00:44:58.652] [INFO] users - profileInfo userID: 193 
+[2020-12-23T00:44:58.652] [INFO] userDao - START getUserProfileByUserID : {"key":"UserID","val":193}
+[2020-12-23T00:44:58.655] [INFO] userDao - END getUserProfileByUserID
+[2020-12-23T00:44:58.655] [INFO] users - profileInfo success
+[2020-12-23T00:46:07.917] [INFO] users - profileInfo userID: 193 
+[2020-12-23T00:46:07.975] [INFO] users - profileInfo userID: 193 
+[2020-12-23T00:46:07.976] [INFO] userDao - START getUserProfileByUserID : {"key":"UserID","val":193}
+[2020-12-23T00:46:07.980] [INFO] userDao - END getUserProfileByUserID
+[2020-12-23T00:46:07.980] [INFO] users - profileInfo success
+[2020-12-23T00:46:09.035] [INFO] users - profileInfo userID: 193 
+[2020-12-23T00:46:09.035] [INFO] userDao - START getUserProfileByUserID : {"key":"UserID","val":193}
+[2020-12-23T00:46:09.039] [INFO] userDao - END getUserProfileByUserID
+[2020-12-23T00:46:09.039] [INFO] users - profileInfo success
+[2020-12-23T00:46:20.499] [INFO] users - profileInfo userID: 193 
+[2020-12-23T00:46:20.575] [INFO] users - profileInfo userID: 193 
+[2020-12-23T00:46:20.575] [INFO] userDao - START getUserProfileByUserID : {"key":"UserID","val":193}
+[2020-12-23T00:46:20.578] [INFO] userDao - END getUserProfileByUserID
+[2020-12-23T00:46:20.579] [INFO] users - profileInfo success
+[2020-12-23T00:46:21.968] [INFO] users - profileInfo userID: 193 
+[2020-12-23T00:46:21.969] [INFO] userDao - START getUserProfileByUserID : {"key":"UserID","val":193}
+[2020-12-23T00:46:21.971] [INFO] userDao - END getUserProfileByUserID
+[2020-12-23T00:46:21.971] [INFO] users - profileInfo success
+[2020-12-23T00:56:36.253] [INFO] users - profileInfo userID: 193 
+[2020-12-23T00:56:36.305] [INFO] users - profileInfo userID: 193 
+[2020-12-23T00:56:36.306] [INFO] userDao - START getUserProfileByUserID : {"key":"UserID","val":193}
+[2020-12-23T00:56:36.310] [INFO] userDao - END getUserProfileByUserID
+[2020-12-23T00:56:36.310] [INFO] users - profileInfo success
+[2020-12-23T00:56:37.840] [INFO] users - profileInfo userID: 193 
+[2020-12-23T00:56:37.840] [INFO] userDao - START getUserProfileByUserID : {"key":"UserID","val":193}
+[2020-12-23T00:56:37.844] [INFO] userDao - END getUserProfileByUserID
+[2020-12-23T00:56:37.844] [INFO] users - profileInfo success
+[2020-12-23T00:58:31.600] [INFO] users - profileInfo userID: 193 
+[2020-12-23T00:58:31.718] [INFO] users - profileInfo userID: 193 
+[2020-12-23T00:58:31.718] [INFO] userDao - START getUserProfileByUserID : {"key":"UserID","val":193}
+[2020-12-23T00:58:31.723] [INFO] userDao - END getUserProfileByUserID
+[2020-12-23T00:58:31.723] [INFO] users - profileInfo success
+[2020-12-23T00:58:32.671] [INFO] users - profileInfo userID: 193 
+[2020-12-23T00:58:32.671] [INFO] userDao - START getUserProfileByUserID : {"key":"UserID","val":193}
+[2020-12-23T00:58:32.674] [INFO] userDao - END getUserProfileByUserID
+[2020-12-23T00:58:32.674] [INFO] users - profileInfo success
+[2020-12-23T01:01:33.978] [INFO] users - profileInfo userID: 193 
+[2020-12-23T01:01:34.054] [INFO] users - profileInfo userID: 193 
+[2020-12-23T01:01:34.054] [INFO] userDao - START getUserProfileByUserID : {"key":"UserID","val":193}
+[2020-12-23T01:01:34.059] [INFO] userDao - END getUserProfileByUserID
+[2020-12-23T01:01:34.059] [INFO] users - profileInfo success
+[2020-12-23T01:01:34.955] [INFO] users - profileInfo userID: 193 
+[2020-12-23T01:01:34.955] [INFO] userDao - START getUserProfileByUserID : {"key":"UserID","val":193}
+[2020-12-23T01:01:34.959] [INFO] userDao - END getUserProfileByUserID
+[2020-12-23T01:01:34.959] [INFO] users - profileInfo success
+[2020-12-23T01:01:36.691] [INFO] users - profileInfo userID: 193 
+[2020-12-23T01:01:36.737] [INFO] users - profileInfo userID: 193 
+[2020-12-23T01:01:36.737] [INFO] userDao - START getUserProfileByUserID : {"key":"UserID","val":193}
+[2020-12-23T01:01:36.741] [INFO] userDao - END getUserProfileByUserID
+[2020-12-23T01:01:36.741] [INFO] users - profileInfo success
+[2020-12-23T01:01:37.752] [INFO] users - profileInfo userID: 193 
+[2020-12-23T01:01:37.798] [INFO] users - profileInfo userID: 193 
+[2020-12-23T01:01:37.798] [INFO] userDao - START getUserProfileByUserID : {"key":"UserID","val":193}
+[2020-12-23T01:01:37.801] [INFO] userDao - END getUserProfileByUserID
+[2020-12-23T01:01:37.801] [INFO] users - profileInfo success
+[2020-12-23T01:02:46.021] [INFO] users - profileInfo userID: 193 
+[2020-12-23T01:02:46.124] [INFO] users - profileInfo userID: 193 
+[2020-12-23T01:02:46.124] [INFO] userDao - START getUserProfileByUserID : {"key":"UserID","val":193}
+[2020-12-23T01:02:46.129] [INFO] userDao - END getUserProfileByUserID
+[2020-12-23T01:02:46.129] [INFO] users - profileInfo success
+[2020-12-23T01:02:47.249] [INFO] users - profileInfo userID: 193 
+[2020-12-23T01:02:47.249] [INFO] userDao - START getUserProfileByUserID : {"key":"UserID","val":193}
+[2020-12-23T01:02:47.251] [INFO] userDao - END getUserProfileByUserID
+[2020-12-23T01:02:47.252] [INFO] users - profileInfo success
+[2020-12-23T01:03:41.312] [INFO] users - profileInfo userID: 193 
+[2020-12-23T01:03:41.422] [INFO] users - profileInfo userID: 193 
+[2020-12-23T01:03:41.422] [INFO] userDao - START getUserProfileByUserID : {"key":"UserID","val":193}
+[2020-12-23T01:03:41.427] [INFO] userDao - END getUserProfileByUserID
+[2020-12-23T01:03:41.427] [INFO] users - profileInfo success
+[2020-12-23T01:03:43.143] [INFO] users - profileInfo userID: 193 
+[2020-12-23T01:03:43.143] [INFO] userDao - START getUserProfileByUserID : {"key":"UserID","val":193}
+[2020-12-23T01:03:43.148] [INFO] userDao - END getUserProfileByUserID
+[2020-12-23T01:03:43.148] [INFO] users - profileInfo success
+[2020-12-23T01:03:45.034] [INFO] users - profileInfo userID: 193 
+[2020-12-23T01:03:45.085] [INFO] users - profileInfo userID: 193 
+[2020-12-23T01:03:45.085] [INFO] userDao - START getUserProfileByUserID : {"key":"UserID","val":193}
+[2020-12-23T01:03:45.089] [INFO] userDao - END getUserProfileByUserID
+[2020-12-23T01:03:45.089] [INFO] users - profileInfo success
+[2020-12-23T01:03:46.800] [INFO] users - profileInfo userID: 193 
+[2020-12-23T01:03:46.800] [INFO] userDao - START getUserProfileByUserID : {"key":"UserID","val":193}
+[2020-12-23T01:03:46.804] [INFO] userDao - END getUserProfileByUserID
+[2020-12-23T01:03:46.804] [INFO] users - profileInfo success
+[2020-12-23T01:04:42.661] [INFO] users - profileInfo userID: 193 
+[2020-12-23T01:04:42.661] [INFO] userDao - START getUserProfileByUserID : {"key":"UserID","val":193}
+[2020-12-23T01:04:42.665] [INFO] userDao - END getUserProfileByUserID
+[2020-12-23T01:04:42.665] [INFO] users - profileInfo success
+[2020-12-23T01:04:46.228] [INFO] users - profileInfo userID: 193 
+[2020-12-23T01:04:46.228] [INFO] userDao - START getUserProfileByUserID : {"key":"UserID","val":193}
+[2020-12-23T01:04:46.232] [INFO] userDao - END getUserProfileByUserID
+[2020-12-23T01:04:46.232] [INFO] users - profileInfo success
+[2020-12-23T01:04:47.440] [INFO] users - profileInfo userID: 193 
+[2020-12-23T01:04:47.441] [INFO] userDao - START getUserProfileByUserID : {"key":"UserID","val":193}
+[2020-12-23T01:04:47.443] [INFO] userDao - END getUserProfileByUserID
+[2020-12-23T01:04:47.444] [INFO] users - profileInfo success
+[2020-12-23T01:06:24.715] [INFO] users - profileInfo userID: 193 
+[2020-12-23T01:06:24.716] [INFO] userDao - START getUserProfileByUserID : {"key":"UserID","val":193}
+[2020-12-23T01:06:24.722] [INFO] userDao - END getUserProfileByUserID
+[2020-12-23T01:06:24.723] [INFO] users - profileInfo success
+[2020-12-23T01:06:24.826] [INFO] users - profileInfo userID: 193 
+[2020-12-23T01:06:24.826] [INFO] userDao - START getUserProfileByUserID : {"key":"UserID","val":193}
+[2020-12-23T01:06:24.829] [INFO] userDao - END getUserProfileByUserID
+[2020-12-23T01:06:24.829] [INFO] users - profileInfo success
+[2020-12-23T01:06:25.981] [INFO] users - profileInfo userID: 193 
+[2020-12-23T01:06:25.981] [INFO] userDao - START getUserProfileByUserID : {"key":"UserID","val":193}
+[2020-12-23T01:06:25.985] [INFO] userDao - END getUserProfileByUserID
+[2020-12-23T01:06:25.985] [INFO] users - profileInfo success
+[2020-12-23T01:07:04.409] [INFO] users - profileInfo userID: 193 
+[2020-12-23T01:07:04.409] [INFO] userDao - START getUserProfileByUserID : {"key":"UserID","val":193}
+[2020-12-23T01:07:04.413] [INFO] userDao - END getUserProfileByUserID
+[2020-12-23T01:07:04.413] [INFO] users - profileInfo success
+[2020-12-23T01:07:04.478] [INFO] users - profileInfo userID: 193 
+[2020-12-23T01:07:04.478] [INFO] userDao - START getUserProfileByUserID : {"key":"UserID","val":193}
+[2020-12-23T01:07:04.481] [INFO] userDao - END getUserProfileByUserID
+[2020-12-23T01:07:04.481] [INFO] users - profileInfo success
+[2020-12-23T01:07:05.649] [INFO] users - profileInfo userID: 193 
+[2020-12-23T01:07:05.649] [INFO] userDao - START getUserProfileByUserID : {"key":"UserID","val":193}
+[2020-12-23T01:07:05.653] [INFO] userDao - END getUserProfileByUserID
+[2020-12-23T01:07:05.653] [INFO] users - profileInfo success
+[2020-12-23T01:07:51.422] [INFO] users - profileInfo userID: 193 
+[2020-12-23T01:07:51.422] [INFO] userDao - START getUserProfileByUserID : {"key":"UserID","val":193}
+[2020-12-23T01:07:51.427] [INFO] userDao - END getUserProfileByUserID
+[2020-12-23T01:07:51.427] [INFO] users - profileInfo success
+[2020-12-23T01:07:51.533] [INFO] users - profileInfo userID: 193 
+[2020-12-23T01:07:51.533] [INFO] userDao - START getUserProfileByUserID : {"key":"UserID","val":193}
+[2020-12-23T01:07:51.535] [INFO] userDao - END getUserProfileByUserID
+[2020-12-23T01:07:51.535] [INFO] users - profileInfo success
+[2020-12-23T01:07:53.873] [INFO] users - profileInfo userID: 193 
+[2020-12-23T01:07:53.873] [INFO] userDao - START getUserProfileByUserID : {"key":"UserID","val":193}
+[2020-12-23T01:07:53.877] [INFO] userDao - END getUserProfileByUserID
+[2020-12-23T01:07:53.877] [INFO] users - profileInfo success
+[2020-12-23T01:08:04.637] [INFO] users - profileInfo userID: 193 
+[2020-12-23T01:08:04.637] [INFO] userDao - START getUserProfileByUserID : {"key":"UserID","val":193}
+[2020-12-23T01:08:04.641] [INFO] userDao - END getUserProfileByUserID
+[2020-12-23T01:08:04.641] [INFO] users - profileInfo success
+[2020-12-23T01:08:04.712] [INFO] users - profileInfo userID: 193 
+[2020-12-23T01:08:04.712] [INFO] userDao - START getUserProfileByUserID : {"key":"UserID","val":193}
+[2020-12-23T01:08:04.715] [INFO] userDao - END getUserProfileByUserID
+[2020-12-23T01:08:04.716] [INFO] users - profileInfo success
+[2020-12-23T01:08:06.892] [INFO] users - profileInfo userID: 193 
+[2020-12-23T01:08:06.892] [INFO] userDao - START getUserProfileByUserID : {"key":"UserID","val":193}
+[2020-12-23T01:08:06.895] [INFO] userDao - END getUserProfileByUserID
+[2020-12-23T01:08:06.895] [INFO] users - profileInfo success
+[2020-12-23T01:08:09.745] [INFO] users - profileInfo userID: 193 
+[2020-12-23T01:08:09.746] [INFO] userDao - START getUserProfileByUserID : {"key":"UserID","val":193}
+[2020-12-23T01:08:09.750] [INFO] userDao - END getUserProfileByUserID
+[2020-12-23T01:08:09.750] [INFO] users - profileInfo success
+[2020-12-23T01:08:09.796] [INFO] users - profileInfo userID: 193 
+[2020-12-23T01:08:09.796] [INFO] userDao - START getUserProfileByUserID : {"key":"UserID","val":193}
+[2020-12-23T01:08:09.798] [INFO] userDao - END getUserProfileByUserID
+[2020-12-23T01:08:09.799] [INFO] users - profileInfo success
+[2020-12-23T01:08:11.081] [INFO] users - profileInfo userID: 193 
+[2020-12-23T01:08:11.081] [INFO] userDao - START getUserProfileByUserID : {"key":"UserID","val":193}
+[2020-12-23T01:08:11.086] [INFO] userDao - END getUserProfileByUserID
+[2020-12-23T01:08:11.086] [INFO] users - profileInfo success
+[2020-12-23T01:08:19.254] [INFO] users - profileInfo userID: 193 
+[2020-12-23T01:08:19.254] [INFO] userDao - START getUserProfileByUserID : {"key":"UserID","val":193}
+[2020-12-23T01:08:19.259] [INFO] userDao - END getUserProfileByUserID
+[2020-12-23T01:08:19.259] [INFO] users - profileInfo success
+[2020-12-23T01:08:19.297] [INFO] users - profileInfo userID: 193 
+[2020-12-23T01:08:19.298] [INFO] userDao - START getUserProfileByUserID : {"key":"UserID","val":193}
+[2020-12-23T01:08:19.301] [INFO] userDao - END getUserProfileByUserID
+[2020-12-23T01:08:19.301] [INFO] users - profileInfo success
+[2020-12-23T01:08:20.524] [INFO] users - profileInfo userID: 193 
+[2020-12-23T01:08:20.524] [INFO] userDao - START getUserProfileByUserID : {"key":"UserID","val":193}
+[2020-12-23T01:08:20.527] [INFO] userDao - END getUserProfileByUserID
+[2020-12-23T01:08:20.528] [INFO] users - profileInfo success
+[2020-12-23T01:08:44.241] [INFO] users - profileInfo userID: 193 
+[2020-12-23T01:08:44.241] [INFO] userDao - START getUserProfileByUserID : {"key":"UserID","val":193}
+[2020-12-23T01:08:44.246] [INFO] userDao - END getUserProfileByUserID
+[2020-12-23T01:08:44.246] [INFO] users - profileInfo success
+[2020-12-23T01:08:44.290] [INFO] users - profileInfo userID: 193 
+[2020-12-23T01:08:44.290] [INFO] userDao - START getUserProfileByUserID : {"key":"UserID","val":193}
+[2020-12-23T01:08:44.293] [INFO] userDao - END getUserProfileByUserID
+[2020-12-23T01:08:44.293] [INFO] users - profileInfo success
+[2020-12-23T01:08:45.852] [INFO] users - profileInfo userID: 193 
+[2020-12-23T01:08:45.852] [INFO] userDao - START getUserProfileByUserID : {"key":"UserID","val":193}
+[2020-12-23T01:08:45.855] [INFO] userDao - END getUserProfileByUserID
+[2020-12-23T01:08:45.855] [INFO] users - profileInfo success
+[2020-12-23T01:08:47.849] [INFO] users - profileInfo userID: 193 
+[2020-12-23T01:08:47.849] [INFO] userDao - START getUserProfileByUserID : {"key":"UserID","val":193}
+[2020-12-23T01:08:47.853] [INFO] userDao - END getUserProfileByUserID
+[2020-12-23T01:08:47.853] [INFO] users - profileInfo success
+[2020-12-23T01:08:47.901] [INFO] users - profileInfo userID: 193 
+[2020-12-23T01:08:47.901] [INFO] userDao - START getUserProfileByUserID : {"key":"UserID","val":193}
+[2020-12-23T01:08:47.905] [INFO] userDao - END getUserProfileByUserID
+[2020-12-23T01:08:47.905] [INFO] users - profileInfo success
+[2020-12-23T01:08:49.235] [INFO] users - profileInfo userID: 193 
+[2020-12-23T01:08:49.235] [INFO] userDao - START getUserProfileByUserID : {"key":"UserID","val":193}
+[2020-12-23T01:08:49.238] [INFO] userDao - END getUserProfileByUserID
+[2020-12-23T01:08:49.238] [INFO] users - profileInfo success
+[2020-12-23T01:09:09.530] [INFO] users - profileInfo userID: 193 
+[2020-12-23T01:09:09.530] [INFO] userDao - START getUserProfileByUserID : {"key":"UserID","val":193}
+[2020-12-23T01:09:09.535] [INFO] userDao - END getUserProfileByUserID
+[2020-12-23T01:09:09.535] [INFO] users - profileInfo success
+[2020-12-23T01:09:09.611] [INFO] users - profileInfo userID: 193 
+[2020-12-23T01:09:09.611] [INFO] userDao - START getUserProfileByUserID : {"key":"UserID","val":193}
+[2020-12-23T01:09:09.615] [INFO] userDao - END getUserProfileByUserID
+[2020-12-23T01:09:09.615] [INFO] users - profileInfo success
+[2020-12-23T01:09:10.739] [INFO] users - profileInfo userID: 193 
+[2020-12-23T01:09:10.739] [INFO] userDao - START getUserProfileByUserID : {"key":"UserID","val":193}
+[2020-12-23T01:09:10.742] [INFO] userDao - END getUserProfileByUserID
+[2020-12-23T01:09:10.742] [INFO] users - profileInfo success
+[2020-12-23T01:09:43.017] [INFO] users - profileInfo userID: 193 
+[2020-12-23T01:09:43.017] [INFO] userDao - START getUserProfileByUserID : {"key":"UserID","val":193}
+[2020-12-23T01:09:43.024] [INFO] userDao - END getUserProfileByUserID
+[2020-12-23T01:09:43.024] [INFO] users - profileInfo success
+[2020-12-23T01:09:43.106] [INFO] users - profileInfo userID: 193 
+[2020-12-23T01:09:43.106] [INFO] userDao - START getUserProfileByUserID : {"key":"UserID","val":193}
+[2020-12-23T01:09:43.109] [INFO] userDao - END getUserProfileByUserID
+[2020-12-23T01:09:43.109] [INFO] users - profileInfo success
+[2020-12-23T01:09:44.190] [INFO] users - profileInfo userID: 193 
+[2020-12-23T01:09:44.191] [INFO] userDao - START getUserProfileByUserID : {"key":"UserID","val":193}
+[2020-12-23T01:09:44.193] [INFO] userDao - END getUserProfileByUserID
+[2020-12-23T01:09:44.193] [INFO] users - profileInfo success
+[2020-12-23T01:09:58.412] [INFO] users - profileInfo userID: 193 
+[2020-12-23T01:09:58.412] [INFO] userDao - START getUserProfileByUserID : {"key":"UserID","val":193}
+[2020-12-23T01:09:58.415] [INFO] userDao - END getUserProfileByUserID
+[2020-12-23T01:09:58.415] [INFO] users - profileInfo success
+[2020-12-23T01:09:58.494] [INFO] users - profileInfo userID: 193 
+[2020-12-23T01:09:58.494] [INFO] userDao - START getUserProfileByUserID : {"key":"UserID","val":193}
+[2020-12-23T01:09:58.497] [INFO] userDao - END getUserProfileByUserID
+[2020-12-23T01:09:58.497] [INFO] users - profileInfo success
+[2020-12-23T01:09:59.886] [INFO] users - profileInfo userID: 193 
+[2020-12-23T01:09:59.886] [INFO] userDao - START getUserProfileByUserID : {"key":"UserID","val":193}
+[2020-12-23T01:09:59.889] [INFO] userDao - END getUserProfileByUserID
+[2020-12-23T01:09:59.889] [INFO] users - profileInfo success
+[2020-12-23T01:10:08.470] [INFO] users - profileInfo userID: 193 
+[2020-12-23T01:10:08.470] [INFO] userDao - START getUserProfileByUserID : {"key":"UserID","val":193}
+[2020-12-23T01:10:08.473] [INFO] userDao - END getUserProfileByUserID
+[2020-12-23T01:10:08.474] [INFO] users - profileInfo success
+[2020-12-23T01:10:08.523] [INFO] users - profileInfo userID: 193 
+[2020-12-23T01:10:08.523] [INFO] userDao - START getUserProfileByUserID : {"key":"UserID","val":193}
+[2020-12-23T01:10:08.527] [INFO] userDao - END getUserProfileByUserID
+[2020-12-23T01:10:08.527] [INFO] users - profileInfo success
+[2020-12-23T01:10:09.741] [INFO] users - profileInfo userID: 193 
+[2020-12-23T01:10:09.741] [INFO] userDao - START getUserProfileByUserID : {"key":"UserID","val":193}
+[2020-12-23T01:10:09.745] [INFO] userDao - END getUserProfileByUserID
+[2020-12-23T01:10:09.745] [INFO] users - profileInfo success
+[2020-12-23T01:10:21.509] [INFO] users - profileInfo userID: 193 
+[2020-12-23T01:10:21.509] [INFO] userDao - START getUserProfileByUserID : {"key":"UserID","val":193}
+[2020-12-23T01:10:21.512] [INFO] userDao - END getUserProfileByUserID
+[2020-12-23T01:10:21.512] [INFO] users - profileInfo success
+[2020-12-23T01:10:21.570] [INFO] users - profileInfo userID: 193 
+[2020-12-23T01:10:21.571] [INFO] userDao - START getUserProfileByUserID : {"key":"UserID","val":193}
+[2020-12-23T01:10:21.574] [INFO] userDao - END getUserProfileByUserID
+[2020-12-23T01:10:21.574] [INFO] users - profileInfo success
+[2020-12-23T01:10:22.371] [INFO] users - profileInfo userID: 193 
+[2020-12-23T01:10:22.371] [INFO] userDao - START getUserProfileByUserID : {"key":"UserID","val":193}
+[2020-12-23T01:10:22.374] [INFO] userDao - END getUserProfileByUserID
+[2020-12-23T01:10:22.374] [INFO] users - profileInfo success
+[2020-12-23T01:10:39.326] [INFO] users - profileInfo userID: 193 
+[2020-12-23T01:10:39.327] [INFO] userDao - START getUserProfileByUserID : {"key":"UserID","val":193}
+[2020-12-23T01:10:39.330] [INFO] userDao - END getUserProfileByUserID
+[2020-12-23T01:10:39.330] [INFO] users - profileInfo success
+[2020-12-23T01:10:39.435] [INFO] users - profileInfo userID: 193 
+[2020-12-23T01:10:39.435] [INFO] userDao - START getUserProfileByUserID : {"key":"UserID","val":193}
+[2020-12-23T01:10:39.438] [INFO] userDao - END getUserProfileByUserID
+[2020-12-23T01:10:39.438] [INFO] users - profileInfo success
+[2020-12-23T01:10:40.733] [INFO] users - profileInfo userID: 193 
+[2020-12-23T01:10:40.733] [INFO] userDao - START getUserProfileByUserID : {"key":"UserID","val":193}
+[2020-12-23T01:10:40.736] [INFO] userDao - END getUserProfileByUserID
+[2020-12-23T01:10:40.737] [INFO] users - profileInfo success
+[2020-12-23T01:11:11.237] [INFO] users - profileInfo userID: 193 
+[2020-12-23T01:11:11.237] [INFO] userDao - START getUserProfileByUserID : {"key":"UserID","val":193}
+[2020-12-23T01:11:11.242] [INFO] userDao - END getUserProfileByUserID
+[2020-12-23T01:11:11.242] [INFO] users - profileInfo success
+[2020-12-23T01:11:11.355] [INFO] users - profileInfo userID: 193 
+[2020-12-23T01:11:11.355] [INFO] userDao - START getUserProfileByUserID : {"key":"UserID","val":193}
+[2020-12-23T01:11:11.358] [INFO] userDao - END getUserProfileByUserID
+[2020-12-23T01:11:11.358] [INFO] users - profileInfo success
+[2020-12-23T01:11:12.417] [INFO] users - profileInfo userID: 193 
+[2020-12-23T01:11:12.417] [INFO] userDao - START getUserProfileByUserID : {"key":"UserID","val":193}
+[2020-12-23T01:11:12.421] [INFO] userDao - END getUserProfileByUserID
+[2020-12-23T01:11:12.421] [INFO] users - profileInfo success
+[2020-12-23T01:11:42.672] [INFO] users - profileInfo userID: 193 
+[2020-12-23T01:11:42.673] [INFO] userDao - START getUserProfileByUserID : {"key":"UserID","val":193}
+[2020-12-23T01:11:42.678] [INFO] userDao - END getUserProfileByUserID
+[2020-12-23T01:11:42.678] [INFO] users - profileInfo success
+[2020-12-23T01:11:42.784] [INFO] users - profileInfo userID: 193 
+[2020-12-23T01:11:42.784] [INFO] userDao - START getUserProfileByUserID : {"key":"UserID","val":193}
+[2020-12-23T01:11:42.787] [INFO] userDao - END getUserProfileByUserID
+[2020-12-23T01:11:42.787] [INFO] users - profileInfo success
+[2020-12-23T01:11:44.351] [INFO] users - profileInfo userID: 193 
+[2020-12-23T01:11:44.352] [INFO] userDao - START getUserProfileByUserID : {"key":"UserID","val":193}
+[2020-12-23T01:11:44.354] [INFO] userDao - END getUserProfileByUserID
+[2020-12-23T01:11:44.354] [INFO] users - profileInfo success
+[2020-12-23T01:11:55.783] [INFO] users - profileInfo userID: 193 
+[2020-12-23T01:11:55.783] [INFO] userDao - START getUserProfileByUserID : {"key":"UserID","val":193}
+[2020-12-23T01:11:55.787] [INFO] userDao - END getUserProfileByUserID
+[2020-12-23T01:11:55.787] [INFO] users - profileInfo success
+[2020-12-23T01:11:55.847] [INFO] users - profileInfo userID: 193 
+[2020-12-23T01:11:55.847] [INFO] userDao - START getUserProfileByUserID : {"key":"UserID","val":193}
+[2020-12-23T01:11:55.850] [INFO] userDao - END getUserProfileByUserID
+[2020-12-23T01:11:55.850] [INFO] users - profileInfo success
+[2020-12-23T01:11:56.842] [INFO] users - profileInfo userID: 193 
+[2020-12-23T01:11:56.842] [INFO] userDao - START getUserProfileByUserID : {"key":"UserID","val":193}
+[2020-12-23T01:11:56.845] [INFO] userDao - END getUserProfileByUserID
+[2020-12-23T01:11:56.845] [INFO] users - profileInfo success
+[2020-12-23T01:12:06.655] [INFO] users - profileInfo userID: 193 
+[2020-12-23T01:12:06.655] [INFO] userDao - START getUserProfileByUserID : {"key":"UserID","val":193}
+[2020-12-23T01:12:06.659] [INFO] userDao - END getUserProfileByUserID
+[2020-12-23T01:12:06.659] [INFO] users - profileInfo success
+[2020-12-23T01:12:06.709] [INFO] users - profileInfo userID: 193 
+[2020-12-23T01:12:06.709] [INFO] userDao - START getUserProfileByUserID : {"key":"UserID","val":193}
+[2020-12-23T01:12:06.712] [INFO] userDao - END getUserProfileByUserID
+[2020-12-23T01:12:06.712] [INFO] users - profileInfo success
+[2020-12-23T01:12:07.733] [INFO] users - profileInfo userID: 193 
+[2020-12-23T01:12:07.733] [INFO] userDao - START getUserProfileByUserID : {"key":"UserID","val":193}
+[2020-12-23T01:12:07.736] [INFO] userDao - END getUserProfileByUserID
+[2020-12-23T01:12:07.736] [INFO] users - profileInfo success
+[2020-12-23T01:12:19.358] [INFO] users - profileInfo userID: 193 
+[2020-12-23T01:12:19.359] [INFO] userDao - START getUserProfileByUserID : {"key":"UserID","val":193}
+[2020-12-23T01:12:19.362] [INFO] userDao - END getUserProfileByUserID
+[2020-12-23T01:12:19.362] [INFO] users - profileInfo success
+[2020-12-23T01:12:19.420] [INFO] users - profileInfo userID: 193 
+[2020-12-23T01:12:19.420] [INFO] userDao - START getUserProfileByUserID : {"key":"UserID","val":193}
+[2020-12-23T01:12:19.423] [INFO] userDao - END getUserProfileByUserID
+[2020-12-23T01:12:19.424] [INFO] users - profileInfo success
+[2020-12-23T01:12:20.431] [INFO] users - profileInfo userID: 193 
+[2020-12-23T01:12:20.432] [INFO] userDao - START getUserProfileByUserID : {"key":"UserID","val":193}
+[2020-12-23T01:12:20.435] [INFO] userDao - END getUserProfileByUserID
+[2020-12-23T01:12:20.435] [INFO] users - profileInfo success
+[2020-12-23T01:12:35.767] [INFO] users - profileInfo userID: 193 
+[2020-12-23T01:12:35.767] [INFO] userDao - START getUserProfileByUserID : {"key":"UserID","val":193}
+[2020-12-23T01:12:35.771] [INFO] userDao - END getUserProfileByUserID
+[2020-12-23T01:12:35.771] [INFO] users - profileInfo success
+[2020-12-23T01:12:35.875] [INFO] users - profileInfo userID: 193 
+[2020-12-23T01:12:35.876] [INFO] userDao - START getUserProfileByUserID : {"key":"UserID","val":193}
+[2020-12-23T01:12:35.879] [INFO] userDao - END getUserProfileByUserID
+[2020-12-23T01:12:35.879] [INFO] users - profileInfo success
+[2020-12-23T01:12:36.575] [INFO] users - profileInfo userID: 193 
+[2020-12-23T01:12:36.575] [INFO] userDao - START getUserProfileByUserID : {"key":"UserID","val":193}
+[2020-12-23T01:12:36.578] [INFO] userDao - END getUserProfileByUserID
+[2020-12-23T01:12:36.578] [INFO] users - profileInfo success
+[2020-12-23T01:12:42.489] [INFO] users - profileInfo userID: 193 
+[2020-12-23T01:12:42.490] [INFO] userDao - START getUserProfileByUserID : {"key":"UserID","val":193}
+[2020-12-23T01:12:42.493] [INFO] userDao - END getUserProfileByUserID
+[2020-12-23T01:12:42.493] [INFO] users - profileInfo success
+[2020-12-23T01:12:42.541] [INFO] users - profileInfo userID: 193 
+[2020-12-23T01:12:42.541] [INFO] userDao - START getUserProfileByUserID : {"key":"UserID","val":193}
+[2020-12-23T01:12:42.546] [INFO] userDao - END getUserProfileByUserID
+[2020-12-23T01:12:42.546] [INFO] users - profileInfo success
+[2020-12-23T01:12:43.562] [INFO] users - profileInfo userID: 193 
+[2020-12-23T01:12:43.562] [INFO] userDao - START getUserProfileByUserID : {"key":"UserID","val":193}
+[2020-12-23T01:12:43.565] [INFO] userDao - END getUserProfileByUserID
+[2020-12-23T01:12:43.566] [INFO] users - profileInfo success
+[2020-12-23T01:12:50.791] [INFO] users - profileInfo userID: 193 
+[2020-12-23T01:12:50.791] [INFO] userDao - START getUserProfileByUserID : {"key":"UserID","val":193}
+[2020-12-23T01:12:50.794] [INFO] userDao - END getUserProfileByUserID
+[2020-12-23T01:12:50.794] [INFO] users - profileInfo success
+[2020-12-23T01:12:50.849] [INFO] users - profileInfo userID: 193 
+[2020-12-23T01:12:50.849] [INFO] userDao - START getUserProfileByUserID : {"key":"UserID","val":193}
+[2020-12-23T01:12:50.852] [INFO] userDao - END getUserProfileByUserID
+[2020-12-23T01:12:50.852] [INFO] users - profileInfo success
+[2020-12-23T01:12:51.709] [INFO] users - profileInfo userID: 193 
+[2020-12-23T01:12:51.710] [INFO] userDao - START getUserProfileByUserID : {"key":"UserID","val":193}
+[2020-12-23T01:12:51.713] [INFO] userDao - END getUserProfileByUserID
+[2020-12-23T01:12:51.713] [INFO] users - profileInfo success
+[2020-12-23T01:12:58.121] [INFO] users - profileInfo userID: 193 
+[2020-12-23T01:12:58.121] [INFO] userDao - START getUserProfileByUserID : {"key":"UserID","val":193}
+[2020-12-23T01:12:58.124] [INFO] userDao - END getUserProfileByUserID
+[2020-12-23T01:12:58.124] [INFO] users - profileInfo success
+[2020-12-23T01:12:58.176] [INFO] users - profileInfo userID: 193 
+[2020-12-23T01:12:58.176] [INFO] userDao - START getUserProfileByUserID : {"key":"UserID","val":193}
+[2020-12-23T01:12:58.179] [INFO] userDao - END getUserProfileByUserID
+[2020-12-23T01:12:58.179] [INFO] users - profileInfo success
+[2020-12-23T01:12:58.972] [INFO] users - profileInfo userID: 193 
+[2020-12-23T01:12:58.972] [INFO] userDao - START getUserProfileByUserID : {"key":"UserID","val":193}
+[2020-12-23T01:12:58.976] [INFO] userDao - END getUserProfileByUserID
+[2020-12-23T01:12:58.976] [INFO] users - profileInfo success
+[2020-12-23T01:13:47.645] [INFO] users - profileInfo userID: 193 
+[2020-12-23T01:13:47.645] [INFO] userDao - START getUserProfileByUserID : {"key":"UserID","val":193}
+[2020-12-23T01:13:47.649] [INFO] userDao - END getUserProfileByUserID
+[2020-12-23T01:13:47.649] [INFO] users - profileInfo success
+[2020-12-23T01:13:47.712] [INFO] users - profileInfo userID: 193 
+[2020-12-23T01:13:47.712] [INFO] userDao - START getUserProfileByUserID : {"key":"UserID","val":193}
+[2020-12-23T01:13:47.715] [INFO] userDao - END getUserProfileByUserID
+[2020-12-23T01:13:47.715] [INFO] users - profileInfo success
+[2020-12-23T01:13:49.290] [INFO] users - profileInfo userID: 193 
+[2020-12-23T01:13:49.290] [INFO] userDao - START getUserProfileByUserID : {"key":"UserID","val":193}
+[2020-12-23T01:13:49.293] [INFO] userDao - END getUserProfileByUserID
+[2020-12-23T01:13:49.294] [INFO] users - profileInfo success
+[2020-12-23T01:14:51.944] [INFO] users - profileInfo userID: 193 
+[2020-12-23T01:14:51.944] [INFO] userDao - START getUserProfileByUserID : {"key":"UserID","val":193}
+[2020-12-23T01:14:51.949] [INFO] userDao - END getUserProfileByUserID
+[2020-12-23T01:14:51.949] [INFO] users - profileInfo success
+[2020-12-23T01:14:52.028] [INFO] users - profileInfo userID: 193 
+[2020-12-23T01:14:52.028] [INFO] userDao - START getUserProfileByUserID : {"key":"UserID","val":193}
+[2020-12-23T01:14:52.031] [INFO] userDao - END getUserProfileByUserID
+[2020-12-23T01:14:52.031] [INFO] users - profileInfo success
+[2020-12-23T01:14:53.845] [INFO] users - profileInfo userID: 193 
+[2020-12-23T01:14:53.845] [INFO] userDao - START getUserProfileByUserID : {"key":"UserID","val":193}
+[2020-12-23T01:14:53.848] [INFO] userDao - END getUserProfileByUserID
+[2020-12-23T01:14:53.848] [INFO] users - profileInfo success
+[2020-12-23T01:15:03.510] [INFO] users - profileInfo userID: 193 
+[2020-12-23T01:15:03.510] [INFO] userDao - START getUserProfileByUserID : {"key":"UserID","val":193}
+[2020-12-23T01:15:03.518] [INFO] userDao - END getUserProfileByUserID
+[2020-12-23T01:15:03.518] [INFO] users - profileInfo success
+[2020-12-23T01:15:03.594] [INFO] users - profileInfo userID: 193 
+[2020-12-23T01:15:03.594] [INFO] userDao - START getUserProfileByUserID : {"key":"UserID","val":193}
+[2020-12-23T01:15:03.597] [INFO] userDao - END getUserProfileByUserID
+[2020-12-23T01:15:03.597] [INFO] users - profileInfo success
+[2020-12-23T01:15:04.624] [INFO] users - profileInfo userID: 193 
+[2020-12-23T01:15:04.624] [INFO] userDao - START getUserProfileByUserID : {"key":"UserID","val":193}
+[2020-12-23T01:15:04.628] [INFO] userDao - END getUserProfileByUserID
+[2020-12-23T01:15:04.628] [INFO] users - profileInfo success
+[2020-12-23T01:15:42.215] [INFO] users - profileInfo userID: 193 
+[2020-12-23T01:15:42.215] [INFO] userDao - START getUserProfileByUserID : {"key":"UserID","val":193}
+[2020-12-23T01:15:42.219] [INFO] userDao - END getUserProfileByUserID
+[2020-12-23T01:15:42.220] [INFO] users - profileInfo success
+[2020-12-23T01:15:42.292] [INFO] users - profileInfo userID: 193 
+[2020-12-23T01:15:42.292] [INFO] userDao - START getUserProfileByUserID : {"key":"UserID","val":193}
+[2020-12-23T01:15:42.296] [INFO] userDao - END getUserProfileByUserID
+[2020-12-23T01:15:42.296] [INFO] users - profileInfo success
+[2020-12-23T01:15:43.660] [INFO] users - profileInfo userID: 193 
+[2020-12-23T01:15:43.660] [INFO] userDao - START getUserProfileByUserID : {"key":"UserID","val":193}
+[2020-12-23T01:15:43.663] [INFO] userDao - END getUserProfileByUserID
+[2020-12-23T01:15:43.663] [INFO] users - profileInfo success
+[2020-12-23T01:16:57.720] [INFO] users - profileInfo userID: 193 
+[2020-12-23T01:16:57.720] [INFO] userDao - START getUserProfileByUserID : {"key":"UserID","val":193}
+[2020-12-23T01:16:57.726] [INFO] userDao - END getUserProfileByUserID
+[2020-12-23T01:16:57.726] [INFO] users - profileInfo success
+[2020-12-23T01:16:57.803] [INFO] users - profileInfo userID: 193 
+[2020-12-23T01:16:57.803] [INFO] userDao - START getUserProfileByUserID : {"key":"UserID","val":193}
+[2020-12-23T01:16:57.807] [INFO] userDao - END getUserProfileByUserID
+[2020-12-23T01:16:57.807] [INFO] users - profileInfo success
+[2020-12-23T01:16:58.799] [INFO] users - profileInfo userID: 193 
+[2020-12-23T01:16:58.799] [INFO] userDao - START getUserProfileByUserID : {"key":"UserID","val":193}
+[2020-12-23T01:16:58.803] [INFO] userDao - END getUserProfileByUserID
+[2020-12-23T01:16:58.803] [INFO] users - profileInfo success
+[2020-12-23T01:17:25.362] [INFO] users - profileInfo userID: 193 
+[2020-12-23T01:17:25.362] [INFO] userDao - START getUserProfileByUserID : {"key":"UserID","val":193}
+[2020-12-23T01:17:25.368] [INFO] userDao - END getUserProfileByUserID
+[2020-12-23T01:17:25.368] [INFO] users - profileInfo success
+[2020-12-23T01:17:25.471] [INFO] users - profileInfo userID: 193 
+[2020-12-23T01:17:25.471] [INFO] userDao - START getUserProfileByUserID : {"key":"UserID","val":193}
+[2020-12-23T01:17:25.475] [INFO] userDao - END getUserProfileByUserID
+[2020-12-23T01:17:25.476] [INFO] users - profileInfo success
+[2020-12-23T01:17:26.502] [INFO] users - profileInfo userID: 193 
+[2020-12-23T01:17:26.503] [INFO] userDao - START getUserProfileByUserID : {"key":"UserID","val":193}
+[2020-12-23T01:17:26.506] [INFO] userDao - END getUserProfileByUserID
+[2020-12-23T01:17:26.506] [INFO] users - profileInfo success
+[2020-12-23T01:17:48.785] [INFO] users - profileInfo userID: 193 
+[2020-12-23T01:17:48.785] [INFO] userDao - START getUserProfileByUserID : {"key":"UserID","val":193}
+[2020-12-23T01:17:48.789] [INFO] userDao - END getUserProfileByUserID
+[2020-12-23T01:17:48.789] [INFO] users - profileInfo success
+[2020-12-23T01:17:48.846] [INFO] users - profileInfo userID: 193 
+[2020-12-23T01:17:48.846] [INFO] userDao - START getUserProfileByUserID : {"key":"UserID","val":193}
+[2020-12-23T01:17:48.849] [INFO] userDao - END getUserProfileByUserID
+[2020-12-23T01:17:48.849] [INFO] users - profileInfo success
+[2020-12-23T01:17:49.941] [INFO] users - profileInfo userID: 193 
+[2020-12-23T01:17:49.941] [INFO] userDao - START getUserProfileByUserID : {"key":"UserID","val":193}
+[2020-12-23T01:17:49.944] [INFO] userDao - END getUserProfileByUserID
+[2020-12-23T01:17:49.945] [INFO] users - profileInfo success
+[2020-12-23T01:18:16.357] [INFO] users - profileInfo userID: 193 
+[2020-12-23T01:18:16.357] [INFO] userDao - START getUserProfileByUserID : {"key":"UserID","val":193}
+[2020-12-23T01:18:16.361] [INFO] userDao - END getUserProfileByUserID
+[2020-12-23T01:18:16.361] [INFO] users - profileInfo success
+[2020-12-23T01:18:16.421] [INFO] users - profileInfo userID: 193 
+[2020-12-23T01:18:16.421] [INFO] userDao - START getUserProfileByUserID : {"key":"UserID","val":193}
+[2020-12-23T01:18:16.424] [INFO] userDao - END getUserProfileByUserID
+[2020-12-23T01:18:16.424] [INFO] users - profileInfo success
+[2020-12-23T01:18:17.266] [INFO] users - profileInfo userID: 193 
+[2020-12-23T01:18:17.266] [INFO] userDao - START getUserProfileByUserID : {"key":"UserID","val":193}
+[2020-12-23T01:18:17.270] [INFO] userDao - END getUserProfileByUserID
+[2020-12-23T01:18:17.270] [INFO] users - profileInfo success
+[2020-12-23T01:18:26.457] [INFO] users - profileInfo userID: 193 
+[2020-12-23T01:18:26.458] [INFO] userDao - START getUserProfileByUserID : {"key":"UserID","val":193}
+[2020-12-23T01:18:26.464] [INFO] userDao - END getUserProfileByUserID
+[2020-12-23T01:18:26.464] [INFO] users - profileInfo success
+[2020-12-23T01:18:26.518] [INFO] users - profileInfo userID: 193 
+[2020-12-23T01:18:26.518] [INFO] userDao - START getUserProfileByUserID : {"key":"UserID","val":193}
+[2020-12-23T01:18:26.521] [INFO] userDao - END getUserProfileByUserID
+[2020-12-23T01:18:26.522] [INFO] users - profileInfo success
+[2020-12-23T01:18:28.480] [INFO] users - profileInfo userID: 193 
+[2020-12-23T01:18:28.480] [INFO] userDao - START getUserProfileByUserID : {"key":"UserID","val":193}
+[2020-12-23T01:18:28.483] [INFO] userDao - END getUserProfileByUserID
+[2020-12-23T01:18:28.483] [INFO] users - profileInfo success
+[2020-12-23T01:19:33.142] [INFO] users - profileInfo userID: 193 
+[2020-12-23T01:19:33.247] [INFO] users - profileInfo userID: 193 
+[2020-12-23T01:19:33.247] [INFO] userDao - START getUserProfileByUserID : {"key":"UserID","val":193}
+[2020-12-23T01:19:33.251] [INFO] userDao - END getUserProfileByUserID
+[2020-12-23T01:19:33.252] [INFO] users - profileInfo success
+[2020-12-23T01:19:34.418] [INFO] users - profileInfo userID: 193 
+[2020-12-23T01:19:34.418] [INFO] userDao - START getUserProfileByUserID : {"key":"UserID","val":193}
+[2020-12-23T01:19:34.421] [INFO] userDao - END getUserProfileByUserID
+[2020-12-23T01:19:34.421] [INFO] users - profileInfo success
+[2020-12-23T01:19:53.845] [INFO] users - profileInfo userID: 193 
+[2020-12-23T01:19:53.951] [INFO] users - profileInfo userID: 193 
+[2020-12-23T01:19:53.952] [INFO] userDao - START getUserProfileByUserID : {"key":"UserID","val":193}
+[2020-12-23T01:19:53.956] [INFO] userDao - END getUserProfileByUserID
+[2020-12-23T01:19:53.956] [INFO] users - profileInfo success
+[2020-12-23T01:19:56.106] [INFO] users - profileInfo userID: 193 
+[2020-12-23T01:19:56.106] [INFO] userDao - START getUserProfileByUserID : {"key":"UserID","val":193}
+[2020-12-23T01:19:56.110] [INFO] userDao - END getUserProfileByUserID
+[2020-12-23T01:19:56.110] [INFO] users - profileInfo success
+[2020-12-23T01:20:27.304] [INFO] users - profileInfo userID: 193 
+[2020-12-23T01:20:27.417] [INFO] users - profileInfo userID: 193 
+[2020-12-23T01:20:27.417] [INFO] userDao - START getUserProfileByUserID : {"key":"UserID","val":193}
+[2020-12-23T01:20:27.423] [INFO] userDao - END getUserProfileByUserID
+[2020-12-23T01:20:27.423] [INFO] users - profileInfo success
+[2020-12-23T01:20:28.766] [INFO] users - profileInfo userID: 193 
+[2020-12-23T01:20:28.767] [INFO] userDao - START getUserProfileByUserID : {"key":"UserID","val":193}
+[2020-12-23T01:20:28.769] [INFO] userDao - END getUserProfileByUserID
+[2020-12-23T01:20:28.770] [INFO] users - profileInfo success
+[2020-12-23T01:20:45.565] [INFO] users - profileInfo userID: 193 
+[2020-12-23T01:20:45.636] [INFO] users - profileInfo userID: 193 
+[2020-12-23T01:20:45.636] [INFO] userDao - START getUserProfileByUserID : {"key":"UserID","val":193}
+[2020-12-23T01:20:45.639] [INFO] userDao - END getUserProfileByUserID
+[2020-12-23T01:20:45.639] [INFO] users - profileInfo success
+[2020-12-23T01:20:47.557] [INFO] users - profileInfo userID: 193 
+[2020-12-23T01:20:47.557] [INFO] userDao - START getUserProfileByUserID : {"key":"UserID","val":193}
+[2020-12-23T01:20:47.561] [INFO] userDao - END getUserProfileByUserID
+[2020-12-23T01:20:47.561] [INFO] users - profileInfo success
+[2020-12-23T01:21:04.178] [INFO] users - profileInfo userID: 193 
+[2020-12-23T01:21:04.281] [INFO] users - profileInfo userID: 193 
+[2020-12-23T01:21:04.282] [INFO] userDao - START getUserProfileByUserID : {"key":"UserID","val":193}
+[2020-12-23T01:21:04.285] [INFO] userDao - END getUserProfileByUserID
+[2020-12-23T01:21:04.285] [INFO] users - profileInfo success
+[2020-12-23T01:21:05.063] [INFO] users - profileInfo userID: 193 
+[2020-12-23T01:21:05.064] [INFO] userDao - START getUserProfileByUserID : {"key":"UserID","val":193}
+[2020-12-23T01:21:05.067] [INFO] userDao - END getUserProfileByUserID
+[2020-12-23T01:21:05.067] [INFO] users - profileInfo success
+[2020-12-23T01:21:21.189] [INFO] users - profileInfo userID: 193 
+[2020-12-23T01:21:21.265] [INFO] users - profileInfo userID: 193 
+[2020-12-23T01:21:21.266] [INFO] userDao - START getUserProfileByUserID : {"key":"UserID","val":193}
+[2020-12-23T01:21:21.268] [INFO] userDao - END getUserProfileByUserID
+[2020-12-23T01:21:21.269] [INFO] users - profileInfo success
+[2020-12-23T01:21:22.844] [INFO] users - profileInfo userID: 193 
+[2020-12-23T01:21:22.844] [INFO] userDao - START getUserProfileByUserID : {"key":"UserID","val":193}
+[2020-12-23T01:21:22.847] [INFO] userDao - END getUserProfileByUserID
+[2020-12-23T01:21:22.847] [INFO] users - profileInfo success
+[2020-12-23T01:21:38.856] [INFO] users - profileInfo userID: 193 
+[2020-12-23T01:21:39.528] [INFO] users - profileInfo userID: 193 
+[2020-12-23T01:21:39.580] [INFO] users - profileInfo userID: 193 
+[2020-12-23T01:21:39.580] [INFO] userDao - START getUserProfileByUserID : {"key":"UserID","val":193}
+[2020-12-23T01:21:39.583] [INFO] userDao - END getUserProfileByUserID
+[2020-12-23T01:21:39.583] [INFO] users - profileInfo success
+[2020-12-23T01:21:40.377] [INFO] users - profileInfo userID: 193 
+[2020-12-23T01:21:40.377] [INFO] userDao - START getUserProfileByUserID : {"key":"UserID","val":193}
+[2020-12-23T01:21:40.381] [INFO] userDao - END getUserProfileByUserID
+[2020-12-23T01:21:40.381] [INFO] users - profileInfo success
+[2020-12-23T01:21:54.683] [INFO] users - profileInfo userID: 193 
+[2020-12-23T01:21:54.783] [INFO] users - profileInfo userID: 193 
+[2020-12-23T01:21:54.783] [INFO] userDao - START getUserProfileByUserID : {"key":"UserID","val":193}
+[2020-12-23T01:21:54.786] [INFO] userDao - END getUserProfileByUserID
+[2020-12-23T01:21:54.786] [INFO] users - profileInfo success
+[2020-12-23T01:21:55.654] [INFO] users - profileInfo userID: 193 
+[2020-12-23T01:21:55.654] [INFO] userDao - START getUserProfileByUserID : {"key":"UserID","val":193}
+[2020-12-23T01:21:55.657] [INFO] userDao - END getUserProfileByUserID
+[2020-12-23T01:21:55.657] [INFO] users - profileInfo success
+[2020-12-23T01:22:04.098] [INFO] users - profileInfo userID: 193 
+[2020-12-23T01:22:04.155] [INFO] users - profileInfo userID: 193 
+[2020-12-23T01:22:04.155] [INFO] userDao - START getUserProfileByUserID : {"key":"UserID","val":193}
+[2020-12-23T01:22:04.157] [INFO] userDao - END getUserProfileByUserID
+[2020-12-23T01:22:04.158] [INFO] users - profileInfo success
+[2020-12-23T01:22:05.593] [INFO] users - profileInfo userID: 193 
+[2020-12-23T01:22:05.594] [INFO] userDao - START getUserProfileByUserID : {"key":"UserID","val":193}
+[2020-12-23T01:22:05.598] [INFO] userDao - END getUserProfileByUserID
+[2020-12-23T01:22:05.598] [INFO] users - profileInfo success
+[2020-12-23T01:22:21.102] [INFO] users - profileInfo userID: 193 
+[2020-12-23T01:22:21.158] [INFO] users - profileInfo userID: 193 
+[2020-12-23T01:22:21.158] [INFO] userDao - START getUserProfileByUserID : {"key":"UserID","val":193}
+[2020-12-23T01:22:21.162] [INFO] userDao - END getUserProfileByUserID
+[2020-12-23T01:22:21.162] [INFO] users - profileInfo success
+[2020-12-23T01:22:22.283] [INFO] users - profileInfo userID: 193 
+[2020-12-23T01:22:22.283] [INFO] userDao - START getUserProfileByUserID : {"key":"UserID","val":193}
+[2020-12-23T01:22:22.287] [INFO] userDao - END getUserProfileByUserID
+[2020-12-23T01:22:22.287] [INFO] users - profileInfo success
+[2020-12-23T01:23:05.249] [INFO] users - profileInfo userID: 193 
+[2020-12-23T01:23:05.357] [INFO] users - profileInfo userID: 193 
+[2020-12-23T01:23:05.357] [INFO] userDao - START getUserProfileByUserID : {"key":"UserID","val":193}
+[2020-12-23T01:23:05.361] [INFO] userDao - END getUserProfileByUserID
+[2020-12-23T01:23:05.362] [INFO] users - profileInfo success
+[2020-12-23T01:23:06.607] [INFO] users - profileInfo userID: 193 
+[2020-12-23T01:23:06.608] [INFO] userDao - START getUserProfileByUserID : {"key":"UserID","val":193}
+[2020-12-23T01:23:06.611] [INFO] userDao - END getUserProfileByUserID
+[2020-12-23T01:23:06.611] [INFO] users - profileInfo success
+[2020-12-23T01:23:23.753] [INFO] users - profileInfo userID: 193 
+[2020-12-23T01:23:23.863] [INFO] users - profileInfo userID: 193 
+[2020-12-23T01:23:23.863] [INFO] userDao - START getUserProfileByUserID : {"key":"UserID","val":193}
+[2020-12-23T01:23:23.867] [INFO] userDao - END getUserProfileByUserID
+[2020-12-23T01:23:23.867] [INFO] users - profileInfo success
+[2020-12-23T01:23:24.719] [INFO] users - profileInfo userID: 193 
+[2020-12-23T01:23:24.719] [INFO] userDao - START getUserProfileByUserID : {"key":"UserID","val":193}
+[2020-12-23T01:23:24.723] [INFO] userDao - END getUserProfileByUserID
+[2020-12-23T01:23:24.723] [INFO] users - profileInfo success
+[2020-12-23T01:23:34.748] [INFO] users - profileInfo userID: 193 
+[2020-12-23T01:23:34.808] [INFO] users - profileInfo userID: 193 
+[2020-12-23T01:23:34.808] [INFO] userDao - START getUserProfileByUserID : {"key":"UserID","val":193}
+[2020-12-23T01:23:34.811] [INFO] userDao - END getUserProfileByUserID
+[2020-12-23T01:23:34.811] [INFO] users - profileInfo success
+[2020-12-23T01:23:35.900] [INFO] users - profileInfo userID: 193 
+[2020-12-23T01:23:35.901] [INFO] userDao - START getUserProfileByUserID : {"key":"UserID","val":193}
+[2020-12-23T01:23:35.904] [INFO] userDao - END getUserProfileByUserID
+[2020-12-23T01:23:35.904] [INFO] users - profileInfo success
+[2020-12-23T01:26:39.558] [INFO] users - profileInfo userID: 193 
+[2020-12-23T01:26:39.558] [INFO] userDao - START getUserProfileByUserID : {"key":"UserID","val":193}
+[2020-12-23T01:26:39.562] [INFO] userDao - END getUserProfileByUserID
+[2020-12-23T01:26:39.563] [INFO] users - profileInfo success
+[2020-12-23T01:26:39.664] [INFO] users - profileInfo userID: 193 
+[2020-12-23T01:26:39.664] [INFO] userDao - START getUserProfileByUserID : {"key":"UserID","val":193}
+[2020-12-23T01:26:39.667] [INFO] userDao - END getUserProfileByUserID
+[2020-12-23T01:26:39.667] [INFO] users - profileInfo success
+[2020-12-23T01:26:40.461] [INFO] users - profileInfo userID: 193 
+[2020-12-23T01:26:40.461] [INFO] userDao - START getUserProfileByUserID : {"key":"UserID","val":193}
+[2020-12-23T01:26:40.464] [INFO] userDao - END getUserProfileByUserID
+[2020-12-23T01:26:40.464] [INFO] users - profileInfo success
+[2020-12-23T01:28:09.749] [INFO] users - profileInfo userID: 193 
+[2020-12-23T01:28:09.808] [INFO] users - profileInfo userID: 193 
+[2020-12-23T01:28:09.808] [INFO] userDao - START getUserProfileByUserID : {"key":"UserID","val":193}
+[2020-12-23T01:28:09.813] [INFO] userDao - END getUserProfileByUserID
+[2020-12-23T01:28:09.813] [INFO] users - profileInfo success
+[2020-12-23T01:28:10.724] [INFO] users - profileInfo userID: 193 
+[2020-12-23T01:28:10.725] [INFO] userDao - START getUserProfileByUserID : {"key":"UserID","val":193}
+[2020-12-23T01:28:10.728] [INFO] userDao - END getUserProfileByUserID
+[2020-12-23T01:28:10.728] [INFO] users - profileInfo success
+[2020-12-23T01:29:20.056] [INFO] users - profileInfo userID: 193 
+[2020-12-23T01:29:20.056] [INFO] userDao - START getUserProfileByUserID : {"key":"UserID","val":193}
+[2020-12-23T01:29:20.061] [INFO] userDao - END getUserProfileByUserID
+[2020-12-23T01:29:20.061] [INFO] users - profileInfo success
+[2020-12-23T01:29:20.117] [INFO] users - profileInfo userID: 193 
+[2020-12-23T01:29:20.118] [INFO] userDao - START getUserProfileByUserID : {"key":"UserID","val":193}
+[2020-12-23T01:29:20.120] [INFO] userDao - END getUserProfileByUserID
+[2020-12-23T01:29:20.120] [INFO] users - profileInfo success
+[2020-12-23T01:29:21.143] [INFO] users - profileInfo userID: 193 
+[2020-12-23T01:29:21.143] [INFO] userDao - START getUserProfileByUserID : {"key":"UserID","val":193}
+[2020-12-23T01:29:21.147] [INFO] userDao - END getUserProfileByUserID
+[2020-12-23T01:29:21.147] [INFO] users - profileInfo success
+[2020-12-23T01:30:14.220] [INFO] users - profileInfo userID: 193 
+[2020-12-23T01:30:14.220] [INFO] userDao - START getUserProfileByUserID : {"key":"UserID","val":193}
+[2020-12-23T01:30:14.225] [INFO] userDao - END getUserProfileByUserID
+[2020-12-23T01:30:14.225] [INFO] users - profileInfo success
+[2020-12-23T01:30:14.279] [INFO] users - profileInfo userID: 193 
+[2020-12-23T01:30:14.280] [INFO] userDao - START getUserProfileByUserID : {"key":"UserID","val":193}
+[2020-12-23T01:30:14.282] [INFO] userDao - END getUserProfileByUserID
+[2020-12-23T01:30:14.282] [INFO] users - profileInfo success
+[2020-12-23T01:30:15.432] [INFO] users - profileInfo userID: 193 
+[2020-12-23T01:30:15.432] [INFO] userDao - START getUserProfileByUserID : {"key":"UserID","val":193}
+[2020-12-23T01:30:15.435] [INFO] userDao - END getUserProfileByUserID
+[2020-12-23T01:30:15.435] [INFO] users - profileInfo success
+[2020-12-23T01:30:37.415] [INFO] users - profileInfo userID: 193 
+[2020-12-23T01:30:37.415] [INFO] userDao - START getUserProfileByUserID : {"key":"UserID","val":193}
+[2020-12-23T01:30:37.420] [INFO] userDao - END getUserProfileByUserID
+[2020-12-23T01:30:37.421] [INFO] users - profileInfo success
+[2020-12-23T01:30:37.475] [INFO] users - profileInfo userID: 193 
+[2020-12-23T01:30:37.475] [INFO] userDao - START getUserProfileByUserID : {"key":"UserID","val":193}
+[2020-12-23T01:30:37.477] [INFO] userDao - END getUserProfileByUserID
+[2020-12-23T01:30:37.478] [INFO] users - profileInfo success
+[2020-12-23T01:30:38.933] [INFO] users - profileInfo userID: 193 
+[2020-12-23T01:30:38.934] [INFO] userDao - START getUserProfileByUserID : {"key":"UserID","val":193}
+[2020-12-23T01:30:38.936] [INFO] userDao - END getUserProfileByUserID
+[2020-12-23T01:30:38.937] [INFO] users - profileInfo success
+[2020-12-23T01:31:07.747] [INFO] users - profileInfo userID: 193 
+[2020-12-23T01:31:07.747] [INFO] userDao - START getUserProfileByUserID : {"key":"UserID","val":193}
+[2020-12-23T01:31:07.752] [INFO] userDao - END getUserProfileByUserID
+[2020-12-23T01:31:07.752] [INFO] users - profileInfo success
+[2020-12-23T01:31:07.806] [INFO] users - profileInfo userID: 193 
+[2020-12-23T01:31:07.806] [INFO] userDao - START getUserProfileByUserID : {"key":"UserID","val":193}
+[2020-12-23T01:31:07.809] [INFO] userDao - END getUserProfileByUserID
+[2020-12-23T01:31:07.810] [INFO] users - profileInfo success
+[2020-12-23T01:31:08.578] [INFO] users - profileInfo userID: 193 
+[2020-12-23T01:31:08.578] [INFO] userDao - START getUserProfileByUserID : {"key":"UserID","val":193}
+[2020-12-23T01:31:08.581] [INFO] userDao - END getUserProfileByUserID
+[2020-12-23T01:31:08.581] [INFO] users - profileInfo success
+[2020-12-23T01:31:59.444] [INFO] users - profileInfo userID: 193 
+[2020-12-23T01:31:59.444] [INFO] userDao - START getUserProfileByUserID : {"key":"UserID","val":193}
+[2020-12-23T01:31:59.449] [INFO] userDao - END getUserProfileByUserID
+[2020-12-23T01:31:59.449] [INFO] users - profileInfo success
+[2020-12-23T01:31:59.521] [INFO] users - profileInfo userID: 193 
+[2020-12-23T01:31:59.521] [INFO] userDao - START getUserProfileByUserID : {"key":"UserID","val":193}
+[2020-12-23T01:31:59.525] [INFO] userDao - END getUserProfileByUserID
+[2020-12-23T01:31:59.525] [INFO] users - profileInfo success
+[2020-12-23T01:32:00.491] [INFO] users - profileInfo userID: 193 
+[2020-12-23T01:32:00.491] [INFO] userDao - START getUserProfileByUserID : {"key":"UserID","val":193}
+[2020-12-23T01:32:00.494] [INFO] userDao - END getUserProfileByUserID
+[2020-12-23T01:32:00.495] [INFO] users - profileInfo success
+[2020-12-23T01:32:08.793] [INFO] users - profileInfo userID: 193 
+[2020-12-23T01:32:08.794] [INFO] userDao - START getUserProfileByUserID : {"key":"UserID","val":193}
+[2020-12-23T01:32:08.796] [INFO] userDao - END getUserProfileByUserID
+[2020-12-23T01:32:08.796] [INFO] users - profileInfo success
+[2020-12-23T01:32:08.855] [INFO] users - profileInfo userID: 193 
+[2020-12-23T01:32:08.856] [INFO] userDao - START getUserProfileByUserID : {"key":"UserID","val":193}
+[2020-12-23T01:32:08.859] [INFO] userDao - END getUserProfileByUserID
+[2020-12-23T01:32:08.859] [INFO] users - profileInfo success
+[2020-12-23T01:32:09.614] [INFO] users - profileInfo userID: 193 
+[2020-12-23T01:32:09.614] [INFO] userDao - START getUserProfileByUserID : {"key":"UserID","val":193}
+[2020-12-23T01:32:09.618] [INFO] userDao - END getUserProfileByUserID
+[2020-12-23T01:32:09.618] [INFO] users - profileInfo success

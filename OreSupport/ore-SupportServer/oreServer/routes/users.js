@@ -524,7 +524,7 @@ router.get("/profileInfo", [checkuser.verifyUser], async function (
     var respath =
       req.protocol +
       "://" +
-      req.host +
+      req.hostname +
       (port == 80 || port == 443 ? "" : ":" + port);
 
     var isExists = fs.existsSync(
