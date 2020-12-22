@@ -172,13 +172,14 @@ export default {
             email: this.email,
             birthday: this.birthday,
           })
+          // eslint-disable-next-line
           .then((res) => {
             Message({
               message: "メール送信成功",
               type: "success",
               duration: 5 * 1000,
             });
-            console.log("---OK");
+
             this.$router.push("/");
           })
           .catch((err) => {

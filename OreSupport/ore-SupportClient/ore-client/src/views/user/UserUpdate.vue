@@ -41,7 +41,7 @@
                           <i class="fa fa-user"></i> ユーザ情報管理
                         </a>
                       </li>
-                      <li
+                      <!-- <li
                         id="action-li"
                         v-bind:class="{ active: isActive_action }"
                       >
@@ -54,9 +54,20 @@
                         >
                           <i class="fa fa-key"></i> 行動履歴管理
                         </a>
-                      </li>
-                      <li id="blog-li" v-bind:class="{ active: isActive_blog }">
-                        <a href="#"> <i class="fa fa-sign-out"></i>各種設定 </a>
+                      </li>-->
+                      <li
+                        id="blog-li"
+                        v-bind:class="{ active: isActive_Variouse }"
+                      >
+                        <a
+                          href="#"
+                          @click.prevent="
+                            current = 2;
+                            activeSwitch(2);
+                          "
+                        >
+                          <i class="fa fa-sign-out"></i>各種設定
+                        </a>
                       </li>
                       <li>
                         <a href="#"> <i class="fa fa-sign-out"></i>退会 </a>
@@ -98,15 +109,8 @@
 // import { Message } from "element-ui";
 import ProfileInfo from "./components/profileInfo";
 import ActionManage from "./components/actionInfo";
+import VariousSetting from "./components/VariousSetting";
 import Avatar from "./components/avatarInfo";
-// import {
-//   validEmail,
-//   validPhone,
-//   validURL,
-//   validPostalcode,
-//   isNumber,
-// } from "@/utils/validate";
-
 export default {
   watch: {
     avatarSrc: {
@@ -121,15 +125,16 @@ export default {
     ProfileInfo,
     Avatar,
     ActionManage,
+    VariousSetting,
   },
   data() {
     return {
       avatarSrc: "",
       isActive_userInfo: true,
       isActive_action: false,
-      isActive_blog: false,
+      isActive_Variouse: false,
       current: 0,
-      components: ["ProfileInfo", "ActionManage"],
+      components: ["ProfileInfo", "ActionManage", "VariousSetting"],
     };
   },
   computed: {
@@ -146,17 +151,17 @@ export default {
         case 1:
           this.isActive_userInfo = false;
           this.isActive_action = true;
-          this.isActive_blog = false;
+          this.isActive_Variouse = false;
           break;
         case 2:
           this.isActive_userInfo = false;
           this.isActive_action = false;
-          this.isActive_blog = true;
+          this.isActive_Variouse = true;
           break;
         default:
           this.isActive_userInfo = true;
           this.isActive_action = false;
-          this.isActive_blog = false;
+          this.isActive_Variouse = false;
       }
     },
   },
