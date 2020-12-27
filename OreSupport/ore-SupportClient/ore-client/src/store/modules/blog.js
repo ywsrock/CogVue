@@ -95,7 +95,7 @@ const actions = {
         // ブログリスト
         getBlogList(context, blogInfo) {
             return new Promise((resolve, reject) => {
-                getBlogList()
+                getBlogList(blogInfo)
                     .then(res => {
                         const data = res.data;
                         // const content = data.content;

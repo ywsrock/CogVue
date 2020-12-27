@@ -12,16 +12,20 @@ const appRoot = require("app-root-path");
 const Sequelize = require("sequelize");
 
 //ブログリスト取得
-router.get("/bloglist", async function (req, res, next) {
+router.get("/bloglist",[checkuser.verifyUser], async function (req, res, next) {
   // 出力結果
   let resObj = {};
   // ユーザID(ベリファイチェックから)
   let userID = req.userID;
+  let myblog = req.query.myblog
 
   //ブログリスと取得
   //var blogList = await blogmodel.getBlogList({ key: "UserID", val: userID })
+  if (myblog == "true" ){
+    var blogList = await blogmodel.getBlogList({key: "UserID", val: userID });
+  } else{
   var blogList = await blogmodel.getBlogList();
-
+  }
   if (typeof blogList.errors != "undefined") {
     // エラー結果
     resObj = {

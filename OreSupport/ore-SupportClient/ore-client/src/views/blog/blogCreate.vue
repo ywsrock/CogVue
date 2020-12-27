@@ -31,6 +31,7 @@
                             name="title"
                             required
                             class="form-control"
+                            maxlength="45"
                           />
                         </div>
 
