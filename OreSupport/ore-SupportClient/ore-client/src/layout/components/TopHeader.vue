@@ -134,13 +134,15 @@
                     <!--<a href @click.prevent.stop="blogClick(1)"></a>-->
                   </li>
                   <li>
-                    <a href @click.prevent.stop="blogClick(1)">検索</a>
+                    <a href @click.prevent.stop="blogClick(2)">検索</a>
                   </li>
                   <li v-if="isLogin" >
-                    <a href @click.prevent.stop="blockClick(3)">自分のブログ</a>
+                    <a href @click.prevent.stop="blogClick(1)">自分のブログ</a>
+
+                    <!-- <a href @click.prevent.stop="blockClick(2)">自分のブログ</a> -->
                   </li>
                   <li>
-                    <a href @click.prevent.stop="blogClick(2)">新規投稿</a>
+                    <a href @click.prevent.stop="blogClick(3)">新規投稿</a>
                   </li>
                 </ul>
               </li>
@@ -373,10 +375,11 @@ export default {
     blogClick: function(index) {
       switch (index) {
         //検索
-        case 1:
+        case 2:
           this.$router.push("/blog/blogList");
           break;
-        case 3:
+        case 1:
+          alert("a")
           this.$router.push("/blog/blogList?myblog=true");
           break;
         //新規
