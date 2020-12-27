@@ -183,14 +183,19 @@ export default {
   },
   mounted() {
     this.fetchBlogInfo();
+    var url =  this.$route.query.myblog;
+
     
   },
   methods: {
     fetchBlogInfo(){
       var that = this;
+    // const params = new URLSearchParams();
+    //   params.append("myblog", this.$route.query.myblog);
+    const params = this.$route.query.myblog;
     //
     this.$store
-      .dispatch("blog/getBlogList", this.$route.query.userid)
+      .dispatch("blog/getBlogList", {myblog:params})
       .then(res => {
         this.$nextTick().then(function() {
           const blogInfo = that.$store.getters.get_content;
