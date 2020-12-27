@@ -136,6 +136,9 @@
                   <li>
                     <a href @click.prevent.stop="blogClick(1)">検索</a>
                   </li>
+                  <li v-if="isLogin" >
+                    <a href @click.prevent.stop="blockClick(3)">自分のブログ</a>
+                  </li>
                   <li>
                     <a href @click.prevent.stop="blogClick(2)">新規投稿</a>
                   </li>
@@ -372,6 +375,10 @@ export default {
         //検索
         case 1:
           this.$router.push("/blog/blogList");
+          break;
+        case 3:
+          alert("a")
+          this.$router.push("/blog/blogList?myblog=true");
           break;
         //新規
         default:

@@ -31,6 +31,7 @@
                             name="title"
                             required
                             class="form-control"
+                            maxlength="45"
                           />
                         </div>
 
@@ -38,8 +39,8 @@
                         <div class="form-group col-sm-12">
                           <label for="title">カテゴリ</label>
                           <v-sheet>
-                            <v-chip-group multiple active-class="primary--text">
-                              <v-chip v-for="tag in category" :key="tag">
+                            <v-chip-group mandatory active-class="primary--text">
+                              <v-chip v-for="tag in registForm.category" :key="tag">
                                 {{ tag }}
                               </v-chip>
                             </v-chip-group>
@@ -179,11 +180,20 @@ export default {
         content: "",
         blogimage: "",
         filename: "",
+        category: [
+          "食事",
+          "サプリ",
+          "運動",
+          "脳トレ",
+          "音楽",
+          "社会参加",
+          "その他"
+          ],
       },
       blogImg: "" || img,
       defaultsrc: img,
 
-      category: ["食事", "運動", "脳トレ", "音楽", "その他"],
+
       tags: ["サンマ", "マラソン", "モーツァルト", "パズル"],
     };
   },
