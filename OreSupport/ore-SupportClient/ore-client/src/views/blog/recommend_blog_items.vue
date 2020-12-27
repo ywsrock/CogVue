@@ -1,5 +1,6 @@
 <template>
-  <div>
+  <div class="card-small">
+    <h2>最新ブログ</h2>
     <div class="cards-small">
       <div class="card-small">
         <div class="card-small-image">
@@ -12,9 +13,7 @@
         </div>
         <div class="card-small-content">
           <h3>
-            <a href="listing-detail.html"
-              >成長を実感できています！</a
-            >
+            <a href="listing-detail.html">成長を実感できています！</a>
           </h3>
           <h4>
             <a href="listing-detail.html">土生さん</a>
@@ -36,9 +35,7 @@
 
         <div class="card-small-content">
           <h3>
-            <a href="listing-detail.html"
-              >画面デザインの勉強中です</a
-            >
+            <a href="listing-detail.html">画面デザインの勉強中です</a>
           </h3>
           <h4>
             <a href="listing-detail.html">王さん</a>
@@ -59,14 +56,10 @@
         </div>
         <div class="card-small-content">
           <h3>
-            <a href="listing-detail.html"
-              >テキスト</a
-            >
+            <a href="listing-detail.html">テキスト</a>
           </h3>
           <h4>
-            <a href="listing-detail.html"
-              >テキストテキスト</a
-            >
+            <a href="listing-detail.html">テキストテキスト</a>
           </h4>
         </div>
       </div>
@@ -84,14 +77,10 @@
         </div>
         <div class="card-small-content">
           <h3>
-            <a href="listing-detail.html"
-              >テキスト</a
-            >
+            <a href="listing-detail.html">テキスト</a>
           </h3>
           <h4>
-            <a href="listing-detail.html"
-              >テキストテキスト</a
-            >
+            <a href="listing-detail.html">テキストテキスト</a>
           </h4>
         </div>
       </div>
@@ -109,17 +98,18 @@
         </div>
         <div class="card-small-content">
           <h3>
-            <a href="listing-detail.html"
-              >テキスト</a
-            >
+            <a href="listing-detail.html">テキスト</a>
           </h3>
           <h4>
-            <a href="listing-detail.html"
-              >テキストテキスト</a
-            >
+            <a href="listing-detail.html">テキストテキスト</a>
           </h4>
         </div>
       </div>
     </div>
   </div>
 </template>
+
+<script>
+/* eslint-disable */
+export default {};
+</script>

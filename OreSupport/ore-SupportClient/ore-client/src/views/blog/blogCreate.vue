@@ -37,29 +37,59 @@
                         <!-- /.form-group -->
                         <div class="form-group col-sm-12">
                           <label for="title">カテゴリ</label>
-                          <v-sheet>
-                            <v-chip-group mandatory active-class="primary--text">
-                              <v-chip v-for="tag in registForm.category" :key="tag">
-                                {{ tag }}
-                              </v-chip>
-                            </v-chip-group>
-                          </v-sheet>
+                          <v-chip-group
+                            v-model="categorySelected"
+                            column
+                            color="blue"
+                          >
+                            <v-chip
+                              filter
+                              outlined
+                              v-for="category in registForm.categories"
+                              :key="category.value"
+                            >
+                              <!-- <input
+                                type="checkbox"
+                                v-model="category.label"
+                                @change="selectCategories(category)"
+                              /> -->
+                              <!-- {{ category.label }} -->
+                              {{ category.label }}
+                            </v-chip>
+                          </v-chip-group>
+
+                          <!-- <ul>
+                            <li v-for="item in items" :key="item">
+                              <label>
+                                <input
+                                  type="checkbox"
+                                  v-model="item.name"
+                                  @change="changed(item)"
+                                />
+                                {{ item.name }}
+                              </label>
+                            </li>
+                          </ul> -->
                         </div>
 
                         <div class="form-group col-sm-12">
                           <label for="title">
                             行動タグ
                             <br />
-                            行動タグの追加については<a href="#">こちら</a>から
+                            行動タグの追加・削除については<a href="#">こちら</a
+                            >から
                           </label>
 
-                          <v-sheet>
-                            <v-chip-group multiple active-class="primary--text">
-                              <v-chip v-for="tag in tags" :key="tag">
-                                {{ tag }}
-                              </v-chip>
-                            </v-chip-group>
-                          </v-sheet>
+                          <v-chip-group column multiple color="green">
+                            <v-chip
+                              filter
+                              outlined
+                              v-for="tag in tags"
+                              :key="tag"
+                            >
+                              {{ tag }}
+                            </v-chip>
+                          </v-chip-group>
                         </div>
                       </div>
 
@@ -172,6 +202,13 @@ import { Message } from "element-ui";
 var img = require("../../../public/favicon.png");
 /* eslint-disable */
 export default {
+  watch: {
+    categorySelected: {
+      handler: function(newValue, oldValue) {
+        console.log(newValue);
+      },
+    },
+  },
   data() {
     return {
       registForm: {
@@ -179,24 +216,29 @@ export default {
         content: "",
         blogimage: "",
         filename: "",
-        category: [
-          "食事",
-          "サプリ",
-          "運動",
-          "脳トレ",
-          "音楽",
-          "社会参加",
-          "その他"
-          ],
+        categorySelected: "",
+        categories: [
+          { label: "食事", value: 1 },
+          { label: "サプリ", value: 2 },
+          { label: "運動", value: 3 },
+          { label: "脳トレ", value: 4 },
+          { label: "音楽", value: 5 },
+          { label: "社会参加", value: 6 },
+          { label: "その他", value: 7 },
+        ],
       },
       blogImg: "" || img,
       defaultsrc: img,
-
-
       tags: ["サンマ", "マラソン", "モーツァルト", "パズル"],
     };
   },
+
   methods: {
+    selectCategories(category) {
+      // this.registForm.categories = e.target.result;
+      console.log(category.label);
+    },
+
     defaultBlogImg: function() {
       return this.defaultsrc;
     },
@@ -211,7 +253,6 @@ export default {
       reader.readAsDataURL(file);
       reader.onload = (e) => {
         this.blogImg = e.target.result;
-        // const blob = new Blob([new Uint8Array(e.target.result)], {type: file.type });
       };
     },
 
@@ -222,6 +263,16 @@ export default {
 
       let that = this;
       let fl = this.$refs.upfile.files[0];
+
+      //カテゴリ選択チェック
+      // if ("" === that.registForm.categorySelected) {
+      //     Message({
+      //       message: "カテゴリ選択してください。",
+      //       type: "error",
+      //       duration: 5 * 1000,
+      //     })
+      //     return
+      // }
 
       //Content-Type:form/multipart で送信されます
       let data = new FormData();
