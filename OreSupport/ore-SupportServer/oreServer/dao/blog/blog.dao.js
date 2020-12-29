@@ -76,7 +76,7 @@ const getBlogList = async (queryInfo) => {
       },
       targetKey: "UserID",
     });
-    
+
     if (queryInfo == undefined){
       const result = await Blog.findAll({
         order: [["id", "DESC"]],
@@ -189,7 +189,7 @@ const getBlogDetail = async (queryInfo) => {
       ],
 
       attributes: { exclude: ["Password"] },
-      // attributes: ['Title',sequelize.fn('upper', sequelize.col("Title")),'Title'],      
+      // attributes: ['Title',sequelize.fn('upper', sequelize.col("Title")),'Title'],
     });
     return result;
   } catch (error) {
