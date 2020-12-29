@@ -22,11 +22,10 @@
                     <div class="row">
                       <div class="col-sm-8">
                         <div class="form-group col-sm-12">
-                          <label for="title">タイトル</label>
+                          <label for="title">ブログのタイトル</label>
                           <input
                             type="text"
                             ref="title"
-                            placeholder="タイトル"
                             v-model="registForm.title"
                             name="title"
                             required
@@ -38,38 +37,19 @@
                         <div class="form-group col-sm-12">
                           <label for="title">カテゴリ</label>
                           <v-chip-group
-                            v-model="categorySelected"
+                            v-model="registForm.categorySelected"
                             column
                             color="blue"
                           >
                             <v-chip
                               filter
                               outlined
-                              v-for="category in registForm.categories"
-                              :key="category.value"
+                              v-for="category in categories"
+                              :value="category.value" :key="category.value"
                             >
-                              <!-- <input
-                                type="checkbox"
-                                v-model="category.label"
-                                @change="selectCategories(category)"
-                              /> -->
-                              <!-- {{ category.label }} -->
                               {{ category.label }}
                             </v-chip>
                           </v-chip-group>
-
-                          <!-- <ul>
-                            <li v-for="item in items" :key="item">
-                              <label>
-                                <input
-                                  type="checkbox"
-                                  v-model="item.name"
-                                  @change="changed(item)"
-                                />
-                                {{ item.name }}
-                              </label>
-                            </li>
-                          </ul> -->
                         </div>
 
                         <div class="form-group col-sm-12">
@@ -202,13 +182,13 @@ import { Message } from "element-ui";
 var img = require("../../../public/favicon.png");
 /* eslint-disable */
 export default {
-  watch: {
-    categorySelected: {
-      handler: function(newValue, oldValue) {
-        console.log(newValue);
-      },
-    },
-  },
+  // watch: {
+  //   categorySelected: {
+  //     handler: function(newValue, oldValue) {
+  //       console.log(newValue);
+  //     },
+  //   },
+  // },
   data() {
     return {
       registForm: {
@@ -217,27 +197,27 @@ export default {
         blogimage: "",
         filename: "",
         categorySelected: "",
-        categories: [
-          { label: "食事", value: 1 },
-          { label: "サプリ", value: 2 },
-          { label: "運動", value: 3 },
-          { label: "脳トレ", value: 4 },
-          { label: "音楽", value: 5 },
-          { label: "社会参加", value: 6 },
-          { label: "その他", value: 7 },
-        ],
       },
       blogImg: "" || img,
       defaultsrc: img,
       tags: ["サンマ", "マラソン", "モーツァルト", "パズル"],
+      categories: [
+        { label: "食事", value: 1 },
+        { label: "サプリ", value: 2 },
+        { label: "運動", value: 3 },
+        { label: "脳トレ", value: 4 },
+        { label: "音楽", value: 5 },
+        { label: "社会参加", value: 6 },
+        { label: "その他", value: 7 },
+      ],
     };
   },
 
   methods: {
-    selectCategories(category) {
-      // this.registForm.categories = e.target.result;
-      console.log(category.label);
-    },
+    // categorySelected: function(e){
+    //   this.categorySelected = e.target.result;
+    //   console.log(this.categorySelected);
+    // },
 
     defaultBlogImg: function() {
       return this.defaultsrc;
@@ -264,15 +244,33 @@ export default {
       let that = this;
       let fl = this.$refs.upfile.files[0];
 
+      //タイトル選択チェック
+      if ("" === that.registForm.title) {
+        Message({
+          message: "タイトルを入力してください。",
+          type: "error",
+          duration: 5 * 1000,
+        });
+        return;
+      }
+      //コンテンツ選択チェック
+      if ("" === that.registForm.content) {
+        Message({
+          message: "本文を入力してください。",
+          type: "error",
+          duration: 5 * 1000,
+        });
+        return;
+      }
       //カテゴリ選択チェック
-      // if ("" === that.registForm.categorySelected) {
-      //     Message({
-      //       message: "カテゴリ選択してください。",
-      //       type: "error",
-      //       duration: 5 * 1000,
-      //     })
-      //     return
-      // }
+      if ("" === that.registForm.categorySelected) {
+        Message({
+          message: "カテゴリ選択してください。",
+          type: "error",
+          duration: 5 * 1000,
+        });
+        return;
+      }
 
       //Content-Type:form/multipart で送信されます
       let data = new FormData();

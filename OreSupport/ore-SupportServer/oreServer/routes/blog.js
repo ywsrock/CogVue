@@ -41,8 +41,8 @@ router.get("/bloglist", async function (req, res, next) {
         title: blog.Title,
         content: blog.Content,
         userName: blog.User.UserName || "",
-        timeStamp:blog.Timestamp,
-        userProfile:blog.User
+        timeStamp: blog.Timestamp,
+        userProfile: blog.User,
       });
     });
 
@@ -116,6 +116,8 @@ router.post("/create", [checkuser.verifyUser], async function (req, res, next) {
           imgUrl: `${respath}/blogImg/${imgpath}`,
         };
       }
+
+      category = registForm.categorySelected;
     }
 
     log.info(`imageUp success`);
@@ -143,7 +145,8 @@ router.post("/create", [checkuser.verifyUser], async function (req, res, next) {
         // filename取得、本体は/public/blogImge/の中
         // undefined以外の場合は値を取得し、undefinedの場合は空
         BlogImage: req.file !== undefined ? req.file.filename : "",
-        Timestamp: Sequelize.fn("NOW")
+        Timestamp: Sequelize.fn("NOW"),
+        Category: category,
       };
 
       // DBにユーザ登録を呼び出す
@@ -198,9 +201,6 @@ router.get("/blogdetail", async function (req, res, next) {
     val: userId,
   });
 
-
-
-
   if (typeof blogDetail.errors != "undefined") {
     // エラー結果
     resObj = {
@@ -236,7 +236,7 @@ router.get("/blogdetail", async function (req, res, next) {
         comment: blogDetail[0].Comments || "",
         userProfile: userProfile,
         imgUrl: imgUrl,
-        timeStamp:blogDetail[0].Timestamp
+        timeStamp: blogDetail[0].Timestamp,
       },
     };
   }
@@ -344,7 +344,7 @@ router.post(
           // filename取得、本体は/public/blogImge/の中
           // isExistsがファイルが存在するかのフラグ
           // isExistsがTrueの場合filename読み込んで、Falseの場合は空にする
-          BlogImage: isExists ? req.file.filename : ""
+          BlogImage: isExists ? req.file.filename : "",
         };
 
         // DBにユーザ登録を呼び出す
@@ -430,63 +430,63 @@ router.post(
         message: "ブログの内容エラー",
       });
     }
-  });
+  }
+);
 
-router.post("/postComment", [checkuser.verifyUser], async function (
-  req,
-  res,
-  next
-) {
-  // 出力結果
-  let resObj = {};
-  // ユーザID(ベリファイチェックから)
-  let userID = req.userID;
-  //　title
-  var id = req.body.id;
+router.post(
+  "/postComment",
+  [checkuser.verifyUser],
+  async function (req, res, next) {
+    // 出力結果
+    let resObj = {};
+    // ユーザID(ベリファイチェックから)
+    let userID = req.userID;
+    //　title
+    var id = req.body.id;
 
-  var comment = req.body.comment;
+    var comment = req.body.comment;
 
-  var commentName = req.body.commentName;
+    var commentName = req.body.commentName;
 
-
-  // titleとcontent
-  if ("" != comment.trim() && "" != commentName.trim()) {
-    // Comment登録処理
-    CommentObj = {
-      id: id,
-      UserID: userID,
-      comment: comment,
-      commentName: commentName,
-    };
-
-    // DBにユーザ登録を呼び出す
-    const results = await blogmodel.postComment(CommentObj);
-
-    // TODO　登録結果評価、エラーの場合、エラーメッセージを返す（再修正必要）
-    if (typeof results.errors != "undefined") {
-      // エラー結果
-      resObj = {
-        code: STATUS_MESSAGE.CODE_402,
-        message: "サーバーブログ作成エラー",
+    // titleとcontent
+    if ("" != comment.trim() && "" != commentName.trim()) {
+      // Comment登録処理
+      CommentObj = {
+        id: id,
+        UserID: userID,
+        comment: comment,
+        commentName: commentName,
       };
+
+      // DBにユーザ登録を呼び出す
+      const results = await blogmodel.postComment(CommentObj);
+
+      // TODO　登録結果評価、エラーの場合、エラーメッセージを返す（再修正必要）
+      if (typeof results.errors != "undefined") {
+        // エラー結果
+        resObj = {
+          code: STATUS_MESSAGE.CODE_402,
+          message: "サーバーブログ作成エラー",
+        };
+        return res.status(200).send(resObj);
+      } else {
+        resObj = {
+          // JSON ステータスコード
+          code: STATUS_MESSAGE.CODE_SUCCESS,
+          data: {
+            message: "ブログ作成成功",
+          },
+        };
+      }
       return res.status(200).send(resObj);
     } else {
-      resObj = {
-        // JSON ステータスコード
-        code: STATUS_MESSAGE.CODE_SUCCESS,
-        data: {
-          message: "ブログ作成成功",
-        },
-      };
+      return res.status(200).send({
+        token: null,
+        message: "ブログの内容エラー",
+      });
     }
-    return res.status(200).send(resObj);
-  } else {
-    return res.status(200).send({
-      token: null,
-      message: "ブログの内容エラー",
-    });
   }
-});
+);
 
 router.post("/searchBlog", async function (req, res, next) {
   // 出力結果
@@ -496,8 +496,8 @@ router.post("/searchBlog", async function (req, res, next) {
     freeWord: req.body.freeWord,
     from: req.body.from,
     to: req.body.to,
-    pref: req.body.pref
-  }
+    pref: req.body.pref,
+  };
 
   // ユーザID(ベリファイチェックから)
   let userID = req.userID;

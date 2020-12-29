@@ -2,7 +2,7 @@ const db = require("../../common/db.common");
 const { Blog } = require("../../model/blog.model");
 const { User } = require("../../model/user.model");
 const { Comment } = require("../../model/comment.model");
-const { UserProfile } = require("../../model/userprofile.model")
+const { UserProfile } = require("../../model/userprofile.model");
 const { sequelize } = require("../../common/db.common");
 const Sequelize = require("sequelize");
 const { Op } = require("sequelize");
@@ -25,7 +25,8 @@ const createBlog = async (queryInfo) => {
       // ブログ画像
       BlogImage: queryInfo.BlogImage,
       // 投稿日
-      Timestamp: queryInfo.Timestamp
+      Timestamp: queryInfo.Timestamp,
+      Category: queryInfo.Category,
     });
     // トランザクションコンミット
     await t.commit();
@@ -52,11 +53,10 @@ const getBlogList = async (queryInfo) => {
         name: "UserID",
       },
     });
-    UserProfile.belongsTo(User,{
+    UserProfile.belongsTo(User, {
       foreignKey: {
         name: "UserID",
       },
-      
     });
     User.belongsTo(UserProfile, {
       foreignKey: {
@@ -67,13 +67,16 @@ const getBlogList = async (queryInfo) => {
     const result = await Blog.findAll({
       order: [["id", "DESC"]],
       include: [
-        {model:User,
-        include:
-        [{
-          model:UserProfile,
-          required: false,
-        }
-      ]}]
+        {
+          model: User,
+          include: [
+            {
+              model: UserProfile,
+              required: false,
+            },
+          ],
+        },
+      ],
     });
     return result;
   } catch (error) {
@@ -118,11 +121,10 @@ const getBlogDetail = async (queryInfo) => {
       },
       targetKey: "id",
     });
-    User.belongsTo(Comment,{
+    User.belongsTo(Comment, {
       foreignKey: {
         name: "UserID",
       },
-      
     });
     Comment.belongsTo(User, {
       foreignKey: {
@@ -132,7 +134,7 @@ const getBlogDetail = async (queryInfo) => {
     });
 
     const result = await Blog.findAll({
-      attributes:[sequelize.fn('upper', sequelize.col('Title'))],
+      attributes: [sequelize.fn("upper", sequelize.col("Title"))],
       where: {
         [Op.and]: [
           {
@@ -144,18 +146,16 @@ const getBlogDetail = async (queryInfo) => {
         {
           model: Comment,
           required: false,
-          include:[
+          include: [
             {
-              model:User,
+              model: User,
               required: false,
-            }
-            
-          ]
+            },
+          ],
         },
       ],
 
       attributes: { exclude: ["Password"] },
-      
     });
     return result;
   } catch (error) {
@@ -233,7 +233,7 @@ const postComment = async (queryInfo) => {
       // Content
       commentName: queryInfo.commentName,
       // 更新日
-      Timestamp: Sequelize.fn("NOW")
+      Timestamp: Sequelize.fn("NOW"),
     });
     // トランザクションコンミット
     await t.commit();
@@ -248,7 +248,6 @@ const postComment = async (queryInfo) => {
 
 const searchBlog = async (queryInfo) => {
   try {
-
     // ユーザーとブログ
     User.hasMany(Blog, {
       foreignKey: {
@@ -282,32 +281,38 @@ const searchBlog = async (queryInfo) => {
         model: User,
         include: {
           model: UserProfile,
-        }
+        },
       },
     });
 
-
     let result = [];
-    let regexp = new RegExp(queryInfo.freeWord, 'i');
+    let regexp = new RegExp(queryInfo.freeWord, "i");
     let from, to;
     if (queryInfo.from) {
       from = new Date(queryInfo.from);
     } else {
-      from = new Date('1900-01-01');
+      from = new Date("1900-01-01");
     }
 
     if (queryInfo.to) {
       to = new Date(queryInfo.to);
     } else {
-      to = new Date('3000-01-01');
+      to = new Date("3000-01-01");
     }
 
     // 投稿日, フリーワード, 性別, 住所で絞り込み
-    blogs.forEach(blog => {
-      if ((queryInfo.freeWord && (blog.Content.match(regexp) || blog.Title.match(regexp))) || !queryInfo.freeWord) {
+    blogs.forEach((blog) => {
+      if (
+        (queryInfo.freeWord &&
+          (blog.Content.match(regexp) || blog.Title.match(regexp))) ||
+        !queryInfo.freeWord
+      ) {
         if (blog.Timestamp >= from && blog.Timestamp <= to) {
           if (blog.User.UserProfile.Sex == queryInfo.sex || !queryInfo.sex) {
-            if (blog.User.UserProfile.State == queryInfo.pref || !queryInfo.pref) {
+            if (
+              blog.User.UserProfile.State == queryInfo.pref ||
+              !queryInfo.pref
+            ) {
               result.push(blog);
             }
           }

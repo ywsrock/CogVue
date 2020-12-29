@@ -39,6 +39,11 @@ const Blog = sequelize.define('Blog', {
         allowNull: true,
         comment: "投稿日付"
     },
+    Category: {
+        type: Sequelize.STRING,
+        allowNull: true,
+        comment: "Category"
+    },
 }, {
     tableName: "Tb_Blog", //　Maping　テーブル名指定
     modelName: "Blog", // モデル名指定
