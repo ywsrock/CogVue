@@ -8,6 +8,7 @@ const bcryptTools = require("../common/bcrypt_tools");
 const config = require("../config/secret.config");
 const jwtToken = require("jsonwebtoken");
 const { User } = require("../model/user.model");
+const { userPower } = require("../model/userPower.model");
 const { UserProfile } = require("../model/userprofile.model")
 const { RestInfo } = require("../model/restinfo.model")
 const Image_storage = require("../common/fileup");
@@ -17,7 +18,7 @@ const appRoot = require("app-root-path");
 const { createSMTPTTransport, sendMail, dateDiff } = require("../common/nodeMailer")
 var log = require("log4js").getLogger("users");
 var dateFormat = require('dateformat');
-const { Op } = require('sequelize');
+const { Op, and } = require('sequelize');
 
 
 //thirdParytyログインの場合
@@ -748,4 +749,167 @@ router.post("/logout", function (req, res, next) {
   res.send({ code: 20000, content: "OK---" });
 });
 
+//各種設定（権限初期表示）
+router.get("/showUserPower", [checkuser.verifyUser], async function (req, res, next) {
+  //ユーザID取得
+  let userID = req.userID
+  // Response データ
+  var resObj = {
+    // JSON ステータスコード
+    code: STATUS_MESSAGE.CODE_SUCCESS,
+    data: {
+      // プロフィール
+      profileOpen: false,
+      // コグエボ
+      cogEvoOpen: false,
+      // 行動
+      actionOpen: false,
+      // ブログ
+      blogOpen: false,
+      // コメント
+      blogCommentOpen: false,
+      // コグエボ結果
+      blogCogEvoOpen: false,
+    },
+  };
+  //ユーザ権限取得
+  let { count, rows } = await userPower.findAndCountAll({
+    where: {
+      UserID: userID
+    }
+  })
+  //権限存在チェック
+  if (count > 0) {
+    resObj.data.profileOpen = rows[0].showProfile == 0 ? false : true
+    resObj.data.cogEvoOpen = rows[0].showCogEvo == 0 ? false : true
+    resObj.data.actionOpen = rows[0].showAction == 0 ? false : true
+    resObj.data.blogOpen = rows[0].showBlog == 0 ? false : true
+    resObj.data.blogCommentOpen = rows[0].showBlogComment == 0 ? false : true
+    resObj.data.blogCogEvoOpen = rows[0].showBlogCogEvo == 0 ? false : true
+  }
+  res.status(200).send(resObj)
+
+})
+//各種設定(権限設定)
+router.post("/varousSetting", [checkuser.verifyUser], async function (req, res, next) {
+  // 設定情報取得
+  let setObj = req.body.powerSetting
+  var uPower
+  var resobj
+
+  let queryObj = {
+    //UserID
+    UserID: req.userID,
+    //プロフィール
+    showProfile: setObj.profileOpen == true ? 1 : 0,
+    //コグエボ
+    showCogEvo: setObj.cogEvoOpen == true ? 1 : 0,
+    //行動
+    showAction: setObj.actionOpen == true ? 1 : 0,
+    //ブログ
+    showBlog: setObj.blogOpen == true ? 1 : 0,
+    //コメント
+    showBlogComment: setObj.blogCommentOpen == true ? 1 : 0,
+    //コグエボ結果
+    showBlogCogEvo: setObj.blogCogEvoOpen == true ? 1 : 0
+  }
+  try {
+    // ユーザ存在チェック、存在の場合更新、それ以外の場合新規作成
+    const count = await userPower.count({
+      where: {
+        UserID: req.userID,
+      }
+    })
+    if (count == 0) {
+      uPower = await userPower.create({
+        ...queryObj
+      })
+    } else {
+      uPower = await userPower.update({
+        ...queryObj,
+      }, {
+        where: {
+          UserID: req.userID,
+        }
+      })
+    }
+    resobj = {
+      code: STATUS_MESSAGE.CODE_SUCCESS,
+    };
+    res.status(200).send(resobj)
+  } catch (error) {
+    // エラー結果
+    resObj = {
+      code: STATUS_MESSAGE.CODE_412,
+      message: STATUS_MESSAGE.SETPOWER_ERROR_412,
+    };
+    res.status(200).send(resObj)
+  }
+})
+
+//各種設定(パスワード)
+router.post("/passwordSetting", [checkuser.verifyUser], async function (req, res, next) {
+  // userID
+  let userID = req.userID
+  // 変更情報取得
+  let setObj = req.body.passwordForm
+  //現在のパスワード
+  let oldPassword = setObj.passwdOld
+  var resobj = {}
+
+  //現在のパスワード検証
+  var { count, rows } = await User.findAndCountAll({
+    where: {
+      UserID: userID
+    }
+  })
+  //存在しない場合
+  if (count == 0 || !bcryptTools.compareSync(oldPassword, rows[0].Password)) {
+    // エラー結果
+    resObj = {
+      code: STATUS_MESSAGE.CODE_410,
+      message: STATUS_MESSAGE.LOGIN_ERROR_410,
+    };
+    res.status(200).send(resObj)
+    return
+  }
+
+  //パスワード更新
+  if (setObj.password !== undefined && setObj.password.trim() !== "") {
+    //パスワード暗号
+    let newPasswd = await bcryptTools.hash(setObj.password);
+    //パスワード更新
+    let results = await User.update({
+      Password: newPasswd
+    }, {
+      where: {
+        UserID: userID
+      }
+    })
+    //エラー存在チェック
+    if (typeof results.errors != "undefined") {
+      // エラー結果
+      resObj = {
+        code: STATUS_MESSAGE.CODE_411,
+        message: STATUS_MESSAGE.LOGIN_ERROR_411,
+      };
+      res.status(200).send(resObj)
+      return
+    }
+
+    resobj = {
+      code: STATUS_MESSAGE.CODE_SUCCESS,
+    };
+    res.status(200).send(resobj)
+
+  } else {
+    // エラー結果
+    resObj = {
+      code: STATUS_MESSAGE.CODE_411,
+      message: STATUS_MESSAGE.LOGIN_ERROR_411,
+    };
+    res.status(200).send(resObj)
+    return
+  }
+})
 module.exports = router;

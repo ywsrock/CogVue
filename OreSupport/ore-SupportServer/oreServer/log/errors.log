@@ -1690,3 +1690,119 @@
  {
   message: 'Not Found'
 }
+[2020-12-25T20:36:01.927] [ERROR] app - アクセスエラー ClientError [NotFoundError]: Not Found
+    at /Users/yws/Dev/OreSupport_gitHub/PBL2020/OreSupport/ore-SupportServer/oreServer/app.js:16:3
+    at Layer.handle [as handle_request] (/Users/yws/Dev/OreSupport_gitHub/PBL2020/OreSupport/ore-SupportServer/oreServer/node_modules/express/lib/router/layer.js:16:3)
+    at trim_prefix (/Users/yws/Dev/OreSupport_gitHub/PBL2020/OreSupport/ore-SupportServer/oreServer/node_modules/express/lib/router/index.js:16:10)
+    at /Users/yws/Dev/OreSupport_gitHub/PBL2020/OreSupport/ore-SupportServer/oreServer/node_modules/express/lib/router/index.js:16:3
+    at Function.process_params (/Users/yws/Dev/OreSupport_gitHub/PBL2020/OreSupport/ore-SupportServer/oreServer/node_modules/express/lib/router/index.js:16:10)
+    at next (/Users/yws/Dev/OreSupport_gitHub/PBL2020/OreSupport/ore-SupportServer/oreServer/node_modules/express/lib/router/index.js:16:10)
+    at /Users/yws/Dev/OreSupport_gitHub/PBL2020/OreSupport/ore-SupportServer/oreServer/node_modules/express/lib/router/index.js:16:10
+    at next (/Users/yws/Dev/OreSupport_gitHub/PBL2020/OreSupport/ore-SupportServer/oreServer/node_modules/express/lib/router/index.js:16:10)
+    at Function.handle (/Users/yws/Dev/OreSupport_gitHub/PBL2020/OreSupport/ore-SupportServer/oreServer/node_modules/express/lib/router/index.js:16:3)
+    at router (/Users/yws/Dev/OreSupport_gitHub/PBL2020/OreSupport/ore-SupportServer/oreServer/node_modules/express/lib/router/index.js:16:10)
+    at Layer.handle [as handle_request] (/Users/yws/Dev/OreSupport_gitHub/PBL2020/OreSupport/ore-SupportServer/oreServer/node_modules/express/lib/router/layer.js:16:3)
+    at trim_prefix (/Users/yws/Dev/OreSupport_gitHub/PBL2020/OreSupport/ore-SupportServer/oreServer/node_modules/express/lib/router/index.js:16:10)
+    at /Users/yws/Dev/OreSupport_gitHub/PBL2020/OreSupport/ore-SupportServer/oreServer/node_modules/express/lib/router/index.js:16:3
+    at Function.process_params (/Users/yws/Dev/OreSupport_gitHub/PBL2020/OreSupport/ore-SupportServer/oreServer/node_modules/express/lib/router/index.js:16:10)
+    at next (/Users/yws/Dev/OreSupport_gitHub/PBL2020/OreSupport/ore-SupportServer/oreServer/node_modules/express/lib/router/index.js:16:10)
+    at SessionStrategy.strategy.pass (/Users/yws/Dev/OreSupport_gitHub/PBL2020/OreSupport/ore-SupportServer/oreServer/node_modules/passport/lib/middleware/authenticate.js:16:3)
+    at SessionStrategy.authenticate (/Users/yws/Dev/OreSupport_gitHub/PBL2020/OreSupport/ore-SupportServer/oreServer/node_modules/passport/lib/strategies/session.js:16:10)
+    at attempt (/Users/yws/Dev/OreSupport_gitHub/PBL2020/OreSupport/ore-SupportServer/oreServer/node_modules/passport/lib/middleware/authenticate.js:16:10)
+    at authenticate (/Users/yws/Dev/OreSupport_gitHub/PBL2020/OreSupport/ore-SupportServer/oreServer/node_modules/passport/lib/middleware/authenticate.js:16:3)
+    at Layer.handle [as handle_request] (/Users/yws/Dev/OreSupport_gitHub/PBL2020/OreSupport/ore-SupportServer/oreServer/node_modules/express/lib/router/layer.js:16:3)
+    at trim_prefix (/Users/yws/Dev/OreSupport_gitHub/PBL2020/OreSupport/ore-SupportServer/oreServer/node_modules/express/lib/router/index.js:16:10)
+    at /Users/yws/Dev/OreSupport_gitHub/PBL2020/OreSupport/ore-SupportServer/oreServer/node_modules/express/lib/router/index.js:16:3
+    at Function.process_params (/Users/yws/Dev/OreSupport_gitHub/PBL2020/OreSupport/ore-SupportServer/oreServer/node_modules/express/lib/router/index.js:16:10)
+    at next (/Users/yws/Dev/OreSupport_gitHub/PBL2020/OreSupport/ore-SupportServer/oreServer/node_modules/express/lib/router/index.js:16:10)
+    at initialize (/Users/yws/Dev/OreSupport_gitHub/PBL2020/OreSupport/ore-SupportServer/oreServer/node_modules/passport/lib/middleware/initialize.js:16:3)
+    at Layer.handle [as handle_request] (/Users/yws/Dev/OreSupport_gitHub/PBL2020/OreSupport/ore-SupportServer/oreServer/node_modules/express/lib/router/layer.js:16:3)
+    at trim_prefix (/Users/yws/Dev/OreSupport_gitHub/PBL2020/OreSupport/ore-SupportServer/oreServer/node_modules/express/lib/router/index.js:16:10)
+    at /Users/yws/Dev/OreSupport_gitHub/PBL2020/OreSupport/ore-SupportServer/oreServer/node_modules/express/lib/router/index.js:16:3
+    at Function.process_params (/Users/yws/Dev/OreSupport_gitHub/PBL2020/OreSupport/ore-SupportServer/oreServer/node_modules/express/lib/router/index.js:16:10)
+    at next (/Users/yws/Dev/OreSupport_gitHub/PBL2020/OreSupport/ore-SupportServer/oreServer/node_modules/express/lib/router/index.js:16:10)
+    at urlencodedParser (/Users/yws/Dev/OreSupport_gitHub/PBL2020/OreSupport/ore-SupportServer/oreServer/node_modules/body-parser/lib/types/urlencoded.js:16:3)
+    at Layer.handle [as handle_request] (/Users/yws/Dev/OreSupport_gitHub/PBL2020/OreSupport/ore-SupportServer/oreServer/node_modules/express/lib/router/layer.js:16:3)
+    at trim_prefix (/Users/yws/Dev/OreSupport_gitHub/PBL2020/OreSupport/ore-SupportServer/oreServer/node_modules/express/lib/router/index.js:16:10)
+    at /Users/yws/Dev/OreSupport_gitHub/PBL2020/OreSupport/ore-SupportServer/oreServer/node_modules/express/lib/router/index.js:16:3
+    at Function.process_params (/Users/yws/Dev/OreSupport_gitHub/PBL2020/OreSupport/ore-SupportServer/oreServer/node_modules/express/lib/router/index.js:16:10)
+    at next (/Users/yws/Dev/OreSupport_gitHub/PBL2020/OreSupport/ore-SupportServer/oreServer/node_modules/express/lib/router/index.js:16:10)
+    at /Users/yws/Dev/OreSupport_gitHub/PBL2020/OreSupport/ore-SupportServer/oreServer/node_modules/log4js/lib/connect-logger.js:16:10
+    at Layer.handle [as handle_request] (/Users/yws/Dev/OreSupport_gitHub/PBL2020/OreSupport/ore-SupportServer/oreServer/node_modules/express/lib/router/layer.js:16:3)
+    at trim_prefix (/Users/yws/Dev/OreSupport_gitHub/PBL2020/OreSupport/ore-SupportServer/oreServer/node_modules/express/lib/router/index.js:16:10)
+    at /Users/yws/Dev/OreSupport_gitHub/PBL2020/OreSupport/ore-SupportServer/oreServer/node_modules/express/lib/router/index.js:16:3
+    at Function.process_params (/Users/yws/Dev/OreSupport_gitHub/PBL2020/OreSupport/ore-SupportServer/oreServer/node_modules/express/lib/router/index.js:16:10)
+    at next (/Users/yws/Dev/OreSupport_gitHub/PBL2020/OreSupport/ore-SupportServer/oreServer/node_modules/express/lib/router/index.js:16:10)
+    at session (/Users/yws/Dev/OreSupport_gitHub/PBL2020/OreSupport/ore-SupportServer/oreServer/node_modules/express-session/index.js:16:3)
+    at Layer.handle [as handle_request] (/Users/yws/Dev/OreSupport_gitHub/PBL2020/OreSupport/ore-SupportServer/oreServer/node_modules/express/lib/router/layer.js:16:3)
+    at trim_prefix (/Users/yws/Dev/OreSupport_gitHub/PBL2020/OreSupport/ore-SupportServer/oreServer/node_modules/express/lib/router/index.js:16:10)
+    at /Users/yws/Dev/OreSupport_gitHub/PBL2020/OreSupport/ore-SupportServer/oreServer/node_modules/express/lib/router/index.js:16:3
+    at Function.process_params (/Users/yws/Dev/OreSupport_gitHub/PBL2020/OreSupport/ore-SupportServer/oreServer/node_modules/express/lib/router/index.js:16:10)
+    at next (/Users/yws/Dev/OreSupport_gitHub/PBL2020/OreSupport/ore-SupportServer/oreServer/node_modules/express/lib/router/index.js:16:10)
+    at SendStream.error (/Users/yws/Dev/OreSupport_gitHub/PBL2020/OreSupport/ore-SupportServer/oreServer/node_modules/serve-static/index.js:16:3)
+    at SendStream.emit (events.js:16:10)
+    at SendStream.error (/Users/yws/Dev/OreSupport_gitHub/PBL2020/OreSupport/ore-SupportServer/oreServer/node_modules/send/index.js:16:10)
+    at SendStream.onStatError (/Users/yws/Dev/OreSupport_gitHub/PBL2020/OreSupport/ore-SupportServer/oreServer/node_modules/send/index.js:16:10)
+    at onstat (/Users/yws/Dev/OreSupport_gitHub/PBL2020/OreSupport/ore-SupportServer/oreServer/node_modules/send/index.js:16:25)
+    at FSReqCallback.oncomplete (fs.js:16:10)
+ {
+  message: 'Not Found'
+}
+[2020-12-25T20:46:09.053] [ERROR] app - アクセスエラー ClientError [NotFoundError]: Not Found
+    at /Users/yws/Dev/OreSupport_gitHub/PBL2020/OreSupport/ore-SupportServer/oreServer/app.js:17:3
+    at Layer.handle [as handle_request] (/Users/yws/Dev/OreSupport_gitHub/PBL2020/OreSupport/ore-SupportServer/oreServer/node_modules/express/lib/router/layer.js:17:3)
+    at trim_prefix (/Users/yws/Dev/OreSupport_gitHub/PBL2020/OreSupport/ore-SupportServer/oreServer/node_modules/express/lib/router/index.js:17:10)
+    at /Users/yws/Dev/OreSupport_gitHub/PBL2020/OreSupport/ore-SupportServer/oreServer/node_modules/express/lib/router/index.js:17:3
+    at Function.process_params (/Users/yws/Dev/OreSupport_gitHub/PBL2020/OreSupport/ore-SupportServer/oreServer/node_modules/express/lib/router/index.js:17:10)
+    at next (/Users/yws/Dev/OreSupport_gitHub/PBL2020/OreSupport/ore-SupportServer/oreServer/node_modules/express/lib/router/index.js:17:10)
+    at /Users/yws/Dev/OreSupport_gitHub/PBL2020/OreSupport/ore-SupportServer/oreServer/node_modules/express/lib/router/index.js:17:10
+    at next (/Users/yws/Dev/OreSupport_gitHub/PBL2020/OreSupport/ore-SupportServer/oreServer/node_modules/express/lib/router/index.js:17:10)
+    at Function.handle (/Users/yws/Dev/OreSupport_gitHub/PBL2020/OreSupport/ore-SupportServer/oreServer/node_modules/express/lib/router/index.js:17:3)
+    at router (/Users/yws/Dev/OreSupport_gitHub/PBL2020/OreSupport/ore-SupportServer/oreServer/node_modules/express/lib/router/index.js:17:10)
+    at Layer.handle [as handle_request] (/Users/yws/Dev/OreSupport_gitHub/PBL2020/OreSupport/ore-SupportServer/oreServer/node_modules/express/lib/router/layer.js:17:3)
+    at trim_prefix (/Users/yws/Dev/OreSupport_gitHub/PBL2020/OreSupport/ore-SupportServer/oreServer/node_modules/express/lib/router/index.js:17:10)
+    at /Users/yws/Dev/OreSupport_gitHub/PBL2020/OreSupport/ore-SupportServer/oreServer/node_modules/express/lib/router/index.js:17:3
+    at Function.process_params (/Users/yws/Dev/OreSupport_gitHub/PBL2020/OreSupport/ore-SupportServer/oreServer/node_modules/express/lib/router/index.js:17:10)
+    at next (/Users/yws/Dev/OreSupport_gitHub/PBL2020/OreSupport/ore-SupportServer/oreServer/node_modules/express/lib/router/index.js:17:10)
+    at SessionStrategy.strategy.pass (/Users/yws/Dev/OreSupport_gitHub/PBL2020/OreSupport/ore-SupportServer/oreServer/node_modules/passport/lib/middleware/authenticate.js:17:3)
+    at SessionStrategy.authenticate (/Users/yws/Dev/OreSupport_gitHub/PBL2020/OreSupport/ore-SupportServer/oreServer/node_modules/passport/lib/strategies/session.js:17:10)
+    at attempt (/Users/yws/Dev/OreSupport_gitHub/PBL2020/OreSupport/ore-SupportServer/oreServer/node_modules/passport/lib/middleware/authenticate.js:17:10)
+    at authenticate (/Users/yws/Dev/OreSupport_gitHub/PBL2020/OreSupport/ore-SupportServer/oreServer/node_modules/passport/lib/middleware/authenticate.js:17:3)
+    at Layer.handle [as handle_request] (/Users/yws/Dev/OreSupport_gitHub/PBL2020/OreSupport/ore-SupportServer/oreServer/node_modules/express/lib/router/layer.js:17:3)
+    at trim_prefix (/Users/yws/Dev/OreSupport_gitHub/PBL2020/OreSupport/ore-SupportServer/oreServer/node_modules/express/lib/router/index.js:17:10)
+    at /Users/yws/Dev/OreSupport_gitHub/PBL2020/OreSupport/ore-SupportServer/oreServer/node_modules/express/lib/router/index.js:17:3
+    at Function.process_params (/Users/yws/Dev/OreSupport_gitHub/PBL2020/OreSupport/ore-SupportServer/oreServer/node_modules/express/lib/router/index.js:17:10)
+    at next (/Users/yws/Dev/OreSupport_gitHub/PBL2020/OreSupport/ore-SupportServer/oreServer/node_modules/express/lib/router/index.js:17:10)
+    at initialize (/Users/yws/Dev/OreSupport_gitHub/PBL2020/OreSupport/ore-SupportServer/oreServer/node_modules/passport/lib/middleware/initialize.js:17:3)
+    at Layer.handle [as handle_request] (/Users/yws/Dev/OreSupport_gitHub/PBL2020/OreSupport/ore-SupportServer/oreServer/node_modules/express/lib/router/layer.js:17:3)
+    at trim_prefix (/Users/yws/Dev/OreSupport_gitHub/PBL2020/OreSupport/ore-SupportServer/oreServer/node_modules/express/lib/router/index.js:17:10)
+    at /Users/yws/Dev/OreSupport_gitHub/PBL2020/OreSupport/ore-SupportServer/oreServer/node_modules/express/lib/router/index.js:17:3
+    at Function.process_params (/Users/yws/Dev/OreSupport_gitHub/PBL2020/OreSupport/ore-SupportServer/oreServer/node_modules/express/lib/router/index.js:17:10)
+    at next (/Users/yws/Dev/OreSupport_gitHub/PBL2020/OreSupport/ore-SupportServer/oreServer/node_modules/express/lib/router/index.js:17:10)
+    at urlencodedParser (/Users/yws/Dev/OreSupport_gitHub/PBL2020/OreSupport/ore-SupportServer/oreServer/node_modules/body-parser/lib/types/urlencoded.js:17:3)
+    at Layer.handle [as handle_request] (/Users/yws/Dev/OreSupport_gitHub/PBL2020/OreSupport/ore-SupportServer/oreServer/node_modules/express/lib/router/layer.js:17:3)
+    at trim_prefix (/Users/yws/Dev/OreSupport_gitHub/PBL2020/OreSupport/ore-SupportServer/oreServer/node_modules/express/lib/router/index.js:17:10)
+    at /Users/yws/Dev/OreSupport_gitHub/PBL2020/OreSupport/ore-SupportServer/oreServer/node_modules/express/lib/router/index.js:17:3
+    at Function.process_params (/Users/yws/Dev/OreSupport_gitHub/PBL2020/OreSupport/ore-SupportServer/oreServer/node_modules/express/lib/router/index.js:17:10)
+    at next (/Users/yws/Dev/OreSupport_gitHub/PBL2020/OreSupport/ore-SupportServer/oreServer/node_modules/express/lib/router/index.js:17:10)
+    at /Users/yws/Dev/OreSupport_gitHub/PBL2020/OreSupport/ore-SupportServer/oreServer/node_modules/log4js/lib/connect-logger.js:17:10
+    at Layer.handle [as handle_request] (/Users/yws/Dev/OreSupport_gitHub/PBL2020/OreSupport/ore-SupportServer/oreServer/node_modules/express/lib/router/layer.js:17:3)
+    at trim_prefix (/Users/yws/Dev/OreSupport_gitHub/PBL2020/OreSupport/ore-SupportServer/oreServer/node_modules/express/lib/router/index.js:17:10)
+    at /Users/yws/Dev/OreSupport_gitHub/PBL2020/OreSupport/ore-SupportServer/oreServer/node_modules/express/lib/router/index.js:17:3
+    at Function.process_params (/Users/yws/Dev/OreSupport_gitHub/PBL2020/OreSupport/ore-SupportServer/oreServer/node_modules/express/lib/router/index.js:17:10)
+    at next (/Users/yws/Dev/OreSupport_gitHub/PBL2020/OreSupport/ore-SupportServer/oreServer/node_modules/express/lib/router/index.js:17:10)
+    at session (/Users/yws/Dev/OreSupport_gitHub/PBL2020/OreSupport/ore-SupportServer/oreServer/node_modules/express-session/index.js:17:3)
+    at Layer.handle [as handle_request] (/Users/yws/Dev/OreSupport_gitHub/PBL2020/OreSupport/ore-SupportServer/oreServer/node_modules/express/lib/router/layer.js:17:3)
+    at trim_prefix (/Users/yws/Dev/OreSupport_gitHub/PBL2020/OreSupport/ore-SupportServer/oreServer/node_modules/express/lib/router/index.js:17:10)
+    at /Users/yws/Dev/OreSupport_gitHub/PBL2020/OreSupport/ore-SupportServer/oreServer/node_modules/express/lib/router/index.js:17:3
+    at Function.process_params (/Users/yws/Dev/OreSupport_gitHub/PBL2020/OreSupport/ore-SupportServer/oreServer/node_modules/express/lib/router/index.js:17:10)
+    at next (/Users/yws/Dev/OreSupport_gitHub/PBL2020/OreSupport/ore-SupportServer/oreServer/node_modules/express/lib/router/index.js:17:10)
+    at SendStream.error (/Users/yws/Dev/OreSupport_gitHub/PBL2020/OreSupport/ore-SupportServer/oreServer/node_modules/serve-static/index.js:17:3)
+    at SendStream.emit (events.js:17:10)
+    at SendStream.error (/Users/yws/Dev/OreSupport_gitHub/PBL2020/OreSupport/ore-SupportServer/oreServer/node_modules/send/index.js:17:10)
+    at SendStream.onStatError (/Users/yws/Dev/OreSupport_gitHub/PBL2020/OreSupport/ore-SupportServer/oreServer/node_modules/send/index.js:17:10)
+    at onstat (/Users/yws/Dev/OreSupport_gitHub/PBL2020/OreSupport/ore-SupportServer/oreServer/node_modules/send/index.js:17:25)
+    at FSReqCallback.oncomplete (fs.js:17:10)
+ {
+  message: 'Not Found'
+}

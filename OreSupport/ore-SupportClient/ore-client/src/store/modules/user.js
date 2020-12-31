@@ -9,6 +9,9 @@ import {
     updateUser,
     imageUp,
     restPassword,
+    varousSetting,
+    passwordSetting,
+    showUserPower
 } from "@/utils/api/user";
 import { resetRouter } from "@/router";
 
@@ -106,7 +109,7 @@ const actions = {
         });
     },
 
-    //パスワードリセット
+    // パスワードリセット
     restPassword(context, userInfo) {
         return new Promise((resolve, reject) => {
             restPassword(userInfo).then(res => {
@@ -117,7 +120,7 @@ const actions = {
         })
     },
 
-    /* ユーザ新規登録 */
+    // ユーザ新規登録
     singUp(context, registInfo) {
         const { email, password } = registInfo;
         return new Promise((resolve, reject) => {
@@ -202,7 +205,7 @@ const actions = {
         });
     },
 
-    /* ユーザプロフィール変更 */
+    // ユーザプロフィール変更 
     UpdateUser(context, userInfo) {
         return new Promise((resolve, reject) => {
             updateUser(userInfo)
@@ -293,6 +296,44 @@ const actions = {
             resolve();
         });
     },
+
+    // 各種設定(権限設定)
+    varousSetting({ }, settingData) {
+        return new Promise((resolve, reject) => {
+            varousSetting(settingData)
+                .then((res) => {
+                    resolve(res)
+                })
+                .catch((error) => {
+                    reject(error)
+                })
+        })
+    },
+    // 各種設定(パスワード設定)
+    passwordSetting({ }, data) {
+        return new Promise((resolve, reject) => {
+            passwordSetting(data)
+                .then((res) => {
+                    resolve(res)
+                })
+                .catch((error) => {
+                    reject(error)
+                })
+        })
+    },
+    // 各種設定(画面初期表示)
+    showUserPower({ }) {
+        return new Promise((resolve, reject) => {
+            showUserPower()
+                .then((res) => {
+                    resolve(res)
+                })
+                .catch((error) => {
+                    reject(error)
+                })
+        })
+    }
+
 };
 
 export default {
