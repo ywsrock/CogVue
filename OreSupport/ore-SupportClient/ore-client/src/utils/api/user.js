@@ -99,3 +99,42 @@ export function logout() {
         method: "post",
     });
 }
+
+/**
+ * 各種設定(権限設定)
+ * @param data Object
+ * @returns String
+ */
+export function varousSetting(data) {
+    return request({
+        url: "user/varousSetting",
+        method: "post",
+        data
+    })
+}
+
+/**
+ * 各種設定(パスワードリセット)
+ * @param data Object
+ * @returns String
+ */
+export function passwordSetting(data) {
+    return request({
+        url: "user/passwordSetting",
+        method: "post",
+        data
+    })
+}
+
+/**
+ * 各種設定(初期表示)
+ * @param data Object
+ * @returns String
+ */
+export function showUserPower() {
+    return request({
+        url: "user/showUserPower",
+        method: "get",
+    })
+}
+

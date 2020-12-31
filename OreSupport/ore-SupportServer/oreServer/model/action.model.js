@@ -1,6 +1,6 @@
 const Sequelize = require("sequelize");
 const { sequelize } = require('../common/db.common');
-const { DataTypes, or } = require("sequelize"); // 导入内置数据类型
+const { DataTypes, or } = require("sequelize");
 const dateFormat = require("dateformat")
 
 

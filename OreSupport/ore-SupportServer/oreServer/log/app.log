@@ -5029,3 +5029,963 @@
 [2020-12-23T01:32:09.614] [INFO] userDao - START getUserProfileByUserID : {"key":"UserID","val":193}
 [2020-12-23T01:32:09.618] [INFO] userDao - END getUserProfileByUserID
 [2020-12-23T01:32:09.618] [INFO] users - profileInfo success
+[2020-12-23T22:01:48.906] [INFO] startup - Listening on port 3000
+[2020-12-24T21:49:05.145] [INFO] users - ユーザログ UserName:閻 文帥
+[2020-12-24T21:49:05.145] [INFO] users - Third Party by Facebook
+[2020-12-24T21:49:05.234] [INFO] userDao - START getUserInfoByUserName: {"username":"2588234901506497"}
+[2020-12-24T21:49:05.245] [INFO] userDao - END getUserInfoByUserName
+[2020-12-24T21:49:05.245] [INFO] userDao - START getUserInfoByUserName: {"username":"2588234901506497"}
+[2020-12-24T21:49:05.247] [INFO] userDao - END getUserInfoByUserName
+[2020-12-24T21:49:05.907] [INFO] users - profileInfo userID: 193 
+[2020-12-24T21:49:13.155] [INFO] users - profileInfo userID: 193 
+[2020-12-24T21:49:13.155] [INFO] userDao - START getUserProfileByUserID : {"key":"UserID","val":193}
+[2020-12-24T21:49:13.164] [INFO] userDao - END getUserProfileByUserID
+[2020-12-24T21:49:13.164] [INFO] users - profileInfo success
+[2020-12-24T21:49:14.861] [INFO] users - profileInfo userID: 193 
+[2020-12-24T21:49:14.861] [INFO] userDao - START getUserProfileByUserID : {"key":"UserID","val":193}
+[2020-12-24T21:49:14.867] [INFO] userDao - END getUserProfileByUserID
+[2020-12-24T21:49:14.867] [INFO] users - profileInfo success
+[2020-12-24T22:04:20.708] [INFO] users - profileInfo userID: 193 
+[2020-12-24T22:04:20.781] [INFO] users - profileInfo userID: 193 
+[2020-12-24T22:04:20.781] [INFO] userDao - START getUserProfileByUserID : {"key":"UserID","val":193}
+[2020-12-24T22:04:20.788] [INFO] userDao - END getUserProfileByUserID
+[2020-12-24T22:04:20.788] [INFO] users - profileInfo success
+[2020-12-24T22:04:23.620] [INFO] users - profileInfo userID: 193 
+[2020-12-24T22:04:23.620] [INFO] userDao - START getUserProfileByUserID : {"key":"UserID","val":193}
+[2020-12-24T22:04:23.625] [INFO] userDao - END getUserProfileByUserID
+[2020-12-24T22:04:23.625] [INFO] users - profileInfo success
+[2020-12-24T22:07:22.352] [INFO] users - profileInfo userID: 193 
+[2020-12-24T22:07:22.458] [INFO] users - profileInfo userID: 193 
+[2020-12-24T22:07:22.459] [INFO] userDao - START getUserProfileByUserID : {"key":"UserID","val":193}
+[2020-12-24T22:07:22.466] [INFO] userDao - END getUserProfileByUserID
+[2020-12-24T22:07:22.466] [INFO] users - profileInfo success
+[2020-12-24T22:07:24.778] [INFO] users - profileInfo userID: 193 
+[2020-12-24T22:07:24.778] [INFO] userDao - START getUserProfileByUserID : {"key":"UserID","val":193}
+[2020-12-24T22:07:24.783] [INFO] userDao - END getUserProfileByUserID
+[2020-12-24T22:07:24.783] [INFO] users - profileInfo success
+[2020-12-24T22:10:57.769] [INFO] users - profileInfo userID: 193 
+[2020-12-24T22:10:57.829] [INFO] users - profileInfo userID: 193 
+[2020-12-24T22:10:57.829] [INFO] userDao - START getUserProfileByUserID : {"key":"UserID","val":193}
+[2020-12-24T22:10:57.835] [INFO] userDao - END getUserProfileByUserID
+[2020-12-24T22:10:57.835] [INFO] users - profileInfo success
+[2020-12-24T22:11:00.527] [INFO] users - profileInfo userID: 193 
+[2020-12-24T22:11:00.527] [INFO] userDao - START getUserProfileByUserID : {"key":"UserID","val":193}
+[2020-12-24T22:11:00.532] [INFO] userDao - END getUserProfileByUserID
+[2020-12-24T22:11:00.532] [INFO] users - profileInfo success
+[2020-12-24T22:11:44.090] [INFO] users - profileInfo userID: 193 
+[2020-12-24T22:11:44.159] [INFO] users - profileInfo userID: 193 
+[2020-12-24T22:11:44.159] [INFO] userDao - START getUserProfileByUserID : {"key":"UserID","val":193}
+[2020-12-24T22:11:44.166] [INFO] userDao - END getUserProfileByUserID
+[2020-12-24T22:11:44.166] [INFO] users - profileInfo success
+[2020-12-24T22:11:45.795] [INFO] users - profileInfo userID: 193 
+[2020-12-24T22:11:45.795] [INFO] userDao - START getUserProfileByUserID : {"key":"UserID","val":193}
+[2020-12-24T22:11:45.799] [INFO] userDao - END getUserProfileByUserID
+[2020-12-24T22:11:45.800] [INFO] users - profileInfo success
+[2020-12-24T22:12:53.714] [INFO] users - profileInfo userID: 193 
+[2020-12-24T22:12:53.775] [INFO] users - profileInfo userID: 193 
+[2020-12-24T22:12:53.775] [INFO] userDao - START getUserProfileByUserID : {"key":"UserID","val":193}
+[2020-12-24T22:12:53.782] [INFO] userDao - END getUserProfileByUserID
+[2020-12-24T22:12:53.782] [INFO] users - profileInfo success
+[2020-12-24T22:12:56.790] [INFO] users - profileInfo userID: 193 
+[2020-12-24T22:12:56.790] [INFO] userDao - START getUserProfileByUserID : {"key":"UserID","val":193}
+[2020-12-24T22:12:56.794] [INFO] userDao - END getUserProfileByUserID
+[2020-12-24T22:12:56.794] [INFO] users - profileInfo success
+[2020-12-24T22:13:53.450] [INFO] users - profileInfo userID: 193 
+[2020-12-24T22:13:53.527] [INFO] users - profileInfo userID: 193 
+[2020-12-24T22:13:53.527] [INFO] userDao - START getUserProfileByUserID : {"key":"UserID","val":193}
+[2020-12-24T22:13:53.533] [INFO] userDao - END getUserProfileByUserID
+[2020-12-24T22:13:53.533] [INFO] users - profileInfo success
+[2020-12-24T22:13:55.279] [INFO] users - profileInfo userID: 193 
+[2020-12-24T22:13:55.280] [INFO] userDao - START getUserProfileByUserID : {"key":"UserID","val":193}
+[2020-12-24T22:13:55.284] [INFO] userDao - END getUserProfileByUserID
+[2020-12-24T22:13:55.284] [INFO] users - profileInfo success
+[2020-12-24T22:29:14.388] [INFO] users - profileInfo userID: 193 
+[2020-12-24T22:29:14.388] [INFO] userDao - START getUserProfileByUserID : {"key":"UserID","val":193}
+[2020-12-24T22:29:14.393] [INFO] userDao - END getUserProfileByUserID
+[2020-12-24T22:29:14.394] [INFO] users - profileInfo success
+[2020-12-24T22:29:16.055] [INFO] users - profileInfo userID: 193 
+[2020-12-24T22:29:16.055] [INFO] userDao - START getUserProfileByUserID : {"key":"UserID","val":193}
+[2020-12-24T22:29:16.061] [INFO] userDao - END getUserProfileByUserID
+[2020-12-24T22:29:16.061] [INFO] users - profileInfo success
+[2020-12-24T22:52:44.652] [INFO] users - profileInfo userID: 193 
+[2020-12-24T22:52:44.718] [INFO] users - profileInfo userID: 193 
+[2020-12-24T22:52:44.718] [INFO] userDao - START getUserProfileByUserID : {"key":"UserID","val":193}
+[2020-12-24T22:52:44.726] [INFO] userDao - END getUserProfileByUserID
+[2020-12-24T22:52:44.726] [INFO] users - profileInfo success
+[2020-12-24T23:00:19.300] [INFO] users - profileInfo userID: 193 
+[2020-12-24T23:00:19.411] [INFO] users - profileInfo userID: 193 
+[2020-12-24T23:00:19.411] [INFO] userDao - START getUserProfileByUserID : {"key":"UserID","val":193}
+[2020-12-24T23:00:19.417] [INFO] userDao - END getUserProfileByUserID
+[2020-12-24T23:00:19.417] [INFO] users - profileInfo success
+[2020-12-25T20:30:42.178] [INFO] users - profileInfo userID: 193 
+[2020-12-25T20:30:42.263] [INFO] users - profileInfo userID: 193 
+[2020-12-25T20:30:42.263] [INFO] userDao - START getUserProfileByUserID : {"key":"UserID","val":193}
+[2020-12-25T20:30:42.369] [INFO] userDao - END getUserProfileByUserID
+[2020-12-25T20:30:42.369] [INFO] users - profileInfo success
+[2020-12-25T20:30:59.210] [INFO] users - profileInfo userID: 193 
+[2020-12-25T20:31:33.338] [INFO] users - profileInfo userID: 193 
+[2020-12-25T20:31:33.338] [INFO] userDao - START getUserProfileByUserID : {"key":"UserID","val":193}
+[2020-12-25T20:31:33.363] [INFO] userDao - END getUserProfileByUserID
+[2020-12-25T20:31:33.363] [INFO] users - profileInfo success
+[2020-12-25T20:32:14.313] [INFO] users - profileInfo userID: 193 
+[2020-12-25T20:32:19.617] [INFO] users - /queryAction 193
+[2020-12-25T20:32:31.267] [INFO] users - logout
+[2020-12-25T20:35:24.590] [INFO] users - ユーザ対象 UserName:test
+[2020-12-25T20:35:31.755] [INFO] users - ユーザ対象 UserName:test
+[2020-12-25T20:36:01.927] [ERROR] app - アクセスエラー ClientError [NotFoundError]: Not Found
+    at /Users/yws/Dev/OreSupport_gitHub/PBL2020/OreSupport/ore-SupportServer/oreServer/app.js:16:3
+    at Layer.handle [as handle_request] (/Users/yws/Dev/OreSupport_gitHub/PBL2020/OreSupport/ore-SupportServer/oreServer/node_modules/express/lib/router/layer.js:16:3)
+    at trim_prefix (/Users/yws/Dev/OreSupport_gitHub/PBL2020/OreSupport/ore-SupportServer/oreServer/node_modules/express/lib/router/index.js:16:10)
+    at /Users/yws/Dev/OreSupport_gitHub/PBL2020/OreSupport/ore-SupportServer/oreServer/node_modules/express/lib/router/index.js:16:3
+    at Function.process_params (/Users/yws/Dev/OreSupport_gitHub/PBL2020/OreSupport/ore-SupportServer/oreServer/node_modules/express/lib/router/index.js:16:10)
+    at next (/Users/yws/Dev/OreSupport_gitHub/PBL2020/OreSupport/ore-SupportServer/oreServer/node_modules/express/lib/router/index.js:16:10)
+    at /Users/yws/Dev/OreSupport_gitHub/PBL2020/OreSupport/ore-SupportServer/oreServer/node_modules/express/lib/router/index.js:16:10
+    at next (/Users/yws/Dev/OreSupport_gitHub/PBL2020/OreSupport/ore-SupportServer/oreServer/node_modules/express/lib/router/index.js:16:10)
+    at Function.handle (/Users/yws/Dev/OreSupport_gitHub/PBL2020/OreSupport/ore-SupportServer/oreServer/node_modules/express/lib/router/index.js:16:3)
+    at router (/Users/yws/Dev/OreSupport_gitHub/PBL2020/OreSupport/ore-SupportServer/oreServer/node_modules/express/lib/router/index.js:16:10)
+    at Layer.handle [as handle_request] (/Users/yws/Dev/OreSupport_gitHub/PBL2020/OreSupport/ore-SupportServer/oreServer/node_modules/express/lib/router/layer.js:16:3)
+    at trim_prefix (/Users/yws/Dev/OreSupport_gitHub/PBL2020/OreSupport/ore-SupportServer/oreServer/node_modules/express/lib/router/index.js:16:10)
+    at /Users/yws/Dev/OreSupport_gitHub/PBL2020/OreSupport/ore-SupportServer/oreServer/node_modules/express/lib/router/index.js:16:3
+    at Function.process_params (/Users/yws/Dev/OreSupport_gitHub/PBL2020/OreSupport/ore-SupportServer/oreServer/node_modules/express/lib/router/index.js:16:10)
+    at next (/Users/yws/Dev/OreSupport_gitHub/PBL2020/OreSupport/ore-SupportServer/oreServer/node_modules/express/lib/router/index.js:16:10)
+    at SessionStrategy.strategy.pass (/Users/yws/Dev/OreSupport_gitHub/PBL2020/OreSupport/ore-SupportServer/oreServer/node_modules/passport/lib/middleware/authenticate.js:16:3)
+    at SessionStrategy.authenticate (/Users/yws/Dev/OreSupport_gitHub/PBL2020/OreSupport/ore-SupportServer/oreServer/node_modules/passport/lib/strategies/session.js:16:10)
+    at attempt (/Users/yws/Dev/OreSupport_gitHub/PBL2020/OreSupport/ore-SupportServer/oreServer/node_modules/passport/lib/middleware/authenticate.js:16:10)
+    at authenticate (/Users/yws/Dev/OreSupport_gitHub/PBL2020/OreSupport/ore-SupportServer/oreServer/node_modules/passport/lib/middleware/authenticate.js:16:3)
+    at Layer.handle [as handle_request] (/Users/yws/Dev/OreSupport_gitHub/PBL2020/OreSupport/ore-SupportServer/oreServer/node_modules/express/lib/router/layer.js:16:3)
+    at trim_prefix (/Users/yws/Dev/OreSupport_gitHub/PBL2020/OreSupport/ore-SupportServer/oreServer/node_modules/express/lib/router/index.js:16:10)
+    at /Users/yws/Dev/OreSupport_gitHub/PBL2020/OreSupport/ore-SupportServer/oreServer/node_modules/express/lib/router/index.js:16:3
+    at Function.process_params (/Users/yws/Dev/OreSupport_gitHub/PBL2020/OreSupport/ore-SupportServer/oreServer/node_modules/express/lib/router/index.js:16:10)
+    at next (/Users/yws/Dev/OreSupport_gitHub/PBL2020/OreSupport/ore-SupportServer/oreServer/node_modules/express/lib/router/index.js:16:10)
+    at initialize (/Users/yws/Dev/OreSupport_gitHub/PBL2020/OreSupport/ore-SupportServer/oreServer/node_modules/passport/lib/middleware/initialize.js:16:3)
+    at Layer.handle [as handle_request] (/Users/yws/Dev/OreSupport_gitHub/PBL2020/OreSupport/ore-SupportServer/oreServer/node_modules/express/lib/router/layer.js:16:3)
+    at trim_prefix (/Users/yws/Dev/OreSupport_gitHub/PBL2020/OreSupport/ore-SupportServer/oreServer/node_modules/express/lib/router/index.js:16:10)
+    at /Users/yws/Dev/OreSupport_gitHub/PBL2020/OreSupport/ore-SupportServer/oreServer/node_modules/express/lib/router/index.js:16:3
+    at Function.process_params (/Users/yws/Dev/OreSupport_gitHub/PBL2020/OreSupport/ore-SupportServer/oreServer/node_modules/express/lib/router/index.js:16:10)
+    at next (/Users/yws/Dev/OreSupport_gitHub/PBL2020/OreSupport/ore-SupportServer/oreServer/node_modules/express/lib/router/index.js:16:10)
+    at urlencodedParser (/Users/yws/Dev/OreSupport_gitHub/PBL2020/OreSupport/ore-SupportServer/oreServer/node_modules/body-parser/lib/types/urlencoded.js:16:3)
+    at Layer.handle [as handle_request] (/Users/yws/Dev/OreSupport_gitHub/PBL2020/OreSupport/ore-SupportServer/oreServer/node_modules/express/lib/router/layer.js:16:3)
+    at trim_prefix (/Users/yws/Dev/OreSupport_gitHub/PBL2020/OreSupport/ore-SupportServer/oreServer/node_modules/express/lib/router/index.js:16:10)
+    at /Users/yws/Dev/OreSupport_gitHub/PBL2020/OreSupport/ore-SupportServer/oreServer/node_modules/express/lib/router/index.js:16:3
+    at Function.process_params (/Users/yws/Dev/OreSupport_gitHub/PBL2020/OreSupport/ore-SupportServer/oreServer/node_modules/express/lib/router/index.js:16:10)
+    at next (/Users/yws/Dev/OreSupport_gitHub/PBL2020/OreSupport/ore-SupportServer/oreServer/node_modules/express/lib/router/index.js:16:10)
+    at /Users/yws/Dev/OreSupport_gitHub/PBL2020/OreSupport/ore-SupportServer/oreServer/node_modules/log4js/lib/connect-logger.js:16:10
+    at Layer.handle [as handle_request] (/Users/yws/Dev/OreSupport_gitHub/PBL2020/OreSupport/ore-SupportServer/oreServer/node_modules/express/lib/router/layer.js:16:3)
+    at trim_prefix (/Users/yws/Dev/OreSupport_gitHub/PBL2020/OreSupport/ore-SupportServer/oreServer/node_modules/express/lib/router/index.js:16:10)
+    at /Users/yws/Dev/OreSupport_gitHub/PBL2020/OreSupport/ore-SupportServer/oreServer/node_modules/express/lib/router/index.js:16:3
+    at Function.process_params (/Users/yws/Dev/OreSupport_gitHub/PBL2020/OreSupport/ore-SupportServer/oreServer/node_modules/express/lib/router/index.js:16:10)
+    at next (/Users/yws/Dev/OreSupport_gitHub/PBL2020/OreSupport/ore-SupportServer/oreServer/node_modules/express/lib/router/index.js:16:10)
+    at session (/Users/yws/Dev/OreSupport_gitHub/PBL2020/OreSupport/ore-SupportServer/oreServer/node_modules/express-session/index.js:16:3)
+    at Layer.handle [as handle_request] (/Users/yws/Dev/OreSupport_gitHub/PBL2020/OreSupport/ore-SupportServer/oreServer/node_modules/express/lib/router/layer.js:16:3)
+    at trim_prefix (/Users/yws/Dev/OreSupport_gitHub/PBL2020/OreSupport/ore-SupportServer/oreServer/node_modules/express/lib/router/index.js:16:10)
+    at /Users/yws/Dev/OreSupport_gitHub/PBL2020/OreSupport/ore-SupportServer/oreServer/node_modules/express/lib/router/index.js:16:3
+    at Function.process_params (/Users/yws/Dev/OreSupport_gitHub/PBL2020/OreSupport/ore-SupportServer/oreServer/node_modules/express/lib/router/index.js:16:10)
+    at next (/Users/yws/Dev/OreSupport_gitHub/PBL2020/OreSupport/ore-SupportServer/oreServer/node_modules/express/lib/router/index.js:16:10)
+    at SendStream.error (/Users/yws/Dev/OreSupport_gitHub/PBL2020/OreSupport/ore-SupportServer/oreServer/node_modules/serve-static/index.js:16:3)
+    at SendStream.emit (events.js:16:10)
+    at SendStream.error (/Users/yws/Dev/OreSupport_gitHub/PBL2020/OreSupport/ore-SupportServer/oreServer/node_modules/send/index.js:16:10)
+    at SendStream.onStatError (/Users/yws/Dev/OreSupport_gitHub/PBL2020/OreSupport/ore-SupportServer/oreServer/node_modules/send/index.js:16:10)
+    at onstat (/Users/yws/Dev/OreSupport_gitHub/PBL2020/OreSupport/ore-SupportServer/oreServer/node_modules/send/index.js:16:25)
+    at FSReqCallback.oncomplete (fs.js:16:10)
+ {
+  message: 'Not Found'
+}
+[2020-12-25T20:37:13.155] [INFO] users - ユーザログ UserName:a1906wy@aiit.ac.jp
+[2020-12-25T20:37:13.155] [INFO] userDao - START getUserInfoByUserName: {"username":"a1906wy@aiit.ac.jp"}
+[2020-12-25T20:37:13.159] [INFO] userDao - END getUserInfoByUserName
+[2020-12-25T20:37:13.226] [INFO] users - login success UserID: 125 
+[2020-12-25T20:37:13.239] [INFO] users - profileInfo userID: 125 
+[2020-12-25T20:37:13.239] [INFO] userDao - START getUserProfileByUserID : {"key":"UserID","val":125}
+[2020-12-25T20:37:13.245] [INFO] userDao - END getUserProfileByUserID
+[2020-12-25T20:37:13.245] [INFO] users - profileInfo success
+[2020-12-25T20:37:19.563] [INFO] users - logout
+[2020-12-25T20:45:47.594] [INFO] users - ユーザ対象 UserName:test
+[2020-12-25T20:46:09.053] [ERROR] app - アクセスエラー ClientError [NotFoundError]: Not Found
+    at /Users/yws/Dev/OreSupport_gitHub/PBL2020/OreSupport/ore-SupportServer/oreServer/app.js:17:3
+    at Layer.handle [as handle_request] (/Users/yws/Dev/OreSupport_gitHub/PBL2020/OreSupport/ore-SupportServer/oreServer/node_modules/express/lib/router/layer.js:17:3)
+    at trim_prefix (/Users/yws/Dev/OreSupport_gitHub/PBL2020/OreSupport/ore-SupportServer/oreServer/node_modules/express/lib/router/index.js:17:10)
+    at /Users/yws/Dev/OreSupport_gitHub/PBL2020/OreSupport/ore-SupportServer/oreServer/node_modules/express/lib/router/index.js:17:3
+    at Function.process_params (/Users/yws/Dev/OreSupport_gitHub/PBL2020/OreSupport/ore-SupportServer/oreServer/node_modules/express/lib/router/index.js:17:10)
+    at next (/Users/yws/Dev/OreSupport_gitHub/PBL2020/OreSupport/ore-SupportServer/oreServer/node_modules/express/lib/router/index.js:17:10)
+    at /Users/yws/Dev/OreSupport_gitHub/PBL2020/OreSupport/ore-SupportServer/oreServer/node_modules/express/lib/router/index.js:17:10
+    at next (/Users/yws/Dev/OreSupport_gitHub/PBL2020/OreSupport/ore-SupportServer/oreServer/node_modules/express/lib/router/index.js:17:10)
+    at Function.handle (/Users/yws/Dev/OreSupport_gitHub/PBL2020/OreSupport/ore-SupportServer/oreServer/node_modules/express/lib/router/index.js:17:3)
+    at router (/Users/yws/Dev/OreSupport_gitHub/PBL2020/OreSupport/ore-SupportServer/oreServer/node_modules/express/lib/router/index.js:17:10)
+    at Layer.handle [as handle_request] (/Users/yws/Dev/OreSupport_gitHub/PBL2020/OreSupport/ore-SupportServer/oreServer/node_modules/express/lib/router/layer.js:17:3)
+    at trim_prefix (/Users/yws/Dev/OreSupport_gitHub/PBL2020/OreSupport/ore-SupportServer/oreServer/node_modules/express/lib/router/index.js:17:10)
+    at /Users/yws/Dev/OreSupport_gitHub/PBL2020/OreSupport/ore-SupportServer/oreServer/node_modules/express/lib/router/index.js:17:3
+    at Function.process_params (/Users/yws/Dev/OreSupport_gitHub/PBL2020/OreSupport/ore-SupportServer/oreServer/node_modules/express/lib/router/index.js:17:10)
+    at next (/Users/yws/Dev/OreSupport_gitHub/PBL2020/OreSupport/ore-SupportServer/oreServer/node_modules/express/lib/router/index.js:17:10)
+    at SessionStrategy.strategy.pass (/Users/yws/Dev/OreSupport_gitHub/PBL2020/OreSupport/ore-SupportServer/oreServer/node_modules/passport/lib/middleware/authenticate.js:17:3)
+    at SessionStrategy.authenticate (/Users/yws/Dev/OreSupport_gitHub/PBL2020/OreSupport/ore-SupportServer/oreServer/node_modules/passport/lib/strategies/session.js:17:10)
+    at attempt (/Users/yws/Dev/OreSupport_gitHub/PBL2020/OreSupport/ore-SupportServer/oreServer/node_modules/passport/lib/middleware/authenticate.js:17:10)
+    at authenticate (/Users/yws/Dev/OreSupport_gitHub/PBL2020/OreSupport/ore-SupportServer/oreServer/node_modules/passport/lib/middleware/authenticate.js:17:3)
+    at Layer.handle [as handle_request] (/Users/yws/Dev/OreSupport_gitHub/PBL2020/OreSupport/ore-SupportServer/oreServer/node_modules/express/lib/router/layer.js:17:3)
+    at trim_prefix (/Users/yws/Dev/OreSupport_gitHub/PBL2020/OreSupport/ore-SupportServer/oreServer/node_modules/express/lib/router/index.js:17:10)
+    at /Users/yws/Dev/OreSupport_gitHub/PBL2020/OreSupport/ore-SupportServer/oreServer/node_modules/express/lib/router/index.js:17:3
+    at Function.process_params (/Users/yws/Dev/OreSupport_gitHub/PBL2020/OreSupport/ore-SupportServer/oreServer/node_modules/express/lib/router/index.js:17:10)
+    at next (/Users/yws/Dev/OreSupport_gitHub/PBL2020/OreSupport/ore-SupportServer/oreServer/node_modules/express/lib/router/index.js:17:10)
+    at initialize (/Users/yws/Dev/OreSupport_gitHub/PBL2020/OreSupport/ore-SupportServer/oreServer/node_modules/passport/lib/middleware/initialize.js:17:3)
+    at Layer.handle [as handle_request] (/Users/yws/Dev/OreSupport_gitHub/PBL2020/OreSupport/ore-SupportServer/oreServer/node_modules/express/lib/router/layer.js:17:3)
+    at trim_prefix (/Users/yws/Dev/OreSupport_gitHub/PBL2020/OreSupport/ore-SupportServer/oreServer/node_modules/express/lib/router/index.js:17:10)
+    at /Users/yws/Dev/OreSupport_gitHub/PBL2020/OreSupport/ore-SupportServer/oreServer/node_modules/express/lib/router/index.js:17:3
+    at Function.process_params (/Users/yws/Dev/OreSupport_gitHub/PBL2020/OreSupport/ore-SupportServer/oreServer/node_modules/express/lib/router/index.js:17:10)
+    at next (/Users/yws/Dev/OreSupport_gitHub/PBL2020/OreSupport/ore-SupportServer/oreServer/node_modules/express/lib/router/index.js:17:10)
+    at urlencodedParser (/Users/yws/Dev/OreSupport_gitHub/PBL2020/OreSupport/ore-SupportServer/oreServer/node_modules/body-parser/lib/types/urlencoded.js:17:3)
+    at Layer.handle [as handle_request] (/Users/yws/Dev/OreSupport_gitHub/PBL2020/OreSupport/ore-SupportServer/oreServer/node_modules/express/lib/router/layer.js:17:3)
+    at trim_prefix (/Users/yws/Dev/OreSupport_gitHub/PBL2020/OreSupport/ore-SupportServer/oreServer/node_modules/express/lib/router/index.js:17:10)
+    at /Users/yws/Dev/OreSupport_gitHub/PBL2020/OreSupport/ore-SupportServer/oreServer/node_modules/express/lib/router/index.js:17:3
+    at Function.process_params (/Users/yws/Dev/OreSupport_gitHub/PBL2020/OreSupport/ore-SupportServer/oreServer/node_modules/express/lib/router/index.js:17:10)
+    at next (/Users/yws/Dev/OreSupport_gitHub/PBL2020/OreSupport/ore-SupportServer/oreServer/node_modules/express/lib/router/index.js:17:10)
+    at /Users/yws/Dev/OreSupport_gitHub/PBL2020/OreSupport/ore-SupportServer/oreServer/node_modules/log4js/lib/connect-logger.js:17:10
+    at Layer.handle [as handle_request] (/Users/yws/Dev/OreSupport_gitHub/PBL2020/OreSupport/ore-SupportServer/oreServer/node_modules/express/lib/router/layer.js:17:3)
+    at trim_prefix (/Users/yws/Dev/OreSupport_gitHub/PBL2020/OreSupport/ore-SupportServer/oreServer/node_modules/express/lib/router/index.js:17:10)
+    at /Users/yws/Dev/OreSupport_gitHub/PBL2020/OreSupport/ore-SupportServer/oreServer/node_modules/express/lib/router/index.js:17:3
+    at Function.process_params (/Users/yws/Dev/OreSupport_gitHub/PBL2020/OreSupport/ore-SupportServer/oreServer/node_modules/express/lib/router/index.js:17:10)
+    at next (/Users/yws/Dev/OreSupport_gitHub/PBL2020/OreSupport/ore-SupportServer/oreServer/node_modules/express/lib/router/index.js:17:10)
+    at session (/Users/yws/Dev/OreSupport_gitHub/PBL2020/OreSupport/ore-SupportServer/oreServer/node_modules/express-session/index.js:17:3)
+    at Layer.handle [as handle_request] (/Users/yws/Dev/OreSupport_gitHub/PBL2020/OreSupport/ore-SupportServer/oreServer/node_modules/express/lib/router/layer.js:17:3)
+    at trim_prefix (/Users/yws/Dev/OreSupport_gitHub/PBL2020/OreSupport/ore-SupportServer/oreServer/node_modules/express/lib/router/index.js:17:10)
+    at /Users/yws/Dev/OreSupport_gitHub/PBL2020/OreSupport/ore-SupportServer/oreServer/node_modules/express/lib/router/index.js:17:3
+    at Function.process_params (/Users/yws/Dev/OreSupport_gitHub/PBL2020/OreSupport/ore-SupportServer/oreServer/node_modules/express/lib/router/index.js:17:10)
+    at next (/Users/yws/Dev/OreSupport_gitHub/PBL2020/OreSupport/ore-SupportServer/oreServer/node_modules/express/lib/router/index.js:17:10)
+    at SendStream.error (/Users/yws/Dev/OreSupport_gitHub/PBL2020/OreSupport/ore-SupportServer/oreServer/node_modules/serve-static/index.js:17:3)
+    at SendStream.emit (events.js:17:10)
+    at SendStream.error (/Users/yws/Dev/OreSupport_gitHub/PBL2020/OreSupport/ore-SupportServer/oreServer/node_modules/send/index.js:17:10)
+    at SendStream.onStatError (/Users/yws/Dev/OreSupport_gitHub/PBL2020/OreSupport/ore-SupportServer/oreServer/node_modules/send/index.js:17:10)
+    at onstat (/Users/yws/Dev/OreSupport_gitHub/PBL2020/OreSupport/ore-SupportServer/oreServer/node_modules/send/index.js:17:25)
+    at FSReqCallback.oncomplete (fs.js:17:10)
+ {
+  message: 'Not Found'
+}
+[2020-12-25T20:47:33.155] [INFO] users - ユーザログ UserName:a1906wy@aiit.ac.jp
+[2020-12-25T20:47:33.155] [INFO] userDao - START getUserInfoByUserName: {"username":"a1906wy@aiit.ac.jp"}
+[2020-12-25T20:47:33.160] [INFO] userDao - END getUserInfoByUserName
+[2020-12-25T20:47:33.234] [INFO] users - login success UserID: 125 
+[2020-12-25T20:47:33.252] [INFO] users - profileInfo userID: 125 
+[2020-12-25T20:47:33.252] [INFO] userDao - START getUserProfileByUserID : {"key":"UserID","val":125}
+[2020-12-25T20:47:33.256] [INFO] userDao - END getUserProfileByUserID
+[2020-12-25T20:47:33.256] [INFO] users - profileInfo success
+[2020-12-25T20:47:53.622] [INFO] users - profileInfo userID: 125 
+[2020-12-25T20:47:53.622] [INFO] userDao - START getUserProfileByUserID : {"key":"UserID","val":125}
+[2020-12-25T20:47:53.625] [INFO] userDao - END getUserProfileByUserID
+[2020-12-25T20:47:53.626] [INFO] users - profileInfo success
+[2020-12-25T20:47:55.453] [INFO] users - profileInfo userID: 125 
+[2020-12-25T20:47:55.453] [INFO] userDao - START getUserProfileByUserID : {"key":"UserID","val":125}
+[2020-12-25T20:47:55.457] [INFO] userDao - END getUserProfileByUserID
+[2020-12-25T20:47:55.457] [INFO] users - profileInfo success
+[2020-12-25T20:48:04.120] [INFO] users - logout
+[2020-12-25T20:48:26.846] [INFO] users - ユーザログ UserName:閻 文帥
+[2020-12-25T20:48:26.846] [INFO] users - Third Party by Facebook
+[2020-12-25T20:48:26.919] [INFO] userDao - START getUserInfoByUserName: {"username":"2588234901506497"}
+[2020-12-25T20:48:26.921] [INFO] userDao - END getUserInfoByUserName
+[2020-12-25T20:48:26.921] [INFO] userDao - START getUserInfoByUserName: {"username":"2588234901506497"}
+[2020-12-25T20:48:26.923] [INFO] userDao - END getUserInfoByUserName
+[2020-12-25T20:48:27.632] [INFO] users - profileInfo userID: 193 
+[2020-12-25T20:48:56.219] [INFO] users - profileInfo userID: 193 
+[2020-12-25T20:48:56.219] [INFO] userDao - START getUserProfileByUserID : {"key":"UserID","val":193}
+[2020-12-25T20:48:56.228] [INFO] userDao - END getUserProfileByUserID
+[2020-12-25T20:48:56.228] [INFO] users - profileInfo success
+[2020-12-25T20:49:05.936] [INFO] users - /queryAction 193
+[2020-12-25T20:49:37.463] [INFO] users - logout
+[2020-12-25T20:52:01.920] [INFO] users - ユーザ対象 UserName:test
+[2020-12-25T20:56:01.901] [INFO] users - ユーザログ UserName:閻 文帥
+[2020-12-25T20:56:01.901] [INFO] users - Third Party by Facebook
+[2020-12-25T20:56:01.973] [INFO] userDao - START getUserInfoByUserName: {"username":"2588234901506497"}
+[2020-12-25T20:56:01.976] [INFO] userDao - END getUserInfoByUserName
+[2020-12-25T20:56:01.976] [INFO] userDao - START getUserInfoByUserName: {"username":"2588234901506497"}
+[2020-12-25T20:56:01.978] [INFO] userDao - END getUserInfoByUserName
+[2020-12-25T20:56:02.639] [INFO] users - profileInfo userID: 193 
+[2020-12-25T20:56:04.922] [INFO] users - profileInfo userID: 193 
+[2020-12-25T20:56:04.923] [INFO] userDao - START getUserProfileByUserID : {"key":"UserID","val":193}
+[2020-12-25T20:56:04.926] [INFO] userDao - END getUserProfileByUserID
+[2020-12-25T20:56:04.927] [INFO] users - profileInfo success
+[2020-12-25T20:57:14.083] [INFO] users - profileInfo userID: 193 
+[2020-12-25T20:57:14.199] [INFO] users - profileInfo userID: 193 
+[2020-12-25T20:57:14.199] [INFO] userDao - START getUserProfileByUserID : {"key":"UserID","val":193}
+[2020-12-25T20:57:14.205] [INFO] userDao - END getUserProfileByUserID
+[2020-12-25T20:57:14.206] [INFO] users - profileInfo success
+[2020-12-25T20:59:39.665] [INFO] users - profileInfo userID: 193 
+[2020-12-25T20:59:39.990] [INFO] users - profileInfo userID: 193 
+[2020-12-25T20:59:39.990] [INFO] userDao - START getUserProfileByUserID : {"key":"UserID","val":193}
+[2020-12-25T20:59:39.997] [INFO] userDao - END getUserProfileByUserID
+[2020-12-25T20:59:39.997] [INFO] users - profileInfo success
+[2020-12-25T21:02:05.043] [INFO] users - profileInfo userID: 193 
+[2020-12-25T21:02:05.417] [INFO] users - profileInfo userID: 193 
+[2020-12-25T21:02:05.417] [INFO] userDao - START getUserProfileByUserID : {"key":"UserID","val":193}
+[2020-12-25T21:02:05.422] [INFO] userDao - END getUserProfileByUserID
+[2020-12-25T21:02:05.423] [INFO] users - profileInfo success
+[2020-12-25T21:02:55.426] [INFO] users - profileInfo userID: 193 
+[2020-12-25T21:02:55.876] [INFO] users - profileInfo userID: 193 
+[2020-12-25T21:02:55.876] [INFO] userDao - START getUserProfileByUserID : {"key":"UserID","val":193}
+[2020-12-25T21:02:55.889] [INFO] userDao - END getUserProfileByUserID
+[2020-12-25T21:02:55.889] [INFO] users - profileInfo success
+[2020-12-25T21:08:16.863] [INFO] users - profileInfo userID: 193 
+[2020-12-25T21:08:17.334] [INFO] users - profileInfo userID: 193 
+[2020-12-25T21:08:17.334] [INFO] userDao - START getUserProfileByUserID : {"key":"UserID","val":193}
+[2020-12-25T21:08:17.343] [INFO] userDao - END getUserProfileByUserID
+[2020-12-25T21:08:17.344] [INFO] users - profileInfo success
+[2020-12-25T21:15:59.134] [INFO] users - profileInfo userID: 193 
+[2020-12-25T21:15:59.614] [INFO] users - profileInfo userID: 193 
+[2020-12-25T21:15:59.614] [INFO] userDao - START getUserProfileByUserID : {"key":"UserID","val":193}
+[2020-12-25T21:15:59.621] [INFO] userDao - END getUserProfileByUserID
+[2020-12-25T21:15:59.621] [INFO] users - profileInfo success
+[2020-12-25T21:18:38.647] [INFO] users - profileInfo userID: 193 
+[2020-12-25T21:18:39.138] [INFO] users - profileInfo userID: 193 
+[2020-12-25T21:18:39.138] [INFO] userDao - START getUserProfileByUserID : {"key":"UserID","val":193}
+[2020-12-25T21:18:39.167] [INFO] userDao - END getUserProfileByUserID
+[2020-12-25T21:18:39.167] [INFO] users - profileInfo success
+[2020-12-25T21:20:18.634] [INFO] users - profileInfo userID: 193 
+[2020-12-25T21:20:19.088] [INFO] users - profileInfo userID: 193 
+[2020-12-25T21:20:19.088] [INFO] userDao - START getUserProfileByUserID : {"key":"UserID","val":193}
+[2020-12-25T21:20:19.094] [INFO] userDao - END getUserProfileByUserID
+[2020-12-25T21:20:19.095] [INFO] users - profileInfo success
+[2020-12-25T21:20:59.272] [INFO] users - profileInfo userID: 193 
+[2020-12-25T21:20:59.734] [INFO] users - profileInfo userID: 193 
+[2020-12-25T21:20:59.734] [INFO] userDao - START getUserProfileByUserID : {"key":"UserID","val":193}
+[2020-12-25T21:20:59.742] [INFO] userDao - END getUserProfileByUserID
+[2020-12-25T21:20:59.742] [INFO] users - profileInfo success
+[2020-12-25T21:23:03.714] [INFO] users - profileInfo userID: 193 
+[2020-12-25T21:23:04.182] [INFO] users - profileInfo userID: 193 
+[2020-12-25T21:23:04.182] [INFO] userDao - START getUserProfileByUserID : {"key":"UserID","val":193}
+[2020-12-25T21:23:04.190] [INFO] userDao - END getUserProfileByUserID
+[2020-12-25T21:23:04.190] [INFO] users - profileInfo success
+[2020-12-25T21:26:40.307] [INFO] users - profileInfo userID: 193 
+[2020-12-25T21:26:40.760] [INFO] users - profileInfo userID: 193 
+[2020-12-25T21:26:40.760] [INFO] userDao - START getUserProfileByUserID : {"key":"UserID","val":193}
+[2020-12-25T21:26:40.766] [INFO] userDao - END getUserProfileByUserID
+[2020-12-25T21:26:40.766] [INFO] users - profileInfo success
+[2020-12-25T21:29:03.664] [INFO] users - profileInfo userID: 193 
+[2020-12-25T21:29:04.126] [INFO] users - profileInfo userID: 193 
+[2020-12-25T21:29:04.126] [INFO] userDao - START getUserProfileByUserID : {"key":"UserID","val":193}
+[2020-12-25T21:29:04.133] [INFO] userDao - END getUserProfileByUserID
+[2020-12-25T21:29:04.133] [INFO] users - profileInfo success
+[2020-12-25T21:33:58.698] [INFO] users - profileInfo userID: 193 
+[2020-12-25T21:33:59.169] [INFO] users - profileInfo userID: 193 
+[2020-12-25T21:33:59.169] [INFO] userDao - START getUserProfileByUserID : {"key":"UserID","val":193}
+[2020-12-25T21:33:59.176] [INFO] userDao - END getUserProfileByUserID
+[2020-12-25T21:33:59.177] [INFO] users - profileInfo success
+[2020-12-25T21:40:01.390] [INFO] users - profileInfo userID: 193 
+[2020-12-25T21:40:01.391] [INFO] userDao - START getUserProfileByUserID : {"key":"UserID","val":193}
+[2020-12-25T21:40:01.397] [INFO] userDao - END getUserProfileByUserID
+[2020-12-25T21:40:01.398] [INFO] users - profileInfo success
+[2020-12-25T21:40:03.644] [INFO] users - profileInfo userID: 193 
+[2020-12-25T21:40:04.110] [INFO] users - profileInfo userID: 193 
+[2020-12-25T21:40:04.111] [INFO] userDao - START getUserProfileByUserID : {"key":"UserID","val":193}
+[2020-12-25T21:40:04.116] [INFO] userDao - END getUserProfileByUserID
+[2020-12-25T21:40:04.116] [INFO] users - profileInfo success
+[2020-12-25T21:40:51.850] [INFO] users - profileInfo userID: 193 
+[2020-12-25T21:40:52.309] [INFO] users - profileInfo userID: 193 
+[2020-12-25T21:40:52.309] [INFO] userDao - START getUserProfileByUserID : {"key":"UserID","val":193}
+[2020-12-25T21:40:52.316] [INFO] userDao - END getUserProfileByUserID
+[2020-12-25T21:40:52.316] [INFO] users - profileInfo success
+[2020-12-25T21:41:27.314] [INFO] users - profileInfo userID: 193 
+[2020-12-25T21:41:27.837] [INFO] users - profileInfo userID: 193 
+[2020-12-25T21:41:27.837] [INFO] userDao - START getUserProfileByUserID : {"key":"UserID","val":193}
+[2020-12-25T21:41:27.842] [INFO] userDao - END getUserProfileByUserID
+[2020-12-25T21:41:27.842] [INFO] users - profileInfo success
+[2020-12-25T22:39:39.468] [INFO] users - profileInfo userID: 193 
+[2020-12-25T22:39:39.952] [INFO] users - profileInfo userID: 193 
+[2020-12-25T22:39:39.953] [INFO] userDao - START getUserProfileByUserID : {"key":"UserID","val":193}
+[2020-12-25T22:39:39.958] [INFO] userDao - END getUserProfileByUserID
+[2020-12-25T22:39:39.958] [INFO] users - profileInfo success
+[2020-12-25T22:41:05.605] [INFO] users - profileInfo userID: 193 
+[2020-12-25T22:41:06.152] [INFO] users - profileInfo userID: 193 
+[2020-12-25T22:41:06.152] [INFO] userDao - START getUserProfileByUserID : {"key":"UserID","val":193}
+[2020-12-25T22:41:06.157] [INFO] userDao - END getUserProfileByUserID
+[2020-12-25T22:41:06.158] [INFO] users - profileInfo success
+[2020-12-25T22:53:52.344] [INFO] users - profileInfo userID: 193 
+[2020-12-25T22:53:52.453] [INFO] users - profileInfo userID: 193 
+[2020-12-25T22:53:52.453] [INFO] userDao - START getUserProfileByUserID : {"key":"UserID","val":193}
+[2020-12-25T22:53:52.457] [INFO] userDao - END getUserProfileByUserID
+[2020-12-25T22:53:52.458] [INFO] users - profileInfo success
+[2020-12-25T22:55:54.425] [INFO] users - profileInfo userID: 193 
+[2020-12-25T22:55:54.514] [INFO] users - profileInfo userID: 193 
+[2020-12-25T22:55:54.514] [INFO] userDao - START getUserProfileByUserID : {"key":"UserID","val":193}
+[2020-12-25T22:55:54.519] [INFO] userDao - END getUserProfileByUserID
+[2020-12-25T22:55:54.519] [INFO] users - profileInfo success
+[2020-12-25T22:57:17.949] [INFO] users - profileInfo userID: 193 
+[2020-12-25T22:57:18.034] [INFO] users - profileInfo userID: 193 
+[2020-12-25T22:57:18.034] [INFO] userDao - START getUserProfileByUserID : {"key":"UserID","val":193}
+[2020-12-25T22:57:18.039] [INFO] userDao - END getUserProfileByUserID
+[2020-12-25T22:57:18.040] [INFO] users - profileInfo success
+[2020-12-25T22:57:34.434] [INFO] users - profileInfo userID: 193 
+[2020-12-25T22:57:34.545] [INFO] users - profileInfo userID: 193 
+[2020-12-25T22:57:34.545] [INFO] userDao - START getUserProfileByUserID : {"key":"UserID","val":193}
+[2020-12-25T22:57:34.549] [INFO] userDao - END getUserProfileByUserID
+[2020-12-25T22:57:34.549] [INFO] users - profileInfo success
+[2020-12-25T22:58:13.979] [INFO] users - profileInfo userID: 193 
+[2020-12-25T22:58:14.062] [INFO] users - profileInfo userID: 193 
+[2020-12-25T22:58:14.062] [INFO] userDao - START getUserProfileByUserID : {"key":"UserID","val":193}
+[2020-12-25T22:58:14.067] [INFO] userDao - END getUserProfileByUserID
+[2020-12-25T22:58:14.067] [INFO] users - profileInfo success
+[2020-12-25T23:01:58.891] [INFO] users - profileInfo userID: 193 
+[2020-12-25T23:01:58.956] [INFO] users - profileInfo userID: 193 
+[2020-12-25T23:01:58.956] [INFO] userDao - START getUserProfileByUserID : {"key":"UserID","val":193}
+[2020-12-25T23:01:58.961] [INFO] userDao - END getUserProfileByUserID
+[2020-12-25T23:01:58.961] [INFO] users - profileInfo success
+[2020-12-25T23:09:45.269] [INFO] users - profileInfo userID: 193 
+[2020-12-25T23:09:45.352] [INFO] users - profileInfo userID: 193 
+[2020-12-25T23:09:45.352] [INFO] userDao - START getUserProfileByUserID : {"key":"UserID","val":193}
+[2020-12-25T23:09:45.356] [INFO] userDao - END getUserProfileByUserID
+[2020-12-25T23:09:45.356] [INFO] users - profileInfo success
+[2020-12-25T23:11:01.012] [INFO] users - profileInfo userID: 193 
+[2020-12-25T23:11:01.082] [INFO] users - profileInfo userID: 193 
+[2020-12-25T23:11:01.082] [INFO] userDao - START getUserProfileByUserID : {"key":"UserID","val":193}
+[2020-12-25T23:11:01.086] [INFO] userDao - END getUserProfileByUserID
+[2020-12-25T23:11:01.086] [INFO] users - profileInfo success
+[2020-12-25T23:12:10.832] [INFO] users - profileInfo userID: 193 
+[2020-12-25T23:12:10.949] [INFO] users - profileInfo userID: 193 
+[2020-12-25T23:12:10.949] [INFO] userDao - START getUserProfileByUserID : {"key":"UserID","val":193}
+[2020-12-25T23:12:10.954] [INFO] userDao - END getUserProfileByUserID
+[2020-12-25T23:12:10.954] [INFO] users - profileInfo success
+[2020-12-25T23:13:31.706] [INFO] users - profileInfo userID: 193 
+[2020-12-25T23:13:31.826] [INFO] users - profileInfo userID: 193 
+[2020-12-25T23:13:31.826] [INFO] userDao - START getUserProfileByUserID : {"key":"UserID","val":193}
+[2020-12-25T23:13:31.831] [INFO] userDao - END getUserProfileByUserID
+[2020-12-25T23:13:31.831] [INFO] users - profileInfo success
+[2020-12-25T23:14:55.847] [INFO] users - profileInfo userID: 193 
+[2020-12-25T23:14:55.847] [INFO] userDao - START getUserProfileByUserID : {"key":"UserID","val":193}
+[2020-12-25T23:14:55.852] [INFO] userDao - END getUserProfileByUserID
+[2020-12-25T23:14:55.852] [INFO] users - profileInfo success
+[2020-12-25T23:14:56.996] [INFO] users - profileInfo userID: 193 
+[2020-12-25T23:14:56.996] [INFO] userDao - START getUserProfileByUserID : {"key":"UserID","val":193}
+[2020-12-25T23:14:57.000] [INFO] userDao - END getUserProfileByUserID
+[2020-12-25T23:14:57.000] [INFO] users - profileInfo success
+[2020-12-25T23:18:06.948] [INFO] users - profileInfo userID: 193 
+[2020-12-25T23:18:06.948] [INFO] userDao - START getUserProfileByUserID : {"key":"UserID","val":193}
+[2020-12-25T23:18:06.953] [INFO] userDao - END getUserProfileByUserID
+[2020-12-25T23:18:06.953] [INFO] users - profileInfo success
+[2020-12-25T23:18:07.023] [INFO] users - profileInfo userID: 193 
+[2020-12-25T23:18:07.023] [INFO] userDao - START getUserProfileByUserID : {"key":"UserID","val":193}
+[2020-12-25T23:18:07.026] [INFO] userDao - END getUserProfileByUserID
+[2020-12-25T23:18:07.026] [INFO] users - profileInfo success
+[2020-12-25T23:18:56.853] [INFO] users - profileInfo userID: 193 
+[2020-12-25T23:18:56.854] [INFO] userDao - START getUserProfileByUserID : {"key":"UserID","val":193}
+[2020-12-25T23:18:56.858] [INFO] userDao - END getUserProfileByUserID
+[2020-12-25T23:18:56.858] [INFO] users - profileInfo success
+[2020-12-25T23:18:56.917] [INFO] users - profileInfo userID: 193 
+[2020-12-25T23:18:56.917] [INFO] userDao - START getUserProfileByUserID : {"key":"UserID","val":193}
+[2020-12-25T23:18:56.921] [INFO] userDao - END getUserProfileByUserID
+[2020-12-25T23:18:56.921] [INFO] users - profileInfo success
+[2020-12-25T23:20:06.600] [INFO] users - profileInfo userID: 193 
+[2020-12-25T23:20:06.600] [INFO] userDao - START getUserProfileByUserID : {"key":"UserID","val":193}
+[2020-12-25T23:20:06.605] [INFO] userDao - END getUserProfileByUserID
+[2020-12-25T23:20:06.605] [INFO] users - profileInfo success
+[2020-12-25T23:20:06.679] [INFO] users - profileInfo userID: 193 
+[2020-12-25T23:20:06.680] [INFO] userDao - START getUserProfileByUserID : {"key":"UserID","val":193}
+[2020-12-25T23:20:06.683] [INFO] userDao - END getUserProfileByUserID
+[2020-12-25T23:20:06.683] [INFO] users - profileInfo success
+[2020-12-25T23:22:20.321] [INFO] users - profileInfo userID: 193 
+[2020-12-25T23:22:20.321] [INFO] userDao - START getUserProfileByUserID : {"key":"UserID","val":193}
+[2020-12-25T23:22:20.326] [INFO] userDao - END getUserProfileByUserID
+[2020-12-25T23:22:20.326] [INFO] users - profileInfo success
+[2020-12-25T23:22:20.384] [INFO] users - profileInfo userID: 193 
+[2020-12-25T23:22:20.384] [INFO] userDao - START getUserProfileByUserID : {"key":"UserID","val":193}
+[2020-12-25T23:22:20.388] [INFO] userDao - END getUserProfileByUserID
+[2020-12-25T23:22:20.388] [INFO] users - profileInfo success
+[2020-12-25T23:23:01.182] [INFO] users - profileInfo userID: 193 
+[2020-12-25T23:23:01.182] [INFO] userDao - START getUserProfileByUserID : {"key":"UserID","val":193}
+[2020-12-25T23:23:01.187] [INFO] userDao - END getUserProfileByUserID
+[2020-12-25T23:23:01.187] [INFO] users - profileInfo success
+[2020-12-25T23:23:01.231] [INFO] users - profileInfo userID: 193 
+[2020-12-25T23:23:01.231] [INFO] userDao - START getUserProfileByUserID : {"key":"UserID","val":193}
+[2020-12-25T23:23:01.234] [INFO] userDao - END getUserProfileByUserID
+[2020-12-25T23:23:01.234] [INFO] users - profileInfo success
+[2020-12-25T23:23:24.257] [INFO] users - profileInfo userID: 193 
+[2020-12-25T23:23:24.257] [INFO] userDao - START getUserProfileByUserID : {"key":"UserID","val":193}
+[2020-12-25T23:23:24.263] [INFO] userDao - END getUserProfileByUserID
+[2020-12-25T23:23:24.263] [INFO] users - profileInfo success
+[2020-12-25T23:23:24.333] [INFO] users - profileInfo userID: 193 
+[2020-12-25T23:23:24.334] [INFO] userDao - START getUserProfileByUserID : {"key":"UserID","val":193}
+[2020-12-25T23:23:24.337] [INFO] userDao - END getUserProfileByUserID
+[2020-12-25T23:23:24.337] [INFO] users - profileInfo success
+[2020-12-25T23:23:41.532] [INFO] users - profileInfo userID: 193 
+[2020-12-25T23:23:41.533] [INFO] userDao - START getUserProfileByUserID : {"key":"UserID","val":193}
+[2020-12-25T23:23:41.536] [INFO] userDao - END getUserProfileByUserID
+[2020-12-25T23:23:41.536] [INFO] users - profileInfo success
+[2020-12-25T23:23:41.607] [INFO] users - profileInfo userID: 193 
+[2020-12-25T23:23:41.607] [INFO] userDao - START getUserProfileByUserID : {"key":"UserID","val":193}
+[2020-12-25T23:23:41.611] [INFO] userDao - END getUserProfileByUserID
+[2020-12-25T23:23:41.611] [INFO] users - profileInfo success
+[2020-12-25T23:26:15.464] [INFO] users - profileInfo userID: 193 
+[2020-12-25T23:26:15.464] [INFO] userDao - START getUserProfileByUserID : {"key":"UserID","val":193}
+[2020-12-25T23:26:15.469] [INFO] userDao - END getUserProfileByUserID
+[2020-12-25T23:26:15.469] [INFO] users - profileInfo success
+[2020-12-25T23:26:15.526] [INFO] users - profileInfo userID: 193 
+[2020-12-25T23:26:15.526] [INFO] userDao - START getUserProfileByUserID : {"key":"UserID","val":193}
+[2020-12-25T23:26:15.529] [INFO] userDao - END getUserProfileByUserID
+[2020-12-25T23:26:15.529] [INFO] users - profileInfo success
+[2020-12-25T23:26:44.877] [INFO] users - profileInfo userID: 193 
+[2020-12-25T23:26:44.877] [INFO] userDao - START getUserProfileByUserID : {"key":"UserID","val":193}
+[2020-12-25T23:26:44.881] [INFO] userDao - END getUserProfileByUserID
+[2020-12-25T23:26:44.881] [INFO] users - profileInfo success
+[2020-12-25T23:26:44.937] [INFO] users - profileInfo userID: 193 
+[2020-12-25T23:26:44.937] [INFO] userDao - START getUserProfileByUserID : {"key":"UserID","val":193}
+[2020-12-25T23:26:44.941] [INFO] userDao - END getUserProfileByUserID
+[2020-12-25T23:26:44.941] [INFO] users - profileInfo success
+[2020-12-25T23:27:03.423] [INFO] users - profileInfo userID: 193 
+[2020-12-25T23:27:03.423] [INFO] userDao - START getUserProfileByUserID : {"key":"UserID","val":193}
+[2020-12-25T23:27:03.426] [INFO] userDao - END getUserProfileByUserID
+[2020-12-25T23:27:03.426] [INFO] users - profileInfo success
+[2020-12-25T23:27:03.493] [INFO] users - profileInfo userID: 193 
+[2020-12-25T23:27:03.493] [INFO] userDao - START getUserProfileByUserID : {"key":"UserID","val":193}
+[2020-12-25T23:27:03.496] [INFO] userDao - END getUserProfileByUserID
+[2020-12-25T23:27:03.496] [INFO] users - profileInfo success
+[2020-12-25T23:28:11.725] [INFO] users - profileInfo userID: 193 
+[2020-12-25T23:28:11.725] [INFO] userDao - START getUserProfileByUserID : {"key":"UserID","val":193}
+[2020-12-25T23:28:11.732] [INFO] userDao - END getUserProfileByUserID
+[2020-12-25T23:28:11.732] [INFO] users - profileInfo success
+[2020-12-25T23:28:11.810] [INFO] users - profileInfo userID: 193 
+[2020-12-25T23:28:11.810] [INFO] userDao - START getUserProfileByUserID : {"key":"UserID","val":193}
+[2020-12-25T23:28:11.814] [INFO] userDao - END getUserProfileByUserID
+[2020-12-25T23:28:11.814] [INFO] users - profileInfo success
+[2020-12-25T23:28:34.672] [INFO] users - profileInfo userID: 193 
+[2020-12-25T23:28:34.673] [INFO] userDao - START getUserProfileByUserID : {"key":"UserID","val":193}
+[2020-12-25T23:28:34.679] [INFO] userDao - END getUserProfileByUserID
+[2020-12-25T23:28:34.679] [INFO] users - profileInfo success
+[2020-12-25T23:28:34.737] [INFO] users - profileInfo userID: 193 
+[2020-12-25T23:28:34.737] [INFO] userDao - START getUserProfileByUserID : {"key":"UserID","val":193}
+[2020-12-25T23:28:34.741] [INFO] userDao - END getUserProfileByUserID
+[2020-12-25T23:28:34.741] [INFO] users - profileInfo success
+[2020-12-25T23:28:47.498] [INFO] users - profileInfo userID: 193 
+[2020-12-25T23:28:47.499] [INFO] userDao - START getUserProfileByUserID : {"key":"UserID","val":193}
+[2020-12-25T23:28:47.502] [INFO] userDao - END getUserProfileByUserID
+[2020-12-25T23:28:47.502] [INFO] users - profileInfo success
+[2020-12-25T23:28:47.608] [INFO] users - profileInfo userID: 193 
+[2020-12-25T23:28:47.608] [INFO] userDao - START getUserProfileByUserID : {"key":"UserID","val":193}
+[2020-12-25T23:28:47.611] [INFO] userDao - END getUserProfileByUserID
+[2020-12-25T23:28:47.612] [INFO] users - profileInfo success
+[2020-12-25T23:29:04.121] [INFO] users - profileInfo userID: 193 
+[2020-12-25T23:29:04.121] [INFO] userDao - START getUserProfileByUserID : {"key":"UserID","val":193}
+[2020-12-25T23:29:04.126] [INFO] userDao - END getUserProfileByUserID
+[2020-12-25T23:29:04.126] [INFO] users - profileInfo success
+[2020-12-25T23:29:04.201] [INFO] users - profileInfo userID: 193 
+[2020-12-25T23:29:04.201] [INFO] userDao - START getUserProfileByUserID : {"key":"UserID","val":193}
+[2020-12-25T23:29:04.205] [INFO] userDao - END getUserProfileByUserID
+[2020-12-25T23:29:04.205] [INFO] users - profileInfo success
+[2020-12-25T23:29:43.327] [INFO] users - profileInfo userID: 193 
+[2020-12-25T23:29:43.327] [INFO] userDao - START getUserProfileByUserID : {"key":"UserID","val":193}
+[2020-12-25T23:29:43.332] [INFO] userDao - END getUserProfileByUserID
+[2020-12-25T23:29:43.332] [INFO] users - profileInfo success
+[2020-12-25T23:29:43.399] [INFO] users - profileInfo userID: 193 
+[2020-12-25T23:29:43.399] [INFO] userDao - START getUserProfileByUserID : {"key":"UserID","val":193}
+[2020-12-25T23:29:43.403] [INFO] userDao - END getUserProfileByUserID
+[2020-12-25T23:29:43.403] [INFO] users - profileInfo success
+[2020-12-25T23:30:15.443] [INFO] users - profileInfo userID: 193 
+[2020-12-25T23:30:15.443] [INFO] userDao - START getUserProfileByUserID : {"key":"UserID","val":193}
+[2020-12-25T23:30:15.449] [INFO] userDao - END getUserProfileByUserID
+[2020-12-25T23:30:15.449] [INFO] users - profileInfo success
+[2020-12-25T23:30:15.550] [INFO] users - profileInfo userID: 193 
+[2020-12-25T23:30:15.550] [INFO] userDao - START getUserProfileByUserID : {"key":"UserID","val":193}
+[2020-12-25T23:30:15.553] [INFO] userDao - END getUserProfileByUserID
+[2020-12-25T23:30:15.553] [INFO] users - profileInfo success
+[2020-12-25T23:30:23.396] [INFO] users - profileInfo userID: 193 
+[2020-12-25T23:30:23.396] [INFO] userDao - START getUserProfileByUserID : {"key":"UserID","val":193}
+[2020-12-25T23:30:23.400] [INFO] userDao - END getUserProfileByUserID
+[2020-12-25T23:30:23.400] [INFO] users - profileInfo success
+[2020-12-25T23:30:23.448] [INFO] users - profileInfo userID: 193 
+[2020-12-25T23:30:23.448] [INFO] userDao - START getUserProfileByUserID : {"key":"UserID","val":193}
+[2020-12-25T23:30:23.452] [INFO] userDao - END getUserProfileByUserID
+[2020-12-25T23:30:23.452] [INFO] users - profileInfo success
+[2020-12-25T23:31:52.573] [INFO] users - profileInfo userID: 193 
+[2020-12-25T23:31:52.573] [INFO] userDao - START getUserProfileByUserID : {"key":"UserID","val":193}
+[2020-12-25T23:31:52.577] [INFO] userDao - END getUserProfileByUserID
+[2020-12-25T23:31:52.577] [INFO] users - profileInfo success
+[2020-12-25T23:31:52.633] [INFO] users - profileInfo userID: 193 
+[2020-12-25T23:31:52.633] [INFO] userDao - START getUserProfileByUserID : {"key":"UserID","val":193}
+[2020-12-25T23:31:52.636] [INFO] userDao - END getUserProfileByUserID
+[2020-12-25T23:31:52.636] [INFO] users - profileInfo success
+[2020-12-25T23:32:07.997] [INFO] users - profileInfo userID: 193 
+[2020-12-25T23:32:07.997] [INFO] userDao - START getUserProfileByUserID : {"key":"UserID","val":193}
+[2020-12-25T23:32:08.000] [INFO] userDao - END getUserProfileByUserID
+[2020-12-25T23:32:08.000] [INFO] users - profileInfo success
+[2020-12-25T23:32:08.071] [INFO] users - profileInfo userID: 193 
+[2020-12-25T23:32:08.071] [INFO] userDao - START getUserProfileByUserID : {"key":"UserID","val":193}
+[2020-12-25T23:32:08.074] [INFO] userDao - END getUserProfileByUserID
+[2020-12-25T23:32:08.075] [INFO] users - profileInfo success
+[2020-12-25T23:32:50.244] [INFO] users - profileInfo userID: 193 
+[2020-12-25T23:32:50.244] [INFO] userDao - START getUserProfileByUserID : {"key":"UserID","val":193}
+[2020-12-25T23:32:50.248] [INFO] userDao - END getUserProfileByUserID
+[2020-12-25T23:32:50.248] [INFO] users - profileInfo success
+[2020-12-25T23:32:50.352] [INFO] users - profileInfo userID: 193 
+[2020-12-25T23:32:50.352] [INFO] userDao - START getUserProfileByUserID : {"key":"UserID","val":193}
+[2020-12-25T23:32:50.355] [INFO] userDao - END getUserProfileByUserID
+[2020-12-25T23:32:50.356] [INFO] users - profileInfo success
+[2020-12-25T23:34:13.913] [INFO] users - profileInfo userID: 193 
+[2020-12-25T23:34:13.913] [INFO] userDao - START getUserProfileByUserID : {"key":"UserID","val":193}
+[2020-12-25T23:34:13.917] [INFO] userDao - END getUserProfileByUserID
+[2020-12-25T23:34:13.917] [INFO] users - profileInfo success
+[2020-12-25T23:34:13.990] [INFO] users - profileInfo userID: 193 
+[2020-12-25T23:34:13.990] [INFO] userDao - START getUserProfileByUserID : {"key":"UserID","val":193}
+[2020-12-25T23:34:13.995] [INFO] userDao - END getUserProfileByUserID
+[2020-12-25T23:34:13.995] [INFO] users - profileInfo success
+[2020-12-25T23:34:24.671] [INFO] users - profileInfo userID: 193 
+[2020-12-25T23:34:24.672] [INFO] userDao - START getUserProfileByUserID : {"key":"UserID","val":193}
+[2020-12-25T23:34:24.675] [INFO] userDao - END getUserProfileByUserID
+[2020-12-25T23:34:24.675] [INFO] users - profileInfo success
+[2020-12-25T23:34:24.744] [INFO] users - profileInfo userID: 193 
+[2020-12-25T23:34:24.745] [INFO] userDao - START getUserProfileByUserID : {"key":"UserID","val":193}
+[2020-12-25T23:34:24.747] [INFO] userDao - END getUserProfileByUserID
+[2020-12-25T23:34:24.747] [INFO] users - profileInfo success
+[2020-12-25T23:36:37.970] [INFO] users - profileInfo userID: 193 
+[2020-12-25T23:36:37.970] [INFO] userDao - START getUserProfileByUserID : {"key":"UserID","val":193}
+[2020-12-25T23:36:37.974] [INFO] userDao - END getUserProfileByUserID
+[2020-12-25T23:36:37.975] [INFO] users - profileInfo success
+[2020-12-25T23:36:38.042] [INFO] users - profileInfo userID: 193 
+[2020-12-25T23:36:38.043] [INFO] userDao - START getUserProfileByUserID : {"key":"UserID","val":193}
+[2020-12-25T23:36:38.046] [INFO] userDao - END getUserProfileByUserID
+[2020-12-25T23:36:38.046] [INFO] users - profileInfo success
+[2020-12-25T23:37:33.818] [INFO] users - profileInfo userID: 193 
+[2020-12-25T23:37:33.819] [INFO] userDao - START getUserProfileByUserID : {"key":"UserID","val":193}
+[2020-12-25T23:37:33.824] [INFO] userDao - END getUserProfileByUserID
+[2020-12-25T23:37:33.824] [INFO] users - profileInfo success
+[2020-12-25T23:37:33.891] [INFO] users - profileInfo userID: 193 
+[2020-12-25T23:37:33.891] [INFO] userDao - START getUserProfileByUserID : {"key":"UserID","val":193}
+[2020-12-25T23:37:33.895] [INFO] userDao - END getUserProfileByUserID
+[2020-12-25T23:37:33.895] [INFO] users - profileInfo success
+[2020-12-25T23:56:40.113] [INFO] users - profileInfo userID: 193 
+[2020-12-25T23:56:40.113] [INFO] userDao - START getUserProfileByUserID : {"key":"UserID","val":193}
+[2020-12-25T23:56:40.118] [INFO] userDao - END getUserProfileByUserID
+[2020-12-25T23:56:40.118] [INFO] users - profileInfo success
+[2020-12-25T23:56:40.194] [INFO] users - profileInfo userID: 193 
+[2020-12-25T23:56:40.194] [INFO] userDao - START getUserProfileByUserID : {"key":"UserID","val":193}
+[2020-12-25T23:56:40.197] [INFO] userDao - END getUserProfileByUserID
+[2020-12-25T23:56:40.197] [INFO] users - profileInfo success
+[2020-12-25T23:58:05.608] [INFO] users - profileInfo userID: 193 
+[2020-12-25T23:58:05.608] [INFO] userDao - START getUserProfileByUserID : {"key":"UserID","val":193}
+[2020-12-25T23:58:05.613] [INFO] userDao - END getUserProfileByUserID
+[2020-12-25T23:58:05.613] [INFO] users - profileInfo success
+[2020-12-25T23:58:05.675] [INFO] users - profileInfo userID: 193 
+[2020-12-25T23:58:05.675] [INFO] userDao - START getUserProfileByUserID : {"key":"UserID","val":193}
+[2020-12-25T23:58:05.678] [INFO] userDao - END getUserProfileByUserID
+[2020-12-25T23:58:05.678] [INFO] users - profileInfo success
+[2020-12-26T00:00:09.975] [INFO] users - profileInfo userID: 193 
+[2020-12-26T00:00:09.975] [INFO] userDao - START getUserProfileByUserID : {"key":"UserID","val":193}
+[2020-12-26T00:00:09.984] [INFO] userDao - END getUserProfileByUserID
+[2020-12-26T00:00:09.984] [INFO] users - profileInfo success
+[2020-12-26T00:00:10.059] [INFO] users - profileInfo userID: 193 
+[2020-12-26T00:00:10.059] [INFO] userDao - START getUserProfileByUserID : {"key":"UserID","val":193}
+[2020-12-26T00:00:10.062] [INFO] userDao - END getUserProfileByUserID
+[2020-12-26T00:00:10.062] [INFO] users - profileInfo success
+[2020-12-26T00:00:11.234] [INFO] users - profileInfo userID: 193 
+[2020-12-26T00:00:11.234] [INFO] userDao - START getUserProfileByUserID : {"key":"UserID","val":193}
+[2020-12-26T00:00:11.240] [INFO] userDao - END getUserProfileByUserID
+[2020-12-26T00:00:11.240] [INFO] users - profileInfo success
+[2020-12-26T00:00:11.859] [INFO] users - profileInfo userID: 193 
+[2020-12-26T00:00:11.859] [INFO] userDao - START getUserProfileByUserID : {"key":"UserID","val":193}
+[2020-12-26T00:00:11.863] [INFO] userDao - END getUserProfileByUserID
+[2020-12-26T00:00:11.863] [INFO] users - profileInfo success
+[2020-12-26T00:00:11.902] [INFO] users - profileInfo userID: 193 
+[2020-12-26T00:00:11.902] [INFO] userDao - START getUserProfileByUserID : {"key":"UserID","val":193}
+[2020-12-26T00:00:11.905] [INFO] userDao - END getUserProfileByUserID
+[2020-12-26T00:00:11.905] [INFO] users - profileInfo success
+[2020-12-26T00:00:14.008] [INFO] users - profileInfo userID: 193 
+[2020-12-26T00:00:14.008] [INFO] userDao - START getUserProfileByUserID : {"key":"UserID","val":193}
+[2020-12-26T00:00:14.011] [INFO] userDao - END getUserProfileByUserID
+[2020-12-26T00:00:14.011] [INFO] users - profileInfo success
+[2020-12-26T00:00:14.049] [INFO] users - profileInfo userID: 193 
+[2020-12-26T00:00:14.050] [INFO] userDao - START getUserProfileByUserID : {"key":"UserID","val":193}
+[2020-12-26T00:00:14.053] [INFO] userDao - END getUserProfileByUserID
+[2020-12-26T00:00:14.053] [INFO] users - profileInfo success
+[2020-12-26T00:00:44.397] [INFO] users - profileInfo userID: 193 
+[2020-12-26T00:00:44.398] [INFO] userDao - START getUserProfileByUserID : {"key":"UserID","val":193}
+[2020-12-26T00:00:44.404] [INFO] userDao - END getUserProfileByUserID
+[2020-12-26T00:00:44.404] [INFO] users - profileInfo success
+[2020-12-26T00:00:44.473] [INFO] users - profileInfo userID: 193 
+[2020-12-26T00:00:44.473] [INFO] userDao - START getUserProfileByUserID : {"key":"UserID","val":193}
+[2020-12-26T00:00:44.476] [INFO] userDao - END getUserProfileByUserID
+[2020-12-26T00:00:44.476] [INFO] users - profileInfo success
+[2020-12-26T00:02:43.805] [INFO] users - profileInfo userID: 193 
+[2020-12-26T00:02:43.805] [INFO] userDao - START getUserProfileByUserID : {"key":"UserID","val":193}
+[2020-12-26T00:02:43.811] [INFO] userDao - END getUserProfileByUserID
+[2020-12-26T00:02:43.811] [INFO] users - profileInfo success
+[2020-12-26T00:02:43.888] [INFO] users - profileInfo userID: 193 
+[2020-12-26T00:02:43.888] [INFO] userDao - START getUserProfileByUserID : {"key":"UserID","val":193}
+[2020-12-26T00:02:43.892] [INFO] userDao - END getUserProfileByUserID
+[2020-12-26T00:02:43.892] [INFO] users - profileInfo success
+[2020-12-26T00:03:36.066] [INFO] users - profileInfo userID: 193 
+[2020-12-26T00:03:36.066] [INFO] userDao - START getUserProfileByUserID : {"key":"UserID","val":193}
+[2020-12-26T00:03:36.071] [INFO] userDao - END getUserProfileByUserID
+[2020-12-26T00:03:36.071] [INFO] users - profileInfo success
+[2020-12-26T00:03:36.143] [INFO] users - profileInfo userID: 193 
+[2020-12-26T00:03:36.143] [INFO] userDao - START getUserProfileByUserID : {"key":"UserID","val":193}
+[2020-12-26T00:03:36.146] [INFO] userDao - END getUserProfileByUserID
+[2020-12-26T00:03:36.146] [INFO] users - profileInfo success
+[2020-12-26T00:03:39.875] [INFO] users - profileInfo userID: 193 
+[2020-12-26T00:03:39.875] [INFO] userDao - START getUserProfileByUserID : {"key":"UserID","val":193}
+[2020-12-26T00:03:39.878] [INFO] userDao - END getUserProfileByUserID
+[2020-12-26T00:03:39.878] [INFO] users - profileInfo success
+[2020-12-26T00:03:39.929] [INFO] users - profileInfo userID: 193 
+[2020-12-26T00:03:39.930] [INFO] userDao - START getUserProfileByUserID : {"key":"UserID","val":193}
+[2020-12-26T00:03:39.933] [INFO] userDao - END getUserProfileByUserID
+[2020-12-26T00:03:39.933] [INFO] users - profileInfo success
+[2020-12-26T00:06:45.340] [INFO] users - profileInfo userID: 193 
+[2020-12-26T00:06:45.340] [INFO] userDao - START getUserProfileByUserID : {"key":"UserID","val":193}
+[2020-12-26T00:06:45.344] [INFO] userDao - END getUserProfileByUserID
+[2020-12-26T00:06:45.345] [INFO] users - profileInfo success
+[2020-12-26T00:06:45.407] [INFO] users - profileInfo userID: 193 
+[2020-12-26T00:06:45.407] [INFO] userDao - START getUserProfileByUserID : {"key":"UserID","val":193}
+[2020-12-26T00:06:45.410] [INFO] userDao - END getUserProfileByUserID
+[2020-12-26T00:06:45.411] [INFO] users - profileInfo success
+[2020-12-26T00:07:19.823] [INFO] users - profileInfo userID: 193 
+[2020-12-26T00:07:19.823] [INFO] userDao - START getUserProfileByUserID : {"key":"UserID","val":193}
+[2020-12-26T00:07:19.827] [INFO] userDao - END getUserProfileByUserID
+[2020-12-26T00:07:19.827] [INFO] users - profileInfo success
+[2020-12-26T00:07:19.932] [INFO] users - profileInfo userID: 193 
+[2020-12-26T00:07:19.932] [INFO] userDao - START getUserProfileByUserID : {"key":"UserID","val":193}
+[2020-12-26T00:07:19.935] [INFO] userDao - END getUserProfileByUserID
+[2020-12-26T00:07:19.935] [INFO] users - profileInfo success
+[2020-12-26T00:09:18.545] [INFO] users - profileInfo userID: 193 
+[2020-12-26T00:09:18.545] [INFO] userDao - START getUserProfileByUserID : {"key":"UserID","val":193}
+[2020-12-26T00:09:18.549] [INFO] userDao - END getUserProfileByUserID
+[2020-12-26T00:09:18.549] [INFO] users - profileInfo success
+[2020-12-26T00:09:18.608] [INFO] users - profileInfo userID: 193 
+[2020-12-26T00:09:18.608] [INFO] userDao - START getUserProfileByUserID : {"key":"UserID","val":193}
+[2020-12-26T00:09:18.611] [INFO] userDao - END getUserProfileByUserID
+[2020-12-26T00:09:18.611] [INFO] users - profileInfo success
+[2020-12-26T00:27:24.908] [INFO] users - profileInfo userID: 193 
+[2020-12-26T00:27:24.908] [INFO] userDao - START getUserProfileByUserID : {"key":"UserID","val":193}
+[2020-12-26T00:27:24.913] [INFO] userDao - END getUserProfileByUserID
+[2020-12-26T00:27:24.913] [INFO] users - profileInfo success
+[2020-12-26T00:27:24.975] [INFO] users - profileInfo userID: 193 
+[2020-12-26T00:27:24.976] [INFO] userDao - START getUserProfileByUserID : {"key":"UserID","val":193}
+[2020-12-26T00:27:24.980] [INFO] userDao - END getUserProfileByUserID
+[2020-12-26T00:27:24.981] [INFO] users - profileInfo success
+[2020-12-26T00:28:29.421] [INFO] users - profileInfo userID: 193 
+[2020-12-26T00:28:29.421] [INFO] userDao - START getUserProfileByUserID : {"key":"UserID","val":193}
+[2020-12-26T00:28:29.426] [INFO] userDao - END getUserProfileByUserID
+[2020-12-26T00:28:29.426] [INFO] users - profileInfo success
+[2020-12-26T00:28:29.528] [INFO] users - profileInfo userID: 193 
+[2020-12-26T00:28:29.528] [INFO] userDao - START getUserProfileByUserID : {"key":"UserID","val":193}
+[2020-12-26T00:28:29.530] [INFO] userDao - END getUserProfileByUserID
+[2020-12-26T00:28:29.531] [INFO] users - profileInfo success
+[2020-12-26T00:29:10.775] [INFO] users - profileInfo userID: 193 
+[2020-12-26T00:29:10.775] [INFO] userDao - START getUserProfileByUserID : {"key":"UserID","val":193}
+[2020-12-26T00:29:10.781] [INFO] userDao - END getUserProfileByUserID
+[2020-12-26T00:29:10.781] [INFO] users - profileInfo success
+[2020-12-26T00:29:10.894] [INFO] users - profileInfo userID: 193 
+[2020-12-26T00:29:10.894] [INFO] userDao - START getUserProfileByUserID : {"key":"UserID","val":193}
+[2020-12-26T00:29:10.897] [INFO] userDao - END getUserProfileByUserID
+[2020-12-26T00:29:10.897] [INFO] users - profileInfo success
+[2020-12-26T00:29:35.265] [INFO] users - profileInfo userID: 193 
+[2020-12-26T00:29:35.265] [INFO] userDao - START getUserProfileByUserID : {"key":"UserID","val":193}
+[2020-12-26T00:29:35.269] [INFO] userDao - END getUserProfileByUserID
+[2020-12-26T00:29:35.270] [INFO] users - profileInfo success
+[2020-12-26T00:29:35.337] [INFO] users - profileInfo userID: 193 
+[2020-12-26T00:29:35.337] [INFO] userDao - START getUserProfileByUserID : {"key":"UserID","val":193}
+[2020-12-26T00:29:35.340] [INFO] userDao - END getUserProfileByUserID
+[2020-12-26T00:29:35.340] [INFO] users - profileInfo success
+[2020-12-26T00:30:55.642] [INFO] users - profileInfo userID: 193 
+[2020-12-26T00:30:55.643] [INFO] userDao - START getUserProfileByUserID : {"key":"UserID","val":193}
+[2020-12-26T00:30:55.648] [INFO] userDao - END getUserProfileByUserID
+[2020-12-26T00:30:55.648] [INFO] users - profileInfo success
+[2020-12-26T00:30:55.706] [INFO] users - profileInfo userID: 193 
+[2020-12-26T00:30:55.707] [INFO] userDao - START getUserProfileByUserID : {"key":"UserID","val":193}
+[2020-12-26T00:30:55.709] [INFO] userDao - END getUserProfileByUserID
+[2020-12-26T00:30:55.710] [INFO] users - profileInfo success
+[2020-12-26T00:31:25.824] [INFO] users - profileInfo userID: 193 
+[2020-12-26T00:31:25.824] [INFO] userDao - START getUserProfileByUserID : {"key":"UserID","val":193}
+[2020-12-26T00:31:25.828] [INFO] userDao - END getUserProfileByUserID
+[2020-12-26T00:31:25.828] [INFO] users - profileInfo success
+[2020-12-26T00:31:25.892] [INFO] users - profileInfo userID: 193 
+[2020-12-26T00:31:25.892] [INFO] userDao - START getUserProfileByUserID : {"key":"UserID","val":193}
+[2020-12-26T00:31:25.895] [INFO] userDao - END getUserProfileByUserID
+[2020-12-26T00:31:25.896] [INFO] users - profileInfo success
+[2020-12-26T00:31:53.127] [INFO] users - profileInfo userID: 193 
+[2020-12-26T00:31:53.127] [INFO] userDao - START getUserProfileByUserID : {"key":"UserID","val":193}
+[2020-12-26T00:31:53.132] [INFO] userDao - END getUserProfileByUserID
+[2020-12-26T00:31:53.132] [INFO] users - profileInfo success
+[2020-12-26T00:31:53.225] [INFO] users - profileInfo userID: 193 
+[2020-12-26T00:31:53.225] [INFO] userDao - START getUserProfileByUserID : {"key":"UserID","val":193}
+[2020-12-26T00:31:53.228] [INFO] userDao - END getUserProfileByUserID
+[2020-12-26T00:31:53.228] [INFO] users - profileInfo success
+[2020-12-26T00:37:06.704] [INFO] users - profileInfo userID: 193 
+[2020-12-26T00:37:06.705] [INFO] userDao - START getUserProfileByUserID : {"key":"UserID","val":193}
+[2020-12-26T00:37:06.711] [INFO] userDao - END getUserProfileByUserID
+[2020-12-26T00:37:06.711] [INFO] users - profileInfo success
+[2020-12-26T00:37:06.812] [INFO] users - profileInfo userID: 193 
+[2020-12-26T00:37:06.812] [INFO] userDao - START getUserProfileByUserID : {"key":"UserID","val":193}
+[2020-12-26T00:37:06.815] [INFO] userDao - END getUserProfileByUserID
+[2020-12-26T00:37:06.815] [INFO] users - profileInfo success
+[2020-12-26T00:38:18.565] [INFO] users - profileInfo userID: 193 
+[2020-12-26T00:38:18.566] [INFO] userDao - START getUserProfileByUserID : {"key":"UserID","val":193}
+[2020-12-26T00:38:18.570] [INFO] userDao - END getUserProfileByUserID
+[2020-12-26T00:38:18.570] [INFO] users - profileInfo success
+[2020-12-26T00:38:18.628] [INFO] users - profileInfo userID: 193 
+[2020-12-26T00:38:18.628] [INFO] userDao - START getUserProfileByUserID : {"key":"UserID","val":193}
+[2020-12-26T00:38:18.631] [INFO] userDao - END getUserProfileByUserID
+[2020-12-26T00:38:18.631] [INFO] users - profileInfo success
+[2020-12-26T00:39:37.570] [INFO] users - profileInfo userID: 193 
+[2020-12-26T00:39:37.571] [INFO] userDao - START getUserProfileByUserID : {"key":"UserID","val":193}
+[2020-12-26T00:39:37.576] [INFO] userDao - END getUserProfileByUserID
+[2020-12-26T00:39:37.576] [INFO] users - profileInfo success
+[2020-12-26T00:39:37.633] [INFO] users - profileInfo userID: 193 
+[2020-12-26T00:39:37.633] [INFO] userDao - START getUserProfileByUserID : {"key":"UserID","val":193}
+[2020-12-26T00:39:37.636] [INFO] userDao - END getUserProfileByUserID
+[2020-12-26T00:39:37.636] [INFO] users - profileInfo success
+[2020-12-26T00:39:47.103] [INFO] users - profileInfo userID: 193 
+[2020-12-26T00:39:47.103] [INFO] userDao - START getUserProfileByUserID : {"key":"UserID","val":193}
+[2020-12-26T00:39:47.106] [INFO] userDao - END getUserProfileByUserID
+[2020-12-26T00:39:47.106] [INFO] users - profileInfo success
+[2020-12-26T00:39:47.157] [INFO] users - profileInfo userID: 193 
+[2020-12-26T00:39:47.157] [INFO] userDao - START getUserProfileByUserID : {"key":"UserID","val":193}
+[2020-12-26T00:39:47.160] [INFO] userDao - END getUserProfileByUserID
+[2020-12-26T00:39:47.160] [INFO] users - profileInfo success
+[2020-12-26T00:41:02.701] [INFO] users - profileInfo userID: 193 
+[2020-12-26T00:41:02.701] [INFO] userDao - START getUserProfileByUserID : {"key":"UserID","val":193}
+[2020-12-26T00:41:02.705] [INFO] userDao - END getUserProfileByUserID
+[2020-12-26T00:41:02.705] [INFO] users - profileInfo success
+[2020-12-26T00:41:02.754] [INFO] users - profileInfo userID: 193 
+[2020-12-26T00:41:02.754] [INFO] userDao - START getUserProfileByUserID : {"key":"UserID","val":193}
+[2020-12-26T00:41:02.758] [INFO] userDao - END getUserProfileByUserID
+[2020-12-26T00:41:02.758] [INFO] users - profileInfo success
+[2020-12-26T00:41:54.384] [INFO] users - profileInfo userID: 193 
+[2020-12-26T00:41:54.384] [INFO] userDao - START getUserProfileByUserID : {"key":"UserID","val":193}
+[2020-12-26T00:41:54.389] [INFO] userDao - END getUserProfileByUserID
+[2020-12-26T00:41:54.389] [INFO] users - profileInfo success
+[2020-12-26T00:41:54.447] [INFO] users - profileInfo userID: 193 
+[2020-12-26T00:41:54.447] [INFO] userDao - START getUserProfileByUserID : {"key":"UserID","val":193}
+[2020-12-26T00:41:54.450] [INFO] userDao - END getUserProfileByUserID
+[2020-12-26T00:41:54.450] [INFO] users - profileInfo success
+[2020-12-26T00:44:16.137] [INFO] users - profileInfo userID: 193 
+[2020-12-26T00:44:16.137] [INFO] userDao - START getUserProfileByUserID : {"key":"UserID","val":193}
+[2020-12-26T00:44:16.142] [INFO] userDao - END getUserProfileByUserID
+[2020-12-26T00:44:16.142] [INFO] users - profileInfo success
+[2020-12-26T00:44:16.239] [INFO] users - profileInfo userID: 193 
+[2020-12-26T00:44:16.239] [INFO] userDao - START getUserProfileByUserID : {"key":"UserID","val":193}
+[2020-12-26T00:44:16.242] [INFO] userDao - END getUserProfileByUserID
+[2020-12-26T00:44:16.242] [INFO] users - profileInfo success
+[2020-12-26T00:46:26.113] [INFO] users - profileInfo userID: 193 
+[2020-12-26T00:46:26.114] [INFO] userDao - START getUserProfileByUserID : {"key":"UserID","val":193}
+[2020-12-26T00:46:26.117] [INFO] userDao - END getUserProfileByUserID
+[2020-12-26T00:46:26.118] [INFO] users - profileInfo success
+[2020-12-26T00:46:26.558] [INFO] users - profileInfo userID: 193 
+[2020-12-26T00:46:26.558] [INFO] userDao - START getUserProfileByUserID : {"key":"UserID","val":193}
+[2020-12-26T00:46:26.562] [INFO] userDao - END getUserProfileByUserID
+[2020-12-26T00:46:26.562] [INFO] users - profileInfo success
+[2020-12-26T00:47:04.525] [INFO] users - profileInfo userID: 193 
+[2020-12-26T00:47:04.525] [INFO] userDao - START getUserProfileByUserID : {"key":"UserID","val":193}
+[2020-12-26T00:47:04.530] [INFO] userDao - END getUserProfileByUserID
+[2020-12-26T00:47:04.530] [INFO] users - profileInfo success
+[2020-12-26T00:47:04.635] [INFO] users - profileInfo userID: 193 
+[2020-12-26T00:47:04.635] [INFO] userDao - START getUserProfileByUserID : {"key":"UserID","val":193}
+[2020-12-26T00:47:04.638] [INFO] userDao - END getUserProfileByUserID
+[2020-12-26T00:47:04.638] [INFO] users - profileInfo success
+[2020-12-26T00:49:18.376] [INFO] users - fileUpload: + iczz4gxs_193.jpg 
+[2020-12-26T00:49:18.376] [INFO] userDao - START saveUserProfile: param1:{"Avatar":"iczz4gxs_193.jpg"} , param2:{}
+[2020-12-26T00:49:18.377] [INFO] users - imageUp success
+[2020-12-26T00:49:18.382] [INFO] userDao - END saveUserProfile
+[2020-12-26T00:49:33.882] [INFO] users - updatePro:{"Update_type":"basicInfo","lastName":"hhhh","firstName":"bunsui","sex":"1","birthday":null,"email":"yws@gmail.com","phone":null,"avatar":"http://localhost:3000/avatar/00_00.jpg","aboutMe":null}
+[2020-12-26T00:49:33.882] [INFO] userDao - START saveUserProfile: param1:{"LastName":"hhhh","FirstName":"bunsui","Sex":"1","Birthday":null,"Phone1":null,"Aboutme":null} , param2:{"Email":"yws@gmail.com"}
+[2020-12-26T00:49:33.885] [INFO] userDao - END saveUserProfile
+[2020-12-26T00:49:33.885] [INFO] users - updatePro success
+[2020-12-26T00:49:53.819] [INFO] users - updatePro:{"Update_type":"basicInfo","lastName":"en","firstName":"bunsui","sex":"2","birthday":"2020-12-26","email":"yws@gmail.com","phone":null,"avatar":"http://localhost:3000/avatar/00_00.jpg","aboutMe":null}
+[2020-12-26T00:49:53.819] [INFO] userDao - START saveUserProfile: param1:{"LastName":"en","FirstName":"bunsui","Sex":"2","Birthday":"2020-12-26","Phone1":null,"Aboutme":null} , param2:{"Email":"yws@gmail.com"}
+[2020-12-26T00:49:53.822] [INFO] userDao - END saveUserProfile
+[2020-12-26T00:49:53.822] [INFO] users - updatePro success
+[2020-12-26T00:50:12.681] [INFO] users - updatePro:{"Update_type":"basicInfo","lastName":"en","firstName":"bunsui","sex":"2","birthday":"2020-12-26","email":"syw@Wwl.com","phone":null,"avatar":"http://localhost:3000/avatar/00_00.jpg","aboutMe":null}
+[2020-12-26T00:50:12.681] [INFO] userDao - START saveUserProfile: param1:{"LastName":"en","FirstName":"bunsui","Sex":"2","Birthday":"2020-12-26","Phone1":null,"Aboutme":null} , param2:{"Email":"syw@Wwl.com"}
+[2020-12-26T00:50:12.685] [INFO] userDao - END saveUserProfile
+[2020-12-26T00:50:12.685] [INFO] users - updatePro success
+[2020-12-26T00:50:19.638] [INFO] users - profileInfo userID: 193 
+[2020-12-26T00:50:19.638] [INFO] userDao - START getUserProfileByUserID : {"key":"UserID","val":193}
+[2020-12-26T00:50:19.641] [INFO] userDao - END getUserProfileByUserID
+[2020-12-26T00:50:19.641] [INFO] users - profileInfo success
+[2020-12-26T00:50:22.196] [INFO] users - profileInfo userID: 193 
+[2020-12-26T00:50:22.196] [INFO] userDao - START getUserProfileByUserID : {"key":"UserID","val":193}
+[2020-12-26T00:50:22.199] [INFO] userDao - END getUserProfileByUserID
+[2020-12-26T00:50:22.199] [INFO] users - profileInfo success
+[2020-12-26T10:57:37.019] [INFO] users - profileInfo userID: 193 
+[2020-12-26T10:57:37.019] [INFO] userDao - START getUserProfileByUserID : {"key":"UserID","val":193}
+[2020-12-26T10:57:37.023] [INFO] userDao - END getUserProfileByUserID
+[2020-12-26T10:57:37.023] [INFO] users - profileInfo success
+[2020-12-26T10:57:37.092] [INFO] users - profileInfo userID: 193 
+[2020-12-26T10:57:37.092] [INFO] userDao - START getUserProfileByUserID : {"key":"UserID","val":193}
+[2020-12-26T10:57:37.095] [INFO] userDao - END getUserProfileByUserID
+[2020-12-26T10:57:37.095] [INFO] users - profileInfo success
+[2020-12-26T10:58:00.174] [INFO] users - profileInfo userID: 193 
+[2020-12-26T10:58:00.174] [INFO] userDao - START getUserProfileByUserID : {"key":"UserID","val":193}
+[2020-12-26T10:58:00.179] [INFO] userDao - END getUserProfileByUserID
+[2020-12-26T10:58:00.180] [INFO] users - profileInfo success
+[2020-12-26T10:58:00.288] [INFO] users - profileInfo userID: 193 
+[2020-12-26T10:58:00.288] [INFO] userDao - START getUserProfileByUserID : {"key":"UserID","val":193}
+[2020-12-26T10:58:00.291] [INFO] userDao - END getUserProfileByUserID
+[2020-12-26T10:58:00.291] [INFO] users - profileInfo success
+[2020-12-26T10:58:05.890] [INFO] users - profileInfo userID: 193 
+[2020-12-26T10:58:05.891] [INFO] userDao - START getUserProfileByUserID : {"key":"UserID","val":193}
+[2020-12-26T10:58:05.893] [INFO] userDao - END getUserProfileByUserID
+[2020-12-26T10:58:05.893] [INFO] users - profileInfo success
+[2020-12-26T10:58:05.945] [INFO] users - profileInfo userID: 193 
+[2020-12-26T10:58:05.946] [INFO] userDao - START getUserProfileByUserID : {"key":"UserID","val":193}
+[2020-12-26T10:58:05.950] [INFO] userDao - END getUserProfileByUserID
+[2020-12-26T10:58:05.950] [INFO] users - profileInfo success
+[2020-12-26T10:59:16.615] [INFO] users - profileInfo userID: 193 
+[2020-12-26T10:59:16.615] [INFO] userDao - START getUserProfileByUserID : {"key":"UserID","val":193}
+[2020-12-26T10:59:16.620] [INFO] userDao - END getUserProfileByUserID
+[2020-12-26T10:59:16.620] [INFO] users - profileInfo success
+[2020-12-26T10:59:16.680] [INFO] users - profileInfo userID: 193 
+[2020-12-26T10:59:16.680] [INFO] userDao - START getUserProfileByUserID : {"key":"UserID","val":193}
+[2020-12-26T10:59:16.684] [INFO] userDao - END getUserProfileByUserID
+[2020-12-26T10:59:16.684] [INFO] users - profileInfo success
+[2020-12-30T21:52:22.818] [INFO] users - ユーザログ UserName:閻 文帥
+[2020-12-30T21:52:22.818] [INFO] users - Third Party by Facebook
+[2020-12-30T21:52:22.904] [INFO] userDao - START getUserInfoByUserName: {"username":"2588234901506497"}
+[2020-12-30T21:52:22.912] [INFO] userDao - END getUserInfoByUserName
+[2020-12-30T21:52:22.913] [INFO] userDao - START getUserInfoByUserName: {"username":"2588234901506497"}
+[2020-12-30T21:52:22.914] [INFO] userDao - END getUserInfoByUserName
+[2020-12-30T21:52:23.528] [INFO] users - profileInfo userID: 193 
+[2020-12-30T21:52:25.707] [INFO] users - profileInfo userID: 193 
+[2020-12-30T21:52:25.708] [INFO] userDao - START getUserProfileByUserID : {"key":"UserID","val":193}
+[2020-12-30T21:52:25.714] [INFO] userDao - END getUserProfileByUserID
+[2020-12-30T21:52:25.714] [INFO] users - profileInfo success
+[2020-12-30T21:54:13.176] [INFO] users - profileInfo userID: 193 
+[2020-12-30T21:54:13.237] [INFO] users - profileInfo userID: 193 
+[2020-12-30T21:54:13.237] [INFO] userDao - START getUserProfileByUserID : {"key":"UserID","val":193}
+[2020-12-30T21:54:13.244] [INFO] userDao - END getUserProfileByUserID
+[2020-12-30T21:54:13.244] [INFO] users - profileInfo success
+[2020-12-30T21:54:46.195] [INFO] users - profileInfo userID: 193 
+[2020-12-30T21:54:46.343] [INFO] users - profileInfo userID: 193 
+[2020-12-30T21:54:46.343] [INFO] userDao - START getUserProfileByUserID : {"key":"UserID","val":193}
+[2020-12-30T21:54:46.349] [INFO] userDao - END getUserProfileByUserID
+[2020-12-30T21:54:46.349] [INFO] users - profileInfo success
+[2020-12-30T21:57:12.433] [INFO] users - profileInfo userID: 193 
+[2020-12-30T21:57:12.501] [INFO] users - profileInfo userID: 193 
+[2020-12-30T21:57:12.501] [INFO] userDao - START getUserProfileByUserID : {"key":"UserID","val":193}
+[2020-12-30T21:57:12.507] [INFO] userDao - END getUserProfileByUserID
+[2020-12-30T21:57:12.507] [INFO] users - profileInfo success
+[2020-12-30T22:01:03.240] [INFO] users - profileInfo userID: 193 
+[2020-12-30T22:01:03.317] [INFO] users - profileInfo userID: 193 
+[2020-12-30T22:01:03.317] [INFO] userDao - START getUserProfileByUserID : {"key":"UserID","val":193}
+[2020-12-30T22:01:03.323] [INFO] userDao - END getUserProfileByUserID
+[2020-12-30T22:01:03.323] [INFO] users - profileInfo success
+[2020-12-30T22:45:23.652] [INFO] users - profileInfo userID: 193 
+[2020-12-30T22:45:23.757] [INFO] users - profileInfo userID: 193 
+[2020-12-30T22:45:23.757] [INFO] userDao - START getUserProfileByUserID : {"key":"UserID","val":193}
+[2020-12-30T22:45:23.763] [INFO] userDao - END getUserProfileByUserID
+[2020-12-30T22:45:23.763] [INFO] users - profileInfo success
+[2020-12-30T22:45:46.856] [INFO] users - profileInfo userID: 193 
+[2020-12-30T22:45:46.962] [INFO] users - profileInfo userID: 193 
+[2020-12-30T22:45:46.962] [INFO] userDao - START getUserProfileByUserID : {"key":"UserID","val":193}
+[2020-12-30T22:45:46.972] [INFO] userDao - END getUserProfileByUserID
+[2020-12-30T22:45:46.972] [INFO] users - profileInfo success
+[2020-12-30T22:46:27.568] [INFO] users - profileInfo userID: 193 
+[2020-12-30T22:46:27.637] [INFO] users - profileInfo userID: 193 
+[2020-12-30T22:46:27.637] [INFO] userDao - START getUserProfileByUserID : {"key":"UserID","val":193}
+[2020-12-30T22:46:27.643] [INFO] userDao - END getUserProfileByUserID
+[2020-12-30T22:46:27.643] [INFO] users - profileInfo success
+[2020-12-30T22:46:59.747] [INFO] users - profileInfo userID: 193 
+[2020-12-30T22:46:59.796] [INFO] users - profileInfo userID: 193 
+[2020-12-30T22:46:59.796] [INFO] userDao - START getUserProfileByUserID : {"key":"UserID","val":193}
+[2020-12-30T22:46:59.801] [INFO] userDao - END getUserProfileByUserID
+[2020-12-30T22:46:59.801] [INFO] users - profileInfo success
+[2020-12-30T22:47:00.543] [INFO] users - profileInfo userID: 193 
+[2020-12-30T22:47:00.587] [INFO] users - profileInfo userID: 193 
+[2020-12-30T22:47:00.587] [INFO] userDao - START getUserProfileByUserID : {"key":"UserID","val":193}
+[2020-12-30T22:47:00.591] [INFO] userDao - END getUserProfileByUserID
+[2020-12-30T22:47:00.592] [INFO] users - profileInfo success
+[2020-12-30T22:47:50.431] [INFO] users - profileInfo userID: 193 
+[2020-12-30T22:47:50.541] [INFO] users - profileInfo userID: 193 
+[2020-12-30T22:47:50.542] [INFO] userDao - START getUserProfileByUserID : {"key":"UserID","val":193}
+[2020-12-30T22:47:50.547] [INFO] userDao - END getUserProfileByUserID
+[2020-12-30T22:47:50.548] [INFO] users - profileInfo success

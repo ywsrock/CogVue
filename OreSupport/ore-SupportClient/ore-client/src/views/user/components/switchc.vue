@@ -3,7 +3,7 @@
     <span
       class="weui-switch"
       :class="{ 'weui-switch-on': isChecked }"
-      :value="value"
+      :value="checksts"
       @click="toggle"
       style="position:relative"
     >
@@ -35,10 +35,15 @@ export default {
       type: String,
       default: "",
     },
+    index: {
+      type: String,
+      required: false,
+    },
   },
   data() {
     return {
       isChecked: this.value,
+      checksts: this.value,
     };
   },
   computed: {
@@ -55,12 +60,13 @@ export default {
       this.isChecked = val;
     },
     isChecked(val) {
-      this.$emit("change", val);
+      this.$emit("change", this.index, val);
     },
   },
   methods: {
     toggle() {
       this.isChecked = !this.isChecked;
+      this.checksts = this.isChecked;
     },
   },
 };

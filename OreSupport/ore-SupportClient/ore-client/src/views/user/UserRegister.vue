@@ -102,7 +102,7 @@
 
 <script>
 import schema from "async-validator";
-import { validEmail } from "@/utils/validate";
+import { validEmail, validPasswd } from "@/utils/validate";
 import { Message } from "element-ui";
 
 /* eslint-disable */
@@ -122,6 +122,12 @@ export default {
     const validatePassword = (rule, value, callback) => {
       if (value.length < 6) {
         callback(new Error("パスワード6桁以上を設定していくだいさ。"));
+      } else if (!validPasswd(value)) {
+        callback(
+          new Error(
+            "最小6文字、最大10文字、少なくとも1つの大文字、1つの小文字、1つの数字、および1つの特殊文字"
+          )
+        );
       } else {
         callback();
       }

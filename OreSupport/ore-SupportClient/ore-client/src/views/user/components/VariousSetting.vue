@@ -5,34 +5,42 @@
         <h1>各種設定</h1>
       </div>
       <!-- /.page-title -->
-
+      <!--権限設定-->
       <div class="background-white p20 mb30">
         <h3 class="page-title">
           権限設定
           <el-button
             type="primary"
             class="btn btn-primary btn-xs pull-right"
-            @click="basicInfo_Save"
-            v-if="!is_readonly"
+            @click="power_Save(1)"
+            v-if="is_readonly"
             >保存</el-button
           >
-          <el-button
+          <!-- <el-button
             type="primary"
             class="btn btn-primary btn-xs pull-right"
             @click="is_readonly = false"
             v-if="is_readonly"
             >編集</el-button
-          >
+          >-->
         </h3>
         <div class="row">
           <div class="col-3 text-center m-1">
-            <label class="h4">プロフィール</label>
+            <label class="col-form-label-lg h4">プロフィール</label>
           </div>
           <div class="col-6 text-center m-1">
-            <div class="form-control">公開中</div>
+            <div class="form-control">
+              {{ powerSetting.profileOpen ? status[0] : status[1] }}
+            </div>
           </div>
           <div class="col-3">
-            <switchc text="ON|OFF" />
+            <switchc
+              text="ON|OFF"
+              ref="profile"
+              index="1"
+              @change="switchc"
+              :value="powerSetting.profileOpen"
+            />
           </div>
         </div>
 
@@ -42,10 +50,18 @@
             <label class="h4">コグエボ</label>
           </div>
           <div class="col-6 text-center m-1">
-            <div class="form-control">公開中</div>
+            <div class="form-control">
+              {{ powerSetting.cogEvoOpen ? status[0] : status[1] }}
+            </div>
           </div>
           <div class="col-3">
-            <switchc text="ON|OFF" />
+            <switchc
+              text="ON|OFF"
+              index="2"
+              ref="cogEvo"
+              @change="switchc"
+              :value="powerSetting.cogEvoOpen"
+            />
           </div>
         </div>
 
@@ -55,45 +71,167 @@
             <label class="h4">行動</label>
           </div>
           <div class="col-6 text-center m-1">
-            <div class="form-control">公開中</div>
+            <div class="form-control">
+              {{ powerSetting.actionOpen ? status[0] : status[1] }}
+            </div>
           </div>
           <div class="col-3">
-            <switchc text="ON|OFF" />
+            <switchc
+              text="ON|OFF"
+              index="3"
+              ref="action"
+              @change="switchc"
+              :value="powerSetting.actionOpen"
+            />
           </div>
         </div>
 
         <!--ブログ-->
-        <div class="row">
-          <div class="col-3 text-center m-1">
-            <label class="h4">ブログ</label>
+        <!--style="width:100%;height: 100%; background-color: rgba(255,0,0,0.1);"-->
+        <div>
+          <div class="row">
+            <div class="col-3 text-center m-1 ">
+              <label class="h4">ブログ</label>
+            </div>
+            <div class="col-6 text-center m-1">
+              <div class="form-control">
+                {{ powerSetting.blogOpen ? status[0] : status[1] }}
+              </div>
+            </div>
+            <div class="col-3">
+              <switchc
+                text="ON|OFF"
+                ref="blog"
+                index="4"
+                @change="switchc"
+                :value="powerSetting.blogOpen"
+              />
+            </div>
           </div>
-          <div class="col-6 text-center m-1">
-            <div class="form-control">公開中</div>
+          <div class="row">
+            <div class="col-3 text-center m-1">
+              <label class="h4"></label>
+            </div>
+            <div class="col-6 text-center m-1">
+              <div class="form-control">
+                {{ powerSetting.blogCommentOpen ? status[2] : status[3] }}
+              </div>
+            </div>
+            <div class="col-3">
+              <switchc
+                text="ON|OFF"
+                ref="blogComment"
+                index="5"
+                @change="switchc"
+                :value="powerSetting.blogCommentOpen"
+              />
+            </div>
           </div>
-          <div class="col-3">
-            <switchc text="ON|OFF" />
+          <div class="row">
+            <div class="col-3 text-center m-1">
+              <label class="h4"></label>
+            </div>
+            <div class="col-6 text-center m-1">
+              <div class="form-control">
+                {{ powerSetting.blogCogEvoOpen ? status[4] : status[5] }}
+              </div>
+            </div>
+            <div class="col-3">
+              <switchc
+                text="ON|OFF"
+                ref="blogCogEvo"
+                index="6"
+                @change="switchc"
+                :value="powerSetting.blogCogEvoOpen"
+              />
+            </div>
           </div>
         </div>
+      </div>
+
+      <!--パスワードリセット-->
+      <div class="background-white p20 mb30">
+        <h3 class="page-title">
+          パスワード変更
+          <el-button
+            type="primary"
+            class="btn btn-primary btn-xs pull-right"
+            @click="power_Save(2)"
+            v-if="is_readonly"
+            >保存</el-button
+          >
+          <!--<el-button
+            type="primary"
+            class="btn btn-primary btn-xs pull-right"
+            @click="is_readonly = false"
+            v-if="is_readonly"
+            >編集</el-button
+          >-->
+        </h3>
+        <!--現在のパスワード-->
         <div class="row">
           <div class="col-3 text-center m-1">
-            <label class="h4"></label>
+            <label class="col-form-label-lg h4">現在のパスワード</label>
           </div>
           <div class="col-6 text-center m-1">
-            <div class="form-control">コメント機能</div>
-          </div>
-          <div class="col-3">
-            <switchc text="ON|OFF" />
+            <div>
+              <input
+                type="password"
+                name="password"
+                v-model="passwordForm.passwdOld"
+                required
+                style="background-color:white;border: 2px solid #e9e9e9;"
+                class="form-control"
+              />
+            </div>
           </div>
         </div>
+
+        <!--新しいパスワード-->
         <div class="row">
           <div class="col-3 text-center m-1">
-            <label class="h4"></label>
+            <label class="col-form-label-lg h4">新しいパスワード</label>
           </div>
           <div class="col-6 text-center m-1">
-            <div class="form-control">コグエボ結果</div>
+            <div>
+              <input
+                type="password"
+                ref="password"
+                name="password"
+                v-model="passwordForm.password"
+                @keyup="checkPassword"
+                required
+                style="background-color:white;border: 2px solid #e9e9e9;"
+                class="form-control"
+                minlength="6"
+                maxlength="16"
+              />
+            </div>
+            <p style="color:red;font-size:12px" ref="e-password"></p>
           </div>
-          <div class="col-3">
-            <switchc text="ON|OFF" />
+        </div>
+
+        <!--新しいパスワード(確認)-->
+        <div class="row">
+          <div class="col-3 text-center m-1">
+            <label class="col-form-label-lg h4">新しいパスワード(確認)</label>
+          </div>
+          <div class="col-6 text-center m-1">
+            <div>
+              <input
+                type="password"
+                ref="repeatpassword"
+                name="repeatpassword"
+                v-model="passwordForm.repeatpassword"
+                @keyup="checkrepeatPassword"
+                required
+                style="background-color:white;border: 2px solid #e9e9e9;"
+                class="form-control"
+                minlength="6"
+                maxlength="16"
+              />
+            </div>
+            <p style="color:red;font-size:12px" ref="e-password2"></p>
           </div>
         </div>
       </div>
@@ -105,14 +243,8 @@
 import schema from "async-validator";
 import { Message } from "element-ui";
 import switchc from "./switchc";
-import {
-  validEmail,
-  validPhone,
-  validURL,
-  validPostalcode,
-  isNumber,
-} from "@/utils/validate";
-
+import { validPasswd } from "@/utils/validate";
+/* eslint-disable */
 export default {
   name: "VariousSetting",
   components: {
@@ -124,351 +256,208 @@ export default {
     },
   },
   data() {
-    // メールアドレスチェック
-    const validateEmail = (rule, value, callback) => {
-      if (!validEmail(value)) {
-        callback(new Error("正ししくメールアドレスを入力してください。"));
+    // パスワードチェック
+    const validatePassword = (rule, value, callback) => {
+      if (value.length < 6) {
+        callback(new Error("パスワード6桁以上を設定していくだいさ。"));
+      } else if (!validPasswd(value)) {
+        callback(
+          new Error(
+            "最小6文字、最大10文字、少なくとも1つの大文字、1つの小文字、1つの数字、および1つの特殊文字"
+          )
+        );
       } else {
         callback();
       }
     };
-    // 電話番号チェック
-    const validatePhone = (rule, value, callback) => {
-      if (!validPhone(value)) {
-        callback(new Error("半角数字・ハイフン無しで入力してください。"));
+
+    // 確認パスワード確認
+    var validatePassword2 = (rule, value, callback) => {
+      if (value === "") {
+        callback(new Error("確認パスワードを入力してください。"));
+      } else if (value !== this.passwordForm.password) {
+        callback(new Error("パスワードと一致しない。"));
       } else {
         callback();
       }
     };
-    // URLチェック
-    const validateURL = (rule, value, callback) => {
-      if (!validURL(value)) {
-        callback(new Error("正しくURLを入力してください。"));
-      } else {
-        callback();
-      }
-    };
-    // 郵便番号チェック
-    const validatePostalcode = (rule, value, callback) => {
-      if (!validPostalcode(value)) {
-        callback(new Error("半角数字・ハイフン無しで入力してください。"));
-      } else {
-        callback();
-      }
-    };
-    // 部屋数字チェック
-    const validateHouseNumber = (rule, value, callback) => {
-      if (!isNumber(value)) {
-        callback(new Error("半角数字で入力してください。"));
-      } else {
-        callback();
-      }
-    };
+
     return {
-      basicInfo: {
-        Update_type: "basicInfo",
-        lastName: "",
-        firstName: "",
-        sex: "",
-        birthday: "",
-        email: "",
-        phone: "",
-        avatar: "",
-        aboutMe: "",
+      powerSetting: {
+        //プロフィル
+        profileOpen: false,
+        //コグエボ
+        cogEvoOpen: false,
+        //行動
+        actionOpen: false,
+        //ブログ
+        blogOpen: false,
+        //コメント
+        blogCommentOpen: false,
+        //コグエボ結果
+        blogCogEvoOpen: false,
       },
-      addressInfo: {
-        Update_type: "AdressInfo",
-        state: "",
-        city: "",
-        streat: "",
-        houseNumber: "",
-        postalcode: "",
-      },
-      passwordInfo: {
-        Update_type: "PasswordInfo",
-        oldPassword: "",
-        newPassword: "",
-      },
-      snsInfo: {
-        Update_type: "snsInfo",
-        sns_facebook: "",
-        sns_twtitter: "",
-        sns_instagram: "",
-        sns_other: "",
+      status: [
+        "公開中",
+        "非公開",
+        "ブログコメントあり",
+        "ブログコメントなし",
+        "ブログにコクエボ結果表示",
+        "ブログにコクエボ結果表示しない",
+      ],
+      passwordForm: {
+        passwdOld: "",
+        password: "",
+        repeatpassword: "",
       },
       rules: {
-        email: [{ required: true, validator: validateEmail }],
-        phone: [{ validator: validatePhone }],
-        sns_facebook: [{ validator: validateURL }],
-        sns_twtitter: [{ validator: validateURL }],
-        sns_instagram: [{ validator: validateURL }],
-        sns_other: [{ validator: validateURL }],
-        postalcode: [{ validator: validatePostalcode }],
-        houseNumber: [{ validator: validateHouseNumber }],
+        passwdOld: [{ required: true }],
+        password: [{ required: true, validator: validatePassword }],
+        repeatpassword: [{ required: true, validator: validatePassword2 }],
       },
+      //編集
       is_readonly: true,
-      addresses: [],
-      isModalShow: false,
-      addressesIndex: 0,
-      myOptions: {
-        layout: {
-          color: "black",
-          backgroundColor: "lightgray",
-          selectedColor: "white",
-          selectedBackgroundColor: "green",
-          borderColor: "black",
-          fontFamily: "Arial",
-          fontWeight: "normal",
-          fontWeightSelected: "bold",
-          squareCorners: false,
-          noBorder: false,
-        },
-        // size: {
-        //   fontSize: 14,
-        //   height: 34,
-        //   padding: 7,
-        //   width: 100,
-        // },
-        items: {
-          delay: 0.4,
-          preSelected: "unknown",
-          disabled: false,
-          labels: [
-            { name: "Off", color: "white", backgroundColor: "red" },
-            { name: "On", color: "white", backgroundColor: "green" },
-          ],
-        },
-      },
     };
   },
-  created() {
-    // ユーザ情報更新
-    this.proUpdate = function(updateObj) {
-      this.$store
-        .dispatch("user/UpdateUser", updateObj)
-        .then(() => {
-          Message({
-            message: "情報を更新しました。",
-            type: "success",
-            duration: 5 * 1000,
-          });
-        })
-        .catch((err) => {
-          console.log(err);
-          Message({
-            message: "情報更新を失敗しました。",
-            type: "error",
-            duration: 5 * 1000,
-          });
-        });
-    };
-  },
+  created() {},
   mounted() {
-    this.fetchUserProfile();
+    this.showUserPower();
   },
   methods: {
-    // ユーザーのプロフィールを取得
-    async fetchUserProfile() {
-      try {
-        const res = await this.$store.dispatch("user/getProfileInfo");
-        this.basicInfo = res.dataInfo.basicInfo;
-        this.addressInfo = res.dataInfo.addressInfo;
-        this.passwordInfo = res.dataInfo.passwordInfo;
-        this.snsInfo = res.dataInfo.snsInfo;
-        //画像パス親に設定
-        this.$parent.avatarSrc = this.basicInfo.avatar;
-      } catch (err) {
-        Message({
-          message: "ユーザ情報取得失敗、サイト管理者に連絡ください。",
-          type: "error",
-          duration: 5 * 1000,
-        });
-      }
-    },
-    // 住所自動検索
-    async searchAddress() {
-      try {
-        const params = new URLSearchParams();
-        params.append("postalcode", this.$refs["postalcode"].value);
-        const res = await this.$store.dispatch("address/autoSearch", params);
-        if (res.results !== null && res.results.length === 1) {
-          this.addressInfo.state = res.results[0].address1;
-          this.addressInfo.city = res.results[0].address2;
-          this.addressInfo.streat = res.results[0].address3;
-        } else if (res.results !== null && res.results.length > 1) {
-          this.addresses = res.results;
-          this.isModalShow = true;
-        } else {
-          // alert("該当する住所がありません。");
-          Message({
-            message: "該当する住所がありません。",
-            type: "error",
-            duration: 2 * 1000,
-          });
-        }
-      } catch (err) {
-        Message({
-          message: "住所が見つかりません。",
-          type: "error",
-          duration: 2 * 1000,
-        });
-      }
-    },
-    // 住所が重複した場合、選択させる
-    selectAddress: function() {
-      this.addressInfo.state = this.addresses[this.addressesIndex].address1;
-      this.addressInfo.city = this.addresses[this.addressesIndex].address2;
-      this.addressInfo.streat = this.addresses[this.addressesIndex].address3;
-
-      this.isModalShow = false;
-    },
-    //全項目チェックして、情報保存
-    basicInfo_Save: function() {
-      this.checkEmail();
-      this.checkPhone();
-      if (
-        this.$refs["e-email"].textContent === "" &&
-        this.$refs["e-phone"].textContent === ""
-      ) {
-        //基本情報更新
-        this.proUpdate(this.basicInfo);
-      }
-      //編集不可
-      this.is_readonly = true;
-    },
-    //全項目チェックして、SNS情報
-    snsInfo_Save: function() {
-      this.checkURL("sns_facebook");
-      this.checkURL("sns_twtitter");
-      this.checkURL("sns_instagram");
-      this.checkURL("sns_other");
-      if (
-        this.$refs["e-sns_facebook"].textContent === "" &&
-        this.$refs["e-sns_twtitter"].textContent === "" &&
-        this.$refs["e-sns_instagram"].textContent === "" &&
-        this.$refs["e-sns_other"].textContent === ""
-      ) {
-        this.proUpdate(this.snsInfo);
-      }
-      //編集不可
-      this.is_readonly = true;
-    },
-    //全項目チェックして、アドレス情報
-    addressInfo_Save: function() {
-      this.checkPostalcode();
-      this.checkHouseNumber();
-      if (
-        this.$refs["e-postalcode"].textContent === "" &&
-        this.$refs["e-houseNumber"].textContent === ""
-      ) {
-        this.proUpdate(this.addressInfo);
-      }
-      //編集不可
-      this.is_readonly = true;
-    },
-    //画像アップロード
-    onchange: function() {
-      let that = this;
-      //ファイル取得
-      let fl = this.$refs.upfile.files[0];
-      //ファイルの形式
-      const isJPG = fl.type === "image/jpeg";
-      //ファイルサイズ
-      const isLt2M = fl.size / 1024 / 1024 < 2;
-      if (!isJPG) {
-        Message({
-          message: "jpegファイルをアップロードしてくださり。",
-          type: "error",
-          duration: 5 * 1000,
-        });
-        return;
-      }
-      if (!isLt2M) {
-        Message({
-          message: "サイズは2MB以下のファイルをアップロードしてくだい。",
-          type: "error",
-          duration: 5 * 1000,
-        });
-        return;
-      }
-      //Content-Type:form/multipart で送信されます
-      let data = new FormData();
-      data.append("imgAvatar", fl, fl.name);
+    //権限初期表示
+    showUserPower() {
       this.$store
-        .dispatch("user/imageUp", data)
-        .then(function(data) {
-          return data.imgUrl;
+        .dispatch("user/showUserPower")
+        .then((res) => {
+          //権限の設定
+          Object.assign(this.powerSetting, res.data);
         })
-        .then(function(text) {
-          that.basicInfo.avatar = text;
-        })
-        .catch(function(error) {
-          window.alert("Error: " + error.message);
+        .catch((error) => {
+          console.log(error);
         });
     },
-    // メールのチェック処理
-    checkEmail: function() {
-      var fields = { email: this.$refs.email.value };
-      var ret = this.validate(fields, { email: this.rules.email });
+    //権限切り替え設定
+    switchc(index, value) {
+      console.log(`${index}---${value}`);
+      switch (index) {
+        case "1":
+          //   let v = !this.$refs.actionSwitchc.value;
+          this.powerSetting.profileOpen = value;
+          break;
+        case "2":
+          this.powerSetting.cogEvoOpen = value;
+          break;
+        case "3":
+          this.powerSetting.actionOpen = value;
+          break;
+        case "4":
+          this.powerSetting.blogOpen = value;
+          break;
+        case "5":
+          this.powerSetting.blogCommentOpen = value;
+          break;
+        case "6":
+          this.powerSetting.blogCogEvoOpen = value;
+          break;
+        default:
+      }
+    },
+    //権限保存
+    power_Save(index) {
+      switch (index) {
+        case 2:
+          //   this.is_readonly = true;
+          //パスワードチェック処理
+          var ret = this.validate(this.passwordForm, this.rules);
+          if (ret) {
+            Message({
+              message: "入力されたパスワード情報を確認ください。",
+              type: "error",
+              duration: 5 * 1000,
+            });
+            return;
+          }
+          //パスワード更新処理
+          this.$store
+            .dispatch("user/passwordSetting", {
+              passwordForm: this.passwordForm,
+            })
+            .then((res) => {
+              Message({
+                message: "パスワードを更新しました。",
+                type: "success",
+                duration: 5 * 1000,
+              });
+            })
+            .catch((error) => {
+              //   Message({
+              //     message:
+              //       "パスワードを更新失敗しました。サイト管理までご連絡ください",
+              //     type: "error",
+              //     duration: 5 * 1000,
+              //   });
+              console.log(error);
+            });
+          console.log(index);
+          beak;
+        default:
+          this.$store
+            .dispatch("user/varousSetting", { powerSetting: this.powerSetting })
+            .then((res) => {
+              Message({
+                message: "権限を更新しました。",
+                type: "success",
+                duration: 5 * 1000,
+              });
+            })
+            .catch((error) => {
+              Message({
+                message: "更新失敗しました。サイト管理までご連絡ください。",
+                type: "success",
+                duration: 5 * 1000,
+              });
+              console.log(error);
+            });
+          //   this.is_readonly = true;
+          console.log(index);
+      }
+      this.is_readonly = true;
+      console.log("test");
+    },
+    // パスワードのチェック処理
+    checkPassword: function(e) {
+      var fields = { password: e.target.value };
+      var ret = this.validate(fields, { password: this.rules.password });
       if (ret) {
-        const { message } = ret[0];
-        this.$refs["e-email"].textContent = message;
+        const { message, field } = ret[0];
+        // this.$refs.password.focus();
+        this.$refs["e-password"].textContent = message;
+        this.$refs["e-password"].style.backgroundColor = "orange";
       } else {
-        this.$refs["e-email"].textContent = "";
+        this.$refs["e-password"].textContent = "";
+        this.$refs["e-password"].style.backgroundColor = "";
       }
     },
-    // 電話番号のチェック処理 任意項目のためブランク許容
-    checkPhone: function() {
-      var fields = { phone: this.$refs.phone.value };
-      var ret = this.validate(fields, { phone: this.rules.phone });
-      if (fields["phone"] && ret) {
-        const { message } = ret[0];
-        this.$refs["e-phone"].textContent = message;
+    // パスワード2のチェック処理
+    checkrepeatPassword: function(e) {
+      var fields = { repeatpassword: e.target.value };
+      var ret = this.validate(fields, {
+        repeatpassword: this.rules.repeatpassword,
+      });
+      if (ret) {
+        const { message, field } = ret[0];
+        this.$refs["e-password2"].textContent = message;
+        this.$refs["e-password2"].style.backgroundColor = "orange";
       } else {
-        this.$refs["e-phone"].textContent = "";
-      }
-    },
-    // URLのチェック処理 任意項目のためブランク許容
-    checkURL: function(sns) {
-      var fields = {};
-      fields[sns] = this.$refs[sns].value;
-      var rules = {};
-      rules[sns] = this.rules[sns];
-      var ret = this.validate(fields, rules);
-      if (fields[sns] && ret) {
-        const { message } = ret[0];
-        this.$refs[`e-${sns}`].textContent = message;
-      } else {
-        this.$refs[`e-${sns}`].textContent = "";
-      }
-    },
-    // 郵便番号のチェック処理 任意項目のためブランク許容
-    checkPostalcode: function() {
-      var fields = { postalcode: this.$refs.postalcode.value };
-      var ret = this.validate(fields, { postalcode: this.rules.postalcode });
-      if (fields["postalcode"] && ret) {
-        const { message } = ret[0];
-        this.$refs["e-postalcode"].textContent = message;
-      } else {
-        this.$refs["e-postalcode"].textContent = "";
-      }
-    },
-    // 郵便番号のチェック処理 任意項目のためブランク許容
-    checkHouseNumber: function() {
-      var fields = { houseNumber: this.$refs.houseNumber.value };
-      var ret = this.validate(fields, { houseNumber: this.rules.houseNumber });
-      if (fields["houseNumber"] && ret) {
-        const { message } = ret[0];
-        this.$refs["e-houseNumber"].textContent = message;
-      } else {
-        this.$refs["e-houseNumber"].textContent = "";
+        this.$refs["e-password2"].textContent = "";
+        this.$refs["e-password2"].style.backgroundColor = "";
       }
     },
     // 画面項目チェック
     validate: function(field, rules) {
       var validator = new schema(rules);
       var check_result;
-      validator.validate(field, { first: true }, (errors) => {
+      validator.validate(field, { first: true }, (errors, res) => {
         if (errors) {
           check_result = errors;
         }
