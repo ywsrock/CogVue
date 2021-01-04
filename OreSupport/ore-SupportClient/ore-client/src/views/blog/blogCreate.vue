@@ -45,9 +45,10 @@
                               filter
                               outlined
                               v-for="category in categories"
-                              :value="category.value" :key="category.value"
+                              :value="category.id"
+                              :key="category.id"
                             >
-                              {{ category.label }}
+                              {{ category.name }}
                             </v-chip>
                           </v-chip-group>
                         </div>
@@ -60,14 +61,20 @@
                             >から
                           </label>
 
-                          <v-chip-group column multiple color="green">
+                          <v-chip-group
+                            v-model="registForm.actionSelected"
+                            column
+                            multiple
+                            color="green"
+                          >
                             <v-chip
                               filter
                               outlined
-                              v-for="tag in tags"
-                              :key="tag"
+                              v-for="action in actions"
+                              :value="action.id"
+                              :key="action.id"
                             >
-                              {{ tag }}
+                              {{ action.name }}
                             </v-chip>
                           </v-chip-group>
                         </div>
@@ -182,13 +189,13 @@ import { Message } from "element-ui";
 var img = require("../../../public/favicon.png");
 /* eslint-disable */
 export default {
-  // watch: {
-  //   categorySelected: {
-  //     handler: function(newValue, oldValue) {
-  //       console.log(newValue);
-  //     },
-  //   },
-  // },
+  watch: {
+    categorySelected: {
+      handler: function(newValue, oldValue) {
+        console.log(newValue);
+      },
+    },
+  },
   data() {
     return {
       registForm: {
@@ -197,27 +204,41 @@ export default {
         blogimage: "",
         filename: "",
         categorySelected: "",
+        actionSelected: [],
       },
       blogImg: "" || img,
       defaultsrc: img,
-      tags: ["サンマ", "マラソン", "モーツァルト", "パズル"],
-      categories: [
-        { label: "食事", value: 1 },
-        { label: "サプリ", value: 2 },
-        { label: "運動", value: 3 },
-        { label: "脳トレ", value: 4 },
-        { label: "音楽", value: 5 },
-        { label: "社会参加", value: 6 },
-        { label: "その他", value: 7 },
-      ],
+      categories: [],
+      actions: [],
     };
+  },
+  mounted() {
+    this.getUserAction();
   },
 
   methods: {
-    // categorySelected: function(e){
-    //   this.categorySelected = e.target.result;
-    //   console.log(this.categorySelected);
-    // },
+    getUserAction() {
+      var that = this;
+      console.log(this.$router.query);
+      //行動取得
+      this.$store
+        .dispatch("action/queryAction", this.$route.query.userid)
+        .then((res) => {
+          this.$nextTick().then(function() {
+            const actions = that.$store.getters.action;
+            console.log(actions);
+            that.actions = actions.userAction;
+            that.categories = actions.userActionMaster;
+            // アクション重複削除
+            that.actions = that.actions.filter((value, index, array) => {
+              return array.findIndex((action) => value.name === action.name) === index;
+            });
+          });
+        })
+        .catch((error) => {
+          console.log(error.data);
+        });
+    },
 
     defaultBlogImg: function() {
       return this.defaultsrc;

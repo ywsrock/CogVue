@@ -118,6 +118,7 @@ router.post("/create", [checkuser.verifyUser], async function (req, res, next) {
       }
 
       category = registForm.categorySelected;
+      userAction = registForm.actionSelected;
     }
 
     log.info(`imageUp success`);
@@ -147,6 +148,7 @@ router.post("/create", [checkuser.verifyUser], async function (req, res, next) {
         BlogImage: req.file !== undefined ? req.file.filename : "",
         Timestamp: Sequelize.fn("NOW"),
         Category: category,
+        UserAction: userAction
       };
 
       // DBにユーザ登録を呼び出す
@@ -566,36 +568,5 @@ router.post("/imageDelete", async function (req, res, next) {
   }
   return res.status(200).send(resObj);
 });
-
-// router.post("/imageDelete", async function (req, res, next) {
-//   console.log(req.query.blogID);
-
-//   var id = req.query.blogID;
-//   //ブログ詳細取得
-//   var imageDelete = await blogmodel.imageDelete({ key: "id", val: id });
-
-//   if (typeof imageDelete.errors != "undefined") {
-//     // エラー結果
-//     resObj = {
-//       code: STATUS_MESSAGE.CODE_402,
-//       message: imageDelete.message,
-//     };
-//     return res.status(200).send(resObj);
-//   } else {
-//     //DBの絡むと大文字小文字も併せないといけない
-//     // var title = blog.Title;
-//     // var content = blog.Content
-
-//     resObj = {
-//       code: STATUS_MESSAGE.CODE_SUCCESS,
-//       data: {
-//         id: imageDelete.id,
-//         title: imageDelete.Title,
-//         content: imageDelete.Content,
-//       },
-//     };
-//   }
-//   return res.status(200).send(resObj);
-// });
 
 module.exports = router;

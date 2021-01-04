@@ -13,6 +13,15 @@ const { Op } = require("sequelize");
  */
 const createBlog = async (queryInfo) => {
   try {
+    // let userActionIds = String(queryInfo.Category);
+    // queryInfo.BlogAction.forEach((id) => {
+    //   console.log(id);
+    //   userActionIds = userActionIds + "," + String(id);
+    // });
+
+    // 複数の行動タグをカンマ区切りで文字列にする
+    let userActionIds = String(queryInfo.UserAction.join());
+
     // トランザクション処理開始
     const t = await sequelize.transaction();
     const result = await Blog.create({
@@ -26,7 +35,10 @@ const createBlog = async (queryInfo) => {
       BlogImage: queryInfo.BlogImage,
       // 投稿日
       Timestamp: queryInfo.Timestamp,
-      Category: queryInfo.Category,
+      // 行動
+      UserActionID: userActionIds,
+      // カテゴリ
+      CategoryID: queryInfo.Category,
     });
     // トランザクションコンミット
     await t.commit();
