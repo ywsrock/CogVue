@@ -232,7 +232,10 @@ export default {
             that.categories = actions.userActionMaster;
             // アクション重複削除
             that.actions = that.actions.filter((value, index, array) => {
-              return array.findIndex((action) => value.name === action.name) === index;
+              return (
+                array.findIndex((action) => value.name === action.name) ===
+                index
+              );
             });
           });
         })
