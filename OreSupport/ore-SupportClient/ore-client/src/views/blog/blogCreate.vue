@@ -190,13 +190,13 @@ import { Message } from "element-ui";
 var img = require("../../../public/favicon.png");
 /* eslint-disable */
 export default {
-  // watch: {
-  //   categorySelected: {
-  //     handler: function(newValue, oldValue) {
-  //       console.log(newValue);
-  //     },
-  //   },
-  // },
+  watch: {
+    categorySelected: {
+      handler: function(newValue, oldValue) {
+        console.log(newValue);
+      },
+    },
+  },
   data() {
     return {
       registForm: {
