@@ -32,6 +32,8 @@ CREATE TABLE `tb_blog` (
   `Content` text CHARACTER SET utf8 COLLATE utf8_unicode_ci,
   `BlogImage` varchar(255) CHARACTER SET utf8 COLLATE utf8_unicode_ci DEFAULT NULL,
   `Timestamp` datetime NOT NULL,
+  `UserActionID` varchar(255) CHARACTER SET utf8 COLLATE utf8_unicode_ci DEFAULT NULL,
+  `CategoryID` varchar(255) CHARACTER SET utf8 COLLATE utf8_unicode_ci DEFAULT NULL,
   PRIMARY KEY (`id`)
 ) ENGINE=InnoDB AUTO_INCREMENT=15 DEFAULT CHARSET=latin1;
 
