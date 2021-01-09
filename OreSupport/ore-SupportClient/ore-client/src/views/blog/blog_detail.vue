@@ -15,10 +15,8 @@
                         {{ blogDetail.title }}
                       </h1>
                       <div style="text-align: right;">
-                        <button v-if="isMyProfile" @click.prevent="blogEdit()">
-                          編集する
-                        </button>
-                        <button @click.prevent="blogDelete()">
+                        <button v-if="isMyProfile" @click.prevent="blogEdit()">編集する</button>
+                        <button v-if="isMyProfile" @click.prevent="blogDelete()">
                           削除する
                         </button>
                         <button v-if="likedFlg" @click="destroyLike($event)">

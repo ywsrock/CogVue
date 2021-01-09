@@ -76,21 +76,41 @@ const getBlogList = async (queryInfo) => {
       },
       targetKey: "UserID",
     });
-    const result = await Blog.findAll({
-      order: [["id", "DESC"]],
-      include: [
-        {
-          model: User,
-          include: [
-            {
-              model: UserProfile,
-              required: false,
-            },
-          ],
-        },
-      ],
-    });
-    return result;
+    
+    if (queryInfo == undefined){
+      const result = await Blog.findAll({
+        order: [["id", "DESC"]],
+        include: [
+          {model:User,
+          include:
+          [{
+            model:UserProfile,
+            required: false,
+          }
+        ]}]
+      });
+      return result;
+  }else{
+      const result = await Blog.findAll({
+        where: {
+              [Op.and]: [{
+                      [queryInfo.key]: queryInfo.val
+                  },
+              ]
+          },
+        order: [["id", "DESC"]],
+        include: [
+          {model:User,
+          include:
+          [{
+            model:UserProfile,
+            required: false,
+          }
+        ]}]
+      });
+      return result;
+    }
+    // return result;
   } catch (error) {
     console.error("情報取得エラー:" + error.stack);
     throw error;
@@ -147,6 +167,7 @@ const getBlogDetail = async (queryInfo) => {
 
     const result = await Blog.findAll({
       attributes: [sequelize.fn("upper", sequelize.col("Title"))],
+
       where: {
         [Op.and]: [
           {
@@ -168,6 +189,7 @@ const getBlogDetail = async (queryInfo) => {
       ],
 
       attributes: { exclude: ["Password"] },
+      // attributes: ['Title',sequelize.fn('upper', sequelize.col("Title")),'Title'],      
     });
     return result;
   } catch (error) {

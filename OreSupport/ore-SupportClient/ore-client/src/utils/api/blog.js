@@ -20,9 +20,24 @@ export function createBlog(data) {
  * ブログ取得
  * @returns String
  */
-export function getBlogList() {
+// export function getBlogList(data) {
+//     return request({
+//         url: '/blog/bloglist',
+//         method: 'post',
+//         data
+//     })
+// }
+// export function getBlogList(param) {
+//     return request({
+//         url: '/blog/bloglist?myblog=' + param['myblog'],
+//         method: 'get',
+//     })
+// }
+
+
+export function getBlogList(param) {
     return request({
-        url: '/blog/bloglist',
+        url: param['myblog'] ?  '/blog/bloglist?myblog=' + param['myblog'] :  '/blog/bloglist',
         method: 'get',
     })
 }
