@@ -109,8 +109,8 @@ export default {
       "user-tab-4": "OrientationAbility",
       "user-tab-5": "PlanAblity",
       "user-tab-6": "AttentionAbility",
-      "settings-tab-1": "ActionCalendarDetail",
-      "settings-tab-2": "ActionCalendarManage",
+      "user-tab-7": "ActionCalendarDetail",
+      // "user-tab-7": "ActionCalendarManage",
     },
 
     categories: {
@@ -148,6 +148,12 @@ export default {
         index: 6,
         itemName: "注意力",
         describe: "現在の注意力",
+        icon: "mdi-charity",
+      },
+      ActionCalendarManage: {
+        index: 7,
+        itemName: "アクション",
+        describe: "アクション効果",
         icon: "mdi-charity",
       },
     },
