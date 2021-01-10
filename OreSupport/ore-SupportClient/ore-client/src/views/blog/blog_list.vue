@@ -56,7 +56,12 @@
                 <div class="content">
                   <div class="page-title">
                     <h1>{{ list.tableData.length }}件ヒットしました</h1>
+                    <div align="right">
+                    <button align="right" @click="sortBlog(1)">新しい順</button>
+                    <button align="right" @click="sortBlog(-1)">古い順</button>
+                    </div>
                   </div>
+
                   <div class="posts">
                     <div class="post" v-for="item in list.displayLists" :key="item.id">
                       <blogItem :item="item" />
@@ -315,11 +320,11 @@ export default {
         .catch();
       console.log("err=====");
     },
-    sortBlog(){
+    sortBlog(flag){
       let sortBlog = this.$store.getters.get_content;
       // ソート処理
       console.log(sortBlog)
-      this.sorttmethod(sortBlog,"timeStamp",1,true)
+      this.sorttmethod(sortBlog,"timeStamp",flag,true)
       // sortBlog.sort(function(a,b){
       //   var aDate = Date.parse(a.timeStamp);
       //   var bDate = Date.parse(b.timeStamp);
