@@ -93,7 +93,8 @@ router.get("/queryAction", [checkuser.verifyUser], async function (req, res, nex
             code: STATUS_MESSAGE.CODE_SUCCESS,
             data: {
                 actionOptions: JSON.stringify(actionOptions),
-                userAction: userAction
+                userAction: userAction,
+                userActionMaster: userActionMaster
             }
         }
     } catch (error) {

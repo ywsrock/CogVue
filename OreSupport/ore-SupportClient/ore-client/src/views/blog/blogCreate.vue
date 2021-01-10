@@ -22,11 +22,10 @@
                     <div class="row">
                       <div class="col-sm-8">
                         <div class="form-group col-sm-12">
-                          <label for="title">タイトル</label>
+                          <label for="title">ブログのタイトル</label>
                           <input
                             type="text"
                             ref="title"
-                            placeholder="タイトル"
                             v-model="registForm.title"
                             name="title"
                             required
@@ -38,29 +37,47 @@
                         <!-- /.form-group -->
                         <div class="form-group col-sm-12">
                           <label for="title">カテゴリ</label>
-                          <v-sheet>
-                            <v-chip-group mandatory active-class="primary--text">
-                              <v-chip v-for="tag in registForm.category" :key="tag">
-                                {{ tag }}
-                              </v-chip>
-                            </v-chip-group>
-                          </v-sheet>
+                          <v-chip-group
+                            v-model="registForm.categorySelected"
+                            column
+                            color="blue"
+                          >
+                            <v-chip
+                              filter
+                              outlined
+                              v-for="category in categories"
+                              :value="category.id"
+                              :key="category.id"
+                            >
+                              {{ category.name }}
+                            </v-chip>
+                          </v-chip-group>
                         </div>
 
                         <div class="form-group col-sm-12">
                           <label for="title">
                             行動タグ
                             <br />
-                            行動タグの追加については<a href="#">こちら</a>から
+                            行動タグの追加・削除については<a href="#">こちら</a
+                            >から
                           </label>
 
-                          <v-sheet>
-                            <v-chip-group multiple active-class="primary--text">
-                              <v-chip v-for="tag in tags" :key="tag">
-                                {{ tag }}
-                              </v-chip>
-                            </v-chip-group>
-                          </v-sheet>
+                          <v-chip-group
+                            v-model="registForm.actionSelected"
+                            column
+                            multiple
+                            color="green"
+                          >
+                            <v-chip
+                              filter
+                              outlined
+                              v-for="action in actions"
+                              :value="action.id"
+                              :key="action.id"
+                            >
+                              {{ action.name }}
+                            </v-chip>
+                          </v-chip-group>
                         </div>
                       </div>
 
@@ -173,6 +190,13 @@ import { Message } from "element-ui";
 var img = require("../../../public/favicon.png");
 /* eslint-disable */
 export default {
+  watch: {
+    categorySelected: {
+      handler: function(newValue, oldValue) {
+        console.log(newValue);
+      },
+    },
+  },
   data() {
     return {
       registForm: {
@@ -180,24 +204,43 @@ export default {
         content: "",
         blogimage: "",
         filename: "",
-        category: [
-          "食事",
-          "サプリ",
-          "運動",
-          "脳トレ",
-          "音楽",
-          "社会参加",
-          "その他"
-          ],
+        categorySelected: "",
+        actionSelected: [],
       },
       blogImg: "" || img,
       defaultsrc: img,
-
-
-      tags: ["サンマ", "マラソン", "モーツァルト", "パズル"],
+      categories: [],
+      actions: [],
     };
   },
+  mounted() {
+    this.getUserAction();
+  },
+
   methods: {
+    getUserAction() {
+      var that = this;
+      console.log(this.$router.query);
+      //行動取得
+      this.$store
+        .dispatch("action/queryAction", this.$route.query.userid)
+        .then((res) => {
+          this.$nextTick().then(function() {
+            const actions = that.$store.getters.action;
+            console.log(actions);
+            that.actions = actions.userAction;
+            that.categories = actions.userActionMaster;
+            // アクション重複削除
+            that.actions = that.actions.filter((value, index, array) => {
+              return array.findIndex((action) => value.name === action.name) === index;
+            });
+          });
+        })
+        .catch((error) => {
+          console.log(error.data);
+        });
+    },
+
     defaultBlogImg: function() {
       return this.defaultsrc;
     },
@@ -212,7 +255,6 @@ export default {
       reader.readAsDataURL(file);
       reader.onload = (e) => {
         this.blogImg = e.target.result;
-        // const blob = new Blob([new Uint8Array(e.target.result)], {type: file.type });
       };
     },
 
@@ -223,6 +265,34 @@ export default {
 
       let that = this;
       let fl = this.$refs.upfile.files[0];
+
+      //タイトル選択チェック
+      if ("" === that.registForm.title) {
+        Message({
+          message: "タイトルを入力してください。",
+          type: "error",
+          duration: 5 * 1000,
+        });
+        return;
+      }
+      //コンテンツ選択チェック
+      if ("" === that.registForm.content) {
+        Message({
+          message: "本文を入力してください。",
+          type: "error",
+          duration: 5 * 1000,
+        });
+        return;
+      }
+      //カテゴリ選択チェック
+      if ("" === that.registForm.categorySelected) {
+        Message({
+          message: "カテゴリ選択してください。",
+          type: "error",
+          duration: 5 * 1000,
+        });
+        return;
+      }
 
       //Content-Type:form/multipart で送信されます
       let data = new FormData();

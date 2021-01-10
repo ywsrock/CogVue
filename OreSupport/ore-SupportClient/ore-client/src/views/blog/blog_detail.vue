@@ -31,7 +31,8 @@
                     <div class="posts post-detail">
                       <div style="text-align: center;">
                         <!-- <img src="../../assets/img/tmp/20200920park.png" alt="blog image" /> -->
-                        <img class="tateyama"
+                        <img
+                          class="tateyama"
                           :src="blogDetail.blogImg"
                           @error="defaultBlogImg()"
                           alt="blog image"
@@ -39,7 +40,9 @@
                       </div>
                       <div class="post-meta clearfix">
                         <p style="margin-bottom: 5px">
-                          <span class="tag-border">{{ blogDetail.userProfile.UserName}}</span>
+                          <span class="tag-border">{{
+                            blogDetail.userProfile.UserName
+                          }}</span>
                           <span class="tag-border">男性</span>
                           <span class="tag-border">50代</span>
                           <span class="tag-border">東京都</span>
@@ -53,7 +56,7 @@
                             >{{ blogDetail.comment.length }}</span
                           >
                           <span style="padding-left: 5px;"
-                            >投稿日 {{ blogDetail.timeStamp}}</span
+                            >投稿日 {{ blogDetail.timeStamp }}</span
                           >
                         </p>
                         <p style="margin-bottom: 0px">
@@ -68,6 +71,16 @@
                       >
                         <p>{{ blogDetail.content }}</p>
                       </div>
+
+                      <div class="orig-row">
+                        <button v-if="likedFlg" @click="destroyLike($event)">
+                          いいね取り消し
+                        </button>
+                        <button v-else @click="createLike($event)">
+                          いいね！
+                        </button>
+                      </div>
+
                       <h2 id="reviews"></h2>
                       <div
                         v-for="item in blogDetail.comment"
@@ -83,7 +96,9 @@
                               <div class="comment-header">
                                 <h2>{{ item.User.UserName }}</h2>
                                 <span class="separator">&#8226;</span>
-                                <span class="comment-date">{{ item.Timestamp }}</span>
+                                <span class="comment-date">{{
+                                  item.Timestamp
+                                }}</span>
                                 <div class="comment-reply">
                                   <a href="#">
                                     <!-- <i class="fa fa-reply"></i> Reply -->
@@ -117,13 +132,11 @@
                         <!-- /.comment -->
                       </div>
                       <!-- /.comments -->
-                      
 
-                      <form @submit.prevent="postComment"  v-if="isLogin">
+                      <form @submit.prevent="postComment" v-if="isLogin">
                         <div
                           class="form-group col-sm-4"
                           style="padding-left: 0;"
-                          
                         >
                           <h3 style="margin-top: 0px;">コメントを投稿する</h3>
                           <label for>
@@ -140,6 +153,7 @@
                             class="form-control"
                           />
                         </div>
+
                         <div class="orig-row">
                           <div class="form-group col-sm-12">
                             <label for>
@@ -179,8 +193,9 @@
                     style="width: 300px; margin: 0 0 0 auto;"
                   >
                     <div class="widget">
-                      <blogCreateButton />
-                      <h2 class="widgettitle">注目されているブログ</h2>
+                      <blogUserProfile :item="blogDetail" />
+                      <blogUserRaderChart />
+                      <blogUserAction />
                       <recommendBlogItems />
                     </div>
 
@@ -190,11 +205,6 @@
                         alt="campaign"
                         style="width: 300px"
                       />
-                    </div>
-
-                    <div class="widget">
-                      <h2 class="widgettitle">おすすめの行動タグ</h2>
-                      <recommendActionTag />
                     </div>
                   </div>
                 </div>
@@ -218,15 +228,20 @@
 <script>
 import { Message } from "element-ui";
 import recommendBlogItems from "./recommend_blog_items";
-import blogCreateButton from "./blog_create_button";
+import blogUserProfile from "./blog_user_profile";
+import blogUserRaderChart from "./blog_user_rader_chart";
+import blogUserAction from "./blog_user_action";
 import recommendActionTag from "./recommend_action_tag";
+
 var img = require("../../../public/favicon.png");
 
 /* eslint-disable */
 export default {
   components: {
     recommendBlogItems,
-    blogCreateButton,
+    blogUserProfile,
+    blogUserRaderChart,
+    blogUserAction,
     recommendActionTag,
   },
   data() {
@@ -237,7 +252,6 @@ export default {
         comment: [],
         userProfile: [],
         blogImg: "" || img,
-
       },
       defaultsrc: img,
       registForm: {
@@ -247,11 +261,11 @@ export default {
       },
       likes: [],
       likedFlg: false,
-      isLogin:false,
-      isMyProfile:false
+      isLogin: false,
+      isMyProfile: false,
     };
   },
-   mounted() {
+  mounted() {
     this.fetchBlogInfo();
     this.getLikes();
     // this.defaultBlogImg();
@@ -290,7 +304,9 @@ export default {
             that.blogDetail.userProfile = userProfile;
             that.blogDetail.blogImg = blogImg;
             that.blogDetail.timeStamp = res.timeStamp;
-            if (that.$session.get("UserID") == that.blogDetail.userProfile.UserID ) {
+            if (
+              that.$session.get("UserID") == that.blogDetail.userProfile.UserID
+            ) {
               that.isMyProfile = true;
             } else {
               that.isMyProfile = false;
@@ -357,8 +373,8 @@ export default {
             duration: 5 * 1000,
           }),
             // detail画面に遷移
-            this.registForm = ""
-            this.fetchBlogInfo();
+            (this.registForm = "");
+          this.fetchBlogInfo();
         })
         .catch((error) => {
           e.target.disabled = false;
