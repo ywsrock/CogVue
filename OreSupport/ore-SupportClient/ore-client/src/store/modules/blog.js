@@ -23,6 +23,9 @@ const state = {
     commentName:"",
 
     blogImg: "",
+
+    data:[],
+
 }
 
 /*
@@ -37,6 +40,7 @@ const getters = {
     get_userProfile: state => state.userProfile,
     get_commentName: state => state.commentName,
     get_blogImg: state => state.blogImg,
+    get_data: state => state.data,
 }
 
 /*
@@ -69,6 +73,9 @@ const mutations = {
     },
     set_blogImg: (state, data) => {
         state.blogImg = data
+    },
+    set_data: (state, data) => {
+        state.data = data
     },
 
 }
@@ -105,6 +112,8 @@ const actions = {
                         context.commit("set_title",data.title)
                         //ブログ内容
                         context.commit("set_content",data.content)
+
+                        context.commit("set_data",data)
 
 
                         resolve(data);

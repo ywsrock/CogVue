@@ -7,6 +7,7 @@
       <div class="main">
         <div class="main-inner">
           <div class="container">
+            <button @click="sortBlog">sort</button>
             <form class="filter" method="post" action="?">
               <h2>詳細検索</h2>
               <div class="orig-row">
@@ -314,6 +315,55 @@ export default {
         .catch();
       console.log("err=====");
     },
+    sortBlog(){
+      let sortBlog = this.$store.getters.get_content;
+      // ソート処理
+      console.log(sortBlog)
+      this.sorttmethod(sortBlog,"timeStamp",1,true)
+      // sortBlog.sort(function(a,b){
+      //   var aDate = Date.parse(a.timeStamp);
+      //   var bDate = Date.parse(b.timeStamp);
+      //   if (aDate < bDate ){
+      //     return 1;
+      //   }else{
+      //     return -1;
+      //   }
+      // }),
+      console.log(sortBlog)
+
+      this.list.tableData = sortBlog;
+      // this.list.tableData = Object.assign( [] ,sortBlog); 
+      this.list.length = Math.ceil(
+              this.list.tableData.length / this.list.pageSize
+            );
+            this.list.displayLists = this.list.tableData.slice(
+              0,
+              this.list.pageSize
+            );
+    },
+
+    sorttmethod:function(arry,key,flag,chengeType){
+        arry.sort(function(a,b){
+          var aSortKey = ""
+          var bSortKey = "" 
+          if (chengeType == true){
+              aSortKey = Date.parse(a[key]);
+              bSortKey= Date.parse(b[key]); //場合分けが必要な場合はcaseでかく。
+          }else
+          {
+            aSortKey = a[key];
+            bSortKey = b[key]
+
+          }
+        if (aSortKey < bSortKey){
+          return 1 * flag;
+        }else{
+          return -1 * flag;
+        }
+      })
+      },
+
+
     emitSelectSex(sex) {
       this.searchBlogKey.sex = sex;
     },
