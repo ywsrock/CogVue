@@ -376,14 +376,14 @@ export default {
       })
       },
 
-    syousai(){
-      if (this.isActive == true){
-        this.isActive = false
-      }else{
-        this.isActive = true
-      }
+    // syousai(){
+    //   if (this.isActive == true){
+    //     this.isActive = false
+    //   }else{
+    //     this.isActive = true
+    //   }
 
-    },
+    // },
 
 
 
