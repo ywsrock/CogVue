@@ -1690,3 +1690,4 @@
  {
   message: 'Not Found'
 }
+[2020-12-27T12:28:22.064] [ERROR] users - singUp error: [object Object] 

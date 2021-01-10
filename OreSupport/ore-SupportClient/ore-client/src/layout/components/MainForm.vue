@@ -13,18 +13,19 @@ export default {
   name: "MainForm",
   data() {
     return {
-      routeKey: this.$route.path,
+      // routeKey: this.$route.path,
+      routeKey: this.$route.fullPath,
     };
   },
   computed: {
     key() {
-      return this.$route.path;
+      return this.$route.fullPath;
     },
   },
   watch: {
     $route(to, from) {
       if (to != from) {
-        this.routeKey = to.key;
+        this.routeKey = to.fullPath;
       }
     },
   },

@@ -19,6 +19,7 @@ const getters = {
     get_comment: state => state.blog.comment,
     get_commentName: state => state.blog.commentName,
     get_blogImg: state => state.blog.blogImg,
+    get_data: state => state.blog.data,
 
 }
 
