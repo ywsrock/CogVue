@@ -7,10 +7,15 @@
       <div class="main">
         <div class="main-inner">
           <div class="container">
-            <button @click="sortBlog">sort</button>
             <form class="filter" method="post" action="?">
-              <h2>詳細検索</h2>
-              <div class="orig-row">
+              <h2>検索</h2>
+              
+              <div class="orig-row" >
+              <searchFormFreeWordbox title="フリーワード" :freeword="searchBlogKey.freeWord" @emitSelectFreeWord="emitSelectFreeWord" />
+              </div>
+              <button @click.prevent.stop="isActive = !isActive">もっと詳しく検索</button>
+              <div class="orig-row"
+              v-bind:class="{syousai:isActive}" >
                 <searchFormRadiobox
                   title="性別"
                   :options="sexOptions"
@@ -30,7 +35,6 @@
                 <searchFormSelectDatebox title="投稿日" @emitSelectDate="emitSelectDate" />
                 <searchFormCheckbox title="カテゴリ" :options="categories" />
                 <searchFormCheckbox title="行動タグ" :options="actions" />
-                <searchFormFreeWordbox title="フリーワード" :freeword="searchBlogKey.freeWord" @emitSelectFreeWord="emitSelectFreeWord" />
               </div>
               <hr />
               <div class="orig-row">
@@ -108,6 +112,7 @@
     </div>
   </body>
 </div>
+
 </template>
 
 <script>
@@ -184,8 +189,11 @@ export default {
         { label: "登山", value: 2 },
         { label: "料理", value: 3 },
         { label: "バイオリン", value: 4 }
-      ]
+      ],
+
+      isActive:true
     };
+
   },
   mounted() {
     this.fetchBlogInfo();
@@ -368,6 +376,17 @@ export default {
       })
       },
 
+    syousai(){
+      if (this.isActive == true){
+        this.isActive = false
+      }else{
+        this.isActive = true
+      }
+
+    },
+
+
+
 
     emitSelectSex(sex) {
       this.searchBlogKey.sex = sex;
@@ -434,5 +453,9 @@ export default {
 .tag-border {
   border-right: 1px solid rgba(0, 0, 0, 0.1);
   padding: 0 5px;
+}
+
+.syousai{
+  display:none;
 }
 </style>
