@@ -377,7 +377,6 @@ export default {
           this.$router.push("/blog/blogList");
           break;
         case 3:
-          alert("a")
           this.$router.push("/blog/blogList?myblog=true");
           break;
         //新規
