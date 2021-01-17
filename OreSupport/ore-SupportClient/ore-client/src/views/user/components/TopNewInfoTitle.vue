@@ -39,7 +39,7 @@ export default {
 <style>
 .top-new-blog-title {
   margin-bottom: 10px;
-  border-bottom: solid 3px #FFFF00;
+  border-bottom: solid 3px #0038FF;
   padding-left: 15px;
   padding-bottom: 5px;
 }

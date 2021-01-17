@@ -29,7 +29,7 @@
                 <div class="row">
                   <div class="col-lg-9">
                     <!-- スライダー -->
-                    <el-carousel indicator-position="outside">
+                    <el-carousel indicator-position="outside" class="top-slider">
                       <el-carousel-item v-for="sliderImage in sliderImages" :key="sliderImage">
                           <img
                             :src="sliderImage"
@@ -67,16 +67,16 @@
 
                     <!-- 新着ブログ -->
                     <TopNewInfoTitle Title="新着ブログ" TitleClassName="top-new-blog-title" Link="/#/blog/blogList" />
-                    <TopNewInfoCards iconName="mdi-thumb-up" iconComment="20" />
+                    <TopNewInfoCards iconName="mdi-thumb-up" iconComment="20" buttonType="blog" />
 
 
                     <!-- 新着商品 -->
                     <TopNewInfoTitle Title="新着商品" TitleClassName="top-new-product-title" Link="#" />                    
-                    <TopNewInfoCards :iconName="'mdi-cursor-pointer'" :iconComment="'CHECK!!'" />
+                    <TopNewInfoCards :iconName="'mdi-cursor-pointer'" :iconComment="'CHECK!!'" buttonType="product" />
 
                     <!-- 新着セミナー -->
                     <TopNewInfoTitle Title="新着セミナー" TitleClassName="top-new-seminor-title" Link="#" />                                        
-                    <TopNewInfoCards :iconName="'mdi-human'" :iconComment="'JOIN!!'" />
+                    <TopNewInfoCards :iconName="'mdi-human'" :iconComment="'JOIN!!'" buttonType="seminor" />
 
                     <!-- タブ -->
                     <el-tabs type="card" @tab-click="handleClick" style="margin-top: 20px;">
@@ -499,5 +499,12 @@ export default {
 .v-card.on-hover {
   opacity: 0.8;
  }
+
+@media screen and (max-width:720px){
+  .top-slider{
+    height: 150px;
+  }
+}
+
 
 </style>
