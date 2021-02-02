@@ -19,8 +19,9 @@ const getters = {
     get_comment: state => state.blog.comment,
     get_commentName: state => state.blog.commentName,
     get_blogImg: state => state.blog.blogImg,
-    get_data: state => state.blog.data,
-
+    get_imagename: state => state.blog.imagename,
+    get_categoryId: state => state.blog.categoryId,
+    get_actionId: state => state.blog.actionId
 }
 
 

@@ -12,57 +12,64 @@ const appRoot = require("app-root-path");
 const Sequelize = require("sequelize");
 
 //ブログリスト取得
-router.get("/bloglist",[checkuser.verifyUser], async function (req, res, next) {
-  // 出力結果
-  let resObj = {};
-  // ユーザID(ベリファイチェックから)
-  let userID = req.userID;
-  let myblog = req.query.myblog
+router.get(
+  "/bloglist",
+  [checkuser.verifyUser],
+  async function (req, res, next) {
+    // 出力結果
+    let resObj = {};
+    // ユーザID(ベリファイチェックから)
+    let userID = req.userID;
+    let myblog = req.query.myblog;
 
-  //ブログリスと取得
-  //var blogList = await blogmodel.getBlogList({ key: "UserID", val: userID })
-  if (myblog == "true" ){
-    var blogList = await blogmodel.getBlogList({key: "UserID", val: userID });
-  } else{
-  var blogList = await blogmodel.getBlogList();
-  }
-  if (typeof blogList.errors != "undefined") {
-    // エラー結果
-    resObj = {
-      code: STATUS_MESSAGE.CODE_402,
-      message: blogList.message,
-    };
-    return res.status(200).send(resObj);
-  } else {
-    //DBの絡むと大文字小文字も併せないといけない
-    // var title = blog.Title;
-    // var content = blog.Content
-
-    contentArray = [];
-    blogList.forEach((blog) => {
-      contentArray.push({
-        id: blog.id,
-        title: blog.Title,
-        content: blog.Content,
-        userName: blog.User.UserName || "",
-        timeStamp: blog.Timestamp,
-        userProfile: blog.User,
+    //ブログリスと取得
+    //var blogList = await blogmodel.getBlogList({ key: "UserID", val: userID })
+    if (myblog == "true") {
+      var blogList = await blogmodel.getBlogList({
+        key: "UserID",
+        val: userID,
       });
-    });
+    } else {
+      var blogList = await blogmodel.getBlogList();
+    }
+    if (typeof blogList.errors != "undefined") {
+      // エラー結果
+      resObj = {
+        code: STATUS_MESSAGE.CODE_402,
+        message: blogList.message,
+      };
+      return res.status(200).send(resObj);
+    } else {
+      //DBの絡むと大文字小文字も併せないといけない
+      // var title = blog.Title;
+      // var content = blog.Content
 
-    resObj = {
-      code: STATUS_MESSAGE.CODE_SUCCESS,
+      contentArray = [];
+      blogList.forEach((blog) => {
+        contentArray.push({
+          id: blog.id,
+          title: blog.Title,
+          content: blog.Content,
+          userName: blog.User.UserName || "",
+          timeStamp: blog.Timestamp,
+          userProfile: blog.User,
+        });
+      });
 
-      data: {
-        title: "test",
-        content: contentArray,
-        userID: userID,
-      },
-    };
+      resObj = {
+        code: STATUS_MESSAGE.CODE_SUCCESS,
+
+        data: {
+          title: "test",
+          content: contentArray,
+          userID: userID,
+        },
+      };
+    }
+
+    return res.status(200).send(resObj);
   }
-
-  return res.status(200).send(resObj);
-});
+);
 
 // ミドルウェア
 var upload1 = multer({ storage: Image_storage.blogImage_storage }).single(
@@ -152,7 +159,7 @@ router.post("/create", [checkuser.verifyUser], async function (req, res, next) {
         BlogImage: req.file !== undefined ? req.file.filename : "",
         Timestamp: Sequelize.fn("NOW"),
         Category: category,
-        UserAction: userAction
+        UserAction: userAction,
       };
 
       // DBにユーザ登録を呼び出す
@@ -242,7 +249,12 @@ router.get("/blogdetail", async function (req, res, next) {
         comment: blogDetail[0].Comments || "",
         userProfile: userProfile,
         imgUrl: imgUrl,
+        imagename: blogDetail[0].BlogImage || "00_00.jpg",
         timeStamp: blogDetail[0].Timestamp,
+        catetimeStamp: blogDetail[0].Timestamp,
+        timeStamp: blogDetail[0].Timestamp,
+        categoryId: blogDetail[0].CategoryID,
+        actionId: blogDetail[0].UserActionID,
       },
     };
   }
@@ -295,6 +307,7 @@ router.post(
     let title = req.body.title;
     //　content
     let content = req.body.content;
+    let imagename = "";
     // ポートの番号取得
     var port = req.app.settings.port;
     // ホスト取得
@@ -322,26 +335,43 @@ router.post(
         title = blogDetail.title;
         //　title
         content = blogDetail.content;
+        // 画像ファイル
+        imagename = blogDetail.filename;
         // ファイル存在チェック
         var isExists = false;
+        var imgpath = "";
         if (undefined !== res.req.file) {
           isExists = fs.existsSync(
             `${appRoot}/public/blogImg/${res.req.file.filename}`
           );
+          imgpath = isExists ? res.req.file.filename : "00_00.jpg"
+        } else {
+          isExists = fs.existsSync(
+            `${appRoot}/public/blogImg/${imagename}`
+          );
+          imgpath = isExists ? imagename : "00_00.jpg"
         }
-        //　ファイルが存在しない場合"00_00.jpg"
-        var imgpath = isExists ? res.req.file.filename : "00_00.jpg";
+
         resObj.code = STATUS_MESSAGE.CODE_SUCCESS;
         // respathはhttp://ホスト名:ポート
         resObj.data = {
           imgUrl: `${respath}/blogImg/${imgpath}`,
         };
+        category = blogDetail.categorySelected;
+        userAction = blogDetail.actionSelected;
       }
       // log.info(`imageUp success`);
 
       // titleとcontent
       if ("" != title.trim() && "" != content.trim()) {
         // Blog登録処理
+        let blogImageName = ""
+        if (undefined === req.file) {
+          blogImageName = isExists ? imagename : ""
+        } else {
+          blogImageName = isExists ? req.file.filename : ""
+        }
+
         blogObj = {
           id: id,
           UserID: userID,
@@ -350,7 +380,9 @@ router.post(
           // filename取得、本体は/public/blogImge/の中
           // isExistsがファイルが存在するかのフラグ
           // isExistsがTrueの場合filename読み込んで、Falseの場合は空にする
-          BlogImage: isExists ? req.file.filename : "",
+          BlogImage: blogImageName,
+          Category: category,
+          UserAction: userAction,
         };
 
         // DBにユーザ登録を呼び出す

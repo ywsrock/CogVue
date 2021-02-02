@@ -1,15 +1,15 @@
 <template>
-<div id="blog_list">
-  <body class>
-    <div class="page-wrapper">
-      <div id="header" class="header"></div>
+  <div id="blog_list">
+    <body class>
+      <div class="page-wrapper">
+        <div id="header" class="header"></div>
 
       <div class="main">
         <div class="main-inner">
           <div class="container">
             <form class="filter" method="post" action="?">
               <h2>検索</h2>
-              
+
               <div class="orig-row" >
               <searchFormFreeWordbox title="フリーワード" :freeword="searchBlogKey.freeWord" @emitSelectFreeWord="emitSelectFreeWord" />
               </div>
@@ -68,46 +68,50 @@
 
                   <div class="posts">
                     <div class="post" v-for="item in list.displayLists" :key="item.id">
-                      <blogItem :item="item" />
+                        <blogItem :item="item" />
+                        <!-- <blogItem :item="item" :userPhoto="userPhoto" /> -->
+                      </div>
+                    </div>
+                    <div class="pager">
+                      <v-pagination
+                        v-model="list.page"
+                        :length="list.length"
+                        :total-visible="7"
+                        @input="pageChange"
+                      ></v-pagination>
                     </div>
                   </div>
-                  <div class="pager">
-                    <v-pagination
-                      v-model="list.page"
-                      :length="list.length"
-                      :total-visible="7"
-                      @input="pageChange"
-                    ></v-pagination>
-                  </div>
                 </div>
-              </div>
 
-              <div class="col-sm-4 col-lg-3">
-                <div class="sidebar" style="width: 300px; margin: 0 0 0 auto;">
-                  <div class="widget">
-                    <blogCreateButton />
-                    <h2 class="widgettitle">注目されているブログ</h2>
-                    <recommendBlogItems />
-                  </div>
+                <div class="col-sm-4 col-lg-3">
+                  <div
+                    class="sidebar"
+                    style="width: 300px; margin: 0 0 0 auto;"
+                  >
+                    <div class="widget">
+                      <blogCreateButton />
+                      <h2 class="widgettitle">注目されているブログ</h2>
+                      <recommendBlogItems />
+                    </div>
 
-                  <div class="widget">
-                    <img
-                      src="../../assets/img/tmp/campaign-sample.png"
-                      alt="campaign"
-                      style="width: 300px"
-                    />
-                  </div>
+                    <div class="widget">
+                      <img
+                        src="../../assets/img/tmp/campaign-sample.png"
+                        alt="campaign"
+                        style="width: 300px"
+                      />
+                    </div>
 
-                  <div class="widget">
-                    <h2 class="widgettitle">おすすめの行動タグ</h2>
-                    <recommendActionTag />
+                    <div class="widget">
+                      <h2 class="widgettitle">おすすめの行動タグ</h2>
+                      <recommendActionTag />
+                    </div>
                   </div>
                 </div>
               </div>
             </div>
           </div>
         </div>
-      </div>
       <div id="footer" class="footer"></div>
     </div>
   </body>
@@ -126,6 +130,7 @@ import blogItem from "./blog_item";
 import recommendBlogItems from "./recommend_blog_items";
 import blogCreateButton from "./blog_create_button";
 import recommendActionTag from "./recommend_action_tag";
+var img = require("../../../public/00_00.jpg");
 
 /* eslint-disable */
 export default {
@@ -138,7 +143,7 @@ export default {
     blogItem,
     recommendBlogItems,
     blogCreateButton,
-    recommendActionTag
+    recommendActionTag,
   },
   data() {
     return {
@@ -148,7 +153,7 @@ export default {
         tableData: [],
         search: "",
         displayLists: [],
-        pageSize: 10
+        pageSize: 10,
       },
       searchBlogKey: {
         sex: "",
@@ -156,14 +161,14 @@ export default {
         age: "",
         freeWord: "",
         from: "",
-        to: ""
+        to: "",
       },
       searchBlogResult: {
-        result: []
+        result: [],
       },
       sexOptions: [
         { label: "男性", value: 2 },
-        { label: "女性", value: 1 }
+        { label: "女性", value: 1 },
       ],
       prefecture: [
         "青森県",
@@ -173,7 +178,7 @@ export default {
         "山形県",
         "福島県",
         "茨城県",
-        "栃木県"
+        "栃木県",
       ],
       ageOptions: ["40代以下", "40-50代", "50-60代", "60-70代", "70代以上"],
       professions: ["教師", "銀行員", "エンジニア", "医師"],
@@ -182,50 +187,59 @@ export default {
         { label: "運動", value: 2 },
         { label: "脳トレ", value: 3 },
         { label: "音楽", value: 4 },
-        { label: "その他", value: 5 }
+        { label: "その他", value: 5 },
       ],
       actions: [
         { label: "筋トレ", value: 1 },
         { label: "登山", value: 2 },
         { label: "料理", value: 3 },
-        { label: "バイオリン", value: 4 }
+        { label: "バイオリン", value: 4 },
       ],
-
-      isActive:true
+      userPhoto: {
+        avatar: "" || img,
+        // defaultsrc: img,
+      },
+      // isDefault: false,
     };
 
   },
   mounted() {
     this.fetchBlogInfo();
-    var url =  this.$route.query.myblog;
-
-    
+    var url = this.$route.query.myblog;
   },
   methods: {
-    fetchBlogInfo(){
+    basePath(){
+      console.log(ORE_SUPPORT_API_BASE_PATH);
+    },
+    defaultUserImg: function() {
+      return this.defaultsrc;
+    },
+    fetchBlogInfo() {
       var that = this;
-    // const params = new URLSearchParams();
-    //   params.append("myblog", this.$route.query.myblog);
-    const params = this.$route.query.myblog;
-    //
-    this.$store
-      .dispatch("blog/getBlogList", {myblog:params})
-      .then(res => {
-        this.$nextTick().then(function() {
-          const blogInfo = that.$store.getters.get_content;
-          that.list.tableData = blogInfo;
-          that.list.length = Math.ceil(
-            that.list.tableData.length / that.list.pageSize
-          );
-          that.list.displayLists = that.list.tableData.slice(
-            0,
-            that.list.pageSize
-          );
+      // const params = new URLSearchParams();
+      //   params.append("myblog", this.$route.query.myblog);
+      const params = this.$route.query.myblog;
+      //
+      this.$store
+        .dispatch("blog/getBlogList", { myblog: params })
+        .then((res) => {
+          this.$nextTick().then(function() {
+            const blogInfo = that.$store.getters.get_content;
+            const avatar = that.$store.getters.avatar;
+            that.list.tableData = blogInfo;
+            that.list.length = Math.ceil(
+              that.list.tableData.length / that.list.pageSize
+            );
+            that.list.displayLists = that.list.tableData.slice(
+              0,
+              that.list.pageSize
+            );
+            that.userPhoto.avatar = avatar;
+          });
+        })
+        .catch((err) => {
+          console.log(err);
         });
-      })
-      .catch(err => {
-        console.log(err);
-      });
     },
 
     pageChange: function(pageNumber) {
@@ -241,11 +255,11 @@ export default {
       // this.$store.dispatch("blog/getBlogDetail",row.id)
       this.$store
         .dispatch("blog/getBlogDetail", id)
-        .then(res => {
+        .then((res) => {
           //成功の場合
           this.$router.push("/blog/blogEdit?id=" + id);
         })
-        .catch(error => {
+        .catch((error) => {
           console.log("err=====");
         });
     },
@@ -256,12 +270,12 @@ export default {
       // console.log(`val = ${JSON.stringify(row)}`);
       this.$store
         .dispatch("blog/blogDelete", id)
-        .then(res => {
+        .then((res) => {
           //成功の場合
           var that = this;
           this.$store
             .dispatch("blog/getBlogList")
-            .then(res => {
+            .then((res) => {
               this.$nextTick().then(function() {
                 const blogInfo = that.$store.getters.get_content;
                 that.list.tableData = blogInfo;
@@ -269,34 +283,34 @@ export default {
               Message({
                 message: "削除OK",
                 type: "success",
-                duration: 5 * 1000
+                duration: 5 * 1000,
               });
             })
-            .catch(err => {
+            .catch((err) => {
               console.log("err-------");
             });
         })
-        .catch(error => {
+        .catch((error) => {
           console.log("err=====");
         });
     },
-    reset($event){
-    $event.preventDefault();
-    alert(this.searchBlogKey.sex)
-    this.searchBlogKey.sex = "";
-    alert(this.searchBlogKey.sex)
-    alert(this.searchBlogKey.freeWord)
-    this.searchBlogKey.freeWord = "";
-    alert(this.searchBlogKey.freeWord)
-    this.searchBlogKey= {
+    reset($event) {
+      $event.preventDefault();
+      alert(this.searchBlogKey.sex);
+      this.searchBlogKey.sex = "";
+      alert(this.searchBlogKey.sex);
+      alert(this.searchBlogKey.freeWord);
+      this.searchBlogKey.freeWord = "";
+      alert(this.searchBlogKey.freeWord);
+      this.searchBlogKey = {
         sex: "",
         pref: "",
         age: "",
         freeWord: "",
         from: "",
-        to: ""
-      }
-  },
+        to: "",
+      };
+    },
     searchBlog() {
       //apiからサーバーに命令をだす。(store action)
       var that = this;
@@ -311,7 +325,7 @@ export default {
       this.$store
         .dispatch("blog/searchBlog", params)
         //成功の場合
-        .then(res => {
+        .then((res) => {
           this.$nextTick().then(function() {
             const blogInfo = that.$store.getters.get_content;
             that.list.tableData = blogInfo;
@@ -322,7 +336,7 @@ export default {
               0,
               that.list.pageSize
             );
-          })
+          });
         })
         //失敗の場合
         .catch();
@@ -345,7 +359,7 @@ export default {
       console.log(sortBlog)
 
       this.list.tableData = sortBlog;
-      // this.list.tableData = Object.assign( [] ,sortBlog); 
+      // this.list.tableData = Object.assign( [] ,sortBlog);
       this.list.length = Math.ceil(
               this.list.tableData.length / this.list.pageSize
             );
@@ -358,7 +372,7 @@ export default {
     sorttmethod:function(arry,key,flag,chengeType){
         arry.sort(function(a,b){
           var aSortKey = ""
-          var bSortKey = "" 
+          var bSortKey = ""
           if (chengeType == true){
               aSortKey = Date.parse(a[key]);
               bSortKey= Date.parse(b[key]); //場合分けが必要な場合はcaseでかく。
@@ -403,7 +417,7 @@ export default {
     },
     emitSelectFreeWord(freeWord) {
       this.searchBlogKey.freeWord = freeWord;
-    }
+    },
   },
 };
 </script>

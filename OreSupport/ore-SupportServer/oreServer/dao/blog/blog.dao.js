@@ -77,36 +77,43 @@ const getBlogList = async (queryInfo) => {
       targetKey: "UserID",
     });
 
-    if (queryInfo == undefined){
+    if (queryInfo == undefined) {
       const result = await Blog.findAll({
         order: [["id", "DESC"]],
         include: [
-          {model:User,
-          include:
-          [{
-            model:UserProfile,
-            required: false,
-          }
-        ]}]
+          {
+            model: User,
+            include: [
+              {
+                model: UserProfile,
+                required: false,
+              },
+            ],
+          },
+        ],
       });
       return result;
-  }else{
+    } else {
       const result = await Blog.findAll({
         where: {
-              [Op.and]: [{
-                      [queryInfo.key]: queryInfo.val
-                  },
-              ]
-          },
+          [Op.and]: [
+            {
+              [queryInfo.key]: queryInfo.val,
+            },
+          ],
+        },
         order: [["id", "DESC"]],
         include: [
-          {model:User,
-          include:
-          [{
-            model:UserProfile,
-            required: false,
-          }
-        ]}]
+          {
+            model: User,
+            include: [
+              {
+                model: UserProfile,
+                required: false,
+              },
+            ],
+          },
+        ],
       });
       return result;
     }
@@ -219,6 +226,8 @@ const blogDelete = async (queryInfo) => {
 
 const blogUpdate = async (queryInfo) => {
   try {
+    // 複数の行動タグをカンマ区切りで文字列にする、値がない場合は空
+    let userActionIds = queryInfo.UserAction ? String(queryInfo.UserAction.join()) : "";
     const result = await Blog.update(
       {
         // タイトル
@@ -227,6 +236,10 @@ const blogUpdate = async (queryInfo) => {
         Content: queryInfo.Content,
         // ブログ画像のファイル名
         BlogImage: queryInfo.BlogImage,
+        // 行動
+        UserActionID: userActionIds,
+        // カテゴリ
+        CategoryID: queryInfo.Category,
       },
       {
         where: {

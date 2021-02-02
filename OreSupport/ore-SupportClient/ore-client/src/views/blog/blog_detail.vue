@@ -69,7 +69,8 @@
                         class="post-content"
                         style="font-size: 25px; min-height: 200px;"
                       >
-                        <p>{{ blogDetail.content }}</p>
+                        <!-- <p>{{ blogDetail.content }}</p> -->
+                        <span v-html="blogDetail.content"></span>
                       </div>
 
                       <div class="orig-row">

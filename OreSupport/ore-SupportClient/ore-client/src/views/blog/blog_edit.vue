@@ -22,38 +22,63 @@
                     <div class="row">
                       <div class="col-sm-8">
                         <div class="form-group col-sm-12">
-                          <label for="title">タイトル</label>
-                          <input
-                            type="text"
-                            v-model="blogDetail.title"
-                            maxlength="30"
-                            show-word-limit
-                          />
+                          <label for="title">ブログのタイトル</label>
+                          <div class="form-control">
+                            <input
+                              type="text"
+                              v-model="blogDetail.title"
+                              maxlength="30"
+                              show-word-limit
+                            />
+                          </div>
                         </div>
 
                         <!-- /.form-group -->
                         <div class="form-group col-sm-12">
                           <label for="title">カテゴリ</label>
-                          <v-sheet>
-                            <v-chip-group multiple active-class="primary--text">
-                              <v-chip v-for="tag in category" :key="tag">
-                                {{ tag }}
-                              </v-chip>
-                            </v-chip-group>
-                          </v-sheet>
+                          <v-chip-group
+                            v-model="categorySelected"
+                            column
+                            color="blue"
+                          >
+                            <!-- v-model="blogDetail.categorySelected" -->
+                            <v-chip
+                              filter
+                              outlined
+                              v-for="category in categories"
+                              :value="category.id"
+                              :key="category.id"
+                            >
+                              {{ category.name }}
+                            </v-chip>
+                          </v-chip-group>
                         </div>
 
                         <div class="form-group col-sm-12">
                           <label for="title">
                             行動タグ
                             <br />
-                            行動タグの追加については<a href="#">こちら</a>から
+                            行動タグの追加・削除については<a
+                              @click.prevent="actionClick"
+                              >こちら</a
+                            >から
                           </label>
 
                           <v-sheet>
-                            <v-chip-group multiple active-class="primary--text">
-                              <v-chip v-for="tag in tags" :key="tag">
-                                {{ tag }}
+                            <v-chip-group
+                              v-model="blogDetail.actionSelected"
+                              multiple
+                              column
+                              color="green"
+                            >
+                              <v-chip
+                                filter
+                                outlined
+                                v-for="action in actions"
+                                :value="action.id"
+                                :key="action.id"
+                              >
+                                {{ action.name }}
                               </v-chip>
                             </v-chip-group>
                           </v-sheet>
@@ -116,12 +141,17 @@
                       <div class="col-sm-12">
                         <div class="form-group col-sm-12">
                           <label for="content">内容 </label>
-                          <textarea
+                          <!-- <textarea
                             type="textarea"
                             v-model="blogDetail.content"
                             maxlength="2000"
                             show-word-limit
-                          ></textarea>
+                          ></textarea> -->
+                          <quill-editor
+                            ref="quillEditor"
+                            v-model="blogDetail.content"
+                            :options="editorOption"
+                          />
                         </div>
                       </div>
                     </div>
@@ -182,6 +212,18 @@ var img = require("../../../public/00_00.jpg");
 
 /* eslint-disable */
 export default {
+  watch: {
+    // categorySelected: {
+    //   handler: function(newValue, oldValue) {
+    //     console.log(newValue);
+    //   },
+    // },
+    // actionSelected: {
+    //   handler: function(newValue, oldValue) {
+    //     console.log(newValue);
+    //   },
+    // },
+  },
   data() {
     return {
       blogDetail: {
@@ -190,61 +232,108 @@ export default {
         content: "",
         blogimage: "",
         filename: "",
+        categorySelected: "",
+        actionSelected: [],
       },
       blogImg: "" || img,
       defaultsrc: img,
-      category: [
-        "食事",
-        "サプリ",
-        "運動",
-        "脳トレ",
-        "音楽",
-        "社会参加",
-        "その他",
-      ],
-      tags: ["サンマ", "マラソン", "モーツァルト", "パズル"],
+      categories: [],
+      actions: [],
       isDefault: false,
+      isImageChange: false,
+      editorOption: {
+        theme: "snow",
+        modules: {
+          // imageResize: true
+        },
+      },
     };
   },
+
+  computed: {
+    categorySelected: {
+      get: function() {
+        return Number(this.blogDetail.categorySelected);
+      },
+      set: function(value) {
+        this.blogDetail.categorySelected = value;
+      },
+    },
+  },
+
   mounted() {
-    var that = this;
-    this.$store
-      .dispatch("blog/getBlogDetail", this.$route.query.id)
-      .then((res) => {
-        this.$nextTick().then(function() {
-          const content = that.$store.getters.get_content;
-          const title = that.$store.getters.get_title;
-          const id = that.$store.getters.get_id;
-          const blogImg = that.$store.getters.get_blogImg;
-          that.blogDetail.content = content;
-          that.blogDetail.title = title;
-          that.blogDetail.id = id;
-          that.blogImg = blogImg;
-        });
-      });
+    this.getUserAction();
+    this.getBlogDetail();
   },
   methods: {
+    getBlogDetail() {
+      var that = this;
+      this.$store
+        .dispatch("blog/getBlogDetail", this.$route.query.id)
+        .then((res) => {
+          this.$nextTick().then(function() {
+            const content = that.$store.getters.get_content;
+            const title = that.$store.getters.get_title;
+            const id = that.$store.getters.get_id;
+            const blogImg = that.$store.getters.get_blogImg;
+            const filename = that.$store.getters.get_imagename;
+            const categorySelected = that.$store.getters.get_categoryId;
+            const actionSelected = that.$store.getters.get_actionId;
+            const actionArray = actionSelected
+              .split(",")
+              .map(function(actionSelected) {
+                return Number(actionSelected);
+              });
+            that.blogDetail.content = content;
+            that.blogDetail.title = title;
+            that.blogDetail.id = id;
+            that.blogImg = blogImg;
+            that.blogDetail.filename = filename;
+            // that.blogDetail.categorySelected = Number(categorySelected);
+            //ここにif（値が空""とundefinedの場合）はDefault値elseそのままを入れる（that.blogDetail.categorySelected = Number(categorySelected);）
+            that.blogDetail.categorySelected = categorySelected;
+            // that.blogDetail.actionSelected = actionSelected;
+            if (actionArray == 0) {
+              that.blogDetail.actionSelected = "";
+            } else {
+              that.blogDetail.actionSelected = actionArray;
+            }
+          });
+        });
+    },
+
+    getUserAction() {
+      var that = this;
+      console.log(this.$router.query);
+      //行動取得
+      this.$store
+        .dispatch("action/queryAction", this.$route.query.userid)
+        .then((res) => {
+          this.$nextTick().then(function() {
+            const actions = that.$store.getters.action;
+            console.log(actions);
+            that.actions = actions.userAction;
+            that.categories = actions.userActionMaster;
+            // アクション重複削除
+            that.actions = that.actions.filter((value, index, array) => {
+              return (
+                array.findIndex((action) => value.name === action.name) ===
+                index
+              );
+            });
+          });
+        })
+        .catch((error) => {
+          console.log(error.data);
+        });
+    },
+
     imageDelete: function(e) {
       e.preventDefault();
       this.isDefault = true;
+      this.isImageChange = true;
       this.blogDetail.blogimage = "";
       this.blogDetail.filename = "";
-
-      // this.blogImg = img;
-      // this.$store
-      //   .dispatch("blog/imageDelete", this.$route.query.id)
-      //   .then((res) => {
-      //     Message({
-      //       message: "削除しました",
-      //       type: "success",
-      //       duration: 5 * 1000,
-      //     });
-      //   })
-      //   .catch((error) => {
-      //     e.target.disabled = false;
-      //     console.log(error.data);
-      //     console.log("失敗しました");
-      //   });
     },
 
     defaultBlogImg: function() {
@@ -260,10 +349,13 @@ export default {
       this.blogDetail.blogimage = files[0];
       const reader = new FileReader();
       reader.readAsDataURL(file);
+      this.isDefault = false;
+      this.isImageChange = true;
       reader.onload = (e) => {
         this.blogImg = e.target.result;
       };
     },
+
     blogUpdate: function(e) {
       // 二重コミット防止のため、ボタンを非活性
       e.target.disabled = true;
@@ -272,14 +364,23 @@ export default {
       //Content-Type:form/multipart で送信されます
       let data = new FormData();
 
-      if (!this.isDefault) {
+      if (this.isImageChange === true) {
         // data.append("key", value, parameter);
-        data.append(
-          "imgBlog",
-          this.blogDetail.blogimage,
-          this.blogDetail.filename
-        );
+        //画像削除の場合
+        if (this.blogDetail.filename === "") {
+          data.append("imgBlog", this.defaultBlogImg);
+        } else {
+          data.append(
+            "imgBlog",
+            this.blogDetail.blogimage,
+            this.blogDetail.filename
+          );
+        }
       }
+      // else {
+      //   data.append("imgBlog", this.defaultBlogImg);
+      // }
+
       data.append("blogDetail", JSON.stringify(this.blogDetail));
       this.$store
         .dispatch("blog/blogUpdate", data)
@@ -297,6 +398,9 @@ export default {
           console.log(error.data);
           console.log("作成失敗");
         });
+    },
+    actionClick: function() {
+      this.$router.push("/action/userAction");
     },
     blogClick: function() {
       this.$router.push("/blog/blogList");

@@ -58,7 +58,9 @@
                           <label for="title">
                             行動タグ
                             <br />
-                            行動タグの追加・削除については<a href="#">こちら</a
+                            行動タグの追加・削除については<a
+                              @click.prevent="actionClick"
+                              >こちら</a
                             >から
                           </label>
 
@@ -124,13 +126,18 @@
                       <div class="col-sm-12">
                         <div class="form-group col-sm-12">
                           <label for="content"><b>内容</b></label>
-                          <textarea
+                          <!-- <textarea
                             class="form-control"
                             rows="7"
                             placeholder="内容"
                             name="content"
                             v-model="registForm.content"
-                          ></textarea>
+                          ></textarea> -->
+                          <quill-editor
+                            ref="quillEditor"
+                            v-model="registForm.content"
+                            :options="editorOption"
+                          />
                         </div>
                       </div>
                     </div>
@@ -187,6 +194,7 @@
 
 <script>
 import { Message } from "element-ui";
+
 var img = require("../../../public/favicon.png");
 /* eslint-disable */
 export default {
@@ -211,10 +219,24 @@ export default {
       defaultsrc: img,
       categories: [],
       actions: [],
+      editorOption: {
+        placeholder: "内容",
+        theme: "snow",
+        modules: {
+          // imageResize: true
+        },
+      },
     };
   },
+
   mounted() {
     this.getUserAction();
+  },
+
+  computed: {
+    editor() {
+      return this.$refs.quillEditor.quill;
+    },
   },
 
   methods: {
@@ -327,6 +349,9 @@ export default {
           console.log(error.data);
           console.log("作成失敗");
         });
+    },
+    actionClick: function() {
+      this.$router.push("/action/userAction");
     },
     blogClick: function() {
       this.$router.push("/blog/blogList");

@@ -24,8 +24,11 @@ const state = {
 
     blogImg: "",
 
-    data:[],
+    imagename: "",
 
+    categoryId: "",
+
+    actionId: []
 }
 
 /*
@@ -40,7 +43,9 @@ const getters = {
     get_userProfile: state => state.userProfile,
     get_commentName: state => state.commentName,
     get_blogImg: state => state.blogImg,
-    get_data: state => state.data,
+    get_categoryId: state => state.categoryId,
+    get_actionId: state => state.actionId,
+    get_imagename: state => state.imagename,
 }
 
 /*
@@ -74,10 +79,15 @@ const mutations = {
     set_blogImg: (state, data) => {
         state.blogImg = data
     },
-    set_data: (state, data) => {
-        state.data = data
+    set_imagename: (state, data) => {
+        state.imagename = data
     },
-
+    set_categoryId: (state, data) => {
+        state.categoryId = data
+    },
+    set_actionId: (state, data) => {
+        state.actionId = data
+    },
 }
 
 /*
@@ -143,6 +153,12 @@ const actions = {
                         context.commit("set_userProfile",data.userProfile)
 
                         context.commit("set_blogImg",data.imgUrl)
+
+                        context.commit("set_imagename",data.imagename)
+
+                        context.commit("set_categoryId",data.categoryId)
+
+                        context.commit("set_actionId",data.actionId)
 
                         resolve(data);
                     }).catch(error => {
