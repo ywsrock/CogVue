@@ -13,7 +13,7 @@
       <div class="page-wrapper">
         <div id="header" class="header"></div>
         <div class="main">
-          <div class="main-inner" style="padding: 0px !important;">
+          <div class="main-inner" style="padding: 0px !important">
             <div class="content">
               <div class="container">
                 <div class="row">
@@ -21,7 +21,7 @@
                     <headerNav />
                     <v-card>
                       <v-tabs
-                        background-color="deep-purple basil accent-3 accent-4"
+                        background-color="orange darken-1 basil accent-3 accent-4"
                         center-active
                         dark
                       >
@@ -34,8 +34,7 @@
                                 v-bind="attrs"
                                 v-on="on"
                                 @click="activeSecondTabClick(category.index)"
-                                ><v-icon color="darken-2"
-                                  >{{ category.icon }} </v-icon
+                                ><v-icon color="darken-2">{{ category.icon }} </v-icon
                                 >{{ category.itemName }}</v-tab
                               >
                             </template>
@@ -160,7 +159,7 @@ export default {
   }),
   watch: {
     activeTab: {
-      handler: function(newValue, oldValue) {
+      handler: function (newValue, oldValue) {
         if (newValue != oldValue) {
           this.activeSecondTabClick(1);
         }
@@ -172,8 +171,8 @@ export default {
   methods: {
     //アクティブ
     // eslint-disable-next-line
-    activeTabClick: function(activeTab, activeSecondTab, e) {
-      this.$nextTick(function() {
+    activeTabClick: function (activeTab, activeSecondTab, e) {
+      this.$nextTick(function () {
         //タブ
         this.activeTab = activeTab;
         //サブタブ
@@ -182,7 +181,7 @@ export default {
       });
     },
     //アクティブサブタブ
-    activeSecondTabClick: function(activeSecondTab) {
+    activeSecondTabClick: function (activeSecondTab) {
       //サブタブ
       this.activeTab = 1;
       this.activeSecondTab = activeSecondTab;

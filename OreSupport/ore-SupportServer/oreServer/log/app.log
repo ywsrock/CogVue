@@ -5989,3 +5989,117 @@
 [2020-12-30T22:47:50.542] [INFO] userDao - START getUserProfileByUserID : {"key":"UserID","val":193}
 [2020-12-30T22:47:50.547] [INFO] userDao - END getUserProfileByUserID
 [2020-12-30T22:47:50.548] [INFO] users - profileInfo success
+[2021-01-16T10:51:47.497] [INFO] startup - Listening on port 3000
+[2021-01-16T10:54:35.473] [INFO] startup - Listening on port 3000
+[2021-01-16T10:54:55.964] [INFO] users - ユーザログ UserName:閻 文帥
+[2021-01-16T10:54:55.964] [INFO] users - Third Party by Facebook
+[2021-01-16T10:54:56.047] [INFO] userDao - START getUserInfoByUserName: {"username":"2588234901506497"}
+[2021-01-16T10:54:56.065] [INFO] userDao - END getUserInfoByUserName
+[2021-01-16T10:54:56.066] [INFO] userDao - START getUserInfoByUserName: {"username":"2588234901506497"}
+[2021-01-16T10:54:56.068] [INFO] userDao - END getUserInfoByUserName
+[2021-01-16T10:54:56.575] [INFO] users - profileInfo userID: 193 
+[2021-01-16T10:55:00.864] [INFO] users - /queryAction 193
+[2021-01-16T12:03:37.298] [INFO] users - /queryAction 193
+[2021-01-16T12:03:58.676] [INFO] users - /queryAction 193
+[2021-01-16T23:11:31.812] [INFO] users - profileInfo userID: 193 
+[2021-01-22T16:32:25.974] [INFO] startup - Listening on port 3000
+[2021-01-22T16:33:13.845] [INFO] users - ユーザログ UserName:閻 文帥
+[2021-01-22T16:33:13.845] [INFO] users - Third Party by Facebook
+[2021-01-22T16:33:13.924] [INFO] userDao - START getUserInfoByUserName: {"username":"2588234901506497"}
+[2021-01-22T16:33:13.933] [INFO] userDao - END getUserInfoByUserName
+[2021-01-22T16:33:13.933] [INFO] userDao - START getUserInfoByUserName: {"username":"2588234901506497"}
+[2021-01-22T16:33:13.935] [INFO] userDao - END getUserInfoByUserName
+[2021-01-22T16:33:14.553] [INFO] users - profileInfo userID: 193 
+[2021-01-24T11:14:08.349] [INFO] users - ユーザログ UserName:閻 文帥
+[2021-01-24T11:14:08.349] [INFO] users - Third Party by Facebook
+[2021-01-24T11:14:08.425] [INFO] userDao - START getUserInfoByUserName: {"username":"2588234901506497"}
+[2021-01-24T11:14:08.428] [INFO] userDao - END getUserInfoByUserName
+[2021-01-24T11:14:08.428] [INFO] userDao - START getUserInfoByUserName: {"username":"2588234901506497"}
+[2021-01-24T11:14:08.430] [INFO] userDao - END getUserInfoByUserName
+[2021-01-24T11:14:09.110] [INFO] users - profileInfo userID: 193 
+[2021-01-24T11:16:42.404] [INFO] users - profileInfo userID: 193 
+[2021-01-24T19:05:42.263] [INFO] users - profileInfo userID: 193 
+[2021-01-24T19:05:42.264] [INFO] userDao - START getUserProfileByUserID : {"key":"UserID","val":193}
+[2021-01-24T19:05:42.285] [INFO] userDao - END getUserProfileByUserID
+[2021-01-24T19:05:42.285] [INFO] users - profileInfo success
+[2021-01-24T19:08:06.565] [INFO] users - logout
+[2021-01-24T19:08:16.561] [INFO] users - ユーザログ UserName:閻 文帥
+[2021-01-24T19:08:16.561] [INFO] users - Third Party by Facebook
+[2021-01-24T19:08:16.638] [INFO] userDao - START getUserInfoByUserName: {"username":"2588234901506497"}
+[2021-01-24T19:08:16.640] [INFO] userDao - END getUserInfoByUserName
+[2021-01-24T19:08:16.640] [INFO] userDao - START getUserInfoByUserName: {"username":"2588234901506497"}
+[2021-01-24T19:08:16.642] [INFO] userDao - END getUserInfoByUserName
+[2021-01-24T19:08:17.525] [INFO] users - profileInfo userID: 193 
+[2021-01-24T19:08:20.149] [INFO] users - logout
+[2021-01-24T19:09:30.166] [INFO] users - ユーザログ UserName:閻 文帥
+[2021-01-24T19:09:30.166] [INFO] users - Third Party by Facebook
+[2021-01-24T19:09:30.240] [INFO] userDao - START getUserInfoByUserName: {"username":"2588234901506497"}
+[2021-01-24T19:09:30.244] [INFO] userDao - END getUserInfoByUserName
+[2021-01-24T19:09:30.244] [INFO] userDao - START getUserInfoByUserName: {"username":"2588234901506497"}
+[2021-01-24T19:09:30.246] [INFO] userDao - END getUserInfoByUserName
+[2021-01-24T19:09:30.785] [INFO] users - profileInfo userID: 193 
+[2021-01-24T19:11:25.893] [INFO] users - /queryAction 193
+[2021-01-24T19:11:52.913] [INFO] users - /queryAction 193
+[2021-01-24T19:12:04.961] [INFO] users - /queryAction 193
+[2021-01-24T19:12:15.964] [INFO] users - /saveAction [object Object]
+[2021-01-24T19:12:16.026] [INFO] users - /queryAction 193
+[2021-01-24T19:12:30.730] [INFO] users - profileInfo userID: 193 
+[2021-01-24T19:12:30.730] [INFO] userDao - START getUserProfileByUserID : {"key":"UserID","val":193}
+[2021-01-24T19:12:30.735] [INFO] userDao - END getUserProfileByUserID
+[2021-01-24T19:12:30.735] [INFO] users - profileInfo success
+[2021-01-24T19:13:06.350] [INFO] users - /queryAction 193
+[2021-01-24T19:37:49.205] [INFO] users - profileInfo userID: 193 
+[2021-01-24T19:37:49.205] [INFO] userDao - START getUserProfileByUserID : {"key":"UserID","val":193}
+[2021-01-24T19:37:49.211] [INFO] userDao - END getUserProfileByUserID
+[2021-01-24T19:37:49.212] [INFO] users - profileInfo success
+[2021-01-24T19:39:50.746] [INFO] users - profileInfo userID: 193 
+[2021-01-24T19:39:50.746] [INFO] userDao - START getUserProfileByUserID : {"key":"UserID","val":193}
+[2021-01-24T19:39:50.750] [INFO] userDao - END getUserProfileByUserID
+[2021-01-24T19:39:50.750] [INFO] users - profileInfo success
+[2021-01-24T20:04:23.969] [INFO] users - /queryAction 193
+[2021-01-24T20:10:35.349] [INFO] users - profileInfo userID: 193 
+[2021-01-24T20:10:43.576] [INFO] users - /queryAction 193
+[2021-01-24T20:12:19.507] [INFO] users - /saveAction [object Object]
+[2021-01-24T20:12:19.567] [INFO] users - /queryAction 193
+[2021-01-24T20:12:44.296] [INFO] users - /saveAction [object Object]
+[2021-01-24T20:12:44.352] [INFO] users - /queryAction 193
+[2021-01-24T20:15:02.742] [INFO] users - /queryAction 193
+[2021-01-24T20:15:27.492] [INFO] users - /queryAction 193
+[2021-01-24T20:19:33.462] [INFO] users - /queryAction 193
+[2021-01-24T20:19:41.763] [INFO] users - /queryAction 193
+[2021-01-24T20:26:57.295] [INFO] users - /queryAction 193
+[2021-01-24T20:27:30.769] [INFO] users - /queryAction 193
+[2021-01-24T20:28:26.183] [INFO] users - /queryAction 193
+[2021-01-24T20:29:05.219] [INFO] users - profileInfo userID: 193 
+[2021-01-24T20:29:37.428] [INFO] users - /queryAction 193
+[2021-02-07T11:43:46.958] [INFO] startup - Listening on port 3000
+[2021-02-07T11:44:57.308] [INFO] users - ユーザログ UserName:閻 文帥
+[2021-02-07T11:44:57.309] [INFO] users - Third Party by Facebook
+[2021-02-07T11:44:57.395] [INFO] userDao - START getUserInfoByUserName: {"username":"2588234901506497"}
+[2021-02-07T11:44:57.403] [INFO] userDao - END getUserInfoByUserName
+[2021-02-07T11:44:57.403] [INFO] userDao - START getUserInfoByUserName: {"username":"2588234901506497"}
+[2021-02-07T11:44:57.404] [INFO] userDao - END getUserInfoByUserName
+[2021-02-07T11:44:57.895] [INFO] users - profileInfo userID: 193 
+[2021-02-07T11:45:06.537] [INFO] users - /queryAction 193
+[2021-02-07T11:54:30.330] [INFO] users - /queryAction 193
+[2021-02-07T11:54:57.465] [INFO] users - logout
+[2021-02-07T11:55:00.440] [INFO] users - ユーザログ UserName:閻 文帥
+[2021-02-07T11:55:00.440] [INFO] users - Third Party by Facebook
+[2021-02-07T11:55:00.515] [INFO] userDao - START getUserInfoByUserName: {"username":"2588234901506497"}
+[2021-02-07T11:55:00.517] [INFO] userDao - END getUserInfoByUserName
+[2021-02-07T11:55:00.517] [INFO] userDao - START getUserInfoByUserName: {"username":"2588234901506497"}
+[2021-02-07T11:55:00.519] [INFO] userDao - END getUserInfoByUserName
+[2021-02-07T11:55:01.282] [INFO] users - profileInfo userID: 193 
+[2021-02-07T11:55:29.871] [INFO] users - /queryAction 193
+[2021-02-07T11:55:58.577] [INFO] users - /saveAction [object Object]
+[2021-02-07T11:55:58.668] [INFO] users - /queryAction 193
+[2021-02-07T11:56:13.608] [INFO] users - /saveAction [object Object]
+[2021-02-07T11:56:13.686] [INFO] users - /queryAction 193
+[2021-02-11T10:27:03.364] [INFO] startup - Listening on port 3000
+[2021-02-11T10:32:19.096] [INFO] users - ユーザログ UserName:閻 文帥
+[2021-02-11T10:32:19.097] [INFO] users - Third Party by Facebook
+[2021-02-11T10:32:19.186] [INFO] userDao - START getUserInfoByUserName: {"username":"2588234901506497"}
+[2021-02-11T10:32:19.207] [INFO] userDao - END getUserInfoByUserName
+[2021-02-11T10:32:19.207] [INFO] userDao - START getUserInfoByUserName: {"username":"2588234901506497"}
+[2021-02-11T10:32:19.209] [INFO] userDao - END getUserInfoByUserName
+[2021-02-11T10:32:19.664] [INFO] users - profileInfo userID: 193 
