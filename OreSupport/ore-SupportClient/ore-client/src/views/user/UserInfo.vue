@@ -29,7 +29,7 @@
                 <div class="row">
                   <div class="col-lg-9">
                     <!-- スライダー -->
-                    <el-carousel indicator-position="outside">
+                    <el-carousel indicator-position="outside" class="top-slider">
                       <el-carousel-item v-for="sliderImage in sliderImages" :key="sliderImage">
                           <img
                             :src="sliderImage"
@@ -67,16 +67,16 @@
 
                     <!-- 新着ブログ -->
                     <TopNewInfoTitle Title="新着ブログ" TitleClassName="top-new-blog-title" Link="/#/blog/blogList" />
-                    <TopNewInfoCards iconName="mdi-thumb-up" iconComment="20" />
+                    <TopNewInfoCards iconName="mdi-thumb-up" iconComment="20" buttonType="blog" />
 
 
                     <!-- 新着商品 -->
                     <TopNewInfoTitle Title="新着商品" TitleClassName="top-new-product-title" Link="#" />                    
-                    <TopNewInfoCards :iconName="'mdi-cursor-pointer'" :iconComment="'CHECK!!'" />
+                    <TopNewInfoCards :iconName="'mdi-cursor-pointer'" :iconComment="'CHECK!!'" buttonType="product" />
 
                     <!-- 新着セミナー -->
                     <TopNewInfoTitle Title="新着セミナー" TitleClassName="top-new-seminor-title" Link="#" />                                        
-                    <TopNewInfoCards :iconName="'mdi-human'" :iconComment="'JOIN!!'" />
+                    <TopNewInfoCards :iconName="'mdi-human'" :iconComment="'JOIN!!'" buttonType="seminor" />
 
                     <!-- タブ -->
                     <el-tabs type="card" @tab-click="handleClick" style="margin-top: 20px;">
@@ -108,7 +108,7 @@
                     <!-- 認知機能基礎知識 -->
                     <h3 style="margin-bottom: 10px; border-bottom: solid 3px #90EE90; padding-left: 15px; padding-bottom: 5px;">認知機能基礎知識</h3>
                     <img
-                      src="../../assets/img/tmp/cogni.png"
+                      src="../../assets/img/tmp/cognitive_functions.png"
                       alt="What is Cognitive function?"
                       style="height: 350px; position: relative; left: 50%; transform: translateX(-50%); margin: 15px 0;"                      
                     />
@@ -352,37 +352,6 @@
                 </div>
                 <!-- /.container -->
               </div>
-
-              <!-- フッター -->
-              <v-footer
-                dark
-                padless
-              >
-                <v-row
-                  justify="center"
-                  no-gutters
-                  style="margin: 30px 0;"
-                >
-                  <v-btn
-                    v-for="link in links"
-                    :key="link"
-                    color="yellow"
-                    text
-                    rounded
-                    class="my-2"
-                    style="font-size: 14px;"                    
-                  >
-                    {{ link }}
-                  </v-btn>
-                  <v-col
-                    class="primary lighten-2 py-4 text-center"
-                    style="color: yellow;"
-                    cols="12"
-                  >
-                    {{ new Date().getFullYear() }} — <strong>Vuetify</strong>
-                  </v-col>
-                </v-row>
-              </v-footer>
             </div>
             <!-- /.content -->
           </div>
@@ -413,7 +382,6 @@ export default {
       bottomBannerImage1: require('../../assets/img/tmp/20200920orunitin.png'),
       bottomBannerImage2: require('../../assets/img/tmp/20200920sitorurin.png'),
       bottomBannerImage3: require('../../assets/img/tmp/20200920orunitinplus.png'),
-      links: ['ホーム', '認知概要', '認知測定', 'ブログ', '行動管理', 'ヘルプ'],
       activeName: 'first',
       informationDetail: {}
     };
@@ -531,4 +499,12 @@ export default {
 .v-card.on-hover {
   opacity: 0.8;
  }
+
+@media screen and (max-width:720px){
+  .top-slider{
+    height: 150px;
+  }
+}
+
+
 </style>

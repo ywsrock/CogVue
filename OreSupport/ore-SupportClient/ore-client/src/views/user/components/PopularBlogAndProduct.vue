@@ -15,7 +15,7 @@
             <v-card
               :elevation="hover ? 8 : 2"
               :class="{ 'on-hover': hover }"
-              style="margin-bottom: 12px; height: 140px"
+              style="margin-bottom: 12px; height: 140px; width: 380px;"
               tile
             >
               <img
@@ -45,7 +45,7 @@
             <v-card
               :elevation="hover ? 8 : 2"
               :class="{ 'on-hover': hover }"
-              style="margin-bottom: 12px; height: 140px"
+              style="margin-bottom: 12px; height: 140px; width: 380px;"
               tile
             >
               <img
