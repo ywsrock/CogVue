@@ -5,36 +5,36 @@
 
 ## ssh接続設定
 - Macの場合
-  - ~/.ssh に chubachiPBL.pem をダウンロード
+  - ~/.ssh に ywsXXX.pem をダウンロード
   - ~/.ssh/config に 接続の設定を記述
   ```
-  Host chubachiPBL-ec2
+  Host ywsXXX-ec2
     User ubuntu
     Hostname 3.128.193.37
     TCPKeepAlive yes
     IdentitiesOnly yes
-    IdentityFile ~/.ssh/chubachiPBL-ec2.pem
+    IdentityFile ~/.ssh/ywsXXX-ec2.pem
     ForwardAgent yes
   ```
   - コマンドで接続
   ```
-  ssh chubachiPBL-ec2
+  ssh ywsXXX-ec2
   ```
 
 - Windowsの場合(Tera Term を使用)
   - Tera Term 起動
-  - chubachiPBL.pem をダウンロード
+  - ywsXXX.pem をダウンロード
   - ホストに 3.128.193.37 を入力
   - OK ボタン
   - ユーザー名に ubuntu を入力
   - RSA/DSA/ECDSA/ED25519鍵を使う とチェック
-    - 秘密鍵に chubachiPBL.pem を選択
+    - 秘密鍵に ywsXXX.pem を選択
   - OKボタン
 
 ## 検証環境へコードをデプロイ（初回）
   ```
-  ssh chubachiPBL-ec2
-  cd PBL2020
+  ssh ywsXXX-ec2
+  cd XXX2020
   chmod +x start-staging.sh
   chmod +x deploy.sh
   ./start-staging.sh
@@ -43,7 +43,7 @@
 
 ## 検証環境へコードをデプロイ（２回目以降）
   ```
-  ssh chubachiPBL-ec2
-  cd PBL2020
+  ssh ywsXXX-ec2
+  cd XXX2020
   ./deploy.sh
   ```
